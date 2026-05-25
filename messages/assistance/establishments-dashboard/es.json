@@ -1,0 +1,87 @@
+{
+  "header": {
+    "title": "Dotación de establecimientos",
+    "breadcrumbs": {
+      "assistance": "Asistencia",
+      "dashboard": "Dotación establecimientos"
+    },
+    "lastRefresh": "Última actualización",
+    "rangeDay": "Día",
+    "rangePeriod": "Periodo"
+  },
+  "filters": {
+    "searchPlaceholder": "Buscar establecimiento…",
+    "status": "Estado operativo (estudiante)",
+    "risk": "Riesgo del establecimiento",
+    "riskAll": "Todos los niveles",
+    "sortBy": "Ordenar ranking",
+    "sortDesc": "Mayor a menor",
+    "sortAsc": "Menor a mayor",
+    "rowsPerPage": "Registros por página",
+    "refresh": "Actualizar",
+    "export": "Exportar ranking",
+    "today": "Hoy"
+  },
+  "sort": {
+    "risk": "Riesgo",
+    "absenteeism": "Ausentismo",
+    "presence": "Asistencia",
+    "name": "Nombre",
+    "code": "Código"
+  },
+  "kpis": {
+    "expected": "Dotación esperada",
+    "present": "Presentes",
+    "absent": "Ausentes",
+    "inside": "Dentro",
+    "exited": "Salidos",
+    "presenceRate": "% Presente",
+    "criticalEstablishments": "Establecimientos críticos",
+    "attentionEstablishments": "Establecimientos en atención",
+    "avgMinutes": "Min. promedio",
+    "establishmentsWithActivity": "Establecimientos con actividad"
+  },
+  "cards": {
+    "title": "Resumen por establecimiento",
+    "viewDetail": "Ver detalle",
+    "lastEvent": "Última marcación",
+    "empty": "No hay establecimientos que coincidan con los filtros."
+  },
+  "ranking": {
+    "title": "Ranking comparativo",
+    "establishment": "Establecimiento",
+    "expected": "Esperados",
+    "present": "Presentes",
+    "absent": "Ausentes",
+    "presencePct": "% Presente",
+    "inside": "Dentro",
+    "exited": "Salidos",
+    "late": "Atrasos",
+    "earlyExit": "Sal. temprana",
+    "noCheckout": "Sin salida",
+    "risk": "Riesgo",
+    "actions": "Acciones"
+  },
+  "charts": {
+    "presenceByCenter": "% Presente por establecimiento",
+    "absenteeismByCenter": "Ausentismo por establecimiento",
+    "histogram": "Marcaciones por hora (global)",
+    "heatmap": "Intensidad día/hora",
+    "trend": "Tendencia de ausentismo",
+    "empty": "Sin datos para graficar"
+  },
+  "risk": {
+    "OK": "OK",
+    "ATTENTION": "Atención",
+    "CRITICAL": "Crítico"
+  },
+  "pagination": {
+    "page": "Página {current} de {total}"
+  },
+  "states": {
+    "loading": "Cargando…",
+    "error": "No se pudo cargar el dashboard.",
+    "noCompany": "Seleccione una empresa para continuar."
+  },
+  "exportFilename": "dotacion-establecimientos"
+}

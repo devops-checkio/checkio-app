@@ -1,0 +1,261 @@
+{
+  "title": "Reportes",
+  "subtitle": "Gestión y administración de plantillas de reportes",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "reports": "Reportes",
+    "create": "Crear Plantilla",
+    "edit": "Editar Plantilla"
+  },
+  "buttons": {
+    "create": "Crear Reporte",
+    "edit": "Editar",
+    "generate": "Generar",
+    "delete": "Eliminar",
+    "deleting": "Eliminando...",
+    "cancel": "Cancelar",
+    "search": "Buscar",
+    "clear": "Limpiar",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "add": "Agregar",
+    "save": "GUARDAR",
+    "update": "ACTUALIZAR",
+    "saving": "Guardando...",
+    "updating": "Actualizando...",
+    "creating": "Creando...",
+    "generating": "Generando...",
+    "close": "Cerrar",
+    "createTemplate": "Crear Plantilla",
+    "updateTemplate": "Actualizar Plantilla",
+    "showPreview": "Ver Preview",
+    "hidePreview": "Ocultar Preview",
+    "showJson": "Ver JSON",
+    "hideJson": "Ocultar JSON",
+    "copyJson": "Copiar JSON",
+    "createConsolidatedField": "Crear Campo Consolidado",
+    "createCalculatedField": "Crear Columna Calculada",
+    "addTotalRow": "Agregar Fila de Totales",
+    "editTotalRow": "Editar",
+    "deleteTotalRow": "Eliminar",
+    "goToHistory": "Ir a Historial de Reportes"
+  },
+  "filters": {
+    "search": "Buscar Plantillas",
+    "searchByName": "Buscar por nombre",
+    "searchByNamePlaceholder": "Buscar por nombre de plantilla...",
+    "filterByType": "Filtrar por tipo",
+    "allTypes": "Todos los tipos",
+    "assistanceData": "Datos de Asistencia",
+    "employeeData": "Datos de Empleado"
+  },
+  "table": {
+    "headers": {
+      "name": "Nombre",
+      "description": "Descripción",
+      "reportType": "Tipo de Reporte",
+      "columns": "Columnas",
+      "createdAt": "Fecha de Creación",
+      "updatedAt": "Última Actualización",
+      "actions": "Acciones"
+    },
+    "loading": "Cargando plantillas...",
+    "noData": "No se encontraron plantillas",
+    "noDataDescription": "Crea tu primera plantilla de reporte",
+    "noName": "Sin nombre",
+    "notAvailable": "Sin descripción",
+    "columnsCount": "{count} columnas",
+    "noFieldsSelected": "No hay campos seleccionados",
+    "noFieldsSelectedDescription": "Haz clic en los campos del panel izquierdo para agregarlos",
+    "fieldsSelected": "{count} campos seleccionados"
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} resultados",
+    "filteredFrom": "(filtrados de {total} totales)",
+    "page": "Página {current} de {total}",
+    "recordsPerPage": "Registros por página"
+  },
+  "modals": {
+    "delete": {
+      "title": "Eliminar Plantilla",
+      "message": "¿Estás seguro de que deseas eliminar esta plantilla? Esta acción no se puede deshacer."
+    },
+    "generate": {
+      "title": "Filtros para Generar Reporte",
+      "configureFilters": "Configurar Filtros de Generación",
+      "configureFiltersDescription": "Estos filtros se aplicarán al generar el reporte. Puedes filtrar por período de fechas, cargos, sucursales y más.",
+      "datePeriod": "Período de Fechas",
+      "today": "Hoy",
+      "yesterday": "Ayer",
+      "last7days": "Últimos 7 Días",
+      "last30days": "Últimos 30 Días",
+      "thisMonth": "Este Mes",
+      "lastMonth": "El Mes Pasado",
+      "custom": "Otro periodo",
+      "startDate": "Fecha Inicio",
+      "endDate": "Fecha Fin",
+      "filterByJobs": "Filtrar por Cargos (Opcional)",
+      "filterByJobsDescription": "Selecciona los cargos a incluir en el reporte. Deja vacío para incluir todos.",
+      "selectJobs": "Selecciona cargos...",
+      "jobsSelected": "{count} cargo(s) seleccionado(s)",
+      "selectAllJobs": "Seleccionar todos",
+      "deselectAllJobs": "Deseleccionar todos",
+      "loadingJobs": "Cargando cargos...",
+      "noJobsAvailable": "No hay cargos disponibles",
+      "filterByBranches": "Filtrar por Sucursales (Opcional)",
+      "filterByBranchesDescription": "Selecciona las sucursales a incluir en el reporte. Deja vacío para incluir todas.",
+      "selectBranches": "Selecciona sucursales...",
+      "branchesSelected": "{count} sucursal(es) seleccionada(s)",
+      "selectAllBranches": "Seleccionar todas",
+      "deselectAllBranches": "Deseleccionar todas",
+      "loadingBranches": "Cargando sucursales...",
+      "noBranchesAvailable": "No hay sucursales disponibles",
+      "filterByDocument": "Filtrar por Número de Documento (Opcional)",
+      "filterByDocumentDescription": "Selecciona el tipo de documento e ingresa el número. Puedes agregar múltiples documentos.",
+      "documentPlaceholder": "Ej: 18.333.222-6",
+      "generateReport": "Generar Reporte"
+    },
+    "success": {
+      "title": "¡Reporte Generado Exitosamente!",
+      "message": "Tu reporte se está procesando en segundo plano.",
+      "whatsNext": "¿Qué sigue?",
+      "whatsNextDescription": "Una vez que el procesamiento termine, podrás descargar tu reporte desde el historial de reportes."
+    },
+    "totalRow": {
+      "create": "Crear Fila de Totales",
+      "edit": "Editar Fila de Totales",
+      "name": "Nombre de la Fila de Totales *",
+      "namePlaceholder": "Ej: Total de Horas Extras",
+      "nameDescription": "Este será el nombre que aparecerá en la primera columna (si está habilitado)",
+      "headerTransform": "Formato del Encabezado",
+      "headerTransformDescription": "Formato de visualización del encabezado",
+      "default": "Por Defecto",
+      "upper": "MAYÚSCULAS",
+      "lower": "minúsculas",
+      "totalType": "Tipo de Total *",
+      "sum": "Suma (SUM)",
+      "avg": "Promedio (AVG)",
+      "count": "Conteo (COUNT)",
+      "min": "Mínimo (MIN)",
+      "max": "Máximo (MAX)",
+      "custom": "Personalizado (Seleccionar por columna)",
+      "customDescription": "Seleccione el tipo de agregación para cada columna numérica",
+      "defaultDescription": "Se aplicará a todos los campos numéricos con agregación",
+      "position": "Posición de la Fila *",
+      "top": "Arriba (Después de encabezados)",
+      "bottom": "Abajo (Al final del reporte)",
+      "showLabel": "Mostrar etiqueta en la primera columna",
+      "selectFields": "Seleccionar Campos y Tipo de Agregación *",
+      "noNumericFields": "No hay campos numéricos con agregación disponibles. Agregue campos numéricos primero.",
+      "none": "Ninguno",
+      "createButton": "Crear Fila de Totales",
+      "updateButton": "Actualizar Fila de Totales",
+      "grouping": "Agrupación de Totales",
+      "groupBy": "Agrupar por",
+      "groupByEmployee": "Por Empleado",
+      "groupByMonth": "Por Mes",
+      "groupByWeek": "Por Semana",
+      "groupByDescription": "Selecciona los criterios para agrupar los totales. Los totales se mostrarán automáticamente cuando cambie el criterio seleccionado.",
+      "labelTemplate": "Plantilla de Etiqueta",
+      "labelTemplatePlaceholder": "Ej: Total empleado - mes año",
+      "labelTemplateDescription": "Plantilla personalizada para el label del total agrupado. Usa variables entre llaves para insertar valores dinámicos.",
+      "availableVariables": "Variables disponibles",
+      "showGroupContext": "Mostrar contexto del grupo automáticamente",
+      "showGroupContextDescription": "Si está activado, el label se completará automáticamente con el contexto del grupo (empleado, mes, semana) si no se especifica una plantilla.",
+      "insertVariable": "Insertar variable",
+      "variableEmployee": "Nombre Completo",
+      "variableFirstName": "Nombre",
+      "variableMonthName": "Mes (Nombre)",
+      "variableYear": "Año",
+      "variableWeek": "Semana",
+      "variableWeekRange": "Rango de Semana",
+      "example": "Ejemplo",
+      "exampleEmployee": "Si agrupas por empleado: 'Total Juan Pérez García'",
+      "exampleEmployeeMonth": "Si agrupas por empleado y mes: 'Total Juan Pérez García - Enero 2024'",
+      "exampleMonth": "Si agrupas por mes: 'Total - Enero 2024'",
+      "exampleWeek": "Si agrupas por semana: 'Total - Semana 3'"
+    }
+  },
+  "create": {
+    "title": {
+      "create": "Crear Plantilla",
+      "edit": "Editar Plantilla"
+    },
+    "subtitle": {
+      "create": "Configura los campos y opciones de tu plantilla de reporte personalizado",
+      "edit": "Edita tu plantilla de reporte personalizado"
+    },
+    "loading": "Cargando plantilla...",
+    "reportInfo": "Información del Reporte",
+    "fields": {
+      "reportName": "Nombre del Reporte *",
+      "reportNamePlaceholder": "Ej: Reporte de Asistencia Mensual",
+      "description": "Descripción",
+      "descriptionPlaceholder": "Descripción breve del reporte",
+      "reportType": "Tipo de Reporte",
+      "reportTypePlaceholder": "Seleccione un tipo",
+      "headerTransform": "Formato del Encabezado",
+      "headerTransformDescription": "(Aplica a todas las columnas por defecto)",
+      "reportFields": "Campos del Reporte",
+      "searchCategories": "Buscar categorías...",
+      "searchCategoriesPlaceholder": "Buscar categorías..."
+    },
+    "preview": {
+      "title": "Vista Previa del Reporte (Simulación Excel)",
+      "previewLabel": "Vista Previa",
+      "description": "Mostrando {count} filas de ejemplo. El reporte final incluirá todos los datos según los filtros aplicados."
+    },
+    "jsonPreview": {
+      "title": "Vista Previa del JSON (Prueba)",
+      "description": "Este es el JSON que se generará al guardar el reporte. Esta vista es temporal para pruebas."
+    },
+    "totalRows": {
+      "configured": "Filas de Totales Configuradas",
+      "top": "Arriba",
+      "bottom": "Abajo",
+      "columns": "{count} columnas",
+      "deleted": "Fila de totales eliminada",
+      "deletedDescription": "{label} ha sido eliminada"
+    },
+    "validation": {
+      "nameRequired": "El nombre del reporte es requerido",
+      "fieldsRequired": "Debe agregar al menos un campo al reporte",
+      "invalidReferences": "Hay problemas con las referencias de campos. Revisa la consola.",
+      "cleanedReferences": "Se limpiaron algunas referencias inválidas. Intenta guardar nuevamente."
+    }
+  },
+  "toast": {
+    "templateCreated": {
+      "title": "Plantilla creada",
+      "description": "La plantilla se ha creado correctamente"
+    },
+    "templateUpdated": {
+      "title": "Plantilla actualizada",
+      "description": "La plantilla se ha actualizado correctamente"
+    },
+    "templateDeleted": {
+      "title": "Plantilla eliminada",
+      "description": "La plantilla se ha eliminado correctamente"
+    },
+    "deleteError": {
+      "title": "Error al eliminar la plantilla",
+      "description": "Error al eliminar la plantilla"
+    },
+    "jsonCopied": {
+      "title": "JSON copiado",
+      "description": "El JSON ha sido copiado al portapapeles"
+    }
+  },
+  "reportTypes": {
+    "ASSISTANCE": "Datos de Asistencia",
+    "EMPLOYEE_DATA": "Datos de Empleado"
+  },
+  "aggregationTypes": {
+    "sum": "Suma",
+    "avg": "Promedio",
+    "count": "Conteo",
+    "min": "Mínimo",
+    "max": "Máximo",
+    "none": "Ninguno"
+  }
+}

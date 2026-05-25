@@ -1,0 +1,4 @@
+Contact: mailto:diego@bridev.cl
+Expires: 2025-12-31T23:59:00.000Z
+Preferred-Languages: es, en
+Policy: https://checkio.com/politica-de-seguridad

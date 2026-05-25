@@ -1,0 +1,350 @@
+{
+  "title": "Solicitações de Permissão por Horas",
+  "subtitle": "Gerencie as solicitações de permissão por horas dos funcionários",
+  "selectCompanyHint": "Selecione uma empresa no menu superior para ver as solicitações de permissão por horas.",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Operações",
+    "requests": "Solicitações",
+    "hourlyPermission": "Permissões por Horas"
+  },
+  "buttons": {
+    "newRequest": "Nova Solicitação"
+  },
+  "tabs": {
+    "pending": {
+      "label": "Por Revisar",
+      "table": {
+        "loading": "Carregando solicitações pendentes...",
+        "noData": "Não há solicitações pendentes",
+        "headers": {
+          "employee": "Funcionário",
+          "reason": "Motivo",
+          "date": "Data",
+          "startTime": "Hora Início",
+          "endTime": "Hora Fim",
+          "type": "Tipo",
+          "requestedBy": "Solicitado por",
+          "createdAt": "Data Solicitação",
+          "status": "Status",
+          "actions": "Ações"
+        }
+      },
+      "status": {
+        "pending": "Pendente"
+      },
+      "types": {
+        "entry": "Entrada",
+        "exit": "Saída",
+        "both": "Entrada e Saída"
+      },
+      "pagination": {
+        "showing": "Mostrando {current} de {total} resultados",
+        "recordsPerPage": "Registros por página",
+        "previous": "Anterior",
+        "next": "Próximo",
+        "page": "Página {current} de {total}"
+      },
+      "ariaLabels": {
+        "view": "Ver solicitação",
+        "approve": "Aprovar solicitação",
+        "reject": "Rejeitar solicitação"
+      },
+      "buttons": {
+        "view": "Ver",
+        "approve": "Aprovar",
+        "reject": "Rejeitar"
+      }
+    },
+    "approved": {
+      "label": "Aprovadas",
+      "table": {
+        "loading": "Carregando solicitações aprovadas...",
+        "noData": "Não há solicitações aprovadas",
+        "headers": {
+          "employee": "Funcionário",
+          "reason": "Motivo",
+          "date": "Data",
+          "startTime": "Hora Início",
+          "endTime": "Hora Fim",
+          "type": "Tipo",
+          "approvedBy": "Aprovado por",
+          "approvedAt": "Data Aprovação",
+          "status": "Status",
+          "actions": "Ações"
+        }
+      },
+      "status": {
+        "approved": "Aprovada"
+      },
+      "types": {
+        "entry": "Entrada",
+        "exit": "Saída",
+        "both": "Entrada e Saída"
+      },
+      "pagination": {
+        "showing": "Mostrando {current} de {total} resultados",
+        "recordsPerPage": "Registros por página",
+        "previous": "Anterior",
+        "next": "Próximo",
+        "page": "Página {current} de {total}"
+      },
+      "ariaLabels": {
+        "view": "Ver solicitação"
+      },
+      "buttons": {
+        "view": "Ver"
+      }
+    },
+    "rejected": {
+      "label": "Rejeitadas",
+      "table": {
+        "loading": "Carregando solicitações rejeitadas...",
+        "noData": "Não há solicitações rejeitadas",
+        "headers": {
+          "employee": "Funcionário",
+          "reason": "Motivo",
+          "date": "Data",
+          "startTime": "Hora Início",
+          "endTime": "Hora Fim",
+          "type": "Tipo",
+          "rejectedBy": "Rejeitado por",
+          "rejectedAt": "Data Rejeição",
+          "rejectionReason": "Motivo Rejeição",
+          "status": "Status",
+          "actions": "Ações"
+        }
+      },
+      "status": {
+        "rejected": "Rejeitada"
+      },
+      "types": {
+        "entry": "Entrada",
+        "exit": "Saída",
+        "both": "Entrada e Saída"
+      },
+      "pagination": {
+        "showing": "Mostrando {current} de {total} resultados",
+        "recordsPerPage": "Registros por página",
+        "previous": "Anterior",
+        "next": "Próximo",
+        "page": "Página {current} de {total}"
+      },
+      "ariaLabels": {
+        "view": "Ver solicitação"
+      },
+      "buttons": {
+        "view": "Ver"
+      }
+    }
+  },
+  "modal": {
+    "title": {
+      "create": "Solicitar Permissão por Horas",
+      "view": "Ver Solicitação de Permissão por Horas",
+      "edit": "Editar Solicitação de Permissão por Horas",
+      "default": "Solicitação de Permissão por Horas"
+    },
+    "fields": {
+      "employee": "Funcionário",
+      "reason": "Motivo da Permissão",
+      "date": "Data",
+      "type": "Tipo de Permissão",
+      "startTime": "Hora de Início",
+      "startTimeEntry": "Hora de Entrada",
+      "endTime": "Hora de Fim",
+      "endTimeExit": "Hora de Saída",
+      "observation": "Observação",
+      "withSalary": "Com Remuneração",
+      "withSalaryYes": "Sim",
+      "withSalaryNo": "Não"
+    },
+    "placeholders": {
+      "employee": "Selecionar funcionário",
+      "reason": "Ex: Consulta médica, assunto pessoal, etc.",
+      "date": "dd/mm/aaaa",
+      "type": "Selecionar tipo",
+      "observation": "Digite uma observação (opcional)"
+    },
+    "types": {
+      "entry": "Entrada",
+      "exit": "Saída",
+      "both": "Entrada e Saída"
+    },
+    "validation": {
+      "employeeRequired": "Por favor selecione um funcionário",
+      "reasonRequired": "Por favor informe o motivo da permissão",
+      "dateRequired": "Por favor selecione a data",
+      "pastDateNotAllowed": "A data deve ser igual ou posterior a hoje",
+      "typeRequired": "Por favor selecione o tipo de permissão",
+      "startTimeRequired": "Por favor selecione a hora de início",
+      "endTimeRequired": "Por favor selecione a hora de fim",
+      "endTimeAfterStartTime": "A hora de fim deve ser posterior à hora de início",
+      "errors": {
+        "requiredFields": {
+          "title": "Erro",
+          "description": "Por favor preencha todos os campos obrigatórios"
+        },
+        "invalidEmployee": {
+          "title": "Erro",
+          "description": "O funcionário selecionado não é válido"
+        },
+        "inactiveEmployee": {
+          "title": "Erro",
+          "description": "O funcionário selecionado não está ativo"
+        },
+        "invalidDate": {
+          "title": "Erro",
+          "description": "Por favor selecione uma data válida"
+        },
+        "pastDate": {
+          "title": "Erro",
+          "description": "A data deve ser igual ou posterior a hoje"
+        },
+        "startTimeRequired": {
+          "title": "Erro",
+          "description": "Por favor selecione a hora de início"
+        },
+        "endTimeRequired": {
+          "title": "Erro",
+          "description": "Por favor selecione a hora de fim"
+        },
+        "invalidTimeRange": {
+          "title": "Erro",
+          "description": "A hora de fim deve ser posterior à hora de início"
+        }
+      }
+    },
+    "buttons": {
+      "create": "Criar Solicitação",
+      "update": "Atualizar Solicitação",
+      "save": "Salvar",
+      "cancel": "Cancelar",
+      "close": "Fechar",
+      "processing": "Processando..."
+    },
+    "toast": {
+      "createSuccess": {
+        "title": "Solicitação criada",
+        "description": "A solicitação de permissão por horas foi criada com sucesso"
+      },
+      "createError": {
+        "title": "Processo concluído com erros",
+        "description": "{successCount} solicitações criadas com sucesso, {errorCount} com erros"
+      }
+    },
+    "approve": {
+      "title": "Aprovar Solicitação de Permissão por Horas",
+      "types": {
+        "entry": "Entrada",
+        "exit": "Saída",
+        "both": "Entrada e Saída"
+      },
+      "details": {
+        "title": "Detalhes da Solicitação",
+        "fields": {
+          "employee": "Funcionário",
+          "date": "Data",
+          "startTime": "Hora de Início",
+          "endTime": "Hora de Fim",
+          "type": "Tipo de Permissão",
+          "reason": "Motivo",
+          "observation": "Observação",
+          "requestedBy": "Solicitado por",
+          "createdAt": "Data da Solicitação",
+          "withSalary": "Com Remuneração",
+          "withSalaryYes": "Sim",
+          "withSalaryNo": "Não"
+        }
+      },
+      "confirmation": {
+        "title": "Tem certeza de que deseja aprovar esta solicitação?",
+        "description": "Ao aprovar esta solicitação, o funcionário poderá utilizar a permissão por horas na data e horários especificados."
+      },
+      "buttons": {
+        "cancel": "Cancelar",
+        "approve": "Aprovar Solicitação",
+        "processing": "Processando..."
+      },
+      "toast": {
+        "success": {
+          "title": "Solicitação aprovada",
+          "description": "A solicitação de permissão por horas foi aprovada com sucesso"
+        },
+        "error": {
+          "title": "Erro",
+          "description": "Erro ao aprovar a solicitação"
+        }
+      }
+    },
+    "reject": {
+      "title": {
+        "entry": "Rejeitar Solicitação de Entrada Tardia",
+        "exit": "Rejeitar Solicitação de Saída Antecipada",
+        "both": "Rejeitar Solicitação de Permissão por Horas",
+        "default": "Rejeitar Solicitação de Permissão por Horas"
+      },
+      "fields": {
+        "rejectionReason": "Motivo da Rejeição"
+      },
+      "types": {
+        "entry": "Entrada",
+        "exit": "Saída",
+        "both": "Entrada e Saída"
+      },
+      "placeholders": {
+        "rejectionReason": {
+          "entry": "Explique por que a solicitação de entrada tardia está sendo rejeitada...",
+          "exit": "Explique por que a solicitação de saída antecipada está sendo rejeitada...",
+          "both": "Explique por que esta solicitação de permissão por horas está sendo rejeitada..."
+        }
+      },
+      "validation": {
+        "rejectionReasonRequired": "Por favor informe o motivo da rejeição"
+      },
+      "details": {
+        "title": "Detalhes da Solicitação",
+        "fields": {
+          "employee": "Funcionário",
+          "date": "Data",
+          "startTime": "Hora de Entrada",
+          "endTime": "Hora de Saída",
+          "type": "Tipo de Permissão",
+          "reason": "Motivo",
+          "reasonEntry": "Motivo de Entrada Tardia",
+          "reasonExit": "Motivo de Saída Antecipada",
+          "reasonBoth": "Motivo da Permissão",
+          "observation": "Observação",
+          "requestedBy": "Solicitado por",
+          "createdAt": "Data da Solicitação",
+          "withSalary": "Com Remuneração",
+          "withSalaryYes": "Sim",
+          "withSalaryNo": "Não"
+        }
+      },
+      "confirmation": {
+        "title": "Tem certeza de que deseja rejeitar esta solicitação?",
+        "description": {
+          "entry": "Ao rejeitar esta solicitação, o funcionário não poderá justificar sua entrada tardia e deverá cumprir o horário normal de entrada.",
+          "exit": "Ao rejeitar esta solicitação, o funcionário não poderá justificar sua saída antecipada e deverá cumprir o horário normal de saída.",
+          "both": "Ao rejeitar esta solicitação, o funcionário não poderá utilizar a permissão por horas solicitada e deverá cumprir o horário normal de trabalho."
+        }
+      },
+      "buttons": {
+        "cancel": "Cancelar",
+        "reject": "Rejeitar Solicitação",
+        "processing": "Processando..."
+      },
+      "toast": {
+        "success": {
+          "title": "Solicitação rejeitada",
+          "description": "A solicitação de permissão por horas foi rejeitada com sucesso"
+        },
+        "error": {
+          "title": "Erro",
+          "description": "Erro ao rejeitar a solicitação"
+        }
+      }
+    }
+  }
+}

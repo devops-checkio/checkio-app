@@ -1,0 +1,49 @@
+{
+  "title": "Affectation des Horaires Étudiants",
+  "subtitle": "Assignez des horaires aux étudiants",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "operations": "Opérations",
+    "schedule": "Horaires Étudiants"
+  },
+  "tabs": {
+    "active": "Actifs",
+    "expiring": "À échoir",
+    "recentDismissals": "Désaffectations récentes",
+    "inactive": "Inactifs"
+  },
+  "tabTitles": {
+    "active": "Étudiants actifs",
+    "expiring": "Étudiants à échoir",
+    "recentDismissals": "Étudiants récemment désaffectés",
+    "inactive": "Étudiants inactifs"
+  },
+  "table": {
+    "headers": {
+      "code": "Matricule",
+      "name": "Nom",
+      "document": "Numéro de document",
+      "email": "E-mail",
+      "branch": "Site",
+      "todaySchedule": "Horaire assigné aujourd'hui"
+    },
+    "actions": "Actions",
+    "editSchedule": "Modifier l'horaire",
+    "noData": "Aucun étudiant",
+    "loading": "Chargement…"
+  },
+  "filters": {
+    "searchPlaceholder": "Rechercher par prénom ou nom",
+    "documentPlaceholder": "Numéro de document",
+    "branchAll": "Tous les sites",
+    "search": "Rechercher",
+    "clear": "Effacer"
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total}",
+    "recordsPerPage": "Enregistrements par page",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page {current} sur {total}"
+  }
+}

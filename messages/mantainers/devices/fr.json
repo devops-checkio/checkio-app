@@ -1,0 +1,137 @@
+{
+  "title": "Gestion des appareils",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "maintainers": "Gestionnaires",
+    "devices": "Appareils"
+  },
+  "buttons": {
+    "add": "Ajouter un appareil",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "qr": "Code QR",
+    "claimCode": "Code d'activation"
+  },
+  "table": {
+    "headers": {
+      "identifier": "Identifiant",
+      "type": "Type",
+      "device": "Appareil",
+      "branch": "Succursale",
+      "createdAt": "Date de création",
+      "updatedAt": "Dernière mise à jour",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "loading": "Chargement des appareils...",
+    "noData": "Aucun appareil trouvé",
+    "noDataDescription": "Créez un nouvel appareil pour commencer."
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} résultats",
+    "recordsPerPage": "Enregistrements par page :",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page {current} sur {total}"
+  },
+  "status": {
+    "operational": "Opérationnel",
+    "notOperational": "Non opérationnel"
+  },
+  "delete": {
+    "toastTitle": "Appareil supprimé avec succès",
+    "toastDescription": "L'appareil a été supprimé correctement",
+    "confirmMessage": "Êtes-vous sûr de vouloir supprimer cet appareil ?"
+  },
+  "toast": {
+    "updateSuccess": "Appareil mis à jour avec succès",
+    "updateSuccessDescription": "L'appareil a été mis à jour correctement",
+    "createSuccess": "Appareil créé avec succès",
+    "createSuccessDescription": "Veuillez scanner le code QR pour configurer l'appareil",
+    "createSuccessDescriptionKiosko": "Entrez le sous-domaine et le code d'activation dans l'app kiosque"
+  },
+  "upsert": {
+    "title": {
+      "edit": "Modifier l'appareil",
+      "add": "Ajouter un appareil"
+    },
+    "info": {
+      "title": "Non obligatoire pour les appareils utilisant l'application CheckIO",
+      "description": "Les informations seront obtenues automatiquement lors de la synchronisation"
+    },
+    "fields": {
+      "identifier": "Identifiant de l'appareil",
+      "type": "Type d'appareil",
+      "branch": "Succursale"
+    },
+    "placeholders": {
+      "selectType": "Sélectionnez un type",
+      "selectBranch": "Sélectionner une succursale",
+      "noBranch": "Aucune succursale"
+    },
+    "types": {
+      "MACHINE": "Machine de contrôle de présence",
+      "KIOSKO": "Kiosque d'empreinte digitale"
+    },
+    "validation": {
+      "branchRequired": "Succursale obligatoire",
+      "branchRequiredDescription": "Pour les appareils KIOSKO, vous devez sélectionner une succursale"
+    },
+    "buttons": {
+      "updating": "Mise à jour...",
+      "creating": "Création...",
+      "update": "METTRE À JOUR",
+      "save": "ENREGISTRER"
+    },
+    "about": {
+      "title": "À propos des points de pointage",
+      "markingPoint": {
+        "title": "Qu'est-ce qu'un point de pointage ?",
+        "description": "Un point de pointage est un appareil qui permet d'enregistrer la présence des employés dans le système CheckIO. Il peut être configuré sur :",
+        "item1": "Tablettes avec l'application CheckIO",
+        "item2": "Machines de contrôle de présence dédiées",
+        "item3": "Appareils mobiles compatibles"
+      },
+      "benefits": {
+        "title": "Avantages",
+        "item1": "Contrôle précis de la présence en temps réel",
+        "item2": "Plusieurs emplacements de pointage",
+        "item3": "Intégration automatique avec le système"
+      }
+    }
+  },
+  "qr": {
+    "title": "Configuration de l'appareil",
+    "titleKiosko": "Code d'activation - Kiosque",
+    "timeRemaining": "Temps restant pour synchroniser :",
+    "generating": "Génération du code QR...",
+    "scanInstruction": "Scannez ce code QR avec l'application mobile",
+    "steps": {
+      "title": "Étapes pour configurer votre appareil :",
+      "step1": "Téléchargez l'application mobile depuis la boutique d'applications.",
+      "step2": "Ouvrez l'application et sélectionnez l'option \"Configurer un nouvel appareil\".",
+      "step3": "Scannez le code QR affiché à gauche avec la caméra de votre appareil.",
+      "step4": "Suivez les instructions de l'application pour terminer la configuration.",
+      "step5": "Une fois configuré, l'appareil sera prêt à l'emploi."
+    },
+    "noteLabel": "Note :",
+    "note": "Assurez-vous de garder le code QR en sécurité, car il contient des informations de configuration sensibles.",
+    "noteKiosko": "Le code d'activation expire en 15 minutes. Utilisez le bouton « Régénérer » pour en générer un nouveau.",
+    "claimCode": {
+      "label": "Code d'activation",
+      "copy": "Copier",
+      "regenerate": "Régénérer",
+      "generate": "Générer le code",
+      "generating": "Génération du code...",
+      "copied": "Code copié dans le presse-papiers",
+      "instruction": "Entrez ce code avec le sous-domaine dans l'app checkio-fingerprint"
+    },
+    "stepsKiosko": {
+      "title": "Étapes pour activer le kiosque :",
+      "step1": "Ouvrez l'application checkio-fingerprint sur l'appareil.",
+      "step2": "Entrez le sous-domaine de votre entreprise.",
+      "step3": "Entrez le code d'activation affiché.",
+      "step4": "Appuyez sur « Activer l'appareil »."
+    }
+  }
+}

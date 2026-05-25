@@ -1,0 +1,183 @@
+{
+  "title": "Holiday Management",
+  "subtitle": "Manage system holidays",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Maintainers",
+    "holidays": "Holidays"
+  },
+  "buttons": {
+    "add": "Add Holiday",
+    "import": "Import Holidays",
+    "downloadExcel": "Download Excel",
+    "previous": "Previous",
+    "next": "Next",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "SAVE",
+    "update": "UPDATE",
+    "creating": "Creating...",
+    "updating": "Updating...",
+    "cancel": "Cancel",
+    "importButton": "Import",
+    "importing": "Importing...",
+    "loadHolidays": "Load Holidays",
+    "loading": "Loading..."
+  },
+  "table": {
+    "headers": {
+      "name": "Name",
+      "date": "Date",
+      "isWaivable": "Is Waivable",
+      "actions": "Actions"
+    },
+    "loading": "Loading holidays...",
+    "noData": "No holidays found",
+    "noDataDescription": "Add a new holiday to get started."
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} holidays",
+    "recordsPerPage": "Records per page:",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  },
+  "delete": {
+    "title": "Confirm deletion",
+    "message": "Are you sure you want to delete this holiday?",
+    "success": {
+      "title": "Holiday deleted successfully",
+      "description": "The holiday has been deleted correctly"
+    },
+    "error": {
+      "title": "Error",
+      "description": "Error deleting the holiday"
+    }
+  },
+  "excel": {
+    "success": "Excel generated successfully",
+    "error": "Error generating Excel",
+    "filename": "holidays",
+    "sheetName": "Holidays",
+    "headers": {
+      "name": "Name",
+      "date": "Date",
+      "isWaivable": "Is Waivable"
+    }
+  },
+  "ariaLabels": {
+    "editHoliday": "Edit holiday",
+    "deleteHoliday": "Delete holiday"
+  },
+  "toast": {
+    "createSuccess": {
+      "title": "Holiday created successfully",
+      "description": "The holiday has been created correctly"
+    },
+    "updateSuccess": {
+      "title": "Holiday updated successfully",
+      "description": "The holiday has been updated correctly"
+    },
+    "deleteSuccess": {
+      "title": "Holiday deleted successfully",
+      "description": "The holiday has been deleted correctly"
+    },
+    "importSuccess": {
+      "title": "Holidays imported",
+      "description": "The holidays have been imported correctly"
+    },
+    "importWithErrors": {
+      "title": "Process completed with errors",
+      "description": "{success} holidays imported correctly, {errors} with errors"
+    },
+    "loadSuccess": {
+      "title": "Success",
+      "description": "{count} holidays loaded for year {year}"
+    },
+    "loadError": {
+      "title": "Error",
+      "description": "Error loading holidays from API"
+    },
+    "yearRequired": {
+      "title": "Error",
+      "description": "Please select a year"
+    },
+    "error": {
+      "title": "Error",
+      "description": "An error occurred while processing"
+    }
+  },
+  "upsert": {
+    "title": {
+      "edit": "Edit Holiday",
+      "add": "Add Holiday"
+    },
+    "fields": {
+      "name": "Name",
+      "date": "Date",
+      "branches": "Branches (Optional)"
+    },
+    "placeholders": {
+      "name": "Name",
+      "date": "Date",
+      "branches": "Select branches (optional)"
+    },
+    "validation": {
+      "nameRequired": "Please enter the holiday name",
+      "dateRequired": "Please enter the holiday date"
+    },
+    "branchAssignment": {
+      "title": "Branch Assignment",
+      "noBranches": {
+        "label": "No branches selected:",
+        "description": "The holiday will be applied generically to all branches in the system."
+      },
+      "withBranches": {
+        "label": "Selected branches ({count}):",
+        "description": "The holiday will be applied exclusively to the selected branches."
+      },
+      "tooltip": "If you don't select any branches, the holiday will apply to all branches. If you select specific branches, the holiday will only apply to those branches."
+    },
+    "isWaivable": {
+      "label": "Is waivable",
+      "description": "Indicates if the holiday can be waived by the worker"
+    }
+  },
+  "massive": {
+    "title": "Bulk Holiday Import",
+    "message": "The following holidays will be imported from the official API:",
+    "selectYear": "Select Year",
+    "yearPlaceholder": "Select a year",
+    "noHolidaysMessage": "Select a year and click \"Load Holidays\" to see available holidays",
+    "loadingHolidays": "Loading holidays...",
+    "branchAssignment": {
+      "title": "Branch Assignment",
+      "noBranches": {
+        "label": "No branches selected:",
+        "description": "Holidays will be applied generically to all branches in the system."
+      },
+      "withBranches": {
+        "label": "Selected branches ({count}):",
+        "description": "Holidays will be applied exclusively to the selected branches."
+      },
+      "tooltip": "If you don't select any branches, the holiday will apply to all branches. If you select specific branches, the holiday will only apply to those branches."
+    },
+    "table": {
+      "headers": {
+        "date": "Date",
+        "name": "Name",
+        "type": "Type",
+        "isWaivable": "Waivable",
+        "status": "Status"
+      },
+      "status": {
+        "pending": "Pending",
+        "processing": "Processing",
+        "completed": "Completed",
+        "error": "Error"
+      }
+    }
+  },
+  "yes": "Yes",
+  "no": "No"
+}

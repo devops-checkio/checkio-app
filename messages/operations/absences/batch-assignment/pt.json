@@ -1,0 +1,110 @@
+{
+  "title": "Criar Ausência",
+  "message": "Preencha os dados de ausência para atribuir aos funcionários selecionados:",
+  "buttonText": "Atribuir",
+  "buttonLoadingText": "Atribuindo...",
+  "progress": "Progresso",
+  "pending": "Pendentes",
+  "processing": "Processando",
+  "completed": "Concluídos",
+  "errors": "Erros",
+  "toast": {
+    "selectEmployeeError": {
+      "title": "Erro",
+      "description": "Por favor selecione pelo menos um funcionário"
+    },
+    "datesError": {
+      "title": "Erro",
+      "description": "Por favor insira datas de início e fim válidas"
+    },
+    "createSuccess": {
+      "title": "Ausências criadas",
+      "description": "As ausências foram criadas com sucesso para todos os funcionários"
+    },
+    "createError": {
+      "title": "Processo concluído com erros",
+      "description": "{successCount} ausências criadas com sucesso, {errorCount} com erros"
+    },
+    "deleteSuccess": {
+      "title": "Ausências excluídas",
+      "description": "As ausências foram excluídas com sucesso"
+    },
+    "deleteError": {
+      "title": "Processo concluído com erros",
+      "description": "{successCount} ausências excluídas com sucesso, {errorCount} com erros"
+    }
+  },
+  "filters": {
+    "search": "Buscar",
+    "searchPlaceholder": "Buscar por Nome ou Sobrenome",
+    "documentNumber": "Número do Documento",
+    "documentNumberPlaceholder": "Buscar por Número do Documento",
+    "job": "Cargo",
+    "jobPlaceholder": "Selecionar Cargo",
+    "branch": "Filial",
+    "branchPlaceholder": "Selecionar Filial",
+    "searchButton": "Buscar",
+    "clearButton": "Limpar"
+  },
+  "form": {
+    "absenceType": "Tipo de Ausência",
+    "absenceTypePlaceholder": "Selecione um tipo de ausência",
+    "absenceTypeRequired": "Por favor selecione um tipo de ausência",
+    "startDate": "Data de início",
+    "startDateRequired": "Por favor selecione uma data de início",
+    "endDate": "Data de fim",
+    "endDateRequired": "Por favor selecione uma data de fim",
+    "reason": "Motivo",
+    "reasonPlaceholder": "Digite o motivo da ausência",
+    "reasonRequired": "Por favor digite o motivo da ausência",
+    "withoutPay": "Sem Pagamento",
+    "authorizedBy": "Autorizado por",
+    "authorizedByPlaceholder": "Digite o nome do autorizador",
+    "authorizedByRequired": "Por favor digite o nome do autorizador"
+  },
+  "selectedEmployees": {
+    "title": "Funcionários selecionados",
+    "noSelected": "Nenhum funcionário selecionado.",
+    "noProcessing": "Nenhum funcionário processando."
+  },
+  "buttons": {
+    "continue": "Continuar",
+    "back": "Voltar",
+    "cancel": "Cancelar"
+  },
+  "table": {
+    "headers": {
+      "employee": "Funcionário",
+      "absenceType": "Tipo de Ausência",
+      "startDate": "Data Início",
+      "endDate": "Data Fim",
+      "status": "Status",
+      "code": "Código",
+      "firstName": "Nome",
+      "lastName": "Sobrenome",
+      "documentNumber": "Número do Documento",
+      "email": "Email",
+      "contractType": "Tipo de Contrato",
+      "contractedHours": "Horas Contratadas"
+    },
+    "loading": "Carregando funcionários...",
+    "noData": "Nenhum resultado.",
+    "contractType": {
+      "indefinite": "Indefinido",
+      "fixedTerm": "Prazo Fixo"
+    },
+    "status": {
+      "pending": "Pendente",
+      "processing": "Processando",
+      "completed": "Concluído",
+      "error": "Erro"
+    }
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} resultados",
+    "page": "Página {current} de {total}",
+    "recordsPerPage": "Registros por página",
+    "previous": "Anterior",
+    "next": "Próximo"
+  }
+}

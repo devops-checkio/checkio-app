@@ -1,0 +1,243 @@
+{
+  "title": "Gerenciamento de Tipos de Ausência",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "absenceTypes": "Tipos de Ausência"
+  },
+  "buttons": {
+    "add": "Adicionar Tipo de Ausência",
+    "massive": "Carga em Massa",
+    "downloadExcel": "Baixar Excel",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "edit": "Editar",
+    "delete": "Excluir"
+  },
+  "table": {
+    "headers": {
+      "code": "Código",
+      "name": "Nome",
+      "classification": "Classificação",
+      "integrationCode": "Código de Integração",
+      "actions": "Ações"
+    },
+    "loading": "Carregando tipos de ausência...",
+    "noData": "Nenhum tipo de ausência encontrado",
+    "noDataDescription": "Crie um novo tipo de ausência para começar."
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} tipos de ausência",
+    "recordsPerPage": "Registros por página:",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "page": "Página {current} de {total}"
+  },
+  "delete": {
+    "title": "Tipo de ausência excluído com sucesso",
+    "description": "O tipo de ausência foi excluído corretamente",
+    "error": "Erro ao excluir o tipo de ausência",
+    "confirmMessage": "Tem certeza que deseja excluir este tipo de ausência?"
+  },
+  "excel": {
+    "success": "Excel gerado com sucesso",
+    "error": "Erro ao gerar o Excel",
+    "filename": "tipos-ausencia",
+    "sheetName": "Tipos de Ausência",
+    "headers": {
+      "code": "Código",
+      "name": "Nome",
+      "classification": "Classificação",
+      "integrationCode": "Código de Integração",
+      "createdAt": "Data de Criação",
+      "companies": "Empresas"
+    }
+  },
+  "ariaLabels": {
+    "editAbsenceType": "Editar tipo de ausência",
+    "deleteAbsenceType": "Excluir tipo de ausência"
+  },
+  "errors": {
+    "title": "Erro"
+  },
+  "classifications": {
+    "UNJUSTIFIED_ABSENCE": "Ausência Injustificada",
+    "JUSTIFIED_ABSENCE": "Ausência Justificada",
+    "TARDINESS": "Atraso",
+    "SHIFT_CHANGE": "Mudança de Turno",
+    "EXCEPTIONAL_SCHEDULE_DISTRIBUTION": "Distribuição Excepcional de Horários",
+    "OVERTIME_HOURS": "Horas Extras",
+    "ORDINARY_WORKDAY": "Jornada Ordinária",
+    "MEDICAL_LEAVE": "Licença Médica",
+    "PAID_LEAVE": "Permissão Paga",
+    "PRENATAL_LEAVE": "Licença Pré-natal",
+    "UNPAID_LEAVE": "Permissão Não Paga",
+    "POSTNATAL_LEAVE": "Licença Pós-natal",
+    "EARLY_DEPARTURE": "Saída Antecipada",
+    "VACATIONS": "Férias",
+    "RETAIL_WORKERS_ADDITIONAL_SUNDAY_REST": "Descanso Adicional Dominical Comércio"
+  },
+  "upsert": {
+    "loadingDetail": "A carregar dados atualizados…",
+    "title": {
+      "edit": "Editar Tipo de Ausência",
+      "add": "Adicionar Tipo de Ausência"
+    },
+    "fields": {
+      "code": "Código",
+      "name": "Nome",
+      "classification": "Classificação",
+      "integrationCode": "Código de Integração",
+      "configTitle": "Configuração de Solicitações",
+      "isEmployeeRequestable": "Solicitável pelo funcionário",
+      "isEmployeeRequestableDescription": "Permite que os funcionários selecionem este tipo de ausência ao solicitar dias de folga",
+      "isTimeBankCompensable": "Compensável por banco de horas",
+      "isTimeBankCompensableDescription": "Permite descontar dias deste tipo do banco de horas do funcionário"
+    },
+    "placeholders": {
+      "classification": "Selecione uma classificação"
+    },
+    "validation": {
+      "codeRequired": "Por favor, insira o código do tipo de ausência",
+      "nameRequired": "Por favor, insira o nome do tipo de ausência",
+      "classificationRequired": "Por favor, selecione uma classificação"
+    },
+    "info": {
+      "title": "Informações",
+      "description": "Preencha todos os campos obrigatórios para criar ou atualizar um tipo de ausência. O código de integração é opcional e pode ser usado para vincular com sistemas externos."
+    },
+    "buttons": {
+      "cancel": "Cancelar",
+      "save": "Salvar",
+      "update": "Atualizar",
+      "saving": "Criando...",
+      "updating": "Atualizando..."
+    },
+    "toast": {
+      "updateSuccess": "Tipo de ausência atualizado com sucesso",
+      "updateSuccessDescription": "O tipo de ausência foi atualizado corretamente",
+      "createSuccess": "Tipo de ausência criado com sucesso",
+      "createSuccessDescription": "O tipo de ausência foi criado corretamente",
+      "createError": "Erro ao criar o tipo de ausência"
+    }
+  },
+  "massive": {
+    "title": "Carga em Massa de Tipos de Ausência",
+    "tabs": {
+      "excel": "Carga por Excel",
+      "manual": "Entrada Manual"
+    },
+    "instructions": {
+      "excel": {
+        "title": "Instruções:",
+        "step1": "Baixe o modelo Excel para ver o formato necessário",
+        "step2": "Preencha as informações dos tipos de ausência no modelo",
+        "step3": "Certifique-se de que todos os campos obrigatórios (Código e Nome) estejam preenchidos",
+        "step4": "Envie o arquivo Excel preenchido",
+        "step5": "Verifique as informações e pressione Processar"
+      },
+      "manual": {
+        "title": "Instruções para entrada manual:",
+        "step1": "Clique em Adicionar Linha para adicionar um novo tipo de ausência",
+        "step2": "Preencha os campos obrigatórios em cada linha",
+        "step3": "Você pode adicionar quantas linhas precisar",
+        "step4": "Verifique as informações e pressione Processar"
+      }
+    },
+    "buttons": {
+      "downloadTemplate": "Baixar Modelo",
+      "uploadExcel": "Enviar Excel",
+      "addRow": "Adicionar Linha",
+      "process": "Processar",
+      "processing": "Processando...",
+      "cancel": "Cancelar",
+      "close": "Fechar",
+      "incompleteFields": "Campos Incompletos",
+      "noData": "Sem Dados"
+    },
+    "table": {
+      "headers": {
+        "code": "Código",
+        "name": "Nome",
+        "classification": "Classificação",
+        "status": "Status",
+        "actions": "Ações"
+      },
+      "noData": "Nenhum tipo de ausência adicionado",
+      "noDataDescription": "Adicione tipos de ausência manualmente ou envie um arquivo Excel",
+      "placeholders": {
+        "code": "Código",
+        "name": "Nome",
+        "classification": "Selecione a classificação"
+      },
+      "status": {
+        "completed": "Concluído",
+        "error": "Erro"
+      }
+    },
+    "validation": {
+      "codeRequired": "Por favor, insira o código",
+      "nameRequired": "Por favor, insira o nome",
+      "classificationRequired": "Por favor, selecione uma classificação"
+    },
+    "excel": {
+      "template": {
+        "sheetName": "Modelo Tipos Ausência",
+        "referenceSheet": "Classificações",
+        "filename": "modelo_tipos_ausencia.xlsx",
+        "headers": {
+          "code": "Código",
+          "name": "Nome",
+          "classification": "Classificação"
+        },
+        "referenceHeaders": {
+          "value": "Valor",
+          "description": "Descrição"
+        },
+        "example": {
+          "code": "AUS-001",
+          "name": "Exemplo Tipo de Ausência",
+          "classification": "JUSTIFIED_ABSENCE"
+        },
+        "validation": {
+          "promptTitle": "Classificação",
+          "prompt": "Selecione uma classificação de ausência",
+          "errorTitle": "Valor inválido",
+          "error": "Por favor, selecione uma classificação válida da lista"
+        }
+      },
+      "warnings": {
+        "invalidClassifications": "{count} classificação(ões) do Excel não são válidas e foram substituídas por \"JUSTIFIED_ABSENCE\". Por favor, selecione classificações válidas.",
+        "title": "Aviso"
+      }
+    },
+    "toast": {
+      "incompleteFields": {
+        "title": "Erro",
+        "description": "Não é possível processar: Há tipos de ausência com campos incompletos. Por favor, preencha todos os campos antes de continuar."
+      },
+      "noData": {
+        "title": "Aviso",
+        "description": "Não há tipos de ausência para processar. Adicione pelo menos um tipo de ausência."
+      },
+      "processCompletedWithErrors": {
+        "title": "Processo concluído com erros",
+        "description": "Revise a tabela para mais detalhes."
+      },
+      "processCompletedSuccess": {
+        "title": "Processo concluído",
+        "description": "Os tipos de ausência foram processados corretamente"
+      },
+      "createError": "Erro ao criar o tipo de ausência"
+    },
+    "progress": "Processando: {percent}%",
+    "ariaLabels": {
+      "deleteAbsenceType": "Excluir tipo de ausência"
+    },
+    "tooltips": {
+      "incompleteFields": "Há tipos de ausência com campos incompletos. Preencha todos os campos antes de processar.",
+      "noData": "Adicione pelo menos um tipo de ausência para processar.",
+      "process": "Processar carga em massa"
+    }
+  }
+}

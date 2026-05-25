@@ -1,0 +1,110 @@
+{
+  "title": "Create Absence",
+  "message": "Complete the absence data to assign to the selected employees:",
+  "buttonText": "Assign",
+  "buttonLoadingText": "Assigning...",
+  "progress": "Progress",
+  "pending": "Pending",
+  "processing": "Processing",
+  "completed": "Completed",
+  "errors": "Errors",
+  "toast": {
+    "selectEmployeeError": {
+      "title": "Error",
+      "description": "Please select at least one employee"
+    },
+    "datesError": {
+      "title": "Error",
+      "description": "Please enter valid start and end dates"
+    },
+    "createSuccess": {
+      "title": "Absences created",
+      "description": "Absences have been created successfully for all employees"
+    },
+    "createError": {
+      "title": "Process completed with errors",
+      "description": "{successCount} absences created successfully, {errorCount} with errors"
+    },
+    "deleteSuccess": {
+      "title": "Absences deleted",
+      "description": "Absences have been deleted successfully"
+    },
+    "deleteError": {
+      "title": "Process completed with errors",
+      "description": "{successCount} absences deleted successfully, {errorCount} with errors"
+    }
+  },
+  "filters": {
+    "search": "Search",
+    "searchPlaceholder": "Search by First Name or Last Name",
+    "documentNumber": "Document Number",
+    "documentNumberPlaceholder": "Search by Document Number",
+    "job": "Job",
+    "jobPlaceholder": "Select Job",
+    "branch": "Branch",
+    "branchPlaceholder": "Select Branch",
+    "searchButton": "Search",
+    "clearButton": "Clear"
+  },
+  "form": {
+    "absenceType": "Absence Type",
+    "absenceTypePlaceholder": "Select an absence type",
+    "absenceTypeRequired": "Please select an absence type",
+    "startDate": "Start date",
+    "startDateRequired": "Please select a start date",
+    "endDate": "End date",
+    "endDateRequired": "Please select an end date",
+    "reason": "Reason",
+    "reasonPlaceholder": "Enter the absence reason",
+    "reasonRequired": "Please enter the absence reason",
+    "withoutPay": "Without Pay",
+    "authorizedBy": "Authorized by",
+    "authorizedByPlaceholder": "Enter the authorizer name",
+    "authorizedByRequired": "Please enter the authorizer name"
+  },
+  "selectedEmployees": {
+    "title": "Selected employees",
+    "noSelected": "No employees selected.",
+    "noProcessing": "No employees processing."
+  },
+  "buttons": {
+    "continue": "Continue",
+    "back": "Back",
+    "cancel": "Cancel"
+  },
+  "table": {
+    "headers": {
+      "employee": "Employee",
+      "absenceType": "Absence Type",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "status": "Status",
+      "code": "Code",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "documentNumber": "Document Number",
+      "email": "Email",
+      "contractType": "Contract Type",
+      "contractedHours": "Contracted Hours"
+    },
+    "loading": "Loading employees...",
+    "noData": "No results.",
+    "contractType": {
+      "indefinite": "Indefinite",
+      "fixedTerm": "Fixed Term"
+    },
+    "status": {
+      "pending": "Pending",
+      "processing": "Processing",
+      "completed": "Completed",
+      "error": "Error"
+    }
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} results",
+    "page": "Page {current} of {total}",
+    "recordsPerPage": "Records per page",
+    "previous": "Previous",
+    "next": "Next"
+  }
+}

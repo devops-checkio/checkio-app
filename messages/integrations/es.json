@@ -1,0 +1,141 @@
+{
+  "title": "Integraciones",
+  "subtitle": "Conecte CheckIO con sistemas externos",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "integrations": "Integraciones"
+  },
+  "actions": {
+    "newIntegration": "Nueva integración"
+  },
+  "tabs": {
+    "all": "Todas ({count})",
+    "active": "Activas ({count})",
+    "inactive": "Inactivas ({count})",
+    "pending": "Pendientes ({count})",
+    "error": "Con errores ({count})"
+  },
+  "empty": {
+    "ALL": {
+      "title": "No hay integraciones",
+      "description": "Cree su primera integración para comenzar a sincronizar datos."
+    },
+    "ACTIVE": {
+      "title": "No hay integraciones activas",
+      "description": "Active una integración o cree una nueva."
+    },
+    "INACTIVE": {
+      "title": "No hay integraciones inactivas",
+      "description": "Todas las integraciones están activas o en otro estado."
+    },
+    "PENDING": {
+      "title": "No hay integraciones pendientes",
+      "description": "No hay integraciones en estado pendiente."
+    },
+    "ERROR": {
+      "title": "Ninguna integración con error",
+      "description": "Todas las integraciones están funcionando correctamente."
+    }
+  },
+  "errors": {
+    "loadTitle": "Error al cargar integraciones",
+    "loadDescription": "Hubo un problema al cargar las integraciones. Inténtelo de nuevo."
+  },
+  "detailSheet": {
+    "title": "Detalle de integración",
+    "close": "Cerrar",
+    "lastFailureMessage": "Último mensaje de error",
+    "fields": {
+      "status": "Estado",
+      "publicId": "ID público",
+      "description": "Descripción",
+      "lastSuccess": "Última ejecución exitosa",
+      "nextRun": "Próxima ejecución",
+      "lastFailure": "Último fallo",
+      "integrationTypes": "Tipos sincronizados",
+      "schedule": "Horario programado",
+      "metadata": "Configuración (enmascarada)"
+    },
+    "status": {
+      "active": "Activa",
+      "inactive": "Inactiva",
+      "error": "Error",
+      "pending": "Pendiente",
+      "unknown": "Desconocido"
+    }
+  },
+  "card": {
+    "na": "N/D",
+    "status": {
+      "active": "Activa",
+      "inactive": "Inactiva",
+      "error": "Error",
+      "pending": "Pendiente",
+      "unknown": "Desconocido"
+    },
+    "actions": {
+      "testConnection": "Probar conexión",
+      "activate": "Activar",
+      "deactivate": "Desactivar",
+      "viewDetails": "Ver detalles",
+      "edit": "Editar",
+      "delete": "Eliminar"
+    },
+    "metrics": {
+      "lastSuccess": "Última ejecución exitosa",
+      "nextRun": "Próxima ejecución",
+      "lastFailure": "Último fallo"
+    },
+    "deleteModal": {
+      "title": "Eliminar integración",
+      "message": "¿Eliminar la integración \"{name}\"? Esta acción no se puede deshacer.",
+      "cancel": "Cancelar",
+      "confirm": "Eliminar"
+    },
+    "toasts": {
+      "testSuccessTitle": "Conexión verificada",
+      "testErrorTitle": "Error en la conexión",
+      "genericError": "No se pudo completar la operación",
+      "deleteSuccessTitle": "Integración eliminada",
+      "deleteSuccessDescription": "La integración \"{name}\" se eliminó correctamente.",
+      "deleteErrorTitle": "Error al eliminar",
+      "deleteErrorDescription": "No se pudo eliminar la integración.",
+      "deactivateTitle": "Integración desactivada",
+      "deactivateDescription": "La integración \"{name}\" se desactivó.",
+      "activateTitle": "Integración activada",
+      "activateDescription": "La integración \"{name}\" se activó.",
+      "toggleErrorTitle": "Error al cambiar estado",
+      "toggleErrorDescription": "No se pudo cambiar el estado de la integración."
+    }
+  },
+  "tour": {
+    "startButton": "Ver guía",
+    "buttons": {
+      "next": "Siguiente",
+      "previous": "Anterior",
+      "done": "Finalizar"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Bienvenido al módulo Integraciones",
+        "description": "Conecte CheckIO con sistemas externos (RRHH, nómina, etc.). Esta guía le mostrará las principales funcionalidades."
+      },
+      "toolbar": {
+        "title": "Nueva integración",
+        "description": "Cree integraciones con empresas externas. El botón aparece si tiene permisos."
+      },
+      "tabs": {
+        "title": "Filtro por estado",
+        "description": "Use las pestañas para ver todas las integraciones o filtrar por activas, inactivas, pendientes o con errores."
+      },
+      "cards": {
+        "title": "Tarjetas de integraciones",
+        "description": "Cada tarjeta muestra el estado, acciones (probar conexión, editar, activar/desactivar) y fechas de sincronización."
+      },
+      "empty": {
+        "title": "Sin integraciones",
+        "description": "Cuando no hay resultados en el filtro actual, verá un mensaje indicándolo."
+      }
+    }
+  }
+}

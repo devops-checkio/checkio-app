@@ -1,0 +1,141 @@
+{
+  "title": "Integrations",
+  "subtitle": "Connect CheckIO with external systems",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "integrations": "Integrations"
+  },
+  "actions": {
+    "newIntegration": "New integration"
+  },
+  "tabs": {
+    "all": "All ({count})",
+    "active": "Active ({count})",
+    "inactive": "Inactive ({count})",
+    "pending": "Pending ({count})",
+    "error": "With errors ({count})"
+  },
+  "empty": {
+    "ALL": {
+      "title": "No integrations",
+      "description": "Create your first integration to start syncing data."
+    },
+    "ACTIVE": {
+      "title": "No active integrations",
+      "description": "Activate an integration or create a new one."
+    },
+    "INACTIVE": {
+      "title": "No inactive integrations",
+      "description": "All integrations are active or in another state."
+    },
+    "PENDING": {
+      "title": "No pending integrations",
+      "description": "There are no integrations in pending state."
+    },
+    "ERROR": {
+      "title": "No integrations with errors",
+      "description": "All integrations are working correctly."
+    }
+  },
+  "errors": {
+    "loadTitle": "Failed to load integrations",
+    "loadDescription": "Something went wrong while loading integrations. Please try again."
+  },
+  "detailSheet": {
+    "title": "Integration details",
+    "close": "Close",
+    "lastFailureMessage": "Last error message",
+    "fields": {
+      "status": "Status",
+      "publicId": "Public ID",
+      "description": "Description",
+      "lastSuccess": "Last successful run",
+      "nextRun": "Next run",
+      "lastFailure": "Last failure",
+      "integrationTypes": "Synced types",
+      "schedule": "Schedule",
+      "metadata": "Configuration (masked)"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "error": "Error",
+      "pending": "Pending",
+      "unknown": "Unknown"
+    }
+  },
+  "card": {
+    "na": "N/A",
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "error": "Error",
+      "pending": "Pending",
+      "unknown": "Unknown"
+    },
+    "actions": {
+      "testConnection": "Test connection",
+      "activate": "Activate",
+      "deactivate": "Deactivate",
+      "viewDetails": "View details",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "metrics": {
+      "lastSuccess": "Last successful run",
+      "nextRun": "Next run",
+      "lastFailure": "Last failure"
+    },
+    "deleteModal": {
+      "title": "Delete integration",
+      "message": "Delete integration \"{name}\"? This cannot be undone.",
+      "cancel": "Cancel",
+      "confirm": "Delete"
+    },
+    "toasts": {
+      "testSuccessTitle": "Connection verified",
+      "testErrorTitle": "Connection error",
+      "genericError": "The operation could not be completed",
+      "deleteSuccessTitle": "Integration deleted",
+      "deleteSuccessDescription": "Integration \"{name}\" was removed.",
+      "deleteErrorTitle": "Delete failed",
+      "deleteErrorDescription": "The integration could not be deleted.",
+      "deactivateTitle": "Integration deactivated",
+      "deactivateDescription": "Integration \"{name}\" was deactivated.",
+      "activateTitle": "Integration activated",
+      "activateDescription": "Integration \"{name}\" was activated.",
+      "toggleErrorTitle": "Status change failed",
+      "toggleErrorDescription": "The integration status could not be changed."
+    }
+  },
+  "tour": {
+    "startButton": "View guide",
+    "buttons": {
+      "next": "Next",
+      "previous": "Previous",
+      "done": "Finish"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Welcome to Integrations",
+        "description": "Connect CheckIO with external systems (HR, payroll, etc.). This guide shows the main features."
+      },
+      "toolbar": {
+        "title": "New integration",
+        "description": "Create integrations with external systems. The button appears if you have permission."
+      },
+      "tabs": {
+        "title": "Status filter",
+        "description": "Use the tabs to see all integrations or filter by active, inactive, pending, or error state."
+      },
+      "cards": {
+        "title": "Integration cards",
+        "description": "Each card shows status, actions (test connection, edit, activate/deactivate), and sync dates."
+      },
+      "empty": {
+        "title": "No results",
+        "description": "When the current filter has no items, you will see a message here."
+      }
+    }
+  }
+}

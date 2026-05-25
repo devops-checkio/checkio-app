@@ -1,0 +1,308 @@
+{
+  "help": {
+    "title": "Centro de Ajuda",
+    "subtitle": "Encontre respostas, guias e recursos para aproveitar ao máximo o CheckIO",
+    "search": {
+      "placeholder": "Pesquisar na ajuda...",
+      "clear": "Limpar pesquisa",
+      "results": "Resultados da Pesquisa",
+      "noResults": "Nenhum resultado encontrado",
+      "noResultsDescription": "Tente outros termos de pesquisa ou explore as categorias"
+    },
+    "tabs": {
+      "all": "Tudo",
+      "guides": "Guias",
+      "faqs": "Perguntas Frequentes"
+    },
+    "categories": {
+      "title": "Categorias de Ajuda",
+      "articles": "artigos",
+      "home": {
+        "title": "Início",
+        "description": "Aprenda a navegar e usar o painel principal do CheckIO"
+      },
+      "maintainers": {
+        "title": "Mantenedores",
+        "description": "Gerencie funcionários, empresas, filiais, horários e mais"
+      },
+      "operations": {
+        "title": "Operações",
+        "description": "Administre presenças, ausências, solicitações e operações diárias"
+      },
+      "reports": {
+        "title": "Relatórios",
+        "description": "Gere e exporte relatórios personalizados de presença"
+      },
+      "integrations": {
+        "title": "Integrações",
+        "description": "Configure integrações e APIs para conectar com outros sistemas"
+      }
+    },
+    "guides": {
+      "title": "Guias do Usuário"
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "popular": "Perguntas Mais Frequentes",
+      "empty": "Nenhuma pergunta frequente disponível",
+      "attendance": {
+        "question": "Como marco minha presença?",
+        "answer": "Você pode marcar sua presença na seção 'Presença Web' no menu principal. Clique no botão de marcação correspondente (entrada, saída, início de intervalo, fim de intervalo) de acordo com seu horário."
+      },
+      "permission": {
+        "question": "Como solicito uma permissão?",
+        "answer": "Vá para 'Operações > Solicitações > Permissões por Hora' no menu. Clique em 'Nova Solicitação', preencha o formulário com as datas e motivo, e envie a solicitação."
+      },
+      "employee": {
+        "question": "Como adiciono um novo funcionário?",
+        "answer": "Vá para 'Mantenedores > Funcionários' e clique em 'Adicionar Funcionário'. Preencha todos os campos obrigatórios como nome, documento, email, filial e horário."
+      },
+      "schedule": {
+        "question": "Como configuro um horário?",
+        "answer": "Em 'Mantenedores > Horários', clique em 'Novo Horário'. Defina o nome, tipo de horário (fixo ou rotativo), dias úteis, horários de entrada e saída, e tempos de tolerância."
+      },
+      "report": {
+        "question": "Como gero um relatório?",
+        "answer": "Vá para 'Relatórios > Gerenciador de Relatórios' e clique em 'Criar Relatório'. Selecione o tipo de relatório, defina o intervalo de datas e filtros, e clique em 'Gerar'."
+      },
+      "branch": {
+        "question": "Como crio uma nova filial?",
+        "answer": "Em 'Mantenedores > Filiais', clique em 'Nova Filial'. Digite o nome, código, endereço e selecione a empresa à qual pertence."
+      },
+      "device": {
+        "question": "Como configuro um dispositivo de marcação?",
+        "answer": "Vá para 'Mantenedores > Dispositivos' e clique em 'Novo Dispositivo'. Selecione o tipo (máquina ou quiosque), atribua um nome e filial."
+      },
+      "absence": {
+        "question": "Como gerencio ausências?",
+        "answer": "Em 'Operações > Atribuição de Ausências' você pode ver todas as ausências registradas. Para registrar uma nova, clique em 'Nova Ausência', selecione o funcionário, tipo de ausência, datas e anexe documentação se necessário. As ausências afetam o cálculo de presença conforme sua configuração."
+      },
+      "integration": {
+        "question": "Como configuro uma integração API?",
+        "answer": "Vá para 'Integrações' e clique em 'Nova Integração'. Gere um token de acesso, configure as URLs webhook e selecione os eventos a monitorar."
+      },
+      "user": {
+        "question": "Como atribuo permissões a um usuário?",
+        "answer": "Em 'Operações > Usuários', selecione o usuário e clique em 'Editar'. Atribua uma função predefinida ou configure permissões personalizadas. As permissões controlam o acesso a diferentes módulos e funcionalidades do sistema."
+      },
+      "shiftAssignment": {
+        "question": "Como atribuo um turno a um funcionário?",
+        "answer": "Vá para 'Operações > Atribuição de Turnos'. Selecione o turno, funcionários e intervalo de datas. Use o seletor por dia para atribuir turnos específicos. O sistema mostrará a comparação com os horários atuais de cada funcionário."
+      },
+      "scheduleReport": {
+        "question": "Como programo um relatório automático?",
+        "answer": "Em 'Relatórios > Gerenciador de Relatórios', crie ou selecione um relatório e clique em 'Programar'. Defina a frequência (diária, semanal, mensal), dia e hora de geração, destinatários de email e formato (Excel, PDF). As programações ativas são gerenciadas no histórico de relatórios."
+      },
+      "timeBank": {
+        "question": "O que é o banco de horas?",
+        "answer": "O banco de horas é um sistema que acumula as horas trabalhadas a mais ou a menos. As horas extras podem se tornar saldo positivo e as permissões ou ausências em saldo negativo. Os funcionários podem solicitar transações (usar horas acumuladas) em Operações > Solicitações. A configuração está em Mantenedores > Banco de Horas."
+      },
+      "sso": {
+        "question": "Como configuro o SSO?",
+        "answer": "Em 'Mantenedores > SSO' você pode configurar o login único (Single Sign-On). Você precisa dos dados do seu provedor IdP (SAML ou OAuth): URL de metadados, Entity ID, certificado. Uma vez configurado, os usuários poderão fazer login com suas credenciais corporativas."
+      },
+      "dailyPassDiff": {
+        "question": "Qual a diferença entre Mantenedores > Passe Diário e Operações > Passes Diários?",
+        "answer": "Mantenedores > Passe Diário configura os tipos e regras de passes (visitante, contratado, fornecedor) e os modelos. Operações > Passes Diários é onde se criam, aprovam e gerenciam os passes concretos para cada visita. Primeiro configure em Mantenedores, depois opere em Operações."
+      },
+      "pendingMarks": {
+        "question": "O que são as marcações pendentes de aprovação?",
+        "answer": "São marcações que requerem validação do supervisor: entradas/saídas fora da tolerância, marcações manuais ou detecção automática de possíveis erros. Aparecem na aba 'Marcações Pendentes' de Operações > Gestão de Presença. O supervisor pode aprovar ou rejeitar cada uma."
+      },
+      "monthClosing": {
+        "question": "Como funciona o fechamento de mês da presença?",
+        "answer": "O fechamento de mês bloqueia os dados de presença de um período para folha de pagamento ou auditoria. É configurado em Mantenedores > Fechamento de Mês. Ao fechar um mês, as marcações não poderão ser modificadas sem reabrir (se você tiver permissão). Recomenda-se fechar após validar todas as marcações pendentes."
+      }
+    },
+    "article": {
+      "back": "Voltar",
+      "updated": "Atualizado",
+      "related": "Artigos Relacionados"
+    },
+    "articles": {
+      "home": {
+        "navigation": {
+          "title": "Navegação CheckIO",
+          "description": "Aprenda a navegar pela interface e usar os recursos principais",
+          "content": "'<h2>'Navegação CheckIO'</h2>''<p>'CheckIO possui uma interface intuitiva projetada para facilitar o gerenciamento de presença. O menu lateral esquerdo contém todas as seções principais organizadas por categorias.'</p>''<h3>'Menu Principal'</h3>''<ul>''<li>''<strong>'Início:'</strong>' Painel com resumo de presença e estatísticas'</li>''<li>''<strong>'Mantenedores:'</strong>' Configuração de funcionários, horários, filiais e mais'</li>''<li>''<strong>'Operações:'</strong>' Gestão diária de presença, solicitações e ausências'</li>''<li>''<strong>'Relatórios:'</strong>' Geração de relatórios e análise'</li>''<li>''<strong>'Integrações:'</strong>' Configuração de APIs e webhooks'</li>''</ul>''<h3>'Barra Superior'</h3>''<p>'Na parte superior você encontrará:'</p>''<ul>''<li>'Seletor de empresa (se você tiver acesso a múltiplas empresas)'</li>''<li>'Notificações'</li>''<li>'Ajuda (este centro de ajuda)'</li>''<li>'Perfil do usuário'</li>''</ul>'"
+        },
+        "quickstart": {
+          "title": "Guia de Início Rápido",
+          "description": "Primeiros passos para começar a usar o CheckIO",
+          "content": "'<h2>'Guia de Início Rápido'</h2>''<p>'Bem-vindo ao CheckIO. Este guia ajudará você a dar seus primeiros passos na plataforma.'</p>''<h3>'Passo 1: Configuração Inicial'</h3>''<p>'Antes de começar, certifique-se de ter configurado:'</p>''<ul>''<li>'Pelo menos uma empresa'</li>''<li>'Uma ou mais filiais'</li>''<li>'Horários de trabalho'</li>''<li>'Tipos de ausência'</li>''</ul>''<h3>'Passo 2: Adicionar Funcionários'</h3>''<p>'Vá para Mantenedores > Funcionários e adicione seu primeiro funcionário. Você pode fazer um por um ou usar o carregamento em massa com Excel.'</p>''<h3>'Passo 3: Configurar Dispositivos'</h3>''<p>'Se usará dispositivos de marcação, configure-os em Mantenedores > Dispositivos.'</p>''<h3>'Passo 4: Começar a Marcar'</h3>''<p>'Os funcionários já podem começar a marcar sua presença pela web ou dispositivos configurados.'</p>'"
+        },
+        "overview": {
+          "title": "Visão Geral dos Recursos",
+          "description": "Conheça todos os recursos que o CheckIO oferece",
+          "content": "'<h2>'Visão Geral dos Recursos'</h2>''<p>'CheckIO é uma plataforma completa para gerenciamento de presença e recursos humanos.'</p>''<h3>'Recursos Principais'</h3>''<ul>''<li>''<strong>'Controle de Presença:'</strong>' Marcação web, dispositivos físicos, geolocalização'</li>''<li>''<strong>'Gestão de Horários:'</strong>' Horários fixos, rotativos, turnos'</li>''<li>''<strong>'Solicitações:'</strong>' Permissões, horas extras, dias livres'</li>''<li>''<strong>'Ausências:'</strong>' Registro e acompanhamento de ausências'</li>''<li>''<strong>'Relatórios:'</strong>' Geração de relatórios personalizados'</li>''<li>''<strong>'Integrações:'</strong>' API REST para conectar com outros sistemas'</li>''<li>''<strong>'Auditoria:'</strong>' Registro completo de todas as ações'</li>''</ul>'"
+        },
+        "dashboardByRole": {
+          "title": "Painel por Função",
+          "description": "O que Admin, Funcionário e Custom veem na tela inicial",
+          "content": "'<h2>'Painel por Função'</h2>''<p>'CheckIO adapta a visualização inicial conforme a função do usuário.'</p>''<h3>'Administrador'</h3>''<p>'Vê um resumo da empresa com métricas principais:'</p>''<ul>''<li>'Presença do dia'</li>''<li>'Funcionários ativos'</li>''<li>'Marcações pendentes de validação'</li>''<li>'Solicitações para aprovar'</li>''<li>'Acessos rápidos a Mantenedores e Operações'</li>''</ul>''<h3>'Funcionário'</h3>''<p>'Vê seu painel de marcação:'</p>''<ul>''<li>'Botões de entrada/saída/intervalo'</li>''<li>'Estado atual da jornada'</li>''<li>'Histórico recente de marcações'</li>''</ul>''<h3>'Custom'</h3>''<p>'Visualização intermediária conforme permissões configuradas. Pode combinar elementos de Admin e Funcionário conforme a função personalizada.'</p>'"
+        }
+      },
+      "maintainers": {
+        "employees": {
+          "create": {
+            "title": "Criar Funcionário Passo a Passo",
+            "description": "Guia completo para adicionar um novo funcionário ao sistema",
+            "content": "'<h2>'Criar Funcionário Passo a Passo'</h2>''<p>'Siga estes passos para adicionar um novo funcionário ao CheckIO:'</p>''<h3>'Passo 1: Acessar o Módulo'</h3>''<p>'Vá para '<strong>'Mantenedores > Funcionários'</strong>' e clique no botão '<strong>'Adicionar Funcionário'</strong>'.'</p>''<h3>'Passo 2: Informações Pessoais'</h3>''<p>'Preencha os seguintes campos obrigatórios:'</p>''<ul>''<li>'Nome completo'</li>''<li>'Tipo e número do documento'</li>''<li>'Email (será usado para acesso ao sistema)'</li>''<li>'Telefone'</li>''</ul>''<h3>'Passo 3: Informações Trabalhistas'</h3>''<p>'Defina:'</p>''<ul>''<li>'Filial de trabalho'</li>''<li>'Cargo'</li>''<li>'Horário atribuído'</li>''<li>'Data de admissão'</li>''<li>'Tipo de contrato'</li>''</ul>''<h3>'Passo 4: Configuração de Acesso'</h3>''<p>'Se o funcionário terá acesso ao sistema, marque a opção correspondente e atribua uma função.'</p>''<h3>'Passo 5: Salvar'</h3>''<p>'Revise todas as informações e clique em '<strong>'Salvar'</strong>'. O funcionário já estará disponível no sistema.'</p>'"
+          },
+          "bulk": {
+            "title": "Carregamento em Massa de Funcionários",
+            "description": "Aprenda a carregar vários funcionários usando Excel",
+            "content": "'<h2>'Carregamento em Massa de Funcionários'</h2>''<p>'O carregamento em massa permite adicionar vários funcionários de uma vez usando um arquivo Excel.'</p>''<h3>'Passo 1: Baixar Modelo'</h3>''<p>'Em '<strong>'Mantenedores > Funcionários'</strong>', clique em '<strong>'Carregamento em Massa'</strong>' e baixe o modelo Excel.'</p>''<h3>'Passo 2: Completar Modelo'</h3>''<p>'Abra o arquivo e complete uma linha por funcionário. Campos obrigatórios:'</p>''<ul>''<li>'Nome'</li>''<li>'Sobrenome'</li>''<li>'Tipo de documento'</li>''<li>'Número do documento'</li>''<li>'Email'</li>''<li>'Código da filial'</li>''<li>'Código do horário'</li>''</ul>''<h3>'Passo 3: Validar Dados'</h3>''<p>'Certifique-se de que:'</p>''<ul>''<li>'Os códigos de filial e horário existam no sistema'</li>''<li>'Os emails não estejam duplicados'</li>''<li>'Os documentos sejam válidos'</li>''</ul>''<h3>'Passo 4: Carregar Arquivo'</h3>''<p>'Envie o arquivo Excel e o sistema validará os dados. Se houver erros, serão exibidos para correção.'</p>''<h3>'Passo 5: Processar'</h3>''<p>'Uma vez validado, clique em '<strong>'Processar'</strong>' para criar todos os funcionários.'</p>'"
+          },
+          "edit": {
+            "title": "Editar Informações do Funcionário",
+            "description": "Como atualizar dados de funcionário existente",
+            "content": "'<h2>'Editar Informações do Funcionário'</h2>''<p>'Você pode atualizar as informações de qualquer funcionário a qualquer momento.'</p>''<h3>'Acessar Edição'</h3>''<p>'Em '<strong>'Mantenedores > Funcionários'</strong>', busque o funcionário e clique no ícone de editar (lápis).'</p>''<h3>'Informações Editáveis'</h3>''<p>'Você pode modificar:'</p>''<ul>''<li>'Dados pessoais (nome, email, telefone)'</li>''<li>'Informações trabalhistas (filial, cargo, horário)'</li>''<li>'Configuração de acesso e permissões'</li>''<li>'Status do funcionário (ativo/inativo)'</li>''</ul>''<h3>'Alterações Sensíveis'</h3>''<p>'Observe que algumas alterações podem afetar:'</p>''<ul>''<li>''<strong>'Mudança de horário:'</strong>' Será aplicada a partir do dia seguinte'</li>''<li>''<strong>'Mudança de filial:'</strong>' Pode afetar dispositivos de marcação atribuídos'</li>''<li>''<strong>'Desativar funcionário:'</strong>' Não poderá marcar presença nem acessar o sistema'</li>''</ul>''<h3>'Histórico de Alterações'</h3>''<p>'Todas as alterações ficam registradas na auditoria do sistema.'</p>'"
+          }
+        },
+        "schedules": {
+          "create": {
+            "title": "Criar Horário de Trabalho",
+            "description": "Guia para configurar horários fixos e flexíveis",
+            "content": "'<h2>'Criar Horário de Trabalho'</h2>''<p>'Os horários definem quando os funcionários devem trabalhar.'</p>''<h3>'Tipos de Horários'</h3>''<ul>''<li>''<strong>'Fixo:'</strong>' Mesmo horário todos os dias'</li>''<li>''<strong>'Rotativo:'</strong>' Horário que muda conforme os turnos'</li>''<li>''<strong>'Flexível:'</strong>' Com intervalos de entrada/saída'</li>''</ul>''<h3>'Criar Horário Fixo'</h3>''<ol>''<li>'Vá para '<strong>'Mantenedores > Horários'</strong>''</li>''<li>'Clique em '<strong>'Novo Horário'</strong>''</li>''<li>'Informe nome e descrição'</li>''<li>'Selecione tipo '<strong>'Fixo'</strong>''</li>''<li>'Defina dias úteis (ex: Seg-Sex)'</li>''<li>'Configure hora de entrada e saída'</li>''<li>'Estabeleça tempos de tolerância'</li>''<li>'Configure intervalos se aplicável'</li>''</ol>''<h3>'Configuração Avançada'</h3>''<p>'Você pode configurar:'</p>''<ul>''<li>'Tolerância de entrada/saída'</li>''<li>'Tempo mínimo de trabalho'</li>''<li>'Cálculo de horas extras'</li>''<li>'Arredondamento de marcações'</li>''</ul>'"
+          },
+          "rotating": {
+            "title": "Configurar Horários Rotativos",
+            "description": "Como configurar turnos e rotações de horário",
+            "content": "'<h2>'Configurar Horários Rotativos'</h2>''<p>'Os horários rotativos são ideais para empresas com turnos.'</p>''<h3>'Passo 1: Criar Turnos'</h3>''<p>'Primeiro crie os turnos em '<strong>'Mantenedores > Turnos'</strong>':'</p>''<ul>''<li>'Turno Manhã: 07:00 - 15:00'</li>''<li>'Turno Tarde: 15:00 - 23:00'</li>''<li>'Turno Noite: 23:00 - 07:00'</li>''</ul>''<h3>'Passo 2: Criar Horário Rotativo'</h3>''<ol>''<li>'Vá para '<strong>'Mantenedores > Horários'</strong>''</li>''<li>'Selecione tipo '<strong>'Rotativo'</strong>''</li>''<li>'Defina a sequência de rotação'</li>''<li>'Atribua turnos a cada dia do ciclo'</li>''</ol>''<h3>'Exemplo de Rotação'</h3>''<p>'Ciclo de 3 semanas:'</p>''<ul>''<li>'Semana 1: Turno Manhã'</li>''<li>'Semana 2: Turno Tarde'</li>''<li>'Semana 3: Turno Noite'</li>''</ul>''<h3>'Atribuição a Funcionários'</h3>''<p>'Uma vez criado o horário rotativo, atribua-o aos funcionários correspondentes. O sistema calculará automaticamente qual turno corresponde a cada dia.'</p>'"
+          }
+        },
+        "branches": {
+          "create": {
+            "title": "Criar Nova Filial",
+            "description": "Como adicionar e configurar uma filial",
+            "content": "'<h2>'Criar Nova Filial'</h2>''<p>'As filiais representam os locais físicos da sua empresa.'</p>''<h3>'Informações Básicas'</h3>''<ol>''<li>'Vá para '<strong>'Mantenedores > Filiais'</strong>''</li>''<li>'Clique em '<strong>'Nova Filial'</strong>''</li>''<li>'Complete:'<ul>''<li>'Nome da filial'</li>''<li>'Código único'</li>''<li>'Empresa à qual pertence'</li>''</ul>''</li>''</ol>''<h3>'Localização'</h3>''<p>'Configure o endereço completo:'</p>''<ul>''<li>'Rua e número'</li>''<li>'Cidade'</li>''<li>'Região/Estado'</li>''<li>'País'</li>''<li>'CEP'</li>''</ul>''<h3>'Geolocalização'</h3>''<p>'Se usará controle por localização:'</p>''<ul>''<li>'Informe coordenadas GPS'</li>''<li>'Defina raio de tolerância'</li>''<li>'Habilite marcação por geolocalização'</li>''</ul>''<h3>'Configuração Adicional'</h3>''<ul>''<li>'Fuso horário'</li>''<li>'Dispositivos atribuídos'</li>''<li>'Horários disponíveis'</li>''</ul>'"
+          }
+        },
+        "companies": {
+          "create": {
+            "title": "Criar Nova Empresa",
+            "description": "Configuração inicial de uma empresa no sistema",
+            "content": "'<h2>'Criar Nova Empresa'</h2>''<p>'A empresa é o nível mais alto de organização no CheckIO.'</p>''<h3>'Dados da Empresa'</h3>''<ol>''<li>'Vá para '<strong>'Mantenedores > Empresas'</strong>''</li>''<li>'Clique em '<strong>'Nova Empresa'</strong>''</li>''<li>'Complete:'<ul>''<li>'Razão social'</li>''<li>'Nome comercial'</li>''<li>'CNPJ/CPF'</li>''<li>'Email corporativo'</li>''<li>'Telefone'</li>''</ul>''</li>''</ol>''<h3>'Configuração Legal'</h3>''<ul>''<li>'Tipo de documento fiscal'</li>''<li>'Número de identificação'</li>''<li>'Representante legal'</li>''</ul>''<h3>'Configuração do Sistema'</h3>''<p>'Defina parâmetros gerais:'</p>''<ul>''<li>'Fuso horário padrão'</li>''<li>'Moeda'</li>''<li>'Idioma'</li>''<li>'Formato de data'</li>''</ul>''<h3>'Próximo Passo'</h3>''<p>'Uma vez criada a empresa, você poderá adicionar filiais e começar a configurar funcionários.'</p>'"
+          }
+        },
+        "devices": {
+          "setup": {
+            "title": "Configurar Dispositivo de Marcação",
+            "description": "Como configurar dispositivos físicos e quiosques",
+            "content": "'<h2>'Configurar Dispositivo de Marcação'</h2>''<p>'CheckIO suporta diferentes tipos de dispositivos para marcação de presença.'</p>''<h3>'Tipos de Dispositivos'</h3>''<ul>''<li>''<strong>'Máquina:'</strong>' Dispositivo físico com leitor biométrico'</li>''<li>''<strong>'Quiosque:'</strong>' Tablet ou computador com o app CheckIO'</li>''</ul>''<h3>'Configurar Máquina'</h3>''<ol>''<li>'Vá para '<strong>'Mantenedores > Dispositivos'</strong>''</li>''<li>'Clique em '<strong>'Novo Dispositivo'</strong>''</li>''<li>'Selecione tipo '<strong>'Máquina'</strong>''</li>''<li>'Atribua nome e filial'</li>''<li>'Gere código QR'</li>''<li>'Escaneie o QR no dispositivo físico'</li>''</ol>''<h3>'Configurar Quiosque'</h3>''<ol>''<li>'Crie dispositivo tipo '<strong>'Quiosque'</strong>''</li>''<li>'Baixe o app CheckIO Quiosque'</li>''<li>'Instale em tablet ou computador'</li>''<li>'Escaneie o código QR para vincular'</li>''</ol>''<h3>'Configuração Avançada'</h3>''<ul>''<li>'Modo de marcação (entrada/saída/ambos)'</li>''<li>'Validação biométrica'</li>''<li>'Modo offline'</li>''</ul>'"
+          }
+        },
+        "holidays": {
+          "manage": {
+            "title": "Gerenciar Feriados",
+            "description": "Como configurar feriados e dias não úteis",
+            "content": "'<h2>'Gerenciar Feriados'</h2>''<p>'Os feriados são dias não úteis que afetam o cálculo de presença.'</p>''<h3>'Adicionar Feriado'</h3>''<ol>''<li>'Vá para '<strong>'Mantenedores > Feriados'</strong>''</li>''<li>'Clique em '<strong>'Novo Feriado'</strong>''</li>''<li>'Complete:'<ul>''<li>'Nome do feriado'</li>''<li>'Data'</li>''<li>'Tipo (nacional, regional, local)'</li>''</ul>''</li>''</ol>''<h3>'Tipos de Feriados'</h3>''<ul>''<li>''<strong>'Irrenunciável:'</strong>' Todos os funcionários descansam'</li>''<li>''<strong>'Opcional:'</strong>' O funcionário pode optar por trabalhar'</li>''</ul>''<h3>'Carregamento em Massa'</h3>''<p>'Você pode carregar vários feriados usando Excel:'</p>''<ol>''<li>'Baixe o modelo'</li>''<li>'Complete com os feriados do ano'</li>''<li>'Carregue o arquivo'</li>''</ol>''<h3>'Impacto na Presença'</h3>''<p>'Os feriados:'</p>''<ul>''<li>'Não requerem marcação'</li>''<li>'Não contam como ausências'</li>''<li>'Podem gerar pagamento adicional se trabalhados'</li>''</ul>'"
+          }
+        },
+        "shifts": {
+          "create": {
+            "title": "Criar Turno de Trabalho",
+            "description": "Configuração de turno para horários rotativos",
+            "content": "'<h2>'Criar Turno de Trabalho'</h2>''<p>'Os turnos são blocos de tempo usados em horários rotativos.'</p>''<h3>'Criar Turno'</h3>''<ol>''<li>'Vá para '<strong>'Mantenedores > Turnos'</strong>''</li>''<li>'Clique em '<strong>'Novo Turno'</strong>''</li>''<li>'Defina:'<ul>''<li>'Nome do turno'</li>''<li>'Hora de início'</li>''<li>'Hora de fim'</li>''<li>'Duração do intervalo'</li>''</ul>''</li>''</ol>''<h3>'Turnos Comuns'</h3>''<ul>''<li>''<strong>'Manhã:'</strong>' 07:00 - 15:00'</li>''<li>''<strong>'Tarde:'</strong>' 15:00 - 23:00'</li>''<li>''<strong>'Noite:'</strong>' 23:00 - 07:00'</li>''</ul>''<h3>'Turnos que Cruzam a Meia-Noite'</h3>''<p>'Para turnos noturnos que cruzam a meia-noite, marque a opção correspondente. O sistema calculará corretamente as horas trabalhadas.'</p>''<h3>'Uso em Horários'</h3>''<p>'Uma vez criados os turnos, você pode usá-los em horários rotativos para definir a sequência de trabalho.'</p>'"
+          }
+        },
+        "users": {
+          "permissions": {
+            "title": "Gerenciar Permissões de Usuário",
+            "description": "Como atribuir e configurar permissões de acesso",
+            "content": "'<h2>'Gerenciar Permissões de Usuário'</h2>''<p>'As permissões controlam o que cada usuário pode fazer no sistema.'</p>''<h3>'Funções Predefinidas'</h3>''<ul>''<li>''<strong>'Administrador:'</strong>' Acesso completo'</li>''<li>''<strong>'Supervisor:'</strong>' Gestão de sua equipe'</li>''<li>''<strong>'Funcionário:'</strong>' Apenas suas informações'</li>''</ul>''<h3>'Atribuir Função'</h3>''<ol>''<li>'Vá para '<strong>'Operações > Usuários'</strong>''</li>''<li>'Selecione o usuário'</li>''<li>'Clique em '<strong>'Editar'</strong>''</li>''<li>'Atribua uma função'</li>''</ol>''<h3>'Permissões Personalizadas'</h3>''<p>'Você pode criar permissões personalizadas:'</p>''<ul>''<li>'Selecione módulos acessíveis'</li>''<li>'Defina ações permitidas (ver, criar, editar, excluir)'</li>''<li>'Estabeleça escopo (toda a empresa ou apenas sua filial)'</li>''</ul>''<h3>'Melhores Práticas'</h3>''<ul>''<li>'Atribua a permissão mínima necessária'</li>''<li>'Revise permissões periodicamente'</li>''<li>'Documente funções personalizadas'</li>''</ul>'"
+          }
+        },
+        "roles": {
+          "manage": {
+            "title": "Gerenciar Funções do Sistema",
+            "description": "Criar e configurar funções de usuário",
+            "content": "'<h2>'Gerenciar Funções do Sistema'</h2>''<p>'As funções agrupam permissões para facilitar a administração.'</p>''<h3>'Criar Função'</h3>''<ol>''<li>'Vá para '<strong>'Operações > Funções'</strong>''</li>''<li>'Clique em '<strong>'Nova Função'</strong>''</li>''<li>'Defina:'<ul>''<li>'Nome da função'</li>''<li>'Descrição'</li>''<li>'Permissões incluídas'</li>''</ul>''</li>''</ol>''<h3>'Estrutura de Permissões'</h3>''<p>'As permissões são organizadas por módulo:'</p>''<ul>''<li>'Mantenedores'</li>''<li>'Operações'</li>''<li>'Relatórios'</li>''<li>'Integrações'</li>''</ul>''<p>'Para cada módulo você pode definir:'</p>''<ul>''<li>'Ver (leitura)'</li>''<li>'Criar'</li>''<li>'Editar (atualizar)'</li>''<li>'Excluir'</li>''</ul>''<h3>'Funções Recomendadas'</h3>''<ul>''<li>''<strong>'RH:'</strong>' Acesso completo a funcionários e relatórios'</li>''<li>''<strong>'Supervisor:'</strong>' Gestão de presença de sua equipe'</li>''<li>''<strong>'Operador:'</strong>' Apenas marcação e consulta'</li>''</ul>'"
+          }
+        }
+      },
+      "operations": {
+        "attendance": {
+          "manage": {
+            "title": "Gerenciar Marcações de Presença",
+            "description": "Como administrar e corrigir marcações de presença",
+            "content": "'<h2>'Gerenciar Marcações de Presença'</h2>''<p>'Nesta seção você pode ver e gerenciar todas as marcações de presença.'</p>''<h3>'Ver Marcações'</h3>''<p>'Em '<strong>'Operações > Gestão de Presença'</strong>' você verá:'</p>''<ul>''<li>'Lista de todas as marcações do dia'</li>''<li>'Status de cada marcação (no horário, atrasado, adiantado)'</li>''<li>'Marcações pendentes de validação'</li>''</ul>''<h3>'Filtros Disponíveis'</h3>''<ul>''<li>'Por data ou intervalo de datas'</li>''<li>'Por funcionário'</li>''<li>'Por filial'</li>''<li>'Por tipo de marcação'</li>''<li>'Por status'</li>''</ul>''<h3>'Ações Disponíveis'</h3>''<ul>''<li>'Ver detalhe da marcação'</li>''<li>'Modificar marcação (requer permissões)'</li>''<li>'Excluir marcação incorreta'</li>''<li>'Adicionar marcação manual'</li>''</ul>'"
+          },
+          "tabs": {
+            "title": "Abas da Gestão de Presença",
+            "description": "Guia de cada aba em Gestão de Presença",
+            "content": "'<h2>'Abas da Gestão de Presença'</h2>''<p>'Em Operações > Gestão de Presença você encontrará várias abas conforme o status das presenças.'</p>''<h3>'Incompletas'</h3>''<p>'Funcionários aos quais faltam marcações (entrada, saída ou intervalos) no dia.'</p>''<h3>'Sem Horário'</h3>''<p>'Funcionários sem horário atribuído para a data.'</p>''<h3>'Ausentes'</h3>''<p>'Funcionários que não marcaram naquele dia (sem ausência registrada).'</p>''<h3>'Completadas'</h3>''<p>'Dias com marcação completa, jornada encerrada.'</p>''<h3>'Marcações Pendentes'</h3>''<p>'Marcações que requerem aprovação do supervisor (fora da tolerância, manuais, etc.).'</p>''<h3>'Atrasos Pendentes'</h3>''<p>'Chegadas atrasadas que requerem validação.'</p>''<h3>'Horas Extras Pendentes'</h3>''<p>'Horas extras detectadas que requerem aprovação.'</p>'"
+          },
+          "modify": {
+            "title": "Modificar Marcações de Presença",
+            "description": "Como corrigir erros de marcação",
+            "content": "'<h2>'Modificar Marcações de Presença'</h2>''<p>'Às vezes é necessário corrigir marcações devido a erros ou situações especiais.'</p>''<h3>'Quando Modificar'</h3>''<ul>''<li>'Funcionário esqueceu de marcar'</li>''<li>'Erro no dispositivo'</li>''<li>'Marcação em local incorreto'</li>''<li>'Ajuste por situação especial'</li>''</ul>''<h3>'Processo de Modificação'</h3>''<ol>''<li>'Encontre a marcação a modificar'</li>''<li>'Clique no ícone de editar'</li>''<li>'Modifique a hora ou data'</li>''<li>'Adicione um motivo da modificação'</li>''<li>'Salve as alterações'</li>''</ol>''<h3>'Auditoria'</h3>''<p>'Todas as modificações ficam registradas:'</p>''<ul>''<li>'Usuário que modificou'</li>''<li>'Data e hora da modificação'</li>''<li>'Valores anteriores e novos'</li>''<li>'Motivo da modificação'</li>''</ul>''<h3>'Permissões Necessárias'</h3>''<p>'Apenas usuários com permissão de modificação podem editar marcações. Isso garante a integridade dos dados.'</p>'"
+          }
+        },
+        "absences": {
+          "register": {
+            "title": "Registrar Ausência",
+            "description": "Como registrar e gerenciar ausências de funcionários",
+            "content": "'<h2>'Registrar Ausência'</h2>''<p>'As ausências são períodos em que o funcionário não comparece ao trabalho.'</p>''<h3>'Tipos de Ausência'</h3>''<ul>''<li>'Licença médica'</li>''<li>'Férias'</li>''<li>'Permissão sem vencimento'</li>''<li>'Suspensão'</li>''<li>'Outros (configurável)'</li>''</ul>''<h3>'Registrar Ausência'</h3>''<ol>''<li>'Vá para '<strong>'Operações > Atribuição de Ausências'</strong>''</li>''<li>'Clique em '<strong>'Nova Ausência'</strong>''</li>''<li>'Selecione o funcionário'</li>''<li>'Escolha o tipo de ausência'</li>''<li>'Defina datas de início e fim'</li>''<li>'Anexe documentação se necessário'</li>''<li>'Salve o registro'</li>''</ol>''<h3>'Impacto na Presença'</h3>''<p>'As ausências:'</p>''<ul>''<li>'Justificam a falta de marcação'</li>''<li>'Podem ou não descontar dias de férias'</li>''<li>'Afetam o cálculo de horas trabalhadas'</li>''<li>'Aparecem nos relatórios'</li>''</ul>'"
+          }
+        },
+        "requests": {
+          "permission": {
+            "title": "Gerenciar Solicitações de Permissão",
+            "description": "Como aprovar ou rejeitar solicitações de permissão",
+            "content": "'<h2>'Gerenciar Solicitações de Permissão'</h2>''<p>'Os funcionários podem solicitar permissões que requerem aprovação.'</p>''<h3>'Tipos de Solicitações'</h3>''<ul>''<li>'Permissão por horas'</li>''<li>'Dia livre'</li>''<li>'Horas extras'</li>''<li>'Transação banco de horas'</li>''</ul>''<h3>'Revisar Solicitações'</h3>''<ol>''<li>'Vá para '<strong>'Operações > Solicitações'</strong>''</li>''<li>'Você verá todas as solicitações pendentes'</li>''<li>'Clique em uma solicitação para ver detalhes'</li>''</ol>''<h3>'Aprovar ou Rejeitar'</h3>''<p>'Para cada solicitação você pode:'</p>''<ul>''<li>''<strong>'Aprovar:'</strong>' A solicitação será aplicada automaticamente'</li>''<li>''<strong>'Rejeitar:'</strong>' Indique o motivo da rejeição'</li>''<li>''<strong>'Solicitar mais informações:'</strong>' Peça esclarecimentos ao funcionário'</li>''</ul>''<h3>'Notificações'</h3>''<p>'O funcionário receberá notificação por email do status de sua solicitação.'</p>'"
+          },
+          "overtime": {
+            "title": "Aprovar Horas Extras",
+            "description": "Processo de aprovação de horas extras",
+            "content": "'<h2>'Aprovar Horas Extras'</h2>''<p>'As horas extras requerem aprovação antes de serem pagas.'</p>''<h3>'Solicitação de Horas Extras'</h3>''<p>'O funcionário solicita horas extras indicando:'</p>''<ul>''<li>'Data e hora das horas extras'</li>''<li>'Motivo'</li>''<li>'Quantidade de horas'</li>''</ul>''<h3>'Processo de Aprovação'</h3>''<ol>''<li>'Revise a solicitação em '<strong>'Operações > Solicitações > Horas Extras'</strong>''</li>''<li>'Verifique se as horas estão corretas'</li>''<li>'Confirme o motivo'</li>''<li>'Aprove ou rejeite'</li>''</ol>''<h3>'Cálculo Automático'</h3>''<p>'O sistema pode calcular automaticamente horas extras com base em:'</p>''<ul>''<li>'Marcações fora do horário'</li>''<li>'Configuração do horário'</li>''<li>'Regras da empresa'</li>''</ul>''<h3>'Relatórios'</h3>''<p>'As horas extras aprovadas aparecem nos relatórios de folha de pagamento para o pagamento correspondente.'</p>'"
+          }
+        },
+        "passes": {
+          "manage": {
+            "title": "Gerenciar Passes Diários",
+            "description": "Administração de passes de acesso temporários",
+            "content": "'<h2>'Gerenciar Passes Diários'</h2>''<p>'Os passes diários permitem acesso temporário a não funcionários.'</p>''<h3>'Criar Passe Diário'</h3>''<ol>''<li>'Vá para '<strong>'Operações > Passes Diários'</strong>''</li>''<li>'Clique em '<strong>'Novo Passe'</strong>''</li>''<li>'Complete:'<ul>''<li>'Nome do visitante'</li>''<li>'Documento de identidade'</li>''<li>'Empresa visitada'</li>''<li>'Motivo da visita'</li>''<li>'Data e hora de acesso'</li>''<li>'Validade do passe'</li>''</ul>''</li>''</ol>''<h3>'Tipos de Passes'</h3>''<ul>''<li>''<strong>'Visitante:'</strong>' Acesso por horas'</li>''<li>''<strong>'Contratado:'</strong>' Acesso por dias'</li>''<li>''<strong>'Fornecedor:'</strong>' Acesso recorrente'</li>''</ul>''<h3>'Controle de Acesso'</h3>''<p>'Os passes podem:'</p>''<ul>''<li>'Ter código QR para escaneamento'</li>''<li>'Ser restritos a áreas específicas'</li>''<li>'Requerer acompanhamento'</li>''<li>'Ter data de expiração'</li>''</ul>'"
+          }
+        },
+        "audit": {
+          "review": {
+            "title": "Revisar Auditoria do Sistema",
+            "description": "Como consultar o registro de auditoria",
+            "content": "'<h2>'Revisar Auditoria do Sistema'</h2>''<p>'A auditoria registra todas as ações importantes no sistema.'</p>''<h3>'O que é Registrado'</h3>''<ul>''<li>'Criação, edição e exclusão de registros'</li>''<li>'Alterações de configuração'</li>''<li>'Acessos ao sistema'</li>''<li>'Modificações de marcações'</li>''<li>'Aprovações e rejeições'</li>''</ul>''<h3>'Consultar Auditoria'</h3>''<ol>''<li>'Vá para '<strong>'Operações > Auditoria'</strong>''</li>''<li>'Use os filtros para buscar:'<ul>''<li>'Por usuário'</li>''<li>'Por módulo'</li>''<li>'Por tipo de ação'</li>''<li>'Por intervalo de datas'</li>''</ul>''</li>''</ol>''<h3>'Informações Disponíveis'</h3>''<p>'Para cada registro você verá:'</p>''<ul>''<li>'Usuário que realizou a ação'</li>''<li>'Data e hora exata'</li>''<li>'Tipo de ação'</li>''<li>'Módulo afetado'</li>''<li>'Valores anteriores e novos'</li>''<li>'Endereço IP'</li>''</ul>''<h3>'Exportar Auditoria'</h3>''<p>'Você pode exportar os registros de auditoria para Excel para análise ou conformidade regulatória.'</p>'"
+          }
+        }
+      },
+      "reports": {
+        "export": {
+          "title": "Exportar Dados para Excel",
+          "description": "Como exportar relatórios e dados do sistema",
+          "content": "'<h2>'Exportar Dados para Excel'</h2>''<p>'Quase todos os módulos permitem exportar dados para Excel.'</p>''<h3>'Exportar de Listas'</h3>''<p>'Em qualquer lista (funcionários, marcações, etc.):'</p>''<ol>''<li>'Aplique os filtros desejados'</li>''<li>'Clique no botão '<strong>'Baixar Excel'</strong>''</li>''<li>'O arquivo será baixado automaticamente'</li>''</ol>''<h3>'Exportar Relatórios'</h3>''<p>'Em '<strong>'Relatórios'</strong>':'</p>''<ol>''<li>'Gere o relatório com os filtros desejados'</li>''<li>'Clique em '<strong>'Exportar para Excel'</strong>''</li>''<li>'Escolha o formato (Excel ou CSV)'</li>''</ol>''<h3>'Conteúdo do Excel'</h3>''<p>'Os arquivos exportados incluem:'</p>''<ul>''<li>'Todas as colunas visíveis'</li>''<li>'Dados filtrados aplicados'</li>''<li>'Formato de data e hora'</li>''<li>'Cabeçalhos descritivos'</li>''</ul>''<h3>'Usos Comuns'</h3>''<ul>''<li>'Análise em Excel'</li>''<li>'Importar para outros sistemas'</li>''<li>'Backup de informações'</li>''<li>'Auditorias externas'</li>''</ul>'"
+        },
+        "create": {
+          "title": "Criar Relatório Personalizado",
+          "description": "Como projetar e gerar relatórios personalizados",
+          "content": "'<h2>'Criar Relatório Personalizado'</h2>''<p>'O gerenciador de relatórios permite criar relatórios personalizados de acordo com suas necessidades.'</p>''<h3>'Criar Relatório'</h3>''<ol>''<li>'Vá para '<strong>'Relatórios > Gerenciador de Relatórios'</strong>''</li>''<li>'Clique em '<strong>'Criar Relatório'</strong>''</li>''<li>'Selecione o tipo de relatório'</li>''</ol>''<h3>'Tipos de Relatórios'</h3>''<ul>''<li>'Presença diária/mensal'</li>''<li>'Horas trabalhadas'</li>''<li>'Ausências'</li>''<li>'Horas extras'</li>''<li>'Atrasos'</li>''<li>'Cumprimento de horário'</li>''</ul>''<h3>'Configurar Relatório'</h3>''<p>'Defina:'</p>''<ul>''<li>'Intervalo de datas'</li>''<li>'Funcionários ou filiais'</li>''<li>'Colunas a incluir'</li>''<li>'Agrupamentos'</li>''<li>'Totais e subtotais'</li>''</ul>''<h3>'Salvar e Reutilizar'</h3>''<p>'Você pode salvar a configuração do relatório para gerá-lo facilmente no futuro.'</p>'"
+        },
+        "schedule": {
+          "title": "Programar Relatórios Automáticos",
+          "description": "Configurar envio automático de relatórios",
+          "content": "'<h2>'Programar Relatórios Automáticos'</h2>''<p>'Programe relatórios para serem gerados e enviados automaticamente.'</p>''<h3>'Configurar Programação'</h3>''<ol>''<li>'Crie ou selecione um relatório'</li>''<li>'Clique em '<strong>'Programar'</strong>''</li>''<li>'Defina:'<ul>''<li>'Frequência (diária, semanal, mensal)'</li>''<li>'Dia e hora de geração'</li>''<li>'Destinatários de email'</li>''<li>'Formato (Excel, PDF)'</li>''</ul>''</li>''</ol>''<h3>'Frequências Comuns'</h3>''<ul>''<li>''<strong>'Diária:'</strong>' Relatório de presença do dia anterior'</li>''<li>''<strong>'Semanal:'</strong>' Resumo semanal toda segunda-feira'</li>''<li>''<strong>'Mensal:'</strong>' Relatório de folha no último dia do mês'</li>''</ul>''<h3>'Gerenciar Programações'</h3>''<p>'Você pode:'</p>''<ul>''<li>'Ver todas as programações ativas'</li>''<li>'Pausar temporariamente'</li>''<li>'Modificar configuração'</li>''<li>'Ver histórico de envios'</li>''</ul>'"
+        }
+      },
+      "integrations": {
+        "api": {
+          "title": "Configurar Integração API",
+          "description": "Como integrar CheckIO com outros sistemas",
+          "content": "'<h2>'Configurar Integração API'</h2>''<p>'CheckIO oferece uma API REST completa para integrações.'</p>''<h3>'Criar Integração'</h3>''<ol>''<li>'Vá para '<strong>'Integrações'</strong>''</li>''<li>'Clique em '<strong>'Nova Integração'</strong>''</li>''<li>'Defina:'<ul>''<li>'Nome da integração'</li>''<li>'Descrição'</li>''<li>'Permissões de acesso'</li>''</ul>''</li>''</ol>''<h3>'Gerar Token'</h3>''<p>'O sistema gerará um token de acesso único. Guarde-o de forma segura; não será exibido novamente.'</p>''<h3>'Endpoints Disponíveis'</h3>''<ul>''<li>'/api/employees - Gestão de funcionários'</li>''<li>'/api/attendance - Marcações de presença'</li>''<li>'/api/schedules - Horários'</li>''<li>'/api/reports - Geração de relatórios'</li>''</ul>''<h3>'Documentação'</h3>''<p>'Consulte a documentação completa da API no portal de desenvolvedores.'</p>'"
+        },
+        "tokens": {
+          "title": "Gerenciar Tokens de Acesso",
+          "description": "Administração de tokens API e segurança",
+          "content": "'<h2>'Gerenciar Tokens de Acesso'</h2>''<p>'Os tokens permitem acesso seguro à API do CheckIO.'</p>''<h3>'Tipos de Tokens'</h3>''<ul>''<li>''<strong>'Produção:'</strong>' Para uso em sistemas de produção'</li>''<li>''<strong>'Sandbox:'</strong>' Para testes e desenvolvimento'</li>''</ul>''<h3>'Criar Token'</h3>''<ol>''<li>'Na integração, clique em '<strong>'Gerar Token'</strong>''</li>''<li>'Selecione o tipo'</li>''<li>'Defina data de expiração (opcional)'</li>''<li>'Copie o token gerado'</li>''</ol>''<h3>'Segurança'</h3>''<p>'Melhores práticas:'</p>''<ul>''<li>'Nunca compartilhe tokens publicamente'</li>''<li>'Rotacione tokens periodicamente'</li>''<li>'Use tokens diferentes para cada integração'</li>''<li>'Revogue tokens comprometidos imediatamente'</li>''</ul>''<h3>'Monitoramento'</h3>''<p>'Você pode ver:'</p>''<ul>''<li>'Último uso do token'</li>''<li>'Quantidade de chamadas'</li>''<li>'Erros de autenticação'</li>''</ul>'"
+        }
+      }
+    }
+  }
+}

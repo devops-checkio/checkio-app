@@ -1,0 +1,37 @@
+{
+  "title": {
+    "request": "Recuperar senha",
+    "reset": "Alterar senha"
+  },
+  "subtitle": {
+    "request": "Digite seu e-mail para receber as instruções",
+    "reset": "Defina uma nova senha segura"
+  },
+  "fields": {
+    "email": "E-mail",
+    "emailPlaceholder": "email@exemplo.com",
+    "temporaryPassword": "Senha temporária",
+    "newPassword": "Nova senha",
+    "confirmPassword": "Confirmar nova senha"
+  },
+  "validation": {
+    "emailRequired": "O e-mail é obrigatório",
+    "emailInvalid": "E-mail inválido",
+    "temporaryPasswordRequired": "A senha temporária é obrigatória",
+    "newPasswordRequired": "A nova senha é obrigatória",
+    "confirmPasswordRequired": "A confirmação da senha é obrigatória"
+  },
+  "requirements": {
+    "title": "Requisitos da senha:",
+    "length": "Mínimo de 8 caracteres",
+    "uppercase": "Pelo menos uma letra maiúscula",
+    "lowercase": "Pelo menos uma letra minúscula",
+    "number": "Pelo menos um número",
+    "special": "Pelo menos um caractere especial"
+  },
+  "buttons": {
+    "sendInstructions": "Enviar instruções",
+    "changePassword": "Alterar senha",
+    "backToLogin": "Voltar ao login"
+  }
+}

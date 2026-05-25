@@ -1,0 +1,297 @@
+{
+  "title": "Gestión de Turnos",
+  "subtitle": "Administre los turnos del sistema",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "shifts": "Turnos"
+  },
+  "buttons": {
+    "add": "Agregar Turno",
+    "downloadExcel": "Descargar Excel",
+    "generating": "Generando...",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "clear": "Limpiar",
+    "search": "Buscar",
+    "cancel": "Cancelar",
+    "deleting": "Eliminando...",
+    "save": "Guardar",
+    "update": "Actualizar",
+    "saving": "Guardando...",
+    "updating": "Actualizando...",
+    "select": "Seleccionar",
+    "view": "Ver",
+    "viewCycle": "Ver ciclo",
+    "assign": "Asignar",
+    "change": "Cambiar",
+    "massAssign": "Asignación Masiva",
+    "selectDays": "Seleccionar Días"
+  },
+  "table": {
+    "headers": {
+      "name": "Nombre",
+      "type": "Tipo",
+      "days": "Días",
+      "weeks": "Semanas",
+      "createdAt": "Fecha de Creación",
+      "updatedAt": "Fecha de Modificación",
+      "actions": "Acciones"
+    },
+    "noData": "No se encontraron turnos",
+    "noDataDescription": "Crea un nuevo turno para comenzar.",
+    "loading": "Cargando turnos...",
+    "type": {
+      "weekly": "Rotativo Semanal",
+      "daily": "Rotativo por Días"
+    }
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} turnos",
+    "recordsPerPage": "Registros por página:",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "page": "Página {current} de {total}"
+  },
+  "delete": {
+    "title": "Confirmar eliminación",
+    "message": "¿Está seguro de que desea eliminar este turno?",
+    "deleting": "Eliminando...",
+    "success": "Turno eliminado correctamente",
+    "error": "Error al eliminar el turno. Por favor, inténtelo de nuevo."
+  },
+  "excel": {
+    "filename": "turnos",
+    "sheetName": "Turnos",
+    "headers": {
+      "name": "Nombre",
+      "type": "Tipo",
+      "days": "Días",
+      "weeks": "Semanas",
+      "createdAt": "Fecha de Creación",
+      "updatedAt": "Fecha de Modificación"
+    }
+  },
+  "ariaLabels": {
+    "viewShiftCycle": "Ver detalle del ciclo del turno",
+    "editShift": "Editar turno",
+    "deleteShift": "Eliminar turno",
+    "addShift": "Agregar turno",
+    "viewConflicts": "Ver conflictos"
+  },
+  "search": {
+    "fields": {
+      "name": "Nombre",
+      "type": "Tipo de Turno",
+      "days": "Días",
+      "weeks": "Semanas"
+    },
+    "placeholders": {
+      "name": "Buscar por nombre",
+      "type": "Tipo de turno",
+      "days": "Cantidad de días",
+      "weeks": "Cantidad de semanas"
+    },
+    "options": {
+      "weekly": "Rotativo Semanal",
+      "daily": "Rotativo por Días"
+    }
+  },
+  "toast": {
+    "deleteSuccess": {
+      "title": "Turno eliminado correctamente"
+    },
+    "deleteError": {
+      "title": "Error",
+      "description": "Error al eliminar el turno. Por favor, inténtelo de nuevo."
+    },
+    "createSuccess": {
+      "title": "Turno creado correctamente",
+      "description": "El turno ha sido creado correctamente"
+    },
+    "updateSuccess": {
+      "title": "Turno actualizado correctamente",
+      "description": "El turno ha sido actualizado correctamente"
+    },
+    "createError": {
+      "title": "Error",
+      "description": "Error al crear el turno"
+    },
+    "updateError": {
+      "title": "Error",
+      "description": "Error al actualizar el turno"
+    },
+    "excelSuccess": {
+      "title": "Excel generado exitosamente"
+    },
+    "excelError": {
+      "title": "Error al generar el Excel"
+    },
+    "massAssignmentSuccess": {
+      "title": "Asignación masiva completada",
+      "description": "Se ha asignado el horario \"{scheduleName}\" a {count} día(s)"
+    },
+    "selectionRequired": {
+      "title": "Selección requerida",
+      "description": "Por favor seleccione al menos un día para asignar horario masivamente"
+    }
+  },
+  "form": {
+    "title": {
+      "create": "Crear nuevo turno",
+      "edit": "Editar turno"
+    },
+    "loading": "Cargando turno...",
+    "fields": {
+      "name": "Nombre del Turno",
+      "companies": "Empresas",
+      "type": "Tipo de Rotación",
+      "days": "Días",
+      "weeks": "Semanas",
+      "nomenclature": "Nomenclatura"
+    },
+    "placeholders": {
+      "name": "Ingrese el nombre del turno",
+      "type": "Seleccione tipo",
+      "days": "Cantidad de días",
+      "weeks": "Cantidad de semanas"
+    },
+    "validation": {
+      "nameRequired": "Por favor ingrese el nombre del turno",
+      "companiesRequired": "Por favor seleccione al menos una empresa"
+    },
+    "invalidSchedules": {
+      "title": "Algunos horarios no aplican",
+      "description": "{count, plural, one {Un horario asignado no está disponible para las empresas de este turno y se quitó de la grilla. Vuelve a asignar ese día.} other {# horarios asignados no están disponibles para las empresas de este turno y se quitaron de la grilla. Vuelve a asignar esos días.}}"
+    },
+    "options": {
+      "weekly": "Rotativo Semanal",
+      "daily": "Rotativo por Días"
+    },
+    "summary": {
+      "workHours": "Total Horas de Trabajo Semanal:",
+      "healthHours": "Total Horas de Colación Semanal:",
+      "warning": "¡Advertencia!",
+      "warningMessage": "El total de {hours} horas semanales supera el límite legal de {limit} horas. Se recomienda ajustar el horario para cumplir con la normativa laboral."
+    }
+  },
+  "editor": {
+    "selectSchedule": {
+      "title": "Seleccionar Horario",
+      "searchPlaceholder": "Buscar por nombre o código",
+      "loading": "Cargando horarios...",
+      "noData": "No se encontraron horarios",
+      "schedule": "Horario:",
+      "total": "Total: {hours}h {minutes}m",
+      "pagination": {
+        "showing": "Mostrando {current} de {total} horarios"
+      }
+    },
+    "week": {
+      "days": "días",
+      "assign": "Asignar",
+      "change": "Cambiar",
+      "schedule": "Horario:",
+      "total": "Total: {hours}h {minutes}m",
+      "available": "Disponible para asignar",
+      "noSchedule": "Sin horario asignado",
+      "until": "hasta",
+      "clickToAssign": "Haga clic para asignar un horario",
+      "conflicts": {
+        "title": "Turnos en Conflicto",
+        "currentShift": "Turno Actual",
+        "assignedDay": "Día asignado:",
+        "duration": "Duración:",
+        "start": "Inicio:",
+        "end": "Fin:",
+        "includesDays": "Este horario incluye {days} {daysText} desde {day}",
+        "day": "Día {day}",
+        "overlappingShifts": "Turnos que se Solapan:",
+        "overlapDetected": "Traslape detectado:",
+        "overlapStart": "Inicio del traslape:",
+        "overlapEnd": "Fin del traslape:",
+        "conflictSchedule": "Horario conflictivo:",
+        "conflictStart": "Inicio:",
+        "conflictEnd": "Fin:"
+      }
+    },
+    "nomenclature": {
+      "label": "Nomenclatura",
+      "free": "Libre",
+      "to": "a",
+      "day": "Día {day}",
+      "week": "S{week}",
+      "dailyPrefix": "D "
+    }
+  },
+  "tour": {
+    "startButton": "Ver guía",
+    "buttons": {
+      "next": "Siguiente",
+      "previous": "Anterior",
+      "done": "Finalizar"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Bienvenido al módulo Turnos",
+        "description": "En este módulo puede administrar turnos rotativos (semanal o por días). Esta guía mostrará las principales funcionalidades."
+      },
+      "filters": {
+        "title": "Filtros de búsqueda",
+        "description": "Filtre por nombre, tipo de rotación, cantidad de días o semanas. Use Buscar para aplicar y Limpiar para resetear."
+      },
+      "toolbar": {
+        "title": "Acciones principales",
+        "description": "Cree nuevos turnos o descargue el listado en Excel. Los botones dependen de sus permisos."
+      },
+      "table": {
+        "title": "Tabla de turnos",
+        "description": "Listado con nombre, tipo (semanal/días), días, semanas y fechas. Use el botón editar para modificar o eliminar para dar de baja."
+      },
+      "pagination": {
+        "title": "Paginación",
+        "description": "Navegue entre páginas y ajuste la cantidad de registros mostrados."
+      }
+    }
+  },
+  "editorTour": {
+    "startButton": "Ver guía",
+    "buttons": {
+      "next": "Siguiente",
+      "previous": "Anterior",
+      "done": "Finalizar"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Editor de Turnos",
+        "description": "Configure el turno: nombre, empresas, tipo de rotación y asigne horarios a cada día. Siga la guía para conocer cada sección."
+      },
+      "basicInfo": {
+        "title": "Datos básicos",
+        "description": "Indique el nombre del turno, seleccione las empresas y revise el resumen de horas de trabajo y colación."
+      },
+      "nomenclature": {
+        "title": "Nomenclatura",
+        "description": "Defina cómo se identifican los días en reportes (ej: Libre, D 1, S1, etc.)."
+      },
+      "rotationConfig": {
+        "title": "Tipo de rotación",
+        "description": "Elija Rotativo Semanal (días por semana) o Rotativo por Días. Configure días/semanas según el tipo."
+      },
+      "massAssignment": {
+        "title": "Asignación masiva",
+        "description": "Seleccione varios días y asigne el mismo horario de una sola vez. Útil para turnos repetitivos."
+      },
+      "scheduleGrid": {
+        "title": "Asignación de horarios",
+        "description": "Haga clic en cada celda para asignar un horario al día. El sistema detecta conflictos automáticamente."
+      },
+      "submit": {
+        "title": "Guardar",
+        "description": "Guarde el turno. No se puede guardar si hay conflictos de horarios sin resolver."
+      }
+    }
+  }
+}

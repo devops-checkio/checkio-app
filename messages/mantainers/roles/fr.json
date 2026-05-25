@@ -1,0 +1,50 @@
+{
+  "title": "Gestion des Rôles",
+  "subtitle": "Administrez les rôles et permissions du système",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "maintainers": "Mainteneurs",
+    "roles": "Rôles"
+  },
+  "buttons": {
+    "add": "Ajouter un Rôle",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "save": "ENREGISTRER"
+  },
+  "table": {
+    "headers": {
+      "name": "Nom",
+      "createdAt": "Date de Création",
+      "actions": "Actions"
+    },
+    "loading": "Chargement des rôles...",
+    "noData": "Aucun rôle trouvé",
+    "noDataDescription": "Ajoutez un nouveau rôle pour commencer."
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} rôles",
+    "page": "Page {current} sur {total}",
+    "recordsPerPage": "Enregistrements par page:"
+  },
+  "delete": {
+    "success": "Rôle supprimé avec succès",
+    "confirmMessage": "Êtes-vous sûr de vouloir supprimer ce rôle ?"
+  },
+  "create": {
+    "success": "Rôle créé avec succès"
+  },
+  "modal": {
+    "createTitle": "Créer un Nouveau Rôle",
+    "nameLabel": "Nom du Rôle",
+    "nameRequired": "Ce champ est requis",
+    "nameMinLength": "Le nom doit contenir au moins 2 caractères",
+    "saving": "Enregistrement..."
+  },
+  "ariaLabels": {
+    "editRole": "Modifier le rôle",
+    "deleteRole": "Supprimer le rôle"
+  }
+}

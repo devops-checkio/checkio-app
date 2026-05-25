@@ -1,0 +1,771 @@
+{
+  "title": "Gerenciamento de Empresas",
+  "subtitle": "Gerencie as empresas do sistema",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "companies": "Empresas"
+  },
+  "buttons": {
+    "add": "Adicionar Empresa",
+    "addMassive": "Adicionar Empresas em Lote",
+    "downloadExcel": "Baixar Excel",
+    "generating": "Gerando...",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "cancel": "Cancelar"
+  },
+  "table": {
+    "status": {
+      "yes": "Sim",
+      "no": "Não"
+    },
+    "headers": {
+      "isActive": "Ativo",
+      "documentType": "Tipo de Documento",
+      "documentNumber": "Número do Documento",
+      "businessName": "Razão Social",
+      "tradeName": "Nome Fantasia",
+      "address": "Endereço",
+      "integrationCode": "Código de Integração",
+      "createdAt": "Data de Criação",
+      "actions": "Ações"
+    },
+    "loading": "Carregando empresas...",
+    "noData": "Nenhuma empresa encontrada",
+    "noDataDescription": "Crie uma nova empresa para começar."
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} empresas",
+    "recordsPerPage": "Registros por página:",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "page": "Página {current} de {total}"
+  },
+  "delete": {
+    "title": "Confirmar exclusão",
+    "message": "Tem certeza que deseja excluir esta empresa?",
+    "deleting": "Excluindo...",
+    "success": "Empresa excluída com sucesso",
+    "error": "Erro ao excluir a empresa. Por favor, tente novamente."
+  },
+  "excel": {
+    "success": "Excel gerado com sucesso",
+    "error": "Erro ao gerar o Excel",
+    "filename": "empresas",
+    "sheetName": "Empresas",
+    "headers": {
+      "documentType": "Tipo de Documento",
+      "documentNumber": "Número do Documento",
+      "businessName": "Razão Social",
+      "tradeName": "Nome Fantasia",
+      "address": "Endereço",
+      "integrationCode": "Código de Integração",
+      "createdAt": "Data de Criação"
+    }
+  },
+  "ariaLabels": {
+    "editCompany": "Editar empresa",
+    "deleteCompany": "Excluir empresa"
+  },
+  "detailTour": {
+    "startButton": "Ver guia",
+    "tabs": {
+      "0": {
+        "steps": {
+          "welcome": {
+            "title": "Informações Básicas",
+            "description": "Nesta aba você pode visualizar e editar os dados principais da empresa: razão social, endereço, documento e configuração do sistema."
+          },
+          "basicInfo": {
+            "title": "Dados da empresa",
+            "description": "Razão social, nome comercial, endereço físico e status ativo da empresa."
+          },
+          "systemConfig": {
+            "title": "Configuração do sistema",
+            "description": "Tipo e número do documento, código de integração e se a empresa é de Serviço Transitório (EST)."
+          }
+        }
+      },
+      "1": {
+        "steps": {
+          "welcome": {
+            "title": "Parâmetros de Assistência",
+            "description": "Configure tolerâncias, horários e configurações automáticas que se aplicam à assistência desta empresa."
+          },
+          "tolerances": {
+            "title": "Tolerâncias",
+            "description": "Tolerância de atraso e tolerância de intervalo. Definem os minutos permitidos antes de marcar atraso."
+          },
+          "scheduleConfig": {
+            "title": "Configuração de horários",
+            "description": "Minutos antes e depois do horário em que é permitido marcar, e janela de associação de marcações."
+          },
+          "automaticConfig": {
+            "title": "Configurações automáticas",
+            "description": "Marcação automática, fechamento sem turno atribuído e janela de fallback para associar marcações."
+          }
+        }
+      },
+      "2": {
+        "steps": {
+          "welcome": {
+            "title": "Parâmetros do Sistema",
+            "description": "Configure as marcações e notificações do sistema para esta empresa."
+          },
+          "markingConfig": {
+            "title": "Configuração de marcações",
+            "description": "Habilitar assinatura, foto, marcações adicionais e menu de consulta mobile nas marcações."
+          },
+          "supervisorNotif": {
+            "title": "Notificações ao supervisor",
+            "description": "Notificações por atrasos de entrada, intervalo e saída enviadas ao gestor."
+          },
+          "systemNotif": {
+            "title": "Notificações do sistema",
+            "description": "Emails semanais, diários, boas-vindas e notificações de status para administradores e funcionários."
+          }
+        }
+      },
+      "3": {
+        "steps": {
+          "welcome": {
+            "title": "Horas Extras",
+            "description": "Configure o tipo de cálculo (por faixa ou por dia) e as configurações vigentes ou não vigentes."
+          },
+          "overtimeType": {
+            "title": "Tipo de configuração",
+            "description": "Por faixa: percentual conforme faixa horária. Por dia: percentual aplicado o dia todo."
+          },
+          "overtimeSubtabs": {
+            "title": "Vigentes / Não vigentes",
+            "description": "Configurações ativas ou finalizadas. As não vigentes têm data de término."
+          },
+          "overtimeTable": {
+            "title": "Tabela de configurações",
+            "description": "Lista de configurações de horas extras com dia, horário e percentual aplicado."
+          },
+          "overtimeAdd": {
+            "title": "Adicionar configuração",
+            "description": "Crie novas configurações de horas extras para dias ou faixas específicos."
+          }
+        }
+      },
+      "4": {
+        "steps": {
+          "welcome": {
+            "title": "Notificações",
+            "description": "Gerencie as notificações da empresa a partir de modelos predefinidos."
+          },
+          "notificationsAdd": {
+            "title": "Adicionar notificação",
+            "description": "Selecione um modelo de notificação para adicionar e configurar nesta empresa."
+          },
+          "notificationsTable": {
+            "title": "Tabela de notificações",
+            "description": "Lista de notificações configuradas. Você pode editar ou excluir cada uma."
+          }
+        }
+      },
+      "5": {
+        "steps": {
+          "welcome": {
+            "title": "Regras de Marcação",
+            "description": "Defina regras de entrada/saída com modo Global ou Geocerca para esta empresa."
+          },
+          "rulesExplanation": {
+            "title": "Explicação",
+            "description": "As regras podem exigir marca em geocerca autorizada (entrada) ou permitir saída global conforme configuração do funcionário."
+          },
+          "rulesNew": {
+            "title": "Nova regra",
+            "description": "Crie regras combinando tipo de marca (entrada/saída) e modo (Geocerca/Global)."
+          },
+          "rulesTable": {
+            "title": "Tabela de regras",
+            "description": "Lista de regras configuradas. Você pode excluir regras existentes."
+          }
+        }
+      }
+    }
+  },
+  "tour": {
+    "startButton": "Ver guia",
+    "buttons": {
+      "next": "Próximo",
+      "previous": "Anterior",
+      "done": "Concluir"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Bem-vindo ao módulo de Empresas",
+        "description": "Neste módulo você pode gerenciar as empresas do sistema. Este guia mostrará as principais funcionalidades disponíveis."
+      },
+      "toolbar": {
+        "title": "Ações principais",
+        "description": "Aqui você pode adicionar empresas individualmente, realizar importação em massa via Excel ou baixar a lista em formato Excel."
+      },
+      "table": {
+        "title": "Tabela de empresas",
+        "description": "A tabela exibe todas as empresas cadastradas. Você pode ordenar clicando nos cabeçalhos das colunas. Use os botões editar ou excluir para gerenciar cada empresa."
+      },
+      "pagination": {
+        "title": "Paginação",
+        "description": "Use estes controles para navegar entre as páginas e ajustar a quantidade de registros exibidos."
+      }
+    }
+  },
+  "upsert": {
+    "title": {
+      "edit": "Editar Empresa",
+      "add": "Adicionar Empresa"
+    },
+    "fields": {
+      "documentType": "Tipo de Documento",
+      "documentNumber": "Número do Documento",
+      "businessName": "Razão Social",
+      "tradeName": "Nome Comercial",
+      "address": "Endereço",
+      "transitoryService": "Empresa de Serviço Transitório (EST)"
+    },
+    "placeholders": {
+      "documentType": "Tipo de Documento",
+      "documentNumber": "Digite o número do documento"
+    },
+    "validation": {
+      "documentTypeRequired": "Por favor, selecione o tipo de documento",
+      "documentNumberRequired": "Por favor, insira o número do documento",
+      "invalidDocumentFormat": "Formato de documento inválido",
+      "businessNameRequired": "Por favor, insira a razão social",
+      "tradeNameRequired": "Por favor, insira o nome comercial",
+      "addressRequired": "Por favor, insira o endereço"
+    },
+    "transitoryService": {
+      "label": "Empresa de Serviço Transitório (EST)",
+      "description": "Marque se a empresa presta serviços transitórios"
+    },
+    "buttons": {
+      "save": "SALVAR",
+      "update": "ATUALIZAR",
+      "saving": "Criando...",
+      "updating": "Atualizando..."
+    },
+    "toast": {
+      "createSuccess": {
+        "title": "Empresa criada com sucesso",
+        "description": "A empresa foi criada corretamente"
+      },
+      "updateSuccess": {
+        "title": "Empresa atualizada com sucesso",
+        "description": "A empresa foi atualizada corretamente"
+      },
+      "createError": {
+        "title": "Erro ao criar a empresa",
+        "description": "Ocorreu um erro ao criar a empresa"
+      },
+      "updateError": {
+        "title": "Erro ao atualizar a empresa",
+        "description": "Ocorreu um erro ao atualizar a empresa"
+      }
+    }
+  },
+  "massive": {
+    "title": "Carga em Massa de Empresas",
+    "tabs": {
+      "excel": "Carga por Excel",
+      "manual": "Entrada Manual"
+    },
+    "instructions": {
+      "excel": {
+        "title": "Instruções:",
+        "step1": "Baixe o modelo Excel para ver o formato necessário",
+        "step2": "Preencha as informações das empresas no modelo",
+        "step3": "Faça upload do arquivo Excel preenchido",
+        "step4": "Verifique as informações e pressione Processar"
+      },
+      "manual": {
+        "title": "Instruções para entrada manual:",
+        "step1": "Clique em Adicionar Linha para adicionar uma nova empresa",
+        "step2": "Preencha os campos obrigatórios em cada linha",
+        "step3": "Você pode adicionar quantas linhas precisar",
+        "step4": "Verifique as informações e pressione Processar"
+      }
+    },
+    "buttons": {
+      "downloadTemplate": "Baixar Modelo",
+      "uploadExcel": "Fazer Upload do Excel",
+      "addRow": "Adicionar Linha",
+      "process": "Processar",
+      "processing": "Processando...",
+      "cancel": "Cancelar",
+      "close": "Fechar"
+    },
+    "table": {
+      "headers": {
+        "documentType": "Tipo de Documento",
+        "documentNumber": "Número do Documento",
+        "businessName": "Razão Social",
+        "tradeName": "Nome Comercial",
+        "address": "Endereço",
+        "transitoryService": "Serviço Transitório",
+        "status": "Status",
+        "actions": "Ações"
+      },
+      "noData": "Nenhuma empresa adicionada",
+      "noDataDescription": "Adicione empresas manualmente ou faça upload de um arquivo Excel",
+      "placeholders": {
+        "documentType": "Tipo de Documento",
+        "documentNumber": "Digite o número do documento",
+        "businessName": "Razão Social",
+        "tradeName": "Nome Comercial",
+        "address": "Endereço"
+      },
+      "status": {
+        "pending": "Pendente",
+        "processing": "Processando",
+        "completed": "Concluído",
+        "error": "Erro"
+      }
+    },
+    "validation": {
+      "fieldRequired": "Campo obrigatório",
+      "invalidDocumentFormat": "Formato de documento inválido",
+      "validationError": "Erro de validação",
+      "validationErrorDescription": "Não é possível processar: Há números de documento inválidos. Por favor, corrija os erros antes de continuar.",
+      "noCompaniesWarning": "Aviso",
+      "noCompaniesWarningDescription": "Não há empresas para processar. Adicione pelo menos uma empresa."
+    },
+    "excel": {
+      "templateName": "Modelo de Empresas",
+      "filename": "modelo_empresas",
+      "headers": {
+        "documentType": "Tipo de Documento",
+        "documentNumber": "Número do Documento",
+        "businessName": "Razão Social",
+        "tradeName": "Nome Comercial",
+        "address": "Endereço",
+        "transitoryService": "Serviço Transitório"
+      },
+      "validation": {
+        "transitoryService": {
+          "promptTitle": "Serviço Transitório",
+          "prompt": "Selecione \"Sim\" ou \"Não\" para o serviço transitório",
+          "errorTitle": "Valor inválido",
+          "error": "Por favor, selecione \"Sim\" ou \"Não\""
+        },
+        "documentType": {
+          "promptTitle": "Tipo de Documento",
+          "prompt": "Selecione o tipo de documento",
+          "errorTitle": "Valor inválido",
+          "error": "Por favor, selecione um tipo de documento válido"
+        }
+      },
+      "example": {
+        "documentType": "RUT",
+        "documentNumber": "12345678901",
+        "businessName": "Empresa Exemplo",
+        "tradeName": "Exemplo Corp",
+        "address": "Av. Exemplo 123",
+        "transitoryService": "Não"
+      }
+    },
+    "toast": {
+      "processCompletedSuccess": {
+        "title": "Sucesso",
+        "description": "Processo de carga em massa concluído com sucesso"
+      },
+      "processCompletedWithErrors": {
+        "title": "Processo concluído com erros",
+        "description": "Revise a tabela para mais detalhes."
+      },
+      "error": {
+        "title": "Erro",
+        "description": "Erro ao criar a empresa"
+      }
+    }
+  },
+  "detail": {
+    "backAriaLabel": "Voltar à lista de empresas",
+    "notConfigured": "Não configurado",
+    "important": "Importante:",
+    "documentTypePlaceholder": "Tipo de Documento",
+    "invalidDocumentFormat": "Formato de documento inválido",
+    "invalidDocument": "Documento inválido",
+    "validDocument": "Documento válido",
+    "enterDocumentNumber": "Digite o número do documento",
+    "format": "Formato:",
+    "documentExamples": {
+      "RUT": "Ex: 12.345.678-9",
+      "DNI": "Ex: 12345678",
+      "CPF": "Ex: 123.456.789-10",
+      "CC": "Ex: 1.234.567.890",
+      "CI": "Ex: 1.234.567",
+      "DPI": "Ex: 1234 56789 0123",
+      "DUI": "Ex: 12345678-9",
+      "CIP": "Ex: 1-234-5678",
+      "CEDULA": "Ex: 123-456789-0",
+      "CURP": "Ex: ABCD123456EFGHIJ12"
+    },
+    "documentFormats": {
+      "RUT": "Formato: 12.345.678-9",
+      "DNI": "Formato: 12345678",
+      "CPF": "Formato: 123.456.789-10",
+      "CC": "Formato: 1.234.567.890",
+      "CI": "Formato: 1.234.567",
+      "DPI": "Formato: 1234 56789 0123",
+      "DUI": "Formato: 12345678-9",
+      "CIP": "Formato: 1-234-5678",
+      "CEDULA": "Formato: 123-456789-0",
+      "CURP": "Formato: ABCD123456EFGHIJ12"
+    },
+    "notifications": {
+      "templates": {
+        "ALERT_2_CONSECUTIVE_ABSENCES": {
+          "name": "Alerta de 2 dias faltantes consecutivos",
+          "description": "Notifica quando um funcionário tem 2 dias faltantes consecutivos"
+        },
+        "ALERT_3_CONSECUTIVE_DAYS_IN_MONTH": {
+          "name": "Alerta de 3 dias consecutivos no mês",
+          "description": "Notifica quando um funcionário tem 3 dias consecutivos no mês"
+        },
+        "ALERT_2_MONDAYS_IN_MONTH": {
+          "name": "Alerta de 2 segundas-feiras no mês",
+          "description": "Notifica quando um funcionário tem 2 segundas-feiras no mês"
+        }
+      },
+      "daysOfWeek": {
+        "Lu": {
+          "label": "Se",
+          "fullName": "Segunda-feira"
+        },
+        "Ma": {
+          "label": "Te",
+          "fullName": "Terça-feira"
+        },
+        "Mi": {
+          "label": "Qu",
+          "fullName": "Quarta-feira"
+        },
+        "Ju": {
+          "label": "Qu",
+          "fullName": "Quinta-feira"
+        },
+        "Vi": {
+          "label": "Se",
+          "fullName": "Sexta-feira"
+        },
+        "Sa": {
+          "label": "Sá",
+          "fullName": "Sábado"
+        },
+        "Do": {
+          "label": "Do",
+          "fullName": "Domingo"
+        }
+      },
+      "table": {
+        "daysOfWeek": "Dias da Semana",
+        "executionTime": "Hora de Execução"
+      },
+      "selectTime": "Selecionar hora",
+      "notConfigured": "Não configurado",
+      "emailPlaceholder": "email1@exemplo.com; email2@exemplo.com",
+      "delete": {
+        "button": "Excluir",
+        "buttonLoading": "Excluindo..."
+      }
+    }
+  },
+  "details": "Detalhes da Empresa",
+  "basicInformation": "Informações Básicas da Empresa",
+  "businessName": "Razão Social",
+  "businessNameDescription": "Nome legal da empresa registrado junto às autoridades",
+  "businessNameExample": "Exemplo: Empresa XYZ Ltda.",
+  "businessNameRequired": "Por favor, insira a razão social",
+  "tradeName": "Nome Fantasia",
+  "tradeNameDescription": "Nome pelo qual a empresa é conhecida comercialmente",
+  "tradeNameExample": "Exemplo: XYZ Solutions",
+  "tradeNameRequired": "Por favor, insira o nome fantasia",
+  "address": "Endereço",
+  "addressDescription": "Localização física principal da empresa",
+  "addressExample": "Exemplo: Av. Principal 123, São Paulo",
+  "addressRequired": "Por favor, insira o endereço",
+  "systemConfiguration": "Configuração do Sistema",
+  "documentType": "Tipo de Documento",
+  "documentNumber": "Número do Documento",
+  "documentNumberDescription": "Número de identificação fiscal da empresa",
+  "documentNumberExample": "Exemplo: 12.345.678/0001-90",
+  "documentNumberRequired": "Por favor, insira o número do documento",
+  "integrationCode": "Código de Integração",
+  "integrationCodeDescription": "Código para integração com outros sistemas",
+  "integrationCodeExample": "Exemplo: EMP001",
+  "isActive": "Empresa Ativa",
+  "isActiveDescription": "Ativar ou desativar a empresa no sistema",
+  "transitoryService": "Empresa de Serviço Temporário (EST)",
+  "transitoryServiceDescription": "Marcar se a empresa presta serviços temporários",
+  "attendanceParameters": "Parâmetros de Presença",
+  "toleranceConfiguration": "Configuração de Tolerâncias",
+  "lateArrivalTolerance": "Tolerância de Atraso (min)",
+  "lateArrivalToleranceDescription": "Minutos permitidos de atraso antes de marcar atraso",
+  "lateArrivalToleranceExample": "Exemplo: 10 minutos",
+  "lateArrivalToleranceImportant": "Importante: Se o horário de entrada for 09:00 e a tolerância for 10 minutos, uma marca às 09:08 será considerada no horário, mas uma marca às 09:11 será considerada atraso.",
+  "lunchBreakTolerance": "Tolerância de Almoço (min)",
+  "lunchBreakToleranceDescription": "Minutos adicionais permitidos para o tempo de almoço",
+  "lunchBreakToleranceExample": "Exemplo: 15 minutos",
+  "lunchBreakToleranceImportant": "Importante: Se o tempo de almoço for das 13:00 às 14:00 e a tolerância for 15 minutos, um retorno às 14:13 será considerado no horário, mas às 14:16 será atraso.",
+  "scheduleConfiguration": "Configuração de Horários",
+  "minutesBeforeSchedule": "Minutos Antes do Horário",
+  "minutesBeforeScheduleDescription": "Tempo permitido para marcar antes do início do turno",
+  "minutesBeforeScheduleExample": "Exemplo: 30 minutos",
+  "minutesBeforeScheduleNote": "Nota: Se o horário for 09:00 e forem permitidos 30 minutos antes, uma marca a partir das 08:30 será válida, mas uma marca às 08:29 não será registrada.",
+  "minutesAfterSchedule": "Minutos Depois do Horário",
+  "minutesAfterScheduleDescription": "Tempo máximo permitido para marcar após o horário",
+  "minutesAfterScheduleExample": "Exemplo: 60 minutos",
+  "minutesAfterScheduleNote": "Nota: Se o horário de saída for 18:00 e forem permitidos 60 minutos depois, uma marca até às 19:00 será válida, mas após às 19:00 não será registrada.",
+  "fallbackScheduleWindowHours": "Horas de janela para associar marcações",
+  "fallbackScheduleWindowHoursDescription": "Quantidade de horas que se estendem antes do início e depois do fim do turno. Serve para determinar a qual dia de assistência pertence cada marca segundo os horários de cada dia e assim alinhar o sistema.",
+  "fallbackScheduleWindowHoursExample": "Exemplo: 7 horas",
+  "fallbackScheduleWindowHoursNote": "Com este valor o sistema determina a qual dia de assistência a marca se associa (ex. turno noturno que termina às 06:00 e marca às 08:00; ou marca em dia livre em relação ao turno do dia anterior). Ajuda a definir os intervalos para alinhar as marcações.",
+  "companyTimezone": "Fuso horário da empresa",
+  "companyTimezoneDescription": "Define o calendário local da empresa para validar atribuição e exclusão de horários (o que conta como “hoje”). Deve ser um identificador IANA válido.",
+  "companyTimezoneExample": "Exemplo: America/Santiago para o Chile.",
+  "companyTimezonePlaceholder": "Selecionar fuso horário",
+  "companyTimezoneRequired": "Selecione um fuso horário",
+  "automaticConfigurations": "Configurações Automáticas",
+  "automaticCheckInMinutes": "Minutos de Marcação Automática",
+  "automaticCheckInMinutesDescription": "Tempo para que o sistema marque automaticamente a entrada",
+  "automaticCheckInMinutesExample": "Exemplo: 5 minutos",
+  "automaticCheckInMinutesWarning": "Se configurado para 30 minutos, as marcações são registradas automaticamente se forem realizadas dentro de ±30 minutos de cada hora programada (entrada, almoço, saída, etc.).",
+  "minutesCloseRecordWithoutShift": "Minutos Fechamento sem Turno",
+  "minutesCloseRecordWithoutShiftDescription": "Tempo para fechar registros de funcionários sem turno atribuído",
+  "minutesCloseRecordWithoutShiftExample": "Exemplo: 480 minutos (8 horas)",
+  "minutesCloseRecordWithoutShiftWarning": "Aviso: Se não houver horário atribuído e o parâmetro for de 480 minutos, ao marcar às 09:00 hrs só será possível marcar saída até às 17:00 hrs; depois não será permitido.",
+  "systemParameters": "Parâmetros do Sistema",
+  "markingConfiguration": "Configuração de Marcações",
+  "enableSignatureOnCheckIn": "Habilitar Assinatura na Marca",
+  "enableSignatureOnCheckInDescription": "Requer assinatura digital ao registrar presença",
+  "enablePhotoOnCheckIn": "Habilitar Foto na Marca",
+  "enablePhotoOnCheckInDescription": "Requer foto ao registrar presença",
+  "enableAdditionalMarks": "Habilitar Marcações Adicionais",
+  "enableAdditionalMarksDescription": "Permite registrar marcações adicionais (entrada, saída)",
+  "showMobileConsultMenu": "Mostrar Menu Consulta Mobile",
+  "showMobileConsultMenuDescription": "Habilita consultas no aplicativo móvel",
+  "supervisorNotifications": "Notificações ao Supervisor",
+  "enableLateArrivalEmailToManager": "Email Atraso ao Chefe",
+  "enableLateArrivalEmailToManagerDescription": "Notifica o supervisor sobre chegadas atrasadas",
+  "enableLateBreakStartEmailToManager": "Email Atraso Início Almoço ao Trabalhador",
+  "enableLateBreakStartEmailToManagerDescription": "Notifica o trabalhador sobre início tardio do almoço",
+  "enableLateBreakEndEmailToManager": "Email Atraso Fim Almoço ao Trabalhador",
+  "enableLateBreakEndEmailToManagerDescription": "Notifica o trabalhador sobre retorno tardio do almoço",
+  "enableLateExitEmailToManager": "Email Atraso Saída ao Trabalhador",
+  "enableLateExitEmailToManagerDescription": "Notifica o trabalhador sobre saídas fora do horário",
+  "systemNotifications": "Notificações do Sistema",
+  "enableWeeklyEmailToEmployee": "Email Semanal ao Trabalhador",
+  "enableWeeklyEmailToEmployeeDescription": "Envia resumo semanal de presença ao funcionário",
+  "enableWeeklyEmailToAdmin": "Email Semanal ao Admin",
+  "enableWeeklyEmailToAdminDescription": "Envia resumo semanal de presença ao administrador",
+  "enableDailyEmailToAdmin": "Email Diário ao Admin",
+  "enableDailyEmailToAdminDescription": "Envia resumo diário de presença ao administrador",
+  "enableWelcomeEmail": "Email de Boas-vindas",
+  "enableWelcomeEmailDescription": "Envia email de boas-vindas a novos funcionários",
+  "enableAdminStatusEmailOnCheckIn": "Habilitar Email ao Admin da EST por cada marcação",
+  "enableAdminStatusEmailOnCheckInDescription": "Notifica o administrador sobre estados de marcação",
+  "overtimeParameters": "Horas Extras",
+  "overtimeConfiguration": "Configuração de Horas Extras",
+  "antecipatedOvertime": "Horas Extras Antecipadas",
+  "antecipatedOvertimeDescription": "Permite registrar horas extras antes que sejam geradas automaticamente",
+  "breakOvertime": "Horas Extras no Descanso",
+  "breakOvertimeDescription": "Permite registrar horas extras durante períodos de descanso ou almoço",
+  "overtimeSettings": {
+    "modal": {
+      "editTitle": "Editar Configuração",
+      "addTitle": "Adicionar Configuração",
+      "dayOfWeek": "Dia da semana",
+      "dayOfWeekRequired": "Selecione um dia da semana",
+      "dayOfWeekPlaceholder": "Selecione um dia",
+      "configurationType": "Tipo de configuração",
+      "configurationTypeRequired": "Selecione o tipo de configuração",
+      "configurationTypePlaceholder": "Selecione o tipo",
+      "byPeriod": "Por período",
+      "byDays": "Por dia",
+      "startTime": "Hora de início",
+      "startTimeRequired": "Digite a hora de início",
+      "startTimeValidation": "A hora de início deve ser menor que a hora de término",
+      "endTime": "Hora de término",
+      "endTimeRequired": "Digite a hora de término",
+      "endTimeValidation": "A hora de término deve ser maior que a hora de início",
+      "percentage": "Porcentagem",
+      "percentageRequired": "Digite a porcentagem",
+      "percentageMin": "A porcentagem deve ser maior ou igual a 0",
+      "percentageMax": "A porcentagem deve ser menor ou igual a 300",
+      "cancel": "Cancelar",
+      "updating": "Atualizando...",
+      "creating": "Criando...",
+      "update": "Atualizar",
+      "create": "Criar"
+    },
+    "toast": {
+      "updateSuccess": "Configuração atualizada",
+      "updateSuccessDescription": "A configuração de horas extras foi atualizada com sucesso.",
+      "createSuccess": "Configuração criada",
+      "createSuccessDescription": "A configuração de horas extras foi criada com sucesso.",
+      "error": "Erro",
+      "updateError": "Erro ao atualizar a configuração",
+      "createError": "Erro ao criar a configuração"
+    },
+    "page": {
+      "configurationType": "Tipo de configuração",
+      "configurationTypeLabel": "Tipo de configuração de horas extras",
+      "configurationTypePlaceholder": "Selecione o tipo",
+      "byPeriod": "Por período",
+      "byDays": "Por dia",
+      "configurations": "Configurações",
+      "active": "Ativas",
+      "inactive": "Inativas",
+      "addConfiguration": "Adicionar configuração",
+      "loading": "Carregando configurações...",
+      "noActiveConfigurations": "Nenhuma configuração ativa encontrada",
+      "noInactiveConfigurations": "Nenhuma configuração inativa encontrada",
+      "table": {
+        "day": "Dia",
+        "startTime": "Hora início",
+        "endTime": "Hora término",
+        "from": "De",
+        "until": "Até",
+        "percentage": "Porcentagem",
+        "actions": "Ações"
+      },
+      "edit": "Editar",
+      "delete": "Excluir",
+      "deleteModal": {
+        "title": "Excluir configuração",
+        "deleteMessage": "Tem certeza de que deseja excluir esta configuração? Esta ação não pode ser desfeita.",
+        "finishMessage": "Tem certeza de que deseja finalizar esta configuração? A data de término será definida para ontem.",
+        "cancel": "Cancelar",
+        "delete": "Excluir",
+        "finish": "Finalizar",
+        "deleting": "Excluindo...",
+        "finishing": "Finalizando..."
+      },
+      "toast": {
+        "deleteSuccess": "Configuração excluída",
+        "deleteSuccessDescription": "A configuração foi excluída com sucesso.",
+        "finishSuccess": "Configuração finalizada",
+        "finishSuccessDescription": "A configuração foi finalizada com sucesso. A data de término foi definida para ontem.",
+        "error": "Erro",
+        "deleteError": "Erro ao excluir a configuração",
+        "finishError": "Erro ao finalizar a configuração"
+      }
+    },
+    "daysOfWeek": {
+      "MONDAY": "Segunda-feira",
+      "TUESDAY": "Terça-feira",
+      "WEDNESDAY": "Quarta-feira",
+      "THURSDAY": "Quinta-feira",
+      "FRIDAY": "Sexta-feira",
+      "SATURDAY": "Sábado",
+      "SUNDAY": "Domingo",
+      "HOLIDAYS": "Feriados"
+    }
+  },
+  "notifications": "Notificações",
+  "attendanceRulesTab": "Regras",
+  "notificationsConfiguration": "Configuração de Notificações",
+  "notificationName": "Nome",
+  "notificationDescription": "Descrição",
+  "notificationType": "Tipo",
+  "notificationDestination": "Destino",
+  "notificationEnabled": "Habilitada",
+  "notificationToManager": "Ao Chefe",
+  "notificationToMails": "A E-mails",
+  "notificationToRole": "Ao Papel",
+  "notificationToManagerDescription": "Será enviado aos chefes diretos",
+  "selectRole": "Selecione um papel",
+  "noEmailsConfigured": "Nenhum e-mail configurado",
+  "noRoleSelected": "Nenhum papel selecionado",
+  "edit": "Editar",
+  "actions": "Ações",
+  "loadingNotifications": "Carregando notificações...",
+  "noNotificationsFound": "Nenhuma notificação encontrada",
+  "notificationUpdateSuccess": "Notificação atualizada com sucesso",
+  "notificationUpdateSuccessDescription": "A notificação foi atualizada corretamente",
+  "notificationUpdateError": "Erro ao atualizar notificação",
+  "notificationUpdateErrorDescription": "Ocorreu um erro ao atualizar a notificação",
+  "notificationCreateSuccess": "Notificação criada com sucesso",
+  "notificationCreateSuccessDescription": "A notificação foi criada corretamente",
+  "notificationCreateError": "Erro ao criar notificação",
+  "notificationCreateErrorDescription": "Ocorreu um erro ao criar a notificação",
+  "notificationDeleteSuccess": "Notificação excluída com sucesso",
+  "notificationDeleteSuccessDescription": "A notificação foi excluída corretamente",
+  "notificationDeleteError": "Erro ao excluir notificação",
+  "notificationDeleteErrorDescription": "Ocorreu um erro ao excluir a notificação",
+  "notificationDeleteConfirm": "Tem certeza de que deseja excluir esta notificação?",
+  "selectNotificationTemplate": "Selecionar Modelo",
+  "selectNotificationToAdd": "Selecione uma notificação para adicionar",
+  "add": "Adicionar",
+  "update": "ATUALIZAR",
+  "updating": "Atualizando...",
+  "updateSuccess": "Empresa atualizada com sucesso",
+  "updateSuccessDescription": "A empresa foi atualizada corretamente",
+  "updateError": "Erro ao atualizar empresa",
+  "updateErrorDescription": "Ocorreu um erro ao atualizar a empresa",
+  "dashboard": "Dashboard",
+  "maintainers": "Mantenedores",
+  "companies": "Empresas",
+  "attendanceRules": {
+    "description": "Configure regras de marcação combinadas (entrada/saída com modo Global ou Cerca geográfica) para esta empresa.",
+    "loading": "Carregando regras...",
+    "errorLoading": "Erro ao carregar as regras.",
+    "retry": "Tentar novamente",
+    "newRule": "Nova regra",
+    "empty": "Nenhuma regra configurada.",
+    "deleteError": "Erro ao excluir a regra.",
+    "explanationTitle": "Como funcionam estas regras?",
+    "explanation": {
+      "geofenceEntryTitle": "Entrada com Marca em Georreferência Autorizada",
+      "geofenceEntry": "Se configurar Entrada no modo Marca em Georreferência Autorizada, a regra obriga a que a marca de entrada seja sempre a partir de um ponto de marcação autorizado: os configurados nas filiais como geolocalização do tipo entrada. Se o funcionário tentar marcar de qualquer outro lugar, o sistema não permitirá, pois a nível de empresa a configuração exige marca em zona autorizada.",
+      "globalExitTitle": "Saída Global",
+      "globalExit": "Se configurar Saída no modo Global, o funcionário utilizará suas próprias configurações para marcar a saída; poderá marcar de onde sua configuração permitir."
+    },
+    "table": {
+      "markType": "Tipo de marca",
+      "mode": "Modo",
+      "level": "Nível",
+      "actions": "Ações",
+      "delete": "Excluir"
+    },
+    "modal": {
+      "title": "Nova regra de marcação",
+      "description": "Defina o tipo de marca e o modo para esta regra.",
+      "markType": "Tipo de marca",
+      "markTypePlaceholder": "Selecione o tipo",
+      "markTypeRequired": "O tipo de marca é obrigatório.",
+      "mode": "Modo",
+      "modePlaceholder": "Selecione o modo",
+      "modeRequired": "O modo é obrigatório.",
+      "levelFixed": "Nesta versão o nível é sempre Empresa.",
+      "cancel": "Cancelar",
+      "create": "Criar",
+      "creating": "Criando..."
+    },
+    "deleteModal": {
+      "title": "Excluir regra",
+      "description": "Você vai excluir a regra de marcação indicada abaixo.",
+      "subtitle": "Esta ação não pode ser desfeita.",
+      "summaryLabel": "Regra",
+      "cancel": "Cancelar",
+      "confirm": "Excluir regra",
+      "deleting": "Excluindo..."
+    },
+    "toast": {
+      "createSuccess": "Regra criada",
+      "createSuccessDescription": "A regra de marcação foi criada corretamente.",
+      "createError": "Erro ao criar a regra",
+      "createErrorDescription": "Não foi possível criar a regra. Verifique se já não existe uma regra para o mesmo tipo de marca.",
+      "deleteSuccess": "Regra excluída",
+      "deleteSuccessDescription": "A regra de marcação foi removida com sucesso."
+    }
+  }
+}

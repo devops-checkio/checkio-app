@@ -1,0 +1,37 @@
+{
+  "title": {
+    "request": "Récupérer le mot de passe",
+    "reset": "Changer le mot de passe"
+  },
+  "subtitle": {
+    "request": "Entrez votre adresse e-mail pour recevoir les instructions",
+    "reset": "Définissez un nouveau mot de passe sécurisé"
+  },
+  "fields": {
+    "email": "Adresse e-mail",
+    "emailPlaceholder": "email@exemple.com",
+    "temporaryPassword": "Mot de passe temporaire",
+    "newPassword": "Nouveau mot de passe",
+    "confirmPassword": "Confirmer le nouveau mot de passe"
+  },
+  "validation": {
+    "emailRequired": "L'adresse e-mail est requise",
+    "emailInvalid": "Adresse e-mail invalide",
+    "temporaryPasswordRequired": "Le mot de passe temporaire est requis",
+    "newPasswordRequired": "Le nouveau mot de passe est requis",
+    "confirmPasswordRequired": "La confirmation du mot de passe est requise"
+  },
+  "requirements": {
+    "title": "Exigences du mot de passe :",
+    "length": "Au moins 8 caractères",
+    "uppercase": "Au moins une majuscule",
+    "lowercase": "Au moins une minuscule",
+    "number": "Au moins un chiffre",
+    "special": "Au moins un caractère spécial"
+  },
+  "buttons": {
+    "sendInstructions": "Envoyer les instructions",
+    "changePassword": "Changer le mot de passe",
+    "backToLogin": "Retour à la connexion"
+  }
+}

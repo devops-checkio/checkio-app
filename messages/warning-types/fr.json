@@ -1,0 +1,97 @@
+{
+  "title": "Administration des Types d'Avertissement",
+  "subtitle": "Gérez les types d'avertissement pour les actions disciplinaires des employés",
+  "name": "Nom",
+  "createdAt": "Date de Création",
+  "updatedAt": "Date de Modification",
+  "actions": "Actions",
+  "addWarningType": "Ajouter un Type d'Avertissement",
+  "editWarningType": "Modifier le Type d'Avertissement",
+  "deleteWarningType": "Supprimer le Type d'Avertissement",
+  "dashboard": "Tableau de bord",
+  "maintainers": "Mainteneurs",
+  "warningTypes": "Types d'Avertissement",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "maintainers": "Mainteneurs",
+    "warningTypes": "Types d'Avertissement"
+  },
+  "modal": {
+    "title": "Type d'Avertissement",
+    "titleAdd": "Ajouter un Type d'Avertissement",
+    "titleEdit": "Modifier le Type d'Avertissement",
+    "nameLabel": "Nom",
+    "namePlaceholder": "Entrez le nom du type d'avertissement",
+    "nameRequiredMessage": "Veuillez entrer le nom du type d'avertissement",
+    "nameHelperText": "Entrez un nom descriptif pour le type d'avertissement",
+    "save": "Enregistrer",
+    "update": "Mettre à jour",
+    "cancel": "Annuler",
+    "saving": "Enregistrement...",
+    "updating": "Mise à jour...",
+    "creating": "Création...",
+    "success": "Type d'avertissement enregistré avec succès",
+    "error": "Erreur lors de l'enregistrement du type d'avertissement",
+    "nameRequired": "Le nom est requis"
+  },
+  "delete": {
+    "title": "Supprimer le Type d'Avertissement",
+    "confirmTitle": "Confirmer la suppression",
+    "message": "Êtes-vous sûr de vouloir supprimer ce type d'avertissement?",
+    "success": "Type d'avertissement supprimé avec succès",
+    "error": "Erreur lors de la suppression du type d'avertissement"
+  },
+  "table": {
+    "headers": {
+      "name": "Nom",
+      "createdAt": "Date de Création",
+      "updatedAt": "Date de Modification",
+      "actions": "Actions"
+    },
+    "noData": "Aucun type d'avertissement trouvé",
+    "noDataDescription": "Créez un nouveau type d'avertissement pour commencer.",
+    "loading": "Chargement des types d'avertissement..."
+  },
+  "buttons": {
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "cancel": "Annuler",
+    "deleting": "Suppression...",
+    "downloadExcel": "Télécharger Excel",
+    "generating": "Génération...",
+    "previous": "Précédent",
+    "next": "Suivant"
+  },
+  "ariaLabels": {
+    "editWarningType": "Modifier le type d'avertissement",
+    "deleteWarningType": "Supprimer le type d'avertissement"
+  },
+  "excel": {
+    "filename": "types-avertissement",
+    "sheetName": "Types d'Avertissement",
+    "headers": {
+      "name": "Nom",
+      "createdAt": "Date de Création",
+      "updatedAt": "Date de Modification"
+    },
+    "success": "Excel généré avec succès",
+    "error": "Erreur lors de la génération de l'Excel"
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} types d'avertissement",
+    "recordsPerPage": "Enregistrements par page:",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page {current} sur {total}"
+  },
+  "toast": {
+    "createSuccess": {
+      "title": "Type d'avertissement créé avec succès",
+      "description": "Le type d'avertissement a été créé correctement"
+    },
+    "updateSuccess": {
+      "title": "Type d'avertissement mis à jour avec succès",
+      "description": "Le type d'avertissement a été mis à jour correctement"
+    }
+  }
+}

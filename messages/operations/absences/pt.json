@@ -1,0 +1,124 @@
+{
+  "title": "Gestão de Ausências",
+  "subtitle": "Gerencie as ausências dos funcionários",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Operações",
+    "absences": "Ausências"
+  },
+  "buttons": {
+    "batchAssignment": "Atribuição em Massa",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "deleting": "Excluindo...",
+    "search": "Buscar",
+    "clear": "Limpar",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "cancel": "Cancelar"
+  },
+  "tabs": {
+    "pending": "Pendentes",
+    "approved": "Aprovadas",
+    "rejected": "Rejeitadas"
+  },
+  "filters": {
+    "organization": "Estrutura organizacional",
+    "search": "Buscar",
+    "searchPlaceholder": "Buscar por Nome ou Sobrenome",
+    "documentNumber": "Número do Documento",
+    "documentNumberPlaceholder": "Buscar por Número do Documento",
+    "job": "Cargo",
+    "jobPlaceholder": "Selecionar Cargo",
+    "branch": "Filial",
+    "branchPlaceholder": "Selecionar Filial",
+    "absenceType": "Tipo de ausência",
+    "absenceTypePlaceholder": "Todos os tipos",
+    "period": "Período",
+    "periodType": "Tipo de período",
+    "periodTypes": {
+      "range": "Por intervalo (datas)",
+      "year": "Por ano civil",
+      "lastMonth": "Mês passado"
+    },
+    "year": "Ano",
+    "yearPlaceholder": "Selecionar ano",
+    "datePlaceholder": "DD/MM/AAAA",
+    "yearSummary": "A consulta usará 01/01/{year} a 31/12/{year}.",
+    "lastMonthSummary": "Período: {from} – {to}",
+    "lastMonthHint": "Clique em «Buscar» para listar ausências desse mês civil completo.",
+    "dateRange": {
+      "from": "Data início",
+      "to": "Data fim"
+    },
+    "validation": {
+      "title": "Verifique o período",
+      "requiredRange": "Informe data de início e data de fim.",
+      "invalidFrom": "Data de início inválida. Use DD/MM/AAAA.",
+      "invalidTo": "Data de fim inválida. Use DD/MM/AAAA.",
+      "fromAfterTo": "A data de início não pode ser posterior à data de fim.",
+      "requiredYear": "Selecione um ano válido."
+    }
+  },
+  "table": {
+    "headers": {
+      "employee": "Funcionário",
+      "lastName": "Sobrenome",
+      "documentNumber": "Documento",
+      "job": "Cargo",
+      "branch": "Filial",
+      "absenceType": "Tipo de Ausência",
+      "startDate": "Data Início",
+      "endDate": "Data Fim",
+      "status": "Status",
+      "createdAt": "Data de Registro",
+      "actions": "Ações"
+    },
+    "loading": "Carregando ausências...",
+    "noData": "Nenhuma ausência encontrada",
+    "noDataDescription": "Não há ausências registradas para este filtro."
+  },
+  "status": {
+    "pending": "Pendente",
+    "approved": "Aprovado",
+    "rejected": "Rejeitado",
+    "unknown": "Desconhecido"
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} resultados",
+    "page": "Página {current} de {total}",
+    "recordsPerPage": "Registros por página"
+  },
+  "delete": {
+    "title": "Excluir Ausência",
+    "message": "Tem certeza que deseja excluir esta ausência?",
+    "success": "Ausência excluída com sucesso",
+    "error": "Erro ao excluir a ausência"
+  },
+  "tooltips": {
+    "actionLocked": "Não é possível editar ou excluir: esta ausência veio de uma folga aprovada ou de uma integração."
+  },
+  "ariaLabels": {
+    "editAbsence": "Editar ausência",
+    "deleteAbsence": "Excluir ausência",
+    "editAbsenceLocked": "Edição indisponível: ausência por folga ou integração",
+    "deleteAbsenceLocked": "Exclusão indisponível: ausência por folga ou integração"
+  },
+  "edit": {
+    "title": "Editar Ausência",
+    "employeeInfo": "Informações do Funcionário",
+    "document": "Documento",
+    "absenceType": "Tipo de Ausência",
+    "startDate": "Data Início",
+    "endDate": "Data Fim",
+    "startDateRequired": "Data de início é obrigatória",
+    "endDateRequired": "Data de fim é obrigatória",
+    "reason": "Motivo",
+    "reasonPlaceholder": "Motivo (opcional)",
+    "withoutPay": "Sem pagamento",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "saving": "Salvando...",
+    "successTitle": "Ausência atualizada com sucesso"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Asignación de Horarios Estudiantes",
+  "subtitle": "Asigna horarios a los estudiantes",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Operaciones",
+    "schedule": "Horarios Estudiantes"
+  },
+  "tabs": {
+    "active": "Activos",
+    "expiring": "Por Vencer",
+    "recentDismissals": "Despidos Recientes",
+    "inactive": "Inactivos"
+  },
+  "tabTitles": {
+    "active": "Estudiantes Activos",
+    "expiring": "Estudiantes por Vencer",
+    "recentDismissals": "Estudiantes con Desvinculación Reciente",
+    "inactive": "Estudiantes Inactivos"
+  },
+  "table": {
+    "headers": {
+      "code": "Matrícula",
+      "name": "Nombre",
+      "document": "Número de documento",
+      "email": "Email",
+      "branch": "Sede",
+      "todaySchedule": "Hoy tiene horario asignado"
+    },
+    "actions": "Acciones",
+    "editSchedule": "Editar horario",
+    "noData": "Sin estudiantes",
+    "loading": "Cargando…"
+  },
+  "filters": {
+    "searchPlaceholder": "Buscar por nombre o apellido",
+    "documentPlaceholder": "Número de documento",
+    "branchAll": "Todas las sedes",
+    "search": "Buscar",
+    "clear": "Limpiar"
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total}",
+    "recordsPerPage": "Registros por página",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "page": "Página {current} de {total}"
+  }
+}

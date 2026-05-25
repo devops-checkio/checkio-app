@@ -1,0 +1,560 @@
+{
+  "title": "Gestion des Employés",
+  "subtitle": "Gérez les employés de l'entreprise",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "maintainers": "Mainteneurs",
+    "employees": "Employés",
+    "bulkUpload": "Import en masse"
+  },
+  "buttons": {
+    "add": "Ajouter un employé",
+    "bulkUpload": "Import en masse",
+    "downloadExcel": "Télécharger Excel",
+    "generating": "Génération...",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "search": "Rechercher",
+    "clear": "Effacer",
+    "edit": "Modifier",
+    "cancel": "Annuler",
+    "changeCompany": "Changer d'entreprise",
+    "retry": "Réessayer",
+    "confirmChange": "Confirmer le changement",
+    "processing": "Traitement...",
+    "save": "Enregistrer",
+    "addRow": "Ajouter une ligne",
+    "process": "Traiter",
+    "processingLabel": "Traitement...",
+    "downloadTemplate": "Télécharger le modèle",
+    "uploadExcel": "Télécharger Excel",
+    "close": "Fermer"
+  },
+  "tabs": {
+    "active": "Actifs",
+    "expiring": "À échoir",
+    "recentDismissals": "Licenciements récents",
+    "inactive": "Inactifs",
+    "excel": "Import Excel",
+    "manual": "Saisie manuelle"
+  },
+  "filters": {
+    "search": "Rechercher",
+    "searchPlaceholder": "Rechercher par nom ou prénom",
+    "documentNumber": "Numéro de document",
+    "documentNumberPlaceholder": "Rechercher par numéro de document",
+    "branch": "Succursale",
+    "branchPlaceholder": "Sélectionner la succursale",
+    "recordsPerPage": "Enregistrements par page:"
+  },
+  "table": {
+    "headers": {
+      "photo": "Photo",
+      "code": "Code",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "documentNumber": "Numéro de document",
+      "fingerprints": "Empreintes",
+      "email": "Email",
+      "branch": "Succursale",
+      "startDate": "Date de début",
+      "endDate": "Date de fin",
+      "contractType": "Type de contrat",
+      "actions": "Actions",
+      "date": "Date",
+      "name": "Nom",
+      "type": "Type",
+      "status": "Statut"
+    },
+    "loading": "Chargement des employés...",
+    "noData": "Aucun employé trouvé",
+    "noDataDescription": "Ajoutez un nouvel employé pour commencer.",
+    "contractType": {
+      "indefinite": "Indéterminé",
+      "fixedTerm": "Déterminé"
+    },
+    "status": {
+      "pending": "En attente",
+      "processing": "En cours",
+      "completed": "Terminé",
+      "error": "Erreur"
+    }
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} résultats",
+    "recordsPerPage": "Enregistrements par page :",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page {current} sur {total}"
+  },
+  "toast": {
+    "createSuccess": {
+      "title": "Employé créé avec succès",
+      "description": "L'employé a été créé correctement"
+    },
+    "updateSuccess": {
+      "title": "Employé mis à jour avec succès",
+      "description": "L'employé a été mis à jour correctement"
+    },
+    "bulkSuccess": {
+      "title": "Import en masse terminé",
+      "description": "Les employés ont été traités avec succès"
+    },
+    "excelSuccess": {
+      "title": "Excel généré avec succès"
+    },
+    "excelError": {
+      "title": "Erreur lors de la génération d'Excel"
+    },
+    "loadError": "Erreur lors du chargement des employés",
+    "photoError": {
+      "title": "Erreur lors du traitement de la photo",
+      "description": "Un problème est survenu lors du téléchargement de la photo. Veuillez réessayer."
+    },
+    "photoInvalidFile": {
+      "title": "Erreur",
+      "description": "Veuillez sélectionner un fichier image valide"
+    },
+    "photoTooLarge": {
+      "title": "Erreur",
+      "description": "L'image doit faire moins de 2 Mo"
+    },
+    "photoReadError": {
+      "title": "Erreur",
+      "description": "Erreur lors de la lecture du fichier"
+    },
+    "createError": {
+      "title": "Erreur lors de la création de l'employé"
+    },
+    "updateError": {
+      "title": "Erreur lors de la mise à jour de l'employé"
+    }
+  },
+  "gender": {
+    "male": "Masculin",
+    "female": "Féminin",
+    "other": "Autre"
+  },
+  "ariaLabels": {
+    "editEmployee": "Modifier l'employé",
+    "changeCompany": "Changer d'entreprise",
+    "photoOf": "Photo de {name}"
+  },
+  "upsert": {
+    "title": {
+      "add": "Ajouter un employé",
+      "edit": "Modifier l'employé"
+    },
+    "fields": {
+      "photo": "Photo de profil",
+      "changePhoto": "Changer la photo",
+      "uploadPhoto": "Télécharger une photo",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "motherLastName": "Nom de la mère",
+      "documentType": "Type de document",
+      "documentNumber": "Numéro de document",
+      "address": "Adresse",
+      "personalEmail": "Email personnel",
+      "personalPhone": "Téléphone personnel",
+      "gender": "Genre",
+      "birthDate": "Date de naissance",
+      "code": "Code",
+      "workEmail": "Email professionnel",
+      "startDate": "Date de début",
+      "endDate": "Date de fin",
+      "contractedHours": "Heures contractuelles",
+      "branchId": "Succursale",
+      "jobId": "Poste"
+    },
+    "placeholders": {
+      "documentType": "Sélectionner le type de document",
+      "documentNumber": "Entrer le numéro de document",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "motherLastName": "Nom de la mère",
+      "address": "Adresse",
+      "personalEmail": "Email personnel",
+      "personalPhone": "Téléphone personnel",
+      "gender": "Sélectionner le genre",
+      "birthDate": "Date de naissance",
+      "code": "Code",
+      "workEmail": "Email professionnel (optionnel)",
+      "startDate": "Date de début",
+      "endDate": "Date de fin",
+      "contractedHours": "Heures contractuelles",
+      "branchId": "Sélectionner la succursale",
+      "jobId": "Sélectionner le poste"
+    },
+    "validation": {
+      "firstNameRequired": "Veuillez entrer le prénom",
+      "lastNameRequired": "Veuillez entrer le nom",
+      "addressRequired": "Veuillez entrer l'adresse",
+      "personalEmailRequired": "Veuillez entrer l'email personnel",
+      "personalEmailInvalid": "Email invalide",
+      "personalPhoneRequired": "Veuillez entrer le téléphone personnel",
+      "genderRequired": "Veuillez sélectionner le genre",
+      "birthDateRequired": "Veuillez entrer la date de naissance",
+      "codeRequired": "Veuillez entrer le code",
+      "startDateRequired": "Veuillez entrer la date de début",
+      "contractedHoursRequired": "Veuillez entrer les heures contractuelles",
+      "branchRequired": "Veuillez sélectionner la succursale",
+      "jobRequired": "Veuillez sélectionner le poste",
+      "documentTypeRequired": "Veuillez sélectionner le type de document",
+      "documentNumberRequired": "Veuillez entrer le numéro de document",
+      "documentInvalid": "Format de document invalide",
+      "endDateRequired": "Veuillez entrer la date de fin du contrat",
+      "fieldRequired": "Ce champ est requis"
+    }
+  },
+  "changeCompany": {
+    "title": "Changer l'entreprise de l'employé",
+    "employeeInfo": "Informations sur l'employé",
+    "code": "Code:",
+    "name": "Nom:",
+    "currentCompany": "Entreprise actuelle:",
+    "importantInfo": "Informations importantes",
+    "historyNote": "Historique: L'historique de l'employé sera conservé pour les rapports et l'audit.",
+    "shiftsNote": "Shifts: Les shifts assignés seront conservés jusqu'à aujourd'hui. Les affectations futures seront supprimées.",
+    "schedulesNote": "Horaires: Les affectations d'horaires futures seront automatiquement supprimées.",
+    "destinationCompany": "Entreprise de destination *",
+    "destinationCompanyPlaceholder": "Sélectionner l'entreprise de destination",
+    "destinationCompanyRequired": "Veuillez sélectionner l'entreprise de destination",
+    "toastSuccess": {
+      "title": "Entreprise changée avec succès",
+      "description": "L'employé {name} a été transféré vers la nouvelle entreprise"
+    },
+    "toastError": {
+      "title": "Erreur lors du changement d'entreprise",
+      "description": "Une erreur s'est produite lors du traitement de la demande"
+    }
+  },
+  "manager": {
+    "title": "Assigner un responsable",
+    "managerIdRequired": "Veuillez sélectionner un responsable/superviseur",
+    "typeRequired": "Veuillez sélectionner un type",
+    "startDateRequired": "Veuillez entrer la date de début",
+    "startDateNotPast": "La date de début ne peut pas être dans le passé",
+    "endDateNotPast": "La date de fin ne peut pas être dans le passé",
+    "type": {
+      "manager": "Responsable",
+      "supervisor": "Superviseur"
+    }
+  },
+  "subordinates": {
+    "title": "Gérer les subordonnés",
+    "selectSubordinates": "Sélectionner les subordonnés",
+    "addSubordinate": "Ajouter un subordonné",
+    "noSubordinates": "Aucun subordonné",
+    "table": {
+      "name": "Nom",
+      "startDate": "Date de début",
+      "endDate": "Date de fin",
+      "actions": "Actions"
+    }
+  },
+  "bulkUpload": {
+    "title": "Import en masse des employés",
+    "subtitle": "Créez ou mettez à jour plusieurs employés par import en masse",
+    "intro": "Import en masse d'employés. Vous pouvez créer de nouveaux employés ou mettre à jour les existants via Excel ou saisie manuelle.",
+    "tabs": {
+      "create": "Création",
+      "update": "Mise à jour"
+    },
+    "processingLabel": "Traitement: {percent}%",
+    "selectFieldsTitle": "Sélectionnez les champs à mettre à jour",
+    "selectFieldsDescriptionCreate": "Téléchargez le modèle Excel ou ajoutez des employés manuellement",
+    "selectFieldsDescriptionUpdate": "Sélectionnez les champs et téléchargez le modèle Excel ou ajoutez des enregistrements manuellement",
+    "instructions": {
+      "excel": {
+        "title": "Instructions:",
+        "step1": "Téléchargez le modèle Excel pour voir le format requis",
+        "step2": "Remplissez les informations des employés dans le modèle",
+        "step3": "Téléchargez le fichier Excel complété",
+        "step4": "Vérifiez les informations et appuyez sur Traiter",
+        "listTitle": "Instructions pour l'import Excel",
+        "list1": "Téléchargez le modèle Excel en cliquant sur \"Télécharger le modèle\"",
+        "list2": "Remplissez le modèle avec les données des employés",
+        "list3": "Enregistrez le fichier Excel",
+        "list4": "Cliquez sur \"Importer Excel\" et sélectionnez le fichier complété",
+        "list5": "Vérifiez les données chargées dans le tableau",
+        "list6": "Cliquez sur \"Traiter\" pour créer ou mettre à jour les employés"
+      },
+      "manual": {
+        "title": "Instructions pour la saisie manuelle:",
+        "step1": "Cliquez sur Ajouter une ligne pour ajouter un nouvel employé",
+        "step2": "Remplissez les champs requis dans chaque ligne",
+        "step3": "Vous pouvez ajouter autant de lignes que nécessaire",
+        "step4": "Vérifiez les informations et appuyez sur Traiter",
+        "listTitle": "Instructions pour la saisie manuelle",
+        "list1": "Cliquez sur \"Ajouter une ligne\" pour ajouter un nouvel employé",
+        "list2": "Remplissez tous les champs requis dans le tableau",
+        "list3": "Vous pouvez ajouter plusieurs employés en cliquant plusieurs fois sur \"Ajouter une ligne\"",
+        "list4": "Cliquez sur \"Traiter\" pour créer ou mettre à jour les employés"
+      }
+    },
+    "noData": "Aucun employé ajouté",
+    "noDataDescription": "Ajoutez des employés manuellement ou téléchargez un fichier Excel",
+    "table": {
+      "noEmployeesLoaded": "Aucun employé chargé",
+      "descriptionCreate": "Téléchargez le modèle Excel ou ajoutez des employés manuellement",
+      "descriptionUpdate": "Sélectionnez les champs et téléchargez le modèle Excel ou ajoutez des enregistrements manuellement",
+      "columnFirstName": "Prénom",
+      "columnLastName": "Nom",
+      "columnSecondLastName": "Nom maternel",
+      "columnDocumentType": "Type doc",
+      "columnDocumentNumber": "N° doc",
+      "columnAddress": "Adresse",
+      "columnPersonalEmail": "Email personnel",
+      "columnPersonalPhone": "Téléphone personnel",
+      "columnGender": "Genre",
+      "columnBirthDate": "Date naiss.",
+      "columnCode": "Code",
+      "columnWorkEmail": "Email pro",
+      "columnWorkPhone": "Tél. pro",
+      "columnStartDate": "Date début",
+      "columnEndDate": "Date fin",
+      "columnContractedHours": "Heures",
+      "columnBranch": "Agence",
+      "columnJob": "Poste",
+      "columnIntegrationCode": "Code intégr.",
+      "columnIndefinite": "Indéfini",
+      "columnStatus": "État",
+      "columnActions": "Actions",
+      "columnError": "Erreur",
+      "statusSuccessMessage": "Employé chargé avec succès",
+      "deleteEmployee": "Supprimer l'employé",
+      "delete": "Supprimer",
+      "downloadSuccessful": "Télécharger les succès",
+      "downloadErrors": "Télécharger les erreurs"
+    },
+    "loadHolidays": "Charger les jours fériés",
+    "validation": {
+      "fieldRequired": "Champ requis",
+      "fieldRequiredWithName": "{field} est requis",
+      "invalidData": "Données invalides",
+      "documentNumberRequiredForUpdate": "Le numéro de document est requis pour la mise à jour",
+      "invalidPersonalEmail": "Email personnel invalide",
+      "invalidWorkEmail": "Email professionnel invalide",
+      "rowPrefix": "Ligne",
+      "validationError": "Erreur de validation",
+      "noEmployeesWarning": "Avertissement",
+      "noEmployeesWarningDescription": "Aucun employé à traiter. Ajoutez au moins un employé."
+    },
+    "toast": {
+      "error": "Erreur",
+      "templateError": "Erreur lors de la génération du modèle Excel",
+      "selectAtLeastOneField": "Vous devez sélectionner au moins un champ à mettre à jour",
+      "excelLoaded": "Excel chargé",
+      "employeesLoaded": "{count} employés chargés depuis Excel",
+      "recordsLoaded": "{count} enregistrements chargés depuis Excel",
+      "excelProcessError": "Erreur lors du traitement du fichier Excel",
+      "noEmployeesToProcess": "Aucun employé à traiter",
+      "validationErrors": "Erreurs de validation",
+      "andMoreErrors": "... et {count} erreur(s) de plus",
+      "processCompletedSuccess": {
+        "title": "Succès",
+        "description": "Processus d'import en masse terminé avec succès"
+      },
+      "someNotCreated": "Certains employés n'ont pas pu être créés",
+      "allCreated": "Tous les employés ont été créés",
+      "createError": "Erreur lors de la création de l'employé",
+      "someNotUpdated": "Certains employés n'ont pas pu être mis à jour",
+      "allUpdated": "Tous les employés ont été mis à jour",
+      "updateError": "Erreur lors de la mise à jour de l'employé",
+      "processCompletedWithErrors": {
+        "title": "Processus terminé avec des erreurs",
+        "description": "Consultez le tableau pour plus de détails."
+      },
+      "noFailedRecords": "Aucun enregistrement en échec",
+      "noFailedRecordsDescription": "Tous les enregistrements ont été traités avec succès",
+      "retryWithErrors": {
+        "title": "Nouvelle tentative terminée avec des erreurs",
+        "description": "Certains enregistrements ont encore des erreurs"
+      },
+      "retrySuccess": {
+        "title": "Nouvelle tentative réussie",
+        "description": "Tous les enregistrements en échec ont été traités"
+      },
+      "noRecords": "Aucun enregistrement",
+      "noSuccessRecords": "Aucun employé chargé avec succès",
+      "noErrorRecords": "Aucun employé avec erreurs",
+      "successExcelError": "Erreur lors de la génération du fichier Excel des employés avec succès",
+      "errorExcelError": "Erreur lors de la génération du fichier Excel des employés avec erreurs"
+    },
+    "excel": {
+      "sheetName": "Employés",
+      "updateSheetName": "Mise à jour des employés",
+      "successSheetName": "Employés avec succès",
+      "errorsSheetName": "Employés avec erreurs",
+      "referencesSheetName": "Références",
+      "booleanValues": "Valeurs booléennes",
+      "trueLabel": "Vrai / True",
+      "falseLabel": "Faux / False",
+      "pleaseSelectYesOrNo": "Veuillez sélectionner {yes} ou {no}",
+      "selectYesOrNo": "Sélectionnez {yes} ou {no}",
+      "invalidValue": "Valeur invalide",
+      "selectGender": "Veuillez sélectionner un genre dans la liste",
+      "selectGenderTitle": "Sélectionner le genre",
+      "selectGenderPrompt": "Sélectionnez un genre dans la liste déroulante",
+      "selectBranch": "Veuillez sélectionner une agence dans la liste",
+      "selectBranchTitle": "Sélectionner l'agence",
+      "selectBranchPrompt": "Sélectionnez une agence dans la liste déroulante",
+      "selectJob": "Veuillez sélectionner un poste dans la liste",
+      "selectJobTitle": "Sélectionner le poste",
+      "selectJobPrompt": "Sélectionnez un poste dans la liste déroulante",
+      "selectValue": "Sélectionner la valeur",
+      "selectValuePrompt": "Sélectionnez {yes} ou {no}",
+      "refSheet": {
+        "field": "Champ",
+        "value": "Valeur",
+        "description": "Description",
+        "gender": "Genre",
+        "documentType": "Type de document",
+        "branch": "Agence",
+        "job": "Poste",
+        "booleanValues": "Valeurs booléennes",
+        "trueDesc": "Vrai / True",
+        "falseDesc": "Faux / False"
+      },
+      "templateCreateFileName": "modele_employes_creation.xlsx",
+      "templateUpdateFileName": "modele_employes_mise_a_jour.xlsx",
+      "successFileName": "employes_succes_{date}.xlsx",
+      "errorsFileName": "employes_erreurs_{date}.xlsx",
+      "errorColumnNote": "IMPORTANT: Avant de re-télécharger ce fichier, supprimez la colonne 'Erreur' (dernière colonne)"
+    },
+    "fields": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "secondLastName": "Nom maternel",
+      "address": "Adresse",
+      "personalEmail": "Email personnel",
+      "personalPhone": "Téléphone personnel",
+      "gender": "Genre",
+      "birthDate": "Date de naissance",
+      "documentType": "Type de document",
+      "documentNumber": "Numéro de document",
+      "code": "Code",
+      "workEmail": "Email professionnel",
+      "workPhone": "Téléphone professionnel",
+      "startDate": "Date de début",
+      "endDate": "Date de fin",
+      "contractedHours": "Heures contractuelles",
+      "branchId": "Agence",
+      "jobId": "Poste",
+      "integrationCode": "Code d'intégration",
+      "isIndefiniteTerm": "Contrat indéfini",
+      "canCheckInOtherBranch": "Peut pointer dans une autre agence",
+      "requiresPassword": "Mot de passe requis",
+      "canCheckWithoutShift": "Peut pointer sans shift",
+      "canCheckAnywhere": "Peut pointer partout",
+      "canCheckFromAnyBranch": "Peut pointer depuis n'importe quelle agence",
+      "canCheckFromWeb": "Peut pointer depuis le web",
+      "isActive": "Actif",
+      "legalMetadata": {
+        "article22": "Article 22",
+        "article27": "Article 27",
+        "flexibilityHours": "Heures de flexibilité"
+      }
+    }
+  },
+  "detail": {
+    "cardTitle": "Fiche: {name}",
+    "personalData": "Données personnelles",
+    "contract": "Contrat",
+    "workData": "Données professionnelles",
+    "companyHistory": "Historique des entreprises",
+    "summary": "Résumé",
+    "attendanceConfig": "Configuration de présence",
+    "managersAndSubstitutes": "Superviseur et suppléants",
+    "subordinatesTab": "Subordonnés",
+    "validation": {
+      "firstNameRequired": "Veuillez entrer le prénom",
+      "lastNameRequired": "Veuillez entrer le nom",
+      "addressRequired": "Veuillez entrer l'adresse",
+      "personalEmailRequired": "Veuillez entrer l'email personnel",
+      "personalEmailInvalid": "Email invalide",
+      "personalPhoneRequired": "Veuillez entrer le téléphone personnel",
+      "genderRequired": "Veuillez sélectionner le genre",
+      "birthDateRequired": "Veuillez entrer la date de naissance",
+      "codeRequired": "Veuillez entrer le code",
+      "startDateRequired": "Veuillez entrer la date d'entrée",
+      "contractedHoursRequired": "Veuillez entrer les heures contractuelles",
+      "branchRequired": "Veuillez sélectionner la succursale",
+      "jobRequired": "Veuillez sélectionner le poste",
+      "documentTypeRequired": "Veuillez sélectionner le type de document",
+      "documentNumberRequired": "Veuillez entrer le numéro de document",
+      "documentInvalid": "Format de document invalide",
+      "endDateRequired": "Veuillez entrer la date de fin",
+      "fieldRequired": "Ce champ est obligatoire"
+    },
+    "companyHistoryLoading": "Chargement de l'historique...",
+    "companyHistoryEmpty": "Aucun historique d'entreprises",
+    "companyHistoryEmptyDescription": "Cet employé n'a pas d'enregistrements de changement d'entreprise.",
+    "personalEmailInfo": {
+      "title": "Information importante sur l'email personnel",
+      "description": "Un email personnel valide est requis pour recevoir les informations importantes de l'application. Cet email peut être modifié à tout moment.",
+      "recommendedServices": "Services email recommandés :"
+    },
+    "contractLegalInfo": "Informations légales du contrat",
+    "indefiniteTerm": "Contrat à durée indéterminée",
+    "article22": "Article 22",
+    "article27": "Article 27",
+    "flexibilityHours": "Horaires flexibles",
+    "workPhone": "Téléphone professionnel",
+    "startDate": "Date d'entrée",
+    "endDate": "Date de fin",
+    "contractedHours": "Heures contractuelles",
+    "branch": "Succursale",
+    "job": "Poste",
+    "integrationCode": "Code d'intégration",
+    "selectBranch": "Sélectionner la succursale",
+    "selectJob": "Sélectionner le poste",
+    "selectDocumentType": "Sélectionner le type de document",
+    "selectGender": "Sélectionner le genre",
+    "documentNumberPlaceholder": "Entrer le numéro de document",
+    "phonePlaceholder": "Ex: +33 6 12 34 56 78",
+    "datePlaceholder": "jj/mm/aaaa",
+    "documentValid": "Document valide",
+    "documentInvalidLabel": "Document invalide",
+    "companyHistoryTable": {
+      "title": "Historique des entreprises",
+      "description": "Enregistrement complet de toutes les entreprises auxquelles cet employé a appartenu.",
+      "company": "Entreprise",
+      "document": "Document",
+      "startDate": "Date de début",
+      "endDate": "Date de fin",
+      "duration": "Durée",
+      "status": "Statut",
+      "current": "Actuel",
+      "inProgress": "En cours",
+      "active": "Actif",
+      "inactive": "Inactif",
+      "years": "année(s)",
+      "months": "mois",
+      "days": "jour(s)",
+      "lessThanOneDay": "Moins d'un jour",
+      "recordsPerPage": "Enregistrements par page :",
+      "showingResults": "Affichage de {current} sur {total} résultats",
+      "pageOf": "Page {current} sur {total}",
+      "previous": "Précédent",
+      "next": "Suivant"
+    },
+    "homeOffice": {
+      "label": "Télétravail",
+      "searchLocation": "Rechercher un lieu",
+      "searchPlaceholder": "Entrez une adresse pour ajouter un point sur la carte",
+      "add": "Ajouter",
+      "searchHint": "Recherchez une adresse et appuyez sur Ajouter pour créer un nouveau point sur la carte"
+    },
+    "summary": {
+      "code": "Code :",
+      "requiresAttention": "Nécessite une attention",
+      "statusOnTime": "À l'heure",
+      "statusLate": "En retard",
+      "statusEarlyDeparture": "Départ anticipé",
+      "statusAbsent": "Absent",
+      "statusNa": "N/A"
+    }
+  }
+}

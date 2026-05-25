@@ -1,0 +1,176 @@
+{
+  "title": "Gestión de Banco de Horas",
+  "subtitle": "Administre los bancos de horas de los empleados",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "timeBank": "Banco de Horas"
+  },
+  "buttons": {
+    "batchCreate": "Creación Masiva",
+    "configure": "Configurar",
+    "manageTransactions": "Gestionar transacciones",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "deleting": "Eliminando...",
+    "cancel": "Cancelar",
+    "search": "Buscar",
+    "clear": "Limpiar",
+    "downloadExcel": "Descargar Excel",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "viewDetail": "Ver detalle"
+  },
+  "kpi": {
+    "total": "Total Bancos de Horas",
+    "active": "Bancos Activos",
+    "pending": "Pendientes",
+    "expired": "Vencidos"
+  },
+  "tabs": {
+    "active": "Bancos Activos",
+    "expired": "Bancos Vencidos",
+    "withBank": "Empleados con Banco",
+    "withoutBank": "Empleados sin Banco",
+    "config": "Configuración"
+  },
+  "filters": {
+    "search": "Búsqueda",
+    "searchPlaceholder": "Buscar por empleado...",
+    "type": "Tipo",
+    "typePlaceholder": "Seleccione un tipo",
+    "typeOptions": {
+      "economicHours": "Hora Económica",
+      "restDays": "Días de Descanso"
+    },
+    "employeeId": "ID Empleado",
+    "employeeIdPlaceholder": "ID del empleado"
+  },
+  "table": {
+    "headers": {
+      "employee": "Empleado",
+      "type": "Tipo de Banco",
+      "hoursPerDay": "Horas por Día",
+      "availableHours": "Horas Disponibles",
+      "usedHours": "Horas Utilizadas",
+      "period": "Período de Vigencia",
+      "createdAt": "Fecha de Creación",
+      "actions": "Acciones"
+    },
+    "type": {
+      "economicHours": "Hora Económica",
+      "restDays": "Días de Descanso"
+    },
+    "period": {
+      "start": "Inicio",
+      "end": "Fin"
+    },
+    "loading": "Cargando bancos de horas...",
+    "noData": "No se encontraron bancos de horas",
+    "noDataDescription": "No hay bancos de horas registrados para este filtro."
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} resultados",
+    "page": "Página {current} de {total}",
+    "recordsPerPage": "Registros por página"
+  },
+  "excel": {
+    "filename": "bancos-horas-{status}",
+    "sheetName": "Bancos de Horas",
+    "headers": {
+      "employeeName": "Empleado",
+      "employeeEmail": "Email del Empleado",
+      "type": "Tipo de Banco",
+      "hoursPerDay": "Horas por Día",
+      "availableHours": "Horas Disponibles",
+      "usedHours": "Horas Utilizadas",
+      "startDate": "Fecha de Inicio",
+      "endDate": "Fecha de Fin",
+      "createdAt": "Fecha de Creación"
+    },
+    "type": {
+      "economicHours": "Hora Económica",
+      "restDays": "Días de Descanso"
+    },
+    "hoursPerDay": "horas/día",
+    "hours": "horas"
+  },
+  "delete": {
+    "title": "Eliminar Banco de Horas",
+    "message": "¿Está seguro de que desea eliminar este banco de horas? Esta acción no se puede deshacer."
+  },
+  "toast": {
+    "deleteSuccess": {
+      "title": "Banco de horas eliminado exitosamente"
+    },
+    "deleteError": {
+      "description": "Error al eliminar el banco de horas"
+    },
+    "excelSuccess": {
+      "title": "Excel generado exitosamente"
+    },
+    "excelError": {
+      "title": "Error al generar el Excel"
+    }
+  },
+  "ariaLabels": {
+    "editTimeBank": "Editar banco de horas",
+    "deleteTimeBank": "Eliminar banco de horas",
+    "viewDetail": "Ver detalle del empleado"
+  },
+  "history": {
+    "title": "Historial de Transacciones",
+    "subtitle": "Registro completo de todos los movimientos del banco de horas",
+    "summary": {
+      "totalCredits": "Total Créditos",
+      "totalDebits": "Total Débitos",
+      "adjustments": "Ajustes",
+      "expirations": "Expiraciones",
+      "hoursAdded": "horas agregadas",
+      "hoursConsumed": "horas consumidas",
+      "hoursAdjusted": "horas ajustadas",
+      "hoursExpired": "horas expiradas"
+    },
+    "filter": {
+      "placeholder": "Filtrar por tipo",
+      "all": "Todos los tipos",
+      "creditsOnly": "Solo Créditos",
+      "debitsOnly": "Solo Débitos",
+      "adjustmentsOnly": "Solo Ajustes",
+      "expirationsOnly": "Solo Expiraciones"
+    },
+    "table": {
+      "headers": {
+        "date": "Fecha",
+        "type": "Tipo",
+        "hours": "Horas",
+        "balance": "Saldo",
+        "reference": "Referencia",
+        "user": "Usuario"
+      },
+      "loading": "Cargando transacciones...",
+      "noData": "No hay transacciones",
+      "noDataDescription": "No hay transacciones para este filtro.",
+      "hoursUnit": "hrs",
+      "reference": "Ref",
+      "systemUser": "Sistema"
+    },
+    "types": {
+      "credit": "Crédito",
+      "debit": "Débito",
+      "adjustment": "Ajuste",
+      "expiration": "Expiración"
+    },
+    "help": {
+      "title": "Tipos de Transacciones",
+      "manualOps": "Operaciones Manuales",
+      "autoOps": "Operaciones Automáticas",
+      "creditDescription": "Agregar horas al banco manualmente",
+      "debitDescription": "Consumir horas del banco",
+      "adjustmentDescription": "Corrección de saldos o errores",
+      "expirationDescription": "Horas que expiran automáticamente",
+      "system": "Sistema",
+      "systemDescription": "Operaciones automáticas del sistema"
+    }
+  }
+}

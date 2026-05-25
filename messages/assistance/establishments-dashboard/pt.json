@@ -1,0 +1,87 @@
+{
+  "header": {
+    "title": "Dotación de estabelecimentos",
+    "breadcrumbs": {
+      "assistance": "Assistência",
+      "dashboard": "Dotación estabelecimentos"
+    },
+    "lastRefresh": "Última atualização",
+    "rangeDay": "Dia",
+    "rangePeriod": "Período"
+  },
+  "filters": {
+    "searchPlaceholder": "Buscar estabelecimento…",
+    "status": "Estado operacional (estudante)",
+    "risk": "Risco do estabelecimento",
+    "riskAll": "Todos os níveis",
+    "sortBy": "Ordenar ranking",
+    "sortDesc": "Maior para menor",
+    "sortAsc": "Menor para maior",
+    "rowsPerPage": "Registros por página",
+    "refresh": "Atualizar",
+    "export": "Exportar ranking",
+    "today": "Hoje"
+  },
+  "sort": {
+    "risk": "Risco",
+    "absenteeism": "Absenteísmo",
+    "presence": "Presença",
+    "name": "Nome",
+    "code": "Código"
+  },
+  "kpis": {
+    "expected": "Dotación esperada",
+    "present": "Presentes",
+    "absent": "Ausentes",
+    "inside": "Dentro",
+    "exited": "Saíram",
+    "presenceRate": "% Presente",
+    "criticalEstablishments": "Estabelecimentos críticos",
+    "attentionEstablishments": "Estabelecimentos em atenção",
+    "avgMinutes": "Méd. minutos",
+    "establishmentsWithActivity": "Estabelecimentos com atividade"
+  },
+  "cards": {
+    "title": "Resumo por estabelecimento",
+    "viewDetail": "Ver detalhe",
+    "lastEvent": "Última marcação",
+    "empty": "Nenhum estabelecimento corresponde aos filtros."
+  },
+  "ranking": {
+    "title": "Ranking comparativo",
+    "establishment": "Estabelecimento",
+    "expected": "Esperados",
+    "present": "Presentes",
+    "absent": "Ausentes",
+    "presencePct": "% Presente",
+    "inside": "Dentro",
+    "exited": "Saíram",
+    "late": "Atrasos",
+    "earlyExit": "Saída antecipada",
+    "noCheckout": "Sem saída",
+    "risk": "Risco",
+    "actions": "Ações"
+  },
+  "charts": {
+    "presenceByCenter": "% Presente por estabelecimento",
+    "absenteeismByCenter": "Absenteísmo por estabelecimento",
+    "histogram": "Marcações por hora (global)",
+    "heatmap": "Intensidade dia/hora",
+    "trend": "Tendência de absenteísmo",
+    "empty": "Sem dados para gráficos"
+  },
+  "risk": {
+    "OK": "OK",
+    "ATTENTION": "Atenção",
+    "CRITICAL": "Crítico"
+  },
+  "pagination": {
+    "page": "Página {current} de {total}"
+  },
+  "states": {
+    "loading": "Carregando…",
+    "error": "Não foi possível carregar o painel.",
+    "noCompany": "Selecione uma empresa para continuar."
+  },
+  "exportFilename": "dotacao-estabelecimentos"
+}

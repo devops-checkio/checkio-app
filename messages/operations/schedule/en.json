@@ -1,0 +1,257 @@
+{
+  "title": "Schedule Assignment",
+  "subtitle": "Assign schedules to employees",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Operations",
+    "schedule": "Schedules",
+    "studentSchedule": "Student Schedules",
+    "employee": "Employee"
+  },
+  "tabs": {
+    "active": "Active",
+    "expiring": "Expiring",
+    "recentDismissals": "Recent Dismissals",
+    "inactive": "Inactive"
+  },
+  "tabTitles": {
+    "active": "Active Employees",
+    "expiring": "Expiring Employees",
+    "recentDismissals": "Recent Dismissals",
+    "inactive": "Inactive Employees"
+  },
+  "tabBase": {
+    "search": "Search",
+    "documentNumber": "Document Number",
+    "branch": "Branch",
+    "selectBranch": "Select Branch",
+    "placeholderSearch": "Search by First or Last Name",
+    "placeholderDocument": "Search by Document Number",
+    "buttons": {
+      "clear": "Clear",
+      "search": "Search",
+      "edit": "Edit"
+    },
+    "table": {
+      "loading": "Loading employees...",
+      "noData": "No employees found",
+      "noDataDescription": "Try adjusting your filters or search criteria.",
+      "selectCompanyTitle": "Select a company",
+      "selectCompany": "Select a company in the top menu to view employees and assign schedules.",
+      "headers": {
+        "code": "Code",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "documentNumber": "Document Number",
+        "email": "Email",
+        "branch": "Branch",
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "contractType": "Contract Type",
+        "actions": "Actions"
+      }
+    },
+    "contractType": {
+      "indefinite": "Indefinite",
+      "fixedTerm": "Fixed Term"
+    },
+    "pagination": {
+      "showing": "Showing {current} of {total} results",
+      "recordsPerPage": "Records per page",
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page {current} of {total}"
+    },
+    "error": {
+      "message": "Error loading employees",
+      "retry": "Retry"
+    },
+    "aria": {
+      "editSchedule": "Edit schedule"
+    }
+  },
+  "employee": {
+    "title": "Employee Schedule",
+    "titleStudent": "Student Schedule",
+    "subtitle": "Schedule management for {name}",
+    "subtitleStudent": "Student schedule management for {name}",
+    "loading": "Loading schedules...",
+    "loadingName": "Loading...",
+    "backAriaLabel": "Back to schedule assignment list",
+    "backAriaLabelStudent": "Back to student schedule list",
+    "year": "Year",
+    "month": "Month",
+    "document": "Document",
+    "na": "N/A",
+    "buttons": {
+      "freeDay": "Free Day",
+      "delete": "Delete",
+      "assign": "Assign",
+      "today": "Today"
+    },
+    "totals": "Totals",
+    "weekDays": {
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat",
+      "sun": "Sun"
+    },
+    "months": {
+      "january": "January",
+      "february": "February",
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December"
+    }
+  },
+  "modalMassAssignment": {
+    "title": "Mass Assignment",
+    "message": "Select the schedule you want to assign to the following days:",
+    "selectSchedule": "Select Schedule",
+    "placeholder": "Select a schedule",
+    "selectButton": "Select",
+    "selectEstablishment": "Select establishment",
+    "placeholderEstablishment": "Select an establishment",
+    "hintSelectAnotherSchedule": "Select another schedule",
+    "removeScheduleAria": "Remove {code}",
+    "noScheduleError": "Please select a schedule",
+    "noEstablishmentError": "You must select an establishment",
+    "awaitingCompanyFilterHint": "Waiting for employee data to filter schedules by company…",
+    "addScheduleBlock": "Add schedule + establishment",
+    "overlapBetweenSelected": "These selections overlap:",
+    "table": {
+      "date": "Date",
+      "schedule": "Schedule",
+      "status": "Status"
+    },
+    "noDaysSelected": "No days selected",
+    "buttons": {
+      "cancel": "Cancel",
+      "assign": "Assign"
+    },
+    "assigning": "Assigning...",
+    "unassigned": "Unassigned",
+    "badges": {
+      "holiday": "Holiday",
+      "free": "Free"
+    },
+    "status": {
+      "pending": "Pending",
+      "processing": "Processing",
+      "success": "Completed",
+      "error": "Error"
+    },
+    "toast": {
+      "errorSelectSchedule": "Please select a schedule",
+      "errorSelectEstablishment": "You must select an establishment",
+      "successTitle": "Schedules assigned",
+      "successDescription": "Schedules have been assigned successfully",
+      "completedWithErrorsTitle": "Process completed with errors",
+      "completedWithErrorsDescription": "{successCount} schedules assigned successfully, {errorCount} with errors",
+      "overlapTitle": "Schedule overlap",
+      "overlapExisting": "{candidate} overlaps with {existing}, already assigned on the selected days.",
+      "overlapAmongPicked": "{candidate} overlaps with {other}, already chosen in this dialog.",
+      "duplicateSchedule": "That schedule is already selected in another block.",
+      "overlapSelectedSetsTitle": "Overlap among selected schedules",
+      "errorEstablishmentPerSchedule": "For students, you must select an establishment for each schedule."
+    },
+    "errorAssignSchedule": "Error assigning schedule"
+  },
+  "modalDeletion": {
+    "title": "Confirm Deletion",
+    "message": "Are you sure you want to remove the assignments for the following days?",
+    "buttons": {
+      "cancel": "Cancel",
+      "delete": "Delete"
+    },
+    "deleting": "Deleting...",
+    "assignedSchedule": "Assigned schedule",
+    "badges": {
+      "holiday": "Holiday",
+      "free": "Free",
+      "shift": "Shift"
+    },
+    "status": {
+      "pending": "Pending",
+      "processing": "Processing",
+      "success": "Completed",
+      "error": "Error"
+    },
+    "noDaysSelected": "No days selected",
+    "deletedOk": "Successfully deleted",
+    "waiting": "Waiting",
+    "table": {
+      "date": "Date",
+      "schedule": "Schedule",
+      "status": "Status",
+      "message": "Message"
+    },
+    "toast": {
+      "successTitle": "Assignments removed",
+      "successDescription": "Assignments have been removed successfully",
+      "completedWithErrorsTitle": "Process completed with errors",
+      "completedWithErrorsDescription": "{successCount} assignments removed successfully, {errorCount} with errors"
+    },
+    "errorDeleteAssignment": "Error removing assignment"
+  },
+  "modalFreeDay": {
+    "title": "Confirm Free Days",
+    "message": "Are you sure you want to mark the following days as free?",
+    "buttons": {
+      "cancel": "Cancel",
+      "confirm": "Confirm"
+    },
+    "processing": "Processing...",
+    "badges": {
+      "holiday": "Holiday",
+      "free": "Free",
+      "shift": "Shift"
+    },
+    "status": {
+      "pending": "Pending",
+      "processing": "Processing",
+      "success": "Completed",
+      "error": "Error"
+    },
+    "noDaysSelected": "No days selected",
+    "table": {
+      "date": "Date",
+      "schedule": "Schedule",
+      "status": "Status"
+    },
+    "toast": {
+      "successTitle": "Free days configured",
+      "successDescription": "Selected days have been marked as free successfully",
+      "completedWithErrorsTitle": "Process completed with errors",
+      "completedWithErrorsDescription": "{successCount} days processed successfully, {errorCount} with errors"
+    },
+    "errorProcessDay": "Error processing day"
+  },
+  "cards": {
+    "freeDay": "Free Day",
+    "absence": "Absence",
+    "holiday": "Holiday",
+    "edited": "(Edited)",
+    "modifiedSchedule": "Modified schedule",
+    "until": "until",
+    "withoutPay": "Without pay",
+    "fullDayFree": "Full day free",
+    "fullDayFreeAlt": "Full day free",
+    "holidayWithSchedule": "Holiday with schedule",
+    "holidayDay": "Holiday",
+    "weekly": "Weekly",
+    "weeklyExceedsLegal": "Exceeds the weekly maximum of {limit} h",
+    "total": "Total",
+    "timeRange": "00:00 until 23:59"
+  }
+}

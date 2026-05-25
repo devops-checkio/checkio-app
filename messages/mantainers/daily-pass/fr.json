@@ -1,0 +1,79 @@
+{
+  "title": "Passe Quotidiens",
+  "subtitle": "Gérez les passes quotidiens du système",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "maintainers": "Mainteneurs",
+    "dailyPass": "Passe Quotidiens"
+  },
+  "buttons": {
+    "add": "Générer un passe",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "cancel": "Annuler",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "viewQrCode": "Voir QR"
+  },
+  "table": {
+    "headers": {
+      "name": "Nom",
+      "documentNumber": "Document",
+      "status": "Statut",
+      "expiresAt": "Expire",
+      "actions": "Actions"
+    },
+    "loading": "Chargement des passes quotidiens...",
+    "noData": "Aucun passe quotidien trouvé",
+    "noDataDescription": "Générez un nouveau passe quotidien pour commencer."
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} résultats",
+    "recordsPerPage": "Enregistrements par page:",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page {current} sur {total}"
+  },
+  "status": {
+    "active": "Actif",
+    "expired": "Expiré",
+    "deactivated": "Désactivé"
+  },
+  "delete": {
+    "title": "Confirmer la suppression",
+    "message": "Êtes-vous sûr de vouloir supprimer ce passe quotidien?",
+    "deleting": "Suppression...",
+    "success": "Passe quotidien supprimé avec succès",
+    "error": "Erreur lors de la suppression du passe. Veuillez réessayer."
+  },
+  "ariaLabels": {
+    "viewQrCode": "Voir le code QR",
+    "deletePass": "Supprimer le passe quotidien"
+  },
+  "tour": {
+    "startButton": "Voir le guide",
+    "buttons": {
+      "next": "Suivant",
+      "previous": "Précédent",
+      "done": "Terminer"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Bienvenue dans le module Passe Quotidiens",
+        "description": "Dans ce module, vous pouvez générer des passes d'accès temporaires. Ce guide vous montrera les principales fonctionnalités."
+      },
+      "toolbar": {
+        "title": "Actions principales",
+        "description": "À partir d'ici, vous pouvez générer un nouveau passe quotidien. Sélectionnez la personne et la date d'expiration."
+      },
+      "table": {
+        "title": "Tableau des passes quotidiens",
+        "description": "Liste des passes générés avec nom, document, statut et date d'expiration. Utilisez le bouton QR pour voir le code et le bouton supprimer pour désactiver un passe."
+      },
+      "pagination": {
+        "title": "Pagination",
+        "description": "Naviguez entre les pages et ajustez le nombre d'enregistrements affichés."
+      }
+    }
+  }
+}

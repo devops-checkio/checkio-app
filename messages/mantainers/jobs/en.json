@@ -1,0 +1,203 @@
+{
+  "title": "Job Management",
+  "subtitle": "Manage company positions and jobs",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Maintainers",
+    "jobs": "Jobs"
+  },
+  "buttons": {
+    "add": "Add Job",
+    "addMassive": "Bulk Add Jobs",
+    "downloadExcel": "Download Excel",
+    "search": "Search",
+    "previous": "Previous",
+    "next": "Next",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "SAVE",
+    "update": "UPDATE",
+    "creating": "Creating...",
+    "updating": "Updating...",
+    "processing": "Processing...",
+    "process": "Process",
+    "cancel": "Cancel",
+    "close": "Close",
+    "downloadTemplate": "Download Template",
+    "uploadExcel": "Upload Excel",
+    "addRow": "Add Row"
+  },
+  "search": {
+    "placeholder": "Search Code or Name..."
+  },
+  "table": {
+    "headers": {
+      "code": "Code",
+      "name": "Name",
+      "description": "Description",
+      "companies": "Companies",
+      "createdAt": "Creation Date",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "loading": "Loading jobs...",
+    "noData": "No jobs found",
+    "noDataDescription": "Add a new job to get started.",
+    "noDataMassive": "No jobs added",
+    "noDataMassiveDescription": "Add jobs manually or upload an Excel file"
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} jobs",
+    "recordsPerPage": "Records per page:",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  },
+  "delete": {
+    "title": "Confirm deletion",
+    "message": "Are you sure you want to delete this job?",
+    "success": "Job deleted successfully"
+  },
+  "excel": {
+    "success": "Excel generated successfully",
+    "error": "Error generating Excel",
+    "filename": "jobs",
+    "sheetName": "Jobs",
+    "headers": {
+      "code": "Code",
+      "name": "Name",
+      "description": "Description",
+      "companies": "Companies",
+      "createdAt": "Creation Date"
+    }
+  },
+  "ariaLabels": {
+    "editJob": "Edit job",
+    "deleteJob": "Delete job"
+  },
+  "toast": {
+    "createSuccess": {
+      "title": "Job created successfully",
+      "description": "The job has been created correctly"
+    },
+    "updateSuccess": {
+      "title": "Job updated successfully",
+      "description": "The job has been updated correctly"
+    },
+    "deleteSuccess": {
+      "title": "Job deleted successfully",
+      "description": "The job has been deleted correctly"
+    },
+    "processCompletedSuccess": {
+      "title": "Process completed successfully",
+      "description": "The bulk upload process has completed successfully"
+    },
+    "processCompletedWithErrors": {
+      "title": "Process completed with errors",
+      "description": "Review the table for more details"
+    },
+    "error": {
+      "title": "Error",
+      "description": "Error creating the job"
+    }
+  },
+  "upsert": {
+    "title": {
+      "edit": "Edit Job",
+      "add": "Add Job"
+    },
+    "fields": {
+      "code": "Code",
+      "name": "Name",
+      "description": "Description",
+      "companies": "Companies"
+    },
+    "placeholders": {
+      "code": "Code",
+      "name": "Name",
+      "description": "Description",
+      "companies": "Select companies"
+    },
+    "validation": {
+      "codeRequired": "Please enter the job code",
+      "nameRequired": "Please enter the job name",
+      "descriptionRequired": "Please enter the job description",
+      "companiesRequired": "Please select at least one company"
+    }
+  },
+  "massive": {
+    "title": "Bulk Job Upload",
+    "tabs": {
+      "excel": "Excel Upload",
+      "manual": "Manual Entry"
+    },
+    "instructions": {
+      "excel": {
+        "title": "Instructions:",
+        "step1": "Download the Excel template to see the required format",
+        "step2": "Fill in the job information in the template",
+        "step3": "Upload the completed Excel file",
+        "step4": "Verify the information and press Process"
+      },
+      "manual": {
+        "title": "Instructions for manual entry:",
+        "step1": "Click Add Row to add a new job",
+        "step2": "Fill in the required fields in each row",
+        "step3": "You can add as many rows as needed",
+        "step4": "Verify the information and press Process"
+      }
+    },
+    "table": {
+      "headers": {
+        "code": "Code",
+        "name": "Name",
+        "description": "Description",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "status": {
+        "completed": "Completed",
+        "error": "Error"
+      }
+    },
+    "validation": {
+      "codeRequired": "Please enter the job code",
+      "nameRequired": "Please enter the job name",
+      "descriptionRequired": "Please enter the job description",
+      "companiesRequired": "Please select at least one company"
+    },
+    "progress": "Processing: {percent}%",
+    "ariaLabels": {
+      "deleteJob": "Delete job"
+    }
+  },
+  "card": {
+    "title": "Jobs"
+  },
+  "tour": {
+    "startButton": "View guide",
+    "buttons": {
+      "next": "Next",
+      "previous": "Previous",
+      "done": "Done"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Welcome to the Jobs module",
+        "description": "In this module you can manage jobs and positions. This guide will show the main features."
+      },
+      "toolbar": {
+        "title": "Main actions",
+        "description": "Here you can search by code or name, add jobs individually, perform bulk upload from Excel, or download the list."
+      },
+      "table": {
+        "title": "Jobs table",
+        "description": "List of jobs with code, name, description, assigned companies and creation date. Use edit or delete buttons to manage each job."
+      },
+      "pagination": {
+        "title": "Pagination",
+        "description": "Navigate between pages and adjust the number of records displayed."
+      }
+    }
+  }
+}

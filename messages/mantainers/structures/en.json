@@ -1,0 +1,125 @@
+{
+  "successTitle": "Success",
+  "title": "Structure Management",
+  "subtitle": "Manage system structures",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Maintainers",
+    "structures": "Structures"
+  },
+  "buttons": {
+    "add": "Add Structure",
+    "downloadExcel": "Download Excel",
+    "search": "Search",
+    "edit": "Edit",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "previous": "Previous",
+    "next": "Next",
+    "assignCompanies": "Assign Companies",
+    "manageStructure": "Manage Structure"
+  },
+  "table": {
+    "headers": {
+      "name": "Name",
+      "companies": "Companies",
+      "actions": "Actions"
+    },
+    "loading": "Loading structures...",
+    "noData": "No structures found",
+    "noDataDescription": "Create a new structure to get started.",
+    "selectCompanyTitle": "Select a company",
+    "selectCompanyDescription": "Choose the active company in the top menu to see its organizational structures."
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} results",
+    "recordsPerPage": "Records per page:",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  },
+  "ariaLabels": {
+    "editStructure": "Edit structure",
+    "deleteStructure": "Delete structure",
+    "assignCompanies": "Assign companies",
+    "manageStructure": "Manage complete structure"
+  },
+  "filters": {
+    "searchPlaceholder": "Search Name..."
+  },
+  "excel": {
+    "filename": "structures",
+    "sheetName": "Structures",
+    "headers": {
+      "name": "Name",
+      "companies": "Companies"
+    }
+  },
+  "delete": {
+    "message": "Are you sure you want to delete this structure?",
+    "success": "Structure deleted successfully"
+  },
+  "structureDetail": {
+    "title": "Structure: {name}",
+    "configureLevels": "Configure level names",
+    "downloadStructure": "Download Structure (CSV)",
+    "noLevelsConfigured": "No levels configured",
+    "noLevelsDescription": "Use «Configure level names» to add the first level",
+    "structureLabel": "Structure",
+    "level": "Level",
+    "backAria": "Back to structure list"
+  },
+  "levelDetail": {
+    "backAria": "Back to structure overview",
+    "new": "New",
+    "bulkUpload": "Bulk upload",
+    "filterByParent": "Filter by parent",
+    "all": "All",
+    "noSubunits": "No subunits",
+    "noSubunitsDescription": "Use «New» or «Bulk upload» to add.",
+    "viewChildren": "View children",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleteSubunit": "Delete subunit",
+    "newSubunit": "New subunit",
+    "editSubunit": "Edit subunit",
+    "name": "Name",
+    "code": "Code",
+    "parent": "Parent",
+    "noParent": "No parent",
+    "parents": "Parents",
+    "parentsSearchPlaceholder": "Search by name or code…",
+    "parentsSearchAria": "Filter parent list",
+    "parentsSelectFiltered": "Add filtered",
+    "parentsSelectAll": "Select all parents",
+    "parentsClear": "Clear selection",
+    "parentsEmpty": "No parents available",
+    "parentsNoMatches": "No parents match your search",
+    "parentsSelectedCount": "{count, plural, one {# parent selected} other {# parents selected}}",
+    "parentsPickerHint": "Click a row to select or deselect.",
+    "validationParentsRequired": "Select at least one parent",
+    "validationNameRequired": "Name is required",
+    "validationCodeRequired": "Code is required",
+    "namePlaceholder": "e.g. Sub-unit",
+    "codePlaceholder": "e.g. CODE-01",
+    "save": "Save",
+    "create": "Create",
+    "saving": "Saving",
+    "creating": "Creating",
+    "searchLabel": "Search",
+    "searchPlaceholder": "Name, code or parent…",
+    "searchButton": "Search",
+    "searchResults": "Found {count} result(s) for \"{term}\"",
+    "searchNoResults": "No results for \"{term}\"",
+    "loadError": "Failed to load",
+    "retry": "Retry",
+    "employees": "Employees",
+    "bulkParentColumnLabel": "Parent(s): code, name or UUID; several separated by comma. If the code is duplicated, use UUID.",
+    "bulkUploadModalTitle": "Bulk upload: {levelName}",
+    "loadingData": "Loading…",
+    "uploadNoParentsWarning": "Create at least one sub-unit at the previous level before using bulk upload at this level.",
+    "toastSubunitCreated": "Sub-unit created successfully",
+    "toastSubunitUpdated": "Sub-unit updated successfully",
+    "toastSubunitDeleted": "Sub-unit deleted successfully"
+  }
+}

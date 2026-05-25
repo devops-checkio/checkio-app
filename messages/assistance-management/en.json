@@ -1,0 +1,196 @@
+{
+  "title": "Attendance Management",
+  "subtitle": "Attendance Management",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "assistance": "Attendance Management"
+  },
+  "assistanceAbsent": "Absent Attendances",
+  "assistanceIncomplete": "Incomplete Attendances",
+  "assistanceWithoutSchedule": "Attendances Without Schedule",
+  "assistanceCompleted": "Completed Attendances",
+  "assistancePending": "Pending Marks",
+  "assistanceRejected": "Rejected Marks",
+  "filterEmployee": "Employee",
+  "filterEmployeePlaceholder": "Search by name or document number...",
+  "auditMap": {
+    "noLocationData": "No geolocation data available for this mark",
+    "withinAuthorizedZone": "Within authorized zone",
+    "withinMarginZone": "Within error margin (30m)",
+    "outsideAuthorizedZone": "Outside authorized zone",
+    "branchZone": "Branch zone",
+    "homeOfficeZone": "Home office zone",
+    "errorMarginZone": "Error margin (30m)",
+    "authorizedMarkingArea": "Authorized marking area",
+    "locationInfo": "Location Information",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "authorizedZonesCount": "Authorized zones"
+  },
+  "detailTour": {
+    "startButton": "View guide",
+    "buttons": {
+      "next": "Next",
+      "previous": "Previous",
+      "done": "Finish"
+    },
+    "tabs": {
+      "common": {
+        "steps": {
+          "welcome": {
+            "title": "Assistance Management",
+            "description": "Attendance view and available actions according to the selected tab."
+          },
+          "tabs": {
+            "title": "Attendance views",
+            "description": "Each tab shows a different type of attendance. The number indicates records requiring attention. Click a tab to switch views. Tabs with an alert (blinking) have pending records."
+          },
+          "filters": {
+            "title": "Search filters",
+            "description": "Filter by date (day, month, year or range), name, document, job or branch. Use Clear to reset. Filters apply to all tabs."
+          },
+          "toolbar": {
+            "title": "Tab actions",
+            "description": "Buttons vary by tab: create attendances, autocomplete, assign schedules, approve or reject. Actions requiring selection only activate when you select rows."
+          },
+          "table": {
+            "title": "Records table",
+            "description": "List with date, document, name, marks and actions. Use the eye icon to view mark details. In Incomplete and Absent you can check rows for bulk actions."
+          },
+          "pagination": {
+            "title": "Pagination",
+            "description": "Navigate between pages and adjust records per page (10, 20, 50, 100, 200)."
+          }
+        }
+      },
+      "1": {
+        "steps": {
+          "welcome": {
+            "title": "Incomplete Attendances",
+            "description": "Employees with missing marks (entry, exit or breaks). From here you can: Create Attendances (for employees who should attend but have no record), Autocomplete Automatic (fills marks per schedule), Autocomplete Manual (complete mark by mark) or Assign Schedules (assign shift to those without one). Select rows with the checkbox to enable bulk actions."
+          },
+          "toolbar": {
+            "title": "Available actions - Incomplete",
+            "description": "Create Attendances: generates record for employees without attendance for the day. Autocomplete Automatic: fills entry/exit per assigned schedule. Autocomplete Manual: opens modal to complete each mark manually. Assign Schedules: assigns shift to selected employees. The last three only activate when one or more rows are selected."
+          },
+          "table": {
+            "title": "Table columns",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Checkbox</strong>: Select rows for bulk actions</li><li><strong>Date</strong>: Attendance day</li><li><strong>Document No</strong>: Employee document</li><li><strong>Schedule</strong>: Shift and scheduled time</li><li><strong>Name</strong>: Employee name</li><li><strong>Entry</strong>: Check-in time (empty if not marked)</li><li><strong>Breaks</strong>: Registered break periods</li><li><strong>Exit</strong>: Check-out time (empty if not marked)</li><li><strong>Additional</strong>: Marks outside schedule</li><li><strong>Delays</strong>: Late arrivals or early departures</li><li><strong>Photo Verification</strong>: Valid/invalid biometric photos</li><li><strong>Actions</strong>: Click to view mark details</li></ul>"
+          }
+        }
+      },
+      "2": {
+        "steps": {
+          "welcome": {
+            "title": "Attendances Without Schedule",
+            "description": "Employees with no shift assigned for the day. Without a schedule they cannot mark correctly. From here you can Create Attendances or Assign Schedules in bulk. Select rows with the checkbox to enable actions in the top bar."
+          },
+          "toolbar": {
+            "title": "Available actions - Without Schedule",
+            "description": "Create Attendances: generates attendance record. Assign Schedules: assigns shift to selected employees. Autocomplete and Assign Schedules only activate when one or more rows are selected."
+          },
+          "table": {
+            "title": "Table columns",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Checkbox</strong>: Select rows for bulk actions</li><li><strong>Date</strong>: Attendance day</li><li><strong>Document No</strong>: Employee document</li><li><strong>Name</strong>: Employee name</li><li><strong>Entry</strong>: Entry time (empty if not marked)</li><li><strong>Breaks</strong>: Registered breaks</li><li><strong>Exit</strong>: Exit time (empty if not marked)</li><li><strong>Status</strong>: Record status</li><li><strong>Hrs</strong>: Hours worked if applicable</li><li><strong>Actions</strong>: Click to view details</li></ul>"
+          }
+        }
+      },
+      "3": {
+        "steps": {
+          "welcome": {
+            "title": "Absent Attendances",
+            "description": "Employees who did not record any mark for the day. You can Create Attendances, Autocomplete (if they have a schedule) or Assign Schedules. Use the checkbox for multi-select and run bulk actions on multiple employees at once."
+          },
+          "toolbar": {
+            "title": "Available actions - Absent",
+            "description": "Create Attendances, Autocomplete Automatic, Autocomplete Manual and Assign Schedules. Activate when one or more rows are selected."
+          },
+          "table": {
+            "title": "Table columns",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Checkbox</strong>: Select rows for bulk actions</li><li><strong>Date</strong>: Attendance day</li><li><strong>Document No</strong>: Employee document</li><li><strong>Name</strong>: Employee name</li><li><strong>Schedule</strong>: Assigned shift</li><li><strong>Entry</strong>: Entry time (empty for absent)</li><li><strong>Breaks</strong>: Registered breaks</li><li><strong>Exit</strong>: Exit time (empty for absent)</li><li><strong>Additional</strong>: Marks outside schedule</li><li><strong>Delays</strong>: Late arrivals or early departures</li><li><strong>Photo Verification</strong>: Biometric photos</li><li><strong>Actions</strong>: Click to view details</li></ul>"
+          }
+        }
+      },
+      "4": {
+        "steps": {
+          "welcome": {
+            "title": "Completed Attendances",
+            "description": "Records with all marks completed (entry, breaks and exit). This view is read-only: use the eye icon to view mark details, location and verification photos for each employee."
+          },
+          "toolbar": {
+            "title": "Actions - Completed",
+            "description": "This tab has no action bar; the table is read-only for consulting already completed attendances."
+          },
+          "table": {
+            "title": "Table columns",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Date</strong>: Attendance day</li><li><strong>Document No</strong>: Employee document</li><li><strong>Schedule</strong>: Shift and scheduled time</li><li><strong>Name</strong>: Employee name</li><li><strong>Entry</strong>: Entry time</li><li><strong>Breaks</strong>: Recorded breaks</li><li><strong>Exit</strong>: Exit time</li><li><strong>Additional</strong>: Marks outside schedule</li><li><strong>Delays</strong>: Late arrivals or early departures</li><li><strong>Photo Verification</strong>: Valid/invalid biometric photos</li><li><strong>Actions</strong>: Click to view details</li></ul>"
+          }
+        }
+      },
+      "5": {
+        "steps": {
+          "welcome": {
+            "title": "Marks Pending Approval",
+            "description": "Manual or corrected marks requiring supervisor approval. Review each record and use the eye icon to view details before approving or rejecting. Pending marks are shown in yellow."
+          },
+          "toolbar": {
+            "title": "Actions - Pending Marks",
+            "description": "This tab has no top action bar; actions are done from the detail modal when clicking the eye icon."
+          },
+          "table": {
+            "title": "Table columns",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Date</strong>: Attendance day</li><li><strong>Document No</strong>: Employee document</li><li><strong>Name</strong>: Employee name</li><li><strong>Entry</strong>: Recorded entry time</li><li><strong>Exit</strong>: Recorded exit time</li><li><strong>Pending Marks</strong>: Marks awaiting approval (shown in yellow)</li><li><strong>Actions</strong>: Click to view and approve or reject</li></ul>"
+          }
+        }
+      },
+      "6": {
+        "steps": {
+          "welcome": {
+            "title": "Rejected Marks",
+            "description": "View of marks rejected by the supervisor. This feature is under development."
+          },
+          "toolbar": {
+            "title": "Actions - Rejected Marks",
+            "description": "This tab has no action bar; the feature is under development."
+          },
+          "table": {
+            "title": "Table columns",
+            "description": "<p style='margin:0.5em 0'>View of marks rejected by the supervisor. Feature under development.</p>"
+          }
+        }
+      },
+      "7": {
+        "steps": {
+          "welcome": {
+            "title": "Overtime pending approval",
+            "description": "Records with overtime requiring supervisor approval. Approve adds to the employee's time bank. Reject discards the request. Use Configure bank if the employee has no time bank configured."
+          },
+          "toolbar": {
+            "title": "Actions - Overtime",
+            "description": "Per row: Approve (adds to time bank) and Reject (discards). If No time bank appears, use Configure bank to create the employee's bank before approving."
+          },
+          "table": {
+            "title": "Table columns",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Employee</strong>: Employee name</li><li><strong>Date</strong>: Attendance day</li><li><strong>Overtime</strong>: Minutes or hours requiring approval</li><li><strong>Actions</strong>: Approve or Reject; Configure bank if missing</li></ul>"
+          }
+        }
+      },
+      "8": {
+        "steps": {
+          "welcome": {
+            "title": "Delays pending approval",
+            "description": "Records with entry delays or early departure requiring approval. Similar to overtime: Approve or Reject. Use Configure bank if the employee has no time bank before approving."
+          },
+          "toolbar": {
+            "title": "Actions - Delays",
+            "description": "Approve and Reject per row. Configure bank if employee has no time bank."
+          },
+          "table": {
+            "title": "Table columns",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Employee</strong>: Employee name</li><li><strong>Date</strong>: Attendance day</li><li><strong>Entry delay</strong>: Minutes late arriving</li><li><strong>Early departure</strong>: Minutes leaving before scheduled time</li><li><strong>Actions</strong>: Approve or Reject</li></ul>"
+          }
+        }
+      }
+    }
+  }
+}

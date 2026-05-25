@@ -1,0 +1,84 @@
+{
+  "title": "Reports History",
+  "subtitle": "View and download generated reports",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "reports": "Reports",
+    "history": "History"
+  },
+  "buttons": {
+    "download": "Download",
+    "clear": "Clear",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "filters": {
+    "search": "Search",
+    "searchPlaceholder": "Search by name or requested by...",
+    "status": "Status",
+    "statusPlaceholder": "All statuses",
+    "startDate": "Start date",
+    "endDate": "End date",
+    "allStatuses": "All"
+  },
+  "table": {
+    "headers": {
+      "name": "Name",
+      "status": "Status",
+      "step": "Step",
+      "requestedBy": "Requested by",
+      "createdAt": "Creation Date",
+      "duration": "Duration",
+      "actions": "Actions"
+    },
+    "loading": "Loading reports...",
+    "noData": "No reports found",
+    "noDataDescription": "Generated reports will appear here",
+    "notAvailable": "-"
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} results",
+    "page": "Page {current} of {total}",
+    "recordsPerPage": "Records per page"
+  },
+  "status": {
+    "SCHEDULED": "Scheduled",
+    "PROCESSING": "Processing",
+    "PENDING": "Pending",
+    "COMPLETED": "Completed",
+    "FAILED": "Failed"
+  },
+  "steps": {
+    "STEP_STARTING": "Starting report generation",
+    "STEP_VALIDATING": "Validating data",
+    "STEP_GENERATING": "Generating report",
+    "STEP_SAVING": "Saving report",
+    "STEP_COMPLETED": "Report generated successfully"
+  },
+  "refresh": {
+    "updating": "Updating...",
+    "updatingIn": "Updating in {countdown}",
+    "clickToRefresh": "Click to refresh now"
+  },
+  "toast": {
+    "downloadSuccess": {
+      "title": "Download started",
+      "description": "The report is downloading"
+    },
+    "downloadError": {
+      "title": "Error",
+      "description": "No file available for download"
+    },
+    "downloadErrorGeneric": {
+      "title": "Error",
+      "description": "Could not download the file"
+    }
+  },
+  "fileTypes": {
+    "excel": "Excel",
+    "pdf": "PDF",
+    "csv": "CSV",
+    "json": "JSON",
+    "file": "File"
+  }
+}

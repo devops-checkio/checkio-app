@@ -1,0 +1,97 @@
+{
+  "title": "Administração de Tipos de Advertência",
+  "subtitle": "Gerencie tipos de advertência para ações disciplinares de funcionários",
+  "name": "Nome",
+  "createdAt": "Data de Criação",
+  "updatedAt": "Data de Modificação",
+  "actions": "Ações",
+  "addWarningType": "Adicionar Tipo de Advertência",
+  "editWarningType": "Editar Tipo de Advertência",
+  "deleteWarningType": "Excluir Tipo de Advertência",
+  "dashboard": "Dashboard",
+  "maintainers": "Mantenedores",
+  "warningTypes": "Tipos de Advertência",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "warningTypes": "Tipos de Advertência"
+  },
+  "modal": {
+    "title": "Tipo de Advertência",
+    "titleAdd": "Adicionar Tipo de Advertência",
+    "titleEdit": "Editar Tipo de Advertência",
+    "nameLabel": "Nome",
+    "namePlaceholder": "Digite o nome do tipo de advertência",
+    "nameRequiredMessage": "Por favor, digite o nome do tipo de advertência",
+    "nameHelperText": "Digite um nome descritivo para o tipo de advertência",
+    "save": "Salvar",
+    "update": "Atualizar",
+    "cancel": "Cancelar",
+    "saving": "Salvando...",
+    "updating": "Atualizando...",
+    "creating": "Criando...",
+    "success": "Tipo de advertência salvo com sucesso",
+    "error": "Erro ao salvar tipo de advertência",
+    "nameRequired": "Nome é obrigatório"
+  },
+  "delete": {
+    "title": "Excluir Tipo de Advertência",
+    "confirmTitle": "Confirmar exclusão",
+    "message": "Tem certeza de que deseja excluir este tipo de advertência?",
+    "success": "Tipo de advertência excluído com sucesso",
+    "error": "Erro ao excluir tipo de advertência"
+  },
+  "table": {
+    "headers": {
+      "name": "Nome",
+      "createdAt": "Data de Criação",
+      "updatedAt": "Data de Modificação",
+      "actions": "Ações"
+    },
+    "noData": "Nenhum tipo de advertência encontrado",
+    "noDataDescription": "Crie um novo tipo de advertência para começar.",
+    "loading": "Carregando tipos de advertência..."
+  },
+  "buttons": {
+    "edit": "Editar",
+    "delete": "Excluir",
+    "cancel": "Cancelar",
+    "deleting": "Excluindo...",
+    "downloadExcel": "Baixar Excel",
+    "generating": "Gerando...",
+    "previous": "Anterior",
+    "next": "Próximo"
+  },
+  "ariaLabels": {
+    "editWarningType": "Editar tipo de advertência",
+    "deleteWarningType": "Excluir tipo de advertência"
+  },
+  "excel": {
+    "filename": "tipos-advertencia",
+    "sheetName": "Tipos de Advertência",
+    "headers": {
+      "name": "Nome",
+      "createdAt": "Data de Criação",
+      "updatedAt": "Data de Modificação"
+    },
+    "success": "Excel gerado com sucesso",
+    "error": "Erro ao gerar o Excel"
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} tipos de advertência",
+    "recordsPerPage": "Registros por página:",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "page": "Página {current} de {total}"
+  },
+  "toast": {
+    "createSuccess": {
+      "title": "Tipo de advertência criado com sucesso",
+      "description": "O tipo de advertência foi criado corretamente"
+    },
+    "updateSuccess": {
+      "title": "Tipo de advertência atualizado com sucesso",
+      "description": "O tipo de advertência foi atualizado corretamente"
+    }
+  }
+}

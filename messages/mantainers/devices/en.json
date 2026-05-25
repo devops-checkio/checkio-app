@@ -1,0 +1,137 @@
+{
+  "title": "Device Management",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Maintainers",
+    "devices": "Devices"
+  },
+  "buttons": {
+    "add": "Add Device",
+    "edit": "Edit",
+    "delete": "Delete",
+    "qr": "QR Code",
+    "claimCode": "Activation Code"
+  },
+  "table": {
+    "headers": {
+      "identifier": "Identifier",
+      "type": "Type",
+      "device": "Device",
+      "branch": "Branch",
+      "createdAt": "Creation Date",
+      "updatedAt": "Last Update",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "loading": "Loading devices...",
+    "noData": "No devices found",
+    "noDataDescription": "Create a new device to get started."
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} results",
+    "recordsPerPage": "Records per page:",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  },
+  "status": {
+    "operational": "Operational",
+    "notOperational": "Not operational"
+  },
+  "delete": {
+    "toastTitle": "Device deleted successfully",
+    "toastDescription": "The device has been deleted correctly",
+    "confirmMessage": "Are you sure you want to delete this device?"
+  },
+  "toast": {
+    "updateSuccess": "Device updated successfully",
+    "updateSuccessDescription": "The device has been updated correctly",
+    "createSuccess": "Device created successfully",
+    "createSuccessDescription": "Please scan the QR code to configure the device",
+    "createSuccessDescriptionKiosko": "Enter subdomain and activation code in the kiosk app"
+  },
+  "upsert": {
+    "title": {
+      "edit": "Edit Device",
+      "add": "Add Device"
+    },
+    "info": {
+      "title": "Not required for devices using the CheckIO application",
+      "description": "Information will be obtained automatically during synchronization"
+    },
+    "fields": {
+      "identifier": "Device Identifier",
+      "type": "Device Type",
+      "branch": "Branch"
+    },
+    "placeholders": {
+      "selectType": "Select a type",
+      "selectBranch": "Select branch",
+      "noBranch": "No branch"
+    },
+    "types": {
+      "MACHINE": "Attendance Control Machine",
+      "KIOSKO": "Fingerprint Kiosk"
+    },
+    "validation": {
+      "branchRequired": "Branch required",
+      "branchRequiredDescription": "For KIOSKO devices you must select a branch"
+    },
+    "buttons": {
+      "updating": "Updating...",
+      "creating": "Creating...",
+      "update": "UPDATE",
+      "save": "SAVE"
+    },
+    "about": {
+      "title": "About Marking Points",
+      "markingPoint": {
+        "title": "What is a marking point?",
+        "description": "A marking point is a device that allows recording employee attendance in the CheckIO system. It can be configured on:",
+        "item1": "Tablets with the CheckIO application",
+        "item2": "Dedicated attendance control machines",
+        "item3": "Compatible mobile devices"
+      },
+      "benefits": {
+        "title": "Benefits",
+        "item1": "Precise real-time attendance control",
+        "item2": "Multiple marking locations",
+        "item3": "Automatic system integration"
+      }
+    }
+  },
+  "qr": {
+    "title": "Device Configuration",
+    "titleKiosko": "Activation Code - Kiosk",
+    "timeRemaining": "Time remaining to sync:",
+    "generating": "Generating QR code...",
+    "scanInstruction": "Scan this QR code using the mobile application",
+    "steps": {
+      "title": "Steps to configure your device:",
+      "step1": "Download the mobile application from the app store.",
+      "step2": "Open the application and select the \"Configure new device\" option.",
+      "step3": "Scan the QR code shown on the left using your device's camera.",
+      "step4": "Follow the instructions in the application to complete the configuration.",
+      "step5": "Once configured, the device will be ready to use."
+    },
+    "noteLabel": "Note:",
+    "note": "Make sure to keep the QR code secure, as it contains sensitive configuration information.",
+    "noteKiosko": "The activation code expires in 15 minutes. Use the \"Regenerate\" button to generate a new one.",
+    "claimCode": {
+      "label": "Activation code",
+      "copy": "Copy",
+      "regenerate": "Regenerate",
+      "generate": "Generate code",
+      "generating": "Generating code...",
+      "copied": "Code copied to clipboard",
+      "instruction": "Enter this code along with the subdomain in the checkio-fingerprint app"
+    },
+    "stepsKiosko": {
+      "title": "Steps to activate the kiosk:",
+      "step1": "Open the checkio-fingerprint app on the device.",
+      "step2": "Enter your company subdomain.",
+      "step3": "Enter the activation code shown.",
+      "step4": "Press \"Activate device\"."
+    }
+  }
+}

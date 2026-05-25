@@ -1,0 +1,37 @@
+{
+  "title": {
+    "request": "Recuperar Contraseña",
+    "reset": "Cambiar Contraseña"
+  },
+  "subtitle": {
+    "request": "Ingresa tu correo electrónico para recibir instrucciones",
+    "reset": "Establece una nueva contraseña segura"
+  },
+  "fields": {
+    "email": "Correo electrónico",
+    "emailPlaceholder": "correo@ejemplo.com",
+    "temporaryPassword": "Contraseña Temporal",
+    "newPassword": "Nueva Contraseña",
+    "confirmPassword": "Confirmar Nueva Contraseña"
+  },
+  "validation": {
+    "emailRequired": "El correo es requerido",
+    "emailInvalid": "Correo electrónico inválido",
+    "temporaryPasswordRequired": "La contraseña temporal es requerida",
+    "newPasswordRequired": "La nueva contraseña es requerida",
+    "confirmPasswordRequired": "La confirmación de contraseña es requerida"
+  },
+  "requirements": {
+    "title": "Requisitos de la contraseña:",
+    "length": "Mínimo 8 caracteres",
+    "uppercase": "Al menos una mayúscula",
+    "lowercase": "Al menos una minúscula",
+    "number": "Al menos un número",
+    "special": "Al menos un carácter especial"
+  },
+  "buttons": {
+    "sendInstructions": "Enviar instrucciones",
+    "changePassword": "Cambiar Contraseña",
+    "backToLogin": "Volver al login"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "title": "Intégrations",
+  "subtitle": "Connectez CheckIO aux systèmes externes",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "integrations": "Intégrations"
+  },
+  "actions": {
+    "newIntegration": "Nouvelle intégration"
+  },
+  "tabs": {
+    "all": "Toutes ({count})",
+    "active": "Actives ({count})",
+    "inactive": "Inactives ({count})",
+    "pending": "En attente ({count})",
+    "error": "Avec erreurs ({count})"
+  },
+  "empty": {
+    "ALL": {
+      "title": "Aucune intégration",
+      "description": "Créez votre première intégration pour commencer la synchronisation."
+    },
+    "ACTIVE": {
+      "title": "Aucune intégration active",
+      "description": "Activez une intégration ou créez-en une nouvelle."
+    },
+    "INACTIVE": {
+      "title": "Aucune intégration inactive",
+      "description": "Toutes les intégrations sont actives ou dans un autre état."
+    },
+    "PENDING": {
+      "title": "Aucune intégration en attente",
+      "description": "Il n'y a pas d'intégration à l'état en attente."
+    },
+    "ERROR": {
+      "title": "Aucune intégration en erreur",
+      "description": "Toutes les intégrations fonctionnent correctement."
+    }
+  },
+  "errors": {
+    "loadTitle": "Échec du chargement des intégrations",
+    "loadDescription": "Un problème est survenu. Veuillez réessayer."
+  },
+  "detailSheet": {
+    "title": "Détails de l'intégration",
+    "close": "Fermer",
+    "lastFailureMessage": "Dernier message d'erreur",
+    "fields": {
+      "status": "Statut",
+      "publicId": "ID public",
+      "description": "Description",
+      "lastSuccess": "Dernière exécution réussie",
+      "nextRun": "Prochaine exécution",
+      "lastFailure": "Dernier échec",
+      "integrationTypes": "Types synchronisés",
+      "schedule": "Planification",
+      "metadata": "Configuration (masquée)"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "error": "Erreur",
+      "pending": "En attente",
+      "unknown": "Inconnu"
+    }
+  },
+  "card": {
+    "na": "N/D",
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "error": "Erreur",
+      "pending": "En attente",
+      "unknown": "Inconnu"
+    },
+    "actions": {
+      "testConnection": "Tester la connexion",
+      "activate": "Activer",
+      "deactivate": "Désactiver",
+      "viewDetails": "Voir les détails",
+      "edit": "Modifier",
+      "delete": "Supprimer"
+    },
+    "metrics": {
+      "lastSuccess": "Dernière exécution réussie",
+      "nextRun": "Prochaine exécution",
+      "lastFailure": "Dernier échec"
+    },
+    "deleteModal": {
+      "title": "Supprimer l'intégration",
+      "message": "Supprimer l'intégration « {name} » ? Cette action est irréversible.",
+      "cancel": "Annuler",
+      "confirm": "Supprimer"
+    },
+    "toasts": {
+      "testSuccessTitle": "Connexion vérifiée",
+      "testErrorTitle": "Erreur de connexion",
+      "genericError": "L'opération n'a pas pu être terminée",
+      "deleteSuccessTitle": "Intégration supprimée",
+      "deleteSuccessDescription": "L'intégration « {name} » a été supprimée.",
+      "deleteErrorTitle": "Échec de la suppression",
+      "deleteErrorDescription": "L'intégration n'a pas pu être supprimée.",
+      "deactivateTitle": "Intégration désactivée",
+      "deactivateDescription": "L'intégration « {name} » a été désactivée.",
+      "activateTitle": "Intégration activée",
+      "activateDescription": "L'intégration « {name} » a été activée.",
+      "toggleErrorTitle": "Échec du changement de statut",
+      "toggleErrorDescription": "Le statut de l'intégration n'a pas pu être modifié."
+    }
+  },
+  "tour": {
+    "startButton": "Voir le guide",
+    "buttons": {
+      "next": "Suivant",
+      "previous": "Précédent",
+      "done": "Terminer"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Bienvenue dans le module Intégrations",
+        "description": "Connectez CheckIO aux systèmes externes (RH, paie, etc.). Ce guide présente les principales fonctionnalités."
+      },
+      "toolbar": {
+        "title": "Nouvelle intégration",
+        "description": "Créez des intégrations avec des systèmes externes. Le bouton apparaît si vous avez les permissions."
+      },
+      "tabs": {
+        "title": "Filtre par statut",
+        "description": "Utilisez les onglets pour tout afficher ou filtrer par actives, inactives, en attente ou avec erreurs."
+      },
+      "cards": {
+        "title": "Cartes d'intégrations",
+        "description": "Chaque carte affiche le statut, les actions (test, édition, activer/désactiver) et les dates de synchronisation."
+      },
+      "empty": {
+        "title": "Aucun résultat",
+        "description": "Lorsque le filtre actuel est vide, un message s'affiche ici."
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "title": "Gerenciamento de Usuários",
+  "subtitle": "Gerencie os usuários do sistema",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "users": "Usuários"
+  },
+  "buttons": {
+    "add": "Adicionar Usuário",
+    "search": "Buscar",
+    "clear": "Limpar",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "cancel": "Cancelar",
+    "downloadExcel": "Baixar Excel",
+    "generating": "Gerando..."
+  },
+  "excel": {
+    "filename": "usuarios",
+    "sheetName": "Usuários"
+  },
+  "search": {
+    "label": "Buscar por Email",
+    "placeholder": "Buscar por email"
+  },
+  "table": {
+    "headers": {
+      "name": "Nome",
+      "email": "Email",
+      "username": "Usuário",
+      "role": "Perfil",
+      "isActive": "Ativo",
+      "createdAt": "Data de Criação",
+      "updatedAt": "Data de Atualização",
+      "actions": "Ações"
+    },
+    "loading": "Carregando usuários...",
+    "noData": "Nenhum usuário encontrado",
+    "noDataDescription": "Crie um novo usuário para começar.",
+    "noRole": "Sem perfil",
+    "status": {
+      "yes": "Sim",
+      "no": "Não"
+    }
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} usuários",
+    "recordsPerPage": "Registros por página",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "page": "Página {current} de {total}"
+  },
+  "delete": {
+    "title": "Confirmar exclusão",
+    "message": "Tem certeza de que deseja excluir este usuário?",
+    "deleting": "Excluindo...",
+    "success": "Usuário excluído com sucesso",
+    "error": "Erro ao excluir o usuário. Por favor, tente novamente."
+  },
+  "ariaLabels": {
+    "editUser": "Editar usuário",
+    "deleteUser": "Excluir usuário"
+  }
+}

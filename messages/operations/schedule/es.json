@@ -1,0 +1,257 @@
+{
+  "title": "Asignación de Horarios",
+  "subtitle": "Asigna horarios a los empleados",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Operaciones",
+    "schedule": "Horarios",
+    "studentSchedule": "Horarios Estudiantes",
+    "employee": "Empleado"
+  },
+  "tabs": {
+    "active": "Activos",
+    "expiring": "Por Vencer",
+    "recentDismissals": "Despidos Recientes",
+    "inactive": "Inactivos"
+  },
+  "tabTitles": {
+    "active": "Empleados Activos",
+    "expiring": "Empleados por Vencer",
+    "recentDismissals": "Despidos Recientes",
+    "inactive": "Empleados Inactivos"
+  },
+  "tabBase": {
+    "search": "Buscar",
+    "documentNumber": "Número de Documento",
+    "branch": "Sucursal",
+    "selectBranch": "Seleccionar Sucursal",
+    "placeholderSearch": "Buscar por Nombres o Apellidos",
+    "placeholderDocument": "Buscar por Número de Documento",
+    "buttons": {
+      "clear": "Limpiar",
+      "search": "Buscar",
+      "edit": "Editar"
+    },
+    "table": {
+      "loading": "Cargando empleados...",
+      "noData": "No se encontraron empleados",
+      "noDataDescription": "Ajusta los filtros de búsqueda o prueba con otros criterios.",
+      "selectCompanyTitle": "Selecciona una empresa",
+      "selectCompany": "Selecciona una empresa en el menú superior para ver los empleados y asignar horarios.",
+      "headers": {
+        "code": "Código",
+        "firstName": "Nombres",
+        "lastName": "Apellidos",
+        "documentNumber": "Número de Documento",
+        "email": "Email",
+        "branch": "Sucursal",
+        "startDate": "Fecha de Inicio",
+        "endDate": "Fecha de Término",
+        "contractType": "Tipo de Contrato",
+        "actions": "Acciones"
+      }
+    },
+    "contractType": {
+      "indefinite": "Indefinido",
+      "fixedTerm": "Plazo Fijo"
+    },
+    "pagination": {
+      "showing": "Mostrando {current} de {total} resultados",
+      "recordsPerPage": "Registros por página",
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "page": "Página {current} de {total}"
+    },
+    "error": {
+      "message": "Error al cargar los empleados",
+      "retry": "Reintentar"
+    },
+    "aria": {
+      "editSchedule": "Editar horario"
+    }
+  },
+  "employee": {
+    "title": "Horario de Empleado",
+    "titleStudent": "Horario de Estudiante",
+    "subtitle": "Gestión de horarios para {name}",
+    "subtitleStudent": "Gestión de horarios del estudiante {name}",
+    "loading": "Cargando horarios...",
+    "loadingName": "Cargando...",
+    "backAriaLabel": "Volver al listado de horarios",
+    "backAriaLabelStudent": "Volver al listado de horarios de estudiantes",
+    "year": "Año",
+    "month": "Mes",
+    "document": "Documento",
+    "na": "N/A",
+    "buttons": {
+      "freeDay": "Día Libre",
+      "delete": "Eliminar",
+      "assign": "Asignar",
+      "today": "Hoy"
+    },
+    "totals": "Totales",
+    "weekDays": {
+      "mon": "Lun",
+      "tue": "Mar",
+      "wed": "Mié",
+      "thu": "Jue",
+      "fri": "Vie",
+      "sat": "Sáb",
+      "sun": "Dom"
+    },
+    "months": {
+      "january": "Enero",
+      "february": "Febrero",
+      "march": "Marzo",
+      "april": "Abril",
+      "may": "Mayo",
+      "june": "Junio",
+      "july": "Julio",
+      "august": "Agosto",
+      "september": "Septiembre",
+      "october": "Octubre",
+      "november": "Noviembre",
+      "december": "Diciembre"
+    }
+  },
+  "modalMassAssignment": {
+    "title": "Asignación Masiva",
+    "message": "Seleccione el horario que desea asignar a los siguientes días:",
+    "selectSchedule": "Seleccionar Horario",
+    "placeholder": "Seleccione un horario",
+    "selectButton": "Seleccionar",
+    "selectEstablishment": "Seleccionar establecimiento",
+    "placeholderEstablishment": "Seleccione un establecimiento",
+    "hintSelectAnotherSchedule": "Seleccionar otro horario",
+    "removeScheduleAria": "Quitar {code}",
+    "noScheduleError": "Por favor seleccione un horario",
+    "noEstablishmentError": "Debe seleccionar un establecimiento",
+    "awaitingCompanyFilterHint": "Esperando datos del empleado para filtrar horarios por empresa…",
+    "addScheduleBlock": "Agregar horario + establecimiento",
+    "overlapBetweenSelected": "Hay traslape entre:",
+    "table": {
+      "date": "Fecha",
+      "schedule": "Horario",
+      "status": "Estado"
+    },
+    "noDaysSelected": "No hay días seleccionados",
+    "buttons": {
+      "cancel": "Cancelar",
+      "assign": "Asignar"
+    },
+    "assigning": "Asignando...",
+    "unassigned": "Sin asignación",
+    "badges": {
+      "holiday": "Festivo",
+      "free": "Libre"
+    },
+    "status": {
+      "pending": "Pendiente",
+      "processing": "Procesando",
+      "success": "Completado",
+      "error": "Error"
+    },
+    "toast": {
+      "errorSelectSchedule": "Por favor seleccione un horario",
+      "errorSelectEstablishment": "Debe seleccionar un establecimiento",
+      "successTitle": "Horarios asignados",
+      "successDescription": "Los horarios han sido asignados correctamente",
+      "completedWithErrorsTitle": "Proceso completado con errores",
+      "completedWithErrorsDescription": "{successCount} horarios asignados correctamente, {errorCount} con errores",
+      "overlapTitle": "Traslape de horarios",
+      "overlapExisting": "{candidate} se traslapa con {existing}, ya asignado en los días seleccionados.",
+      "overlapAmongPicked": "{candidate} se traslapa con {other}, ya elegido en esta ventana.",
+      "duplicateSchedule": "Ese horario ya está seleccionado en otro bloque.",
+      "overlapSelectedSetsTitle": "Traslape entre horarios seleccionados",
+      "errorEstablishmentPerSchedule": "Para estudiantes, debe seleccionar un establecimiento por cada horario."
+    },
+    "errorAssignSchedule": "Error al asignar el horario"
+  },
+  "modalDeletion": {
+    "title": "Confirmar Eliminación",
+    "message": "¿Está seguro de que desea eliminar las asignaciones de los siguientes días?",
+    "buttons": {
+      "cancel": "Cancelar",
+      "delete": "Eliminar"
+    },
+    "deleting": "Eliminando...",
+    "assignedSchedule": "Horario asignado",
+    "badges": {
+      "holiday": "Festivo",
+      "free": "Libre",
+      "shift": "Turno"
+    },
+    "status": {
+      "pending": "Pendiente",
+      "processing": "Procesando",
+      "success": "Completado",
+      "error": "Error"
+    },
+    "noDaysSelected": "No hay días seleccionados",
+    "deletedOk": "Eliminado correctamente",
+    "waiting": "Esperando",
+    "table": {
+      "date": "Fecha",
+      "schedule": "Horario",
+      "status": "Estado",
+      "message": "Mensaje"
+    },
+    "toast": {
+      "successTitle": "Asignaciones eliminadas",
+      "successDescription": "Las asignaciones han sido eliminadas correctamente",
+      "completedWithErrorsTitle": "Proceso completado con errores",
+      "completedWithErrorsDescription": "{successCount} asignaciones eliminadas correctamente, {errorCount} con errores"
+    },
+    "errorDeleteAssignment": "Error al eliminar la asignación"
+  },
+  "modalFreeDay": {
+    "title": "Confirmar Días Libres",
+    "message": "¿Está seguro de que desea marcar los siguientes días como libres?",
+    "buttons": {
+      "cancel": "Cancelar",
+      "confirm": "Confirmar"
+    },
+    "processing": "Procesando...",
+    "badges": {
+      "holiday": "Festivo",
+      "free": "Libre",
+      "shift": "Turno"
+    },
+    "status": {
+      "pending": "Pendiente",
+      "processing": "Procesando",
+      "success": "Completado",
+      "error": "Error"
+    },
+    "noDaysSelected": "No hay días seleccionados",
+    "table": {
+      "date": "Fecha",
+      "schedule": "Horario",
+      "status": "Estado"
+    },
+    "toast": {
+      "successTitle": "Días libres configurados",
+      "successDescription": "Los días seleccionados han sido marcados como libres correctamente",
+      "completedWithErrorsTitle": "Proceso completado con errores",
+      "completedWithErrorsDescription": "{successCount} días procesados correctamente, {errorCount} con errores"
+    },
+    "errorProcessDay": "Error al procesar el día"
+  },
+  "cards": {
+    "freeDay": "Día Libre",
+    "absence": "Ausencia",
+    "holiday": "Feriado",
+    "edited": "(Editado)",
+    "modifiedSchedule": "Horario modificado",
+    "until": "hasta",
+    "withoutPay": "Sin goce de sueldo",
+    "fullDayFree": "Día completo libre",
+    "fullDayFreeAlt": "Dia completo libre",
+    "holidayWithSchedule": "Día feriado con horario",
+    "holidayDay": "Día feriado",
+    "weekly": "Semanal",
+    "weeklyExceedsLegal": "Supera el máximo semanal de {limit} h",
+    "total": "Total",
+    "timeRange": "00:00 hasta 23:59"
+  }
+}

@@ -1,0 +1,436 @@
+{
+  "title": "Gerenciamento de Filiais",
+  "subtitle": "Gerencie as filiais do sistema",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "branches": "Filiais"
+  },
+  "buttons": {
+    "add": "Adicionar Filial",
+    "addMassive": "Adicionar Filiais em Lote",
+    "downloadExcel": "Baixar Excel",
+    "search": "Buscar",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "edit": "Editar",
+    "delete": "Excluir"
+  },
+  "search": {
+    "placeholder": "Buscar Código ou Nome..."
+  },
+  "filters": {
+    "company": "Filtrar por Empresa",
+    "companyPlaceholder": "Selecione uma empresa",
+    "allCompanies": "Todas as empresas"
+  },
+  "table": {
+    "status": {
+      "yes": "Sim",
+      "no": "Não"
+    },
+    "headers": {
+      "code": "Código",
+      "name": "Nome",
+      "address": "Endereço",
+      "integrationCode": "Código de Integração",
+      "isActive": "Ativo",
+      "createdAt": "Data de Criação",
+      "actions": "Ações"
+    },
+    "loading": "Carregando filiais...",
+    "noData": "Nenhuma filial encontrada",
+    "noDataDescription": "Crie uma nova filial para começar."
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} filiais",
+    "recordsPerPage": "Registros por página:",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "page": "Página {current} de {total}"
+  },
+  "delete": {
+    "title": "Filial excluída com sucesso",
+    "description": "A filial foi excluída corretamente",
+    "error": "Erro ao excluir a filial",
+    "confirmMessage": "Tem certeza que deseja excluir esta filial?"
+  },
+  "excel": {
+    "filename": "filiais",
+    "sheetName": "Filiais",
+    "headers": {
+      "code": "Código",
+      "name": "Nome",
+      "address": "Endereço",
+      "phone": "Telefone",
+      "isActive": "Ativo",
+      "createdAt": "Data de Criação"
+    }
+  },
+  "ariaLabels": {
+    "editBranch": "Editar filial",
+    "deleteBranch": "Excluir filial"
+  },
+  "errors": {
+    "title": "Erro"
+  },
+  "tour": {
+    "startButton": "Ver guia",
+    "buttons": {
+      "next": "Próximo",
+      "previous": "Anterior",
+      "done": "Finalizar"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Bem-vindo ao módulo de Filiais",
+        "description": "Neste módulo você pode gerenciar as filiais do sistema. Este guia mostrará as principais funcionalidades disponíveis."
+      },
+      "toolbar": {
+        "title": "Ações principais",
+        "description": "Aqui você pode buscar filiais, adicionar individualmente, realizar carga em massa desde Excel ou baixar o listado em formato Excel."
+      },
+      "table": {
+        "title": "Tabela de filiais",
+        "description": "A tabela mostra todas as filiais cadastradas. Use os botões de editar ou excluir para gerenciar cada filial."
+      },
+      "pagination": {
+        "title": "Paginação",
+        "description": "Use estes controles para navegar entre páginas e ajustar a quantidade de registros exibidos."
+      }
+    }
+  },
+  "detailTour": {
+    "startButton": "Ver guia",
+    "tabs": {
+      "0": {
+        "steps": {
+          "welcome": {
+            "title": "Informações Básicas",
+            "description": "Nesta aba você pode ver e editar os dados principais da filial: código, nome, endereço, fuso horário e empresas associadas."
+          },
+          "basicInfo": {
+            "title": "Dados da filial",
+            "description": "Código, nome, telefone, endereço físico, fuso horário, empresas associadas e status ativo da filial."
+          }
+        }
+      },
+      "1": {
+        "steps": {
+          "welcome": {
+            "title": "Geolocalização",
+            "description": "Configure as geocercas para definir as áreas autorizadas de marcação desta filial."
+          },
+          "geolocation": {
+            "title": "Mapa de geocercas",
+            "description": "Busque endereços para adicionar pontos no mapa e defina o raio de cada geocerca. As marcações só serão válidas dentro destas áreas."
+          }
+        }
+      },
+      "2": {
+        "steps": {
+          "welcome": {
+            "title": "Parâmetros de Assistência",
+            "description": "Configure tolerâncias, horários e configurações automáticas que se aplicam à assistência desta filial."
+          },
+          "params": {
+            "title": "Usar parâmetros da filial",
+            "description": "Ative esta opção para que a filial utilize seus próprios parâmetros de assistência em vez dos da empresa."
+          },
+          "tolerances": {
+            "title": "Tolerâncias",
+            "description": "Tolerância de atraso e tolerância de colação. Definam os minutos permitidos antes de marcar atraso."
+          },
+          "schedules": {
+            "title": "Configuração de horários",
+            "description": "Minutos antes e depois do horário em que a marcação é permitida."
+          },
+          "automatic": {
+            "title": "Configurações automáticas",
+            "description": "Marcação automática e fechamento sem turno atribuído."
+          }
+        }
+      }
+    }
+  },
+  "detail": {
+    "title": "Detalhes da Filial",
+    "loading": "Carregando filial...",
+    "breadcrumbs": {
+      "dashboard": "Dashboard",
+      "maintainers": "Mantenedores",
+      "branches": "Filiais"
+    },
+    "tabs": {
+      "basicInfo": "Informações Básicas",
+      "geolocation": "Geolocalização",
+      "attendanceParams": "Parâmetros de Assistência"
+    },
+    "buttons": {
+      "update": "ATUALIZAR",
+      "updating": "Atualizando...",
+      "save": "SALVAR",
+      "creating": "Criando...",
+      "edit": "Editar Filial",
+      "add": "Adicionar Filial"
+    },
+    "basicInfo": {
+      "title": "Informações Básicas da Filial",
+      "code": "Código",
+      "name": "Nome",
+      "phone": "Telefone",
+      "address": "Endereço",
+      "timezone": "Fuso Horário",
+      "companies": "Empresas",
+      "isActive": "Filial Ativa",
+      "isActiveDescription": "Ativar ou desativar a filial no sistema",
+      "codeDescription": "Código único de identificação da filial",
+      "nameDescription": "Nome da filial",
+      "phoneDescription": "Número de telefone de contato",
+      "addressDescription": "Endereço físico da filial",
+      "timezoneDescription": "Fuso horário da filial",
+      "phonePlaceholder": "Ex: +55 11 98765-4321",
+      "timezonePlaceholder": "Selecione o fuso horário",
+      "companiesPlaceholder": "Selecione as empresas",
+      "addressPlaceholder": "Buscar endereço",
+      "validation": {
+        "codeRequired": "Por favor, insira o código da filial",
+        "nameRequired": "Por favor, insira o nome da filial",
+        "addressRequired": "Por favor, insira o endereço da filial",
+        "timezoneRequired": "Por favor, selecione um fuso horário",
+        "companiesRequired": "Por favor, selecione pelo menos uma empresa"
+      }
+    },
+    "geolocation": {
+      "title": "Configuração de Geolocalização",
+      "searchLocation": "Buscar localização",
+      "searchPlaceholder": "Digite um endereço para adicionar um ponto no mapa",
+      "searchDescription": "Busque um endereço para adicionar um ponto no mapa",
+      "radiusPlaceholder": "Raio em metros",
+      "name": "Nome"
+    },
+    "attendanceParams": {
+      "useBranchSettings": "Utiliza Parâmetros de Assistência da Filial",
+      "useBranchSettingsDescription": "Se estiver ativado, a filial utilizará seus próprios parâmetros de assistência em vez dos da empresa",
+      "tolerances": {
+        "title": "Configuração de Tolerâncias",
+        "lateArrival": {
+          "label": "Tolerância de Atraso (min)",
+          "description": "Minutos permitidos de atraso antes de marcar atraso",
+          "example": "Exemplo: 10 minutos",
+          "important": "Importante:",
+          "note": "Se o horário de entrada é 09:00 e a tolerância é 10 minutos, uma marca às 09:08 será considerada no horário, mas uma marca às 09:11 será considerada atraso."
+        },
+        "lunchBreak": {
+          "label": "Tolerância de Colação (min)",
+          "description": "Minutos adicionais permitidos para o tempo de almoço",
+          "example": "Exemplo: 15 minutos",
+          "important": "Importante:",
+          "note": "Se o tempo de almoço é de 13:00 a 14:00 e a tolerância é 15 minutos, um retorno às 14:13 será considerado no horário, mas às 14:16 será atraso."
+        }
+      },
+      "schedules": {
+        "title": "Configuração de Horários",
+        "beforeSchedule": {
+          "label": "Minutos Antes do Horário",
+          "description": "Tempo permitido para marcar antes do início do turno",
+          "example": "Exemplo: 30 minutos",
+          "note": "Nota:",
+          "text": "Se o horário é 09:00 e são permitidos 30 minutos antes, uma marca a partir das 08:30 será válida, mas uma marca às 08:29 não será registrada."
+        },
+        "afterSchedule": {
+          "label": "Minutos Depois do Horário",
+          "description": "Tempo máximo permitido para marcar depois do horário",
+          "example": "Exemplo: 60 minutos",
+          "note": "Nota:",
+          "text": "Se o horário de saída é 18:00 e são permitidos 60 minutos depois, uma marca até às 19:00 será válida, mas depois das 19:00 não será registrada."
+        }
+      },
+      "automatic": {
+        "title": "Configurações Automáticas",
+        "automaticCheckIn": {
+          "label": "Minutos Marcação Automática",
+          "description": "Tempo para que o sistema marque automaticamente a entrada",
+          "example": "Exemplo: 5 minutos",
+          "warning": "Aviso:",
+          "note": "Se configurado em 30 minutos, as marcas são registradas automaticamente se realizadas dentro de ±30 minutos em relação a cada hora programada (entrada, colação, saída, etc.)."
+        },
+        "closeWithoutShift": {
+          "label": "Minutos Fechamento sem Turno",
+          "description": "Tempo para fechar registros de funcionários sem turno atribuído",
+          "example": "Exemplo: 480 minutos (8 horas)",
+          "warning": "Aviso:",
+          "note": "Se não houver horário atribuído e o parâmetro for de 480 minutos, ao marcar às 09:00 hrs só será possível marcar saída até às 17:00 hrs; depois não será permitido."
+        }
+      },
+      "parameters": {
+        "title": "Configuração de Parâmetros"
+      }
+    },
+    "toast": {
+      "updateSuccess": "Filial atualizada com sucesso",
+      "updateSuccessDescription": "A filial foi atualizada corretamente",
+      "updateError": "Erro ao atualizar a filial",
+      "updateErrorDescription": "Ocorreu um erro ao atualizar a filial",
+      "createSuccess": "Filial criada com sucesso",
+      "createSuccessDescription": "A filial foi criada corretamente"
+    },
+    "notConfigured": "Não configurado"
+  },
+  "massive": {
+    "title": "Carga em Massa de Filiais",
+    "tabs": {
+      "excel": "Carga por Excel",
+      "manual": "Entrada Manual"
+    },
+    "instructions": {
+      "excel": {
+        "title": "Instruções para carga por Excel:",
+        "step1": "Baixe o modelo Excel para ver o formato necessário",
+        "step2": "Preencha as informações das filiais no modelo",
+        "step3": "Na coluna \"Fuso Horário\" use o dropdown para selecionar uma opção válida",
+        "step4": "Consulte a planilha \"Fusos Horários\" para ver todas as opções disponíveis",
+        "step5": "Envie o arquivo Excel preenchido",
+        "step6": "Verifique as informações e pressione Processar"
+      },
+      "manual": {
+        "title": "Instruções para entrada manual:",
+        "step1": "Clique em Adicionar Linha para adicionar uma nova filial",
+        "step2": "Preencha os campos obrigatórios em cada linha",
+        "step3": "Você pode adicionar quantas linhas precisar",
+        "step4": "Verifique as informações e pressione Processar"
+      }
+    },
+    "buttons": {
+      "downloadTemplate": "Baixar Modelo",
+      "uploadExcel": "Enviar Excel",
+      "addRow": "Adicionar Linha",
+      "process": "Processar",
+      "processing": "Processando...",
+      "cancel": "Cancelar",
+      "close": "Fechar",
+      "retry": "Tentar Novamente"
+    },
+    "table": {
+      "headers": {
+        "code": "Código",
+        "name": "Nome",
+        "address": "Endereço",
+        "phone": "Telefone",
+        "timezone": "Fuso Horário",
+        "status": "Status",
+        "actions": "Ações"
+      },
+      "noData": "Nenhuma filial adicionada",
+      "noDataDescription": "Adicione filiais manualmente ou envie um arquivo Excel",
+      "placeholders": {
+        "code": "Código",
+        "name": "Nome",
+        "address": "Endereço",
+        "phone": "Ex: +55 11 98765-4321",
+        "timezone": "Selecione o fuso horário"
+      },
+      "status": {
+        "pending": "Pendente",
+        "processing": "Processando",
+        "completed": "Concluído",
+        "error": "Erro"
+      }
+    },
+    "validation": {
+      "codeRequired": "Por favor, insira o código da filial",
+      "nameRequired": "Por favor, insira o nome da filial",
+      "addressRequired": "Por favor, insira o endereço da filial",
+      "timezoneRequired": "Por favor, selecione um fuso horário",
+      "timezoneInvalid": "O fuso horário selecionado não é válido",
+      "companiesRequired": "Por favor, selecione pelo menos uma empresa",
+      "companiesLabel": "Selecionar Empresas",
+      "companiesPlaceholder": "Selecione as empresas"
+    },
+    "excel": {
+      "template": {
+        "sheetName": "Modelo Filiais",
+        "referenceSheet": "Fusos Horários",
+        "filename": "modelo_filiais.xlsx",
+        "headers": {
+          "code": "Código",
+          "name": "Nome",
+          "address": "Endereço",
+          "phone": "Telefone",
+          "timezone": "Fuso Horário"
+        },
+        "referenceHeaders": {
+          "value": "Valor",
+          "description": "Descrição"
+        },
+        "example": {
+          "code": "FIL-001",
+          "name": "Exemplo Filial",
+          "address": "Endereço da filial",
+          "phone": "123456789",
+          "timezone": "America/Sao_Paulo"
+        },
+        "validation": {
+          "errorTitle": "Erro de Validação",
+          "error": "Por favor, selecione um fuso horário válido da lista.",
+          "promptTitle": "Fuso Horário",
+          "prompt": "Selecione um fuso horário da lista suspensa."
+        }
+      },
+      "warnings": {
+        "invalidTimezones": "{count} fuso(s) horário(s) do Excel não são válidos e foram limpos. Por favor, selecione fusos horários válidos.",
+        "title": "Aviso"
+      },
+      "errors": {
+        "formatError": {
+          "title": "Erro no formato do arquivo",
+          "description": "O arquivo Excel não tem o formato esperado. Por favor, baixe o modelo e use-o como base."
+        },
+        "generateError": {
+          "title": "Erro",
+          "description": "Erro ao gerar o modelo Excel"
+        }
+      }
+    },
+    "toast": {
+      "companiesRequired": {
+        "title": "Erro",
+        "description": "Você deve selecionar pelo menos uma empresa"
+      },
+      "validationErrors": {
+        "title": "Erros de validação",
+        "rowPrefix": "Linha"
+      },
+      "processCompletedWithErrors": {
+        "title": "Processo concluído com erros",
+        "description": "Revise a tabela para mais detalhes."
+      },
+      "processCompletedSuccess": {
+        "title": "Processo de carga em massa concluído com sucesso",
+        "description": "As filiais foram criadas corretamente"
+      },
+      "createError": "Erro ao criar a filial",
+      "retryFailed": {
+        "title": "Tentar novamente carga falhada",
+        "description": "Tentando novamente apenas os registros com erros"
+      },
+      "retryCompletedWithErrors": {
+        "title": "Tentativa concluída com erros",
+        "description": "Alguns registros ainda têm erros. Revise a lista."
+      },
+      "retryCompletedSuccess": {
+        "title": "Tentativa bem-sucedida",
+        "description": "Todos os registros falhados foram processados corretamente"
+      },
+      "noFailedBranches": {
+        "title": "Não há filiais falhadas",
+        "description": "Todas as filiais foram processadas com sucesso"
+      }
+    },
+    "description": "Preencha as informações das filiais que deseja criar em massa:",
+    "progress": "Processando: {percent}%",
+    "ariaLabels": {
+      "deleteBranch": "Excluir filial"
+    }
+  }
+}

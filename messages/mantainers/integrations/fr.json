@@ -1,0 +1,119 @@
+{
+  "title": "Jetons API",
+  "subtitle": "Gérer les jetons d'intégration",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mainteneurs",
+    "integrations": "Intégrations"
+  },
+  "table": {
+    "headers": {
+      "name": "Nom",
+      "status": "Statut",
+      "createdAt": "Date de Création",
+      "lastUsedAt": "Dernière Utilisation",
+      "createdBy": "Créé Par",
+      "actions": "Actions"
+    },
+    "loading": "Chargement des jetons...",
+    "noData": "Aucun jeton trouvé",
+    "noDataDescription": "Créez votre premier jeton d'intégration"
+  },
+  "status": {
+    "active": "Actif",
+    "revoked": "Révoqué"
+  },
+  "buttons": {
+    "add": "Créer un Jeton",
+    "edit": "Modifier",
+    "delete": "Révoquer",
+    "regenerate": "Régénérer",
+    "search": "Rechercher",
+    "downloadExcel": "Exporter Excel",
+    "previous": "Précédent",
+    "next": "Suivant"
+  },
+  "search": {
+    "placeholder": "Rechercher par nom..."
+  },
+  "filters": {
+    "status": "Statut",
+    "allStatuses": "Tous les Statuts"
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} résultats",
+    "page": "Page {current} sur {total}"
+  },
+  "modal": {
+    "create": {
+      "title": "Créer un Jeton API",
+      "basicInfo": "Informations de base",
+      "name": "Nom du Jeton",
+      "description": "Description (optionnel)",
+      "expiresAt": "Date d'Expiration (optionnel)",
+      "permissions": "Permissions",
+      "cancel": "Annuler",
+      "save": "Enregistrer",
+      "processing": "Création...",
+      "successTitle": "Jeton créé avec succès",
+      "successDescription": "Le jeton a été créé avec succès"
+    },
+    "edit": {
+      "title": "Modifier le Jeton API",
+      "save": "Mettre à jour",
+      "processing": "Mise à jour...",
+      "successTitle": "Jeton mis à jour avec succès",
+      "successDescription": "Le jeton a été mis à jour avec succès"
+    },
+    "tokenDisplay": {
+      "title": "Jeton Généré",
+      "warning": "⚠️ Enregistrez ce jeton, il ne sera plus affiché",
+      "copy": "Copier",
+      "copied": "Copié",
+      "show": "Afficher",
+      "hide": "Masquer",
+      "understood": "Compris"
+    },
+    "permissions": {
+      "title": "Configurer les Permissions",
+      "selectAll": "Tout sélectionner",
+      "deselectAll": "Tout désélectionner",
+      "module": "Module",
+      "actions": "Actions",
+      "permissionSelected": "permission sélectionnée",
+      "permissionsSelected": "permissions sélectionnées"
+    }
+  },
+  "delete": {
+    "title": "Jeton révoqué",
+    "description": "Le jeton a été révoqué avec succès",
+    "confirmMessage": "Êtes-vous sûr de vouloir révoquer ce jeton ?",
+    "error": "Erreur lors de la révocation du jeton"
+  },
+  "regenerate": {
+    "successTitle": "Jeton régénéré",
+    "successDescription": "Le jeton a été régénéré avec succès",
+    "error": "Erreur lors de la régénération du jeton"
+  },
+  "errors": {
+    "title": "Erreur",
+    "createError": "Erreur lors de la création du jeton",
+    "updateError": "Erreur lors de la mise à jour du jeton",
+    "regenerateError": "Erreur lors de la régénération du jeton"
+  },
+  "excel": {
+    "filename": "jetons-api",
+    "sheetName": "Jetons API",
+    "headers": {
+      "name": "Nom",
+      "status": "Statut",
+      "createdAt": "Date de Création",
+      "lastUsedAt": "Dernière Utilisation"
+    }
+  },
+  "ariaLabels": {
+    "editToken": "Modifier le jeton",
+    "deleteToken": "Révoquer le jeton",
+    "regenerateToken": "Régénérer le jeton"
+  }
+}

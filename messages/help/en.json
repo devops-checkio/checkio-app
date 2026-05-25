@@ -1,0 +1,308 @@
+{
+  "help": {
+    "title": "Help Center",
+    "subtitle": "Find answers, guides and resources to get the most out of CheckIO",
+    "search": {
+      "placeholder": "Search help...",
+      "clear": "Clear search",
+      "results": "Search Results",
+      "noResults": "No results found",
+      "noResultsDescription": "Try different search terms or explore the categories"
+    },
+    "tabs": {
+      "all": "All",
+      "guides": "Guides",
+      "faqs": "FAQs"
+    },
+    "categories": {
+      "title": "Help Categories",
+      "articles": "articles",
+      "home": {
+        "title": "Home",
+        "description": "Learn to navigate and use CheckIO's main dashboard"
+      },
+      "maintainers": {
+        "title": "Maintainers",
+        "description": "Manage employees, companies, branches, schedules and more"
+      },
+      "operations": {
+        "title": "Operations",
+        "description": "Manage attendance, absences, requests and daily operations"
+      },
+      "reports": {
+        "title": "Reports",
+        "description": "Generate and export custom attendance reports"
+      },
+      "integrations": {
+        "title": "Integrations",
+        "description": "Configure integrations and APIs to connect with other systems"
+      }
+    },
+    "guides": {
+      "title": "User Guides"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "popular": "Most Frequently Asked Questions",
+      "empty": "No FAQs available",
+      "attendance": {
+        "question": "How do I clock in?",
+        "answer": "You can clock in from the 'Web Attendance' section in the main menu. Click the corresponding clock button (entry, exit, break start, break end) according to your schedule. You can also use physical clocking devices if your company has them configured."
+      },
+      "permission": {
+        "question": "How do I request time off?",
+        "answer": "Go to 'Operations > Requests > Hourly Permissions' in the menu. Click 'New Request', fill out the form with dates and reason, and submit the request. Your supervisor will receive a notification to approve or reject the request."
+      },
+      "employee": {
+        "question": "How do I add a new employee?",
+        "answer": "Go to 'Maintainers > Employees' and click 'Add Employee'. Fill in all required fields such as name, document, email, branch and schedule. You can also bulk upload employees using the 'Bulk Upload' option with an Excel file."
+      },
+      "schedule": {
+        "question": "How do I configure a schedule?",
+        "answer": "In 'Maintainers > Schedules', click 'New Schedule'. Define the name, schedule type (fixed or rotating), working days, entry and exit times, and tolerance times. For rotating schedules, configure shifts and rotation sequence."
+      },
+      "report": {
+        "question": "How do I generate a report?",
+        "answer": "Go to 'Reports > Report Manager' and click 'Create Report'. Select the report type (attendance, absences, overtime, etc.), define the date range and filters, and click 'Generate'. You can export the report to Excel or PDF."
+      },
+      "branch": {
+        "question": "How do I create a new branch?",
+        "answer": "In 'Maintainers > Branches', click 'New Branch'. Enter the name, code, address and select the company it belongs to. Optionally you can configure the geographic location for geolocation attendance control."
+      },
+      "device": {
+        "question": "How do I configure a clocking device?",
+        "answer": "Go to 'Maintainers > Devices' and click 'New Device'. Select the type (machine or kiosk), assign a name and branch. For physical devices, generate the QR code and scan it from the device to link it."
+      },
+      "absence": {
+        "question": "How do I manage absences?",
+        "answer": "In 'Operations > Absence Assignment' you can see all registered absences. To register a new one, click 'New Absence', select the employee, absence type, dates and attach documentation if necessary. Absences can affect attendance calculation according to their configuration."
+      },
+      "integration": {
+        "question": "How do I configure an API integration?",
+        "answer": "Go to 'Integrations' and click 'New Integration'. Generate an access token, configure webhook URLs to receive notifications, and select the events you want to monitor. Use the API documentation to implement the integration in your system."
+      },
+      "user": {
+        "question": "How do I assign permissions to a user?",
+        "answer": "In 'Operations > Users', select the user and click 'Edit'. Assign a predefined role or configure custom permissions. Permissions control access to different modules and system functionalities."
+      },
+      "shiftAssignment": {
+        "question": "How do I assign a shift to an employee?",
+        "answer": "Go to 'Operations > Shift Assignment'. Select the shift, employees and date range. Use the day-by-day selector to assign specific shifts. The system will show the comparison with each employee's current schedules."
+      },
+      "scheduleReport": {
+        "question": "How do I schedule an automatic report?",
+        "answer": "In 'Reports > Report Manager', create or select a report and click 'Schedule'. Define the frequency (daily, weekly, monthly), generation day and time, email recipients and format (Excel, PDF). Active schedules are managed from the report history."
+      },
+      "timeBank": {
+        "question": "What is the time bank?",
+        "answer": "The time bank is a system that accumulates overtime or undertime. Overtime can become positive balance, and permissions or absences negative balance. Employees can request transactions (use accumulated hours) from Operations > Requests. Configuration is in Maintainers > Time Bank."
+      },
+      "sso": {
+        "question": "How do I configure SSO?",
+        "answer": "In 'Maintainers > SSO' you can configure Single Sign-On. You need your IdP provider data (SAML or OAuth): metadata URL, Entity ID, certificate. Once configured, users can log in with their corporate credentials."
+      },
+      "dailyPassDiff": {
+        "question": "What is the difference between Maintainers > Daily Pass and Operations > Daily Passes?",
+        "answer": "Maintainers > Daily Pass configures pass types and rules (visitor, contractor, supplier) and templates. Operations > Daily Passes is where specific passes for each visit are created, approved and managed. First configure in Maintainers, then operate in Operations."
+      },
+      "pendingMarks": {
+        "question": "What are pending marks for approval?",
+        "answer": "They are clockings that require supervisor validation: entries/exits outside tolerance, manual clockings, or automatic detection of possible errors. They appear in the 'Pending Marks' tab of Operations > Attendance Management. The supervisor can approve or reject each one."
+      },
+      "monthClosing": {
+        "question": "How does attendance month closing work?",
+        "answer": "Month closing locks attendance data for a period for payroll or audit. It is configured in Maintainers > Month Closing. When closing a month, clockings cannot be modified without reopening (if you have permission). It is recommended to close after validating all pending marks."
+      }
+    },
+    "article": {
+      "back": "Back",
+      "updated": "Updated",
+      "related": "Related Articles"
+    },
+    "articles": {
+      "home": {
+        "navigation": {
+          "title": "CheckIO Navigation",
+          "description": "Learn to navigate the interface and use main features",
+          "content": "'<h2>'CheckIO Navigation'</h2>''<p>'CheckIO has an intuitive interface designed to facilitate attendance management. The left sidebar contains all main sections organized by categories.'</p>''<h3>'Main Menu'</h3>''<ul>''<li>''<strong>'Home:'</strong>' Dashboard with attendance summary and statistics'</li>''<li>''<strong>'Maintainers:'</strong>' Configuration of employees, schedules, branches and more'</li>''<li>''<strong>'Operations:'</strong>' Daily management of attendance, requests and absences'</li>''<li>''<strong>'Reports:'</strong>' Report generation and analysis'</li>''<li>''<strong>'Integrations:'</strong>' API and webhook configuration'</li>''</ul>''<h3>'Top Bar'</h3>''<p>'At the top you will find:'</p>''<ul>''<li>'Company selector (if you have access to multiple companies)'</li>''<li>'Notifications'</li>''<li>'Help (this help center)'</li>''<li>'User profile'</li>''</ul>'"
+        },
+        "quickstart": {
+          "title": "Quick Start Guide",
+          "description": "First steps to start using CheckIO",
+          "content": "'<h2>'Quick Start Guide'</h2>''<p>'Welcome to CheckIO. This guide will help you take your first steps on the platform.'</p>''<h3>'Step 1: Initial Setup'</h3>''<p>'Before you begin, make sure you have configured:'</p>''<ul>''<li>'At least one company'</li>''<li>'One or more branches'</li>''<li>'Work schedules'</li>''<li>'Absence types'</li>''</ul>''<h3>'Step 2: Add Employees'</h3>''<p>'Go to Maintainers > Employees and add your first employee. You can do it one by one or use bulk upload with Excel.'</p>''<h3>'Step 3: Configure Devices'</h3>''<p>'If you will use clocking devices, configure them in Maintainers > Devices.'</p>''<h3>'Step 4: Start Clocking'</h3>''<p>'Employees can now start clocking their attendance from the web or configured devices.'</p>'"
+        },
+        "overview": {
+          "title": "Features Overview",
+          "description": "Learn about all the features CheckIO offers",
+          "content": "'<h2>'Features Overview'</h2>''<p>'CheckIO is a complete platform for attendance and human resources management.'</p>''<h3>'Main Features'</h3>''<ul>''<li>''<strong>'Attendance Control:'</strong>' Web clocking, physical devices, geolocation'</li>''<li>''<strong>'Schedule Management:'</strong>' Fixed, rotating schedules, shifts'</li>''<li>''<strong>'Requests:'</strong>' Permissions, overtime, days off'</li>''<li>''<strong>'Absences:'</strong>' Registration and tracking of absences'</li>''<li>''<strong>'Reports:'</strong>' Custom report generation'</li>''<li>''<strong>'Integrations:'</strong>' REST API to connect with other systems'</li>''<li>''<strong>'Audit:'</strong>' Complete log of all actions'</li>''</ul>'"
+        },
+        "dashboardByRole": {
+          "title": "Dashboard by Role",
+          "description": "What Admin, Employee and Custom see on the home screen",
+          "content": "'<h2>'Dashboard by Role'</h2>''<p>'CheckIO adapts the home view according to the user's role.'</p>''<h3>'Administrator'</h3>''<p>'Sees a company summary with key metrics:'</p>''<ul>''<li>'Today's attendance'</li>''<li>'Active employees'</li>''<li>'Clockings pending validation'</li>''<li>'Requests to approve'</li>''<li>'Quick links to Maintainers and Operations'</li>''</ul>''<h3>'Employee'</h3>''<p>'Sees their clocking panel:'</p>''<ul>''<li>'Entry/exit/break buttons'</li>''<li>'Current workday status'</li>''<li>'Recent clocking history'</li>''</ul>''<h3>'Custom'</h3>''<p>'Intermediate view according to configured permissions. Can combine elements from Admin and Employee depending on their custom role.'</p>'"
+        }
+      },
+      "maintainers": {
+        "employees": {
+          "create": {
+            "title": "Create Employee Step by Step",
+            "description": "Complete guide to add a new employee to the system",
+            "content": "'<h2>'Create Employee Step by Step'</h2>''<p>'Follow these steps to add a new employee to CheckIO:'</p>''<h3>'Step 1: Access the Module'</h3>''<p>'Go to '<strong>'Maintainers > Employees'</strong>' and click the '<strong>'Add Employee'</strong>' button.'</p>''<h3>'Step 2: Personal Information'</h3>''<p>'Complete the following required fields:'</p>''<ul>''<li>'Full name'</li>''<li>'Document type and number'</li>''<li>'Email (will be used for system access)'</li>''<li>'Phone'</li>''</ul>''<h3>'Step 3: Employment Information'</h3>''<p>'Define:'</p>''<ul>''<li>'Work branch'</li>''<li>'Job position'</li>''<li>'Assigned schedule'</li>''<li>'Start date'</li>''<li>'Contract type'</li>''</ul>''<h3>'Step 4: Access Configuration'</h3>''<p>'If the employee will have system access, check the corresponding option and assign a role.'</p>''<h3>'Step 5: Save'</h3>''<p>'Review all information and click '<strong>'Save'</strong>'. The employee will now be available in the system.'</p>'"
+          },
+          "bulk": {
+            "title": "Bulk Employee Upload",
+            "description": "Learn to upload multiple employees using Excel",
+            "content": "'<h2>'Bulk Employee Upload'</h2>''<p>'Bulk upload allows you to add multiple employees at once using an Excel file.'</p>''<h3>'Step 1: Download Template'</h3>''<p>'In '<strong>'Maintainers > Employees'</strong>', click '<strong>'Bulk Upload'</strong>' and download the Excel template.'</p>''<h3>'Step 2: Complete Template'</h3>''<p>'Open the file and complete one row per employee. Required fields:'</p>''<ul>''<li>'First name'</li>''<li>'Last name'</li>''<li>'Document type'</li>''<li>'Document number'</li>''<li>'Email'</li>''<li>'Branch code'</li>''<li>'Schedule code'</li>''</ul>''<h3>'Step 3: Validate Data'</h3>''<p>'Make sure that:'</p>''<ul>''<li>'Branch and schedule codes exist in the system'</li>''<li>'Emails are not duplicated'</li>''<li>'Documents are valid'</li>''</ul>''<h3>'Step 4: Upload File'</h3>''<p>'Upload the Excel file and the system will validate the data. If there are errors, they will be displayed for correction.'</p>''<h3>'Step 5: Process'</h3>''<p>'Once validated, click '<strong>'Process'</strong>' to create all employees.'</p>'"
+          },
+          "edit": {
+            "title": "Edit Employee Information",
+            "description": "How to update existing employee data",
+            "content": "'<h2>'Edit Employee Information'</h2>''<p>'You can update any employee's information at any time.'</p>''<h3>'Access Edit'</h3>''<p>'In '<strong>'Maintainers > Employees'</strong>', find the employee and click the edit icon (pencil).'</p>''<h3>'Editable Information'</h3>''<p>'You can modify:'</p>''<ul>''<li>'Personal data (name, email, phone)'</li>''<li>'Employment information (branch, job, schedule)'</li>''<li>'Access and permissions configuration'</li>''<li>'Employee status (active/inactive)'</li>''</ul>''<h3>'Sensitive Changes'</h3>''<p>'Note that some changes may affect:'</p>''<ul>''<li>''<strong>'Schedule change:'</strong>' Will apply from the next day'</li>''<li>''<strong>'Branch change:'</strong>' May affect assigned clocking devices'</li>''<li>''<strong>'Deactivate employee:'</strong>' Will not be able to clock attendance or access the system'</li>''</ul>''<h3>'Change History'</h3>''<p>'All changes are recorded in the system audit.'</p>'"
+          }
+        },
+        "schedules": {
+          "create": {
+            "title": "Create Work Schedule",
+            "description": "Guide to configure fixed and flexible schedules",
+            "content": "'<h2>'Create Work Schedule'</h2>''<p>'Schedules define when employees should work.'</p>''<h3>'Schedule Types'</h3>''<ul>''<li>''<strong>'Fixed:'</strong>' Same schedule every day'</li>''<li>''<strong>'Rotating:'</strong>' Schedule changes according to shifts'</li>''<li>''<strong>'Flexible:'</strong>' With entry/exit ranges'</li>''</ul>''<h3>'Create Fixed Schedule'</h3>''<ol>''<li>'Go to '<strong>'Maintainers > Schedules'</strong>''</li>''<li>'Click '<strong>'New Schedule'</strong>''</li>''<li>'Enter name and description'</li>''<li>'Select '<strong>'Fixed'</strong>' type'</li>''<li>'Define work days (e.g. Mon-Fri)'</li>''<li>'Configure entry and exit times'</li>''<li>'Set tolerance times'</li>''<li>'Configure breaks if applicable'</li>''</ol>''<h3>'Advanced Configuration'</h3>''<p>'You can configure:'</p>''<ul>''<li>'Entry/exit tolerance'</li>''<li>'Minimum work time'</li>''<li>'Overtime calculation'</li>''<li>'Rounding of clockings'</li>''</ul>'"
+          },
+          "rotating": {
+            "title": "Configure Rotating Schedules",
+            "description": "How to configure shifts and schedule rotations",
+            "content": "'<h2>'Configure Rotating Schedules'</h2>''<p>'Rotating schedules are ideal for companies with shifts.'</p>''<h3>'Step 1: Create Shifts'</h3>''<p>'First create the shifts in '<strong>'Maintainers > Shifts'</strong>':'</p>''<ul>''<li>'Morning shift: 07:00 - 15:00'</li>''<li>'Afternoon shift: 15:00 - 23:00'</li>''<li>'Night shift: 23:00 - 07:00'</li>''</ul>''<h3>'Step 2: Create Rotating Schedule'</h3>''<ol>''<li>'Go to '<strong>'Maintainers > Schedules'</strong>''</li>''<li>'Select '<strong>'Rotating'</strong>' type'</li>''<li>'Define the rotation sequence'</li>''<li>'Assign shifts to each day of the cycle'</li>''</ol>''<h3>'Rotation Example'</h3>''<p>'3-week cycle:'</p>''<ul>''<li>'Week 1: Morning shift'</li>''<li>'Week 2: Afternoon shift'</li>''<li>'Week 3: Night shift'</li>''</ul>''<h3>'Assignment to Employees'</h3>''<p>'Once the rotating schedule is created, assign it to the corresponding employees. The system will automatically calculate which shift corresponds to them each day.'</p>'"
+          }
+        },
+        "branches": {
+          "create": {
+            "title": "Create New Branch",
+            "description": "How to add and configure a branch",
+            "content": "'<h2>'Create New Branch'</h2>''<p>'Branches represent your company's physical locations.'</p>''<h3>'Basic Information'</h3>''<ol>''<li>'Go to '<strong>'Maintainers > Branches'</strong>''</li>''<li>'Click '<strong>'New Branch'</strong>''</li>''<li>'Complete:'<ul>''<li>'Branch name'</li>''<li>'Unique code'</li>''<li>'Company it belongs to'</li>''</ul>''</li>''</ol>''<h3>'Location'</h3>''<p>'Configure the full address:'</p>''<ul>''<li>'Street and number'</li>''<li>'City'</li>''<li>'Region/State'</li>''<li>'Country'</li>''<li>'Postal code'</li>''</ul>''<h3>'Geolocation'</h3>''<p>'If you will use location control:'</p>''<ul>''<li>'Enter GPS coordinates'</li>''<li>'Define tolerance radius'</li>''<li>'Enable geolocation clocking'</li>''</ul>''<h3>'Additional Configuration'</h3>''<ul>''<li>'Time zone'</li>''<li>'Assigned devices'</li>''<li>'Available schedules'</li>''</ul>'"
+          }
+        },
+        "companies": {
+          "create": {
+            "title": "Create New Company",
+            "description": "Initial company setup in the system",
+            "content": "'<h2>'Create New Company'</h2>''<p>'The company is the highest level of organization in CheckIO.'</p>''<h3>'Company Data'</h3>''<ol>''<li>'Go to '<strong>'Maintainers > Companies'</strong>''</li>''<li>'Click '<strong>'New Company'</strong>''</li>''<li>'Complete:'<ul>''<li>'Legal name'</li>''<li>'Trade name'</li>''<li>'Tax ID / EIN'</li>''<li>'Corporate email'</li>''<li>'Phone'</li>''</ul>''</li>''</ol>''<h3>'Legal Configuration'</h3>''<ul>''<li>'Tax document type'</li>''<li>'Identification number'</li>''<li>'Legal representative'</li>''</ul>''<h3>'System Configuration'</h3>''<p>'Define general parameters:'</p>''<ul>''<li>'Default time zone'</li>''<li>'Currency'</li>''<li>'Language'</li>''<li>'Date format'</li>''</ul>''<h3>'Next Step'</h3>''<p>'Once the company is created, you can add branches and start configuring employees.'</p>'"
+          }
+        },
+        "devices": {
+          "setup": {
+            "title": "Configure Clocking Device",
+            "description": "How to configure physical devices and kiosks",
+            "content": "'<h2>'Configure Clocking Device'</h2>''<p>'CheckIO supports different types of devices for attendance clocking.'</p>''<h3>'Device Types'</h3>''<ul>''<li>''<strong>'Machine:'</strong>' Physical device with biometric reader'</li>''<li>''<strong>'Kiosk:'</strong>' Tablet or computer with CheckIO app'</li>''</ul>''<h3>'Configure Machine'</h3>''<ol>''<li>'Go to '<strong>'Maintainers > Devices'</strong>''</li>''<li>'Click '<strong>'New Device'</strong>''</li>''<li>'Select '<strong>'Machine'</strong>' type'</li>''<li>'Assign name and branch'</li>''<li>'Generate QR code'</li>''<li>'Scan the QR from the physical device'</li>''</ol>''<h3>'Configure Kiosk'</h3>''<ol>''<li>'Create device type '<strong>'Kiosk'</strong>''</li>''<li>'Download CheckIO Kiosk app'</li>''<li>'Install on tablet or computer'</li>''<li>'Scan QR code to link'</li>''</ol>''<h3>'Advanced Configuration'</h3>''<ul>''<li>'Clocking mode (entry/exit/both)'</li>''<li>'Biometric validation'</li>''<li>'Offline mode'</li>''</ul>'"
+          }
+        },
+        "holidays": {
+          "manage": {
+            "title": "Manage Holidays",
+            "description": "How to configure holidays and non-working days",
+            "content": "'<h2>'Manage Holidays'</h2>''<p>'Holidays are non-working days that affect attendance calculation.'</p>''<h3>'Add Holiday'</h3>''<ol>''<li>'Go to '<strong>'Maintainers > Holidays'</strong>''</li>''<li>'Click '<strong>'New Holiday'</strong>''</li>''<li>'Complete:'<ul>''<li>'Holiday name'</li>''<li>'Date'</li>''<li>'Type (national, regional, local)'</li>''</ul>''</li>''</ol>''<h3>'Holiday Types'</h3>''<ul>''<li>''<strong>'Mandatory:'</strong>' All employees rest'</li>''<li>''<strong>'Optional:'</strong>' Employee can choose to work'</li>''</ul>''<h3>'Bulk Upload'</h3>''<p>'You can upload multiple holidays using Excel:'</p>''<ol>''<li>'Download the template'</li>''<li>'Complete with holidays for the year'</li>''<li>'Upload the file'</li>''</ol>''<h3>'Impact on Attendance'</h3>''<p>'Holidays:'</p>''<ul>''<li>'Do not require clocking'</li>''<li>'Do not count as absences'</li>''<li>'May generate additional pay if worked'</li>''</ul>'"
+          }
+        },
+        "shifts": {
+          "create": {
+            "title": "Create Work Shift",
+            "description": "Shift configuration for rotating schedules",
+            "content": "'<h2>'Create Work Shift'</h2>''<p>'Shifts are time blocks used in rotating schedules.'</p>''<h3>'Create Shift'</h3>''<ol>''<li>'Go to '<strong>'Maintainers > Shifts'</strong>''</li>''<li>'Click '<strong>'New Shift'</strong>''</li>''<li>'Define:'<ul>''<li>'Shift name'</li>''<li>'Start time'</li>''<li>'End time'</li>''<li>'Break duration'</li>''</ul>''</li>''</ol>''<h3>'Common Shifts'</h3>''<ul>''<li>''<strong>'Morning:'</strong>' 07:00 - 15:00'</li>''<li>''<strong>'Afternoon:'</strong>' 15:00 - 23:00'</li>''<li>''<strong>'Night:'</strong>' 23:00 - 07:00'</li>''</ul>''<h3>'Shifts Crossing Midnight'</h3>''<p>'For night shifts that cross midnight, check the corresponding option. The system will correctly calculate hours worked.'</p>''<h3>'Use in Schedules'</h3>''<p>'Once shifts are created, you can use them in rotating schedules to define the work sequence.'</p>'"
+          }
+        },
+        "users": {
+          "permissions": {
+            "title": "Manage User Permissions",
+            "description": "How to assign and configure access permissions",
+            "content": "'<h2>'Manage User Permissions'</h2>''<p>'Permissions control what each user can do in the system.'</p>''<h3>'Predefined Roles'</h3>''<ul>''<li>''<strong>'Administrator:'</strong>' Full access'</li>''<li>''<strong>'Supervisor:'</strong>' Management of their team'</li>''<li>''<strong>'Employee:'</strong>' Only their information'</li>''</ul>''<h3>'Assign Role'</h3>''<ol>''<li>'Go to '<strong>'Operations > Users'</strong>''</li>''<li>'Select the user'</li>''<li>'Click '<strong>'Edit'</strong>''</li>''<li>'Assign a role'</li>''</ol>''<h3>'Custom Permissions'</h3>''<p>'You can create custom permissions:'</p>''<ul>''<li>'Select accessible modules'</li>''<li>'Define allowed actions (view, create, edit, delete)'</li>''<li>'Set scope (entire company or only their branch)'</li>''</ul>''<h3>'Best Practices'</h3>''<ul>''<li>'Assign minimum necessary permission'</li>''<li>'Review permissions periodically'</li>''<li>'Document custom roles'</li>''</ul>'"
+          }
+        },
+        "roles": {
+          "manage": {
+            "title": "Manage System Roles",
+            "description": "Create and configure user roles",
+            "content": "'<h2>'Manage System Roles'</h2>''<p>'Roles group permissions to facilitate administration.'</p>''<h3>'Create Role'</h3>''<ol>''<li>'Go to '<strong>'Operations > Roles'</strong>''</li>''<li>'Click '<strong>'New Role'</strong>''</li>''<li>'Define:'<ul>''<li>'Role name'</li>''<li>'Description'</li>''<li>'Included permissions'</li>''</ul>''</li>''</ol>''<h3>'Permission Structure'</h3>''<p>'Permissions are organized by module:'</p>''<ul>''<li>'Maintainers'</li>''<li>'Operations'</li>''<li>'Reports'</li>''<li>'Integrations'</li>''</ul>''<p>'For each module you can define:'</p>''<ul>''<li>'View (read)'</li>''<li>'Create'</li>''<li>'Edit (update)'</li>''<li>'Delete'</li>''</ul>''<h3>'Recommended Roles'</h3>''<ul>''<li>''<strong>'HR:'</strong>' Full access to employees and reports'</li>''<li>''<strong>'Supervisor:'</strong>' Attendance management of their team'</li>''<li>''<strong>'Operator:'</strong>' Only clocking and consultation'</li>''</ul>'"
+          }
+        }
+      },
+      "operations": {
+        "attendance": {
+          "manage": {
+            "title": "Manage Attendance Marks",
+            "description": "How to administer and correct attendance clockings",
+            "content": "'<h2>'Manage Attendance Marks'</h2>''<p>'In this section you can view and manage all attendance clockings.'</p>''<h3>'View Clockings'</h3>''<p>'In '<strong>'Operations > Attendance Management'</strong>' you will see:'</p>''<ul>''<li>'List of all clockings for the day'</li>''<li>'Status of each clocking (on time, late, early)'</li>''<li>'Clockings pending validation'</li>''</ul>''<h3>'Available Filters'</h3>''<ul>''<li>'By date or date range'</li>''<li>'By employee'</li>''<li>'By branch'</li>''<li>'By clocking type'</li>''<li>'By status'</li>''</ul>''<h3>'Available Actions'</h3>''<ul>''<li>'View clocking detail'</li>''<li>'Modify clocking (requires permissions)'</li>''<li>'Delete incorrect clocking'</li>''<li>'Add manual clocking'</li>''</ul>'"
+          },
+          "tabs": {
+            "title": "Attendance Management Tabs",
+            "description": "Guide to each tab in Attendance Management",
+            "content": "'<h2>'Attendance Management Tabs'</h2>''<p>'In Operations > Attendance Management you will find several tabs depending on attendance status.'</p>''<h3>'Incomplete'</h3>''<p>'Employees missing clockings (entry, exit or breaks) for the day.'</p>''<h3>'Without Schedule'</h3>''<p>'Employees without an assigned schedule for the date.'</p>''<h3>'Absent'</h3>''<p>'Employees who did not clock in that day (no registered absence).'</p>''<h3>'Completed'</h3>''<p>'Days with complete clocking, closed workday.'</p>''<h3>'Pending Marks'</h3>''<p>'Clockings requiring supervisor approval (outside tolerance, manual, etc.).'</p>''<h3>'Pending Lateness'</h3>''<p>'Late arrivals requiring validation.'</p>''<h3>'Pending Overtime'</h3>''<p>'Detected overtime requiring approval.'</p>'"
+          },
+          "modify": {
+            "title": "Modify Attendance Clockings",
+            "description": "How to correct clocking errors",
+            "content": "'<h2>'Modify Attendance Clockings'</h2>''<p>'Sometimes it's necessary to correct clockings due to errors or special situations.'</p>''<h3>'When to Modify'</h3>''<ul>''<li>'Employee forgot to clock'</li>''<li>'Device error'</li>''<li>'Clocking in wrong location'</li>''<li>'Adjustment for special situation'</li>''</ul>''<h3>'Modification Process'</h3>''<ol>''<li>'Find the clocking to modify'</li>''<li>'Click the edit icon'</li>''<li>'Modify the time or date'</li>''<li>'Add a modification reason'</li>''<li>'Save changes'</li>''</ol>''<h3>'Audit'</h3>''<p>'All modifications are recorded:'</p>''<ul>''<li>'User who modified'</li>''<li>'Modification date and time'</li>''<li>'Previous and new values'</li>''<li>'Modification reason'</li>''</ul>''<h3>'Required Permissions'</h3>''<p>'Only users with modification permission can edit clockings. This ensures data integrity.'</p>'"
+          }
+        },
+        "absences": {
+          "register": {
+            "title": "Register Absence",
+            "description": "How to register and manage employee absences",
+            "content": "'<h2>'Register Absence'</h2>''<p>'Absences are periods when the employee doesn't attend work.'</p>''<h3>'Absence Types'</h3>''<ul>''<li>'Medical leave'</li>''<li>'Vacation'</li>''<li>'Unpaid leave'</li>''<li>'Suspension'</li>''<li>'Others (configurable)'</li>''</ul>''<h3>'Register Absence'</h3>''<ol>''<li>'Go to '<strong>'Operations > Absence Assignment'</strong>''</li>''<li>'Click '<strong>'New Absence'</strong>''</li>''<li>'Select the employee'</li>''<li>'Choose absence type'</li>''<li>'Define start and end dates'</li>''<li>'Attach documentation if necessary'</li>''<li>'Save the record'</li>''</ol>''<h3>'Impact on Attendance'</h3>''<p>'Absences:'</p>''<ul>''<li>'Justify lack of clocking'</li>''<li>'May or may not deduct vacation days'</li>''<li>'Affect hours worked calculation'</li>''<li>'Appear in reports'</li>''</ul>'"
+          }
+        },
+        "requests": {
+          "permission": {
+            "title": "Manage Permission Requests",
+            "description": "How to approve or reject permission requests",
+            "content": "'<h2>'Manage Permission Requests'</h2>''<p>'Employees can request permissions that require approval.'</p>''<h3>'Request Types'</h3>''<ul>''<li>'Hourly permission'</li>''<li>'Day off'</li>''<li>'Overtime'</li>''<li>'Time bank transaction'</li>''</ul>''<h3>'Review Requests'</h3>''<ol>''<li>'Go to '<strong>'Operations > Requests'</strong>''</li>''<li>'You will see all pending requests'</li>''<li>'Click on a request to see details'</li>''</ol>''<h3>'Approve or Reject'</h3>''<p>'For each request you can:'</p>''<ul>''<li>''<strong>'Approve:'</strong>' The request will be applied automatically'</li>''<li>''<strong>'Reject:'</strong>' Indicate the reason for rejection'</li>''<li>''<strong>'Request more information:'</strong>' Ask the employee for clarification'</li>''</ul>''<h3>'Notifications'</h3>''<p>'The employee will receive email notification of their request status.'</p>'"
+          },
+          "overtime": {
+            "title": "Approve Overtime",
+            "description": "Overtime approval process",
+            "content": "'<h2>'Approve Overtime'</h2>''<p>'Overtime requires approval before being paid.'</p>''<h3>'Overtime Request'</h3>''<p>'The employee requests overtime indicating:'</p>''<ul>''<li>'Date and time of overtime'</li>''<li>'Reason'</li>''<li>'Number of hours'</li>''</ul>''<h3>'Approval Process'</h3>''<ol>''<li>'Review the request in '<strong>'Operations > Requests > Overtime'</strong>''</li>''<li>'Verify that the hours are correct'</li>''<li>'Confirm the reason'</li>''<li>'Approve or reject'</li>''</ol>''<h3>'Automatic Calculation'</h3>''<p>'The system can automatically calculate overtime based on:'</p>''<ul>''<li>'Clockings outside schedule'</li>''<li>'Schedule configuration'</li>''<li>'Company rules'</li>''</ul>''<h3>'Reports'</h3>''<p>'Approved overtime appears in payroll reports for corresponding payment.'</p>'"
+          }
+        },
+        "passes": {
+          "manage": {
+            "title": "Manage Daily Passes",
+            "description": "Administration of temporary access passes",
+            "content": "'<h2>'Manage Daily Passes'</h2>''<p>'Daily passes allow temporary access to non-employees.'</p>''<h3>'Create Daily Pass'</h3>''<ol>''<li>'Go to '<strong>'Operations > Daily Passes'</strong>''</li>''<li>'Click '<strong>'New Pass'</strong>''</li>''<li>'Complete:'<ul>''<li>'Visitor name'</li>''<li>'ID document'</li>''<li>'Company being visited'</li>''<li>'Visit reason'</li>''<li>'Access date and time'</li>''<li>'Pass validity'</li>''</ul>''</li>''</ol>''<h3>'Pass Types'</h3>''<ul>''<li>''<strong>'Visitor:'</strong>' Hourly access'</li>''<li>''<strong>'Contractor:'</strong>' Daily access'</li>''<li>''<strong>'Supplier:'</strong>' Recurring access'</li>''</ul>''<h3>'Access Control'</h3>''<p>'Passes can:'</p>''<ul>''<li>'Have QR code for scanning'</li>''<li>'Be restricted to specific areas'</li>''<li>'Require accompaniment'</li>''<li>'Have expiration date'</li>''</ul>'"
+          }
+        },
+        "audit": {
+          "review": {
+            "title": "Review System Audit",
+            "description": "How to consult the audit log",
+            "content": "'<h2>'Review System Audit'</h2>''<p>'The audit records all important actions in the system.'</p>''<h3>'What is Recorded'</h3>''<ul>''<li>'Creation, editing and deletion of records'</li>''<li>'Configuration changes'</li>''<li>'System access'</li>''<li>'Clocking modifications'</li>''<li>'Approvals and rejections'</li>''</ul>''<h3>'Consult Audit'</h3>''<ol>''<li>'Go to '<strong>'Operations > Audit'</strong>''</li>''<li>'Use filters to search:'<ul>''<li>'By user'</li>''<li>'By module'</li>''<li>'By action type'</li>''<li>'By date range'</li>''</ul>''</li>''</ol>''<h3>'Available Information'</h3>''<p>'For each record you will see:'</p>''<ul>''<li>'User who performed the action'</li>''<li>'Exact date and time'</li>''<li>'Action type'</li>''<li>'Affected module'</li>''<li>'Previous and new values'</li>''<li>'IP address'</li>''</ul>''<h3>'Export Audit'</h3>''<p>'You can export audit records to Excel for analysis or regulatory compliance.'</p>'"
+          }
+        }
+      },
+      "reports": {
+        "export": {
+          "title": "Export Data to Excel",
+          "description": "How to export reports and system data",
+          "content": "'<h2>'Export Data to Excel'</h2>''<p>'Almost all modules allow exporting data to Excel.'</p>''<h3>'Export from Lists'</h3>''<p>'In any list (employees, clockings, etc.):'</p>''<ol>''<li>'Apply desired filters'</li>''<li>'Click the '<strong>'Download Excel'</strong>' button'</li>''<li>'The file will download automatically'</li>''</ol>''<h3>'Export Reports'</h3>''<p>'In '<strong>'Reports'</strong>':'</p>''<ol>''<li>'Generate the report with desired filters'</li>''<li>'Click '<strong>'Export to Excel'</strong>''</li>''<li>'Choose format (Excel or CSV)'</li>''</ol>''<h3>'Excel Content'</h3>''<p>'Exported files include:'</p>''<ul>''<li>'All visible columns'</li>''<li>'Applied filtered data'</li>''<li>'Date and time format'</li>''<li>'Descriptive headers'</li>''</ul>''<h3>'Common Uses'</h3>''<ul>''<li>'Analysis in Excel'</li>''<li>'Import to other systems'</li>''<li>'Information backup'</li>''<li>'External audits'</li>''</ul>'"
+        },
+        "create": {
+          "title": "Create Custom Report",
+          "description": "How to design and generate custom reports",
+          "content": "'<h2>'Create Custom Report'</h2>''<p>'The report manager allows creating custom reports according to your needs.'</p>''<h3>'Create Report'</h3>''<ol>''<li>'Go to '<strong>'Reports > Report Manager'</strong>''</li>''<li>'Click '<strong>'Create Report'</strong>''</li>''<li>'Select the report type'</li>''</ol>''<h3>'Report Types'</h3>''<ul>''<li>'Daily/monthly attendance'</li>''<li>'Hours worked'</li>''<li>'Absences'</li>''<li>'Overtime'</li>''<li>'Lateness'</li>''<li>'Schedule compliance'</li>''</ul>''<h3>'Configure Report'</h3>''<p>'Define:'</p>''<ul>''<li>'Date range'</li>''<li>'Employees or branches'</li>''<li>'Columns to include'</li>''<li>'Groupings'</li>''<li>'Totals and subtotals'</li>''</ul>''<h3>'Save and Reuse'</h3>''<p>'You can save the report configuration to easily generate it in the future.'</p>'"
+        },
+        "schedule": {
+          "title": "Schedule Automatic Reports",
+          "description": "Configure automatic report sending",
+          "content": "'<h2>'Schedule Automatic Reports'</h2>''<p>'Schedule reports to be generated and sent automatically.'</p>''<h3>'Configure Schedule'</h3>''<ol>''<li>'Create or select a report'</li>''<li>'Click '<strong>'Schedule'</strong>''</li>''<li>'Define:'<ul>''<li>'Frequency (daily, weekly, monthly)'</li>''<li>'Generation day and time'</li>''<li>'Email recipients'</li>''<li>'Format (Excel, PDF)'</li>''</ul>''</li>''</ol>''<h3>'Common Frequencies'</h3>''<ul>''<li>''<strong>'Daily:'</strong>' Previous day attendance report'</li>''<li>''<strong>'Weekly:'</strong>' Weekly summary every Monday'</li>''<li>''<strong>'Monthly:'</strong>' Payroll report on last day of month'</li>''</ul>''<h3>'Manage Schedules'</h3>''<p>'You can:'</p>''<ul>''<li>'View all active schedules'</li>''<li>'Temporarily pause'</li>''<li>'Modify configuration'</li>''<li>'View delivery history'</li>''</ul>'"
+        }
+      },
+      "integrations": {
+        "api": {
+          "title": "Configure API Integration",
+          "description": "How to integrate CheckIO with other systems",
+          "content": "'<h2>'Configure API Integration'</h2>''<p>'CheckIO offers a complete REST API for integrations.'</p>''<h3>'Create Integration'</h3>''<ol>''<li>'Go to '<strong>'Integrations'</strong>''</li>''<li>'Click '<strong>'New Integration'</strong>''</li>''<li>'Define:'<ul>''<li>'Integration name'</li>''<li>'Description'</li>''<li>'Access permissions'</li>''</ul>''</li>''</ol>''<h3>'Generate Token'</h3>''<p>'The system will generate a unique access token. Store it securely; it will not be shown again.'</p>''<h3>'Available Endpoints'</h3>''<ul>''<li>'/api/employees - Employee management'</li>''<li>'/api/attendance - Attendance clockings'</li>''<li>'/api/schedules - Schedules'</li>''<li>'/api/reports - Report generation'</li>''</ul>''<h3>'Documentation'</h3>''<p>'Consult the complete API documentation in the developer portal.'</p>'"
+        },
+        "tokens": {
+          "title": "Manage Access Tokens",
+          "description": "API token administration and security",
+          "content": "'<h2>'Manage Access Tokens'</h2>''<p>'Tokens allow secure access to CheckIO's API.'</p>''<h3>'Token Types'</h3>''<ul>''<li>''<strong>'Production:'</strong>' For use in production systems'</li>''<li>''<strong>'Sandbox:'</strong>' For testing and development'</li>''</ul>''<h3>'Create Token'</h3>''<ol>''<li>'In the integration, click '<strong>'Generate Token'</strong>''</li>''<li>'Select the type'</li>''<li>'Define expiration date (optional)'</li>''<li>'Copy the generated token'</li>''</ol>''<h3>'Security'</h3>''<p>'Best practices:'</p>''<ul>''<li>'Never share tokens publicly'</li>''<li>'Rotate tokens periodically'</li>''<li>'Use different tokens for each integration'</li>''<li>'Revoke compromised tokens immediately'</li>''</ul>''<h3>'Monitoring'</h3>''<p>'You can see:'</p>''<ul>''<li>'Last token use'</li>''<li>'Number of calls'</li>''<li>'Authentication errors'</li>''</ul>'"
+        }
+      }
+    }
+  }
+}

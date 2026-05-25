@@ -1,0 +1,193 @@
+{
+  "title": "Warning Management",
+  "subtitle": "Manage employee warnings",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Operations",
+    "warnings": "Warnings"
+  },
+  "buttons": {
+    "add": "Add Warning",
+    "edit": "Edit",
+    "view": "View",
+    "delete": "Delete",
+    "deleting": "Deleting...",
+    "cancel": "Cancel",
+    "search": "Search",
+    "clear": "Clear",
+    "downloadExcel": "Download Excel",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "filters": {
+    "search": "Search",
+    "searchPlaceholder": "Search by employee...",
+    "employee": "Employee",
+    "employeePlaceholder": "Select an employee",
+    "warningType": "Warning Type",
+    "warningTypePlaceholder": "Select a type"
+  },
+  "table": {
+    "headers": {
+      "employeeName": "Name",
+      "documentNumber": "ID Number",
+      "warningType": "Warning Type",
+      "createdAt": "Creation Date",
+      "actions": "Actions"
+    },
+    "loading": "Loading warnings...",
+    "noData": "No warnings found",
+    "noDataDescription": "There are no warnings registered for this filter.",
+    "notAvailable": "N/A"
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} results",
+    "page": "Page {current} of {total}",
+    "recordsPerPage": "Records per page"
+  },
+  "excel": {
+    "filename": "warnings",
+    "sheetName": "Warnings",
+    "headers": {
+      "employeeName": "Name",
+      "documentNumber": "ID Number",
+      "warningType": "Warning Type",
+      "createdAt": "Creation Date"
+    }
+  },
+  "delete": {
+    "title": "Delete Warning",
+    "message": "Are you sure you want to delete this warning? This action cannot be undone."
+  },
+  "toast": {
+    "deleteSuccess": {
+      "title": "Warning deleted successfully"
+    },
+    "deleteError": {
+      "description": "Error deleting warning"
+    },
+    "excelSuccess": {
+      "title": "Excel generated successfully"
+    },
+    "excelError": {
+      "title": "Error generating Excel"
+    }
+  },
+  "ariaLabels": {
+    "viewWarning": "View warning",
+    "editWarning": "Edit warning",
+    "deleteWarning": "Delete warning"
+  },
+  "upsert": {
+    "title": {
+      "add": "Add Warning",
+      "edit": "Edit Warning",
+      "view": "View Warning"
+    },
+    "fields": {
+      "company": "Company",
+      "employee": "Employee",
+      "warningType": "Warning Type",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "observation": "Observation",
+      "reportedBy": "Reported By",
+      "document": "Document"
+    },
+    "placeholders": {
+      "company": "Select a company",
+      "warningType": "Select a warning type",
+      "startDate": "Select date",
+      "endDate": "Select date",
+      "observation": "Enter observations",
+      "reportedBy": "Name of reporter"
+    },
+    "validation": {
+      "companyRequired": "Please select a company",
+      "employeeRequired": "Please select an employee",
+      "warningTypeRequired": "Please select a warning type",
+      "errors": {
+        "invalidFileType": {
+          "title": "Invalid file type",
+          "description": "Only PDF files are allowed"
+        }
+      }
+    },
+    "buttons": {
+      "selectEmployee": "Select Employee",
+      "selectDocument": "Select Document",
+      "save": "SAVE",
+      "update": "UPDATE",
+      "saving": "Saving...",
+      "updating": "Updating...",
+      "cancel": "Cancel",
+      "close": "Close"
+    },
+    "messages": {
+      "selectCompanyFirst": "First select a company"
+    },
+    "toast": {
+      "createSuccess": {
+        "title": "Warning created successfully",
+        "description": "The warning has been created correctly"
+      },
+      "createError": {
+        "title": "Error creating warning",
+        "description": "An error occurred while creating the warning"
+      },
+      "updateSuccess": {
+        "title": "Warning updated successfully",
+        "description": "The warning has been updated correctly"
+      },
+      "updateError": {
+        "title": "Error updating warning",
+        "description": "An error occurred while updating the warning"
+      },
+      "uploadError": {
+        "title": "Error uploading document",
+        "description": "Error uploading document"
+      }
+    },
+    "preview": {
+      "title": "Preview",
+      "fullscreen": "Fullscreen",
+      "exitFullscreen": "Exit fullscreen",
+      "close": "Close",
+      "noDocument": "No document selected",
+      "uploadHint": "Upload a PDF document to see preview"
+    },
+    "employeePicker": {
+      "title": "Select Employee",
+      "filters": {
+        "name": "Name",
+        "namePlaceholder": "Search by First or Last Name",
+        "documentNumber": "Document",
+        "documentNumberPlaceholder": "Search by Document Number"
+      },
+      "table": {
+        "headers": {
+          "name": "Name",
+          "documentNumber": "Document",
+          "job": "Job"
+        },
+        "noData": "No employees found",
+        "noDataDescription": "There are no employees registered for this filter.",
+        "ariaLabels": {
+          "selectEmployee": "Select employee"
+        }
+      },
+      "pagination": {
+        "showing": "Showing {current} of {total} results",
+        "page": "Page {current} of {total}",
+        "recordsPerPage": "Records per page",
+        "previous": "Previous",
+        "next": "Next"
+      },
+      "buttons": {
+        "cancel": "Cancel",
+        "select": "Select"
+      },
+      "loading": "Loading employees..."
+    }
+  }
+}

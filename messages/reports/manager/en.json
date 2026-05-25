@@ -1,0 +1,261 @@
+{
+  "title": "Reports",
+  "subtitle": "Management and administration of report templates",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "reports": "Reports",
+    "create": "Create Template",
+    "edit": "Edit Template"
+  },
+  "buttons": {
+    "create": "Create Report",
+    "edit": "Edit",
+    "generate": "Generate",
+    "delete": "Delete",
+    "deleting": "Deleting...",
+    "cancel": "Cancel",
+    "search": "Search",
+    "clear": "Clear",
+    "previous": "Previous",
+    "next": "Next",
+    "add": "Add",
+    "save": "SAVE",
+    "update": "UPDATE",
+    "saving": "Saving...",
+    "updating": "Updating...",
+    "creating": "Creating...",
+    "generating": "Generating...",
+    "close": "Close",
+    "createTemplate": "Create Template",
+    "updateTemplate": "Update Template",
+    "showPreview": "Show Preview",
+    "hidePreview": "Hide Preview",
+    "showJson": "Show JSON",
+    "hideJson": "Hide JSON",
+    "copyJson": "Copy JSON",
+    "createConsolidatedField": "Create Consolidated Field",
+    "createCalculatedField": "Create Calculated Column",
+    "addTotalRow": "Add Total Row",
+    "editTotalRow": "Edit",
+    "deleteTotalRow": "Delete",
+    "goToHistory": "Go to Reports History"
+  },
+  "filters": {
+    "search": "Search Templates",
+    "searchByName": "Search by name",
+    "searchByNamePlaceholder": "Search by template name...",
+    "filterByType": "Filter by type",
+    "allTypes": "All types",
+    "assistanceData": "Assistance Data",
+    "employeeData": "Employee Data"
+  },
+  "table": {
+    "headers": {
+      "name": "Name",
+      "description": "Description",
+      "reportType": "Report Type",
+      "columns": "Columns",
+      "createdAt": "Creation Date",
+      "updatedAt": "Last Update",
+      "actions": "Actions"
+    },
+    "loading": "Loading templates...",
+    "noData": "No templates found",
+    "noDataDescription": "Create your first report template",
+    "noName": "No name",
+    "notAvailable": "No description",
+    "columnsCount": "{count} columns",
+    "noFieldsSelected": "No fields selected",
+    "noFieldsSelectedDescription": "Click on fields in the left panel to add them",
+    "fieldsSelected": "{count} fields selected"
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} results",
+    "filteredFrom": "(filtered from {total} total)",
+    "page": "Page {current} of {total}",
+    "recordsPerPage": "Records per page"
+  },
+  "modals": {
+    "delete": {
+      "title": "Delete Template",
+      "message": "Are you sure you want to delete this template? This action cannot be undone."
+    },
+    "generate": {
+      "title": "Filters to Generate Report",
+      "configureFilters": "Configure Generation Filters",
+      "configureFiltersDescription": "These filters will be applied when generating the report. You can filter by date period, jobs, branches, and more.",
+      "datePeriod": "Date Period",
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "last7days": "Last 7 Days",
+      "last30days": "Last 30 Days",
+      "thisMonth": "This Month",
+      "lastMonth": "Last Month",
+      "custom": "Custom period",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "filterByJobs": "Filter by Jobs (Optional)",
+      "filterByJobsDescription": "Select the jobs to include in the report. Leave empty to include all.",
+      "selectJobs": "Select jobs...",
+      "jobsSelected": "{count} job(s) selected",
+      "selectAllJobs": "Select all",
+      "deselectAllJobs": "Deselect all",
+      "loadingJobs": "Loading jobs...",
+      "noJobsAvailable": "No jobs available",
+      "filterByBranches": "Filter by Branches (Optional)",
+      "filterByBranchesDescription": "Select the branches to include in the report. Leave empty to include all.",
+      "selectBranches": "Select branches...",
+      "branchesSelected": "{count} branch(es) selected",
+      "selectAllBranches": "Select all",
+      "deselectAllBranches": "Deselect all",
+      "loadingBranches": "Loading branches...",
+      "noBranchesAvailable": "No branches available",
+      "filterByDocument": "Filter by Document Number (Optional)",
+      "filterByDocumentDescription": "Select the document type and enter the number. You can add multiple documents.",
+      "documentPlaceholder": "Ex: 18.333.222-6",
+      "generateReport": "Generate Report"
+    },
+    "success": {
+      "title": "Report Generated Successfully!",
+      "message": "Your report is being processed in the background.",
+      "whatsNext": "What's next?",
+      "whatsNextDescription": "Once processing is complete, you can download your report from the reports history."
+    },
+    "totalRow": {
+      "create": "Create Total Row",
+      "edit": "Edit Total Row",
+      "name": "Total Row Name *",
+      "namePlaceholder": "Ex: Total Overtime Hours",
+      "nameDescription": "This will be the name that appears in the first column (if enabled)",
+      "headerTransform": "Header Format",
+      "headerTransformDescription": "Header display format",
+      "default": "Default",
+      "upper": "UPPERCASE",
+      "lower": "lowercase",
+      "totalType": "Total Type *",
+      "sum": "Sum (SUM)",
+      "avg": "Average (AVG)",
+      "count": "Count (COUNT)",
+      "min": "Minimum (MIN)",
+      "max": "Maximum (MAX)",
+      "custom": "Custom (Select by column)",
+      "customDescription": "Select the aggregation type for each numeric column",
+      "defaultDescription": "Will be applied to all numeric fields with aggregation",
+      "position": "Row Position *",
+      "top": "Top (After headers)",
+      "bottom": "Bottom (At end of report)",
+      "showLabel": "Show label in first column",
+      "selectFields": "Select Fields and Aggregation Type *",
+      "noNumericFields": "No numeric fields with aggregation available. Add numeric fields first.",
+      "none": "None",
+      "createButton": "Create Total Row",
+      "updateButton": "Update Total Row",
+      "grouping": "Total Grouping",
+      "groupBy": "Group by",
+      "groupByEmployee": "By Employee",
+      "groupByMonth": "By Month",
+      "groupByWeek": "By Week",
+      "groupByDescription": "Select criteria to group totals. Totals will be displayed automatically when the selected criteria changes.",
+      "labelTemplate": "Label Template",
+      "labelTemplatePlaceholder": "E.g: Total employee - month year",
+      "labelTemplateDescription": "Custom template for the grouped total label. Use variables in curly braces to insert dynamic values.",
+      "availableVariables": "Available variables",
+      "showGroupContext": "Show group context automatically",
+      "showGroupContextDescription": "If enabled, the label will be automatically completed with group context (employee, month, week) if no template is specified.",
+      "insertVariable": "Insert variable",
+      "variableEmployee": "Full Name",
+      "variableFirstName": "First Name",
+      "variableMonthName": "Month (Name)",
+      "variableYear": "Year",
+      "variableWeek": "Week",
+      "variableWeekRange": "Week Range",
+      "example": "Example",
+      "exampleEmployee": "If grouping by employee: 'Total John Doe'",
+      "exampleEmployeeMonth": "If grouping by employee and month: 'Total John Doe - January 2024'",
+      "exampleMonth": "If grouping by month: 'Total - January 2024'",
+      "exampleWeek": "If grouping by week: 'Total - Week 3'"
+    }
+  },
+  "create": {
+    "title": {
+      "create": "Create Template",
+      "edit": "Edit Template"
+    },
+    "subtitle": {
+      "create": "Configure the fields and options for your custom report template",
+      "edit": "Edit your custom report template"
+    },
+    "loading": "Loading template...",
+    "reportInfo": "Report Information",
+    "fields": {
+      "reportName": "Report Name *",
+      "reportNamePlaceholder": "Ex: Monthly Attendance Report",
+      "description": "Description",
+      "descriptionPlaceholder": "Brief report description",
+      "reportType": "Report Type",
+      "reportTypePlaceholder": "Select a type",
+      "headerTransform": "Header Format",
+      "headerTransformDescription": "(Applies to all columns by default)",
+      "reportFields": "Report Fields",
+      "searchCategories": "Search categories...",
+      "searchCategoriesPlaceholder": "Search categories..."
+    },
+    "preview": {
+      "title": "Report Preview (Excel Simulation)",
+      "previewLabel": "Preview",
+      "description": "Showing {count} sample rows. The final report will include all data according to applied filters."
+    },
+    "jsonPreview": {
+      "title": "JSON Preview (Test)",
+      "description": "This is the JSON that will be generated when saving the report. This view is temporary for testing."
+    },
+    "totalRows": {
+      "configured": "Configured Total Rows",
+      "top": "Top",
+      "bottom": "Bottom",
+      "columns": "{count} columns",
+      "deleted": "Total row deleted",
+      "deletedDescription": "{label} has been deleted"
+    },
+    "validation": {
+      "nameRequired": "Report name is required",
+      "fieldsRequired": "You must add at least one field to the report",
+      "invalidReferences": "There are problems with field references. Check the console.",
+      "cleanedReferences": "Some invalid references were cleaned. Try saving again."
+    }
+  },
+  "toast": {
+    "templateCreated": {
+      "title": "Template created",
+      "description": "The template has been created successfully"
+    },
+    "templateUpdated": {
+      "title": "Template updated",
+      "description": "The template has been updated successfully"
+    },
+    "templateDeleted": {
+      "title": "Template deleted",
+      "description": "The template has been deleted successfully"
+    },
+    "deleteError": {
+      "title": "Error deleting template",
+      "description": "Error deleting template"
+    },
+    "jsonCopied": {
+      "title": "JSON copied",
+      "description": "The JSON has been copied to clipboard"
+    }
+  },
+  "reportTypes": {
+    "ASSISTANCE": "Assistance Data",
+    "EMPLOYEE_DATA": "Employee Data"
+  },
+  "aggregationTypes": {
+    "sum": "Sum",
+    "avg": "Average",
+    "count": "Count",
+    "min": "Minimum",
+    "max": "Maximum",
+    "none": "None"
+  }
+}

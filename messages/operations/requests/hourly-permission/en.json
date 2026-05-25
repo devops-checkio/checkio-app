@@ -1,0 +1,350 @@
+{
+  "title": "Hourly Permission Requests",
+  "subtitle": "Manage employee hourly permission requests",
+  "selectCompanyHint": "Select a company in the top menu to view hourly permission requests.",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Operations",
+    "requests": "Requests",
+    "hourlyPermission": "Hourly Permissions"
+  },
+  "buttons": {
+    "newRequest": "New Request"
+  },
+  "tabs": {
+    "pending": {
+      "label": "Pending Review",
+      "table": {
+        "loading": "Loading pending requests...",
+        "noData": "No pending requests",
+        "headers": {
+          "employee": "Employee",
+          "reason": "Reason",
+          "date": "Date",
+          "startTime": "Start Time",
+          "endTime": "End Time",
+          "type": "Type",
+          "requestedBy": "Requested By",
+          "createdAt": "Request Date",
+          "status": "Status",
+          "actions": "Actions"
+        }
+      },
+      "status": {
+        "pending": "Pending"
+      },
+      "types": {
+        "entry": "Entry",
+        "exit": "Exit",
+        "both": "Entry and Exit"
+      },
+      "pagination": {
+        "showing": "Showing {current} of {total} results",
+        "recordsPerPage": "Records per page",
+        "previous": "Previous",
+        "next": "Next",
+        "page": "Page {current} of {total}"
+      },
+      "ariaLabels": {
+        "view": "View request",
+        "approve": "Approve request",
+        "reject": "Reject request"
+      },
+      "buttons": {
+        "view": "View",
+        "approve": "Approve",
+        "reject": "Reject"
+      }
+    },
+    "approved": {
+      "label": "Approved",
+      "table": {
+        "loading": "Loading approved requests...",
+        "noData": "No approved requests",
+        "headers": {
+          "employee": "Employee",
+          "reason": "Reason",
+          "date": "Date",
+          "startTime": "Start Time",
+          "endTime": "End Time",
+          "type": "Type",
+          "approvedBy": "Approved By",
+          "approvedAt": "Approval Date",
+          "status": "Status",
+          "actions": "Actions"
+        }
+      },
+      "status": {
+        "approved": "Approved"
+      },
+      "types": {
+        "entry": "Entry",
+        "exit": "Exit",
+        "both": "Entry and Exit"
+      },
+      "pagination": {
+        "showing": "Showing {current} of {total} results",
+        "recordsPerPage": "Records per page",
+        "previous": "Previous",
+        "next": "Next",
+        "page": "Page {current} of {total}"
+      },
+      "ariaLabels": {
+        "view": "View request"
+      },
+      "buttons": {
+        "view": "View"
+      }
+    },
+    "rejected": {
+      "label": "Rejected",
+      "table": {
+        "loading": "Loading rejected requests...",
+        "noData": "No rejected requests",
+        "headers": {
+          "employee": "Employee",
+          "reason": "Reason",
+          "date": "Date",
+          "startTime": "Start Time",
+          "endTime": "End Time",
+          "type": "Type",
+          "rejectedBy": "Rejected By",
+          "rejectedAt": "Rejection Date",
+          "rejectionReason": "Rejection Reason",
+          "status": "Status",
+          "actions": "Actions"
+        }
+      },
+      "status": {
+        "rejected": "Rejected"
+      },
+      "types": {
+        "entry": "Entry",
+        "exit": "Exit",
+        "both": "Entry and Exit"
+      },
+      "pagination": {
+        "showing": "Showing {current} of {total} results",
+        "recordsPerPage": "Records per page",
+        "previous": "Previous",
+        "next": "Next",
+        "page": "Page {current} of {total}"
+      },
+      "ariaLabels": {
+        "view": "View request"
+      },
+      "buttons": {
+        "view": "View"
+      }
+    }
+  },
+  "modal": {
+    "title": {
+      "create": "Request Hourly Permission",
+      "view": "View Hourly Permission Request",
+      "edit": "Edit Hourly Permission Request",
+      "default": "Hourly Permission Request"
+    },
+    "fields": {
+      "employee": "Employee",
+      "reason": "Permission Reason",
+      "date": "Date",
+      "type": "Permission Type",
+      "startTime": "Start Time",
+      "startTimeEntry": "Entry Time",
+      "endTime": "End Time",
+      "endTimeExit": "Exit Time",
+      "observation": "Observation",
+      "withSalary": "With Pay",
+      "withSalaryYes": "Yes",
+      "withSalaryNo": "No"
+    },
+    "placeholders": {
+      "employee": "Select employee",
+      "reason": "e.g.: Medical appointment, personal matter, etc.",
+      "date": "dd/mm/yyyy",
+      "type": "Select type",
+      "observation": "Enter an observation (optional)"
+    },
+    "types": {
+      "entry": "Entry",
+      "exit": "Exit",
+      "both": "Entry and Exit"
+    },
+    "validation": {
+      "employeeRequired": "Please select an employee",
+      "reasonRequired": "Please enter the permission reason",
+      "dateRequired": "Please select the date",
+      "pastDateNotAllowed": "The date must be equal to or later than today",
+      "typeRequired": "Please select the permission type",
+      "startTimeRequired": "Please select the start time",
+      "endTimeRequired": "Please select the end time",
+      "endTimeAfterStartTime": "The end time must be after the start time",
+      "errors": {
+        "requiredFields": {
+          "title": "Error",
+          "description": "Please complete all required fields"
+        },
+        "invalidEmployee": {
+          "title": "Error",
+          "description": "The selected employee is not valid"
+        },
+        "inactiveEmployee": {
+          "title": "Error",
+          "description": "The selected employee is not active"
+        },
+        "invalidDate": {
+          "title": "Error",
+          "description": "Please select a valid date"
+        },
+        "pastDate": {
+          "title": "Error",
+          "description": "The date must be equal to or later than today"
+        },
+        "startTimeRequired": {
+          "title": "Error",
+          "description": "Please select the start time"
+        },
+        "endTimeRequired": {
+          "title": "Error",
+          "description": "Please select the end time"
+        },
+        "invalidTimeRange": {
+          "title": "Error",
+          "description": "The end time must be after the start time"
+        }
+      }
+    },
+    "buttons": {
+      "create": "Create Request",
+      "update": "Update Request",
+      "save": "Save",
+      "cancel": "Cancel",
+      "close": "Close",
+      "processing": "Processing..."
+    },
+    "toast": {
+      "createSuccess": {
+        "title": "Request created",
+        "description": "The hourly permission request has been created successfully"
+      },
+      "createError": {
+        "title": "Process completed with errors",
+        "description": "{successCount} requests created successfully, {errorCount} with errors"
+      }
+    },
+    "approve": {
+      "title": "Approve Hourly Permission Request",
+      "types": {
+        "entry": "Entry",
+        "exit": "Exit",
+        "both": "Entry and Exit"
+      },
+      "details": {
+        "title": "Request Details",
+        "fields": {
+          "employee": "Employee",
+          "date": "Date",
+          "startTime": "Start Time",
+          "endTime": "End Time",
+          "type": "Permission Type",
+          "reason": "Reason",
+          "observation": "Observation",
+          "requestedBy": "Requested By",
+          "createdAt": "Request Date",
+          "withSalary": "With Pay",
+          "withSalaryYes": "Yes",
+          "withSalaryNo": "No"
+        }
+      },
+      "confirmation": {
+        "title": "Are you sure you want to approve this request?",
+        "description": "By approving this request, the employee will be able to use the hourly permission on the specified date and times."
+      },
+      "buttons": {
+        "cancel": "Cancel",
+        "approve": "Approve Request",
+        "processing": "Processing..."
+      },
+      "toast": {
+        "success": {
+          "title": "Request approved",
+          "description": "The hourly permission request has been approved successfully"
+        },
+        "error": {
+          "title": "Error",
+          "description": "Error approving the request"
+        }
+      }
+    },
+    "reject": {
+      "title": {
+        "entry": "Reject Late Entry Request",
+        "exit": "Reject Early Exit Request",
+        "both": "Reject Hourly Permission Request",
+        "default": "Reject Hourly Permission Request"
+      },
+      "fields": {
+        "rejectionReason": "Rejection Reason"
+      },
+      "types": {
+        "entry": "Entry",
+        "exit": "Exit",
+        "both": "Entry and Exit"
+      },
+      "placeholders": {
+        "rejectionReason": {
+          "entry": "Explain why the late entry request is being rejected...",
+          "exit": "Explain why the early exit request is being rejected...",
+          "both": "Explain why this hourly permission request is being rejected..."
+        }
+      },
+      "validation": {
+        "rejectionReasonRequired": "Please enter the rejection reason"
+      },
+      "details": {
+        "title": "Request Details",
+        "fields": {
+          "employee": "Employee",
+          "date": "Date",
+          "startTime": "Entry Time",
+          "endTime": "Exit Time",
+          "type": "Permission Type",
+          "reason": "Reason",
+          "reasonEntry": "Late Entry Reason",
+          "reasonExit": "Early Exit Reason",
+          "reasonBoth": "Permission Reason",
+          "observation": "Observation",
+          "requestedBy": "Requested By",
+          "createdAt": "Request Date",
+          "withSalary": "With Pay",
+          "withSalaryYes": "Yes",
+          "withSalaryNo": "No"
+        }
+      },
+      "confirmation": {
+        "title": "Are you sure you want to reject this request?",
+        "description": {
+          "entry": "By rejecting this request, the employee will not be able to justify their late entry and must comply with the normal entry schedule.",
+          "exit": "By rejecting this request, the employee will not be able to justify their early exit and must comply with the normal exit schedule.",
+          "both": "By rejecting this request, the employee will not be able to use the requested hourly permission and must comply with the normal work schedule."
+        }
+      },
+      "buttons": {
+        "cancel": "Cancel",
+        "reject": "Reject Request",
+        "processing": "Processing..."
+      },
+      "toast": {
+        "success": {
+          "title": "Request rejected",
+          "description": "The hourly permission request has been rejected successfully"
+        },
+        "error": {
+          "title": "Error",
+          "description": "Error rejecting the request"
+        }
+      }
+    }
+  }
+}

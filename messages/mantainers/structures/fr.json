@@ -1,0 +1,123 @@
+{
+  "successTitle": "Succès",
+  "title": "Gestion des Structures",
+  "subtitle": "Gérez les structures du système",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mainteneurs",
+    "structures": "Structures"
+  },
+  "buttons": {
+    "add": "Ajouter une Structure",
+    "manageStructure": "Gérer la structure",
+    "downloadExcel": "Télécharger Excel",
+    "search": "Rechercher",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "cancel": "Annuler",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "assignCompanies": "Attribuer des Entreprises"
+  },
+  "table": {
+    "headers": {
+      "name": "Nom",
+      "companies": "Entreprises",
+      "actions": "Actions"
+    },
+    "loading": "Chargement des structures...",
+    "noData": "Aucune structure trouvée",
+    "noDataDescription": "Créez une nouvelle structure pour commencer."
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} résultats",
+    "recordsPerPage": "Enregistrements par page:",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page {current} sur {total}"
+  },
+  "ariaLabels": {
+    "editStructure": "Modifier la structure",
+    "deleteStructure": "Supprimer la structure",
+    "assignCompanies": "Attribuer des entreprises",
+    "manageStructure": "Gérer la structure complète"
+  },
+  "filters": {
+    "searchPlaceholder": "Rechercher un nom..."
+  },
+  "excel": {
+    "filename": "structures",
+    "sheetName": "Structures",
+    "headers": {
+      "name": "Nom",
+      "companies": "Entreprises"
+    }
+  },
+  "delete": {
+    "message": "Êtes-vous sûr de vouloir supprimer cette structure?",
+    "success": "Structure supprimée avec succès"
+  },
+  "structureDetail": {
+    "title": "Structure: {name}",
+    "configureLevels": "Configurer les noms de niveaux",
+    "downloadStructure": "Télécharger la structure (CSV)",
+    "noLevelsConfigured": "Aucun niveau configuré",
+    "noLevelsDescription": "Utilisez «Configurer les noms de niveaux» pour ajouter le premier niveau",
+    "structureLabel": "Structure",
+    "level": "Niveau",
+    "backAria": "Retour à la liste des structures"
+  },
+  "levelDetail": {
+    "backAria": "Retour à la vue de la structure",
+    "new": "Nouveau",
+    "bulkUpload": "Chargement en masse",
+    "filterByParent": "Filtrer par parent",
+    "all": "Tous",
+    "noSubunits": "Aucune sous-unité",
+    "noSubunitsDescription": "Utilisez «Nouveau» ou «Chargement en masse» pour ajouter.",
+    "viewChildren": "Voir les enfants",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "deleteSubunit": "Supprimer la sous-unité",
+    "newSubunit": "Nouvelle sous-unité",
+    "editSubunit": "Modifier la sous-unité",
+    "name": "Nom",
+    "code": "Code",
+    "parent": "Parent",
+    "noParent": "Sans parent",
+    "parents": "Parents",
+    "parentsSearchPlaceholder": "Rechercher par nom ou code…",
+    "parentsSearchAria": "Filtrer la liste des parents",
+    "parentsSelectFiltered": "Ajouter les résultats filtrés",
+    "parentsSelectAll": "Tout sélectionner",
+    "parentsClear": "Effacer la sélection",
+    "parentsEmpty": "Aucun parent disponible",
+    "parentsNoMatches": "Aucun parent ne correspond à la recherche",
+    "parentsSelectedCount": "{count, plural, one {# parent sélectionné} other {# parents sélectionnés}}",
+    "parentsPickerHint": "Cliquez sur une ligne pour sélectionner ou désélectionner.",
+    "validationParentsRequired": "Sélectionnez au moins un parent",
+    "validationNameRequired": "Le nom est obligatoire",
+    "validationCodeRequired": "Le code est obligatoire",
+    "namePlaceholder": "Ex. : Sous-unité",
+    "codePlaceholder": "Ex. : COD-01",
+    "save": "Enregistrer",
+    "create": "Créer",
+    "saving": "Enregistrement…",
+    "creating": "Création…",
+    "searchLabel": "Recherche",
+    "searchPlaceholder": "Nom, code ou parent…",
+    "searchButton": "Rechercher",
+    "searchResults": "{count} résultat(s) pour « {term} »",
+    "searchNoResults": "Aucun résultat pour « {term} »",
+    "loadError": "Erreur de chargement",
+    "retry": "Réessayer",
+    "employees": "Employés",
+    "bulkParentColumnLabel": "Parent(s) : code, nom ou UUID ; plusieurs séparés par une virgule. Si le code est en double, utilisez l’UUID.",
+    "bulkUploadModalTitle": "Chargement en masse : {levelName}",
+    "loadingData": "Chargement…",
+    "uploadNoParentsWarning": "Créez au moins une sous-unité au niveau précédent avant le chargement en masse à ce niveau.",
+    "toastSubunitCreated": "Sous-unité créée",
+    "toastSubunitUpdated": "Sous-unité mise à jour",
+    "toastSubunitDeleted": "Sous-unité supprimée"
+  }
+}

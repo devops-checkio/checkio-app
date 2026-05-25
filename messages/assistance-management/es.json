@@ -1,0 +1,353 @@
+{
+  "title": "Gestión de Asistencia",
+  "subtitle": "Gestión de Asistencia",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "assistance": "Gestión de Asistencia"
+  },
+  "assistanceAbsent": "Asistencias Ausentes",
+  "assistanceIncomplete": "Asistencias Incompletas",
+  "assistanceWithoutSchedule": "Asistencias Sin Horario",
+  "assistanceCompleted": "Asistencias Completas",
+  "assistancePending": "Marcas Esperando Aprobación",
+  "assistanceRejected": "Marcas Rechazadas",
+  "filterEmployee": "Empleado",
+  "filterEmployeePlaceholder": "Buscar por nombre o número de documento...",
+  "auditMap": {
+    "noLocationData": "No hay datos de geolocalización disponibles para esta marcación",
+    "withinAuthorizedZone": "Dentro de zona autorizada",
+    "withinMarginZone": "Dentro de margen de error (30m)",
+    "outsideAuthorizedZone": "Fuera de zona autorizada",
+    "branchZone": "Zona de sucursal",
+    "homeOfficeZone": "Zona de home office",
+    "errorMarginZone": "Margen de error (30m)",
+    "authorizedMarkingArea": "Zona autorizada de marcación",
+    "locationInfo": "Información de Ubicación",
+    "latitude": "Latitud",
+    "longitude": "Longitud",
+    "authorizedZonesCount": "Zonas autorizadas"
+  },
+  "extraPendingApproval": "Horas extra a aprobar",
+  "delayPendingApproval": "Atrasos a aprobar",
+  "tabs": {
+    "extraApproval": {
+      "loading": "Cargando...",
+      "noData": "No hay horas extra pendientes de aprobar",
+      "noTimeBank": "Sin banco de horas",
+      "configureTimeBank": "Configurar banco",
+      "headers": {
+        "employee": "Empleado",
+        "date": "Fecha",
+        "extraSeconds": "Horas extra",
+        "actions": "Acciones"
+      },
+      "approve": "Aprobar",
+      "reject": "Rechazar",
+      "pagination": {
+        "showing": "Mostrando {current} de {total} resultados",
+        "recordsPerPage": "Registros por página",
+        "previous": "Anterior",
+        "next": "Siguiente",
+        "page": "Página {current} de {total}"
+      }
+    },
+    "delayApproval": {
+      "loading": "Cargando...",
+      "noData": "No hay atrasos pendientes de aprobar",
+      "noTimeBank": "Sin banco de horas",
+      "configureTimeBank": "Configurar banco",
+      "headers": {
+        "employee": "Empleado",
+        "date": "Fecha",
+        "delaySeconds": "Atraso llegada",
+        "earlyDepartureSeconds": "Salida anticipada",
+        "actions": "Acciones"
+      },
+      "approve": "Aprobar",
+      "reject": "Rechazar",
+      "pagination": {
+        "showing": "Mostrando {current} de {total} resultados",
+        "recordsPerPage": "Registros por página",
+        "previous": "Anterior",
+        "next": "Siguiente",
+        "page": "Página {current} de {total}"
+      }
+    }
+  },
+  "approval": {
+    "extra": {
+      "approve": {
+        "title": "Aprobar horas extra",
+        "details": {
+          "title": "Detalle",
+          "employee": "Empleado",
+          "date": "Fecha",
+          "extraSeconds": "Horas extra"
+        },
+        "warningNoUndo": "Una vez aceptada, no hay marcha atrás. Esta acción no se puede deshacer.",
+        "amountToApprove": "Cantidad a aprobar",
+        "amountToApproveHint": "Máximo {max} minutos.",
+        "buttons": {
+          "cancel": "Cancelar",
+          "approve": "Aprobar",
+          "processing": "Procesando..."
+        },
+        "toast": {
+          "success": {
+            "title": "Aprobado",
+            "description": "Las horas extra han sido aprobadas."
+          },
+          "error": {
+            "title": "Error",
+            "description": "No se pudo aprobar."
+          }
+        }
+      },
+      "reject": {
+        "title": "Rechazar horas extra",
+        "details": {
+          "title": "Detalle",
+          "employee": "Empleado",
+          "date": "Fecha",
+          "extraSeconds": "Horas extra"
+        },
+        "buttons": {
+          "cancel": "Cancelar",
+          "reject": "Rechazar",
+          "processing": "Procesando..."
+        },
+        "toast": {
+          "success": {
+            "title": "Rechazado",
+            "description": "Las horas extra han sido rechazadas."
+          },
+          "error": {
+            "title": "Error",
+            "description": "No se pudo rechazar."
+          }
+        }
+      }
+    },
+    "delay": {
+      "approve": {
+        "title": "Aprobar atrasos",
+        "details": {
+          "title": "Detalle",
+          "employee": "Empleado",
+          "date": "Fecha",
+          "delaySeconds": "Atraso llegada",
+          "earlyDepartureSeconds": "Salida anticipada",
+          "total": "Total"
+        },
+        "warningNoUndo": "Una vez aceptada, no hay marcha atrás. Esta acción no se puede deshacer.",
+        "amountToApprove": "Cantidad a aprobar",
+        "amountToApproveHint": "Máximo {max} minutos.",
+        "buttons": {
+          "cancel": "Cancelar",
+          "approve": "Aprobar",
+          "processing": "Procesando..."
+        },
+        "toast": {
+          "success": {
+            "title": "Aprobado",
+            "description": "Los atrasos han sido aprobados."
+          },
+          "error": {
+            "title": "Error",
+            "description": "No se pudo aprobar."
+          }
+        }
+      },
+      "reject": {
+        "title": "Rechazar atrasos",
+        "details": {
+          "title": "Detalle",
+          "employee": "Empleado",
+          "date": "Fecha",
+          "total": "Total"
+        },
+        "buttons": {
+          "cancel": "Cancelar",
+          "reject": "Rechazar",
+          "processing": "Procesando..."
+        },
+        "toast": {
+          "success": {
+            "title": "Rechazado",
+            "description": "Los atrasos han sido rechazados."
+          },
+          "error": {
+            "title": "Error",
+            "description": "No se pudo rechazar."
+          }
+        }
+      }
+    }
+  },
+  "detailTour": {
+    "startButton": "Ver guía",
+    "buttons": {
+      "next": "Siguiente",
+      "previous": "Anterior",
+      "done": "Finalizar"
+    },
+    "tabs": {
+      "common": {
+        "steps": {
+          "welcome": {
+            "title": "Gestión de Asistencia",
+            "description": "Vista de asistencias y acciones disponibles según el tab seleccionado."
+          },
+          "tabs": {
+            "title": "Vistas de asistencia",
+            "description": "Cada tab muestra un tipo distinto de asistencia. El número indica registros que requieren atención. Pulsar en un tab para cambiar de vista. Las pestañas con alerta (parpadeo) tienen registros pendientes."
+          },
+          "filters": {
+            "title": "Filtros de búsqueda",
+            "description": "Filtre por fecha (día, mes, año o rango), nombre, documento, cargo o sucursal. Use Limpiar para restablecer. Los filtros se aplican a todos los tabs."
+          },
+          "toolbar": {
+            "title": "Acciones del tab",
+            "description": "Botones disponibles según el tab: crear asistencias, autocompletar, asignar horarios, aprobar o rechazar. Las acciones que requieren selección solo se activan al elegir filas."
+          },
+          "table": {
+            "title": "Tabla de registros",
+            "description": "Listado con fecha, documento, nombre, marcaciones y acciones. Use el icono de ojo para ver detalles de marcaciones. En Incompletas y Ausentes puede marcar filas para acciones masivas."
+          },
+          "pagination": {
+            "title": "Paginación",
+            "description": "Navegue entre páginas y ajuste registros por página (10, 20, 50, 100, 200)."
+          }
+        }
+      },
+      "1": {
+        "steps": {
+          "welcome": {
+            "title": "Asistencias Incompletas",
+            "description": "Empleados con marcaciones faltantes (entrada, salida o colaciones). Desde aquí puede: Crear Asistencias (para empleados que deben asistir pero no tienen registro), Autocompletar Automático (rellena marcaciones según horario), Autocompletar Manual (completar marca por marca) o Asignar Horarios (dar turno a quien no lo tiene). Seleccione filas con el checkbox para habilitar acciones masivas."
+          },
+          "toolbar": {
+            "title": "Acciones disponibles - Incompletas",
+            "description": "Crear Asistencias: genera registro para empleados sin asistencia del día. Autocompletar Automático: completa entrada/salida según horario asignado. Autocompletar Manual: abre modal para completar cada marca manualmente. Asignar Horarios: asigna turno a empleados seleccionados. Los tres últimos solo se activan al seleccionar una o más filas."
+          },
+          "table": {
+            "title": "Columnas de la tabla",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Checkbox</strong>: Seleccione filas para acciones masivas</li><li><strong>Fecha</strong>: Día de la asistencia</li><li><strong>N° Documento</strong>: Documento del empleado</li><li><strong>Horario</strong>: Turno y horario programado</li><li><strong>Nombre</strong>: Nombre del empleado</li><li><strong>Entrada</strong>: Hora de entrada (vacío si no marcó)</li><li><strong>Colaciones</strong>: Pausas o breaks registrados</li><li><strong>Salida</strong>: Hora de salida (vacío si no marcó)</li><li><strong>Adicionales</strong>: Marcas fuera del horario</li><li><strong>Atrasos</strong>: Retrasos o salidas anticipadas</li><li><strong>Verificación Fotos</strong>: Fotos biométricas válidas/inválidas</li><li><strong>Acciones</strong>: Clic para ver detalle de marcaciones</li></ul>"
+          }
+        }
+      },
+      "2": {
+        "steps": {
+          "welcome": {
+            "title": "Asistencias Sin Horario",
+            "description": "Empleados que no tienen turno asignado para el día. Sin horario no pueden marcar correctamente. Desde aquí puede Crear Asistencias o Asignar Horarios masivamente. Seleccione filas con el checkbox para habilitar las acciones en la barra superior."
+          },
+          "toolbar": {
+            "title": "Acciones disponibles - Sin Horario",
+            "description": "Crear Asistencias: genera registro de asistencia. Asignar Horarios: asigna turno a los empleados seleccionados. Autocompletar y Asignar Horarios solo se activan al seleccionar una o más filas."
+          },
+          "table": {
+            "title": "Columnas de la tabla",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Checkbox</strong>: Seleccione filas para acciones masivas</li><li><strong>Fecha</strong>: Día de la asistencia</li><li><strong>N° Documento</strong>: Documento del empleado</li><li><strong>Nombre</strong>: Nombre del empleado</li><li><strong>Entrada</strong>: Hora de entrada (vacío si no marcó)</li><li><strong>Colaciones</strong>: Pausas registradas</li><li><strong>Salida</strong>: Hora de salida (vacío si no marcó)</li><li><strong>Estado</strong>: Estado del registro</li><li><strong>Hrs</strong>: Horas trabajadas si aplica</li><li><strong>Acciones</strong>: Clic para ver detalle</li></ul>"
+          }
+        }
+      },
+      "3": {
+        "steps": {
+          "welcome": {
+            "title": "Asistencias Ausentes",
+            "description": "Empleados que no registraron ninguna marcación el día. Puede Crear Asistencias, Autocompletar (si tienen horario) o Asignar Horarios. Use el checkbox para selección múltiple y ejecutar acciones masivas sobre varios empleados a la vez."
+          },
+          "toolbar": {
+            "title": "Acciones disponibles - Ausentes",
+            "description": "Crear Asistencias, Autocompletar Automático, Autocompletar Manual y Asignar Horarios. Se activan al seleccionar una o más filas."
+          },
+          "table": {
+            "title": "Columnas de la tabla",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Checkbox</strong>: Seleccione filas para acciones masivas</li><li><strong>Fecha</strong>: Día de la asistencia</li><li><strong>N° Documento</strong>: Documento del empleado</li><li><strong>Nombre</strong>: Nombre del empleado</li><li><strong>Horario</strong>: Turno asignado</li><li><strong>Entrada</strong>: Hora de entrada (vacío en ausentes)</li><li><strong>Colaciones</strong>: Pausas registradas</li><li><strong>Salida</strong>: Hora de salida (vacío en ausentes)</li><li><strong>Adicionales</strong>: Marcas fuera del horario</li><li><strong>Atrasos</strong>: Retrasos o salidas anticipadas</li><li><strong>Verificación Fotos</strong>: Fotos biométricas</li><li><strong>Acciones</strong>: Clic para ver detalle</li></ul>"
+          }
+        }
+      },
+      "4": {
+        "steps": {
+          "welcome": {
+            "title": "Asistencias Completas",
+            "description": "Registros con todas las marcaciones realizadas (entrada, colaciones y salida). Esta vista es de solo consulta: use el icono de ojo para ver el detalle de marcaciones, ubicación y fotos de verificación de cada empleado."
+          },
+          "toolbar": {
+            "title": "Acciones - Completas",
+            "description": "En este tab no hay barra de acciones; la tabla es de solo lectura para consultar asistencias ya completadas."
+          },
+          "table": {
+            "title": "Columnas de la tabla",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Fecha</strong>: Día de la asistencia</li><li><strong>N° Documento</strong>: Documento del empleado</li><li><strong>Horario</strong>: Turno y horario programado</li><li><strong>Nombre</strong>: Nombre del empleado</li><li><strong>Entrada</strong>: Hora de entrada</li><li><strong>Colaciones</strong>: Pausas registradas</li><li><strong>Salida</strong>: Hora de salida</li><li><strong>Adicionales</strong>: Marcas fuera del horario</li><li><strong>Atrasos</strong>: Retrasos o salidas anticipadas</li><li><strong>Verificación Fotos</strong>: Fotos biométricas válidas/inválidas</li><li><strong>Acciones</strong>: Clic para ver detalle</li></ul>"
+          }
+        }
+      },
+      "5": {
+        "steps": {
+          "welcome": {
+            "title": "Marcas Esperando Aprobación",
+            "description": "Marcaciones manuales o corregidas que requieren aprobación del supervisor. Revise cada registro y use el icono de ojo para ver el detalle antes de aprobar o rechazar. Las marcas pendientes se muestran en amarillo."
+          },
+          "toolbar": {
+            "title": "Acciones - Marcas Pendientes",
+            "description": "En este tab no hay barra de acciones superior; las acciones se realizan desde el modal de detalle al hacer clic en el icono de ojo."
+          },
+          "table": {
+            "title": "Columnas de la tabla",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Fecha</strong>: Día de la asistencia</li><li><strong>N° Documento</strong>: Documento del empleado</li><li><strong>Nombre</strong>: Nombre del empleado</li><li><strong>Entrada</strong>: Hora de entrada registrada</li><li><strong>Salida</strong>: Hora de salida registrada</li><li><strong>Marcas Pendientes</strong>: Marcas que esperan aprobación (en amarillo)</li><li><strong>Acciones</strong>: Clic para ver detalle y aprobar o rechazar</li></ul>"
+          }
+        }
+      },
+      "6": {
+        "steps": {
+          "welcome": {
+            "title": "Marcas Rechazadas",
+            "description": "Vista de marcas rechazadas por el supervisor. Esta funcionalidad está en desarrollo."
+          },
+          "toolbar": {
+            "title": "Acciones - Marcas Rechazadas",
+            "description": "En este tab no hay barra de acciones; la funcionalidad está en desarrollo."
+          },
+          "table": {
+            "title": "Columnas de la tabla",
+            "description": "<p style='margin:0.5em 0'>Vista de marcas rechazadas por el supervisor. Funcionalidad en desarrollo.</p>"
+          }
+        }
+      },
+      "7": {
+        "steps": {
+          "welcome": {
+            "title": "Horas extra pendientes de aprobar",
+            "description": "Registros con horas extra que requieren aprobación del supervisor. Aprobar suma las horas al banco del empleado. Rechazar descarta la solicitud. Si el empleado no tiene banco configurado, use el enlace Configurar banco antes de aprobar."
+          },
+          "toolbar": {
+            "title": "Acciones - Horas Extra",
+            "description": "En cada fila: Aprobar (suma al banco de horas) y Rechazar (descarta). Si aparece Sin banco de horas, use Configurar banco para crear el banco del empleado antes de aprobar."
+          },
+          "table": {
+            "title": "Columnas de la tabla",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Empleado</strong>: Nombre del empleado</li><li><strong>Fecha</strong>: Día de la asistencia</li><li><strong>Horas extra</strong>: Minutos u horas que requieren aprobación</li><li><strong>Acciones</strong>: Aprobar o Rechazar; Configurar banco si no existe</li></ul>"
+          }
+        }
+      },
+      "8": {
+        "steps": {
+          "welcome": {
+            "title": "Atrasos pendientes de aprobar",
+            "description": "Registros con atrasos de entrada o salida anticipada que requieren aprobación. Similar a horas extra: Aprobar o Rechazar. Si el empleado no tiene banco configurado, use Configurar banco antes de aprobar."
+          },
+          "toolbar": {
+            "title": "Acciones - Atrasos",
+            "description": "Aprobar y Rechazar por fila. Configurar banco si el empleado no tiene banco de horas."
+          },
+          "table": {
+            "title": "Columnas de la tabla",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Empleado</strong>: Nombre del empleado</li><li><strong>Fecha</strong>: Día de la asistencia</li><li><strong>Atraso llegada</strong>: Minutos de retraso al entrar</li><li><strong>Salida anticipada</strong>: Minutos de salida antes de hora</li><li><strong>Acciones</strong>: Aprobar o Rechazar</li></ul>"
+          }
+        }
+      }
+    }
+  }
+}

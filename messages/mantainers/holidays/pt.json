@@ -1,0 +1,183 @@
+{
+  "title": "Gerenciamento de Feriados",
+  "subtitle": "Gerencie os feriados do sistema",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "holidays": "Feriados"
+  },
+  "buttons": {
+    "add": "Adicionar Feriado",
+    "import": "Importar Feriados",
+    "downloadExcel": "Baixar Excel",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "save": "SALVAR",
+    "update": "ATUALIZAR",
+    "creating": "Criando...",
+    "updating": "Atualizando...",
+    "cancel": "Cancelar",
+    "importButton": "Importar",
+    "importing": "Importando...",
+    "loadHolidays": "Carregar Feriados",
+    "loading": "Carregando..."
+  },
+  "table": {
+    "headers": {
+      "name": "Nome",
+      "date": "Data",
+      "isWaivable": "É Irrenunciável",
+      "actions": "Ações"
+    },
+    "loading": "Carregando feriados...",
+    "noData": "Nenhum feriado encontrado",
+    "noDataDescription": "Adicione um novo feriado para começar."
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} feriados",
+    "recordsPerPage": "Registros por página:",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "page": "Página {current} de {total}"
+  },
+  "delete": {
+    "title": "Confirmar exclusão",
+    "message": "Tem certeza de que deseja excluir este feriado?",
+    "success": {
+      "title": "Feriado excluído com sucesso",
+      "description": "O feriado foi excluído corretamente"
+    },
+    "error": {
+      "title": "Erro",
+      "description": "Erro ao excluir o feriado"
+    }
+  },
+  "excel": {
+    "success": "Excel gerado com sucesso",
+    "error": "Erro ao gerar o Excel",
+    "filename": "feriados",
+    "sheetName": "Feriados",
+    "headers": {
+      "name": "Nome",
+      "date": "Data",
+      "isWaivable": "É Irrenunciável"
+    }
+  },
+  "ariaLabels": {
+    "editHoliday": "Editar feriado",
+    "deleteHoliday": "Excluir feriado"
+  },
+  "toast": {
+    "createSuccess": {
+      "title": "Feriado criado com sucesso",
+      "description": "O feriado foi criado corretamente"
+    },
+    "updateSuccess": {
+      "title": "Feriado atualizado com sucesso",
+      "description": "O feriado foi atualizado corretamente"
+    },
+    "deleteSuccess": {
+      "title": "Feriado excluído com sucesso",
+      "description": "O feriado foi excluído corretamente"
+    },
+    "importSuccess": {
+      "title": "Feriados importados",
+      "description": "Os feriados foram importados corretamente"
+    },
+    "importWithErrors": {
+      "title": "Processo concluído com erros",
+      "description": "{success} feriados importados corretamente, {errors} com erros"
+    },
+    "loadSuccess": {
+      "title": "Sucesso",
+      "description": "{count} feriados carregados para o ano {year}"
+    },
+    "loadError": {
+      "title": "Erro",
+      "description": "Erro ao carregar os feriados da API"
+    },
+    "yearRequired": {
+      "title": "Erro",
+      "description": "Por favor, selecione um ano"
+    },
+    "error": {
+      "title": "Erro",
+      "description": "Ocorreu um erro ao processar"
+    }
+  },
+  "upsert": {
+    "title": {
+      "edit": "Editar Feriado",
+      "add": "Adicionar Feriado"
+    },
+    "fields": {
+      "name": "Nome",
+      "date": "Data",
+      "branches": "Filiais (Opcional)"
+    },
+    "placeholders": {
+      "name": "Nome",
+      "date": "Data",
+      "branches": "Selecione as filiais (opcional)"
+    },
+    "validation": {
+      "nameRequired": "Por favor, insira o nome do feriado",
+      "dateRequired": "Por favor, insira a data do feriado"
+    },
+    "branchAssignment": {
+      "title": "Atribuição de Filiais",
+      "noBranches": {
+        "label": "Sem filiais selecionadas:",
+        "description": "O feriado será aplicado de forma genérica para todas as filiais do sistema."
+      },
+      "withBranches": {
+        "label": "Filiais selecionadas ({count}):",
+        "description": "O feriado será aplicado exclusivamente para as filiais selecionadas."
+      },
+      "tooltip": "Se não selecionar nenhuma filial, o feriado será aplicado para todas as filiais. Se selecionar filiais específicas, o feriado será aplicado apenas para essas filiais."
+    },
+    "isWaivable": {
+      "label": "É irrenunciável",
+      "description": "Indica se o feriado pode ser renunciado pelo trabalhador"
+    }
+  },
+  "massive": {
+    "title": "Importação em Massa de Feriados",
+    "message": "Os seguintes feriados serão importados da API oficial:",
+    "selectYear": "Selecionar Ano",
+    "yearPlaceholder": "Selecione um ano",
+    "noHolidaysMessage": "Selecione um ano e clique em \"Carregar Feriados\" para ver os feriados disponíveis",
+    "loadingHolidays": "Carregando feriados...",
+    "branchAssignment": {
+      "title": "Atribuição de Filiais",
+      "noBranches": {
+        "label": "Sem filiais selecionadas:",
+        "description": "Os feriados serão aplicados de forma genérica para todas as filiais do sistema."
+      },
+      "withBranches": {
+        "label": "Filiais selecionadas ({count}):",
+        "description": "Os feriados serão aplicados exclusivamente para as filiais selecionadas."
+      },
+      "tooltip": "Se não selecionar nenhuma filial, o feriado será aplicado para todas as filiais. Se selecionar filiais específicas, o feriado será aplicado apenas para essas filiais."
+    },
+    "table": {
+      "headers": {
+        "date": "Data",
+        "name": "Nome",
+        "type": "Tipo",
+        "isWaivable": "Irrenunciável",
+        "status": "Status"
+      },
+      "status": {
+        "pending": "Pendente",
+        "processing": "Processando",
+        "completed": "Concluído",
+        "error": "Erro"
+      }
+    }
+  },
+  "yes": "Sim",
+  "no": "Não"
+}

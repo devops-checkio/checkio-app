@@ -1,0 +1,97 @@
+{
+  "title": "Administración de Tipos de Amonestación",
+  "subtitle": "Gestiona los tipos de amonestación para acciones disciplinarias de empleados",
+  "name": "Nombre",
+  "createdAt": "Fecha de Creación",
+  "updatedAt": "Fecha de Modificación",
+  "actions": "Acciones",
+  "addWarningType": "Agregar Tipo de Amonestación",
+  "editWarningType": "Editar Tipo de Amonestación",
+  "deleteWarningType": "Eliminar Tipo de Amonestación",
+  "dashboard": "Dashboard",
+  "maintainers": "Mantenedores",
+  "warningTypes": "Tipos de Amonestación",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "warningTypes": "Tipos de Amonestación"
+  },
+  "modal": {
+    "title": "Tipo de Amonestación",
+    "titleAdd": "Agregar Tipo de Amonestación",
+    "titleEdit": "Editar Tipo de Amonestación",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Ingresa el nombre del tipo de amonestación",
+    "nameRequiredMessage": "Por favor ingrese el nombre del tipo de amonestación",
+    "nameHelperText": "Ingrese un nombre descriptivo para el tipo de amonestación",
+    "save": "Guardar",
+    "update": "Actualizar",
+    "cancel": "Cancelar",
+    "saving": "Guardando...",
+    "updating": "Actualizando...",
+    "creating": "Creando...",
+    "success": "Tipo de amonestación guardado exitosamente",
+    "error": "Error al guardar el tipo de amonestación",
+    "nameRequired": "El nombre es requerido"
+  },
+  "delete": {
+    "title": "Eliminar Tipo de Amonestación",
+    "confirmTitle": "Confirmar eliminación",
+    "message": "¿Está seguro de que desea eliminar este tipo de amonestación?",
+    "success": "Tipo de amonestación eliminado exitosamente",
+    "error": "Error al eliminar el tipo de amonestación"
+  },
+  "table": {
+    "headers": {
+      "name": "Nombre",
+      "createdAt": "Fecha de Creación",
+      "updatedAt": "Fecha de Modificación",
+      "actions": "Acciones"
+    },
+    "noData": "No se encontraron tipos de amonestación",
+    "noDataDescription": "Crea un nuevo tipo de amonestación para comenzar.",
+    "loading": "Cargando tipos de amonestación..."
+  },
+  "buttons": {
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "cancel": "Cancelar",
+    "deleting": "Eliminando...",
+    "downloadExcel": "Descargar Excel",
+    "generating": "Generando...",
+    "previous": "Anterior",
+    "next": "Siguiente"
+  },
+  "ariaLabels": {
+    "editWarningType": "Editar tipo de amonestación",
+    "deleteWarningType": "Eliminar tipo de amonestación"
+  },
+  "excel": {
+    "filename": "tipos-advertencia",
+    "sheetName": "Tipos de Advertencia",
+    "headers": {
+      "name": "Nombre",
+      "createdAt": "Fecha de Creación",
+      "updatedAt": "Fecha de Modificación"
+    },
+    "success": "Excel generado exitosamente",
+    "error": "Error al generar el Excel"
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} tipos de advertencia",
+    "recordsPerPage": "Registros por página:",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "page": "Página {current} de {total}"
+  },
+  "toast": {
+    "createSuccess": {
+      "title": "Tipo de advertencia creado exitosamente",
+      "description": "El tipo de advertencia ha sido creado correctamente"
+    },
+    "updateSuccess": {
+      "title": "Tipo de advertencia actualizado exitosamente",
+      "description": "El tipo de advertencia ha sido actualizado correctamente"
+    }
+  }
+}

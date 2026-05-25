@@ -1,0 +1,110 @@
+{
+  "title": "Créer Absence",
+  "message": "Remplissez les données d'absence à attribuer aux employés sélectionnés:",
+  "buttonText": "Attribuer",
+  "buttonLoadingText": "Attribution...",
+  "progress": "Progression",
+  "pending": "En Attente",
+  "processing": "Traitement",
+  "completed": "Terminés",
+  "errors": "Erreurs",
+  "toast": {
+    "selectEmployeeError": {
+      "title": "Erreur",
+      "description": "Veuillez sélectionner au moins un employé"
+    },
+    "datesError": {
+      "title": "Erreur",
+      "description": "Veuillez entrer des dates de début et de fin valides"
+    },
+    "createSuccess": {
+      "title": "Absences créées",
+      "description": "Les absences ont été créées avec succès pour tous les employés"
+    },
+    "createError": {
+      "title": "Processus terminé avec erreurs",
+      "description": "{successCount} absences créées avec succès, {errorCount} avec erreurs"
+    },
+    "deleteSuccess": {
+      "title": "Absences supprimées",
+      "description": "Les absences ont été supprimées avec succès"
+    },
+    "deleteError": {
+      "title": "Processus terminé avec erreurs",
+      "description": "{successCount} absences supprimées avec succès, {errorCount} avec erreurs"
+    }
+  },
+  "filters": {
+    "search": "Rechercher",
+    "searchPlaceholder": "Rechercher par Prénom ou Nom",
+    "documentNumber": "Numéro de Document",
+    "documentNumberPlaceholder": "Rechercher par Numéro de Document",
+    "job": "Poste",
+    "jobPlaceholder": "Sélectionner un Poste",
+    "branch": "Succursale",
+    "branchPlaceholder": "Sélectionner une Succursale",
+    "searchButton": "Rechercher",
+    "clearButton": "Effacer"
+  },
+  "form": {
+    "absenceType": "Type d'Absence",
+    "absenceTypePlaceholder": "Sélectionner un type d'absence",
+    "absenceTypeRequired": "Veuillez sélectionner un type d'absence",
+    "startDate": "Date de début",
+    "startDateRequired": "Veuillez sélectionner une date de début",
+    "endDate": "Date de fin",
+    "endDateRequired": "Veuillez sélectionner une date de fin",
+    "reason": "Motif",
+    "reasonPlaceholder": "Entrez le motif de l'absence",
+    "reasonRequired": "Veuillez entrer le motif de l'absence",
+    "withoutPay": "Sans Paiement",
+    "authorizedBy": "Autorisé par",
+    "authorizedByPlaceholder": "Entrez le nom de l'autoriseur",
+    "authorizedByRequired": "Veuillez entrer le nom de l'autoriseur"
+  },
+  "selectedEmployees": {
+    "title": "Employés sélectionnés",
+    "noSelected": "Aucun employé sélectionné.",
+    "noProcessing": "Aucun employé en cours de traitement."
+  },
+  "buttons": {
+    "continue": "Continuer",
+    "back": "Retour",
+    "cancel": "Annuler"
+  },
+  "table": {
+    "headers": {
+      "employee": "Employé",
+      "absenceType": "Type d'Absence",
+      "startDate": "Date de Début",
+      "endDate": "Date de Fin",
+      "status": "Statut",
+      "code": "Code",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "documentNumber": "Numéro de Document",
+      "email": "Email",
+      "contractType": "Type de Contrat",
+      "contractedHours": "Heures Contractuelles"
+    },
+    "loading": "Chargement des employés...",
+    "noData": "Aucun résultat.",
+    "contractType": {
+      "indefinite": "Indéfini",
+      "fixedTerm": "Durée Déterminée"
+    },
+    "status": {
+      "pending": "En Attente",
+      "processing": "Traitement",
+      "completed": "Terminé",
+      "error": "Erreur"
+    }
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} résultats",
+    "page": "Page {current} sur {total}",
+    "recordsPerPage": "Enregistrements par page",
+    "previous": "Précédent",
+    "next": "Suivant"
+  }
+}

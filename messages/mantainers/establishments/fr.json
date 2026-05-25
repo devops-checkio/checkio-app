@@ -1,0 +1,302 @@
+{
+  "title": "Gestión de Establecimientos",
+  "subtitle": "Administre los establecimientos clínicos y campos de práctica para estudiantes",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "maintainers": "Mantenedores",
+    "establishments": "Establecimientos"
+  },
+  "buttons": {
+    "add": "Agregar Establecimiento",
+    "addMassive": "Chargement en masse",
+    "masive": "Carga Masiva",
+    "downloadExcel": "Télécharger Excel",
+    "generating": "Génération...",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "excel": "Descargar Excel",
+    "help": "Ayuda"
+  },
+  "search": {
+    "placeholder": "Buscar código o nombre...",
+    "button": "Buscar"
+  },
+  "table": {
+    "headers": {
+      "code": "Código",
+      "name": "Nombre",
+      "address": "Dirección",
+      "phone": "Teléfono",
+      "timezone": "Zona Horaria",
+      "companies": "Empresas",
+      "isActive": "Estado",
+      "actions": "Actions"
+    },
+    "companiesCount": "empresa(s)",
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "noData": "Aucun établissement trouvé",
+    "noDataDescription": "Créez un nouvel établissement pour commencer.",
+    "noResultsFiltered": "Aucun résultat",
+    "noResultsFilteredHint": "Aucun établissement ne correspond à votre recherche. Essayez d'autres termes.",
+    "empty": "No se encontraron establecimientos",
+    "status": {
+      "yes": "Oui",
+      "no": "Non"
+    },
+    "ariaLabels": {
+      "viewAttendance": "Ver dotación y asistencia",
+      "edit": "Editar establecimiento",
+      "delete": "Eliminar establecimiento"
+    }
+  },
+  "pagination": {
+    "rowsPerPage": "Registros por página:",
+    "showing": "Affichage de {current} sur {total} établissements",
+    "recordsPerPage": "Enregistrements par page :",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page {current} sur {total}"
+  },
+  "delete": {
+    "title": "Confirmer la suppression",
+    "message": "Voulez-vous vraiment supprimer cet établissement ?",
+    "deleting": "Suppression...",
+    "success": "Établissement supprimé avec succès",
+    "error": "Erreur lors de la suppression. Veuillez réessayer.",
+    "description": "El establecimiento ha sido eliminado correctamente"
+  },
+  "excel": {
+    "filename": "etablissements",
+    "sheetName": "Établissements",
+    "success": "Excel généré avec succès",
+    "error": "Erreur lors de la génération d'Excel"
+  },
+  "errors": {
+    "title": "Error",
+    "description": "Ha ocurrido un error inesperado"
+  },
+  "tour": {
+    "startButton": "Voir le guide",
+    "steps": {
+      "welcome": {
+        "title": "Módulo de Establecimientos",
+        "description": "Gestione los establecimientos clínicos y campos de práctica donde los estudiantes realizan sus actividades."
+      },
+      "actions": {
+        "title": "Acciones principales",
+        "description": "Busque establecimientos, agréguelos de forma individual o masiva, y exporte a Excel."
+      },
+      "table": {
+        "title": "Tabla de establecimientos",
+        "description": "Visualice, edite o elimine establecimientos registrados."
+      },
+      "pagination": {
+        "title": "Paginación",
+        "description": "Navegue entre páginas y ajuste los registros mostrados."
+      }
+    }
+  },
+  "detail": {
+    "buttons": {
+      "add": "Agregar Establecimiento",
+      "edit": "Editar Establecimiento",
+      "create": "Crear",
+      "update": "Guardar cambios",
+      "cancel": "Cancelar",
+      "back": "Volver a establecimientos"
+    },
+    "fallbackName": "Establecimiento",
+    "tabs": {
+      "profile": "Datos del establecimiento",
+      "attendance": "Dotación / Asistencia"
+    },
+    "basicInfo": {
+      "code": "Código",
+      "name": "Nombre",
+      "address": "Dirección",
+      "phone": "Teléfono",
+      "timezone": "Zona Horaria",
+      "companies": "Empresas",
+      "phonePlaceholder": "Ej: +56 9 1234 5678",
+      "addressPlaceholder": "Ingrese la dirección del establecimiento",
+      "companiesPlaceholder": "Seleccione empresa(s)",
+      "timezonePlaceholder": "Seleccione zona horaria",
+      "validation": {
+        "codeRequired": "El código es requerido",
+        "nameRequired": "El nombre es requerido",
+        "addressRequired": "La dirección es requerida",
+        "companiesRequired": "Debe seleccionar al menos una empresa",
+        "timezoneRequired": "La zona horaria es requerida"
+      }
+    },
+    "geolocations": {
+      "title": "Puntos de Geolocalización",
+      "add": "Agregar Punto"
+    },
+    "toast": {
+      "createSuccess": "Establecimiento creado",
+      "createSuccessDescription": "El establecimiento fue creado exitosamente",
+      "updateSuccess": "Establecimiento actualizado",
+      "updateSuccessDescription": "El establecimiento fue actualizado exitosamente"
+    }
+  },
+  "attendance": {
+    "header": {
+      "badge": "Monitoreo établissement",
+      "title": "Dotación y asistencia del centro",
+      "subtitle": "Zona horaria {timezone} · actualizado {lastUpdatedAt}"
+    },
+    "filters": {
+      "dayMode": "Hoy / día",
+      "periodMode": "Periodo",
+      "refresh": "Actualizar",
+      "export": "Exportar",
+      "date": "Fecha",
+      "startDate": "Desde",
+      "endDate": "Hasta",
+      "status": "Estado",
+      "search": "Buscar estudiante",
+      "searchPlaceholder": "Nombre, documento u horario"
+    },
+    "status": {
+      "ALL": "Todos",
+      "PRESENT": "Presente",
+      "INSIDE": "Dentro del centro",
+      "EXITED": "Ya salió",
+      "ABSENT": "Ausente",
+      "NOT_ARRIVED": "Sin ingreso",
+      "INCOMPLETE": "Incompleto",
+      "WITHOUT_SCHEDULE": "Sin horario"
+    },
+    "kpis": {
+      "expected": "Dotación esperada",
+      "present": "Presentes",
+      "presence": "% presente",
+      "absent": "Ausentes",
+      "inside": "Dentro",
+      "exited": "Salieron",
+      "averageMinutes": "Min. promedio",
+      "late": "Atrasos"
+    },
+    "charts": {
+      "statusBreakdown": "Resumen de dotación",
+      "absenteeismTrend": "Ausentismo por periodo",
+      "markingHistogram": "Horarios de marcación",
+      "minutesInside": "Permanencia en establecimiento",
+      "heatmap": "Heatmap día/hora",
+      "expected": "Esperados",
+      "absent": "Ausentes",
+      "absenteeism": "% ausentismo",
+      "checkIns": "Entradas",
+      "checkOuts": "Salidas",
+      "students": "Estudiantes",
+      "marks": "marcas",
+      "empty": "Sin datos para graficar"
+    },
+    "timeline": {
+      "title": "Línea de tiempo de marcaciones",
+      "subtitle": "Últimos eventos registrados en el establecimiento",
+      "empty": "Sin marcaciones registradas",
+      "checkIn": "Entrada",
+      "checkOut": "Salida",
+      "manual": "Manual",
+      "additional": "Adicional"
+    },
+    "insights": {
+      "title": "Alertas operativas",
+      "subtitle": "Casos que requieren revisión del encargado",
+      "empty": "Sin alertas críticas para el filtro actual"
+    },
+    "table": {
+      "title": "Detalle por estudiante",
+      "subtitle": "Estado de asistencia, permanencia y alertas por horario",
+      "headers": {
+        "student": "Estudiante",
+        "document": "Documento",
+        "date": "Fecha",
+        "schedule": "Horario",
+        "checkIn": "Ingreso",
+        "checkOut": "Salida",
+        "status": "Estado",
+        "minutes": "Minutos",
+        "alerts": "Alertas"
+      },
+      "status": {
+        "ALL": "Todos",
+        "PRESENT": "Presente",
+        "INSIDE": "Dentro",
+        "EXITED": "Salió",
+        "ABSENT": "Ausente",
+        "NOT_ARRIVED": "Sin ingreso",
+        "INCOMPLETE": "Incompleto",
+        "WITHOUT_SCHEDULE": "Sin horario"
+      },
+      "alerts": {
+        "late": "{minutes} min tarde",
+        "early": "{minutes} min salida temprana",
+        "missingCheckout": "Sin salida",
+        "pendingMarks": "Marcas pendientes"
+      },
+      "pagination": {
+        "rowsPerPage": "Registros por página",
+        "total": "{total} registros",
+        "previous": "Anterior",
+        "next": "Siguiente"
+      },
+      "empty": "No hay estudiantes para el filtro seleccionado"
+    },
+    "errors": {
+      "load": "No fue posible cargar la dotación del establecimiento. Intente nuevamente."
+    },
+    "exportFilename": "dotacion_asistencia_establecimiento"
+  },
+  "massive": {
+    "title": "Carga Masiva de Establecimientos",
+    "globalCompanies": "Empresas para todos los registros",
+    "companiesPlaceholder": "Seleccione empresa(s)",
+    "template": {
+      "sheetName": "Establecimientos",
+      "filename": "plantilla_establecimientos.xlsx",
+      "headers": {
+        "code": "Código",
+        "name": "Nombre",
+        "address": "Dirección",
+        "phone": "Teléfono",
+        "timezone": "Zona Horaria"
+      }
+    },
+    "table": {
+      "code": "Código",
+      "name": "Nombre",
+      "address": "Dirección",
+      "phone": "Teléfono",
+      "timezone": "Zona Horaria",
+      "status": "Estado"
+    },
+    "status": {
+      "pending": "Pendiente",
+      "processing": "Procesando",
+      "success": "Éxito",
+      "error": "Error"
+    },
+    "buttons": {
+      "downloadTemplate": "Descargar Plantilla",
+      "upload": "Subir Excel",
+      "addRow": "Agregar Fila",
+      "process": "Procesar",
+      "cancel": "Cancelar"
+    },
+    "errors": {
+      "parseError": "Error al leer el archivo",
+      "companiesRequired": "Debe seleccionar al menos una empresa",
+      "unknown": "Error desconocido"
+    },
+    "toast": {
+      "successTitle": "Carga completada",
+      "successDescription": "{count} establecimiento(s) creados exitosamente",
+      "partialTitle": "Carga parcial",
+      "partialDescription": "{successCount} exitoso(s), {errorCount} con error(es)"
+    }
+  }
+}

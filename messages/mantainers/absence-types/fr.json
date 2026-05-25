@@ -1,0 +1,243 @@
+{
+  "title": "Gestion des Types d'Absence",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "maintainers": "Mainteneurs",
+    "absenceTypes": "Types d'Absence"
+  },
+  "buttons": {
+    "add": "Ajouter un Type d'Absence",
+    "massive": "Chargement en Masse",
+    "downloadExcel": "Télécharger Excel",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "edit": "Modifier",
+    "delete": "Supprimer"
+  },
+  "table": {
+    "headers": {
+      "code": "Code",
+      "name": "Nom",
+      "classification": "Classification",
+      "integrationCode": "Code d'Intégration",
+      "actions": "Actions"
+    },
+    "loading": "Chargement des types d'absence...",
+    "noData": "Aucun type d'absence trouvé",
+    "noDataDescription": "Créez un nouveau type d'absence pour commencer."
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} types d'absence",
+    "recordsPerPage": "Enregistrements par page:",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page {current} sur {total}"
+  },
+  "delete": {
+    "title": "Type d'absence supprimé avec succès",
+    "description": "Le type d'absence a été supprimé correctement",
+    "error": "Erreur lors de la suppression du type d'absence",
+    "confirmMessage": "Êtes-vous sûr de vouloir supprimer ce type d'absence?"
+  },
+  "excel": {
+    "success": "Excel généré avec succès",
+    "error": "Erreur lors de la génération de l'Excel",
+    "filename": "types-absence",
+    "sheetName": "Types d'Absence",
+    "headers": {
+      "code": "Code",
+      "name": "Nom",
+      "classification": "Classification",
+      "integrationCode": "Code d'Intégration",
+      "createdAt": "Date de Création",
+      "companies": "Entreprises"
+    }
+  },
+  "ariaLabels": {
+    "editAbsenceType": "Modifier le type d'absence",
+    "deleteAbsenceType": "Supprimer le type d'absence"
+  },
+  "errors": {
+    "title": "Erreur"
+  },
+  "classifications": {
+    "UNJUSTIFIED_ABSENCE": "Absence Non Justifiée",
+    "JUSTIFIED_ABSENCE": "Absence Justifiée",
+    "TARDINESS": "Retard",
+    "SHIFT_CHANGE": "Changement de Quart",
+    "EXCEPTIONAL_SCHEDULE_DISTRIBUTION": "Distribution Exceptionnelle des Horaires",
+    "OVERTIME_HOURS": "Heures Supplémentaires",
+    "ORDINARY_WORKDAY": "Journée de Travail Ordinaire",
+    "MEDICAL_LEAVE": "Congé Médical",
+    "PAID_LEAVE": "Congé Payé",
+    "PRENATAL_LEAVE": "Congé Prénatal",
+    "UNPAID_LEAVE": "Congé Non Payé",
+    "POSTNATAL_LEAVE": "Congé Postnatal",
+    "EARLY_DEPARTURE": "Départ Anticipé",
+    "VACATIONS": "Vacances",
+    "RETAIL_WORKERS_ADDITIONAL_SUNDAY_REST": "Repos Dominical Supplémentaire Commerce"
+  },
+  "upsert": {
+    "loadingDetail": "Chargement des données à jour…",
+    "title": {
+      "edit": "Modifier le Type d'Absence",
+      "add": "Ajouter un Type d'Absence"
+    },
+    "fields": {
+      "code": "Code",
+      "name": "Nom",
+      "classification": "Classification",
+      "integrationCode": "Code d'Intégration",
+      "configTitle": "Configuration des demandes",
+      "isEmployeeRequestable": "Demandable par l'employé",
+      "isEmployeeRequestableDescription": "Permet aux employés de sélectionner ce type d'absence lors de la demande de jours de congé",
+      "isTimeBankCompensable": "Compensable par banque d'heures",
+      "isTimeBankCompensableDescription": "Permet de déduire les jours de ce type de la banque d'heures de l'employé"
+    },
+    "placeholders": {
+      "classification": "Sélectionner une classification"
+    },
+    "validation": {
+      "codeRequired": "Veuillez entrer le code du type d'absence",
+      "nameRequired": "Veuillez entrer le nom du type d'absence",
+      "classificationRequired": "Veuillez sélectionner une classification"
+    },
+    "info": {
+      "title": "Informations",
+      "description": "Remplissez tous les champs obligatoires pour créer ou mettre à jour un type d'absence. Le code d'intégration est optionnel et peut être utilisé pour lier avec des systèmes externes."
+    },
+    "buttons": {
+      "cancel": "Annuler",
+      "save": "Enregistrer",
+      "update": "Mettre à jour",
+      "saving": "Création...",
+      "updating": "Mise à jour..."
+    },
+    "toast": {
+      "updateSuccess": "Type d'absence mis à jour avec succès",
+      "updateSuccessDescription": "Le type d'absence a été mis à jour correctement",
+      "createSuccess": "Type d'absence créé avec succès",
+      "createSuccessDescription": "Le type d'absence a été créé correctement",
+      "createError": "Erreur lors de la création du type d'absence"
+    }
+  },
+  "massive": {
+    "title": "Chargement en Masse des Types d'Absence",
+    "tabs": {
+      "excel": "Chargement par Excel",
+      "manual": "Saisie Manuelle"
+    },
+    "instructions": {
+      "excel": {
+        "title": "Instructions:",
+        "step1": "Téléchargez le modèle Excel pour voir le format requis",
+        "step2": "Remplissez les informations des types d'absence dans le modèle",
+        "step3": "Assurez-vous que tous les champs obligatoires (Code et Nom) sont remplis",
+        "step4": "Téléversez le fichier Excel complété",
+        "step5": "Vérifiez les informations et appuyez sur Traiter"
+      },
+      "manual": {
+        "title": "Instructions pour la saisie manuelle:",
+        "step1": "Cliquez sur Ajouter une Ligne pour ajouter un nouveau type d'absence",
+        "step2": "Remplissez les champs requis dans chaque ligne",
+        "step3": "Vous pouvez ajouter autant de lignes que nécessaire",
+        "step4": "Vérifiez les informations et appuyez sur Traiter"
+      }
+    },
+    "buttons": {
+      "downloadTemplate": "Télécharger le Modèle",
+      "uploadExcel": "Téléverser Excel",
+      "addRow": "Ajouter une Ligne",
+      "process": "Traiter",
+      "processing": "Traitement...",
+      "cancel": "Annuler",
+      "close": "Fermer",
+      "incompleteFields": "Champs Incomplets",
+      "noData": "Aucune Donnée"
+    },
+    "table": {
+      "headers": {
+        "code": "Code",
+        "name": "Nom",
+        "classification": "Classification",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "noData": "Aucun type d'absence ajouté",
+      "noDataDescription": "Ajoutez des types d'absence manuellement ou téléversez un fichier Excel",
+      "placeholders": {
+        "code": "Code",
+        "name": "Nom",
+        "classification": "Sélectionner la classification"
+      },
+      "status": {
+        "completed": "Terminé",
+        "error": "Erreur"
+      }
+    },
+    "validation": {
+      "codeRequired": "Veuillez entrer le code",
+      "nameRequired": "Veuillez entrer le nom",
+      "classificationRequired": "Veuillez sélectionner une classification"
+    },
+    "excel": {
+      "template": {
+        "sheetName": "Modèle Types Absence",
+        "referenceSheet": "Classifications",
+        "filename": "modele_types_absence.xlsx",
+        "headers": {
+          "code": "Code",
+          "name": "Nom",
+          "classification": "Classification"
+        },
+        "referenceHeaders": {
+          "value": "Valeur",
+          "description": "Description"
+        },
+        "example": {
+          "code": "ABS-001",
+          "name": "Exemple Type d'Absence",
+          "classification": "JUSTIFIED_ABSENCE"
+        },
+        "validation": {
+          "promptTitle": "Classification",
+          "prompt": "Sélectionnez une classification d'absence",
+          "errorTitle": "Valeur invalide",
+          "error": "Veuillez sélectionner une classification valide de la liste"
+        }
+      },
+      "warnings": {
+        "invalidClassifications": "{count} classification(s) de l'Excel ne sont pas valides et ont été remplacées par \"JUSTIFIED_ABSENCE\". Veuillez sélectionner des classifications valides.",
+        "title": "Avertissement"
+      }
+    },
+    "toast": {
+      "incompleteFields": {
+        "title": "Erreur",
+        "description": "Impossible de traiter: Il y a des types d'absence avec des champs incomplets. Veuillez compléter tous les champs avant de continuer."
+      },
+      "noData": {
+        "title": "Avertissement",
+        "description": "Aucun type d'absence à traiter. Ajoutez au moins un type d'absence."
+      },
+      "processCompletedWithErrors": {
+        "title": "Processus terminé avec des erreurs",
+        "description": "Consultez le tableau pour plus de détails."
+      },
+      "processCompletedSuccess": {
+        "title": "Processus terminé",
+        "description": "Les types d'absence ont été traités correctement"
+      },
+      "createError": "Erreur lors de la création du type d'absence"
+    },
+    "progress": "Traitement: {percent}%",
+    "ariaLabels": {
+      "deleteAbsenceType": "Supprimer le type d'absence"
+    },
+    "tooltips": {
+      "incompleteFields": "Il y a des types d'absence avec des champs incomplets. Complétez tous les champs avant de traiter.",
+      "noData": "Ajoutez au moins un type d'absence pour traiter.",
+      "process": "Traiter le chargement en masse"
+    }
+  }
+}

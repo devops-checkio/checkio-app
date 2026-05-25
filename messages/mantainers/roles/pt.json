@@ -1,0 +1,50 @@
+{
+  "title": "Gestão de Funções",
+  "subtitle": "Gerencie os papéis e permissões do sistema",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "roles": "Funções"
+  },
+  "buttons": {
+    "add": "Adicionar Função",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "save": "SALVAR"
+  },
+  "table": {
+    "headers": {
+      "name": "Nome",
+      "createdAt": "Data de Criação",
+      "actions": "Ações"
+    },
+    "loading": "Carregando funções...",
+    "noData": "Nenhuma função encontrada",
+    "noDataDescription": "Adicione uma nova função para começar."
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} funções",
+    "page": "Página {current} de {total}",
+    "recordsPerPage": "Registros por página:"
+  },
+  "delete": {
+    "success": "Função excluída com sucesso",
+    "confirmMessage": "Tem certeza de que deseja excluir esta função?"
+  },
+  "create": {
+    "success": "Função criada com sucesso"
+  },
+  "modal": {
+    "createTitle": "Criar Nova Função",
+    "nameLabel": "Nome da Função",
+    "nameRequired": "Este campo é obrigatório",
+    "nameMinLength": "O nome deve ter pelo menos 2 caracteres",
+    "saving": "Salvando..."
+  },
+  "ariaLabels": {
+    "editRole": "Editar função",
+    "deleteRole": "Excluir função"
+  }
+}

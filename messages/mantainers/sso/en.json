@@ -1,0 +1,62 @@
+{
+  "title": "SSO Application Management",
+  "subtitle": "Manage SSO applications in the system",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Maintainers",
+    "sso": "SSO Applications"
+  },
+  "buttons": {
+    "add": "Add SSO Application",
+    "edit": "Edit",
+    "delete": "Delete",
+    "previous": "Previous",
+    "next": "Next",
+    "downloadExcel": "Download Excel",
+    "generating": "Generating...",
+    "manageTokens": "Manage Tokens",
+    "viewUsers": "View Users"
+  },
+  "table": {
+    "headers": {
+      "name": "Name",
+      "appId": "App ID",
+      "createdAt": "Creation Date",
+      "updatedAt": "Last Updated",
+      "actions": "Actions"
+    },
+    "loading": "Loading SSO applications...",
+    "noData": "No SSO applications found",
+    "noDataDescription": "Add a new SSO application to get started."
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} applications",
+    "page": "Page {current} of {total}"
+  },
+  "delete": {
+    "success": "SSO application deleted successfully",
+    "error": "Error deleting SSO application",
+    "confirmMessage": "Are you sure you want to delete this SSO application?"
+  },
+  "excel": {
+    "success": "Excel generated successfully",
+    "error": "Error generating Excel",
+    "filename": "sso-applications",
+    "sheetName": "SSO Applications",
+    "headers": {
+      "name": "Name",
+      "appId": "App ID",
+      "createdAt": "Creation Date",
+      "updatedAt": "Last Updated"
+    }
+  },
+  "errors": {
+    "title": "Error"
+  },
+  "ariaLabels": {
+    "editApp": "Edit SSO application",
+    "deleteApp": "Delete SSO application",
+    "manageTokens": "Manage SSO application tokens",
+    "viewUsers": "View integrated users"
+  }
+}

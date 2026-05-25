@@ -1,0 +1,283 @@
+{
+  "title": "Solicitudes de días libres",
+  "subtitle": "Gestiona las solicitudes de día libre de los empleados",
+  "selectCompanyHint": "Seleccione una empresa en el menú superior para ver las solicitudes de día libre.",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Operaciones",
+    "requests": "Solicitudes",
+    "freeday": "Días libres"
+  },
+  "buttons": {
+    "add": "Nueva Solicitud"
+  },
+  "tabs": {
+    "pending": "Por Revisar",
+    "approved": "Aprobadas",
+    "rejected": "Rechazadas"
+  },
+  "pending": {
+    "yes": "Sí",
+    "no": "No",
+    "buttons": {
+      "view": "Ver",
+      "approve": "Aprobar",
+      "reject": "Rechazar"
+    },
+    "status": {
+      "pending": "Pendiente",
+      "approved": "Aprobada",
+      "rejected": "Rechazada"
+    },
+    "table": {
+      "loading": "Cargando solicitudes pendientes...",
+      "noData": "No hay solicitudes pendientes",
+      "headers": {
+        "employee": "Empleado",
+        "absenceType": "Tipo de Ausencia",
+        "reason": "Motivo",
+        "startDate": "Fecha Inicio",
+        "endDate": "Fecha Fin",
+        "withSalary": "Con Goce",
+        "requestedBy": "Solicitado por",
+        "createdAt": "Fecha Solicitud",
+        "status": "Estado",
+        "actions": "Acciones"
+      }
+    },
+    "pagination": {
+      "showing": "Mostrando {current} de {total} solicitudes",
+      "recordsPerPage": "Registros por página",
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "page": "Página {current} de {total}"
+    },
+    "ariaLabels": {
+      "viewRequest": "Ver solicitud",
+      "approveRequest": "Aprobar solicitud",
+      "rejectRequest": "Rechazar solicitud",
+      "cancelRequest": "Anular solicitud"
+    },
+    "cancelModal": {
+      "title": "Anular solicitud",
+      "description": "¿Confirma que desea anular esta solicitud pendiente? Esta acción no se puede deshacer.",
+      "confirm": "Anular",
+      "back": "Volver",
+      "processing": "Anulando…"
+    },
+    "toast": {
+      "cancelSuccess": {
+        "title": "Solicitud anulada",
+        "description": "La solicitud pendiente se eliminó correctamente."
+      },
+      "cancelError": {
+        "title": "No se pudo anular",
+        "description": "Intente nuevamente o contacte a soporte."
+      }
+    }
+  },
+  "approved": {
+    "yes": "Sí",
+    "no": "No",
+    "buttons": {
+      "view": "Ver"
+    },
+    "status": {
+      "pending": "Pendiente",
+      "approved": "Aprobada",
+      "rejected": "Rechazada"
+    },
+    "table": {
+      "loading": "Cargando solicitudes aprobadas...",
+      "noData": "No hay solicitudes aprobadas",
+      "headers": {
+        "employee": "Empleado",
+        "absenceType": "Tipo de Ausencia",
+        "reason": "Motivo",
+        "startDate": "Fecha Inicio",
+        "endDate": "Fecha Fin",
+        "withSalary": "Con Goce",
+        "requestedBy": "Solicitado por",
+        "approvedBy": "Aprobado por",
+        "approvedAt": "Fecha Aprobación",
+        "status": "Estado",
+        "actions": "Acciones"
+      }
+    },
+    "pagination": {
+      "showing": "Mostrando {current} de {total} solicitudes",
+      "recordsPerPage": "Registros por página",
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "page": "Página {current} de {total}"
+    },
+    "ariaLabels": {
+      "viewRequest": "Ver solicitud"
+    }
+  },
+  "rejected": {
+    "yes": "Sí",
+    "no": "No",
+    "buttons": {
+      "view": "Ver"
+    },
+    "status": {
+      "pending": "Pendiente",
+      "approved": "Aprobada",
+      "rejected": "Rechazada"
+    },
+    "table": {
+      "loading": "Cargando solicitudes rechazadas...",
+      "noData": "No hay solicitudes rechazadas",
+      "headers": {
+        "employee": "Empleado",
+        "absenceType": "Tipo de Ausencia",
+        "reason": "Motivo",
+        "startDate": "Fecha Inicio",
+        "endDate": "Fecha Fin",
+        "withSalary": "Con Goce",
+        "requestedBy": "Solicitado por",
+        "rejectedAt": "Fecha Rechazo",
+        "rejectionReason": "Motivo Rechazo",
+        "status": "Estado",
+        "actions": "Acciones"
+      }
+    },
+    "pagination": {
+      "showing": "Mostrando {current} de {total} solicitudes",
+      "recordsPerPage": "Registros por página",
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "page": "Página {current} de {total}"
+    },
+    "ariaLabels": {
+      "viewRequest": "Ver solicitud"
+    }
+  },
+  "modal": {
+    "title": {
+      "create": "Solicitar Día Libre",
+      "view": "Ver Solicitud",
+      "edit": "Editar Solicitud"
+    },
+    "fields": {
+      "employee": "Empleado",
+      "absenceType": "Tipo de Ausencia",
+      "absenceTypePlaceholder": "Seleccione un tipo de ausencia",
+      "startDate": "Fecha de Inicio",
+      "endDate": "Fecha de Término",
+      "observation": "Observación",
+      "observationPlaceholder": "Observaciones adicionales (opcional)",
+      "withSalary": "Con goce de sueldo",
+      "reason": "Motivo adicional",
+      "reasonPlaceholder": "Motivo adicional (opcional)"
+    },
+    "validation": {
+      "absenceTypeRequired": "Seleccione un tipo de ausencia",
+      "startDateRequired": "Seleccione la fecha de inicio",
+      "startDateFuture": "La fecha de inicio debe ser posterior a hoy",
+      "endDateRequired": "Seleccione la fecha de término",
+      "endDateAfterStart": "La fecha de término debe ser igual o posterior a la fecha de inicio",
+      "endDateFuture": "La fecha de término debe ser posterior a hoy",
+      "invalidDates": "Por favor ingrese fechas de inicio y fin válidas",
+      "noEmployeeId": "No se pudo identificar al empleado. Por favor, inicie sesión nuevamente."
+    },
+    "timeBank": {
+      "title": "Descontar del Banco de Horas",
+      "description": "Los días solicitados se descontarán del banco de días de descanso",
+      "availableBalance": "Saldo disponible",
+      "hours": "hrs",
+      "days": "días",
+      "noActiveBank": "No tiene un banco de días de descanso activo",
+      "viewInfo": "Esta solicitud tiene cargo al banco de horas"
+    },
+    "requestInfo": {
+      "title": "Información de la Solicitud",
+      "requestedBy": "Solicitado por",
+      "requestDate": "Fecha de solicitud",
+      "approvedBy": "Aprobado por",
+      "approvalDate": "Fecha de aprobación",
+      "rejectedBy": "Rechazado por",
+      "rejectionDate": "Fecha de rechazo",
+      "rejectionReason": "Motivo de rechazo"
+    },
+    "buttons": {
+      "cancel": "Cancelar",
+      "close": "Cerrar",
+      "submit": "Enviar Solicitud",
+      "update": "Actualizar Solicitud",
+      "processing": "Procesando..."
+    },
+    "toast": {
+      "success": {
+        "title": "Solicitud enviada",
+        "description": "Su solicitud de día libre ha sido enviada exitosamente"
+      },
+      "error": {
+        "title": "Error",
+        "description": "No se pudo enviar la solicitud. Intente nuevamente."
+      }
+    },
+    "overlap": {
+      "title": "Posibles conflictos de fechas",
+      "checking": "Comprobando traslapes…",
+      "typeFREEDAY": "Solicitud de día libre",
+      "typeABSENCE": "Ausentismo",
+      "typeHOURLY_PERMISSION": "Permiso por hora",
+      "dateRange": "{start} – {end}"
+    },
+    "loadingAbsenceTypes": "Cargando tipos de ausencia..."
+  },
+  "approveModal": {
+    "title": "Aprobar solicitud de día libre",
+    "summaryTitle": "Resumen de la solicitud",
+    "employee": "Empleado",
+    "reason": "Motivo",
+    "startDate": "Fecha de inicio",
+    "endDate": "Fecha de término",
+    "withSalary": "Con goce de sueldo",
+    "requestedBy": "Solicitado por",
+    "observation": "Observación",
+    "confirmTitle": "Confirmar aprobación",
+    "confirmDescription": "¿Está seguro de que desea aprobar esta solicitud de día libre? Se notificará al empleado.",
+    "yes": "Sí",
+    "no": "No",
+    "cancel": "Cancelar",
+    "approve": "Aprobar solicitud",
+    "approving": "Aprobando…",
+    "toastSuccessTitle": "Solicitud aprobada",
+    "toastSuccessDescription": "La solicitud de día libre ha sido aprobada correctamente.",
+    "toastErrorTitle": "Error",
+    "toastErrorDescription": "No se pudo aprobar la solicitud."
+  },
+  "tour": {
+    "startButton": "Ver guía",
+    "buttons": {
+      "next": "Siguiente",
+      "previous": "Anterior",
+      "done": "Finalizar"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Bienvenido a solicitudes de días libres",
+        "description": "Aquí puede crear solicitudes, revisar pendientes; los responsables pueden aprobar o rechazar, y todos consultar aprobadas o rechazadas."
+      },
+      "toolbar": {
+        "title": "Nueva solicitud",
+        "description": "Cree una nueva solicitud de día libre (como empleado, para usted mismo)."
+      },
+      "tabs": {
+        "title": "Pestañas Por Revisar, Aprobadas, Rechazadas",
+        "description": "Navegue entre solicitudes pendientes, aprobadas o rechazadas. Cada pestaña muestra el listado correspondiente."
+      },
+      "table": {
+        "title": "Tabla de solicitudes",
+        "description": "Listado con empleado, tipo de ausencia, fechas, con goce y estado. Los responsables pueden aprobar o rechazar en pendientes; el empleado puede anular la propia."
+      },
+      "pagination": {
+        "title": "Paginación",
+        "description": "Navegue entre páginas y ajuste la cantidad de registros mostrados."
+      }
+    }
+  }
+}

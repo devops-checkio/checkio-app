@@ -1,0 +1,76 @@
+{
+  "title": "Gestión de Asistencia de Estudiantes",
+  "subtitle": "Consulta y seguimiento de asistencias de estudiantes",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "assistance": "Asistencia Estudiantes"
+  },
+  "assistanceIncomplete": "Asistencias Incompletas",
+  "assistanceAbsent": "Asistencias Ausentes",
+  "assistanceCompleted": "Asistencias Completas",
+  "filterStudent": "Estudiante",
+  "filterStudentPlaceholder": "Buscar por nombre o número de documento...",
+  "filterBranch": "Sucursal",
+  "filterEstablishment": "Establecimiento",
+  "filterDateType": "Filtrar por fecha",
+  "filterDateDay": "Fecha",
+  "filterDateMonth": "Mes",
+  "filterDateYear": "Año",
+  "filterDateStart": "Fecha inicio",
+  "filterDateEnd": "Fecha fin",
+  "clearFilters": "Limpiar",
+  "search": "Buscar",
+  "table": {
+    "name": "Nombre",
+    "document": "Documento",
+    "date": "Fecha",
+    "establishment": "Establecimiento",
+    "blocks": "# Bloques",
+    "status": "Estado",
+    "actions": "Acciones",
+    "viewMarks": "Ver marcaciones",
+    "noData": "No se encontraron asistencias de estudiantes",
+    "loading": "Cargando asistencias..."
+  },
+  "status": {
+    "COMPLETED": "Completada",
+    "INCOMPLETE": "Incompleta",
+    "ABSENT": "Ausente",
+    "WITHOUT_SCHEDULE": "Sin horario"
+  },
+  "modal": {
+    "title": "Registro de Marcaciones",
+    "headerTitle": "Registro de Marcaciones",
+    "loading": "Cargando asistencia...",
+    "error": "No se pudo cargar la asistencia. Intenta de nuevo.",
+    "retry": "Reintentar",
+    "noSlotsEmpty": {
+      "title": "No hay bloques de horario",
+      "description": "Este estudiante no tiene bloques de horario asignados para este día."
+    },
+    "slot": {
+      "block": "Bloque",
+      "schedule": "Horario",
+      "delay": "Atraso",
+      "earlyDeparture": "Salida temprana",
+      "extra": "Tiempo extra",
+      "status": "Estado",
+      "noMarks": "Sin marcaciones oficiales en este bloque",
+      "officialMarks": "Marcaciones del bloque",
+      "attemptsTitle": "Intentos del bloque"
+    },
+    "failedAttempts": {
+      "title": "Intentos fallidos",
+      "noData": "Sin intentos fallidos registrados"
+    },
+    "min": "min",
+    "na": "N/A"
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} estudiantes",
+    "recordsPerPage": "Registros por página",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "page": "Página {current} de {total}"
+  }
+}

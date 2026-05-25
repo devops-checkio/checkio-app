@@ -1,0 +1,347 @@
+{
+  "title": "Gestión de Horarios",
+  "subtitle": "Administre los horarios del sistema",
+  "tabs": {
+    "active": "Activos",
+    "inactive": "Inactivos",
+    "activeWithCount": "Activos ({count})",
+    "inactiveWithCount": "Inactivos ({count})"
+  },
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "schedules": "Horarios"
+  },
+  "buttons": {
+    "add": "Agregar Horario",
+    "downloadExcel": "Descargar Excel",
+    "search": "Buscar",
+    "clear": "Limpiar",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "edit": "Editar",
+    "view": "Ver",
+    "delete": "Eliminar",
+    "cancel": "Cancelar",
+    "deleting": "Eliminando...",
+    "activate": "Activar",
+    "deactivate": "Inactivar",
+    "activateSuccess": "Horario activado correctamente",
+    "deactivateSuccess": "Horario inactivado correctamente"
+  },
+  "filters": {
+    "code": "Código",
+    "name": "Nombre",
+    "mealBreak": "Colación",
+    "createdAt": "Fecha de creación",
+    "codePlaceholder": "Buscar por código",
+    "namePlaceholder": "Buscar por nombre",
+    "mealBreakOptions": {
+      "all": "Todos",
+      "with": "Con colación",
+      "without": "Sin colación"
+    }
+  },
+  "table": {
+    "headers": {
+      "code": "Código",
+      "name": "Nombre",
+      "startTime": "Hora Inicio",
+      "endTime": "Hora de Termino",
+      "days": "Días Contenidos",
+      "workHours": "Horas de Trabajo",
+      "mealBreak": "Tiempo de Colación",
+      "actions": "Acciones"
+    },
+    "loading": "Cargando horarios...",
+    "noData": "No se encontraron horarios",
+    "noDataDescription": "Crea un nuevo horario para comenzar.",
+    "selectCompany": "Selecciona una empresa en el menú superior para ver los horarios.",
+    "mealBreak": {
+      "with": "Con colación",
+      "without": "Sin colación"
+    },
+    "days": {
+      "single": "1 día",
+      "multiple": "{count} días"
+    }
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} horarios",
+    "recordsPerPage": "Registros por página:",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "page": "Página {current} de {total}"
+  },
+  "delete": {
+    "title": "Confirmar eliminación",
+    "message": "¿Está seguro de que desea eliminar este horario?",
+    "success": {
+      "title": "Horario eliminado exitosamente",
+      "description": "El horario ha sido eliminado correctamente"
+    },
+    "error": {
+      "title": "Error",
+      "description": "Error al eliminar el horario. Por favor, inténtelo de nuevo."
+    }
+  },
+  "excel": {
+    "success": "Excel generado exitosamente",
+    "error": "Error al generar el Excel",
+    "filename": "horarios",
+    "sheetName": "Horarios",
+    "headers": {
+      "code": "Código",
+      "name": "Nombre",
+      "startTime": "Hora Inicio",
+      "endTime": "Hora de Termino",
+      "days": "Días Contenidos",
+      "workHours": "Horas y Minutos de Trabajo",
+      "mealBreak": "Colación",
+      "createdAt": "Fecha de Creación",
+      "updatedAt": "Fecha de Modificación"
+    },
+    "mealBreak": {
+      "with": "Con colación ({time})",
+      "without": "Sin colación"
+    },
+    "days": {
+      "single": "1 día",
+      "multiple": "{count} días"
+    }
+  },
+  "ariaLabels": {
+    "editSchedule": "Editar horario",
+    "viewSchedule": "Vista previa",
+    "deleteSchedule": "Eliminar horario",
+    "deleteBreak": "Eliminar pausa",
+    "activateSchedule": "Activar horario",
+    "deactivateSchedule": "Inactivar horario"
+  },
+  "tour": {
+    "startButton": "Ver guía",
+    "buttons": {
+      "next": "Siguiente",
+      "previous": "Anterior",
+      "done": "Finalizar"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Bienvenido al módulo de Horarios",
+        "description": "En este módulo puede administrar los horarios del sistema. Esta guía le mostrará las principales funciones disponibles."
+      },
+      "tabs": {
+        "title": "Activos e inactivos",
+        "description": "Cambie entre horarios activos e inactivos para visualizar y gestionar cada grupo por separado."
+      },
+      "filters": {
+        "title": "Filtros de búsqueda",
+        "description": "Filtre por código, nombre, colación y fecha de creación. Use Buscar para aplicar los filtros."
+      },
+      "toolbar": {
+        "title": "Acciones principales",
+        "description": "Agregar nuevo horario o descargar el listado en formato Excel."
+      },
+      "table": {
+        "title": "Tabla de horarios",
+        "description": "Vista previa, editar, activar/inactivar y eliminar cada horario. Las columnas muestran código, nombre, horas y colación."
+      },
+      "pagination": {
+        "title": "Paginación",
+        "description": "Use estos controles para navegar entre páginas y ajustar la cantidad de registros mostrados."
+      }
+    }
+  },
+  "detailTour": {
+    "startButton": "Ver guía",
+    "steps": {
+      "welcome": {
+        "title": "Formulario de horario",
+        "description": "En este formulario puede crear o editar un horario. Configure la información básica, la duración y las pausas o colaciones."
+      },
+      "basicInfo": {
+        "title": "Información básica",
+        "description": "El nombre se genera automáticamente según la configuración. Ingrese el código y active o inactive el horario (solo en edición)."
+      },
+      "scheduleConfig": {
+        "title": "Configuración del horario",
+        "description": "Hora de inicio, duración en horas y minutos, minutos de descuento y hora de término calculada automáticamente."
+      },
+      "timeline": {
+        "title": "Línea de tiempo",
+        "description": "Vista visual del horario y las pausas por día. Se actualiza automáticamente según la configuración."
+      },
+      "breaks": {
+        "title": "Pausas y colaciones",
+        "description": "Agregue colaciones o pausas. Configure día, hora de inicio y fin, y si el tiempo es deducible del trabajo."
+      }
+    }
+  },
+  "preview": {
+    "title": "Vista Previa del Horario",
+    "loading": "Cargando...",
+    "notFound": "No se encontró el horario",
+    "tabs": {
+      "distribution": "Distribución del Horario",
+      "configuration": "Configuración"
+    },
+    "basicInfo": {
+      "name": "Nombre",
+      "code": "Código"
+    },
+    "scheduleConfig": {
+      "title": "Configuración del Horario",
+      "startTime": "Hora de Inicio",
+      "workHours": "Cantidad de Horas",
+      "workMinutes": "Cantidad de Minutos",
+      "discountMinutes": "Minutos de Colación a Descontar",
+      "calculatedEndTime": "Hora Término (Calculada)"
+    },
+    "breaks": {
+      "title": "Pausas y Colaciones",
+      "noBreaks": "No hay pausas o colaciones configuradas",
+      "table": {
+        "headers": {
+          "description": "Descripción",
+          "type": "Tipo",
+          "day": "Día",
+          "startTime": "Hora Inicio",
+          "endTime": "Hora Término",
+          "status": "Estado",
+          "deductible": "Descuento"
+        },
+        "type": {
+          "lunch": "Colación",
+          "break": "Pausa"
+        },
+        "day": "Día {day}",
+        "status": {
+          "valid": "Válido",
+          "error": "Error"
+        }
+      },
+      "distribution": {
+        "cannotShow": "No se puede mostrar la distribución del horario"
+      }
+    },
+    "close": "Cerrar"
+  },
+  "form": {
+    "title": {
+      "create": "Crear Horario",
+      "edit": "Editar Horario"
+    },
+    "subtitle": {
+      "create": "Cree un nuevo horario",
+      "edit": "Edite el horario"
+    },
+    "loading": "Cargando horario...",
+    "basicInfo": {
+      "title": "Información Básica",
+      "name": "Nombre (Generado automáticamente)",
+      "nameDescription": "El nombre se genera automáticamente según la configuración",
+      "code": "Código",
+      "codePlaceholder": "Ingrese el código del horario",
+      "codeRequired": "Por favor ingrese el código del horario",
+      "companies": "Empresas",
+      "companiesRequired": "Debe seleccionar al menos una empresa",
+      "companiesPlaceholder": "Seleccionar empresas",
+      "isActive": "Horario activo"
+    },
+    "scheduleConfig": {
+      "title": "Configuración del Horario",
+      "startTime": "Hora de Inicio",
+      "startTimeRequired": "Por favor ingrese la hora de inicio",
+      "startTimeDescription": "Hora de inicio del turno",
+      "workHours": "Cantidad de Horas",
+      "workHoursRequired": "Por favor ingrese la cantidad de horas",
+      "workHoursDescription": "Horas laborales en el turno",
+      "workMinutes": "Cantidad de Minutos",
+      "workMinutesRequired": "Por favor ingrese la cantidad de minutos",
+      "workMinutesDescription": "Minutos adicionales a las horas laborales",
+      "discountMinutes": "Minutos de Colación a Descontar",
+      "discountMinutesRequired": "Por favor ingrese los minutos de colación a descontar",
+      "discountMinutesDescription": "Tiempo de colación no contabilizado como trabajo",
+      "calculatedEndTime": "Hora de Termino (Calculada)",
+      "calculatedEndTimeDescription": "Calculada automáticamente según los valores ingresados"
+    },
+    "breaks": {
+      "title": "Pausas y Colaciones",
+      "addLunch": "Agregar Colación",
+      "addBreak": "Agregar Pausa",
+      "noBreaks": "No hay pausas configuradas",
+      "noBreaksDescription": "Agregue pausas o colaciones para comenzar",
+      "table": {
+        "headers": {
+          "description": "Descripción",
+          "type": "Tipo",
+          "day": "Día",
+          "startTime": "Hora Inicio",
+          "endTime": "Hora Término",
+          "deductible": "Descuento",
+          "status": "Estado",
+          "actions": "Acciones"
+        },
+        "type": {
+          "break": "Pausa",
+          "lunch": "Colación"
+        },
+        "day": "Día {day}",
+        "dayPlaceholder": "Seleccione día",
+        "typePlaceholder": "Seleccione tipo",
+        "status": {
+          "valid": "Válido",
+          "error": "Error"
+        },
+        "delete": "Eliminar"
+      },
+      "validation": {
+        "dayRange": "El día debe estar entre 1 y {totalDays}",
+        "cannotEndNextDay": "La pausa no puede terminar al día siguiente en el último día",
+        "startsBeforeSchedule": "La pausa comienza antes del horario del día",
+        "endsAfterSchedule": "La pausa termina después del horario del día",
+        "overlaps": "La pausa se traslapa con otra",
+        "hasErrors": "Error en las pausas",
+        "hasErrorsDescription": "Hay pausas con errores. Por favor corrígelas antes de continuar."
+      },
+      "defaultLunchDescription": "Colación"
+    },
+    "buttons": {
+      "cancel": "Cancelar",
+      "create": "CREAR",
+      "update": "ACTUALIZAR",
+      "creating": "Creando...",
+      "updating": "Actualizando..."
+    },
+    "toast": {
+      "createSuccess": {
+        "title": "Horario creado exitosamente",
+        "description": "El horario se ha creado correctamente"
+      },
+      "updateSuccess": {
+        "title": "Horario actualizado exitosamente",
+        "description": "El horario se ha actualizado correctamente"
+      },
+      "createError": {
+        "title": "Error al crear el horario",
+        "description": "Ha ocurrido un error al crear el horario"
+      },
+      "updateError": {
+        "title": "Error al actualizar el horario",
+        "description": "Ha ocurrido un error al actualizar el horario"
+      }
+    }
+  },
+  "timeline": {
+    "title": "Distribución del Horario",
+    "titleWithDays": "Distribución del Horario ({days} días)",
+    "day": "Día {day}",
+    "entry": "Entrada",
+    "exit": "Salida",
+    "lunch": "Colación",
+    "break": "Pausa",
+    "endLunch": "Fin Colación",
+    "endBreak": "Fin Pausa",
+    "workPeriod": "Período de Trabajo"
+  }
+}

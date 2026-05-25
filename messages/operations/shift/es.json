@@ -1,0 +1,69 @@
+{
+  "tour": {
+    "startButton": "Ver guía",
+    "buttons": {
+      "next": "Siguiente",
+      "previous": "Anterior",
+      "done": "Finalizar"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Operaciones de Turnos",
+        "description": "Gestione la asignación de turnos a empleados. Los tabs muestran empleados sin turno, con turno activo, futuro o pasado."
+      },
+      "tabs": {
+        "title": "Pestañas",
+        "description": "Navegue entre las vistas: empleados sin turno, con turno activo, futuro o pasado. Cada tab muestra el conteo correspondiente."
+      },
+      "infoBtn": {
+        "title": "Información del Sistema",
+        "description": "Consulte información sobre el funcionamiento del módulo de asignación de turnos."
+      },
+      "filters": {
+        "title": "Filtros",
+        "description": "Busque empleados por nombre, número de documento, cargo o sucursal. Use Buscar para aplicar los filtros."
+      },
+      "toolbar": {
+        "title": "Acciones principales",
+        "description": "Limpiar restablece los filtros. Buscar aplica la búsqueda. Seleccionar Turno aparece cuando hay empleados seleccionados para asignarles un turno."
+      },
+      "table": {
+        "title": "Tabla de empleados",
+        "description": "Seleccione empleados con los checkboxes. Use el botón 'Seleccionar Turno' para continuar con la asignación."
+      },
+      "pagination": {
+        "title": "Paginación",
+        "description": "Navegue entre páginas y ajuste la cantidad de registros mostrados."
+      }
+    }
+  },
+  "assignmentTour": {
+    "startButton": "Ver guía",
+    "steps": {
+      "welcome": {
+        "title": "Asignación de Turnos",
+        "description": "Configure la fecha de inicio y los horarios por empleado. Seleccione uno o más empleados del panel izquierdo, elija la fecha y asigne horarios a cada día."
+      },
+      "sidebar": {
+        "title": "Empleados seleccionados",
+        "description": "Lista de empleados que serán asignados. Use la búsqueda para filtrar. Haga clic en un empleado para configurar sus horarios."
+      },
+      "headerConfig": {
+        "title": "Configuración general",
+        "description": "Indique la fecha de inicio del turno y revise el turno seleccionado. Use 'Comparar' para ver la distribución de horarios entre empleados."
+      },
+      "employeeConfig": {
+        "title": "Configuración por empleado",
+        "description": "Para cada empleado: seleccione un turno, la regla de feriados y asigne el horario a cada día del ciclo."
+      },
+      "bottomBar": {
+        "title": "Resumen y guardado",
+        "description": "Vea el tiempo transcurrido y el progreso. Debe completar la configuración de todos los empleados antes de guardar."
+      },
+      "submitBtn": {
+        "title": "Guardar asignación",
+        "description": "Guarde la asignación cuando todos los empleados estén configurados y marcados como completados."
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "validating": "Validating SSO access...",
+  "success": "Access successful!",
+  "error": "Authentication error",
+  "validatingDescription": "Verifying credentials from App1",
+  "successDescription": "Redirecting to dashboard...",
+  "errorDescription": "Could not complete authentication",
+  "validatingMessage": "We are validating your session from the main application...",
+  "verifyingToken": "Verifying security token",
+  "welcomeMessage": "Welcome! Your session has been validated successfully.",
+  "redirecting": "Redirecting automatically...",
+  "retry": "Retry",
+  "goToLogin": "Go to normal login",
+  "missingParams": "Missing SSO parameters. Token or App ID not found.",
+  "invalidToken": "Invalid or expired SSO token.",
+  "validationError": "Error validating SSO token.",
+  "ssoReady": "SSO Ready",
+  "ssoAccess": "SSO Access"
+}

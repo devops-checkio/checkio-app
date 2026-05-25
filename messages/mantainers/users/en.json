@@ -1,0 +1,65 @@
+{
+  "title": "User Management",
+  "subtitle": "Manage system users",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Maintainers",
+    "users": "Users"
+  },
+  "buttons": {
+    "add": "Add User",
+    "search": "Search",
+    "clear": "Clear",
+    "edit": "Edit",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "downloadExcel": "Download Excel",
+    "generating": "Generating..."
+  },
+  "excel": {
+    "filename": "users",
+    "sheetName": "Users"
+  },
+  "search": {
+    "label": "Search by Email",
+    "placeholder": "Search by email"
+  },
+  "table": {
+    "headers": {
+      "name": "Name",
+      "email": "Email",
+      "username": "Username",
+      "role": "Role",
+      "isActive": "Active",
+      "createdAt": "Creation Date",
+      "updatedAt": "Update Date",
+      "actions": "Actions"
+    },
+    "loading": "Loading users...",
+    "noData": "No users found",
+    "noDataDescription": "Create a new user to get started.",
+    "noRole": "No role",
+    "status": {
+      "yes": "Yes",
+      "no": "No"
+    }
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} users",
+    "recordsPerPage": "Records per page",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  },
+  "delete": {
+    "title": "Confirm deletion",
+    "message": "Are you sure you want to delete this user?",
+    "deleting": "Deleting...",
+    "success": "User deleted successfully",
+    "error": "Error deleting user. Please try again."
+  },
+  "ariaLabels": {
+    "editUser": "Edit user",
+    "deleteUser": "Delete user"
+  }
+}

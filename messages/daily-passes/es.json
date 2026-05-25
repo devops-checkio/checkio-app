@@ -1,0 +1,274 @@
+{
+  "title": "Pases Diarios de Acceso",
+  "subtitle": "Gestiona los pases temporales para empleados sin documento de identidad",
+  "activePasses": "Pases Activos",
+  "expiredPasses": "Pases Vencidos",
+  "createPass": "Crear Pase",
+  "employee": "Empleado",
+  "startDate": "Fecha de Inicio",
+  "endDate": "Fecha de Fin",
+  "status": "Estado",
+  "reason": "Motivo",
+  "actions": "Acciones",
+  "active": "Activo",
+  "expired": "Vencido",
+  "deactivated": "Desactivado",
+  "view": "Ver",
+  "deactivate": "Desactivar",
+  "renew": "Renovar",
+  "qrCode": "Código QR",
+  "qrExpiresAt": "QR Expira En",
+  "createdAt": "Creado En",
+  "createdBy": "Creado Por",
+  "updatedAt": "Actualizado En",
+  "noReason": "Sin motivo especificado",
+  "noEmployee": "Sin empleado",
+  "dashboard": "Dashboard",
+  "operations": "Operaciones",
+  "dailyPasses": "Pases Diarios",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Operaciones",
+    "dailyPasses": "Pases Diarios"
+  },
+  "modal": {
+    "title": "Crear Pase Diario",
+    "message": "Complete los datos del pase para asignar a los empleados seleccionados:",
+    "selectEmployee": "Seleccionar Empleado",
+    "searchEmployee": "Buscar empleado...",
+    "employeeInfo": "Información del Empleado",
+    "passConfiguration": "Configuración del Pase",
+    "dateRange": "Rango de Fechas",
+    "reasonLabel": "Motivo",
+    "reasonPlaceholder": "Especifica el motivo del pase temporal",
+    "create": "Crear Pases",
+    "cancel": "Cancelar",
+    "creating": "Creando...",
+    "success": "Pase creado exitosamente",
+    "error": "Error al crear el pase",
+    "filters": {
+      "search": "Buscar",
+      "searchPlaceholder": "Buscar por Nombres o Apellidos",
+      "documentNumber": "Número de Documento",
+      "documentNumberPlaceholder": "Buscar por Número de Documento",
+      "job": "Cargo",
+      "jobPlaceholder": "Seleccionar Cargo",
+      "branch": "Sucursal",
+      "branchPlaceholder": "Seleccionar Sucursal",
+      "searchButton": "Buscar",
+      "clearButton": "Limpiar"
+    },
+    "table": {
+      "loading": "Cargando empleados...",
+      "noData": "No se encontraron empleados",
+      "headers": {
+        "code": "Código",
+        "firstName": "Nombres",
+        "lastName": "Apellidos",
+        "documentNumber": "Número de Documento",
+        "email": "Email",
+        "startDate": "Fecha de Inicio",
+        "endDate": "Fecha de Término",
+        "contractType": "Tipo de Contrato",
+        "contractedHours": "Horas Contratadas",
+        "employee": "Empleado",
+        "status": "Estado"
+      },
+      "status": {
+        "pending": "Pendiente",
+        "processing": "Procesando",
+        "completed": "Completado",
+        "error": "Error"
+      },
+      "contractType": {
+        "indefinite": "Indefinido",
+        "fixedTerm": "Plazo Fijo"
+      }
+    },
+    "pagination": {
+      "showing": "Mostrando {current} de {total} resultados",
+      "page": "Página {current} de {total}",
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "recordsPerPage": "Registros por página"
+    },
+    "buttons": {
+      "cancel": "Cancelar",
+      "continue": "Continuar",
+      "back": "Volver"
+    },
+    "form": {
+      "startDate": "Fecha de Inicio",
+      "endDate": "Fecha de Fin",
+      "startDateRequired": "Por favor seleccione una fecha de inicio",
+      "endDateRequired": "Por favor seleccione una fecha de fin",
+      "reasonRequired": "Por favor ingrese el motivo del pase"
+    },
+    "selectedEmployees": {
+      "title": "Empleados Seleccionados",
+      "noProcessing": "No hay empleados procesando",
+      "noSelected": "No hay empleados seleccionados"
+    },
+    "toast": {
+      "selectEmployeeError": {
+        "title": "Error",
+        "description": "Por favor seleccione al menos un empleado"
+      },
+      "datesError": {
+        "title": "Error",
+        "description": "Por favor ingrese fechas de inicio y fin válidas"
+      },
+      "createSuccess": {
+        "title": "Pases creados",
+        "description": "Los pases diarios han sido creados correctamente para todos los empleados"
+      },
+      "createError": {
+        "title": "Proceso completado con errores",
+        "description": "{successCount} pases creados correctamente, {errorCount} con errores"
+      }
+    },
+    "progress": "Progreso",
+    "pending": "Pendientes",
+    "processing": "Procesando",
+    "completed": "Completados",
+    "errors": "Errores",
+    "systemInfo": {
+      "title": "Información del Sistema",
+      "description": "El sistema generará automáticamente códigos QR diarios para cada empleado según su horario asignado. Los códigos serán enviados por correo electrónico."
+    }
+  },
+  "actionsModal": {
+    "title": "Detalles del Pase",
+    "details": "Detalles",
+    "actions": "Acciones",
+    "employeeInfo": "Información del Empleado",
+    "passInfo": "Información del Pase",
+    "qrInfo": "Información del Código QR",
+    "additionalDays": "Días Adicionales",
+    "selectDays": "Seleccionar días adicionales",
+    "renewPass": "Renovar Pase",
+    "deactivatePass": "Desactivar Pase",
+    "confirmDeactivate": "¿Estás seguro de que quieres desactivar este pase?",
+    "confirmRenew": "¿Estás seguro de que quieres renovar este pase?",
+    "success": "Operación completada exitosamente",
+    "error": "Error al realizar la operación"
+  },
+  "statusLabels": {
+    "ACTIVE": "Activo",
+    "EXPIRED": "Vencido",
+    "DEACTIVATED": "Desactivado"
+  },
+  "statusColors": {
+    "ACTIVE": "green",
+    "EXPIRED": "red",
+    "DEACTIVATED": "gray"
+  },
+  "table": {
+    "loading": "Cargando pases diarios...",
+    "noData": "No se encontraron pases diarios"
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} resultados",
+    "page": "Página {current} de {total}"
+  },
+  "buttons": {
+    "previous": "Anterior",
+    "next": "Siguiente"
+  },
+  "absences": {
+    "title": "Administración de Ausencias",
+    "subtitle": "Gestiona las ausencias de los empleados",
+    "breadcrumbs": {
+      "dashboard": "Dashboard",
+      "operations": "Operaciones",
+      "absences": "Ausencias"
+    },
+    "buttons": {
+      "batchAssignment": "Asignación Masiva",
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "deleting": "Eliminando...",
+      "search": "Buscar",
+      "clear": "Limpiar",
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "cancel": "Cancelar"
+    },
+    "tabs": {
+      "pending": "Pendientes",
+      "approved": "Aprobadas",
+      "rejected": "Rechazadas"
+    },
+    "filters": {
+      "search": "Buscar",
+      "searchPlaceholder": "Buscar por Nombres o Apellidos",
+      "documentNumber": "Número de Documento",
+      "documentNumberPlaceholder": "Buscar por Número de Documento",
+      "job": "Cargo",
+      "jobPlaceholder": "Seleccionar Cargo",
+      "branch": "Sucursal",
+      "branchPlaceholder": "Seleccionar Sucursal",
+      "period": "Periodo",
+      "dateRange": {
+        "from": "Fecha inicio",
+        "to": "Fecha fin"
+      }
+    },
+    "table": {
+      "headers": {
+        "employee": "Empleado",
+        "lastName": "Apellido",
+        "documentNumber": "Documento",
+        "job": "Cargo",
+        "branch": "Sucursal",
+        "absenceType": "Tipo de Ausencia",
+        "startDate": "Fecha Inicio",
+        "endDate": "Fecha Fin",
+        "status": "Estado",
+        "createdAt": "Fecha de Registro",
+        "actions": "Acciones"
+      },
+      "loading": "Cargando ausencias...",
+      "noData": "No se encontraron ausencias",
+      "noDataDescription": "No hay ausencias registradas para este filtro."
+    },
+    "status": {
+      "pending": "Pendiente",
+      "approved": "Aprobado",
+      "rejected": "Rechazado",
+      "unknown": "Desconocido"
+    },
+    "pagination": {
+      "showing": "Mostrando {current} de {total} resultados",
+      "page": "Página {current} de {total}",
+      "recordsPerPage": "Registros por página"
+    },
+    "delete": {
+      "title": "Eliminar Ausencia",
+      "message": "¿Está seguro de que desea eliminar esta ausencia?",
+      "success": "Ausencia eliminada exitosamente",
+      "error": "Error al eliminar la ausencia"
+    },
+    "ariaLabels": {
+      "editAbsence": "Editar ausencia",
+      "deleteAbsence": "Eliminar ausencia"
+    },
+    "edit": {
+      "title": "Editar Ausencia",
+      "employeeInfo": "Información del Empleado",
+      "document": "Documento",
+      "absenceType": "Tipo de Ausencia",
+      "startDate": "Fecha Inicio",
+      "endDate": "Fecha Fin",
+      "startDateRequired": "La fecha de inicio es obligatoria",
+      "endDateRequired": "La fecha de fin es obligatoria",
+      "reason": "Motivo",
+      "reasonPlaceholder": "Motivo (opcional)",
+      "withoutPay": "Sin pago",
+      "cancel": "Cancelar",
+      "save": "Guardar",
+      "saving": "Guardando...",
+      "successTitle": "Ausencia actualizada correctamente"
+    }
+  }
+}

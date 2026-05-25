@@ -1,0 +1,444 @@
+{
+  "title": "Gestion des Succursales",
+  "subtitle": "Gérez les succursales du système",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "maintainers": "Mainteneurs",
+    "branches": "Succursales"
+  },
+  "buttons": {
+    "add": "Ajouter une Succursale",
+    "addMassive": "Ajouter des Succursales en Masse",
+    "downloadExcel": "Télécharger Excel",
+    "search": "Rechercher",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "edit": "Modifier",
+    "delete": "Supprimer"
+  },
+  "search": {
+    "placeholder": "Rechercher Code ou Nom..."
+  },
+  "filters": {
+    "company": "Filtrer par Entreprise",
+    "companyPlaceholder": "Sélectionner une entreprise",
+    "allCompanies": "Toutes les entreprises"
+  },
+  "table": {
+    "status": {
+      "yes": "Oui",
+      "no": "Non"
+    },
+    "headers": {
+      "code": "Code",
+      "name": "Nom",
+      "address": "Adresse",
+      "integrationCode": "Code d'Intégration",
+      "isActive": "Actif",
+      "createdAt": "Date de Création",
+      "actions": "Actions"
+    },
+    "loading": "Chargement des succursales...",
+    "noData": "Aucune succursale trouvée",
+    "noDataDescription": "Créez une nouvelle succursale pour commencer."
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} succursales",
+    "recordsPerPage": "Enregistrements par page:",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page {current} sur {total}"
+  },
+  "delete": {
+    "title": "Succursale supprimée avec succès",
+    "description": "La succursale a été supprimée correctement",
+    "error": "Erreur lors de la suppression de la succursale",
+    "confirmMessage": "Êtes-vous sûr de vouloir supprimer cette succursale?"
+  },
+  "excel": {
+    "filename": "succursales",
+    "sheetName": "Succursales",
+    "headers": {
+      "code": "Code",
+      "name": "Nom",
+      "address": "Adresse",
+      "phone": "Téléphone",
+      "isActive": "Actif",
+      "createdAt": "Date de Création"
+    }
+  },
+  "ariaLabels": {
+    "editBranch": "Modifier la succursale",
+    "deleteBranch": "Supprimer la succursale"
+  },
+  "errors": {
+    "title": "Erreur"
+  },
+  "tour": {
+    "startButton": "Voir le guide",
+    "buttons": {
+      "next": "Suivant",
+      "previous": "Précédent",
+      "done": "Terminer"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Bienvenue dans le module Succursales",
+        "description": "Dans ce module vous pouvez gérer les succursales du système. Ce guide vous montrera les principales fonctionnalités disponibles."
+      },
+      "toolbar": {
+        "title": "Actions principales",
+        "description": "Ici vous pouvez rechercher des succursales, en ajouter individuellement, effectuer un chargement en masse depuis Excel ou télécharger la liste au format Excel."
+      },
+      "table": {
+        "title": "Tableau des succursales",
+        "description": "Le tableau affiche toutes les succursales enregistrées. Utilisez les boutons modifier ou supprimer pour gérer chaque succursale."
+      },
+      "pagination": {
+        "title": "Pagination",
+        "description": "Utilisez ces contrôles pour naviguer entre les pages et ajuster le nombre d'enregistrements affichés."
+      }
+    }
+  },
+  "detailTour": {
+    "startButton": "Voir le guide",
+    "tabs": {
+      "0": {
+        "steps": {
+          "welcome": {
+            "title": "Informations de base",
+            "description": "Dans cet onglet vous pouvez voir et modifier les données principales de la succursale: code, nom, adresse, fuseau horaire et entreprises associées."
+          },
+          "basicInfo": {
+            "title": "Données de la succursale",
+            "description": "Code, nom, téléphone, adresse physique, fuseau horaire, entreprises associées et statut actif de la succursale."
+          }
+        }
+      },
+      "1": {
+        "steps": {
+          "welcome": {
+            "title": "Géolocalisation",
+            "description": "Configurez les géozones pour définir les zones autorisées de marquage de cette succursale."
+          },
+          "geolocation": {
+            "title": "Carte des géozones",
+            "description": "Recherchez des adresses pour ajouter des points sur la carte et définissez le rayon de chaque géozone. Les marquages ne seront valides que dans ces zones."
+          }
+        }
+      },
+      "2": {
+        "steps": {
+          "welcome": {
+            "title": "Paramètres de présence",
+            "description": "Configurez les tolérances, horaires et configurations automatiques qui s'appliquent à la présence de cette succursale."
+          },
+          "params": {
+            "title": "Utiliser les paramètres de la succursale",
+            "description": "Activez cette option pour que la succursale utilise ses propres paramètres de présence au lieu de ceux de l'entreprise."
+          },
+          "tolerances": {
+            "title": "Tolérances",
+            "description": "Tolérance de retard et tolérance de pause déjeuner. Définissent les minutes autorisées avant de marquer un retard."
+          },
+          "schedules": {
+            "title": "Configuration des horaires",
+            "description": "Minutes avant et après l'horaire où le marquage est autorisé."
+          },
+          "automatic": {
+            "title": "Configurations automatiques",
+            "description": "Marquage automatique et fermeture sans quart assigné."
+          }
+        }
+      }
+    }
+  },
+  "detail": {
+    "title": "Détails de la Succursale",
+    "loading": "Chargement de la succursale...",
+    "breadcrumbs": {
+      "dashboard": "Tableau de bord",
+      "maintainers": "Mainteneurs",
+      "branches": "Succursales"
+    },
+    "tabs": {
+      "basicInfo": "Informations de Base",
+      "geolocation": "Géolocalisation",
+      "attendanceParams": "Paramètres de Présence"
+    },
+    "buttons": {
+      "update": "METTRE À JOUR",
+      "updating": "Mise à jour...",
+      "save": "ENREGISTRER",
+      "creating": "Création...",
+      "edit": "Modifier la Succursale",
+      "add": "Ajouter une Succursale"
+    },
+    "basicInfo": {
+      "title": "Informations de Base de la Succursale",
+      "code": "Code",
+      "name": "Nom",
+      "phone": "Téléphone",
+      "address": "Adresse",
+      "country": "Pays",
+      "lvl1": "Niv 1",
+      "lvl2": "Niv 2",
+      "lvl3": "Niv 3",
+      "timezone": "Fuseau Horaire",
+      "companies": "Entreprises",
+      "isActive": "Succursale Active",
+      "isActiveDescription": "Activer ou désactiver la succursale dans le système",
+      "codeDescription": "Code d'identification unique de la succursale",
+      "nameDescription": "Nom de la succursale",
+      "phoneDescription": "Numéro de téléphone de contact",
+      "addressDescription": "Adresse physique de la succursale",
+      "timezoneDescription": "Fuseau horaire de la succursale",
+      "phonePlaceholder": "Ex: +33 1 23 45 67 89",
+      "timezonePlaceholder": "Sélectionner le fuseau horaire",
+      "companiesPlaceholder": "Sélectionner les entreprises",
+      "addressPlaceholder": "Rechercher une adresse",
+      "countryPlaceholder": "Sélectionner le pays",
+      "lvl1Placeholder": "Sélectionner niv 1",
+      "lvl2Placeholder": "Sélectionner niv 2",
+      "lvl3Placeholder": "Sélectionner niv 3",
+      "validation": {
+        "codeRequired": "Veuillez entrer le code de la succursale",
+        "nameRequired": "Veuillez entrer le nom de la succursale",
+        "addressRequired": "Veuillez entrer l'adresse de la succursale",
+        "timezoneRequired": "Veuillez sélectionner un fuseau horaire",
+        "companiesRequired": "Veuillez sélectionner au moins une entreprise"
+      }
+    },
+    "geolocation": {
+      "title": "Configuration de Géolocalisation",
+      "searchLocation": "Rechercher un emplacement",
+      "searchPlaceholder": "Entrez une adresse pour ajouter un point sur la carte",
+      "searchDescription": "Recherchez une adresse pour ajouter un point sur la carte",
+      "radiusPlaceholder": "Rayon en mètres",
+      "name": "Nom"
+    },
+    "attendanceParams": {
+      "useBranchSettings": "Utiliser les Paramètres de Présence de la Succursale",
+      "useBranchSettingsDescription": "Si activé, la succursale utilisera ses propres paramètres de présence au lieu de ceux de l'entreprise",
+      "tolerances": {
+        "title": "Configuration des Tolérances",
+        "lateArrival": {
+          "label": "Tolérance de Retard (min)",
+          "description": "Minutes autorisées de retard avant de marquer un retard",
+          "example": "Exemple: 10 minutes",
+          "important": "Important:",
+          "note": "Si l'heure d'entrée est 09:00 et la tolérance est de 10 minutes, une marque à 09:08 sera considérée à l'heure, mais une marque à 09:11 sera considérée comme un retard."
+        },
+        "lunchBreak": {
+          "label": "Tolérance de Pause Déjeuner (min)",
+          "description": "Minutes supplémentaires autorisées pour le temps de déjeuner",
+          "example": "Exemple: 15 minutes",
+          "important": "Important:",
+          "note": "Si le temps de déjeuner est de 13:00 à 14:00 et la tolérance est de 15 minutes, un retour à 14:13 sera considéré à l'heure, mais à 14:16 ce sera un retard."
+        }
+      },
+      "schedules": {
+        "title": "Configuration des Horaires",
+        "beforeSchedule": {
+          "label": "Minutes Avant l'Horaire",
+          "description": "Temps autorisé pour marquer avant le début du quart de travail",
+          "example": "Exemple: 30 minutes",
+          "note": "Note:",
+          "text": "Si l'horaire est 09:00 et 30 minutes avant sont autorisées, une marque à partir de 08:30 sera valide, mais une marque à 08:29 ne sera pas enregistrée."
+        },
+        "afterSchedule": {
+          "label": "Minutes Après l'Horaire",
+          "description": "Temps maximum autorisé pour marquer après l'horaire",
+          "example": "Exemple: 60 minutes",
+          "note": "Note:",
+          "text": "Si l'heure de sortie est 18:00 et 60 minutes après sont autorisées, une marque jusqu'à 19:00 sera valide, mais après 19:00 elle ne sera pas enregistrée."
+        }
+      },
+      "automatic": {
+        "title": "Configurations Automatiques",
+        "automaticCheckIn": {
+          "label": "Minutes de Marquage Automatique",
+          "description": "Temps pour que le système marque automatiquement l'entrée",
+          "example": "Exemple: 5 minutes",
+          "warning": "Avertissement:",
+          "note": "Si configuré à 30 minutes, les marques sont enregistrées automatiquement si elles sont effectuées dans ±30 minutes par rapport à chaque heure programmée (entrée, déjeuner, sortie, etc.)."
+        },
+        "closeWithoutShift": {
+          "label": "Minutes de Fermeture sans Quart",
+          "description": "Temps pour fermer les enregistrements des employés sans quart de travail assigné",
+          "example": "Exemple: 480 minutes (8 heures)",
+          "warning": "Avertissement:",
+          "note": "S'il n'y a pas d'horaire assigné et que le paramètre est de 480 minutes, en marquant à 09:00 h, la sortie ne pourra être marquée que jusqu'à 17:00 h; après cela ne sera pas autorisé."
+        }
+      },
+      "parameters": {
+        "title": "Configuration des Paramètres"
+      }
+    },
+    "toast": {
+      "updateSuccess": "Succursale mise à jour avec succès",
+      "updateSuccessDescription": "La succursale a été mise à jour correctement",
+      "updateError": "Erreur lors de la mise à jour de la succursale",
+      "updateErrorDescription": "Une erreur s'est produite lors de la mise à jour de la succursale",
+      "createSuccess": "Succursale créée avec succès",
+      "createSuccessDescription": "La succursale a été créée correctement"
+    },
+    "notConfigured": "Non configuré"
+  },
+  "massive": {
+    "title": "Chargement en Masse des Succursales",
+    "tabs": {
+      "excel": "Chargement par Excel",
+      "manual": "Saisie Manuelle"
+    },
+    "instructions": {
+      "excel": {
+        "title": "Instructions pour le chargement par Excel:",
+        "step1": "Téléchargez le modèle Excel pour voir le format requis",
+        "step2": "Remplissez les informations des succursales dans le modèle",
+        "step3": "Dans la colonne \"Fuseau Horaire\" utilisez le menu déroulant pour sélectionner une option valide",
+        "step4": "Consultez la feuille \"Fuseaux Horaires\" pour voir toutes les options disponibles",
+        "step5": "Téléversez le fichier Excel complété",
+        "step6": "Vérifiez les informations et appuyez sur Traiter"
+      },
+      "manual": {
+        "title": "Instructions pour la saisie manuelle:",
+        "step1": "Cliquez sur Ajouter une Ligne pour ajouter une nouvelle succursale",
+        "step2": "Remplissez les champs requis dans chaque ligne",
+        "step3": "Vous pouvez ajouter autant de lignes que nécessaire",
+        "step4": "Vérifiez les informations et appuyez sur Traiter"
+      }
+    },
+    "buttons": {
+      "downloadTemplate": "Télécharger le Modèle",
+      "uploadExcel": "Téléverser Excel",
+      "addRow": "Ajouter une Ligne",
+      "process": "Traiter",
+      "processing": "Traitement...",
+      "cancel": "Annuler",
+      "close": "Fermer",
+      "retry": "Réessayer"
+    },
+    "table": {
+      "headers": {
+        "code": "Code",
+        "name": "Nom",
+        "address": "Adresse",
+        "phone": "Téléphone",
+        "timezone": "Fuseau Horaire",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "noData": "Aucune succursale ajoutée",
+      "noDataDescription": "Ajoutez des succursales manuellement ou téléversez un fichier Excel",
+      "placeholders": {
+        "code": "Code",
+        "name": "Nom",
+        "address": "Adresse",
+        "phone": "Ex: +33 1 23 45 67 89",
+        "timezone": "Sélectionner le fuseau horaire"
+      },
+      "status": {
+        "pending": "En attente",
+        "processing": "Traitement",
+        "completed": "Terminé",
+        "error": "Erreur"
+      }
+    },
+    "validation": {
+      "codeRequired": "Veuillez entrer le code de la succursale",
+      "nameRequired": "Veuillez entrer le nom de la succursale",
+      "addressRequired": "Veuillez entrer l'adresse de la succursale",
+      "timezoneRequired": "Veuillez sélectionner un fuseau horaire",
+      "timezoneInvalid": "Le fuseau horaire sélectionné n'est pas valide",
+      "companiesRequired": "Veuillez sélectionner au moins une entreprise",
+      "companiesLabel": "Sélectionner les Entreprises",
+      "companiesPlaceholder": "Sélectionner les entreprises"
+    },
+    "excel": {
+      "template": {
+        "sheetName": "Modèle Succursales",
+        "referenceSheet": "Fuseaux Horaires",
+        "filename": "modele_succursales.xlsx",
+        "headers": {
+          "code": "Code",
+          "name": "Nom",
+          "address": "Adresse",
+          "phone": "Téléphone",
+          "timezone": "Fuseau Horaire"
+        },
+        "referenceHeaders": {
+          "value": "Valeur",
+          "description": "Description"
+        },
+        "example": {
+          "code": "SUC-001",
+          "name": "Exemple Succursale",
+          "address": "Adresse de la succursale",
+          "phone": "123456789",
+          "timezone": "Europe/Paris"
+        },
+        "validation": {
+          "errorTitle": "Erreur de Validation",
+          "error": "Veuillez sélectionner un fuseau horaire valide dans la liste.",
+          "promptTitle": "Fuseau Horaire",
+          "prompt": "Sélectionnez un fuseau horaire dans la liste déroulante."
+        }
+      },
+      "warnings": {
+        "invalidTimezones": "{count} fuseau(x) horaire(s) de l'Excel ne sont pas valides et ont été nettoyés. Veuillez sélectionner des fuseaux horaires valides.",
+        "title": "Avertissement"
+      },
+      "errors": {
+        "formatError": {
+          "title": "Erreur de format de fichier",
+          "description": "Le fichier Excel n'a pas le format attendu. Veuillez télécharger le modèle et l'utiliser comme base."
+        },
+        "generateError": {
+          "title": "Erreur",
+          "description": "Erreur lors de la génération du modèle Excel"
+        }
+      }
+    },
+    "toast": {
+      "companiesRequired": {
+        "title": "Erreur",
+        "description": "Vous devez sélectionner au moins une entreprise"
+      },
+      "validationErrors": {
+        "title": "Erreurs de validation",
+        "rowPrefix": "Ligne"
+      },
+      "processCompletedWithErrors": {
+        "title": "Processus terminé avec des erreurs",
+        "description": "Consultez le tableau pour plus de détails."
+      },
+      "processCompletedSuccess": {
+        "title": "Processus de chargement en masse terminé avec succès",
+        "description": "Les succursales ont été créées correctement"
+      },
+      "createError": "Erreur lors de la création de la succursale",
+      "retryFailed": {
+        "title": "Réessayer le chargement échoué",
+        "description": "Nouvelle tentative uniquement pour les enregistrements avec erreurs"
+      },
+      "retryCompletedWithErrors": {
+        "title": "Nouvelle tentative terminée avec des erreurs",
+        "description": "Certains enregistrements ont encore des erreurs. Consultez la liste."
+      },
+      "retryCompletedSuccess": {
+        "title": "Nouvelle tentative réussie",
+        "description": "Tous les enregistrements échoués ont été traités correctement"
+      },
+      "noFailedBranches": {
+        "title": "Aucune succursale échouée",
+        "description": "Toutes les succursales ont été traitées avec succès"
+      }
+    },
+    "description": "Remplissez les informations des succursales que vous souhaitez créer en masse:",
+    "progress": "Traitement: {percent}%",
+    "ariaLabels": {
+      "deleteBranch": "Supprimer la succursale"
+    }
+  }
+}

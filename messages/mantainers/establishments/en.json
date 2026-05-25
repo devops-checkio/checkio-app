@@ -1,0 +1,302 @@
+{
+  "title": "Establishments Management",
+  "subtitle": "Manage clinical establishments and practice fields for students",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Maintainers",
+    "establishments": "Establishments"
+  },
+  "buttons": {
+    "add": "Add Establishment",
+    "addMassive": "Bulk Upload",
+    "masive": "Bulk Upload",
+    "downloadExcel": "Download Excel",
+    "generating": "Generating...",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "excel": "Export Excel",
+    "help": "Help"
+  },
+  "search": {
+    "placeholder": "Search by code or name...",
+    "button": "Search"
+  },
+  "table": {
+    "headers": {
+      "code": "Code",
+      "name": "Name",
+      "address": "Address",
+      "phone": "Phone",
+      "timezone": "Timezone",
+      "companies": "Companies",
+      "isActive": "Status",
+      "actions": "Actions"
+    },
+    "companiesCount": "company(ies)",
+    "active": "Active",
+    "inactive": "Inactive",
+    "noData": "No establishments found",
+    "noDataDescription": "Create a new establishment to get started.",
+    "noResultsFiltered": "No results",
+    "noResultsFilteredHint": "No establishments match your search. Try different terms.",
+    "empty": "No establishments found",
+    "status": {
+      "yes": "Yes",
+      "no": "No"
+    },
+    "ariaLabels": {
+      "viewAttendance": "View staffing and attendance",
+      "edit": "Edit establishment",
+      "delete": "Delete establishment"
+    }
+  },
+  "pagination": {
+    "rowsPerPage": "Rows per page:",
+    "showing": "Showing {current} of {total} establishments",
+    "recordsPerPage": "Records per page:",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  },
+  "delete": {
+    "title": "Confirm deletion",
+    "message": "Are you sure you want to delete this establishment?",
+    "deleting": "Deleting...",
+    "success": "Establishment deleted successfully",
+    "error": "Error deleting establishment. Please try again.",
+    "description": "The establishment has been deleted successfully"
+  },
+  "excel": {
+    "filename": "establishments",
+    "sheetName": "Establishments",
+    "success": "Excel generated successfully",
+    "error": "Error generating Excel"
+  },
+  "errors": {
+    "title": "Error",
+    "description": "An unexpected error occurred"
+  },
+  "tour": {
+    "startButton": "View guide",
+    "steps": {
+      "welcome": {
+        "title": "Establishments Module",
+        "description": "Manage clinical establishments and practice fields where students carry out their activities."
+      },
+      "actions": {
+        "title": "Main Actions",
+        "description": "Search establishments, add individually or in bulk, and export to Excel."
+      },
+      "table": {
+        "title": "Establishments Table",
+        "description": "View, edit or delete registered establishments."
+      },
+      "pagination": {
+        "title": "Pagination",
+        "description": "Navigate between pages and adjust the number of records shown."
+      }
+    }
+  },
+  "detail": {
+    "buttons": {
+      "add": "Add Establishment",
+      "edit": "Edit Establishment",
+      "create": "Create",
+      "update": "Save Changes",
+      "cancel": "Cancel",
+      "back": "Back to establishments"
+    },
+    "fallbackName": "Establishment",
+    "tabs": {
+      "profile": "Establishment details",
+      "attendance": "Staffing / Attendance"
+    },
+    "basicInfo": {
+      "code": "Code",
+      "name": "Name",
+      "address": "Address",
+      "phone": "Phone",
+      "timezone": "Timezone",
+      "companies": "Companies",
+      "phonePlaceholder": "E.g.: +1 555 1234",
+      "addressPlaceholder": "Enter the establishment address",
+      "companiesPlaceholder": "Select company(ies)",
+      "timezonePlaceholder": "Select timezone",
+      "validation": {
+        "codeRequired": "Code is required",
+        "nameRequired": "Name is required",
+        "addressRequired": "Address is required",
+        "companiesRequired": "At least one company must be selected",
+        "timezoneRequired": "Timezone is required"
+      }
+    },
+    "geolocations": {
+      "title": "Geolocation Points",
+      "add": "Add Point"
+    },
+    "toast": {
+      "createSuccess": "Establishment created",
+      "createSuccessDescription": "The establishment was created successfully",
+      "updateSuccess": "Establishment updated",
+      "updateSuccessDescription": "The establishment was updated successfully"
+    }
+  },
+  "attendance": {
+    "header": {
+      "badge": "Clinical operations monitoring",
+      "title": "Center staffing and attendance",
+      "subtitle": "Timezone {timezone} · updated {lastUpdatedAt}"
+    },
+    "filters": {
+      "dayMode": "Today / day",
+      "periodMode": "Period",
+      "refresh": "Refresh",
+      "export": "Export",
+      "date": "Date",
+      "startDate": "From",
+      "endDate": "To",
+      "status": "Status",
+      "search": "Search student",
+      "searchPlaceholder": "Name, document or schedule"
+    },
+    "status": {
+      "ALL": "All",
+      "PRESENT": "Present",
+      "INSIDE": "Inside center",
+      "EXITED": "Exited",
+      "ABSENT": "Absent",
+      "NOT_ARRIVED": "Not arrived",
+      "INCOMPLETE": "Incomplete",
+      "WITHOUT_SCHEDULE": "Without schedule"
+    },
+    "kpis": {
+      "expected": "Expected staffing",
+      "present": "Present",
+      "presence": "% present",
+      "absent": "Absent",
+      "inside": "Inside",
+      "exited": "Exited",
+      "averageMinutes": "Avg. minutes",
+      "late": "Late arrivals"
+    },
+    "charts": {
+      "statusBreakdown": "Staffing summary",
+      "absenteeismTrend": "Absenteeism by period",
+      "markingHistogram": "Marking times",
+      "minutesInside": "Time in establishment",
+      "heatmap": "Day/hour heatmap",
+      "expected": "Expected",
+      "absent": "Absent",
+      "absenteeism": "% absenteeism",
+      "checkIns": "Check-ins",
+      "checkOuts": "Check-outs",
+      "students": "Students",
+      "marks": "marks",
+      "empty": "No chart data"
+    },
+    "timeline": {
+      "title": "Marking timeline",
+      "subtitle": "Latest events registered in the establishment",
+      "empty": "No markings registered",
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "manual": "Manual",
+      "additional": "Additional"
+    },
+    "insights": {
+      "title": "Operational alerts",
+      "subtitle": "Cases requiring supervisor review",
+      "empty": "No critical alerts for the current filter"
+    },
+    "table": {
+      "title": "Student detail",
+      "subtitle": "Attendance status, time inside and schedule alerts",
+      "headers": {
+        "student": "Student",
+        "document": "Document",
+        "date": "Date",
+        "schedule": "Schedule",
+        "checkIn": "Check-in",
+        "checkOut": "Check-out",
+        "status": "Status",
+        "minutes": "Minutes",
+        "alerts": "Alerts"
+      },
+      "status": {
+        "ALL": "All",
+        "PRESENT": "Present",
+        "INSIDE": "Inside",
+        "EXITED": "Exited",
+        "ABSENT": "Absent",
+        "NOT_ARRIVED": "Not arrived",
+        "INCOMPLETE": "Incomplete",
+        "WITHOUT_SCHEDULE": "Without schedule"
+      },
+      "alerts": {
+        "late": "{minutes} min late",
+        "early": "{minutes} min early departure",
+        "missingCheckout": "No check-out",
+        "pendingMarks": "Pending marks"
+      },
+      "pagination": {
+        "rowsPerPage": "Rows per page",
+        "total": "{total} records",
+        "previous": "Previous",
+        "next": "Next"
+      },
+      "empty": "No students for the selected filter"
+    },
+    "errors": {
+      "load": "Could not load establishment staffing. Try again."
+    },
+    "exportFilename": "establishment_staffing_attendance"
+  },
+  "massive": {
+    "title": "Bulk Upload Establishments",
+    "globalCompanies": "Companies for all records",
+    "companiesPlaceholder": "Select company(ies)",
+    "template": {
+      "sheetName": "Establishments",
+      "filename": "establishments_template.xlsx",
+      "headers": {
+        "code": "Code",
+        "name": "Name",
+        "address": "Address",
+        "phone": "Phone",
+        "timezone": "Timezone"
+      }
+    },
+    "table": {
+      "code": "Code",
+      "name": "Name",
+      "address": "Address",
+      "phone": "Phone",
+      "timezone": "Timezone",
+      "status": "Status"
+    },
+    "status": {
+      "pending": "Pending",
+      "processing": "Processing",
+      "success": "Success",
+      "error": "Error"
+    },
+    "buttons": {
+      "downloadTemplate": "Download Template",
+      "upload": "Upload Excel",
+      "addRow": "Add Row",
+      "process": "Process",
+      "cancel": "Cancel"
+    },
+    "errors": {
+      "parseError": "Error reading the file",
+      "companiesRequired": "At least one company must be selected",
+      "unknown": "Unknown error"
+    },
+    "toast": {
+      "successTitle": "Upload complete",
+      "successDescription": "{count} establishment(s) created successfully",
+      "partialTitle": "Partial upload",
+      "partialDescription": "{successCount} success, {errorCount} error(s)"
+    }
+  }
+}

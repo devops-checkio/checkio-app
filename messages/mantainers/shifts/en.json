@@ -1,0 +1,297 @@
+{
+  "title": "Shift Management",
+  "subtitle": "Manage system shifts",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Maintainers",
+    "shifts": "Shifts"
+  },
+  "buttons": {
+    "add": "Add Shift",
+    "downloadExcel": "Download Excel",
+    "generating": "Generating...",
+    "edit": "Edit",
+    "delete": "Delete",
+    "previous": "Previous",
+    "next": "Next",
+    "clear": "Clear",
+    "search": "Search",
+    "cancel": "Cancel",
+    "deleting": "Deleting...",
+    "save": "Save",
+    "update": "Update",
+    "saving": "Saving...",
+    "updating": "Updating...",
+    "select": "Select",
+    "view": "View",
+    "viewCycle": "View cycle",
+    "assign": "Assign",
+    "change": "Change",
+    "massAssign": "Mass Assignment",
+    "selectDays": "Select Days"
+  },
+  "table": {
+    "headers": {
+      "name": "Name",
+      "type": "Type",
+      "days": "Days",
+      "weeks": "Weeks",
+      "createdAt": "Creation Date",
+      "updatedAt": "Modification Date",
+      "actions": "Actions"
+    },
+    "noData": "No shifts found",
+    "noDataDescription": "Create a new shift to get started.",
+    "loading": "Loading shifts...",
+    "type": {
+      "weekly": "Weekly Rotation",
+      "daily": "Daily Rotation"
+    }
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} shifts",
+    "recordsPerPage": "Records per page:",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  },
+  "delete": {
+    "title": "Confirm deletion",
+    "message": "Are you sure you want to delete this shift?",
+    "deleting": "Deleting...",
+    "success": "Shift deleted successfully",
+    "error": "Error deleting shift. Please try again."
+  },
+  "excel": {
+    "filename": "shifts",
+    "sheetName": "Shifts",
+    "headers": {
+      "name": "Name",
+      "type": "Type",
+      "days": "Days",
+      "weeks": "Weeks",
+      "createdAt": "Creation Date",
+      "updatedAt": "Modification Date"
+    }
+  },
+  "ariaLabels": {
+    "viewShiftCycle": "View shift cycle detail",
+    "editShift": "Edit shift",
+    "deleteShift": "Delete shift",
+    "addShift": "Add shift",
+    "viewConflicts": "View conflicts"
+  },
+  "search": {
+    "fields": {
+      "name": "Name",
+      "type": "Shift Type",
+      "days": "Days",
+      "weeks": "Weeks"
+    },
+    "placeholders": {
+      "name": "Search by name",
+      "type": "Shift type",
+      "days": "Number of days",
+      "weeks": "Number of weeks"
+    },
+    "options": {
+      "weekly": "Weekly Rotation",
+      "daily": "Daily Rotation"
+    }
+  },
+  "toast": {
+    "deleteSuccess": {
+      "title": "Shift deleted successfully"
+    },
+    "deleteError": {
+      "title": "Error",
+      "description": "Error deleting shift. Please try again."
+    },
+    "createSuccess": {
+      "title": "Shift created successfully",
+      "description": "The shift has been created correctly"
+    },
+    "updateSuccess": {
+      "title": "Shift updated successfully",
+      "description": "The shift has been updated correctly"
+    },
+    "createError": {
+      "title": "Error",
+      "description": "Error creating shift"
+    },
+    "updateError": {
+      "title": "Error",
+      "description": "Error updating shift"
+    },
+    "excelSuccess": {
+      "title": "Excel generated successfully"
+    },
+    "excelError": {
+      "title": "Error generating Excel"
+    },
+    "massAssignmentSuccess": {
+      "title": "Mass assignment completed",
+      "description": "Schedule \"{scheduleName}\" has been assigned to {count} day(s)"
+    },
+    "selectionRequired": {
+      "title": "Selection required",
+      "description": "Please select at least one day to assign schedule in bulk"
+    }
+  },
+  "form": {
+    "title": {
+      "create": "Create new shift",
+      "edit": "Edit shift"
+    },
+    "loading": "Loading shift...",
+    "fields": {
+      "name": "Shift Name",
+      "companies": "Companies",
+      "type": "Rotation Type",
+      "days": "Days",
+      "weeks": "Weeks",
+      "nomenclature": "Nomenclature"
+    },
+    "placeholders": {
+      "name": "Enter shift name",
+      "type": "Select type",
+      "days": "Number of days",
+      "weeks": "Number of weeks"
+    },
+    "validation": {
+      "nameRequired": "Please enter the shift name",
+      "companiesRequired": "Please select at least one company"
+    },
+    "invalidSchedules": {
+      "title": "Some schedules do not apply",
+      "description": "{count, plural, one {One assigned schedule is not available for this shift's companies and was removed from the grid. Please reassign that day.} other {# assigned schedules are not available for this shift's companies and were removed from the grid. Please reassign those days.}}"
+    },
+    "options": {
+      "weekly": "Weekly Rotation",
+      "daily": "Daily Rotation"
+    },
+    "summary": {
+      "workHours": "Total Weekly Work Hours:",
+      "healthHours": "Total Weekly Meal Break Hours:",
+      "warning": "Warning!",
+      "warningMessage": "The total of {hours} weekly hours exceeds the legal limit of {limit} hours. It is recommended to adjust the schedule to comply with labor regulations."
+    }
+  },
+  "editor": {
+    "selectSchedule": {
+      "title": "Select Schedule",
+      "searchPlaceholder": "Search by name or code",
+      "loading": "Loading schedules...",
+      "noData": "No schedules found",
+      "schedule": "Schedule:",
+      "total": "Total: {hours}h {minutes}m",
+      "pagination": {
+        "showing": "Showing {current} of {total} schedules"
+      }
+    },
+    "week": {
+      "days": "days",
+      "assign": "Assign",
+      "change": "Change",
+      "schedule": "Schedule:",
+      "total": "Total: {hours}h {minutes}m",
+      "available": "Available to assign",
+      "noSchedule": "No schedule assigned",
+      "until": "until",
+      "clickToAssign": "Click to assign a schedule",
+      "conflicts": {
+        "title": "Conflicting Shifts",
+        "currentShift": "Current Shift",
+        "assignedDay": "Assigned day:",
+        "duration": "Duration:",
+        "start": "Start:",
+        "end": "End:",
+        "includesDays": "This schedule includes {days} {daysText} from {day}",
+        "day": "Day {day}",
+        "overlappingShifts": "Overlapping Shifts:",
+        "overlapDetected": "Overlap detected:",
+        "overlapStart": "Overlap start:",
+        "overlapEnd": "Overlap end:",
+        "conflictSchedule": "Conflicting schedule:",
+        "conflictStart": "Start:",
+        "conflictEnd": "End:"
+      }
+    },
+    "nomenclature": {
+      "label": "Nomenclature",
+      "free": "Free",
+      "to": "to",
+      "day": "Day {day}",
+      "week": "W{week}",
+      "dailyPrefix": "D "
+    }
+  },
+  "tour": {
+    "startButton": "View guide",
+    "buttons": {
+      "next": "Next",
+      "previous": "Previous",
+      "done": "Finish"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Welcome to the Shifts module",
+        "description": "In this module you can manage rotating shifts (weekly or by days). This guide will show you the main features."
+      },
+      "filters": {
+        "title": "Search filters",
+        "description": "Filter by name, rotation type, number of days or weeks. Use Search to apply and Clear to reset."
+      },
+      "toolbar": {
+        "title": "Main actions",
+        "description": "Create new shifts or download the list to Excel. Buttons depend on your permissions."
+      },
+      "table": {
+        "title": "Shifts table",
+        "description": "List with name, type (weekly/days), days, weeks and dates. Use the edit button to modify or delete to deactivate."
+      },
+      "pagination": {
+        "title": "Pagination",
+        "description": "Navigate between pages and adjust the number of records displayed."
+      }
+    }
+  },
+  "editorTour": {
+    "startButton": "View guide",
+    "buttons": {
+      "next": "Next",
+      "previous": "Previous",
+      "done": "Finish"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Shift Editor",
+        "description": "Configure the shift: name, companies, rotation type and assign schedules to each day. Follow the guide to learn each section."
+      },
+      "basicInfo": {
+        "title": "Basic data",
+        "description": "Enter the shift name, select companies and review the work hours and meal break summary."
+      },
+      "nomenclature": {
+        "title": "Nomenclature",
+        "description": "Define how days are identified in reports (e.g. Free, D 1, S1, etc.)."
+      },
+      "rotationConfig": {
+        "title": "Rotation type",
+        "description": "Choose Weekly Rotation (days per week) or Daily Rotation. Configure days/weeks according to the type."
+      },
+      "massAssignment": {
+        "title": "Mass assignment",
+        "description": "Select multiple days and assign the same schedule at once. Useful for repetitive shifts."
+      },
+      "scheduleGrid": {
+        "title": "Schedule assignment",
+        "description": "Click each cell to assign a schedule to the day. The system automatically detects conflicts."
+      },
+      "submit": {
+        "title": "Save",
+        "description": "Save the shift. Cannot save if there are unresolved schedule conflicts."
+      }
+    }
+  }
+}

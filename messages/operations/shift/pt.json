@@ -1,0 +1,69 @@
+{
+  "tour": {
+    "startButton": "Ver guia",
+    "buttons": {
+      "next": "Próximo",
+      "previous": "Anterior",
+      "done": "Finalizar"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Operações de Turnos",
+        "description": "Gerencie a atribuição de turnos aos funcionários. As abas mostram funcionários sem turno, com turno ativo, futuro ou passado."
+      },
+      "tabs": {
+        "title": "Abas",
+        "description": "Navegue entre as visualizações: funcionários sem turno, com turno ativo, futuro ou passado. Cada aba mostra a contagem correspondente."
+      },
+      "infoBtn": {
+        "title": "Informações do Sistema",
+        "description": "Consulte informações sobre o funcionamento do módulo de atribuição de turnos."
+      },
+      "filters": {
+        "title": "Filtros",
+        "description": "Pesquise funcionários por nome, número de documento, cargo ou filial. Use Pesquisar para aplicar os filtros."
+      },
+      "toolbar": {
+        "title": "Ações principais",
+        "description": "Limpar redefine os filtros. Pesquisar aplica a busca. Selecionar Turno aparece quando há funcionários selecionados para atribuir um turno."
+      },
+      "table": {
+        "title": "Tabela de funcionários",
+        "description": "Selecione os funcionários com as caixas de seleção. Use o botão 'Selecionar Turno' para continuar com a atribuição."
+      },
+      "pagination": {
+        "title": "Paginação",
+        "description": "Navegue entre as páginas e ajuste a quantidade de registros exibidos."
+      }
+    }
+  },
+  "assignmentTour": {
+    "startButton": "Ver guia",
+    "steps": {
+      "welcome": {
+        "title": "Atribuição de Turnos",
+        "description": "Configure a data de início e os horários por funcionário. Selecione um ou mais funcionários do painel esquerdo, escolha a data e atribua os horários a cada dia."
+      },
+      "sidebar": {
+        "title": "Funcionários selecionados",
+        "description": "Lista de funcionários a serem atribuídos. Use a pesquisa para filtrar. Clique em um funcionário para configurar seus horários."
+      },
+      "headerConfig": {
+        "title": "Configuração geral",
+        "description": "Informe a data de início do turno e revise o turno selecionado. Use 'Comparar' para ver a distribuição de horários entre funcionários."
+      },
+      "employeeConfig": {
+        "title": "Configuração por funcionário",
+        "description": "Para cada funcionário: selecione um turno, a regra de feriados e atribua o horário a cada dia do ciclo."
+      },
+      "bottomBar": {
+        "title": "Resumo e salvamento",
+        "description": "Veja o tempo decorrido e o progresso. Você deve completar a configuração de todos os funcionários antes de salvar."
+      },
+      "submitBtn": {
+        "title": "Salvar atribuição",
+        "description": "Salve a atribuição quando todos os funcionários estiverem configurados e marcados como concluídos."
+      }
+    }
+  }
+}

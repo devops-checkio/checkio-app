@@ -1,0 +1,178 @@
+{
+  "title": "Daily Access Passes",
+  "subtitle": "Manage temporary passes for employees without ID documents",
+  "activePasses": "Active Passes",
+  "expiredPasses": "Expired Passes",
+  "createPass": "Create Pass",
+  "employee": "Employee",
+  "startDate": "Start Date",
+  "endDate": "End Date",
+  "status": "Status",
+  "reason": "Reason",
+  "actions": "Actions",
+  "active": "Active",
+  "expired": "Expired",
+  "deactivated": "Deactivated",
+  "view": "View",
+  "deactivate": "Deactivate",
+  "renew": "Renew",
+  "qrCode": "QR Code",
+  "qrExpiresAt": "QR Expires At",
+  "createdAt": "Created At",
+  "createdBy": "Created By",
+  "updatedAt": "Updated At",
+  "noReason": "No reason specified",
+  "noEmployee": "No employee",
+  "dashboard": "Dashboard",
+  "operations": "Operations",
+  "dailyPasses": "Daily Passes",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Operations",
+    "dailyPasses": "Daily Passes"
+  },
+  "modal": {
+    "title": "Create Daily Pass",
+    "message": "Complete the pass data to assign to selected employees:",
+    "selectEmployee": "Select Employee",
+    "searchEmployee": "Search employee...",
+    "employeeInfo": "Employee Information",
+    "passConfiguration": "Pass Configuration",
+    "dateRange": "Date Range",
+    "reasonLabel": "Reason",
+    "reasonPlaceholder": "Specify the reason for the temporary pass",
+    "create": "Create Passes",
+    "cancel": "Cancel",
+    "creating": "Creating...",
+    "success": "Pass created successfully",
+    "error": "Error creating pass",
+    "filters": {
+      "search": "Search",
+      "searchPlaceholder": "Search by First Name or Last Name",
+      "documentNumber": "Document Number",
+      "documentNumberPlaceholder": "Search by Document Number",
+      "job": "Job",
+      "jobPlaceholder": "Select Job",
+      "branch": "Branch",
+      "branchPlaceholder": "Select Branch",
+      "searchButton": "Search",
+      "clearButton": "Clear"
+    },
+    "table": {
+      "loading": "Loading employees...",
+      "noData": "No employees found",
+      "headers": {
+        "code": "Code",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "documentNumber": "Document Number",
+        "email": "Email",
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "contractType": "Contract Type",
+        "contractedHours": "Contracted Hours",
+        "employee": "Employee",
+        "status": "Status"
+      },
+      "status": {
+        "pending": "Pending",
+        "processing": "Processing",
+        "completed": "Completed",
+        "error": "Error"
+      },
+      "contractType": {
+        "indefinite": "Indefinite",
+        "fixedTerm": "Fixed Term"
+      }
+    },
+    "pagination": {
+      "showing": "Showing {current} of {total} results",
+      "page": "Page {current} of {total}",
+      "previous": "Previous",
+      "next": "Next",
+      "recordsPerPage": "Records per page"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "continue": "Continue",
+      "back": "Back"
+    },
+    "form": {
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "startDateRequired": "Please select a start date",
+      "endDateRequired": "Please select an end date",
+      "reasonRequired": "Please enter the reason for the pass"
+    },
+    "selectedEmployees": {
+      "title": "Selected Employees",
+      "noProcessing": "No employees processing",
+      "noSelected": "No employees selected"
+    },
+    "toast": {
+      "selectEmployeeError": {
+        "title": "Error",
+        "description": "Please select at least one employee"
+      },
+      "datesError": {
+        "title": "Error",
+        "description": "Please enter valid start and end dates"
+      },
+      "createSuccess": {
+        "title": "Passes created",
+        "description": "Daily passes have been created successfully for all employees"
+      },
+      "createError": {
+        "title": "Process completed with errors",
+        "description": "{successCount} passes created successfully, {errorCount} with errors"
+      }
+    },
+    "progress": "Progress",
+    "pending": "Pending",
+    "processing": "Processing",
+    "completed": "Completed",
+    "errors": "Errors",
+    "systemInfo": {
+      "title": "System Information",
+      "description": "The system will automatically generate daily QR codes for each employee according to their assigned schedule. Codes will be sent by email."
+    }
+  },
+  "actionsModal": {
+    "title": "Pass Details",
+    "details": "Details",
+    "actions": "Actions",
+    "employeeInfo": "Employee Information",
+    "passInfo": "Pass Information",
+    "qrInfo": "QR Code Information",
+    "additionalDays": "Additional Days",
+    "selectDays": "Select additional days",
+    "renewPass": "Renew Pass",
+    "deactivatePass": "Deactivate Pass",
+    "confirmDeactivate": "Are you sure you want to deactivate this pass?",
+    "confirmRenew": "Are you sure you want to renew this pass?",
+    "success": "Operation completed successfully",
+    "error": "Error performing operation"
+  },
+  "statusLabels": {
+    "ACTIVE": "Active",
+    "EXPIRED": "Expired",
+    "DEACTIVATED": "Deactivated"
+  },
+  "statusColors": {
+    "ACTIVE": "green",
+    "EXPIRED": "red",
+    "DEACTIVATED": "gray"
+  },
+  "table": {
+    "loading": "Loading daily passes...",
+    "noData": "No daily passes found"
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} results",
+    "page": "Page {current} of {total}"
+  },
+  "buttons": {
+    "previous": "Previous",
+    "next": "Next"
+  }
+}

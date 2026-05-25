@@ -1,0 +1,436 @@
+{
+  "title": "Branch Management",
+  "subtitle": "Manage system branches",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Maintainers",
+    "branches": "Branches"
+  },
+  "buttons": {
+    "add": "Add Branch",
+    "addMassive": "Bulk Add Branch",
+    "downloadExcel": "Download Excel",
+    "search": "Search",
+    "previous": "Previous",
+    "next": "Next",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "search": {
+    "placeholder": "Search Code or Name..."
+  },
+  "filters": {
+    "company": "Filter by Company",
+    "companyPlaceholder": "Select a company",
+    "allCompanies": "All companies"
+  },
+  "table": {
+    "status": {
+      "yes": "Yes",
+      "no": "No"
+    },
+    "headers": {
+      "code": "Code",
+      "name": "Name",
+      "address": "Address",
+      "integrationCode": "Integration Code",
+      "isActive": "Active",
+      "createdAt": "Creation Date",
+      "actions": "Actions"
+    },
+    "loading": "Loading branches...",
+    "noData": "No branches found",
+    "noDataDescription": "Create a new branch to get started."
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} branches",
+    "recordsPerPage": "Records per page:",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  },
+  "delete": {
+    "title": "Branch deleted successfully",
+    "description": "The branch has been deleted correctly",
+    "error": "Error deleting branch",
+    "confirmMessage": "Are you sure you want to delete this branch?"
+  },
+  "excel": {
+    "filename": "branches",
+    "sheetName": "Branches",
+    "headers": {
+      "code": "Code",
+      "name": "Name",
+      "address": "Address",
+      "phone": "Phone",
+      "isActive": "Active",
+      "createdAt": "Creation Date"
+    }
+  },
+  "ariaLabels": {
+    "editBranch": "Edit branch",
+    "deleteBranch": "Delete branch"
+  },
+  "errors": {
+    "title": "Error"
+  },
+  "tour": {
+    "startButton": "View guide",
+    "buttons": {
+      "next": "Next",
+      "previous": "Previous",
+      "done": "Finish"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Welcome to the Branches module",
+        "description": "In this module you can manage system branches. This guide will show you the main features available."
+      },
+      "toolbar": {
+        "title": "Main actions",
+        "description": "Here you can search branches, add individually, perform bulk upload from Excel or download the list in Excel format."
+      },
+      "table": {
+        "title": "Branches table",
+        "description": "The table shows all registered branches. Use the edit or delete buttons to manage each branch."
+      },
+      "pagination": {
+        "title": "Pagination",
+        "description": "Use these controls to navigate between pages and adjust the number of records displayed."
+      }
+    }
+  },
+  "detailTour": {
+    "startButton": "View guide",
+    "tabs": {
+      "0": {
+        "steps": {
+          "welcome": {
+            "title": "Basic Information",
+            "description": "In this tab you can view and edit the main data of the branch: code, name, address, time zone and associated companies."
+          },
+          "basicInfo": {
+            "title": "Branch data",
+            "description": "Code, name, phone, physical address, time zone, associated companies and branch active status."
+          }
+        }
+      },
+      "1": {
+        "steps": {
+          "welcome": {
+            "title": "Geolocation",
+            "description": "Configure geofences to define the authorized marking areas for this branch."
+          },
+          "geolocation": {
+            "title": "Geofence map",
+            "description": "Search for addresses to add points on the map and define the radius of each geofence. Markings will only be valid within these areas."
+          }
+        }
+      },
+      "2": {
+        "steps": {
+          "welcome": {
+            "title": "Attendance Parameters",
+            "description": "Configure tolerances, schedules and automatic configurations that apply to this branch's attendance."
+          },
+          "params": {
+            "title": "Use branch parameters",
+            "description": "Enable this option for the branch to use its own attendance parameters instead of the company's."
+          },
+          "tolerances": {
+            "title": "Tolerances",
+            "description": "Late arrival and lunch break tolerance. Define the minutes allowed before marking tardiness."
+          },
+          "schedules": {
+            "title": "Schedule configuration",
+            "description": "Minutes before and after the schedule when marking is allowed."
+          },
+          "automatic": {
+            "title": "Automatic configurations",
+            "description": "Automatic marking and close without assigned shift."
+          }
+        }
+      }
+    }
+  },
+  "detail": {
+    "title": "Branch Details",
+    "loading": "Loading branch...",
+    "breadcrumbs": {
+      "dashboard": "Dashboard",
+      "maintainers": "Maintainers",
+      "branches": "Branches"
+    },
+    "tabs": {
+      "basicInfo": "Basic Information",
+      "geolocation": "Geolocation",
+      "attendanceParams": "Attendance Parameters"
+    },
+    "buttons": {
+      "update": "UPDATE",
+      "updating": "Updating...",
+      "save": "SAVE",
+      "creating": "Creating...",
+      "edit": "Edit Branch",
+      "add": "Add Branch"
+    },
+    "basicInfo": {
+      "title": "Basic Branch Information",
+      "code": "Code",
+      "name": "Name",
+      "phone": "Phone",
+      "address": "Address",
+      "timezone": "Time Zone",
+      "companies": "Companies",
+      "isActive": "Active Branch",
+      "isActiveDescription": "Activate or deactivate the branch in the system",
+      "codeDescription": "Unique identification code of the branch",
+      "nameDescription": "Branch name",
+      "phoneDescription": "Contact phone number",
+      "addressDescription": "Physical address of the branch",
+      "timezoneDescription": "Branch time zone",
+      "phonePlaceholder": "Ex: +1 555 123-4567",
+      "timezonePlaceholder": "Select time zone",
+      "companiesPlaceholder": "Select companies",
+      "addressPlaceholder": "Search address",
+      "validation": {
+        "codeRequired": "Please enter the branch code",
+        "nameRequired": "Please enter the branch name",
+        "addressRequired": "Please enter the branch address",
+        "timezoneRequired": "Please select a time zone",
+        "companiesRequired": "Please select at least one company"
+      }
+    },
+    "geolocation": {
+      "title": "Geolocation Configuration",
+      "searchLocation": "Search location",
+      "searchPlaceholder": "Enter an address to add a point on the map",
+      "searchDescription": "Search for an address to add a point on the map",
+      "radiusPlaceholder": "Radius in meters",
+      "name": "Name"
+    },
+    "attendanceParams": {
+      "useBranchSettings": "Use Branch Attendance Parameters",
+      "useBranchSettingsDescription": "If enabled, the branch will use its own attendance parameters instead of the company's",
+      "tolerances": {
+        "title": "Tolerance Configuration",
+        "lateArrival": {
+          "label": "Late Arrival Tolerance (min)",
+          "description": "Minutes allowed for delay before marking tardiness",
+          "example": "Example: 10 minutes",
+          "important": "Important:",
+          "note": "If the entry time is 09:00 and the tolerance is 10 minutes, a mark at 09:08 will be considered on time, but a mark at 09:11 will be considered tardiness."
+        },
+        "lunchBreak": {
+          "label": "Lunch Break Tolerance (min)",
+          "description": "Additional minutes allowed for lunch time",
+          "example": "Example: 15 minutes",
+          "important": "Important:",
+          "note": "If lunch time is from 13:00 to 14:00 and the tolerance is 15 minutes, a return at 14:13 will be considered on time, but at 14:16 it will be tardiness."
+        }
+      },
+      "schedules": {
+        "title": "Schedule Configuration",
+        "beforeSchedule": {
+          "label": "Minutes Before Schedule",
+          "description": "Time allowed to mark before shift start",
+          "example": "Example: 30 minutes",
+          "note": "Note:",
+          "text": "If the schedule is 09:00 and 30 minutes before are allowed, a mark from 08:30 will be valid, but a mark at 08:29 will not be recorded."
+        },
+        "afterSchedule": {
+          "label": "Minutes After Schedule",
+          "description": "Maximum time allowed to mark after schedule",
+          "example": "Example: 60 minutes",
+          "note": "Note:",
+          "text": "If the exit time is 18:00 and 60 minutes after are allowed, a mark until 19:00 will be valid, but after 19:00 it will not be recorded."
+        }
+      },
+      "automatic": {
+        "title": "Automatic Configurations",
+        "automaticCheckIn": {
+          "label": "Automatic Check-in Minutes",
+          "description": "Time for the system to automatically mark entry",
+          "example": "Example: 5 minutes",
+          "warning": "Warning:",
+          "note": "If set to 30 minutes, marks are automatically recorded if made within ±30 minutes of each scheduled time (entry, lunch, exit, etc.)."
+        },
+        "closeWithoutShift": {
+          "label": "Close Without Shift Minutes",
+          "description": "Time to close records of employees without assigned shift",
+          "example": "Example: 480 minutes (8 hours)",
+          "warning": "Warning:",
+          "note": "If there is no assigned schedule and the parameter is 480 minutes, when marking at 09:00 hrs, exit can only be marked until 17:00 hrs; after that it will not be allowed."
+        }
+      },
+      "parameters": {
+        "title": "Parameters Configuration"
+      }
+    },
+    "toast": {
+      "updateSuccess": "Branch updated successfully",
+      "updateSuccessDescription": "The branch has been updated correctly",
+      "updateError": "Error updating branch",
+      "updateErrorDescription": "An error occurred while updating the branch",
+      "createSuccess": "Branch created successfully",
+      "createSuccessDescription": "The branch has been created correctly"
+    },
+    "notConfigured": "Not configured"
+  },
+  "massive": {
+    "title": "Bulk Branch Upload",
+    "tabs": {
+      "excel": "Excel Upload",
+      "manual": "Manual Entry"
+    },
+    "instructions": {
+      "excel": {
+        "title": "Instructions for Excel upload:",
+        "step1": "Download the Excel template to see the required format",
+        "step2": "Fill in the branch information in the template",
+        "step3": "In the \"Time Zone\" column use the dropdown to select a valid option",
+        "step4": "Check the \"Time Zones\" sheet to see all available options",
+        "step5": "Upload the completed Excel file",
+        "step6": "Verify the information and press Process"
+      },
+      "manual": {
+        "title": "Instructions for manual entry:",
+        "step1": "Click Add Row to add a new branch",
+        "step2": "Fill in the required fields in each row",
+        "step3": "You can add as many rows as needed",
+        "step4": "Verify the information and press Process"
+      }
+    },
+    "buttons": {
+      "downloadTemplate": "Download Template",
+      "uploadExcel": "Upload Excel",
+      "addRow": "Add Row",
+      "process": "Process",
+      "processing": "Processing...",
+      "cancel": "Cancel",
+      "close": "Close",
+      "retry": "Retry"
+    },
+    "table": {
+      "headers": {
+        "code": "Code",
+        "name": "Name",
+        "address": "Address",
+        "phone": "Phone",
+        "timezone": "Time Zone",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "noData": "No branches added",
+      "noDataDescription": "Add branches manually or upload an Excel file",
+      "placeholders": {
+        "code": "Code",
+        "name": "Name",
+        "address": "Address",
+        "phone": "Ex: +1 555 123-4567",
+        "timezone": "Select time zone"
+      },
+      "status": {
+        "pending": "Pending",
+        "processing": "Processing",
+        "completed": "Completed",
+        "error": "Error"
+      }
+    },
+    "validation": {
+      "codeRequired": "Please enter the branch code",
+      "nameRequired": "Please enter the branch name",
+      "addressRequired": "Please enter the branch address",
+      "timezoneRequired": "Please select a time zone",
+      "timezoneInvalid": "The selected time zone is not valid",
+      "companiesRequired": "Please select at least one company",
+      "companiesLabel": "Select Companies",
+      "companiesPlaceholder": "Select companies"
+    },
+    "excel": {
+      "template": {
+        "sheetName": "Branch Template",
+        "referenceSheet": "Time Zones",
+        "filename": "branch_template.xlsx",
+        "headers": {
+          "code": "Code",
+          "name": "Name",
+          "address": "Address",
+          "phone": "Phone",
+          "timezone": "Time Zone"
+        },
+        "referenceHeaders": {
+          "value": "Value",
+          "description": "Description"
+        },
+        "example": {
+          "code": "BR-001",
+          "name": "Example Branch",
+          "address": "Branch address",
+          "phone": "123456789",
+          "timezone": "America/New_York"
+        },
+        "validation": {
+          "errorTitle": "Validation Error",
+          "error": "Please select a valid time zone from the list.",
+          "promptTitle": "Time Zone",
+          "prompt": "Select a time zone from the dropdown list."
+        }
+      },
+      "warnings": {
+        "invalidTimezones": "{count} time zone(s) from Excel are not valid and have been cleared. Please select valid time zones.",
+        "title": "Warning"
+      },
+      "errors": {
+        "formatError": {
+          "title": "File format error",
+          "description": "The Excel file does not have the expected format. Please download the template and use it as a base."
+        },
+        "generateError": {
+          "title": "Error",
+          "description": "Error generating Excel template"
+        }
+      }
+    },
+    "toast": {
+      "companiesRequired": {
+        "title": "Error",
+        "description": "You must select at least one company"
+      },
+      "validationErrors": {
+        "title": "Validation errors",
+        "rowPrefix": "Row"
+      },
+      "processCompletedWithErrors": {
+        "title": "Process completed with errors",
+        "description": "Review the table for more details."
+      },
+      "processCompletedSuccess": {
+        "title": "Bulk upload process completed successfully",
+        "description": "Branches have been created correctly"
+      },
+      "createError": "Error creating branch",
+      "retryFailed": {
+        "title": "Retry failed upload",
+        "description": "Retrying only records with errors"
+      },
+      "retryCompletedWithErrors": {
+        "title": "Retry completed with errors",
+        "description": "Some records still have errors. Review the list."
+      },
+      "retryCompletedSuccess": {
+        "title": "Retry successful",
+        "description": "All failed records have been processed correctly"
+      },
+      "noFailedBranches": {
+        "title": "No failed branches",
+        "description": "All branches have been processed successfully"
+      }
+    },
+    "description": "Fill in the information of the branches you want to create in bulk:",
+    "progress": "Processing: {percent}%",
+    "ariaLabels": {
+      "deleteBranch": "Delete branch"
+    }
+  }
+}

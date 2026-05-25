@@ -1,0 +1,87 @@
+{
+  "header": {
+    "title": "Dotation des établissements",
+    "breadcrumbs": {
+      "assistance": "Assistance",
+      "dashboard": "Dotation établissements"
+    },
+    "lastRefresh": "Dernière mise à jour",
+    "rangeDay": "Jour",
+    "rangePeriod": "Période"
+  },
+  "filters": {
+    "searchPlaceholder": "Rechercher un établissement…",
+    "status": "Statut opérationnel (étudiant)",
+    "risk": "Risque de l'établissement",
+    "riskAll": "Tous les niveaux",
+    "sortBy": "Trier le classement",
+    "sortDesc": "Décroissant",
+    "sortAsc": "Croissant",
+    "rowsPerPage": "Lignes par page",
+    "refresh": "Actualiser",
+    "export": "Exporter le classement",
+    "today": "Aujourd'hui"
+  },
+  "sort": {
+    "risk": "Risque",
+    "absenteeism": "Absentéisme",
+    "presence": "Présence",
+    "name": "Nom",
+    "code": "Code"
+  },
+  "kpis": {
+    "expected": "Effectif attendu",
+    "present": "Présents",
+    "absent": "Absents",
+    "inside": "Sur site",
+    "exited": "Sortis",
+    "presenceRate": "% Présence",
+    "criticalEstablishments": "Établissements critiques",
+    "attentionEstablishments": "Établissements à surveiller",
+    "avgMinutes": "Min. moyennes",
+    "establishmentsWithActivity": "Établissements avec activité"
+  },
+  "cards": {
+    "title": "Synthèse par établissement",
+    "viewDetail": "Voir le détail",
+    "lastEvent": "Dernier pointage",
+    "empty": "Aucun établissement ne correspond aux filtres."
+  },
+  "ranking": {
+    "title": "Classement comparatif",
+    "establishment": "Établissement",
+    "expected": "Attendus",
+    "present": "Présents",
+    "absent": "Absents",
+    "presencePct": "% Présence",
+    "inside": "Sur site",
+    "exited": "Sortis",
+    "late": "Retards",
+    "earlyExit": "Départ anticipé",
+    "noCheckout": "Sans sortie",
+    "risk": "Risque",
+    "actions": "Actions"
+  },
+  "charts": {
+    "presenceByCenter": "% Présence par établissement",
+    "absenteeismByCenter": "Absentéisme par établissement",
+    "histogram": "Pointages par heure (global)",
+    "heatmap": "Intensité jour/heure",
+    "trend": "Tendance d'absentéisme",
+    "empty": "Pas de données à afficher"
+  },
+  "risk": {
+    "OK": "OK",
+    "ATTENTION": "Attention",
+    "CRITICAL": "Critique"
+  },
+  "pagination": {
+    "page": "Page {current} sur {total}"
+  },
+  "states": {
+    "loading": "Chargement…",
+    "error": "Impossible de charger le tableau de bord.",
+    "noCompany": "Sélectionnez une entreprise pour continuer."
+  },
+  "exportFilename": "dotation-etablissements"
+}

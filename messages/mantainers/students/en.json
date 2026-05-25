@@ -1,0 +1,243 @@
+{
+  "title": "Student Management",
+  "subtitle": "Manage the organization's students",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Maintainers",
+    "students": "Students",
+    "bulkUpload": "Bulk Upload",
+    "detail": "Detail"
+  },
+  "buttons": {
+    "add": "Add Student",
+    "bulkUpload": "Bulk Upload",
+    "previous": "Previous",
+    "next": "Next",
+    "search": "Search",
+    "clear": "Clear",
+    "edit": "Edit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "addRow": "Add Row",
+    "process": "Process",
+    "processingLabel": "Processing...",
+    "downloadTemplate": "Download Template",
+    "uploadExcel": "Upload Excel",
+    "back": "Back",
+    "delete": "Delete",
+    "activate": "Activate",
+    "deactivate": "Deactivate"
+  },
+  "table": {
+    "headers": {
+      "code": "Enrollment",
+      "name": "Name",
+      "document": "Document",
+      "email": "Email",
+      "phone": "Phone",
+      "branch": "Branch",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "noData": "No students found",
+    "statusActive": "Active",
+    "statusInactive": "Inactive"
+  },
+  "tabs": {
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "modal": {
+    "createTitle": "Add Student",
+    "editTitle": "Edit Student",
+    "fields": {
+      "code": "Enrollment",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "secondLastName": "Second Last Name",
+      "documentType": "Document Type",
+      "documentNumber": "Document Number",
+      "personalEmail": "Personal Email",
+      "personalPhone": "Personal Phone",
+      "birthDate": "Date of Birth",
+      "gender": "Gender",
+      "branch": "Branch",
+      "company": "Company",
+      "isActive": "Active student",
+      "isActiveHint": "When turned off, the student is inactive and appears under the Inactive tab."
+    },
+    "placeholders": {
+      "code": "Enter enrollment number",
+      "firstName": "Enter first name",
+      "lastName": "Enter last name",
+      "secondLastName": "Enter second last name (optional)",
+      "documentNumber": "Enter document number",
+      "personalEmail": "Enter personal email",
+      "personalPhone": "Enter personal phone",
+      "selectDocumentType": "Select type",
+      "selectGender": "Select gender",
+      "selectBranch": "Select branch"
+    },
+    "errors": {
+      "codeRequired": "Please enter the enrollment number",
+      "firstNameRequired": "Please enter the first name",
+      "lastNameRequired": "Please enter the last name",
+      "documentTypeRequired": "Please select the document type",
+      "documentNumberRequired": "Please enter the document number",
+      "personalEmailRequired": "Please enter the personal email",
+      "personalEmailInvalid": "Please enter a valid email",
+      "personalPhoneRequired": "Please enter the personal phone",
+      "birthDateRequired": "Please enter the date of birth",
+      "genderRequired": "Please select the gender",
+      "branchRequired": "Please select the branch"
+    }
+  },
+  "detail": {
+    "tabs": {
+      "personalData": "Personal Data",
+      "attendance": "Attendance",
+      "consents": "Consents"
+    },
+    "personalData": {
+      "title": "Personal Data",
+      "fields": {
+        "code": "Enrollment",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "secondLastName": "Second Last Name",
+        "documentType": "Document Type",
+        "documentNumber": "Document Number",
+        "personalEmail": "Personal Email",
+        "personalPhone": "Personal Phone",
+        "birthDate": "Date of Birth",
+        "gender": "Gender",
+        "branch": "Branch",
+        "isActive": "Active"
+      }
+    }
+  },
+  "bulkUpload": {
+    "title": "Student Bulk Upload",
+    "subtitle": "Upload an Excel file with student data",
+    "back": "Back to students",
+    "downloadTemplate": "Download Template",
+    "uploadFile": "Upload File",
+    "dropzone": {
+      "primary": "Drag the Excel file here or click to select",
+      "hint": "Formats: .xlsx, .xls"
+    },
+    "tabs": {
+      "validated": "Validated data",
+      "errors": "Data with errors",
+      "loaded": "Loaded data",
+      "empty": {
+        "validated": "No validated rows. Upload a file to start.",
+        "errors": "No rows with errors.",
+        "loaded": "No records loaded yet."
+      }
+    },
+    "actions": {
+      "removeRow": "Remove row"
+    },
+    "badge": {
+      "loaded": "Loaded",
+      "pending": "Pending",
+      "processing": "Processing..."
+    },
+    "templateFileName": "students_template.xlsx",
+    "templateSheetName": "Students",
+    "fileInfo": "File: {fileName} — {count} rows",
+    "progressLabel": "Processing...",
+    "rowNumber": "#",
+    "preview": {
+      "fullName": "Name",
+      "document": "Document",
+      "email": "Email",
+      "branch": "Branch",
+      "status": "Status",
+      "errorColumn": "Errors"
+    },
+    "status": {
+      "pending": "Pending",
+      "processing": "Processing...",
+      "success": "Success"
+    },
+    "branchNotFoundSuffix": "(not found)",
+    "columns": {
+      "code": "Enrollment",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "secondLastName": "Second Last Name",
+      "documentType": "Document Type",
+      "documentNumber": "Document Number",
+      "personalEmail": "Personal Email",
+      "personalPhone": "Personal Phone",
+      "birthDate": "Date of Birth",
+      "gender": "Gender",
+      "branchCode": "Branch Code"
+    },
+    "results": {
+      "success": "Success",
+      "error": "Error",
+      "total": "Total"
+    },
+    "errors": {
+      "branchNotFound": "Branch not found: {code}",
+      "createFailed": "Failed to create student",
+      "invalidDocumentType": "Invalid document type: {value}",
+      "invalidGender": "Invalid gender: {value}",
+      "invalidBirthDate": "Invalid date of birth: {value}",
+      "requiredField": "Required field: {field}",
+      "invalidEmail": "Invalid email: {value}",
+      "invalidDocumentNumber": "Invalid {type} document number: {value}",
+      "apiError": "API error: {msg}"
+    },
+    "toast": {
+      "partialTitle": "Processed: {success} successful, {errors} errors",
+      "partialDescription": "Review the rows highlighted in red."
+    }
+  },
+  "toast": {
+    "createSuccess": {
+      "title": "Student created",
+      "description": "The student has been created successfully"
+    },
+    "updateSuccess": {
+      "title": "Student updated",
+      "description": "The student has been updated successfully"
+    },
+    "deleteSuccess": {
+      "title": "Student deleted",
+      "description": "The student has been deleted successfully"
+    },
+    "bulkSuccess": {
+      "title": "Bulk upload completed",
+      "description": "The students have been processed successfully"
+    },
+    "error": {
+      "title": "Error",
+      "description": "An error occurred while processing the request"
+    }
+  },
+  "search": {
+    "placeholder": "Search by name or document..."
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} students",
+    "recordsPerPage": "Records per page:",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  },
+  "loadError": {
+    "message": "Could not load students",
+    "retry": "Retry"
+  },
+  "confirmDelete": {
+    "title": "Delete student?",
+    "description": "This action will deactivate the student. You can reactivate them later.",
+    "confirm": "Delete",
+    "cancel": "Cancel",
+    "deleting": "Deleting..."
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "title": "Gestion des Avertissements",
+  "subtitle": "Gérez les avertissements des employés",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "operations": "Opérations",
+    "warnings": "Avertissements"
+  },
+  "buttons": {
+    "add": "Ajouter un Avertissement",
+    "edit": "Modifier",
+    "view": "Voir",
+    "delete": "Supprimer",
+    "deleting": "Suppression...",
+    "cancel": "Annuler",
+    "search": "Rechercher",
+    "clear": "Effacer",
+    "downloadExcel": "Télécharger Excel",
+    "previous": "Précédent",
+    "next": "Suivant"
+  },
+  "filters": {
+    "search": "Recherche",
+    "searchPlaceholder": "Rechercher par employé...",
+    "employee": "Employé",
+    "employeePlaceholder": "Sélectionner un employé",
+    "warningType": "Type d'Avertissement",
+    "warningTypePlaceholder": "Sélectionner un type"
+  },
+  "table": {
+    "headers": {
+      "employeeName": "Nom",
+      "documentNumber": "Numéro d'Identité",
+      "warningType": "Type d'Avertissement",
+      "createdAt": "Date de Création",
+      "actions": "Actions"
+    },
+    "loading": "Chargement des avertissements...",
+    "noData": "Aucun avertissement trouvé",
+    "noDataDescription": "Il n'y a pas d'avertissements enregistrés pour ce filtre.",
+    "notAvailable": "N/A"
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} résultats",
+    "page": "Page {current} sur {total}",
+    "recordsPerPage": "Enregistrements par page"
+  },
+  "excel": {
+    "filename": "avertissements",
+    "sheetName": "Avertissements",
+    "headers": {
+      "employeeName": "Nom",
+      "documentNumber": "Numéro d'Identité",
+      "warningType": "Type d'Avertissement",
+      "createdAt": "Date de Création"
+    }
+  },
+  "delete": {
+    "title": "Supprimer l'Avertissement",
+    "message": "Êtes-vous sûr de vouloir supprimer cet avertissement ? Cette action ne peut pas être annulée."
+  },
+  "toast": {
+    "deleteSuccess": {
+      "title": "Avertissement supprimé avec succès"
+    },
+    "deleteError": {
+      "description": "Erreur lors de la suppression de l'avertissement"
+    },
+    "excelSuccess": {
+      "title": "Excel généré avec succès"
+    },
+    "excelError": {
+      "title": "Erreur lors de la génération de l'Excel"
+    }
+  },
+  "ariaLabels": {
+    "viewWarning": "Voir l'avertissement",
+    "editWarning": "Modifier l'avertissement",
+    "deleteWarning": "Supprimer l'avertissement"
+  },
+  "upsert": {
+    "title": {
+      "add": "Ajouter un Avertissement",
+      "edit": "Modifier l'Avertissement",
+      "view": "Voir l'Avertissement"
+    },
+    "fields": {
+      "company": "Entreprise",
+      "employee": "Employé",
+      "warningType": "Type d'Avertissement",
+      "startDate": "Date de Début",
+      "endDate": "Date de Fin",
+      "observation": "Observation",
+      "reportedBy": "Signalé par",
+      "document": "Document"
+    },
+    "placeholders": {
+      "company": "Sélectionner une entreprise",
+      "warningType": "Sélectionner un type d'avertissement",
+      "startDate": "Sélectionner une date",
+      "endDate": "Sélectionner une date",
+      "observation": "Entrez des observations",
+      "reportedBy": "Nom du rapporteur"
+    },
+    "validation": {
+      "companyRequired": "Veuillez sélectionner une entreprise",
+      "employeeRequired": "Veuillez sélectionner un employé",
+      "warningTypeRequired": "Veuillez sélectionner un type d'avertissement",
+      "errors": {
+        "invalidFileType": {
+          "title": "Type de fichier invalide",
+          "description": "Seuls les fichiers PDF sont autorisés"
+        }
+      }
+    },
+    "buttons": {
+      "selectEmployee": "Sélectionner un employé",
+      "selectDocument": "Sélectionner un document",
+      "save": "ENREGISTRER",
+      "update": "METTRE À JOUR",
+      "saving": "Enregistrement...",
+      "updating": "Mise à jour...",
+      "cancel": "Annuler",
+      "close": "Fermer"
+    },
+    "messages": {
+      "selectCompanyFirst": "Sélectionnez d'abord une entreprise"
+    },
+    "toast": {
+      "createSuccess": {
+        "title": "Avertissement créé avec succès",
+        "description": "L'avertissement a été créé correctement"
+      },
+      "createError": {
+        "title": "Erreur lors de la création de l'avertissement",
+        "description": "Une erreur s'est produite lors de la création de l'avertissement"
+      },
+      "updateSuccess": {
+        "title": "Avertissement mis à jour avec succès",
+        "description": "L'avertissement a été mis à jour correctement"
+      },
+      "updateError": {
+        "title": "Erreur lors de la mise à jour de l'avertissement",
+        "description": "Une erreur s'est produite lors de la mise à jour de l'avertissement"
+      },
+      "uploadError": {
+        "title": "Erreur lors du téléchargement du document",
+        "description": "Erreur lors du téléchargement du document"
+      }
+    },
+    "preview": {
+      "title": "Aperçu",
+      "fullscreen": "Plein écran",
+      "exitFullscreen": "Quitter le plein écran",
+      "close": "Fermer",
+      "noDocument": "Aucun document sélectionné",
+      "uploadHint": "Téléchargez un document PDF pour voir l'aperçu"
+    },
+    "employeePicker": {
+      "title": "Sélectionner un Employé",
+      "filters": {
+        "name": "Nom",
+        "namePlaceholder": "Rechercher par Prénom ou Nom",
+        "documentNumber": "Document",
+        "documentNumberPlaceholder": "Rechercher par Numéro de Document"
+      },
+      "table": {
+        "headers": {
+          "name": "Nom",
+          "documentNumber": "Document",
+          "job": "Poste"
+        },
+        "noData": "Aucun employé trouvé",
+        "noDataDescription": "Il n'y a pas d'employés enregistrés pour ce filtre.",
+        "ariaLabels": {
+          "selectEmployee": "Sélectionner un employé"
+        }
+      },
+      "pagination": {
+        "showing": "Affichage de {current} sur {total} résultats",
+        "page": "Page {current} sur {total}",
+        "recordsPerPage": "Enregistrements par page",
+        "previous": "Précédent",
+        "next": "Suivant"
+      },
+      "buttons": {
+        "cancel": "Annuler",
+        "select": "Sélectionner"
+      },
+      "loading": "Chargement des employés..."
+    }
+  }
+}

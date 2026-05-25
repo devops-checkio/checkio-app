@@ -1,0 +1,69 @@
+{
+  "tour": {
+    "startButton": "View guide",
+    "buttons": {
+      "next": "Next",
+      "previous": "Previous",
+      "done": "Finish"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Shift Operations",
+        "description": "Manage shift assignment to employees. The tabs show employees without shift, with active shift, future or past."
+      },
+      "tabs": {
+        "title": "Tabs",
+        "description": "Navigate between views: employees without shift, with active shift, future or past. Each tab shows the corresponding count."
+      },
+      "infoBtn": {
+        "title": "System Information",
+        "description": "View information about how the shift assignment module works."
+      },
+      "filters": {
+        "title": "Filters",
+        "description": "Search employees by name, document number, job or branch. Use Search to apply filters."
+      },
+      "toolbar": {
+        "title": "Main actions",
+        "description": "Clear resets filters. Search applies the search. Select Shift appears when employees are selected to assign them a shift."
+      },
+      "table": {
+        "title": "Employees table",
+        "description": "Select employees with the checkboxes. Use the 'Select Shift' button to continue with assignment."
+      },
+      "pagination": {
+        "title": "Pagination",
+        "description": "Navigate between pages and adjust the number of records displayed."
+      }
+    }
+  },
+  "assignmentTour": {
+    "startButton": "View guide",
+    "steps": {
+      "welcome": {
+        "title": "Shift Assignment",
+        "description": "Configure the start date and schedules per employee. Select one or more employees from the left panel, choose the date and assign schedules to each day."
+      },
+      "sidebar": {
+        "title": "Selected employees",
+        "description": "List of employees to be assigned. Use the search to filter. Click on an employee to configure their schedules."
+      },
+      "headerConfig": {
+        "title": "General configuration",
+        "description": "Enter the shift start date and review the selected shift. Use 'Compare' to see the schedule distribution between employees."
+      },
+      "employeeConfig": {
+        "title": "Per-employee configuration",
+        "description": "For each employee: select a shift, the holiday rule and assign the schedule to each day of the cycle."
+      },
+      "bottomBar": {
+        "title": "Summary and save",
+        "description": "View elapsed time and progress. You must complete the configuration of all employees before saving."
+      },
+      "submitBtn": {
+        "title": "Save assignment",
+        "description": "Save the assignment when all employees are configured and marked as completed."
+      }
+    }
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "title": "Gestion des Étudiants",
+  "subtitle": "Gérez les étudiants de l'organisation",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "maintainers": "Maintenances",
+    "students": "Étudiants",
+    "bulkUpload": "Chargement en masse",
+    "detail": "Détail"
+  },
+  "buttons": {
+    "add": "Ajouter un étudiant",
+    "bulkUpload": "Chargement en masse",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "search": "Rechercher",
+    "clear": "Effacer",
+    "edit": "Modifier",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "addRow": "Ajouter une ligne",
+    "process": "Traiter",
+    "processingLabel": "Traitement en cours...",
+    "downloadTemplate": "Télécharger le modèle",
+    "uploadExcel": "Importer Excel",
+    "back": "Retour",
+    "delete": "Supprimer",
+    "activate": "Activer",
+    "deactivate": "Désactiver"
+  },
+  "table": {
+    "headers": {
+      "code": "Matricule",
+      "name": "Nom",
+      "document": "Document",
+      "email": "Email",
+      "phone": "Téléphone",
+      "branch": "Succursale",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "noData": "Aucun étudiant trouvé",
+    "statusActive": "Actif",
+    "statusInactive": "Inactif"
+  },
+  "tabs": {
+    "active": "Actifs",
+    "inactive": "Inactifs"
+  },
+  "modal": {
+    "createTitle": "Ajouter un étudiant",
+    "editTitle": "Modifier l'étudiant",
+    "fields": {
+      "code": "Matricule",
+      "firstName": "Prénom",
+      "lastName": "Nom de famille",
+      "secondLastName": "Deuxième nom de famille",
+      "documentType": "Type de document",
+      "documentNumber": "Numéro de document",
+      "personalEmail": "Email personnel",
+      "personalPhone": "Téléphone personnel",
+      "birthDate": "Date de naissance",
+      "gender": "Genre",
+      "branch": "Succursale",
+      "country": "Pays",
+      "lvl1": "Niv 1",
+      "lvl2": "Niv 2",
+      "lvl3": "Niv 3",
+      "company": "Entreprise",
+      "isActive": "Étudiant actif",
+      "isActiveHint": "Désactivé : l’étudiant est inactif et apparaît dans l’onglet Inactifs."
+    },
+    "placeholders": {
+      "code": "Saisir le matricule",
+      "firstName": "Saisir le prénom",
+      "lastName": "Saisir le nom de famille",
+      "secondLastName": "Saisir le deuxième nom (optionnel)",
+      "documentNumber": "Saisir le numéro de document",
+      "personalEmail": "Saisir l'email personnel",
+      "personalPhone": "Saisir le téléphone personnel",
+      "selectDocumentType": "Sélectionner le type",
+      "selectGender": "Sélectionner le genre",
+      "selectBranch": "Sélectionner la succursale",
+      "selectCountry": "Sélectionner le pays",
+      "selectLvl1": "Sélectionner niv 1",
+      "selectLvl2": "Sélectionner niv 2",
+      "selectLvl3": "Sélectionner niv 3"
+    },
+    "errors": {
+      "codeRequired": "Veuillez saisir le matricule",
+      "firstNameRequired": "Veuillez saisir le prénom",
+      "lastNameRequired": "Veuillez saisir le nom de famille",
+      "documentTypeRequired": "Veuillez sélectionner le type de document",
+      "documentNumberRequired": "Veuillez saisir le numéro de document",
+      "personalEmailRequired": "Veuillez saisir l'email personnel",
+      "personalEmailInvalid": "Veuillez saisir un email valide",
+      "personalPhoneRequired": "Veuillez saisir le téléphone personnel",
+      "birthDateRequired": "Veuillez saisir la date de naissance",
+      "genderRequired": "Veuillez sélectionner le genre",
+      "branchRequired": "Veuillez sélectionner la succursale"
+    }
+  },
+  "detail": {
+    "tabs": {
+      "personalData": "Données personnelles",
+      "attendance": "Présence",
+      "consents": "Consentements"
+    },
+    "personalData": {
+      "title": "Données personnelles",
+      "fields": {
+        "code": "Matricule",
+        "firstName": "Prénom",
+        "lastName": "Nom de famille",
+        "secondLastName": "Deuxième nom de famille",
+        "documentType": "Type de document",
+        "documentNumber": "Numéro de document",
+        "personalEmail": "Email personnel",
+        "personalPhone": "Téléphone personnel",
+        "birthDate": "Date de naissance",
+        "gender": "Genre",
+        "branch": "Succursale",
+        "country": "Pays",
+        "lvl1": "Niv 1",
+        "lvl2": "Niv 2",
+        "lvl3": "Niv 3",
+        "isActive": "Actif"
+      }
+    }
+  },
+  "bulkUpload": {
+    "title": "Chargement en masse des étudiants",
+    "subtitle": "Importez un fichier Excel avec les données des étudiants",
+    "back": "Retour aux étudiants",
+    "downloadTemplate": "Télécharger le modèle",
+    "uploadFile": "Importer le fichier",
+    "dropzone": {
+      "primary": "Glissez le fichier Excel ici ou cliquez pour le sélectionner",
+      "hint": "Formats : .xlsx, .xls"
+    },
+    "tabs": {
+      "validated": "Données validées",
+      "errors": "Données en erreur",
+      "loaded": "Données chargées",
+      "empty": {
+        "validated": "Aucune ligne validée. Importez un fichier pour commencer.",
+        "errors": "Aucune ligne en erreur.",
+        "loaded": "Aucun enregistrement chargé pour l'instant."
+      }
+    },
+    "actions": {
+      "removeRow": "Retirer la ligne"
+    },
+    "badge": {
+      "loaded": "Chargé",
+      "pending": "En attente",
+      "processing": "Traitement..."
+    },
+    "templateFileName": "modele_etudiants.xlsx",
+    "templateSheetName": "Étudiants",
+    "fileInfo": "Fichier : {fileName} — {count} lignes",
+    "progressLabel": "Traitement en cours...",
+    "rowNumber": "#",
+    "preview": {
+      "fullName": "Nom",
+      "document": "Document",
+      "email": "Email",
+      "branch": "Succursale",
+      "status": "Statut",
+      "errorColumn": "Erreurs"
+    },
+    "status": {
+      "pending": "En attente",
+      "processing": "Traitement...",
+      "success": "Réussi"
+    },
+    "branchNotFoundSuffix": "(introuvable)",
+    "columns": {
+      "code": "Matricule",
+      "firstName": "Prénom",
+      "lastName": "Nom de famille",
+      "secondLastName": "Deuxième nom de famille",
+      "documentType": "Type de document",
+      "documentNumber": "Numéro de document",
+      "personalEmail": "Email personnel",
+      "personalPhone": "Téléphone personnel",
+      "birthDate": "Date de naissance",
+      "gender": "Genre",
+      "branchCode": "Code de succursale"
+    },
+    "results": {
+      "success": "Succès",
+      "error": "Erreur",
+      "total": "Total"
+    },
+    "errors": {
+      "branchNotFound": "Succursale introuvable : {code}",
+      "createFailed": "Erreur lors de la création de l'étudiant",
+      "invalidDocumentType": "Type de document invalide : {value}",
+      "invalidGender": "Genre invalide : {value}",
+      "invalidBirthDate": "Date de naissance invalide : {value}",
+      "requiredField": "Champ obligatoire : {field}",
+      "invalidEmail": "Email invalide : {value}",
+      "invalidDocumentNumber": "Numéro de document {type} invalide : {value}",
+      "apiError": "Erreur API : {msg}"
+    },
+    "toast": {
+      "partialTitle": "Traités : {success} réussis, {errors} erreurs",
+      "partialDescription": "Vérifiez les lignes surlignées en rouge."
+    }
+  },
+  "toast": {
+    "createSuccess": {
+      "title": "Étudiant créé",
+      "description": "L'étudiant a été créé avec succès"
+    },
+    "updateSuccess": {
+      "title": "Étudiant mis à jour",
+      "description": "L'étudiant a été mis à jour avec succès"
+    },
+    "deleteSuccess": {
+      "title": "Étudiant supprimé",
+      "description": "L'étudiant a été supprimé avec succès"
+    },
+    "bulkSuccess": {
+      "title": "Chargement en masse terminé",
+      "description": "Les étudiants ont été traités avec succès"
+    },
+    "error": {
+      "title": "Erreur",
+      "description": "Une erreur s'est produite lors du traitement de la demande"
+    }
+  },
+  "search": {
+    "placeholder": "Rechercher par nom ou document..."
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} étudiants",
+    "recordsPerPage": "Enregistrements par page :",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page {current} sur {total}"
+  },
+  "loadError": {
+    "message": "Impossible de charger les étudiants",
+    "retry": "Réessayer"
+  },
+  "confirmDelete": {
+    "title": "Supprimer l'étudiant?",
+    "description": "Cette action désactivera l'étudiant. Vous pourrez le réactiver ultérieurement.",
+    "confirm": "Supprimer",
+    "cancel": "Annuler",
+    "deleting": "Suppression..."
+  }
+}

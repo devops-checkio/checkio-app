@@ -1,0 +1,257 @@
+{
+  "title": "Affectation des Horaires",
+  "subtitle": "Assignez les horaires aux employés",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "operations": "Opérations",
+    "schedule": "Horaires",
+    "studentSchedule": "Horaires Étudiants",
+    "employee": "Employé"
+  },
+  "tabs": {
+    "active": "Actifs",
+    "expiring": "À échoir",
+    "recentDismissals": "Licenciements récents",
+    "inactive": "Inactifs"
+  },
+  "tabTitles": {
+    "active": "Employés actifs",
+    "expiring": "Employés à échoir",
+    "recentDismissals": "Licenciements récents",
+    "inactive": "Employés inactifs"
+  },
+  "tabBase": {
+    "search": "Rechercher",
+    "documentNumber": "Numéro de document",
+    "branch": "Succursale",
+    "selectBranch": "Sélectionner une succursale",
+    "placeholderSearch": "Rechercher par prénom ou nom",
+    "placeholderDocument": "Rechercher par numéro de document",
+    "buttons": {
+      "clear": "Effacer",
+      "search": "Rechercher",
+      "edit": "Modifier"
+    },
+    "table": {
+      "loading": "Chargement des employés...",
+      "noData": "Aucun employé trouvé",
+      "noDataDescription": "Modifiez les filtres ou essayez d'autres critères de recherche.",
+      "selectCompanyTitle": "Sélectionnez une entreprise",
+      "selectCompany": "Sélectionnez une entreprise dans le menu supérieur pour voir les employés et attribuer des horaires.",
+      "headers": {
+        "code": "Code",
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "documentNumber": "Numéro de document",
+        "email": "E-mail",
+        "branch": "Succursale",
+        "startDate": "Date de début",
+        "endDate": "Date de fin",
+        "contractType": "Type de contrat",
+        "actions": "Actions"
+      }
+    },
+    "contractType": {
+      "indefinite": "Indéterminé",
+      "fixedTerm": "Déterminé"
+    },
+    "pagination": {
+      "showing": "Affichage de {current} sur {total} résultats",
+      "recordsPerPage": "Enregistrements par page",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "page": "Page {current} sur {total}"
+    },
+    "error": {
+      "message": "Erreur lors du chargement des employés",
+      "retry": "Réessayer"
+    },
+    "aria": {
+      "editSchedule": "Modifier l'horaire"
+    }
+  },
+  "employee": {
+    "title": "Horaire de l'employé",
+    "titleStudent": "Horaire de l'étudiant",
+    "subtitle": "Gestion des horaires pour {name}",
+    "subtitleStudent": "Gestion des horaires de l'étudiant {name}",
+    "loading": "Chargement des horaires...",
+    "loadingName": "Chargement...",
+    "backAriaLabel": "Retour à la liste des horaires",
+    "backAriaLabelStudent": "Retour à la liste des horaires étudiants",
+    "year": "Année",
+    "month": "Mois",
+    "document": "Document",
+    "na": "N/D",
+    "buttons": {
+      "freeDay": "Jour libre",
+      "delete": "Supprimer",
+      "assign": "Assigner",
+      "today": "Aujourd'hui"
+    },
+    "totals": "Totaux",
+    "weekDays": {
+      "mon": "Lun",
+      "tue": "Mar",
+      "wed": "Mer",
+      "thu": "Jeu",
+      "fri": "Ven",
+      "sat": "Sam",
+      "sun": "Dim"
+    },
+    "months": {
+      "january": "Janvier",
+      "february": "Février",
+      "march": "Mars",
+      "april": "Avril",
+      "may": "Mai",
+      "june": "Juin",
+      "july": "Juillet",
+      "august": "Août",
+      "september": "Septembre",
+      "october": "Octobre",
+      "november": "Novembre",
+      "december": "Décembre"
+    }
+  },
+  "modalMassAssignment": {
+    "title": "Affectation en masse",
+    "message": "Sélectionnez l'horaire à affecter aux jours suivants :",
+    "selectSchedule": "Sélectionner l'horaire",
+    "placeholder": "Sélectionner un horaire",
+    "selectButton": "Sélectionner",
+    "selectEstablishment": "Sélectionner un établissement",
+    "placeholderEstablishment": "Sélectionnez un établissement",
+    "hintSelectAnotherSchedule": "Sélectionner un autre horaire",
+    "removeScheduleAria": "Retirer {code}",
+    "noScheduleError": "Veuillez sélectionner un horaire",
+    "noEstablishmentError": "Vous devez sélectionner un établissement",
+    "awaitingCompanyFilterHint": "En attente des données de l'employé pour filtrer les horaires par entreprise…",
+    "addScheduleBlock": "Ajouter horaire + établissement",
+    "overlapBetweenSelected": "Chevauchement entre :",
+    "table": {
+      "date": "Date",
+      "schedule": "Horaire",
+      "status": "État"
+    },
+    "noDaysSelected": "Aucun jour sélectionné",
+    "buttons": {
+      "cancel": "Annuler",
+      "assign": "Assigner"
+    },
+    "assigning": "Affectation en cours...",
+    "unassigned": "Non affecté",
+    "badges": {
+      "holiday": "Férié",
+      "free": "Libre"
+    },
+    "status": {
+      "pending": "En attente",
+      "processing": "En cours",
+      "success": "Terminé",
+      "error": "Erreur"
+    },
+    "toast": {
+      "errorSelectSchedule": "Veuillez sélectionner un horaire",
+      "errorSelectEstablishment": "Vous devez sélectionner un établissement",
+      "successTitle": "Horaires affectés",
+      "successDescription": "Les horaires ont été affectés correctement",
+      "completedWithErrorsTitle": "Processus terminé avec des erreurs",
+      "completedWithErrorsDescription": "{successCount} horaires affectés correctement, {errorCount} avec erreurs",
+      "overlapTitle": "Chevauchement d’horaires",
+      "overlapExisting": "{candidate} chevauche {existing}, déjà attribué aux jours sélectionnés.",
+      "overlapAmongPicked": "{candidate} chevauche {other}, déjà choisi dans cette fenêtre.",
+      "duplicateSchedule": "Cet horaire est déjà sélectionné dans un autre bloc.",
+      "overlapSelectedSetsTitle": "Chevauchement entre horaires sélectionnés",
+      "errorEstablishmentPerSchedule": "Pour les étudiants, vous devez sélectionner un établissement pour chaque horaire."
+    },
+    "errorAssignSchedule": "Erreur lors de l'affectation de l'horaire"
+  },
+  "modalDeletion": {
+    "title": "Confirmer la suppression",
+    "message": "Êtes-vous sûr de vouloir supprimer les affectations des jours suivants ?",
+    "buttons": {
+      "cancel": "Annuler",
+      "delete": "Supprimer"
+    },
+    "deleting": "Suppression en cours...",
+    "assignedSchedule": "Horaire affecté",
+    "badges": {
+      "holiday": "Férié",
+      "free": "Libre",
+      "shift": "Poste"
+    },
+    "status": {
+      "pending": "En attente",
+      "processing": "En cours",
+      "success": "Terminé",
+      "error": "Erreur"
+    },
+    "noDaysSelected": "Aucun jour sélectionné",
+    "deletedOk": "Supprimé correctement",
+    "waiting": "En attente",
+    "table": {
+      "date": "Date",
+      "schedule": "Horaire",
+      "status": "État",
+      "message": "Message"
+    },
+    "toast": {
+      "successTitle": "Affectations supprimées",
+      "successDescription": "Les affectations ont été supprimées correctement",
+      "completedWithErrorsTitle": "Processus terminé avec des erreurs",
+      "completedWithErrorsDescription": "{successCount} affectations supprimées correctement, {errorCount} avec erreurs"
+    },
+    "errorDeleteAssignment": "Erreur lors de la suppression de l'affectation"
+  },
+  "modalFreeDay": {
+    "title": "Confirmer les jours libres",
+    "message": "Êtes-vous sûr de vouloir marquer les jours suivants comme libres ?",
+    "buttons": {
+      "cancel": "Annuler",
+      "confirm": "Confirmer"
+    },
+    "processing": "Traitement en cours...",
+    "badges": {
+      "holiday": "Férié",
+      "free": "Libre",
+      "shift": "Poste"
+    },
+    "status": {
+      "pending": "En attente",
+      "processing": "En cours",
+      "success": "Terminé",
+      "error": "Erreur"
+    },
+    "noDaysSelected": "Aucun jour sélectionné",
+    "table": {
+      "date": "Date",
+      "schedule": "Horaire",
+      "status": "État"
+    },
+    "toast": {
+      "successTitle": "Jours libres configurés",
+      "successDescription": "Les jours sélectionnés ont été marqués comme libres correctement",
+      "completedWithErrorsTitle": "Processus terminé avec des erreurs",
+      "completedWithErrorsDescription": "{successCount} jours traités correctement, {errorCount} avec erreurs"
+    },
+    "errorProcessDay": "Erreur lors du traitement du jour"
+  },
+  "cards": {
+    "freeDay": "Jour libre",
+    "absence": "Absence",
+    "holiday": "Férié",
+    "edited": "(Modifié)",
+    "modifiedSchedule": "Horaire modifié",
+    "until": "jusqu'à",
+    "withoutPay": "Sans solde",
+    "fullDayFree": "Journée entière libre",
+    "fullDayFreeAlt": "Journée entière libre",
+    "holidayWithSchedule": "Férié avec horaire",
+    "holidayDay": "Jour férié",
+    "weekly": "Hebdomadaire",
+    "weeklyExceedsLegal": "Dépasse le maximum hebdomadaire de {limit} h",
+    "total": "Total",
+    "timeRange": "00:00 jusqu'à 23:59"
+  }
+}

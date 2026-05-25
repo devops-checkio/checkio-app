@@ -1,0 +1,37 @@
+{
+  "title": {
+    "request": "Recover Password",
+    "reset": "Change Password"
+  },
+  "subtitle": {
+    "request": "Enter your email to receive instructions",
+    "reset": "Set a new secure password"
+  },
+  "fields": {
+    "email": "Email",
+    "emailPlaceholder": "email@example.com",
+    "temporaryPassword": "Temporary Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm New Password"
+  },
+  "validation": {
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email address",
+    "temporaryPasswordRequired": "Temporary password is required",
+    "newPasswordRequired": "New password is required",
+    "confirmPasswordRequired": "Password confirmation is required"
+  },
+  "requirements": {
+    "title": "Password requirements:",
+    "length": "At least 8 characters",
+    "uppercase": "At least one uppercase letter",
+    "lowercase": "At least one lowercase letter",
+    "number": "At least one number",
+    "special": "At least one special character"
+  },
+  "buttons": {
+    "sendInstructions": "Send instructions",
+    "changePassword": "Change Password",
+    "backToLogin": "Back to login"
+  }
+}

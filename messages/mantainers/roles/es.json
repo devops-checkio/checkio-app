@@ -1,0 +1,50 @@
+{
+  "title": "Gestión de Roles",
+  "subtitle": "Administre los roles y permisos del sistema",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "roles": "Roles"
+  },
+  "buttons": {
+    "add": "Agregar Rol",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "save": "GUARDAR"
+  },
+  "table": {
+    "headers": {
+      "name": "Nombre",
+      "createdAt": "Fecha de Creación",
+      "actions": "Acciones"
+    },
+    "loading": "Cargando roles...",
+    "noData": "No se encontraron roles",
+    "noDataDescription": "Agregue un nuevo rol para comenzar."
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} roles",
+    "page": "Página {current} de {total}",
+    "recordsPerPage": "Registros por página:"
+  },
+  "delete": {
+    "success": "Rol eliminado exitosamente",
+    "confirmMessage": "¿Está seguro de que desea eliminar este rol?"
+  },
+  "create": {
+    "success": "Rol creado exitosamente"
+  },
+  "modal": {
+    "createTitle": "Crear Nuevo Rol",
+    "nameLabel": "Nombre del Rol",
+    "nameRequired": "Este campo es requerido",
+    "nameMinLength": "El nombre debe tener al menos 2 caracteres",
+    "saving": "Guardando..."
+  },
+  "ariaLabels": {
+    "editRole": "Editar rol",
+    "deleteRole": "Eliminar rol"
+  }
+}

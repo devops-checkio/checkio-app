@@ -1,0 +1,261 @@
+{
+  "title": "Rapports",
+  "subtitle": "Gestion et administration des modèles de rapports",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "reports": "Rapports",
+    "create": "Créer un Modèle",
+    "edit": "Modifier le Modèle"
+  },
+  "buttons": {
+    "create": "Créer un Rapport",
+    "edit": "Modifier",
+    "generate": "Générer",
+    "delete": "Supprimer",
+    "deleting": "Suppression...",
+    "cancel": "Annuler",
+    "search": "Rechercher",
+    "clear": "Effacer",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "add": "Ajouter",
+    "save": "ENREGISTRER",
+    "update": "METTRE À JOUR",
+    "saving": "Enregistrement...",
+    "updating": "Mise à jour...",
+    "creating": "Création...",
+    "generating": "Génération...",
+    "close": "Fermer",
+    "createTemplate": "Créer un Modèle",
+    "updateTemplate": "Mettre à jour le Modèle",
+    "showPreview": "Afficher l'Aperçu",
+    "hidePreview": "Masquer l'Aperçu",
+    "showJson": "Afficher JSON",
+    "hideJson": "Masquer JSON",
+    "copyJson": "Copier JSON",
+    "createConsolidatedField": "Créer un Champ Consolidé",
+    "createCalculatedField": "Créer une Colonne Calculée",
+    "addTotalRow": "Ajouter une Ligne de Totaux",
+    "editTotalRow": "Modifier",
+    "deleteTotalRow": "Supprimer",
+    "goToHistory": "Aller à l'Historique des Rapports"
+  },
+  "filters": {
+    "search": "Rechercher des Modèles",
+    "searchByName": "Rechercher par nom",
+    "searchByNamePlaceholder": "Rechercher par nom de modèle...",
+    "filterByType": "Filtrer par type",
+    "allTypes": "Tous les types",
+    "assistanceData": "Données d'Assistance",
+    "employeeData": "Données d'Employé"
+  },
+  "table": {
+    "headers": {
+      "name": "Nom",
+      "description": "Description",
+      "reportType": "Type de Rapport",
+      "columns": "Colonnes",
+      "createdAt": "Date de Création",
+      "updatedAt": "Dernière Mise à Jour",
+      "actions": "Actions"
+    },
+    "loading": "Chargement des modèles...",
+    "noData": "Aucun modèle trouvé",
+    "noDataDescription": "Créez votre premier modèle de rapport",
+    "noName": "Sans nom",
+    "notAvailable": "Sans description",
+    "columnsCount": "{count} colonnes",
+    "noFieldsSelected": "Aucun champ sélectionné",
+    "noFieldsSelectedDescription": "Cliquez sur les champs du panneau de gauche pour les ajouter",
+    "fieldsSelected": "{count} champs sélectionnés"
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} résultats",
+    "filteredFrom": "(filtrés sur {total} au total)",
+    "page": "Page {current} sur {total}",
+    "recordsPerPage": "Enregistrements par page"
+  },
+  "modals": {
+    "delete": {
+      "title": "Supprimer le Modèle",
+      "message": "Êtes-vous sûr de vouloir supprimer ce modèle ? Cette action ne peut pas être annulée."
+    },
+    "generate": {
+      "title": "Filtres pour Générer le Rapport",
+      "configureFilters": "Configurer les Filtres de Génération",
+      "configureFiltersDescription": "Ces filtres seront appliqués lors de la génération du rapport. Vous pouvez filtrer par période de dates, postes, succursales et plus encore.",
+      "datePeriod": "Période de Dates",
+      "today": "Aujourd'hui",
+      "yesterday": "Hier",
+      "last7days": "7 Derniers Jours",
+      "last30days": "30 Derniers Jours",
+      "thisMonth": "Ce Mois",
+      "lastMonth": "Mois Dernier",
+      "custom": "Période personnalisée",
+      "startDate": "Date de Début",
+      "endDate": "Date de Fin",
+      "filterByJobs": "Filtrer par Postes (Optionnel)",
+      "filterByJobsDescription": "Sélectionnez les postes à inclure dans le rapport. Laissez vide pour inclure tous.",
+      "selectJobs": "Sélectionner des postes...",
+      "jobsSelected": "{count} poste(s) sélectionné(s)",
+      "selectAllJobs": "Tout sélectionner",
+      "deselectAllJobs": "Tout désélectionner",
+      "loadingJobs": "Chargement des postes...",
+      "noJobsAvailable": "Aucun poste disponible",
+      "filterByBranches": "Filtrer par Succursales (Optionnel)",
+      "filterByBranchesDescription": "Sélectionnez les succursales à inclure dans le rapport. Laissez vide pour inclure toutes.",
+      "selectBranches": "Sélectionner des succursales...",
+      "branchesSelected": "{count} succursale(s) sélectionnée(s)",
+      "selectAllBranches": "Tout sélectionner",
+      "deselectAllBranches": "Tout désélectionner",
+      "loadingBranches": "Chargement des succursales...",
+      "noBranchesAvailable": "Aucune succursale disponible",
+      "filterByDocument": "Filtrer par Numéro de Document (Optionnel)",
+      "filterByDocumentDescription": "Sélectionnez le type de document et entrez le numéro. Vous pouvez ajouter plusieurs documents.",
+      "documentPlaceholder": "Ex: 18.333.222-6",
+      "generateReport": "Générer le Rapport"
+    },
+    "success": {
+      "title": "Rapport Généré avec Succès !",
+      "message": "Votre rapport est en cours de traitement en arrière-plan.",
+      "whatsNext": "Quelle est la suite ?",
+      "whatsNextDescription": "Une fois le traitement terminé, vous pourrez télécharger votre rapport depuis l'historique des rapports."
+    },
+    "totalRow": {
+      "create": "Créer une Ligne de Totaux",
+      "edit": "Modifier la Ligne de Totaux",
+      "name": "Nom de la Ligne de Totaux *",
+      "namePlaceholder": "Ex: Total des Heures Supplémentaires",
+      "nameDescription": "Ce sera le nom qui apparaîtra dans la première colonne (si activé)",
+      "headerTransform": "Format de l'En-tête",
+      "headerTransformDescription": "Format d'affichage de l'en-tête",
+      "default": "Par Défaut",
+      "upper": "MAJUSCULES",
+      "lower": "minuscules",
+      "totalType": "Type de Total *",
+      "sum": "Somme (SUM)",
+      "avg": "Moyenne (AVG)",
+      "count": "Comptage (COUNT)",
+      "min": "Minimum (MIN)",
+      "max": "Maximum (MAX)",
+      "custom": "Personnalisé (Sélectionner par colonne)",
+      "customDescription": "Sélectionnez le type d'agrégation pour chaque colonne numérique",
+      "defaultDescription": "Sera appliqué à tous les champs numériques avec agrégation",
+      "position": "Position de la Ligne *",
+      "top": "En Haut (Après les en-têtes)",
+      "bottom": "En Bas (À la fin du rapport)",
+      "showLabel": "Afficher l'étiquette dans la première colonne",
+      "selectFields": "Sélectionner les Champs et le Type d'Agrégation *",
+      "noNumericFields": "Aucun champ numérique avec agrégation disponible. Ajoutez d'abord des champs numériques.",
+      "none": "Aucun",
+      "createButton": "Créer la Ligne de Totaux",
+      "updateButton": "Mettre à jour la Ligne de Totaux",
+      "grouping": "Regroupement des Totaux",
+      "groupBy": "Grouper par",
+      "groupByEmployee": "Par Employé",
+      "groupByMonth": "Par Mois",
+      "groupByWeek": "Par Semaine",
+      "groupByDescription": "Sélectionnez les critères pour regrouper les totaux. Les totaux seront affichés automatiquement lorsque le critère sélectionné change.",
+      "labelTemplate": "Modèle d'Étiquette",
+      "labelTemplatePlaceholder": "Ex: Total employé - mois année",
+      "labelTemplateDescription": "Modèle personnalisé pour l'étiquette du total groupé. Utilisez des variables entre accolades pour insérer des valeurs dynamiques.",
+      "availableVariables": "Variables disponibles",
+      "showGroupContext": "Afficher le contexte du groupe automatiquement",
+      "showGroupContextDescription": "Si activé, l'étiquette sera automatiquement complétée avec le contexte du groupe (employé, mois, semaine) si aucun modèle n'est spécifié.",
+      "insertVariable": "Insérer une variable",
+      "variableEmployee": "Nom Complet",
+      "variableFirstName": "Prénom",
+      "variableMonthName": "Mois (Nom)",
+      "variableYear": "Année",
+      "variableWeek": "Semaine",
+      "variableWeekRange": "Plage de Semaine",
+      "example": "Exemple",
+      "exampleEmployee": "Si regroupement par employé : 'Total Jean Dupont'",
+      "exampleEmployeeMonth": "Si regroupement par employé et mois : 'Total Jean Dupont - Janvier 2024'",
+      "exampleMonth": "Si regroupement par mois : 'Total - Janvier 2024'",
+      "exampleWeek": "Si regroupement par semaine : 'Total - Semaine 3'"
+    }
+  },
+  "create": {
+    "title": {
+      "create": "Créer un Modèle",
+      "edit": "Modifier le Modèle"
+    },
+    "subtitle": {
+      "create": "Configurez les champs et options de votre modèle de rapport personnalisé",
+      "edit": "Modifiez votre modèle de rapport personnalisé"
+    },
+    "loading": "Chargement du modèle...",
+    "reportInfo": "Informations du Rapport",
+    "fields": {
+      "reportName": "Nom du Rapport *",
+      "reportNamePlaceholder": "Ex: Rapport de Présence Mensuel",
+      "description": "Description",
+      "descriptionPlaceholder": "Brève description du rapport",
+      "reportType": "Type de Rapport",
+      "reportTypePlaceholder": "Sélectionner un type",
+      "headerTransform": "Format de l'En-tête",
+      "headerTransformDescription": "(S'applique à toutes les colonnes par défaut)",
+      "reportFields": "Champs du Rapport",
+      "searchCategories": "Rechercher des catégories...",
+      "searchCategoriesPlaceholder": "Rechercher des catégories..."
+    },
+    "preview": {
+      "title": "Aperçu du Rapport (Simulation Excel)",
+      "previewLabel": "Aperçu",
+      "description": "Affichage de {count} lignes d'exemple. Le rapport final inclura toutes les données selon les filtres appliqués."
+    },
+    "jsonPreview": {
+      "title": "Aperçu JSON (Test)",
+      "description": "Ceci est le JSON qui sera généré lors de l'enregistrement du rapport. Cette vue est temporaire pour les tests."
+    },
+    "totalRows": {
+      "configured": "Lignes de Totaux Configurées",
+      "top": "En Haut",
+      "bottom": "En Bas",
+      "columns": "{count} colonnes",
+      "deleted": "Ligne de totaux supprimée",
+      "deletedDescription": "{label} a été supprimée"
+    },
+    "validation": {
+      "nameRequired": "Le nom du rapport est requis",
+      "fieldsRequired": "Vous devez ajouter au moins un champ au rapport",
+      "invalidReferences": "Il y a des problèmes avec les références de champs. Vérifiez la console.",
+      "cleanedReferences": "Certaines références invalides ont été nettoyées. Essayez de sauvegarder à nouveau."
+    }
+  },
+  "toast": {
+    "templateCreated": {
+      "title": "Modèle créé",
+      "description": "Le modèle a été créé avec succès"
+    },
+    "templateUpdated": {
+      "title": "Modèle mis à jour",
+      "description": "Le modèle a été mis à jour avec succès"
+    },
+    "templateDeleted": {
+      "title": "Modèle supprimé",
+      "description": "Le modèle a été supprimé avec succès"
+    },
+    "deleteError": {
+      "title": "Erreur lors de la suppression du modèle",
+      "description": "Erreur lors de la suppression du modèle"
+    },
+    "jsonCopied": {
+      "title": "JSON copié",
+      "description": "Le JSON a été copié dans le presse-papiers"
+    }
+  },
+  "reportTypes": {
+    "ASSISTANCE": "Données d'Assistance",
+    "EMPLOYEE_DATA": "Données d'Employé"
+  },
+  "aggregationTypes": {
+    "sum": "Somme",
+    "avg": "Moyenne",
+    "count": "Comptage",
+    "min": "Minimum",
+    "max": "Maximum",
+    "none": "Aucun"
+  }
+}

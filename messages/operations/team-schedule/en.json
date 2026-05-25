@@ -1,0 +1,187 @@
+{
+  "title": "Team Schedule",
+  "subtitle": "View and manage schedules for multiple employees",
+  "headerBadge": "Monthly team view",
+  "accessDenied": "You do not have permission to view this module.",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Operations",
+    "teamSchedule": "Team Schedule"
+  },
+  "navigation": {
+    "today": "Today",
+    "year": "Year",
+    "month": "Month",
+    "period": "Period"
+  },
+  "months": {
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December"
+  },
+  "filters": {
+    "search": "Search",
+    "documentNumber": "Document Number",
+    "branch": "Branch",
+    "allBranches": "All branches",
+    "selectBranch": "Select Branch",
+    "placeholderSearch": "Search by first or last name",
+    "placeholderDocument": "Search by document number",
+    "buttons": {
+      "clear": "Clear",
+      "search": "Search"
+    },
+    "error": {
+      "message": "Error loading employees",
+      "retry": "Retry"
+    },
+    "pagination": {
+      "showing": "Showing {current} of {total} results",
+      "recordsPerPage": "Records per page",
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page {current} of {total}"
+    }
+  },
+  "legend": {
+    "title": "Legend",
+    "unassigned": "Unassigned",
+    "holiday": "Holiday",
+    "free": "Free day",
+    "shift": "Shift",
+    "schedule": "Schedule",
+    "edited": "Edited",
+    "absence": "Absence",
+    "permission": "Leave",
+    "todayColumn": "Today column",
+    "todayColumnHint": "The current day column uses your theme accent"
+  },
+  "grid": {
+    "employee": "Employee",
+    "noSchedule": "-",
+    "free": "F",
+    "holiday": "H",
+    "loading": "Loading...",
+    "noEmployees": "No employees found",
+    "noEmployeesDescription": "Try adjusting your filters or search criteria.",
+    "selectCompanyTitle": "Select a company",
+    "selectCompany": "Select a company in the top menu to view team schedules.",
+    "today": "Today"
+  },
+  "actions": {
+    "daysSelected": "{count} day(s) across {employees} employee(s) selected",
+    "freeDay": "Free Day",
+    "delete": "Delete",
+    "assign": "Assign"
+  },
+  "modals": {
+    "assignment": {
+      "title": "Team Mass Assignment",
+      "message": "Select the schedule to assign to the selected days:",
+      "table": {
+        "employee": "Employee",
+        "date": "Date",
+        "status": "Status"
+      },
+      "noDaysSelected": "No days selected",
+      "selectSchedule": "Select Schedule",
+      "placeholder": "Select a schedule",
+      "hintSelectAnotherSchedule": "Select another schedule",
+      "selectButton": "Select",
+      "noScheduleError": "Please select a schedule",
+      "awaitingCompanyFilterHint": "Waiting for company data to filter schedules…",
+      "buttons": {
+        "cancel": "Cancel",
+        "assign": "Assign"
+      },
+      "assigning": "Assigning...",
+      "unassigned": "Unassigned",
+      "status": {
+        "pending": "Pending",
+        "processing": "Processing",
+        "success": "Completed",
+        "error": "Error"
+      },
+      "toast": {
+        "overlapTitle": "Schedule overlap",
+        "overlapExisting": "{candidate} overlaps with {existing}, already assigned on the selected days.",
+        "overlapAmongPicked": "{candidate} overlaps with {other}, already chosen in this dialog.",
+        "errorSelectSchedule": "Please select a schedule",
+        "successTitle": "Schedules assigned",
+        "successDescription": "Schedules have been assigned successfully",
+        "completedWithErrorsTitle": "Process completed with errors",
+        "completedWithErrorsDescription": "{successCount} assigned successfully, {errorCount} with errors"
+      },
+      "errorAssignSchedule": "Error assigning schedule"
+    },
+    "deletion": {
+      "title": "Confirm Deletion",
+      "message": "Are you sure you want to remove the selected assignments?",
+      "table": {
+        "employee": "Employee",
+        "date": "Date",
+        "status": "Status",
+        "message": "Message"
+      },
+      "noDaysSelected": "No days selected",
+      "buttons": {
+        "cancel": "Cancel",
+        "delete": "Delete"
+      },
+      "deleting": "Deleting...",
+      "assignedSchedule": "Assigned schedule",
+      "deletedOk": "Successfully deleted",
+      "waiting": "Waiting",
+      "status": {
+        "pending": "Pending",
+        "processing": "Processing",
+        "success": "Completed",
+        "error": "Error"
+      },
+      "toast": {
+        "successTitle": "Assignments removed",
+        "successDescription": "Assignments have been removed successfully",
+        "completedWithErrorsTitle": "Process completed with errors",
+        "completedWithErrorsDescription": "{successCount} removed successfully, {errorCount} with errors"
+      },
+      "errorDeleteAssignment": "Error removing assignment"
+    },
+    "freeDay": {
+      "title": "Confirm Free Days",
+      "message": "Are you sure you want to mark the selected days as free?",
+      "table": {
+        "employee": "Employee",
+        "date": "Date",
+        "status": "Status"
+      },
+      "noDaysSelected": "No days selected",
+      "buttons": {
+        "cancel": "Cancel",
+        "confirm": "Confirm"
+      },
+      "processing": "Processing...",
+      "status": {
+        "pending": "Pending",
+        "processing": "Processing",
+        "success": "Completed",
+        "error": "Error"
+      },
+      "toast": {
+        "successTitle": "Free days configured",
+        "successDescription": "Selected days have been marked as free",
+        "completedWithErrorsTitle": "Process completed with errors",
+        "completedWithErrorsDescription": "{successCount} days processed successfully, {errorCount} with errors"
+      },
+      "errorProcessDay": "Error processing day"
+    }
+  }
+}

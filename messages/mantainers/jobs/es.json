@@ -1,0 +1,203 @@
+{
+  "title": "Gestión de Cargos",
+  "subtitle": "Administra los cargos y posiciones de la empresa",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "jobs": "Cargos"
+  },
+  "buttons": {
+    "add": "Agregar Cargo",
+    "addMassive": "Agregar Cargo Masivo",
+    "downloadExcel": "Descargar Excel",
+    "search": "Buscar",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "save": "GUARDAR",
+    "update": "ACTUALIZAR",
+    "creating": "Creando...",
+    "updating": "Actualizando...",
+    "processing": "Procesando...",
+    "process": "Procesar",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "downloadTemplate": "Descargar Plantilla",
+    "uploadExcel": "Subir Excel",
+    "addRow": "Agregar Fila"
+  },
+  "search": {
+    "placeholder": "Buscar Código o Nombre..."
+  },
+  "table": {
+    "headers": {
+      "code": "Código",
+      "name": "Nombre",
+      "description": "Descripción",
+      "companies": "Empresas",
+      "createdAt": "Fecha de Creación",
+      "status": "Estado",
+      "actions": "Acciones"
+    },
+    "loading": "Cargando cargos...",
+    "noData": "No se encontraron cargos",
+    "noDataDescription": "Agregue un nuevo cargo para comenzar.",
+    "noDataMassive": "No hay cargos agregados",
+    "noDataMassiveDescription": "Agregue cargos manualmente o suba un archivo Excel"
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} cargos",
+    "recordsPerPage": "Registros por página:",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "page": "Página {current} de {total}"
+  },
+  "delete": {
+    "title": "Confirmar eliminación",
+    "message": "¿Está seguro de que desea eliminar este cargo?",
+    "success": "Cargo eliminado exitosamente"
+  },
+  "excel": {
+    "success": "Excel generado exitosamente",
+    "error": "Error al generar el Excel",
+    "filename": "cargos",
+    "sheetName": "Cargos",
+    "headers": {
+      "code": "Código",
+      "name": "Nombre",
+      "description": "Descripción",
+      "companies": "Empresas",
+      "createdAt": "Fecha de Creación"
+    }
+  },
+  "ariaLabels": {
+    "editJob": "Editar cargo",
+    "deleteJob": "Eliminar cargo"
+  },
+  "toast": {
+    "createSuccess": {
+      "title": "Cargo creado exitosamente",
+      "description": "El cargo ha sido creado correctamente"
+    },
+    "updateSuccess": {
+      "title": "Cargo actualizado exitosamente",
+      "description": "El cargo ha sido actualizado correctamente"
+    },
+    "deleteSuccess": {
+      "title": "Cargo eliminado exitosamente",
+      "description": "El cargo ha sido eliminado correctamente"
+    },
+    "processCompletedSuccess": {
+      "title": "Proceso completado exitosamente",
+      "description": "El proceso de carga masiva se ha completado exitosamente"
+    },
+    "processCompletedWithErrors": {
+      "title": "Proceso completado con errores",
+      "description": "Revise la tabla para más detalles"
+    },
+    "error": {
+      "title": "Error",
+      "description": "Error al crear el cargo"
+    }
+  },
+  "upsert": {
+    "title": {
+      "edit": "Editar Cargo",
+      "add": "Agregar Cargo"
+    },
+    "fields": {
+      "code": "Código",
+      "name": "Nombre",
+      "description": "Descripción",
+      "companies": "Empresas"
+    },
+    "placeholders": {
+      "code": "Código",
+      "name": "Nombre",
+      "description": "Descripción",
+      "companies": "Seleccione las empresas"
+    },
+    "validation": {
+      "codeRequired": "Por favor ingrese el código del cargo",
+      "nameRequired": "Por favor ingrese el nombre del cargo",
+      "descriptionRequired": "Por favor ingrese la descripción del cargo",
+      "companiesRequired": "Por favor seleccione al menos una empresa"
+    }
+  },
+  "massive": {
+    "title": "Carga Masiva de Cargos",
+    "tabs": {
+      "excel": "Carga por Excel",
+      "manual": "Ingreso Manual"
+    },
+    "instructions": {
+      "excel": {
+        "title": "Instrucciones:",
+        "step1": "Descargue la plantilla Excel para ver el formato requerido",
+        "step2": "Complete la información de los cargos en la plantilla",
+        "step3": "Suba el archivo Excel completado",
+        "step4": "Verifique la información y presione Procesar"
+      },
+      "manual": {
+        "title": "Instrucciones para ingreso manual:",
+        "step1": "Haga clic en Agregar Fila para añadir un nuevo cargo",
+        "step2": "Complete los campos requeridos en cada fila",
+        "step3": "Puede agregar tantas filas como necesite",
+        "step4": "Verifique la información y presione Procesar"
+      }
+    },
+    "table": {
+      "headers": {
+        "code": "Código",
+        "name": "Nombre",
+        "description": "Descripción",
+        "status": "Estado",
+        "actions": "Acciones"
+      },
+      "status": {
+        "completed": "Completado",
+        "error": "Error"
+      }
+    },
+    "validation": {
+      "codeRequired": "Por favor ingrese el código del cargo",
+      "nameRequired": "Por favor ingrese el nombre del cargo",
+      "descriptionRequired": "Por favor ingrese la descripción del cargo",
+      "companiesRequired": "Por favor seleccione al menos una empresa"
+    },
+    "progress": "Procesando: {percent}%",
+    "ariaLabels": {
+      "deleteJob": "Eliminar cargo"
+    }
+  },
+  "card": {
+    "title": "Cargos"
+  },
+  "tour": {
+    "startButton": "Ver guía",
+    "buttons": {
+      "next": "Siguiente",
+      "previous": "Anterior",
+      "done": "Finalizar"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Bienvenido al módulo de Cargos",
+        "description": "En este módulo puede administrar cargos y posiciones. Esta guía mostrará las principales funcionalidades."
+      },
+      "toolbar": {
+        "title": "Acciones principales",
+        "description": "Aquí puede buscar por código o nombre, agregar cargos individuales, realizar carga masiva desde Excel o descargar el listado."
+      },
+      "table": {
+        "title": "Tabla de cargos",
+        "description": "Listado de cargos con código, nombre, descripción, empresas asignadas y fecha de creación. Use los botones editar o eliminar para gestionar cada cargo."
+      },
+      "pagination": {
+        "title": "Paginación",
+        "description": "Navegue entre páginas y ajuste la cantidad de registros mostrados."
+      }
+    }
+  }
+}

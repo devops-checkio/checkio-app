@@ -1,0 +1,140 @@
+{
+  "title": "Cierre de mes (Asistencia)",
+  "subtitle": "Cierre y reapertura del mes de asistencia por empresa",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "assistanceMonthClosing": "Cierre de mes"
+  },
+  "filters": {
+    "title": "Filtros",
+    "company": "Empresa",
+    "companyPlaceholder": "Seleccione una empresa",
+    "year": "Año",
+    "month": "Mes"
+  },
+  "emptyState": {
+    "title": "Ninguna empresa seleccionada",
+    "description": "Seleccione una empresa en los filtros para ver y gestionar el cierre de mes."
+  },
+  "status": {
+    "OPEN": "Abierto",
+    "CLOSED": "Cerrado",
+    "PRECLOSED": "Precerrado"
+  },
+  "buttons": {
+    "closeMonth": "Cerrar mes",
+    "reopenMonth": "Reabrir mes",
+    "viewHistory": "Ver historial de reaperturas",
+    "viewUnitsDetail": "Ver detalle por unidades",
+    "refresh": "Actualizar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "processing": "Procesando...",
+    "precloseMonth": "Precerrar mes",
+    "configurePin": "Configurar PIN",
+    "confirmWithPin": "Confirmar con mi PIN"
+  },
+  "closeModal": {
+    "title": "Confirmar cierre de mes",
+    "description": "Al cerrar el mes no se permitirán más modificaciones de asistencia para este período. ¿Desea continuar?",
+    "success": "Mes cerrado correctamente",
+    "error": "No se pudo cerrar el mes"
+  },
+  "reopenModal": {
+    "title": "Reabrir mes",
+    "reasonLabel": "Motivo (obligatorio)",
+    "reasonPlaceholder": "Indique el motivo de la reapertura",
+    "success": "Mes reabierto correctamente",
+    "error": "No se pudo reabrir el mes",
+    "confirmReopen": "Reabrir mes"
+  },
+  "reopenHistory": {
+    "title": "Historial de reaperturas",
+    "table": { "reopenedAt": "Fecha", "reason": "Motivo" },
+    "noData": "No hay reaperturas registradas"
+  },
+  "errors": {
+    "title": "Error",
+    "monthAlreadyClosed": "El mes ya está cerrado",
+    "monthAlreadyOpen": "El mes ya está abierto",
+    "incompleteRecords": "No se puede cerrar: hay {count} registro(s) incompleto(s) en el período",
+    "reasonRequired": "El motivo es obligatorio para reabrir"
+  },
+  "months": {
+    "1": "Enero",
+    "2": "Febrero",
+    "3": "Marzo",
+    "4": "Abril",
+    "5": "Mayo",
+    "6": "Junio",
+    "7": "Julio",
+    "8": "Agosto",
+    "9": "Septiembre",
+    "10": "Octubre",
+    "11": "Noviembre",
+    "12": "Diciembre"
+  },
+  "stats": {
+    "title": "Consolidados del cierre",
+    "countIncomplete": "Incompletas",
+    "countCompleted": "Completadas",
+    "countAbsent": "Ausentes",
+    "countWithoutSchedule": "Sin horario",
+    "totalExtraSecondsApproved": "Horas extras aprobadas (min)",
+    "totalDelaySecondsApproved": "Atrasos aprobados (min)",
+    "calculatedAt": "Calculado el",
+    "minutes": "min"
+  },
+  "precloseModal": {
+    "title": "Precerrar mes",
+    "description": "Al precerrar se calcularán los consolidados y no se permitirán ediciones de asistencia hasta que todos los aprobadores confirmen con su PIN.",
+    "success": "Mes precerrado correctamente",
+    "error": "No se pudo precerrar el mes",
+    "confirmButton": "Precerrar"
+  },
+  "approvers": {
+    "title": "Aprobadores",
+    "approved": "Aprobado",
+    "pending": "Pendiente"
+  },
+  "confirmPinModal": {
+    "title": "Confirmar con mi PIN",
+    "description": "Ingrese su PIN de cierre para confirmar el cierre de {month} {year}.",
+    "pinLabel": "PIN",
+    "pinPlaceholder": "4 a 8 dígitos",
+    "confirmButton": "Confirmar"
+  },
+  "confirmPinModalSuccess": "Aprobación registrada correctamente",
+  "confirmPinModalError": "PIN incorrecto o no configurado. Configure su PIN de cierre si aún no lo ha hecho.",
+  "unitsDetail": {
+    "title": "Detalle por unidades",
+    "description": "Cierres para {month} {year} (empresa y unidades).",
+    "scope": "Alcance",
+    "companyScope": "Empresa",
+    "status": "Estado",
+    "noData": "No hay cierres registrados"
+  },
+  "closingPinConfig": {
+    "titleSet": "Configurar PIN de cierre",
+    "titleChange": "Cambiar PIN de cierre",
+    "description": "El PIN se usa para confirmar el cierre de mes como aprobador. Use entre 4 y 8 dígitos.",
+    "otpChangeExplanation": "Para cambiar tu PIN, verifica el actual y elige uno nuevo de 4-8 dígitos. Elige un PIN fácil de recordar, pero difícil de adivinar.",
+    "otpSetExplanation": "Crea tu PIN de 4-8 dígitos. Es importante para la seguridad de tu cuenta. Recuerda, no lo compartas con nadie.",
+    "currentPinLabel": "PIN actual",
+    "currentPinPlaceholder": "Ingrese su PIN actual",
+    "otpCurrentRequired": "Requerido para cambiar el PIN",
+    "newPinLabel": "PIN nuevo",
+    "newPinPlaceholder": "4 a 8 dígitos",
+    "otpDigitsNote": "4-8 dígitos",
+    "repeatPinLabel": "Repetir PIN nuevo",
+    "repeatPinPlaceholder": "Repita el PIN nuevo",
+    "otpRepeatDescription": "Repítelo para confirmar",
+    "saveButton": "Guardar",
+    "pinLengthError": "El PIN debe tener entre 4 y 8 dígitos",
+    "repeatMismatch": "Los PIN nuevos no coinciden",
+    "currentRequired": "Debe ingresar el PIN actual para cambiarlo",
+    "clear": "Limpiar",
+    "success": "PIN de cierre guardado correctamente"
+  }
+}

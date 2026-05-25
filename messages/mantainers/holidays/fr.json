@@ -1,0 +1,183 @@
+{
+  "title": "Gestion des Jours Fériés",
+  "subtitle": "Gérez les jours fériés du système",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "maintainers": "Mainteneurs",
+    "holidays": "Jours Fériés"
+  },
+  "buttons": {
+    "add": "Ajouter un Jour Férié",
+    "import": "Importer des Jours Fériés",
+    "downloadExcel": "Télécharger Excel",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "save": "ENREGISTRER",
+    "update": "METTRE À JOUR",
+    "creating": "Création...",
+    "updating": "Mise à jour...",
+    "cancel": "Annuler",
+    "importButton": "Importer",
+    "importing": "Importation...",
+    "loadHolidays": "Charger les Jours Fériés",
+    "loading": "Chargement..."
+  },
+  "table": {
+    "headers": {
+      "name": "Nom",
+      "date": "Date",
+      "isWaivable": "Est Renonçable",
+      "actions": "Actions"
+    },
+    "loading": "Chargement des jours fériés...",
+    "noData": "Aucun jour férié trouvé",
+    "noDataDescription": "Ajoutez un nouveau jour férié pour commencer."
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} jours fériés",
+    "recordsPerPage": "Enregistrements par page:",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page {current} sur {total}"
+  },
+  "delete": {
+    "title": "Confirmer la suppression",
+    "message": "Êtes-vous sûr de vouloir supprimer ce jour férié?",
+    "success": {
+      "title": "Jour férié supprimé avec succès",
+      "description": "Le jour férié a été supprimé correctement"
+    },
+    "error": {
+      "title": "Erreur",
+      "description": "Erreur lors de la suppression du jour férié"
+    }
+  },
+  "excel": {
+    "success": "Excel généré avec succès",
+    "error": "Erreur lors de la génération d'Excel",
+    "filename": "jours-feries",
+    "sheetName": "Jours Fériés",
+    "headers": {
+      "name": "Nom",
+      "date": "Date",
+      "isWaivable": "Est Renonçable"
+    }
+  },
+  "ariaLabels": {
+    "editHoliday": "Modifier le jour férié",
+    "deleteHoliday": "Supprimer le jour férié"
+  },
+  "toast": {
+    "createSuccess": {
+      "title": "Jour férié créé avec succès",
+      "description": "Le jour férié a été créé correctement"
+    },
+    "updateSuccess": {
+      "title": "Jour férié mis à jour avec succès",
+      "description": "Le jour férié a été mis à jour correctement"
+    },
+    "deleteSuccess": {
+      "title": "Jour férié supprimé avec succès",
+      "description": "Le jour férié a été supprimé correctement"
+    },
+    "importSuccess": {
+      "title": "Jours fériés importés",
+      "description": "Les jours fériés ont été importés correctement"
+    },
+    "importWithErrors": {
+      "title": "Processus terminé avec des erreurs",
+      "description": "{success} jours fériés importés correctement, {errors} avec des erreurs"
+    },
+    "loadSuccess": {
+      "title": "Succès",
+      "description": "{count} jours fériés chargés pour l'année {year}"
+    },
+    "loadError": {
+      "title": "Erreur",
+      "description": "Erreur lors du chargement des jours fériés depuis l'API"
+    },
+    "yearRequired": {
+      "title": "Erreur",
+      "description": "Veuillez sélectionner une année"
+    },
+    "error": {
+      "title": "Erreur",
+      "description": "Une erreur s'est produite lors du traitement"
+    }
+  },
+  "upsert": {
+    "title": {
+      "edit": "Modifier le Jour Férié",
+      "add": "Ajouter un Jour Férié"
+    },
+    "fields": {
+      "name": "Nom",
+      "date": "Date",
+      "branches": "Succursales (Optionnel)"
+    },
+    "placeholders": {
+      "name": "Nom",
+      "date": "Date",
+      "branches": "Sélectionnez les succursales (optionnel)"
+    },
+    "validation": {
+      "nameRequired": "Veuillez entrer le nom du jour férié",
+      "dateRequired": "Veuillez entrer la date du jour férié"
+    },
+    "branchAssignment": {
+      "title": "Attribution des Succursales",
+      "noBranches": {
+        "label": "Aucune succursale sélectionnée:",
+        "description": "Le jour férié sera appliqué de manière générique à toutes les succursales du système."
+      },
+      "withBranches": {
+        "label": "Succursales sélectionnées ({count}):",
+        "description": "Le jour férié sera appliqué exclusivement aux succursales sélectionnées."
+      },
+      "tooltip": "Si vous ne sélectionnez aucune succursale, le jour férié s'appliquera à toutes les succursales. Si vous sélectionnez des succursales spécifiques, le jour férié ne s'appliquera qu'à ces succursales."
+    },
+    "isWaivable": {
+      "label": "Est renonçable",
+      "description": "Indique si le jour férié peut être renoncé par le travailleur"
+    }
+  },
+  "massive": {
+    "title": "Importation en Masse des Jours Fériés",
+    "message": "Les jours fériés suivants seront importés depuis l'API officielle:",
+    "selectYear": "Sélectionner l'Année",
+    "yearPlaceholder": "Sélectionnez une année",
+    "noHolidaysMessage": "Sélectionnez une année et cliquez sur \"Charger les Jours Fériés\" pour voir les jours fériés disponibles",
+    "loadingHolidays": "Chargement des jours fériés...",
+    "branchAssignment": {
+      "title": "Attribution des Succursales",
+      "noBranches": {
+        "label": "Aucune succursale sélectionnée:",
+        "description": "Les jours fériés seront appliqués de manière générique à toutes les succursales du système."
+      },
+      "withBranches": {
+        "label": "Succursales sélectionnées ({count}):",
+        "description": "Les jours fériés seront appliqués exclusivement aux succursales sélectionnées."
+      },
+      "tooltip": "Si vous ne sélectionnez aucune succursale, le jour férié s'appliquera à toutes les succursales. Si vous sélectionnez des succursales spécifiques, le jour férié ne s'appliquera qu'à ces succursales."
+    },
+    "table": {
+      "headers": {
+        "date": "Date",
+        "name": "Nom",
+        "type": "Type",
+        "isWaivable": "Renonçable",
+        "status": "Statut"
+      },
+      "status": {
+        "pending": "En Attente",
+        "processing": "En Cours",
+        "completed": "Terminé",
+        "error": "Erreur"
+      }
+    }
+  },
+  "yes": "Oui",
+  "no": "Non"
+}

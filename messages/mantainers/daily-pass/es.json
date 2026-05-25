@@ -1,0 +1,79 @@
+{
+  "title": "Pases Diarios",
+  "subtitle": "Gestione los pases diarios del sistema",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "dailyPass": "Pases Diarios"
+  },
+  "buttons": {
+    "add": "Generar Pase",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "cancel": "Cancelar",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "viewQrCode": "Ver QR"
+  },
+  "table": {
+    "headers": {
+      "name": "Nombre",
+      "documentNumber": "Documento",
+      "status": "Estado",
+      "expiresAt": "Expira",
+      "actions": "Acciones"
+    },
+    "loading": "Cargando pases diarios...",
+    "noData": "No se encontraron pases diarios",
+    "noDataDescription": "Genere un nuevo pase diario para comenzar."
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} resultados",
+    "recordsPerPage": "Registros por página:",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "page": "Página {current} de {total}"
+  },
+  "status": {
+    "active": "Activo",
+    "expired": "Expirado",
+    "deactivated": "Desactivado"
+  },
+  "delete": {
+    "title": "Confirmar eliminación",
+    "message": "¿Está seguro de que desea eliminar este pase diario?",
+    "deleting": "Eliminando...",
+    "success": "Pase eliminado exitosamente",
+    "error": "Error al eliminar el pase. Por favor, inténtelo de nuevo."
+  },
+  "ariaLabels": {
+    "viewQrCode": "Ver código QR",
+    "deletePass": "Eliminar pase diario"
+  },
+  "tour": {
+    "startButton": "Ver guía",
+    "buttons": {
+      "next": "Siguiente",
+      "previous": "Anterior",
+      "done": "Finalizar"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Bienvenido al módulo Pases Diarios",
+        "description": "En este módulo puede generar pases temporales de acceso. Esta guía mostrará las principales funcionalidades."
+      },
+      "toolbar": {
+        "title": "Acciones principales",
+        "description": "Desde aquí puede generar un nuevo pase diario. Seleccione la persona y la fecha de expiración."
+      },
+      "table": {
+        "title": "Tabla de pases diarios",
+        "description": "Listado de pases generados con nombre, documento, estado y fecha de expiración. Use el botón QR para ver el código y el botón eliminar para dar de baja un pase."
+      },
+      "pagination": {
+        "title": "Paginación",
+        "description": "Navegue entre páginas y ajuste la cantidad de registros mostrados."
+      }
+    }
+  }
+}

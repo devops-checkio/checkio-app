@@ -1,0 +1,97 @@
+{
+  "title": "Warning Types Administration",
+  "subtitle": "Manage warning types for employee disciplinary actions",
+  "name": "Name",
+  "createdAt": "Created At",
+  "updatedAt": "Updated At",
+  "actions": "Actions",
+  "addWarningType": "Add Warning Type",
+  "editWarningType": "Edit Warning Type",
+  "deleteWarningType": "Delete Warning Type",
+  "dashboard": "Dashboard",
+  "maintainers": "Maintainers",
+  "warningTypes": "Warning Types",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Maintainers",
+    "warningTypes": "Warning Types"
+  },
+  "modal": {
+    "title": "Warning Type",
+    "titleAdd": "Add Warning Type",
+    "titleEdit": "Edit Warning Type",
+    "nameLabel": "Name",
+    "namePlaceholder": "Enter warning type name",
+    "nameRequiredMessage": "Please enter the warning type name",
+    "nameHelperText": "Enter a descriptive name for the warning type",
+    "save": "Save",
+    "update": "Update",
+    "cancel": "Cancel",
+    "saving": "Saving...",
+    "updating": "Updating...",
+    "creating": "Creating...",
+    "success": "Warning type saved successfully",
+    "error": "Error saving warning type",
+    "nameRequired": "Name is required"
+  },
+  "delete": {
+    "title": "Delete Warning Type",
+    "confirmTitle": "Confirm deletion",
+    "message": "Are you sure you want to delete this warning type?",
+    "success": "Warning type deleted successfully",
+    "error": "Error deleting warning type"
+  },
+  "table": {
+    "headers": {
+      "name": "Name",
+      "createdAt": "Creation Date",
+      "updatedAt": "Modification Date",
+      "actions": "Actions"
+    },
+    "noData": "No warning types found",
+    "noDataDescription": "Create a new warning type to get started.",
+    "loading": "Loading warning types..."
+  },
+  "buttons": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "deleting": "Deleting...",
+    "downloadExcel": "Download Excel",
+    "generating": "Generating...",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "ariaLabels": {
+    "editWarningType": "Edit warning type",
+    "deleteWarningType": "Delete warning type"
+  },
+  "excel": {
+    "filename": "warning-types",
+    "sheetName": "Warning Types",
+    "headers": {
+      "name": "Name",
+      "createdAt": "Creation Date",
+      "updatedAt": "Modification Date"
+    },
+    "success": "Excel generated successfully",
+    "error": "Error generating Excel"
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} warning types",
+    "recordsPerPage": "Records per page:",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  },
+  "toast": {
+    "createSuccess": {
+      "title": "Warning type created successfully",
+      "description": "The warning type has been created correctly"
+    },
+    "updateSuccess": {
+      "title": "Warning type updated successfully",
+      "description": "The warning type has been updated correctly"
+    }
+  }
+}

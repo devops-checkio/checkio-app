@@ -1,0 +1,125 @@
+{
+  "successTitle": "Éxito",
+  "title": "Gestión de Estructuras",
+  "subtitle": "Administre las estructuras del sistema",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "structures": "Estructuras"
+  },
+  "buttons": {
+    "add": "Agregar Estructura",
+    "downloadExcel": "Descargar Excel",
+    "search": "Buscar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "cancel": "Cancelar",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "assignCompanies": "Asignación de Empresas",
+    "manageStructure": "Gestionar Estructura"
+  },
+  "table": {
+    "headers": {
+      "name": "Nombre",
+      "companies": "Empresas",
+      "actions": "Acciones"
+    },
+    "loading": "Cargando estructuras...",
+    "noData": "No se encontraron estructuras",
+    "noDataDescription": "Cree una nueva estructura para comenzar.",
+    "selectCompanyTitle": "Seleccione una empresa",
+    "selectCompanyDescription": "Elija la empresa activa en el menú superior para ver sus estructuras organizacionales."
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} resultados",
+    "recordsPerPage": "Registros por página:",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "page": "Página {current} de {total}"
+  },
+  "ariaLabels": {
+    "editStructure": "Editar estructura",
+    "deleteStructure": "Eliminar estructura",
+    "assignCompanies": "Asignar empresas",
+    "manageStructure": "Gestionar estructura completa"
+  },
+  "filters": {
+    "searchPlaceholder": "Buscar Nombre..."
+  },
+  "excel": {
+    "filename": "estructuras",
+    "sheetName": "Estructuras",
+    "headers": {
+      "name": "Nombre",
+      "companies": "Empresas"
+    }
+  },
+  "delete": {
+    "message": "¿Está seguro de que desea eliminar esta estructura?",
+    "success": "Estructura eliminada exitosamente"
+  },
+  "structureDetail": {
+    "title": "Estructura: {name}",
+    "configureLevels": "Configurar nombres de niveles",
+    "downloadStructure": "Descargar Estructura (CSV)",
+    "noLevelsConfigured": "No hay niveles configurados",
+    "noLevelsDescription": "Use «Configurar nombres de niveles» para agregar el primer nivel",
+    "structureLabel": "Estructura",
+    "level": "Nivel",
+    "backAria": "Volver al listado de estructuras"
+  },
+  "levelDetail": {
+    "backAria": "Volver a la vista de la estructura",
+    "new": "Nuevo",
+    "bulkUpload": "Carga masiva",
+    "filterByParent": "Filtrar por padre",
+    "all": "Todos",
+    "noSubunits": "No hay subunidades",
+    "noSubunitsDescription": "Use «Nuevo» o «Carga masiva» para agregar.",
+    "viewChildren": "Ver hijos",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "deleteSubunit": "Eliminar subunidad",
+    "newSubunit": "Nueva subunidad",
+    "editSubunit": "Editar subunidad",
+    "name": "Nombre",
+    "code": "Código",
+    "parent": "Padre",
+    "noParent": "Sin padre",
+    "parents": "Padres",
+    "parentsSearchPlaceholder": "Buscar por nombre o código…",
+    "parentsSearchAria": "Filtrar lista de padres",
+    "parentsSelectFiltered": "Añadir los filtrados",
+    "parentsSelectAll": "Seleccionar todos los padres",
+    "parentsClear": "Limpiar selección",
+    "parentsEmpty": "No hay padres disponibles",
+    "parentsNoMatches": "Ningún padre coincide con la búsqueda",
+    "parentsSelectedCount": "{count, plural, one {# padre seleccionado} other {# padres seleccionados}}",
+    "parentsPickerHint": "Pulse una fila para marcar o desmarcar.",
+    "validationParentsRequired": "Seleccione al menos un padre",
+    "validationNameRequired": "El nombre es requerido",
+    "validationCodeRequired": "El código es requerido",
+    "namePlaceholder": "Ej: Subunidad",
+    "codePlaceholder": "Ej: COD-01",
+    "save": "Guardar",
+    "create": "Crear",
+    "saving": "Guardando",
+    "creating": "Creando",
+    "searchLabel": "Búsqueda",
+    "searchPlaceholder": "Nombre, código o padre…",
+    "searchButton": "Buscar",
+    "searchResults": "Se encontraron {count} resultado(s) para \"{term}\"",
+    "searchNoResults": "No se encontraron resultados para \"{term}\"",
+    "loadError": "Error al cargar",
+    "retry": "Reintentar",
+    "employees": "Empleados",
+    "bulkParentColumnLabel": "Padre(s): código, nombre o UUID; varios separados por coma. Si el código está duplicado, use UUID.",
+    "bulkUploadModalTitle": "Carga masiva: {levelName}",
+    "loadingData": "Cargando datos…",
+    "uploadNoParentsWarning": "Debe crear al menos una subunidad en el nivel anterior antes de usar la carga masiva en este nivel.",
+    "toastSubunitCreated": "Subunidad creada correctamente",
+    "toastSubunitUpdated": "Subunidad actualizada correctamente",
+    "toastSubunitDeleted": "Subunidad eliminada correctamente"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "title": "Student Attendance Management",
+  "subtitle": "View and track student attendance records",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "assistance": "Student Attendance"
+  },
+  "assistanceIncomplete": "Incomplete Attendances",
+  "assistanceAbsent": "Absent Attendances",
+  "assistanceCompleted": "Completed Attendances",
+  "filterStudent": "Student",
+  "filterStudentPlaceholder": "Search by name or document number...",
+  "filterBranch": "Branch",
+  "filterEstablishment": "Establishment",
+  "filterDateType": "Filter by date",
+  "filterDateDay": "Date",
+  "filterDateMonth": "Month",
+  "filterDateYear": "Year",
+  "filterDateStart": "Start date",
+  "filterDateEnd": "End date",
+  "clearFilters": "Clear",
+  "search": "Search",
+  "table": {
+    "name": "Name",
+    "document": "Document",
+    "date": "Date",
+    "establishment": "Establishment",
+    "blocks": "# Blocks",
+    "status": "Status",
+    "actions": "Actions",
+    "viewMarks": "View marks",
+    "noData": "No student attendance records found",
+    "loading": "Loading attendance records..."
+  },
+  "status": {
+    "COMPLETED": "Completed",
+    "INCOMPLETE": "Incomplete",
+    "ABSENT": "Absent",
+    "WITHOUT_SCHEDULE": "No schedule"
+  },
+  "modal": {
+    "title": "Mark Records",
+    "headerTitle": "Mark Records",
+    "loading": "Loading attendance...",
+    "error": "Could not load attendance. Please try again.",
+    "retry": "Retry",
+    "noSlotsEmpty": {
+      "title": "No schedule blocks",
+      "description": "This student has no schedule blocks assigned for this day."
+    },
+    "slot": {
+      "block": "Block",
+      "schedule": "Schedule",
+      "delay": "Delay",
+      "earlyDeparture": "Early departure",
+      "extra": "Extra time",
+      "status": "Status",
+      "noMarks": "No official marks in this block",
+      "officialMarks": "Block marks",
+      "attemptsTitle": "Block attempts"
+    },
+    "failedAttempts": {
+      "title": "Failed attempts",
+      "noData": "No failed attempts recorded"
+    },
+    "min": "min",
+    "na": "N/A"
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} students",
+    "recordsPerPage": "Records per page",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  }
+}

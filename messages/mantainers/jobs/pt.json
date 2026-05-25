@@ -1,0 +1,203 @@
+{
+  "title": "Gerenciamento de Cargos",
+  "subtitle": "Gerencie os cargos e posições da empresa",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "jobs": "Cargos"
+  },
+  "buttons": {
+    "add": "Adicionar Cargo",
+    "addMassive": "Adicionar Cargo em Lote",
+    "downloadExcel": "Baixar Excel",
+    "search": "Buscar",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "save": "SALVAR",
+    "update": "ATUALIZAR",
+    "creating": "Criando...",
+    "updating": "Atualizando...",
+    "processing": "Processando...",
+    "process": "Processar",
+    "cancel": "Cancelar",
+    "close": "Fechar",
+    "downloadTemplate": "Baixar Modelo",
+    "uploadExcel": "Enviar Excel",
+    "addRow": "Adicionar Linha"
+  },
+  "search": {
+    "placeholder": "Buscar Código ou Nome..."
+  },
+  "table": {
+    "headers": {
+      "code": "Código",
+      "name": "Nome",
+      "description": "Descrição",
+      "companies": "Empresas",
+      "createdAt": "Data de Criação",
+      "status": "Status",
+      "actions": "Ações"
+    },
+    "loading": "Carregando cargos...",
+    "noData": "Nenhum cargo encontrado",
+    "noDataDescription": "Adicione um novo cargo para começar.",
+    "noDataMassive": "Nenhum cargo adicionado",
+    "noDataMassiveDescription": "Adicione cargos manualmente ou envie um arquivo Excel"
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} cargos",
+    "recordsPerPage": "Registros por página:",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "page": "Página {current} de {total}"
+  },
+  "delete": {
+    "title": "Confirmar exclusão",
+    "message": "Tem certeza que deseja excluir este cargo?",
+    "success": "Cargo excluído com sucesso"
+  },
+  "excel": {
+    "success": "Excel gerado com sucesso",
+    "error": "Erro ao gerar o Excel",
+    "filename": "cargos",
+    "sheetName": "Cargos",
+    "headers": {
+      "code": "Código",
+      "name": "Nome",
+      "description": "Descrição",
+      "companies": "Empresas",
+      "createdAt": "Data de Criação"
+    }
+  },
+  "ariaLabels": {
+    "editJob": "Editar cargo",
+    "deleteJob": "Excluir cargo"
+  },
+  "toast": {
+    "createSuccess": {
+      "title": "Cargo criado com sucesso",
+      "description": "O cargo foi criado corretamente"
+    },
+    "updateSuccess": {
+      "title": "Cargo atualizado com sucesso",
+      "description": "O cargo foi atualizado corretamente"
+    },
+    "deleteSuccess": {
+      "title": "Cargo excluído com sucesso",
+      "description": "O cargo foi excluído corretamente"
+    },
+    "processCompletedSuccess": {
+      "title": "Processo concluído com sucesso",
+      "description": "O processo de carga em lote foi concluído com sucesso"
+    },
+    "processCompletedWithErrors": {
+      "title": "Processo concluído com erros",
+      "description": "Revise a tabela para mais detalhes"
+    },
+    "error": {
+      "title": "Erro",
+      "description": "Erro ao criar o cargo"
+    }
+  },
+  "upsert": {
+    "title": {
+      "edit": "Editar Cargo",
+      "add": "Adicionar Cargo"
+    },
+    "fields": {
+      "code": "Código",
+      "name": "Nome",
+      "description": "Descrição",
+      "companies": "Empresas"
+    },
+    "placeholders": {
+      "code": "Código",
+      "name": "Nome",
+      "description": "Descrição",
+      "companies": "Selecione as empresas"
+    },
+    "validation": {
+      "codeRequired": "Por favor, insira o código do cargo",
+      "nameRequired": "Por favor, insira o nome do cargo",
+      "descriptionRequired": "Por favor, insira a descrição do cargo",
+      "companiesRequired": "Por favor, selecione pelo menos uma empresa"
+    }
+  },
+  "massive": {
+    "title": "Carga em Lote de Cargos",
+    "tabs": {
+      "excel": "Carga por Excel",
+      "manual": "Entrada Manual"
+    },
+    "instructions": {
+      "excel": {
+        "title": "Instruções:",
+        "step1": "Baixe o modelo Excel para ver o formato necessário",
+        "step2": "Preencha as informações dos cargos no modelo",
+        "step3": "Envie o arquivo Excel preenchido",
+        "step4": "Verifique as informações e pressione Processar"
+      },
+      "manual": {
+        "title": "Instruções para entrada manual:",
+        "step1": "Clique em Adicionar Linha para adicionar um novo cargo",
+        "step2": "Preencha os campos obrigatórios em cada linha",
+        "step3": "Você pode adicionar quantas linhas precisar",
+        "step4": "Verifique as informações e pressione Processar"
+      }
+    },
+    "table": {
+      "headers": {
+        "code": "Código",
+        "name": "Nome",
+        "description": "Descrição",
+        "status": "Status",
+        "actions": "Ações"
+      },
+      "status": {
+        "completed": "Concluído",
+        "error": "Erro"
+      }
+    },
+    "validation": {
+      "codeRequired": "Por favor, insira o código do cargo",
+      "nameRequired": "Por favor, insira o nome do cargo",
+      "descriptionRequired": "Por favor, insira a descrição do cargo",
+      "companiesRequired": "Por favor, selecione pelo menos uma empresa"
+    },
+    "progress": "Processando: {percent}%",
+    "ariaLabels": {
+      "deleteJob": "Excluir cargo"
+    }
+  },
+  "card": {
+    "title": "Cargos"
+  },
+  "tour": {
+    "startButton": "Ver guia",
+    "buttons": {
+      "next": "Próximo",
+      "previous": "Anterior",
+      "done": "Concluir"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Bem-vindo ao módulo de Cargos",
+        "description": "Neste módulo você pode gerenciar cargos e posições. Este guia mostrará as principais funcionalidades."
+      },
+      "toolbar": {
+        "title": "Ações principais",
+        "description": "Aqui você pode buscar por código ou nome, adicionar cargos individualmente, importação em massa via Excel ou baixar a lista."
+      },
+      "table": {
+        "title": "Tabela de cargos",
+        "description": "Lista de cargos com código, nome, descrição, empresas atribuídas e data de criação. Use os botões editar ou excluir para gerenciar cada cargo."
+      },
+      "pagination": {
+        "title": "Paginação",
+        "description": "Navegue entre as páginas e ajuste a quantidade de registros exibidos."
+      }
+    }
+  }
+}

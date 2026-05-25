@@ -1,0 +1,187 @@
+{
+  "title": "Planning par Équipe",
+  "subtitle": "Visualisez et gérez les horaires de plusieurs employés",
+  "headerBadge": "Vue mensuelle de l'équipe",
+  "accessDenied": "Vous n'avez pas la permission d'accéder à ce module.",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "operations": "Opérations",
+    "teamSchedule": "Planning par Équipe"
+  },
+  "navigation": {
+    "today": "Aujourd'hui",
+    "year": "Année",
+    "month": "Mois",
+    "period": "Période"
+  },
+  "months": {
+    "january": "Janvier",
+    "february": "Février",
+    "march": "Mars",
+    "april": "Avril",
+    "may": "Mai",
+    "june": "Juin",
+    "july": "Juillet",
+    "august": "Août",
+    "september": "Septembre",
+    "october": "Octobre",
+    "november": "Novembre",
+    "december": "Décembre"
+  },
+  "filters": {
+    "search": "Rechercher",
+    "documentNumber": "Numéro de Document",
+    "branch": "Succursale",
+    "allBranches": "Toutes les succursales",
+    "selectBranch": "Sélectionner une Succursale",
+    "placeholderSearch": "Rechercher par prénom ou nom",
+    "placeholderDocument": "Rechercher par numéro de document",
+    "buttons": {
+      "clear": "Effacer",
+      "search": "Rechercher"
+    },
+    "error": {
+      "message": "Erreur lors du chargement des employés",
+      "retry": "Réessayer"
+    },
+    "pagination": {
+      "showing": "Affichage de {current} sur {total} résultats",
+      "recordsPerPage": "Enregistrements par page",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "page": "Page {current} sur {total}"
+    }
+  },
+  "legend": {
+    "title": "Légende",
+    "unassigned": "Non assigné",
+    "holiday": "Jour férié",
+    "free": "Jour libre",
+    "shift": "Poste",
+    "schedule": "Horaire",
+    "edited": "Modifié",
+    "absence": "Absence",
+    "permission": "Congé",
+    "todayColumn": "Colonne du jour",
+    "todayColumnHint": "La colonne du jour actuel reprend la couleur du thème"
+  },
+  "grid": {
+    "employee": "Employé",
+    "noSchedule": "-",
+    "free": "L",
+    "holiday": "F",
+    "loading": "Chargement...",
+    "noEmployees": "Aucun employé trouvé",
+    "noEmployeesDescription": "Ajustez vos filtres de recherche ou essayez d'autres critères.",
+    "selectCompanyTitle": "Sélectionnez une entreprise",
+    "selectCompany": "Sélectionnez une entreprise dans le menu supérieur pour voir les plannings de l'équipe.",
+    "today": "Aujourd'hui"
+  },
+  "actions": {
+    "daysSelected": "{count} jour(s) pour {employees} employé(s) sélectionné(s)",
+    "freeDay": "Jour Libre",
+    "delete": "Supprimer",
+    "assign": "Assigner"
+  },
+  "modals": {
+    "assignment": {
+      "title": "Attribution Massive par Équipe",
+      "message": "Sélectionnez l'horaire à attribuer aux jours sélectionnés :",
+      "table": {
+        "employee": "Employé",
+        "date": "Date",
+        "status": "Statut"
+      },
+      "noDaysSelected": "Aucun jour sélectionné",
+      "selectSchedule": "Sélectionner un Horaire",
+      "placeholder": "Sélectionnez un horaire",
+      "hintSelectAnotherSchedule": "Sélectionner un autre horaire",
+      "selectButton": "Sélectionner",
+      "noScheduleError": "Veuillez sélectionner un horaire",
+      "awaitingCompanyFilterHint": "En attente des données de l'entreprise pour filtrer les horaires…",
+      "buttons": {
+        "cancel": "Annuler",
+        "assign": "Assigner"
+      },
+      "assigning": "Attribution...",
+      "unassigned": "Non attribué",
+      "status": {
+        "pending": "En attente",
+        "processing": "En cours",
+        "success": "Terminé",
+        "error": "Erreur"
+      },
+      "toast": {
+        "overlapTitle": "Chevauchement d’horaires",
+        "overlapExisting": "{candidate} chevauche {existing}, déjà attribué aux jours sélectionnés.",
+        "overlapAmongPicked": "{candidate} chevauche {other}, déjà choisi dans cette fenêtre.",
+        "errorSelectSchedule": "Veuillez sélectionner un horaire",
+        "successTitle": "Horaires attribués",
+        "successDescription": "Les horaires ont été attribués avec succès",
+        "completedWithErrorsTitle": "Processus terminé avec des erreurs",
+        "completedWithErrorsDescription": "{successCount} attribués avec succès, {errorCount} avec erreurs"
+      },
+      "errorAssignSchedule": "Erreur lors de l'attribution de l'horaire"
+    },
+    "deletion": {
+      "title": "Confirmer la Suppression",
+      "message": "Êtes-vous sûr de vouloir supprimer les attributions sélectionnées ?",
+      "table": {
+        "employee": "Employé",
+        "date": "Date",
+        "status": "Statut",
+        "message": "Message"
+      },
+      "noDaysSelected": "Aucun jour sélectionné",
+      "buttons": {
+        "cancel": "Annuler",
+        "delete": "Supprimer"
+      },
+      "deleting": "Suppression...",
+      "assignedSchedule": "Horaire attribué",
+      "deletedOk": "Supprimé avec succès",
+      "waiting": "En attente",
+      "status": {
+        "pending": "En attente",
+        "processing": "En cours",
+        "success": "Terminé",
+        "error": "Erreur"
+      },
+      "toast": {
+        "successTitle": "Attributions supprimées",
+        "successDescription": "Les attributions ont été supprimées avec succès",
+        "completedWithErrorsTitle": "Processus terminé avec des erreurs",
+        "completedWithErrorsDescription": "{successCount} supprimées avec succès, {errorCount} avec erreurs"
+      },
+      "errorDeleteAssignment": "Erreur lors de la suppression de l'attribution"
+    },
+    "freeDay": {
+      "title": "Confirmer les Jours Libres",
+      "message": "Êtes-vous sûr de vouloir marquer les jours sélectionnés comme libres ?",
+      "table": {
+        "employee": "Employé",
+        "date": "Date",
+        "status": "Statut"
+      },
+      "noDaysSelected": "Aucun jour sélectionné",
+      "buttons": {
+        "cancel": "Annuler",
+        "confirm": "Confirmer"
+      },
+      "processing": "Traitement...",
+      "status": {
+        "pending": "En attente",
+        "processing": "En cours",
+        "success": "Terminé",
+        "error": "Erreur"
+      },
+      "toast": {
+        "successTitle": "Jours libres configurés",
+        "successDescription": "Les jours sélectionnés ont été marqués comme libres",
+        "completedWithErrorsTitle": "Processus terminé avec des erreurs",
+        "completedWithErrorsDescription": "{successCount} jours traités avec succès, {errorCount} avec erreurs"
+      },
+      "errorProcessDay": "Erreur lors du traitement du jour"
+    }
+  }
+}

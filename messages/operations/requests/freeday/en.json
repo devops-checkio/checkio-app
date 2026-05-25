@@ -1,0 +1,277 @@
+{
+  "title": "Time off requests",
+  "subtitle": "Manage employee time off (day off) requests",
+  "selectCompanyHint": "Select a company in the top menu to view time off requests.",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Operations",
+    "requests": "Requests",
+    "freeday": "Time off"
+  },
+  "buttons": {
+    "add": "New Request"
+  },
+  "tabs": {
+    "pending": "Pending Review",
+    "approved": "Approved",
+    "rejected": "Rejected"
+  },
+  "pending": {
+    "yes": "Yes",
+    "no": "No",
+    "buttons": {
+      "view": "View",
+      "approve": "Approve",
+      "reject": "Reject"
+    },
+    "status": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "table": {
+      "loading": "Loading pending requests...",
+      "noData": "No pending requests",
+      "headers": {
+        "employee": "Employee",
+        "absenceType": "Absence Type",
+        "reason": "Reason",
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "withSalary": "With Pay",
+        "requestedBy": "Requested By",
+        "createdAt": "Request Date",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "pagination": {
+      "showing": "Showing {current} of {total} requests",
+      "recordsPerPage": "Records per page",
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page {current} of {total}"
+    },
+    "ariaLabels": {
+      "viewRequest": "View request",
+      "approveRequest": "Approve request",
+      "rejectRequest": "Reject request",
+      "cancelRequest": "Cancel request"
+    },
+    "cancelModal": {
+      "title": "Cancel request",
+      "description": "Are you sure you want to cancel this pending request? This cannot be undone.",
+      "confirm": "Cancel request",
+      "back": "Back",
+      "processing": "Cancelling…"
+    },
+    "toast": {
+      "cancelSuccess": {
+        "title": "Request cancelled",
+        "description": "The pending request was removed successfully."
+      },
+      "cancelError": {
+        "title": "Could not cancel",
+        "description": "Please try again or contact support."
+      }
+    }
+  },
+  "approved": {
+    "yes": "Yes",
+    "no": "No",
+    "status": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "table": {
+      "loading": "Loading approved requests...",
+      "noData": "No approved requests",
+      "headers": {
+        "employee": "Employee",
+        "absenceType": "Absence Type",
+        "reason": "Reason",
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "withSalary": "With Pay",
+        "requestedBy": "Requested By",
+        "approvedBy": "Approved By",
+        "approvedAt": "Approval Date",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "pagination": {
+      "showing": "Showing {current} of {total} requests",
+      "recordsPerPage": "Records per page",
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page {current} of {total}"
+    },
+    "ariaLabels": {
+      "viewRequest": "View request"
+    }
+  },
+  "rejected": {
+    "yes": "Yes",
+    "no": "No",
+    "status": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "table": {
+      "loading": "Loading rejected requests...",
+      "noData": "No rejected requests",
+      "headers": {
+        "employee": "Employee",
+        "absenceType": "Absence Type",
+        "reason": "Reason",
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "withSalary": "With Pay",
+        "requestedBy": "Requested By",
+        "rejectedAt": "Rejection Date",
+        "rejectionReason": "Rejection Reason",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "pagination": {
+      "showing": "Showing {current} of {total} requests",
+      "recordsPerPage": "Records per page",
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page {current} of {total}"
+    },
+    "ariaLabels": {
+      "viewRequest": "View request"
+    }
+  },
+  "modal": {
+    "title": {
+      "create": "Request Day Off",
+      "view": "View Request",
+      "edit": "Edit Request"
+    },
+    "fields": {
+      "employee": "Employee",
+      "absenceType": "Absence Type",
+      "absenceTypePlaceholder": "Select an absence type",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "observation": "Observation",
+      "observationPlaceholder": "Additional observations (optional)",
+      "withSalary": "With pay",
+      "reason": "Additional reason",
+      "reasonPlaceholder": "Additional reason (optional)"
+    },
+    "validation": {
+      "absenceTypeRequired": "Select an absence type",
+      "startDateRequired": "Select the start date",
+      "startDateFuture": "Start date must be after today",
+      "endDateRequired": "Select the end date",
+      "endDateAfterStart": "End date must be equal to or after the start date",
+      "endDateFuture": "End date must be after today",
+      "invalidDates": "Please enter valid start and end dates",
+      "noEmployeeId": "Could not identify the employee. Please log in again."
+    },
+    "timeBank": {
+      "title": "Deduct from Time Bank",
+      "description": "Requested days will be deducted from the rest days bank",
+      "availableBalance": "Available balance",
+      "hours": "hrs",
+      "days": "days",
+      "noActiveBank": "You do not have an active rest days bank",
+      "viewInfo": "This request is charged to the time bank"
+    },
+    "requestInfo": {
+      "title": "Request Information",
+      "requestedBy": "Requested by",
+      "requestDate": "Request date",
+      "approvedBy": "Approved by",
+      "approvalDate": "Approval date",
+      "rejectedBy": "Rejected by",
+      "rejectionDate": "Rejection date",
+      "rejectionReason": "Rejection reason"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "close": "Close",
+      "submit": "Submit Request",
+      "update": "Update Request",
+      "processing": "Processing..."
+    },
+    "toast": {
+      "success": {
+        "title": "Request submitted",
+        "description": "Your day off request has been submitted successfully"
+      },
+      "error": {
+        "title": "Error",
+        "description": "Could not submit the request. Please try again."
+      }
+    },
+    "overlap": {
+      "title": "Possible date conflicts",
+      "checking": "Checking for overlaps…",
+      "typeFREEDAY": "Time off request",
+      "typeABSENCE": "Absence",
+      "typeHOURLY_PERMISSION": "Hourly permission",
+      "dateRange": "{start} – {end}"
+    },
+    "loadingAbsenceTypes": "Loading absence types..."
+  },
+  "approveModal": {
+    "title": "Approve time off request",
+    "summaryTitle": "Request summary",
+    "employee": "Employee",
+    "reason": "Reason",
+    "startDate": "Start date",
+    "endDate": "End date",
+    "withSalary": "With pay",
+    "requestedBy": "Requested by",
+    "observation": "Observation",
+    "confirmTitle": "Confirm approval",
+    "confirmDescription": "Are you sure you want to approve this time off request? The employee will be notified.",
+    "yes": "Yes",
+    "no": "No",
+    "cancel": "Cancel",
+    "approve": "Approve request",
+    "approving": "Approving…",
+    "toastSuccessTitle": "Request approved",
+    "toastSuccessDescription": "The time off request was approved successfully.",
+    "toastErrorTitle": "Error",
+    "toastErrorDescription": "Could not approve the request."
+  },
+  "tour": {
+    "startButton": "View guide",
+    "buttons": {
+      "next": "Next",
+      "previous": "Previous",
+      "done": "Done"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Welcome to time off requests",
+        "description": "Create requests and review pending ones; approvers can approve or reject; everyone can view approved or rejected."
+      },
+      "toolbar": {
+        "title": "New request",
+        "description": "Create a new time off request (as an employee, for yourself)."
+      },
+      "tabs": {
+        "title": "Tabs Pending, Approved, Rejected",
+        "description": "Navigate between pending, approved or rejected requests. Each tab shows the corresponding list."
+      },
+      "table": {
+        "title": "Requests table",
+        "description": "List with employee, absence type, dates, pay status and status. Approvers can approve or reject pending rows; employees can cancel their own pending request."
+      },
+      "pagination": {
+        "title": "Pagination",
+        "description": "Navigate between pages and adjust the number of records displayed."
+      }
+    }
+  }
+}

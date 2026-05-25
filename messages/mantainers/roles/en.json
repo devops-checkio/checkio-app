@@ -1,0 +1,50 @@
+{
+  "title": "Role Management",
+  "subtitle": "Manage system roles and permissions",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Maintainers",
+    "roles": "Roles"
+  },
+  "buttons": {
+    "add": "Add Role",
+    "edit": "Edit",
+    "delete": "Delete",
+    "previous": "Previous",
+    "next": "Next",
+    "save": "SAVE"
+  },
+  "table": {
+    "headers": {
+      "name": "Name",
+      "createdAt": "Creation Date",
+      "actions": "Actions"
+    },
+    "loading": "Loading roles...",
+    "noData": "No roles found",
+    "noDataDescription": "Add a new role to get started."
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} roles",
+    "page": "Page {current} of {total}",
+    "recordsPerPage": "Records per page:"
+  },
+  "delete": {
+    "success": "Role deleted successfully",
+    "confirmMessage": "Are you sure you want to delete this role?"
+  },
+  "create": {
+    "success": "Role created successfully"
+  },
+  "modal": {
+    "createTitle": "Create New Role",
+    "nameLabel": "Role Name",
+    "nameRequired": "This field is required",
+    "nameMinLength": "Name must be at least 2 characters",
+    "saving": "Saving..."
+  },
+  "ariaLabels": {
+    "editRole": "Edit role",
+    "deleteRole": "Delete role"
+  }
+}

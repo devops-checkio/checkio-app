@@ -1,0 +1,119 @@
+{
+  "title": "Tokens de API",
+  "subtitle": "Gestiona los tokens de integración",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "integrations": "Integraciones"
+  },
+  "table": {
+    "headers": {
+      "name": "Nombre",
+      "status": "Estado",
+      "createdAt": "Fecha de creación",
+      "lastUsedAt": "Último uso",
+      "createdBy": "Usuario creador",
+      "actions": "Acciones"
+    },
+    "loading": "Cargando tokens...",
+    "noData": "No se encontraron tokens",
+    "noDataDescription": "Crea tu primer token de integración"
+  },
+  "status": {
+    "active": "Activo",
+    "revoked": "Revocado"
+  },
+  "buttons": {
+    "add": "Crear token",
+    "edit": "Editar",
+    "delete": "Revocar",
+    "regenerate": "Regenerar",
+    "search": "Buscar",
+    "downloadExcel": "Exportar Excel",
+    "previous": "Anterior",
+    "next": "Siguiente"
+  },
+  "search": {
+    "placeholder": "Buscar por nombre..."
+  },
+  "filters": {
+    "status": "Estado",
+    "allStatuses": "Todos los estados"
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} resultados",
+    "page": "Página {current} de {total}"
+  },
+  "modal": {
+    "create": {
+      "title": "Crear Token de API",
+      "basicInfo": "Información Básica",
+      "name": "Nombre del token",
+      "description": "Descripción (opcional)",
+      "expiresAt": "Fecha de expiración (opcional)",
+      "permissions": "Permisos",
+      "cancel": "Cancelar",
+      "save": "Guardar",
+      "processing": "Creando...",
+      "successTitle": "Token creado exitosamente",
+      "successDescription": "El token ha sido creado correctamente"
+    },
+    "edit": {
+      "title": "Editar Token de API",
+      "save": "Actualizar",
+      "processing": "Actualizando...",
+      "successTitle": "Token actualizado exitosamente",
+      "successDescription": "El token ha sido actualizado correctamente"
+    },
+    "tokenDisplay": {
+      "title": "Token Generado",
+      "warning": "⚠️ Guarda este token, no volverá a mostrarse",
+      "copy": "Copiar",
+      "copied": "Copiado",
+      "show": "Mostrar",
+      "hide": "Ocultar",
+      "understood": "Entendido"
+    },
+    "permissions": {
+      "title": "Configurar Permisos",
+      "selectAll": "Seleccionar todo",
+      "deselectAll": "Deseleccionar todo",
+      "module": "Módulo",
+      "actions": "Acciones",
+      "permissionSelected": "permiso seleccionado",
+      "permissionsSelected": "permisos seleccionados"
+    }
+  },
+  "delete": {
+    "title": "Token revocado",
+    "description": "El token ha sido revocado exitosamente",
+    "confirmMessage": "¿Estás seguro de que deseas revocar este token?",
+    "error": "Error al revocar el token"
+  },
+  "regenerate": {
+    "successTitle": "Token regenerado",
+    "successDescription": "El token ha sido regenerado exitosamente",
+    "error": "Error al regenerar el token"
+  },
+  "errors": {
+    "title": "Error",
+    "createError": "Error al crear el token",
+    "updateError": "Error al actualizar el token",
+    "regenerateError": "Error al regenerar el token"
+  },
+  "excel": {
+    "filename": "tokens-api",
+    "sheetName": "Tokens de API",
+    "headers": {
+      "name": "Nombre",
+      "status": "Estado",
+      "createdAt": "Fecha de creación",
+      "lastUsedAt": "Último uso"
+    }
+  },
+  "ariaLabels": {
+    "editToken": "Editar token",
+    "deleteToken": "Revocar token",
+    "regenerateToken": "Regenerar token"
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "title": "Relatórios",
+  "subtitle": "Gestão e administração de modelos de relatórios",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "reports": "Relatórios",
+    "create": "Criar Modelo",
+    "edit": "Editar Modelo"
+  },
+  "buttons": {
+    "create": "Criar Relatório",
+    "edit": "Editar",
+    "generate": "Gerar",
+    "delete": "Excluir",
+    "deleting": "Excluindo...",
+    "cancel": "Cancelar",
+    "search": "Buscar",
+    "clear": "Limpar",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "add": "Adicionar",
+    "save": "SALVAR",
+    "update": "ATUALIZAR",
+    "saving": "Salvando...",
+    "updating": "Atualizando...",
+    "creating": "Criando...",
+    "generating": "Gerando...",
+    "close": "Fechar",
+    "createTemplate": "Criar Modelo",
+    "updateTemplate": "Atualizar Modelo",
+    "showPreview": "Ver Preview",
+    "hidePreview": "Ocultar Preview",
+    "showJson": "Ver JSON",
+    "hideJson": "Ocultar JSON",
+    "copyJson": "Copiar JSON",
+    "createConsolidatedField": "Criar Campo Consolidado",
+    "createCalculatedField": "Criar Coluna Calculada",
+    "addTotalRow": "Adicionar Linha de Totais",
+    "editTotalRow": "Editar",
+    "deleteTotalRow": "Excluir",
+    "goToHistory": "Ir para Histórico de Relatórios"
+  },
+  "filters": {
+    "search": "Buscar Modelos",
+    "searchByName": "Buscar por nome",
+    "searchByNamePlaceholder": "Buscar por nome do modelo...",
+    "filterByType": "Filtrar por tipo",
+    "allTypes": "Todos os tipos",
+    "assistanceData": "Dados de Assistência",
+    "employeeData": "Dados de Funcionário"
+  },
+  "table": {
+    "headers": {
+      "name": "Nome",
+      "description": "Descrição",
+      "reportType": "Tipo de Relatório",
+      "columns": "Colunas",
+      "createdAt": "Data de Criação",
+      "updatedAt": "Última Atualização",
+      "actions": "Ações"
+    },
+    "loading": "Carregando modelos...",
+    "noData": "Nenhum modelo encontrado",
+    "noDataDescription": "Crie seu primeiro modelo de relatório",
+    "noName": "Sem nome",
+    "notAvailable": "Sem descrição",
+    "columnsCount": "{count} colunas",
+    "noFieldsSelected": "Nenhum campo selecionado",
+    "noFieldsSelectedDescription": "Clique nos campos do painel esquerdo para adicioná-los",
+    "fieldsSelected": "{count} campos selecionados"
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} resultados",
+    "filteredFrom": "(filtrados de {total} total)",
+    "page": "Página {current} de {total}",
+    "recordsPerPage": "Registros por página"
+  },
+  "modals": {
+    "delete": {
+      "title": "Excluir Modelo",
+      "message": "Tem certeza de que deseja excluir este modelo? Esta ação não pode ser desfeita."
+    },
+    "generate": {
+      "title": "Filtros para Gerar Relatório",
+      "configureFilters": "Configurar Filtros de Geração",
+      "configureFiltersDescription": "Esses filtros serão aplicados ao gerar o relatório. Você pode filtrar por período de datas, cargos, filiais e mais.",
+      "datePeriod": "Período de Datas",
+      "today": "Hoje",
+      "yesterday": "Ontem",
+      "last7days": "Últimos 7 Dias",
+      "last30days": "Últimos 30 Dias",
+      "thisMonth": "Este Mês",
+      "lastMonth": "Mês Passado",
+      "custom": "Período personalizado",
+      "startDate": "Data Inicial",
+      "endDate": "Data Final",
+      "filterByJobs": "Filtrar por Cargos (Opcional)",
+      "filterByJobsDescription": "Selecione os cargos para incluir no relatório. Deixe vazio para incluir todos.",
+      "selectJobs": "Selecione cargos...",
+      "jobsSelected": "{count} cargo(s) selecionado(s)",
+      "selectAllJobs": "Selecionar todos",
+      "deselectAllJobs": "Desmarcar todos",
+      "loadingJobs": "Carregando cargos...",
+      "noJobsAvailable": "Nenhum cargo disponível",
+      "filterByBranches": "Filtrar por Filiais (Opcional)",
+      "filterByBranchesDescription": "Selecione as filiais para incluir no relatório. Deixe vazio para incluir todas.",
+      "selectBranches": "Selecione filiais...",
+      "branchesSelected": "{count} filial(is) selecionada(s)",
+      "selectAllBranches": "Selecionar todas",
+      "deselectAllBranches": "Desmarcar todas",
+      "loadingBranches": "Carregando filiais...",
+      "noBranchesAvailable": "Nenhuma filial disponível",
+      "filterByDocument": "Filtrar por Número de Documento (Opcional)",
+      "filterByDocumentDescription": "Selecione o tipo de documento e insira o número. Você pode adicionar múltiplos documentos.",
+      "documentPlaceholder": "Ex: 18.333.222-6",
+      "generateReport": "Gerar Relatório"
+    },
+    "success": {
+      "title": "Relatório Gerado com Sucesso!",
+      "message": "Seu relatório está sendo processado em segundo plano.",
+      "whatsNext": "O que vem a seguir?",
+      "whatsNextDescription": "Quando o processamento terminar, você poderá baixar seu relatório no histórico de relatórios."
+    },
+    "totalRow": {
+      "create": "Criar Linha de Totais",
+      "edit": "Editar Linha de Totais",
+      "name": "Nome da Linha de Totais *",
+      "namePlaceholder": "Ex: Total de Horas Extras",
+      "nameDescription": "Este será o nome que aparecerá na primeira coluna (se habilitado)",
+      "headerTransform": "Formato do Cabeçalho",
+      "headerTransformDescription": "Formato de exibição do cabeçalho",
+      "default": "Padrão",
+      "upper": "MAIÚSCULAS",
+      "lower": "minúsculas",
+      "totalType": "Tipo de Total *",
+      "sum": "Soma (SUM)",
+      "avg": "Média (AVG)",
+      "count": "Contagem (COUNT)",
+      "min": "Mínimo (MIN)",
+      "max": "Máximo (MAX)",
+      "custom": "Personalizado (Selecionar por coluna)",
+      "customDescription": "Selecione o tipo de agregação para cada coluna numérica",
+      "defaultDescription": "Será aplicado a todos os campos numéricos que permitem agregação",
+      "position": "Posição da Linha *",
+      "top": "Acima (Após os cabeçalhos)",
+      "bottom": "Abaixo (No final do relatório)",
+      "showLabel": "Mostrar rótulo na primeira coluna",
+      "selectFields": "Selecionar Campos e Tipo de Agregação *",
+      "noNumericFields": "Nenhum campo numérico com agregação disponível. Adicione campos numéricos primeiro.",
+      "none": "Nenhum",
+      "createButton": "Criar Linha de Totais",
+      "updateButton": "Atualizar Linha de Totais",
+      "grouping": "Agrupamento de Totais",
+      "groupBy": "Agrupar por",
+      "groupByEmployee": "Por Funcionário",
+      "groupByMonth": "Por Mês",
+      "groupByWeek": "Por Semana",
+      "groupByDescription": "Selecione os critérios para agrupar os totais. Os totais serão exibidos automaticamente quando o critério selecionado mudar.",
+      "labelTemplate": "Modelo de Rótulo",
+      "labelTemplatePlaceholder": "Ex: Total funcionário - mês ano",
+      "labelTemplateDescription": "Modelo personalizado para o rótulo do total agrupado. Use variáveis entre chaves para inserir valores dinâmicos.",
+      "availableVariables": "Variáveis disponíveis",
+      "showGroupContext": "Mostrar contexto do grupo automaticamente",
+      "showGroupContextDescription": "Se ativado, o rótulo será automaticamente preenchido com o contexto do grupo (funcionário, mês, semana) se nenhum modelo for especificado.",
+      "insertVariable": "Inserir variável",
+      "variableEmployee": "Nome Completo",
+      "variableFirstName": "Primeiro Nome",
+      "variableMonthName": "Mês (Nome)",
+      "variableYear": "Ano",
+      "variableWeek": "Semana",
+      "variableWeekRange": "Intervalo da Semana",
+      "example": "Exemplo",
+      "exampleEmployee": "Se agrupar por funcionário: 'Total João Silva'",
+      "exampleEmployeeMonth": "Se agrupar por funcionário e mês: 'Total João Silva - Janeiro 2024'",
+      "exampleMonth": "Se agrupar por mês: 'Total - Janeiro 2024'",
+      "exampleWeek": "Se agrupar por semana: 'Total - Semana 3'"
+    }
+  },
+  "create": {
+    "title": {
+      "create": "Criar Modelo",
+      "edit": "Editar Modelo"
+    },
+    "subtitle": {
+      "create": "Configure os campos e opções do seu modelo de relatório personalizado",
+      "edit": "Edite seu modelo de relatório personalizado"
+    },
+    "loading": "Carregando modelo...",
+    "reportInfo": "Informações do Relatório",
+    "fields": {
+      "reportName": "Nome do Relatório *",
+      "reportNamePlaceholder": "Ex: Relatório de Assistência Mensal",
+      "description": "Descrição",
+      "descriptionPlaceholder": "Descrição breve do relatório",
+      "reportType": "Tipo de Relatório",
+      "reportTypePlaceholder": "Selecione um tipo",
+      "headerTransform": "Formato do Cabeçalho",
+      "headerTransformDescription": "(Aplica-se a todas as colunas por padrão)",
+      "reportFields": "Campos do Relatório",
+      "searchCategories": "Buscar categorias...",
+      "searchCategoriesPlaceholder": "Buscar categorias..."
+    },
+    "preview": {
+      "title": "Visualização do Relatório (Simulação Excel)",
+      "previewLabel": "Visualização",
+      "description": "Mostrando {count} linhas de exemplo. O relatório final incluirá todos os dados de acordo com os filtros aplicados."
+    },
+    "jsonPreview": {
+      "title": "Visualização do JSON (Teste)",
+      "description": "Este é o JSON que será gerado ao salvar o relatório. Esta visualização é temporária para testes."
+    },
+    "totalRows": {
+      "configured": "Linhas de Totais Configuradas",
+      "top": "Acima",
+      "bottom": "Abaixo",
+      "columns": "{count} colunas",
+      "deleted": "Linha de totais excluída",
+      "deletedDescription": "{label} foi excluída"
+    },
+    "validation": {
+      "nameRequired": "O nome do relatório é obrigatório",
+      "fieldsRequired": "Você deve adicionar pelo menos um campo ao relatório",
+      "invalidReferences": "Há problemas com as referências de campos. Verifique o console.",
+      "cleanedReferences": "Algumas referências inválidas foram limpas. Tente salvar novamente."
+    }
+  },
+  "toast": {
+    "templateCreated": {
+      "title": "Modelo criado",
+      "description": "O modelo foi criado com sucesso"
+    },
+    "templateUpdated": {
+      "title": "Modelo atualizado",
+      "description": "O modelo foi atualizado com sucesso"
+    },
+    "templateDeleted": {
+      "title": "Modelo excluído",
+      "description": "O modelo foi excluído com sucesso"
+    },
+    "deleteError": {
+      "title": "Erro ao excluir modelo",
+      "description": "Erro ao excluir modelo"
+    },
+    "jsonCopied": {
+      "title": "JSON copiado",
+      "description": "O JSON foi copiado para a área de transferência"
+    }
+  },
+  "reportTypes": {
+    "ASSISTANCE": "Dados de Assistência",
+    "EMPLOYEE_DATA": "Dados de Funcionário"
+  },
+  "aggregationTypes": {
+    "sum": "Soma",
+    "avg": "Média",
+    "count": "Contagem",
+    "min": "Mínimo",
+    "max": "Máximo",
+    "none": "Nenhum"
+  }
+}

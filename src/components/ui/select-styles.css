@@ -1,0 +1,50 @@
+.system-select .ant-select-selector {
+  padding: 8px 12px !important;
+  border: 1px solid !important;
+  border-radius: 6px !important;
+  background-color: white !important;
+  transition: all 0.2s ease !important;
+  height: 32px !important;
+  min-height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.system-select.ant-select-focused .ant-select-selector {
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5) !important;
+}
+
+.system-select.border-red-500 .ant-select-selector {
+  border-color: #ef4444 !important;
+}
+
+.system-select.border-green-500 .ant-select-selector {
+  border-color: #10b981 !important;
+}
+
+.system-select.border-yellow-500 .ant-select-selector {
+  border-color: #f59e0b !important;
+}
+
+.system-select.border-gray-300 .ant-select-selector {
+  border-color: #d1d5db !important;
+}
+
+.system-select .ant-select-selection-placeholder {
+  color: #9ca3af !important;
+}
+
+.system-select.ant-select-disabled .ant-select-selector {
+  background-color: #f3f4f6 !important;
+  color: #9ca3af !important;
+  cursor: not-allowed !important;
+}
+
+.system-select .ant-select-arrow {
+  color: #6b7280 !important;
+}
+
+.system-select.ant-select-disabled .ant-select-arrow {
+  color: #9ca3af !important;
+} 

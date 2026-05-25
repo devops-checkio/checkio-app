@@ -1,0 +1,771 @@
+{
+  "title": "Company Management",
+  "subtitle": "Manage system companies",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Maintainers",
+    "companies": "Companies"
+  },
+  "buttons": {
+    "add": "Add Company",
+    "addMassive": "Bulk Add Company",
+    "downloadExcel": "Download Excel",
+    "generating": "Generating...",
+    "previous": "Previous",
+    "next": "Next",
+    "edit": "Edit",
+    "delete": "Delete",
+    "cancel": "Cancel"
+  },
+  "table": {
+    "status": {
+      "yes": "Yes",
+      "no": "No"
+    },
+    "headers": {
+      "isActive": "Active",
+      "documentType": "Document Type",
+      "documentNumber": "Document Number",
+      "businessName": "Business Name",
+      "tradeName": "Trade Name",
+      "address": "Address",
+      "integrationCode": "Integration Code",
+      "createdAt": "Creation Date",
+      "actions": "Actions"
+    },
+    "loading": "Loading companies...",
+    "noData": "No companies found",
+    "noDataDescription": "Create a new company to get started."
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} companies",
+    "recordsPerPage": "Records per page:",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  },
+  "delete": {
+    "title": "Confirm deletion",
+    "message": "Are you sure you want to delete this company?",
+    "deleting": "Deleting...",
+    "success": "Company deleted successfully",
+    "error": "Error deleting company. Please try again."
+  },
+  "excel": {
+    "success": "Excel generated successfully",
+    "error": "Error generating Excel",
+    "filename": "companies",
+    "sheetName": "Companies",
+    "headers": {
+      "documentType": "Document Type",
+      "documentNumber": "Document Number",
+      "businessName": "Business Name",
+      "tradeName": "Trade Name",
+      "address": "Address",
+      "integrationCode": "Integration Code",
+      "createdAt": "Creation Date"
+    }
+  },
+  "ariaLabels": {
+    "editCompany": "Edit company",
+    "deleteCompany": "Delete company"
+  },
+  "detailTour": {
+    "startButton": "View guide",
+    "tabs": {
+      "0": {
+        "steps": {
+          "welcome": {
+            "title": "Basic Information",
+            "description": "In this tab you can view and edit the main company data: business name, address, document and system configuration."
+          },
+          "basicInfo": {
+            "title": "Company data",
+            "description": "Business name, trade name, physical address and active status of the company."
+          },
+          "systemConfig": {
+            "title": "System configuration",
+            "description": "Document type and number, integration code and whether the company is a Temporary Service (EST)."
+          }
+        }
+      },
+      "1": {
+        "steps": {
+          "welcome": {
+            "title": "Attendance Parameters",
+            "description": "Configure tolerances, schedules and automatic settings that apply to attendance for this company."
+          },
+          "tolerances": {
+            "title": "Tolerances",
+            "description": "Late arrival and lunch break tolerance. Define the minutes allowed before marking tardiness."
+          },
+          "scheduleConfig": {
+            "title": "Schedule configuration",
+            "description": "Minutes before and after schedule when marking is allowed, and marking association window."
+          },
+          "automaticConfig": {
+            "title": "Automatic configurations",
+            "description": "Automatic marking, close without assigned shift and fallback window for associating marks."
+          }
+        }
+      },
+      "2": {
+        "steps": {
+          "welcome": {
+            "title": "System Parameters",
+            "description": "Configure marking and system notifications for this company."
+          },
+          "markingConfig": {
+            "title": "Marking configuration",
+            "description": "Enable signature, photo, additional marks and mobile consult menu for markings."
+          },
+          "supervisorNotif": {
+            "title": "Supervisor notifications",
+            "description": "Notifications for late arrivals, breaks and departures sent to the manager."
+          },
+          "systemNotif": {
+            "title": "System notifications",
+            "description": "Weekly, daily emails, welcome and status notifications to administrators and employees."
+          }
+        }
+      },
+      "3": {
+        "steps": {
+          "welcome": {
+            "title": "Overtime",
+            "description": "Configure calculation type (by period or by day) and active or inactive configurations."
+          },
+          "overtimeType": {
+            "title": "Configuration type",
+            "description": "By period: percentage by time range. By day: percentage applied all day."
+          },
+          "overtimeSubtabs": {
+            "title": "Active / Inactive",
+            "description": "Active or finished configurations. Inactive ones have an end date."
+          },
+          "overtimeTable": {
+            "title": "Configurations table",
+            "description": "List of overtime configurations with day, schedule and applied percentage."
+          },
+          "overtimeAdd": {
+            "title": "Add configuration",
+            "description": "Create new overtime configurations for specific days or time ranges."
+          }
+        }
+      },
+      "4": {
+        "steps": {
+          "welcome": {
+            "title": "Notifications",
+            "description": "Manage company notifications from predefined templates."
+          },
+          "notificationsAdd": {
+            "title": "Add notification",
+            "description": "Select a notification template to add and configure for this company."
+          },
+          "notificationsTable": {
+            "title": "Notifications table",
+            "description": "List of configured notifications. You can edit or delete each one."
+          }
+        }
+      },
+      "5": {
+        "steps": {
+          "welcome": {
+            "title": "Marking Rules",
+            "description": "Define entry/exit rules with Global or Geofence mode for this company."
+          },
+          "rulesExplanation": {
+            "title": "Explanation",
+            "description": "Rules can require mark in authorized geofence (entry) or allow global exit according to employee configuration."
+          },
+          "rulesNew": {
+            "title": "New rule",
+            "description": "Create rules combining mark type (entry/exit) and mode (Geofence/Global)."
+          },
+          "rulesTable": {
+            "title": "Rules table",
+            "description": "List of configured rules. You can delete existing rules."
+          }
+        }
+      }
+    }
+  },
+  "tour": {
+    "startButton": "View guide",
+    "buttons": {
+      "next": "Next",
+      "previous": "Previous",
+      "done": "Done"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Welcome to the Companies module",
+        "description": "In this module you can manage system companies. This guide will show you the main features available."
+      },
+      "toolbar": {
+        "title": "Main actions",
+        "description": "Here you can add companies individually, perform bulk upload from Excel, or download the list in Excel format."
+      },
+      "table": {
+        "title": "Companies table",
+        "description": "The table displays all registered companies. You can sort by clicking on column headers. Use the edit or delete buttons to manage each company."
+      },
+      "pagination": {
+        "title": "Pagination",
+        "description": "Use these controls to navigate between pages and adjust the number of records displayed."
+      }
+    }
+  },
+  "upsert": {
+    "title": {
+      "edit": "Edit Company",
+      "add": "Add Company"
+    },
+    "fields": {
+      "documentType": "Document Type",
+      "documentNumber": "Document Number",
+      "businessName": "Business Name",
+      "tradeName": "Trade Name",
+      "address": "Address",
+      "transitoryService": "Temporary Service Company (EST)"
+    },
+    "placeholders": {
+      "documentType": "Document Type",
+      "documentNumber": "Enter document number"
+    },
+    "validation": {
+      "documentTypeRequired": "Please select the document type",
+      "documentNumberRequired": "Please enter the document number",
+      "invalidDocumentFormat": "Invalid document format",
+      "businessNameRequired": "Please enter the business name",
+      "tradeNameRequired": "Please enter the trade name",
+      "addressRequired": "Please enter the address"
+    },
+    "transitoryService": {
+      "label": "Temporary Service Company (EST)",
+      "description": "Check if the company provides temporary services"
+    },
+    "buttons": {
+      "save": "SAVE",
+      "update": "UPDATE",
+      "saving": "Creating...",
+      "updating": "Updating..."
+    },
+    "toast": {
+      "createSuccess": {
+        "title": "Company created successfully",
+        "description": "The company has been created correctly"
+      },
+      "updateSuccess": {
+        "title": "Company updated successfully",
+        "description": "The company has been updated correctly"
+      },
+      "createError": {
+        "title": "Error creating company",
+        "description": "An error occurred while creating the company"
+      },
+      "updateError": {
+        "title": "Error updating company",
+        "description": "An error occurred while updating the company"
+      }
+    }
+  },
+  "massive": {
+    "title": "Bulk Company Upload",
+    "tabs": {
+      "excel": "Excel Upload",
+      "manual": "Manual Entry"
+    },
+    "instructions": {
+      "excel": {
+        "title": "Instructions:",
+        "step1": "Download the Excel template to see the required format",
+        "step2": "Fill in the company information in the template",
+        "step3": "Upload the completed Excel file",
+        "step4": "Verify the information and press Process"
+      },
+      "manual": {
+        "title": "Instructions for manual entry:",
+        "step1": "Click Add Row to add a new company",
+        "step2": "Fill in the required fields in each row",
+        "step3": "You can add as many rows as needed",
+        "step4": "Verify the information and press Process"
+      }
+    },
+    "buttons": {
+      "downloadTemplate": "Download Template",
+      "uploadExcel": "Upload Excel",
+      "addRow": "Add Row",
+      "process": "Process",
+      "processing": "Processing...",
+      "cancel": "Cancel",
+      "close": "Close"
+    },
+    "table": {
+      "headers": {
+        "documentType": "Document Type",
+        "documentNumber": "Document Number",
+        "businessName": "Business Name",
+        "tradeName": "Trade Name",
+        "address": "Address",
+        "transitoryService": "Temporary Service",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "noData": "No companies added",
+      "noDataDescription": "Add companies manually or upload an Excel file",
+      "placeholders": {
+        "documentType": "Document Type",
+        "documentNumber": "Enter document number",
+        "businessName": "Business Name",
+        "tradeName": "Trade Name",
+        "address": "Address"
+      },
+      "status": {
+        "pending": "Pending",
+        "processing": "Processing",
+        "completed": "Completed",
+        "error": "Error"
+      }
+    },
+    "validation": {
+      "fieldRequired": "Required field",
+      "invalidDocumentFormat": "Invalid document format",
+      "validationError": "Validation error",
+      "validationErrorDescription": "Cannot process: There are invalid document numbers. Please fix the errors before continuing.",
+      "noCompaniesWarning": "Warning",
+      "noCompaniesWarningDescription": "No companies to process. Add at least one company."
+    },
+    "excel": {
+      "templateName": "Company Template",
+      "filename": "company_template",
+      "headers": {
+        "documentType": "Document Type",
+        "documentNumber": "Document Number",
+        "businessName": "Business Name",
+        "tradeName": "Trade Name",
+        "address": "Address",
+        "transitoryService": "Temporary Service"
+      },
+      "validation": {
+        "transitoryService": {
+          "promptTitle": "Temporary Service",
+          "prompt": "Select \"Yes\" or \"No\" for temporary service",
+          "errorTitle": "Invalid value",
+          "error": "Please select \"Yes\" or \"No\""
+        },
+        "documentType": {
+          "promptTitle": "Document Type",
+          "prompt": "Select the document type",
+          "errorTitle": "Invalid value",
+          "error": "Please select a valid document type"
+        }
+      },
+      "example": {
+        "documentType": "RUT",
+        "documentNumber": "12345678901",
+        "businessName": "Example Company",
+        "tradeName": "Example Corp",
+        "address": "Example Ave 123",
+        "transitoryService": "No"
+      }
+    },
+    "toast": {
+      "processCompletedSuccess": {
+        "title": "Success",
+        "description": "Bulk upload process completed successfully"
+      },
+      "processCompletedWithErrors": {
+        "title": "Process completed with errors",
+        "description": "Review the table for more details."
+      },
+      "error": {
+        "title": "Error",
+        "description": "Error creating company"
+      }
+    }
+  },
+  "detail": {
+    "backAriaLabel": "Back to companies list",
+    "notConfigured": "Not configured",
+    "important": "Important:",
+    "documentTypePlaceholder": "Document Type",
+    "invalidDocumentFormat": "Invalid document format",
+    "invalidDocument": "Invalid document",
+    "validDocument": "Valid document",
+    "enterDocumentNumber": "Enter document number",
+    "format": "Format:",
+    "documentExamples": {
+      "RUT": "Ex: 12.345.678-9",
+      "DNI": "Ex: 12345678",
+      "CPF": "Ex: 123.456.789-10",
+      "CC": "Ex: 1.234.567.890",
+      "CI": "Ex: 1.234.567",
+      "DPI": "Ex: 1234 56789 0123",
+      "DUI": "Ex: 12345678-9",
+      "CIP": "Ex: 1-234-5678",
+      "CEDULA": "Ex: 123-456789-0",
+      "CURP": "Ex: ABCD123456EFGHIJ12"
+    },
+    "documentFormats": {
+      "RUT": "Format: 12.345.678-9",
+      "DNI": "Format: 12345678",
+      "CPF": "Format: 123.456.789-10",
+      "CC": "Format: 1.234.567.890",
+      "CI": "Format: 1.234.567",
+      "DPI": "Format: 1234 56789 0123",
+      "DUI": "Format: 12345678-9",
+      "CIP": "Format: 1-234-5678",
+      "CEDULA": "Format: 123-456789-0",
+      "CURP": "Format: ABCD123456EFGHIJ12"
+    },
+    "notifications": {
+      "templates": {
+        "ALERT_2_CONSECUTIVE_ABSENCES": {
+          "name": "Alert for 2 consecutive absences",
+          "description": "Notifies when an employee has 2 consecutive absences"
+        },
+        "ALERT_3_CONSECUTIVE_DAYS_IN_MONTH": {
+          "name": "Alert for 3 consecutive days in the month",
+          "description": "Notifies when an employee has 3 consecutive days in the month"
+        },
+        "ALERT_2_MONDAYS_IN_MONTH": {
+          "name": "Alert for 2 Mondays in the month",
+          "description": "Notifies when an employee has 2 Mondays in the month"
+        }
+      },
+      "daysOfWeek": {
+        "Lu": {
+          "label": "Mo",
+          "fullName": "Monday"
+        },
+        "Ma": {
+          "label": "Tu",
+          "fullName": "Tuesday"
+        },
+        "Mi": {
+          "label": "We",
+          "fullName": "Wednesday"
+        },
+        "Ju": {
+          "label": "Th",
+          "fullName": "Thursday"
+        },
+        "Vi": {
+          "label": "Fr",
+          "fullName": "Friday"
+        },
+        "Sa": {
+          "label": "Sa",
+          "fullName": "Saturday"
+        },
+        "Do": {
+          "label": "Su",
+          "fullName": "Sunday"
+        }
+      },
+      "table": {
+        "daysOfWeek": "Days of the Week",
+        "executionTime": "Execution Time"
+      },
+      "selectTime": "Select time",
+      "notConfigured": "Not configured",
+      "emailPlaceholder": "email1@example.com; email2@example.com",
+      "delete": {
+        "button": "Delete",
+        "buttonLoading": "Deleting..."
+      }
+    }
+  },
+  "details": "Company Details",
+  "basicInformation": "Basic Company Information",
+  "businessName": "Business Name",
+  "businessNameDescription": "Legal name of the company registered with authorities",
+  "businessNameExample": "Example: XYZ Company Inc.",
+  "businessNameRequired": "Please enter the business name",
+  "tradeName": "Trade Name",
+  "tradeNameDescription": "Name by which the company is commercially known",
+  "tradeNameExample": "Example: XYZ Solutions",
+  "tradeNameRequired": "Please enter the trade name",
+  "address": "Address",
+  "addressDescription": "Main physical location of the company",
+  "addressExample": "Example: Main St. 123, City",
+  "addressRequired": "Please enter the address",
+  "systemConfiguration": "System Configuration",
+  "documentType": "Tax Id",
+  "documentNumber": "Document Number",
+  "documentNumberDescription": "Fiscal identification number of the company",
+  "documentNumberExample": "Example: 12345678-9",
+  "documentNumberRequired": "Please enter the document number",
+  "integrationCode": "Integration Code",
+  "integrationCodeDescription": "Code for integration with other systems",
+  "integrationCodeExample": "Example: EMP001",
+  "isActive": "Active Company",
+  "isActiveDescription": "Activate or deactivate the company in the system",
+  "transitoryService": "Transitory Service Company (TSC)",
+  "transitoryServiceDescription": "Mark if the company provides transitory services",
+  "attendanceParameters": "Attendance Parameters",
+  "toleranceConfiguration": "Tolerance Configuration",
+  "lateArrivalTolerance": "Late Arrival Tolerance (min)",
+  "lateArrivalToleranceDescription": "Minutes allowed for late arrival before marking tardiness",
+  "lateArrivalToleranceExample": "Example: 10 minutes",
+  "lateArrivalToleranceImportant": "Important: If the entry time is 09:00 and the tolerance is 10 minutes, a mark at 09:08 will be considered on time, but a mark at 09:11 will be considered tardiness.",
+  "lunchBreakTolerance": "Lunch Break Tolerance (min)",
+  "lunchBreakToleranceDescription": "Additional minutes allowed for lunch time",
+  "lunchBreakToleranceExample": "Example: 15 minutes",
+  "lunchBreakToleranceImportant": "Important: If lunch time is from 13:00 to 14:00 and the tolerance is 15 minutes, a return at 14:13 will be considered on time, but at 14:16 it will be tardiness.",
+  "scheduleConfiguration": "Schedule Configuration",
+  "minutesBeforeSchedule": "Minutes Before Schedule",
+  "minutesBeforeScheduleDescription": "Time allowed to mark before shift start",
+  "minutesBeforeScheduleExample": "Example: 30 minutes",
+  "minutesBeforeScheduleNote": "Note: If the schedule is 09:00 and 30 minutes before are allowed, a mark from 08:30 will be valid, but a mark at 08:29 will not be recorded.",
+  "minutesAfterSchedule": "Minutes After Schedule",
+  "minutesAfterScheduleDescription": "Maximum time allowed to mark after schedule",
+  "minutesAfterScheduleExample": "Example: 60 minutes",
+  "minutesAfterScheduleNote": "Note: If the exit time is 18:00 and 60 minutes after are allowed, a mark until 19:00 will be valid, but after 19:00 it will not be recorded.",
+  "fallbackScheduleWindowHours": "Hours window to associate marks",
+  "fallbackScheduleWindowHoursDescription": "Number of hours extended before shift start and after shift end. Used to determine which assistance day each mark belongs to according to each day's schedule, so the system can align marks correctly.",
+  "fallbackScheduleWindowHoursExample": "Example: 7 hours",
+  "fallbackScheduleWindowHoursNote": "With this value the system determines which assistance day the mark is associated with (e.g. night shift ending at 06:00 and mark at 08:00; or mark on a day off relative to the previous day's shift). Helps define the ranges to align marks.",
+  "companyTimezone": "Company timezone",
+  "companyTimezoneDescription": "Sets the company's local calendar for validating schedule assignment and deletion (what counts as “today”). Must be a valid IANA identifier.",
+  "companyTimezoneExample": "Example: America/Santiago for Chile.",
+  "companyTimezonePlaceholder": "Select timezone",
+  "companyTimezoneRequired": "Please select a timezone",
+  "automaticConfigurations": "Automatic Configurations",
+  "automaticCheckInMinutes": "Automatic Check-in Minutes",
+  "automaticCheckInMinutesDescription": "Time for the system to automatically mark entry",
+  "automaticCheckInMinutesExample": "Example: 5 minutes",
+  "automaticCheckInMinutesWarning": "If configured to 30 minutes, marks are automatically recorded if they are within ±30 minutes of each scheduled time (entry, lunch, exit, etc.).",
+  "minutesCloseRecordWithoutShift": "Minutes Close Record Without Shift",
+  "minutesCloseRecordWithoutShiftDescription": "Time to close records of employees without assigned shift",
+  "minutesCloseRecordWithoutShiftExample": "Example: 480 minutes (8 hours)",
+  "minutesCloseRecordWithoutShiftWarning": "Warning: If there's no assigned schedule and the parameter is 480 minutes, when marking at 09:00 hrs, exit can only be marked until 17:00 hrs; after that it won't be allowed.",
+  "systemParameters": "System Parameters",
+  "markingConfiguration": "Marking Configuration",
+  "enableSignatureOnCheckIn": "Enable Signature on Check-in",
+  "enableSignatureOnCheckInDescription": "Requires digital signature when recording attendance",
+  "enablePhotoOnCheckIn": "Enable Photo on Check-in",
+  "enablePhotoOnCheckInDescription": "Requires photo when recording attendance",
+  "enableAdditionalMarks": "Enable Additional Marks",
+  "enableAdditionalMarksDescription": "Allows recording additional marks (entry, exit)",
+  "showMobileConsultMenu": "Show Mobile Consult Menu",
+  "showMobileConsultMenuDescription": "Enables consultations in the mobile application",
+  "supervisorNotifications": "Supervisor Notifications",
+  "enableLateArrivalEmailToManager": "Late Arrival Email to Manager",
+  "enableLateArrivalEmailToManagerDescription": "Notifies supervisor about late arrivals",
+  "enableLateBreakStartEmailToManager": "Late Break Start Email to Manager",
+  "enableLateBreakStartEmailToManagerDescription": "Notifies worker about late lunch break start",
+  "enableLateBreakEndEmailToManager": "Late Break End Email to Manager",
+  "enableLateBreakEndEmailToManagerDescription": "Notifies worker about late lunch break return",
+  "enableLateExitEmailToManager": "Late Exit Email to Manager",
+  "enableLateExitEmailToManagerDescription": "Notifies worker about off-schedule exits",
+  "systemNotifications": "System Notifications",
+  "enableWeeklyEmailToEmployee": "Weekly Email to Employee",
+  "enableWeeklyEmailToEmployeeDescription": "Sends weekly attendance summary to employee",
+  "enableWeeklyEmailToAdmin": "Weekly Email to Admin",
+  "enableWeeklyEmailToAdminDescription": "Sends weekly attendance summary to administrator",
+  "enableDailyEmailToAdmin": "Daily Email to Admin",
+  "enableDailyEmailToAdminDescription": "Sends daily attendance summary to administrator",
+  "enableWelcomeEmail": "Welcome Email",
+  "enableWelcomeEmailDescription": "Sends welcome email to new employees",
+  "enableAdminStatusEmailOnCheckIn": "Enable Admin Status Email on Check-in",
+  "enableAdminStatusEmailOnCheckInDescription": "Notifies administrator about marking statuses",
+  "overtimeParameters": "Overtime",
+  "overtimeConfiguration": "Overtime Configuration",
+  "antecipatedOvertime": "Anticipated Overtime",
+  "antecipatedOvertimeDescription": "Allows recording overtime before it is automatically generated",
+  "breakOvertime": "Break Overtime",
+  "breakOvertimeDescription": "Allows recording overtime during break or lunch periods",
+  "overtimeSettings": {
+    "modal": {
+      "editTitle": "Edit Configuration",
+      "addTitle": "Add Configuration",
+      "dayOfWeek": "Day of the week",
+      "dayOfWeekRequired": "Select a day of the week",
+      "dayOfWeekPlaceholder": "Select a day",
+      "configurationType": "Configuration type",
+      "configurationTypeRequired": "Select the configuration type",
+      "configurationTypePlaceholder": "Select the type",
+      "byPeriod": "By period",
+      "byDays": "By day",
+      "startTime": "Start time",
+      "startTimeRequired": "Enter the start time",
+      "startTimeValidation": "Start time must be less than end time",
+      "endTime": "End time",
+      "endTimeRequired": "Enter the end time",
+      "endTimeValidation": "End time must be greater than start time",
+      "percentage": "Percentage",
+      "percentageRequired": "Enter the percentage",
+      "percentageMin": "Percentage must be greater than or equal to 0",
+      "percentageMax": "Percentage must be less than or equal to 300",
+      "cancel": "Cancel",
+      "updating": "Updating...",
+      "creating": "Creating...",
+      "update": "Update",
+      "create": "Create"
+    },
+    "toast": {
+      "updateSuccess": "Configuration updated",
+      "updateSuccessDescription": "The overtime configuration has been updated successfully.",
+      "createSuccess": "Configuration created",
+      "createSuccessDescription": "The overtime configuration has been created successfully.",
+      "error": "Error",
+      "updateError": "Error updating configuration",
+      "createError": "Error creating configuration"
+    },
+    "page": {
+      "configurationType": "Configuration type",
+      "configurationTypeLabel": "Overtime configuration type",
+      "configurationTypePlaceholder": "Select the type",
+      "byPeriod": "By period",
+      "byDays": "By day",
+      "configurations": "Configurations",
+      "active": "Active",
+      "inactive": "Inactive",
+      "addConfiguration": "Add configuration",
+      "loading": "Loading configurations...",
+      "noActiveConfigurations": "No active configurations found",
+      "noInactiveConfigurations": "No inactive configurations found",
+      "table": {
+        "day": "Day",
+        "startTime": "Start time",
+        "endTime": "End time",
+        "from": "From",
+        "until": "Until",
+        "percentage": "Percentage",
+        "actions": "Actions"
+      },
+      "edit": "Edit",
+      "delete": "Delete",
+      "deleteModal": {
+        "title": "Delete configuration",
+        "deleteMessage": "Are you sure you want to delete this configuration? This action cannot be undone.",
+        "finishMessage": "Are you sure you want to finish this configuration? The end date will be set to yesterday.",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "finish": "Finish",
+        "deleting": "Deleting...",
+        "finishing": "Finishing..."
+      },
+      "toast": {
+        "deleteSuccess": "Configuration deleted",
+        "deleteSuccessDescription": "The configuration has been deleted successfully.",
+        "finishSuccess": "Configuration finished",
+        "finishSuccessDescription": "The configuration has been finished successfully. The end date was set to yesterday.",
+        "error": "Error",
+        "deleteError": "Error deleting configuration",
+        "finishError": "Error finishing configuration"
+      }
+    },
+    "daysOfWeek": {
+      "MONDAY": "Monday",
+      "TUESDAY": "Tuesday",
+      "WEDNESDAY": "Wednesday",
+      "THURSDAY": "Thursday",
+      "FRIDAY": "Friday",
+      "SATURDAY": "Saturday",
+      "SUNDAY": "Sunday",
+      "HOLIDAYS": "Holidays"
+    }
+  },
+  "notifications": "Notifications",
+  "attendanceRulesTab": "Rules",
+  "notificationsConfiguration": "Notifications Configuration",
+  "notificationName": "Name",
+  "notificationDescription": "Description",
+  "notificationType": "Type",
+  "notificationDestination": "Destination",
+  "notificationEnabled": "Enabled",
+  "notificationToManager": "To Manager",
+  "notificationToMails": "To Emails",
+  "notificationToRole": "To Role",
+  "notificationToManagerDescription": "Will be sent to direct managers",
+  "selectRole": "Select a role",
+  "noEmailsConfigured": "No emails configured",
+  "noRoleSelected": "No role selected",
+  "edit": "Edit",
+  "actions": "Actions",
+  "loadingNotifications": "Loading notifications...",
+  "noNotificationsFound": "No notifications found",
+  "notificationUpdateSuccess": "Notification updated successfully",
+  "notificationUpdateSuccessDescription": "The notification has been updated correctly",
+  "notificationUpdateError": "Error updating notification",
+  "notificationUpdateErrorDescription": "An error occurred while updating the notification",
+  "notificationCreateSuccess": "Notification created successfully",
+  "notificationCreateSuccessDescription": "The notification has been created correctly",
+  "notificationCreateError": "Error creating notification",
+  "notificationCreateErrorDescription": "An error occurred while creating the notification",
+  "notificationDeleteSuccess": "Notification deleted successfully",
+  "notificationDeleteSuccessDescription": "The notification has been deleted correctly",
+  "notificationDeleteError": "Error deleting notification",
+  "notificationDeleteErrorDescription": "An error occurred while deleting the notification",
+  "notificationDeleteConfirm": "Are you sure you want to delete this notification?",
+  "selectNotificationTemplate": "Select Template",
+  "selectNotificationToAdd": "Select a notification to add",
+  "add": "Add",
+  "update": "UPDATE",
+  "updating": "Updating...",
+  "updateSuccess": "Company updated successfully",
+  "updateSuccessDescription": "The company has been updated correctly",
+  "updateError": "Error updating company",
+  "updateErrorDescription": "An error occurred while updating the company",
+  "dashboard": "Dashboard",
+  "maintainers": "Maintainers",
+  "companies": "Companies",
+  "attendanceRules": {
+    "description": "Configure combined attendance rules (check-in/check-out with Global or Geofence mode) for this company.",
+    "loading": "Loading rules...",
+    "errorLoading": "Error loading rules.",
+    "retry": "Retry",
+    "newRule": "New rule",
+    "empty": "No rules configured.",
+    "deleteError": "Error deleting rule.",
+    "explanationTitle": "How do these rules work?",
+    "explanation": {
+      "geofenceEntryTitle": "Check-in with Authorized Georeference Mark",
+      "geofenceEntry": "If you configure Check-in in Authorized Georeference Mark mode, the rule requires that the check-in mark always be made from an authorized marking point: those configured in branches as geolocation of type check-in. If the employee tries to mark from anywhere else, the system will not allow it, because at company level the configuration requires marking within an authorized zone.",
+      "globalExitTitle": "Global for check-out",
+      "globalExit": "If you configure Check-out in Global mode, the employee will use their own configurations to mark check-out; they may mark from wherever their configuration allows."
+    },
+    "table": {
+      "markType": "Mark type",
+      "mode": "Mode",
+      "level": "Level",
+      "actions": "Actions",
+      "delete": "Delete"
+    },
+    "modal": {
+      "title": "New attendance rule",
+      "description": "Define the mark type and mode for this rule.",
+      "markType": "Mark type",
+      "markTypePlaceholder": "Select type",
+      "markTypeRequired": "Mark type is required.",
+      "mode": "Mode",
+      "modePlaceholder": "Select mode",
+      "modeRequired": "Mode is required.",
+      "levelFixed": "In this version the level is always Company.",
+      "cancel": "Cancel",
+      "create": "Create",
+      "creating": "Creating..."
+    },
+    "deleteModal": {
+      "title": "Delete rule",
+      "description": "You are about to delete the attendance rule shown below.",
+      "subtitle": "This action cannot be undone.",
+      "summaryLabel": "Rule",
+      "cancel": "Cancel",
+      "confirm": "Delete rule",
+      "deleting": "Deleting..."
+    },
+    "toast": {
+      "createSuccess": "Rule created",
+      "createSuccessDescription": "The attendance rule was created successfully.",
+      "createError": "Error creating rule",
+      "createErrorDescription": "Could not create the rule. Check that a rule for the same mark type does not already exist.",
+      "deleteSuccess": "Rule deleted",
+      "deleteSuccessDescription": "The attendance rule was removed successfully."
+    }
+  }
+}

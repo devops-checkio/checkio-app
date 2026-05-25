@@ -1,0 +1,265 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+# Health Accreditation System - Frontend Cursor Rules
+
+## Project Structure
+
+### Module Architecture Pattern
+
+Each module should follow this structure:
+
+```
+module/
+├── _components/           # React components
+│   ├── *.tsx             # Component files
+│   └── index.ts          # Barrel exports
+├── types/                # TypeScript types and DTOs
+│   ├── dto.ts           # Data Transfer Objects
+│   └── index.ts         # Type exports
+├── page.tsx              # Main page component
+└── layout.tsx            # Layout component (if needed)
+```
+
+## Component Architecture
+
+### 1. Page Components
+
+- Use `"use client"` directive for client-side components
+- Implement proper loading states with react-query
+- Handle error states gracefully
+- Use proper TypeScript types for all props and state
+
+### 2. Form Components
+
+- Use `react-hook-form` with `zod` validation
+- Implement proper form validation with user-friendly error messages
+- Use controlled components with proper state management
+- Include loading states during form submission
+
+### 3. Table Components
+
+- **ALWAYS** use CHEKIOTable components (see .cursorrules for full standards)
+- Use CHEKIOTable, CHEKIOTableHeader, CHEKIOTableBody, CHEKIOTableRow, CHEKIOTableHead, CHEKIOTableCell
+- Implement manual pagination with CHEKIOButton and CHEKIOSelect (10, 20, 50, 100, 200 records)
+- Use proper TypeScript types for table data
+- **Modern pattern**: Neutral header `bg-gray-50`, icons in column headers (Lucide), ghost action buttons
+
+## API Integration
+
+### 1. Service Layer
+
+- Create service files in `src/service/` directory
+- Use `@tanstack/react-query` for data fetching and mutations
+- Follow the pattern from `health.service.tsx`
+- Include proper error handling and loading states
+
+### 2. API Hooks Pattern
+
+```typescript
+// Query hooks
+export const useGetEntity = (params?: QueryParams) => {
+  return useQuery({
+    queryKey: ["entity", params],
+    queryFn: async () => {
+      const { data } = await axios.get(`/api/entity`, { params });
+      return data;
+    },
+  });
+};
+
+// Mutation hooks
+export const useCreateEntity = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async (data: CreateEntityDto) => {
+      const { data: responseData } = await axios.post(`/api/entity`, data);
+      return responseData;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["entity"] });
+    },
+  });
+};
+```
+
+### 3. DTOs and Types
+
+- Create DTOs that match the backend API structure
+- Use proper TypeScript interfaces for all data structures
+- Include both request and response DTOs
+- Use enums for fixed value sets
+
+## State Management
+
+### 1. React Query
+
+- Use React Query for server state management
+- Implement proper cache invalidation
+- Use optimistic updates when appropriate
+- Handle loading and error states consistently
+
+### 2. Local State
+
+- Use `useState` for component-local state
+- Use `useReducer` for complex state logic
+- Avoid prop drilling by using context when needed
+
+## UI/UX Guidelines
+
+### 1. Design System
+
+- **ALWAYS** use CHEKIO prefixed components (CHEKIOButton, CHEKIOInput, CHEKIOTable, etc.)
+- Import from `@/components` centralized index
+- Follow the established color palette (header red #eb1d2e, primary blue #2563eb, secondary #dbeafe)
+- Use proper spacing: `gap-4`, `mb-6`, `md:grid-cols-12`
+- Implement responsive design for all components
+- **Modern patterns**: Page headers with icon + breadcrumbs, neutral table headers, ghost action buttons, badges for type/status
+
+### 2. User Feedback
+
+- Show loading states during async operations
+- Display success/error messages appropriately
+- Use toast notifications for user feedback
+- Implement proper form validation feedback
+
+### 3. Accessibility
+
+- Use semantic HTML elements
+- Include proper ARIA labels
+- Ensure keyboard navigation works
+- Test with screen readers
+
+## Code Style
+
+### 1. TypeScript
+
+- Use strict TypeScript configuration
+- Define proper interfaces for all data structures
+- Use type guards when needed
+- Avoid `any` type usage
+
+### 2. Naming Conventions
+
+- Use PascalCase for components
+- Use camelCase for functions and variables
+- Use UPPER_SNAKE_CASE for constants
+- Use descriptive names that explain purpose
+
+### 3. File Organization
+
+- One component per file
+- Group related functionality together
+- Use barrel exports for clean imports
+- Keep files focused and single-purpose
+
+## Error Handling
+
+### 1. API Errors
+
+- Handle network errors gracefully
+- Show user-friendly error messages
+- Implement retry logic when appropriate
+- Log errors for debugging
+
+### 2. Form Validation
+
+- Use zod schemas for validation
+- Show field-level error messages
+- Prevent form submission on validation errors
+- Use proper error styling
+
+## Performance
+
+### 1. React Optimization
+
+- Use `React.memo` for expensive components
+- Implement proper dependency arrays in hooks
+- Avoid unnecessary re-renders
+- Use `useCallback` and `useMemo` appropriately
+
+### 2. Data Fetching
+
+- Implement proper caching strategies
+- Use pagination for large datasets
+- Optimize query keys for efficient cache invalidation
+- Implement background refetching when appropriate
+
+## Testing Considerations
+
+### 1. Unit Testing
+
+- Test component logic independently
+- Mock API calls and external dependencies
+- Test error states and edge cases
+- Use proper testing utilities
+
+### 2. Integration Testing
+
+- Test component interactions
+- Test form submissions and validations
+- Test API integration
+- Test user workflows
+
+## Security Best Practices
+
+### 1. Input Validation
+
+- Validate all user inputs
+- Sanitize data before sending to API
+- Use proper TypeScript types for validation
+- Implement proper error boundaries
+
+### 2. Authentication
+
+- Handle authentication tokens properly
+- Implement proper logout functionality
+- Protect sensitive routes
+- Use secure storage for tokens
+
+## Documentation
+
+### 1. Code Comments
+
+- Document complex business logic
+- Explain non-obvious implementation details
+- Use JSDoc for function documentation
+- Keep comments up to date
+
+### 2. Component Documentation
+
+- Document component props and usage
+- Include examples of component usage
+- Document any special behavior or requirements
+- Keep README files updated
+
+## Modern Design Patterns
+
+See `.cursorrules` section 31 for full details. Summary:
+
+- **Page Header**: Custom header with section icon (40x40, `rounded-xl bg-blue-50`), compact back button (36x36), breadcrumbs
+- **Table**: Neutral header `bg-gray-50`, Lucide icons in column headers, ghost action buttons (Pencil, QrCode, Trash2)
+- **Badges**: Type (Monitor/Tablet for MACHINE/KIOSKO), Status (CheckCircle/XCircle for operativo/no operativo)
+- **Toolbar**: `bg-gray-50/50`, add button on the right
+- **Card**: `rounded-xl border border-gray-200 bg-white shadow-sm`
+- **Empty state**: Icon in `w-20 h-20 rounded-2xl bg-gray-100`, title `text-lg font-semibold`
+
+## Git Workflow
+
+### 1. Commit Messages
+
+- Use conventional commit format
+- Write descriptive commit messages
+- Reference issues when applicable
+- Keep commits focused and atomic
+
+### 2. Branch Strategy
+
+- Use feature branches for new development
+- Keep main branch stable
+- Use pull requests for code review
+- Implement proper CI/CD pipelines

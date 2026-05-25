@@ -1,0 +1,124 @@
+{
+  "title": "Gestion des Absences",
+  "subtitle": "Gérez les absences des employés",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "operations": "Opérations",
+    "absences": "Absences"
+  },
+  "buttons": {
+    "batchAssignment": "Attribution en Masse",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "deleting": "Suppression...",
+    "search": "Rechercher",
+    "clear": "Effacer",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "cancel": "Annuler"
+  },
+  "tabs": {
+    "pending": "En Attente",
+    "approved": "Approuvées",
+    "rejected": "Rejetées"
+  },
+  "filters": {
+    "organization": "Structure organisationnelle",
+    "search": "Rechercher",
+    "searchPlaceholder": "Rechercher par Prénom ou Nom",
+    "documentNumber": "Numéro de Document",
+    "documentNumberPlaceholder": "Rechercher par Numéro de Document",
+    "job": "Poste",
+    "jobPlaceholder": "Sélectionner un Poste",
+    "branch": "Succursale",
+    "branchPlaceholder": "Sélectionner une Succursale",
+    "absenceType": "Type d'absence",
+    "absenceTypePlaceholder": "Tous les types",
+    "period": "Période",
+    "periodType": "Type de période",
+    "periodTypes": {
+      "range": "Par plage de dates",
+      "year": "Par année civile",
+      "lastMonth": "Mois dernier"
+    },
+    "year": "Année",
+    "yearPlaceholder": "Sélectionner l'année",
+    "datePlaceholder": "JJ/MM/AAAA",
+    "yearSummary": "La requête couvrira du 01/01/{year} au 31/12/{year}.",
+    "lastMonthSummary": "Période : {from} – {to}",
+    "lastMonthHint": "Cliquez sur « Rechercher » pour ce mois civil complet.",
+    "dateRange": {
+      "from": "Date de début",
+      "to": "Date de fin"
+    },
+    "validation": {
+      "title": "Vérifiez la période",
+      "requiredRange": "Indiquez la date de début et la date de fin.",
+      "invalidFrom": "Date de début invalide. Utilisez JJ/MM/AAAA.",
+      "invalidTo": "Date de fin invalide. Utilisez JJ/MM/AAAA.",
+      "fromAfterTo": "La date de début ne peut pas être postérieure à la date de fin.",
+      "requiredYear": "Sélectionnez une année valide."
+    }
+  },
+  "table": {
+    "headers": {
+      "employee": "Employé",
+      "lastName": "Nom",
+      "documentNumber": "Document",
+      "job": "Poste",
+      "branch": "Succursale",
+      "absenceType": "Type d'Absence",
+      "startDate": "Date de Début",
+      "endDate": "Date de Fin",
+      "status": "Statut",
+      "createdAt": "Date d'Enregistrement",
+      "actions": "Actions"
+    },
+    "loading": "Chargement des absences...",
+    "noData": "Aucune absence trouvée",
+    "noDataDescription": "Il n'y a pas d'absences enregistrées pour ce filtre."
+  },
+  "status": {
+    "pending": "En Attente",
+    "approved": "Approuvé",
+    "rejected": "Rejeté",
+    "unknown": "Inconnu"
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} résultats",
+    "page": "Page {current} sur {total}",
+    "recordsPerPage": "Enregistrements par page"
+  },
+  "delete": {
+    "title": "Supprimer l'Absence",
+    "message": "Êtes-vous sûr de vouloir supprimer cette absence?",
+    "success": "Absence supprimée avec succès",
+    "error": "Erreur lors de la suppression de l'absence"
+  },
+  "tooltips": {
+    "actionLocked": "Impossible de modifier ou supprimer : cette absence provient d'un jour de congé approuvé ou d'une intégration."
+  },
+  "ariaLabels": {
+    "editAbsence": "Modifier l'absence",
+    "deleteAbsence": "Supprimer l'absence",
+    "editAbsenceLocked": "Modification indisponible : absence liée à un congé ou une intégration",
+    "deleteAbsenceLocked": "Suppression indisponible : absence liée à un congé ou une intégration"
+  },
+  "edit": {
+    "title": "Modifier l'Absence",
+    "employeeInfo": "Informations sur l'employé",
+    "document": "Document",
+    "absenceType": "Type d'Absence",
+    "startDate": "Date de Début",
+    "endDate": "Date de Fin",
+    "startDateRequired": "La date de début est obligatoire",
+    "endDateRequired": "La date de fin est obligatoire",
+    "reason": "Motif",
+    "reasonPlaceholder": "Motif (optionnel)",
+    "withoutPay": "Sans solde",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "saving": "Enregistrement...",
+    "successTitle": "Absence mise à jour avec succès"
+  }
+}

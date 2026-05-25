@@ -1,0 +1,69 @@
+{
+  "tour": {
+    "startButton": "Voir le guide",
+    "buttons": {
+      "next": "Suivant",
+      "previous": "Précédent",
+      "done": "Terminer"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Opérations des quarts",
+        "description": "Gérez l'affectation des quarts aux employés. Les onglets affichent les employés sans quart, avec quart actif, futur ou passé."
+      },
+      "tabs": {
+        "title": "Onglets",
+        "description": "Naviguez entre les vues : employés sans quart, avec quart actif, futur ou passé. Chaque onglet affiche le décompte correspondant."
+      },
+      "infoBtn": {
+        "title": "Informations du système",
+        "description": "Consultez les informations sur le fonctionnement du module d'affectation des quarts."
+      },
+      "filters": {
+        "title": "Filtres",
+        "description": "Recherchez des employés par nom, numéro de document, poste ou succursale. Utilisez Rechercher pour appliquer les filtres."
+      },
+      "toolbar": {
+        "title": "Actions principales",
+        "description": "Effacer réinitialise les filtres. Rechercher applique la recherche. Sélectionner le quart apparaît lorsque des employés sont sélectionnés pour leur assigner un quart."
+      },
+      "table": {
+        "title": "Tableau des employés",
+        "description": "Sélectionnez les employés avec les cases à cocher. Utilisez le bouton 'Sélectionner le quart' pour continuer l'affectation."
+      },
+      "pagination": {
+        "title": "Pagination",
+        "description": "Naviguez entre les pages et ajustez le nombre d'enregistrements affichés."
+      }
+    }
+  },
+  "assignmentTour": {
+    "startButton": "Voir le guide",
+    "steps": {
+      "welcome": {
+        "title": "Affectation des quarts",
+        "description": "Configurez la date de début et les horaires par employé. Sélectionnez un ou plusieurs employés dans le panneau de gauche, choisissez la date et assignez les horaires à chaque jour."
+      },
+      "sidebar": {
+        "title": "Employés sélectionnés",
+        "description": "Liste des employés à affecter. Utilisez la recherche pour filtrer. Cliquez sur un employé pour configurer ses horaires."
+      },
+      "headerConfig": {
+        "title": "Configuration générale",
+        "description": "Indiquez la date de début du quart et vérifiez le quart sélectionné. Utilisez 'Comparer' pour voir la répartition des horaires entre employés."
+      },
+      "employeeConfig": {
+        "title": "Configuration par employé",
+        "description": "Pour chaque employé : sélectionnez un quart, la règle des jours fériés et assignez l'horaire à chaque jour du cycle."
+      },
+      "bottomBar": {
+        "title": "Résumé et enregistrement",
+        "description": "Consultez le temps écoulé et la progression. Vous devez terminer la configuration de tous les employés avant d'enregistrer."
+      },
+      "submitBtn": {
+        "title": "Enregistrer l'affectation",
+        "description": "Enregistrez l'affectation lorsque tous les employés sont configurés et marqués comme complétés."
+      }
+    }
+  }
+}

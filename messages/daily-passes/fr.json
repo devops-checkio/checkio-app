@@ -1,0 +1,178 @@
+{
+  "title": "Passe Quotidiens d'Accès",
+  "subtitle": "Gérez les passe temporaires pour les employés sans document d'identité",
+  "activePasses": "Passe Actifs",
+  "expiredPasses": "Passe Expirés",
+  "createPass": "Créer un Passe",
+  "employee": "Employé",
+  "startDate": "Date de Début",
+  "endDate": "Date de Fin",
+  "status": "Statut",
+  "reason": "Motif",
+  "actions": "Actions",
+  "active": "Actif",
+  "expired": "Expiré",
+  "deactivated": "Désactivé",
+  "view": "Voir",
+  "deactivate": "Désactiver",
+  "renew": "Renouveler",
+  "qrCode": "Code QR",
+  "qrExpiresAt": "QR Expire À",
+  "createdAt": "Créé À",
+  "createdBy": "Créé Par",
+  "updatedAt": "Mis À Jour À",
+  "noReason": "Aucun motif spécifié",
+  "noEmployee": "Aucun employé",
+  "dashboard": "Tableau de bord",
+  "operations": "Opérations",
+  "dailyPasses": "Passe Quotidiens",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "operations": "Opérations",
+    "dailyPasses": "Passe Quotidiens"
+  },
+  "modal": {
+    "title": "Créer un Passe Quotidien",
+    "message": "Remplissez les données du passe à attribuer aux employés sélectionnés:",
+    "selectEmployee": "Sélectionner un Employé",
+    "searchEmployee": "Rechercher un employé...",
+    "employeeInfo": "Informations de l'Employé",
+    "passConfiguration": "Configuration du Passe",
+    "dateRange": "Plage de Dates",
+    "reasonLabel": "Motif",
+    "reasonPlaceholder": "Spécifiez le motif du passe temporaire",
+    "create": "Créer des Passe",
+    "cancel": "Annuler",
+    "creating": "Création...",
+    "success": "Passe créé avec succès",
+    "error": "Erreur lors de la création du passe",
+    "filters": {
+      "search": "Rechercher",
+      "searchPlaceholder": "Rechercher par Prénom ou Nom",
+      "documentNumber": "Numéro de Document",
+      "documentNumberPlaceholder": "Rechercher par Numéro de Document",
+      "job": "Poste",
+      "jobPlaceholder": "Sélectionner un Poste",
+      "branch": "Succursale",
+      "branchPlaceholder": "Sélectionner une Succursale",
+      "searchButton": "Rechercher",
+      "clearButton": "Effacer"
+    },
+    "table": {
+      "loading": "Chargement des employés...",
+      "noData": "Aucun employé trouvé",
+      "headers": {
+        "code": "Code",
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "documentNumber": "Numéro de Document",
+        "email": "Email",
+        "startDate": "Date de Début",
+        "endDate": "Date de Fin",
+        "contractType": "Type de Contrat",
+        "contractedHours": "Heures Contractuelles",
+        "employee": "Employé",
+        "status": "Statut"
+      },
+      "status": {
+        "pending": "En Attente",
+        "processing": "Traitement",
+        "completed": "Terminé",
+        "error": "Erreur"
+      },
+      "contractType": {
+        "indefinite": "Indéfini",
+        "fixedTerm": "Durée Déterminée"
+      }
+    },
+    "pagination": {
+      "showing": "Affichage de {current} sur {total} résultats",
+      "page": "Page {current} sur {total}",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "recordsPerPage": "Enregistrements par page"
+    },
+    "buttons": {
+      "cancel": "Annuler",
+      "continue": "Continuer",
+      "back": "Retour"
+    },
+    "form": {
+      "startDate": "Date de Début",
+      "endDate": "Date de Fin",
+      "startDateRequired": "Veuillez sélectionner une date de début",
+      "endDateRequired": "Veuillez sélectionner une date de fin",
+      "reasonRequired": "Veuillez saisir le motif du passe"
+    },
+    "selectedEmployees": {
+      "title": "Employés Sélectionnés",
+      "noProcessing": "Aucun employé en traitement",
+      "noSelected": "Aucun employé sélectionné"
+    },
+    "toast": {
+      "selectEmployeeError": {
+        "title": "Erreur",
+        "description": "Veuillez sélectionner au moins un employé"
+      },
+      "datesError": {
+        "title": "Erreur",
+        "description": "Veuillez entrer des dates de début et de fin valides"
+      },
+      "createSuccess": {
+        "title": "Passe créés",
+        "description": "Les passe quotidiens ont été créés avec succès pour tous les employés"
+      },
+      "createError": {
+        "title": "Processus terminé avec erreurs",
+        "description": "{successCount} passe créés avec succès, {errorCount} avec erreurs"
+      }
+    },
+    "progress": "Progression",
+    "pending": "En Attente",
+    "processing": "Traitement",
+    "completed": "Terminés",
+    "errors": "Erreurs",
+    "systemInfo": {
+      "title": "Informations Système",
+      "description": "Le système générera automatiquement des codes QR quotidiens pour chaque employé selon son horaire attribué. Les codes seront envoyés par e-mail."
+    }
+  },
+  "actionsModal": {
+    "title": "Détails du Passe",
+    "details": "Détails",
+    "actions": "Actions",
+    "employeeInfo": "Informations de l'Employé",
+    "passInfo": "Informations du Passe",
+    "qrInfo": "Informations du Code QR",
+    "additionalDays": "Jours Supplémentaires",
+    "selectDays": "Sélectionner des jours supplémentaires",
+    "renewPass": "Renouveler le Passe",
+    "deactivatePass": "Désactiver le Passe",
+    "confirmDeactivate": "Êtes-vous sûr de vouloir désactiver ce passe?",
+    "confirmRenew": "Êtes-vous sûr de vouloir renouveler ce passe?",
+    "success": "Opération terminée avec succès",
+    "error": "Erreur lors de l'exécution de l'opération"
+  },
+  "statusLabels": {
+    "ACTIVE": "Actif",
+    "EXPIRED": "Expiré",
+    "DEACTIVATED": "Désactivé"
+  },
+  "statusColors": {
+    "ACTIVE": "green",
+    "EXPIRED": "red",
+    "DEACTIVATED": "gray"
+  },
+  "table": {
+    "loading": "Chargement des passe quotidiens...",
+    "noData": "Aucun passe quotidien trouvé"
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} résultats",
+    "page": "Page {current} sur {total}"
+  },
+  "buttons": {
+    "previous": "Précédent",
+    "next": "Suivant"
+  }
+}

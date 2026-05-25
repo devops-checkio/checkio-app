@@ -1,0 +1,1067 @@
+# CHEKIO Component Standards - Cursor Rules
+
+## Component Usage Standards
+
+### 1. ALWAYS use CHEKIO prefixed components for Checkio applications:
+
+- Use `CHEKIOButton` instead of regular `Button`
+- Use `CHEKIOInput` instead of regular `Input`
+- Use `CHEKIOSelect` components instead of regular `Select` components
+- Use `CHEKIOTable` components instead of regular table elements
+- Use `CHEKIOProgressBar` for progress indicators
+- Use `CHEKIOTabs` and `CHEKIOTab` for tab navigation
+- Use `CHEKIOActionButton` for action buttons (edit, delete, view)
+- Use `CHEKIOModal` for modal dialogs
+
+### 2. Import from the centralized index:
+
+```typescript
+// ✅ CORRECT - Import from centralized index
+import {
+  CHEKIOActionButton,
+  CHEKIOButton,
+  CHEKIOInput,
+  CHEKIOModal,
+  CHEKIOProgressBar,
+  CHEKIOSelect,
+  CHEKIOSelectContent,
+  CHEKIOSelectItem,
+  CHEKIOSelectTrigger,
+  CHEKIOSelectValue,
+  CHEKIOTab,
+  CHEKIOTabs,
+  CHEKIOTable,
+  CHEKIOTableBody,
+  CHEKIOTableCell,
+  CHEKIOTableHead,
+  CHEKIOTableHeader,
+  CHEKIOTableRow,
+} from "@/components";
+
+// ❌ INCORRECT - Import individual components
+import { CHEKIOButton } from "@/components/CHEKIOButton";
+```
+
+### 3. Button Variants:
+
+- Use `variant="search"` for search buttons (blue background)
+- Use `variant="refresh"` for refresh buttons (light blue background)
+- Use `variant="primary"` for primary actions
+- Use `variant="secondaryBlue"` for secondary actions
+- Use `variant="approve"` for download Excel buttons (green background) — **ALWAYS** use green for all "Descargar Excel" / export actions
+
+### 4. Action Button Variants:
+
+- Use `variant="edit"` for edit buttons (orange background)
+- Use `variant="delete"` for delete buttons (red background)
+- Use `variant="view"` for view buttons (blue background)
+
+### 5. Table Structure - **CRITICAL: ALWAYS USE CHEKIOTable**:
+
+- **NEVER** use `DataTable` from `@/components/ui/table-generic` or any other table component
+- **ALWAYS** use `CHEKIOTable` components for all data tables
+- Use `CHEKIOTable` as the container
+- Use `CHEKIOTableHeader` for the header section with `<tr>` wrapper
+- Use `CHEKIOTableBody` for the body section
+- Use `CHEKIOTableRow` with `index` prop for alternating row colors (required for proper styling)
+- Use `CHEKIOTableHead` for header cells
+- Use `CHEKIOTableCell` for data cells
+- Implement manual pagination with `CHEKIOButton` and state management
+- Use `CHEKIOLoading` for loading states instead of table loading props
+- Show empty states with custom messages when data is empty
+
+**Example Table Implementation:**
+
+```typescript
+{
+  isLoading ? (
+    <div className="flex justify-center py-8">
+      <CHEKIOLoading size="lg" variant="modern" text="Cargando datos..." />
+    </div>
+  ) : data.length === 0 ? (
+    <div className="text-center py-10">
+      <p className="text-gray-600 font-medium">No se encontraron resultados</p>
+    </div>
+  ) : (
+    <>
+      <CHEKIOTable>
+        <CHEKIOTableHeader>
+          <tr>
+            <CHEKIOTableHead>Columna 1</CHEKIOTableHead>
+            <CHEKIOTableHead>Columna 2</CHEKIOTableHead>
+            <CHEKIOTableHead>Acciones</CHEKIOTableHead>
+          </tr>
+        </CHEKIOTableHeader>
+        <CHEKIOTableBody>
+          {data.map((item, index) => (
+            <CHEKIOTableRow key={item.id} index={index}>
+              <CHEKIOTableCell>{item.field1}</CHEKIOTableCell>
+              <CHEKIOTableCell>{item.field2}</CHEKIOTableCell>
+              <CHEKIOTableCell>
+                <CHEKIOActionButton variant="edit">
+                  <Edit className="h-4 w-4" />
+                </CHEKIOActionButton>
+              </CHEKIOTableCell>
+            </CHEKIOTableRow>
+          ))}
+        </CHEKIOTableBody>
+      </CHEKIOTable>
+
+      {/* Manual Pagination with Records Per Page Selector */}
+      <div className="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div className="flex items-center gap-4">
+          <div className="text-sm text-gray-600">
+            Mostrando {data.length} de {totalCount} resultados
+          </div>
+          {/* Selector de registros por página */}
+          <div className="flex items-center gap-2">
+            <label className="text-sm font-medium text-gray-700 whitespace-nowrap">
+              Registros por página:
+            </label>
+            <CHEKIOSelect
+              value={pageSize.toString()}
+              onValueChange={(value) => {
+                handlePageSizeChange(parseInt(value, 10));
+              }}
+            >
+              <CHEKIOSelectTrigger className="w-24">
+                <CHEKIOSelectValue />
+              </CHEKIOSelectTrigger>
+              <CHEKIOSelectContent>
+                <CHEKIOSelectItem value="10">10</CHEKIOSelectItem>
+                <CHEKIOSelectItem value="20">20</CHEKIOSelectItem>
+                <CHEKIOSelectItem value="50">50</CHEKIOSelectItem>
+                <CHEKIOSelectItem value="100">100</CHEKIOSelectItem>
+                <CHEKIOSelectItem value="200">200</CHEKIOSelectItem>
+              </CHEKIOSelectContent>
+            </CHEKIOSelect>
+          </div>
+        </div>
+        <div className="flex items-center gap-2">
+          <CHEKIOButton
+            variant="secondaryBlue"
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+          >
+            <ChevronLeft className="h-4 w-4" />
+            Anterior
+          </CHEKIOButton>
+          <div className="px-4 py-2 border bg-white text-sm text-gray-700">
+            Página {currentPage} de {totalPages}
+          </div>
+          <CHEKIOButton
+            variant="secondaryBlue"
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage >= totalPages}
+          >
+            Siguiente
+            <ChevronRight className="h-4 w-4" />
+          </CHEKIOButton>
+        </div>
+      </div>
+    </>
+  );
+}
+```
+
+### 6. Progress Bar Usage:
+
+- Use `CHEKIOProgressBar` with `current`, `total`, and `text` props
+- The component automatically handles styling and animations
+
+### 7. Input and Select Styling:
+
+- All CHEKIO components have consistent styling (square corners, proper colors)
+- No need to add custom classes for basic styling
+- Focus states are handled automatically
+
+### 8. Color Standards:
+
+- Header red: `#eb1d2e`
+- Primary blue: `#2563eb`
+- Secondary blue: `#dbeafe`
+- Background gray: `#f9fafb`
+- Border gray: `#d1d5db`
+
+### 9. Layout Standards:
+
+- Use Tailwind CSS grid system with `md:grid-cols-12`
+- Use `md:col-span-*` for responsive column sizing
+- Maintain consistent spacing with `gap-4` and `mb-6`
+
+### 10. Icon Usage:
+
+- Use Lucide React icons
+- Always import icons individually: `import { Search, RefreshCw } from "lucide-react"`
+- Use `h-4 w-4` for standard icon sizing
+
+### 11. Code Organization:
+
+- Keep data structures consistent
+- Use TypeScript interfaces for props
+- Follow React best practices with proper key props and event handlers
+
+### 12. Enum Usage Standards:
+
+- **ALWAYS** use enums instead of string literals for better maintainability
+- **NEVER** use hardcoded strings for status values, types, or configurations
+- **CREATE** enums for all predefined values that could change or be reused
+
+### 13. Pagination Standards:
+
+- **ALWAYS** implement pagination for data tables with more than 10 items
+- **USE** consistent pagination controls across all components
+- **INCLUDE** pagination info showing current page and total items
+- **RESET** to page 1 when applying filters or search
+- **HANDLE** edge cases (empty results, single page, etc.)
+- **INCLUDE** records per page selector in the same line as pagination controls
+- **PLACE** the selector on the left side with "Mostrando X de Y resultados"
+- **RESET** to page 1 when changing page size
+- **PROVIDE** standard options: 10, 20, 50, 100, 200 records per page
+
+**Pagination Implementation Pattern:**
+
+```typescript
+// State management
+const [pagination, setPagination] = useState<PaginationFilterDto>({
+  current: 1,
+  pageSize: 10,
+  totalPages: 1,
+  totalCount: 0,
+  sort: "desc",
+});
+
+// Handler for page size change
+const handlePageSizeChange = useCallback((newPageSize: number) => {
+  setPagination((prev) => ({
+    ...prev,
+    pageSize: newPageSize,
+    current: 1, // Reset to first page when changing page size
+  }));
+}, []);
+
+// Pagination UI
+<div className="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+  <div className="flex items-center gap-4">
+    <div className="text-sm text-gray-600">
+      Mostrando {data.length} de {paginationData.totalCount} resultados
+    </div>
+    {/* Selector de registros por página */}
+    <div className="flex items-center gap-2">
+      <label className="text-sm font-medium text-gray-700 whitespace-nowrap">
+        Registros por página:
+      </label>
+      <CHEKIOSelect
+        value={pagination.pageSize.toString()}
+        onValueChange={(value) => {
+          handlePageSizeChange(parseInt(value, 10));
+        }}
+      >
+        <CHEKIOSelectTrigger className="w-24">
+          <CHEKIOSelectValue />
+        </CHEKIOSelectTrigger>
+        <CHEKIOSelectContent>
+          <CHEKIOSelectItem value="10">10</CHEKIOSelectItem>
+          <CHEKIOSelectItem value="20">20</CHEKIOSelectItem>
+          <CHEKIOSelectItem value="50">50</CHEKIOSelectItem>
+          <CHEKIOSelectItem value="100">100</CHEKIOSelectItem>
+          <CHEKIOSelectItem value="200">200</CHEKIOSelectItem>
+        </CHEKIOSelectContent>
+      </CHEKIOSelect>
+    </div>
+  </div>
+  <div className="flex items-center gap-2">
+    <CHEKIOButton
+      variant="secondaryBlue"
+      onClick={() => handlePageChange(paginationData.current - 1)}
+      disabled={paginationData.current === 1}
+    >
+      <ChevronLeft className="h-4 w-4" />
+      Anterior
+    </CHEKIOButton>
+    <div className="px-4 py-2 border bg-white text-sm text-gray-700">
+      Página {paginationData.current} de {paginationData.totalPages}
+    </div>
+    <CHEKIOButton
+      variant="secondaryBlue"
+      onClick={() => handlePageChange(paginationData.current + 1)}
+      disabled={paginationData.current >= paginationData.totalPages}
+    >
+      Siguiente
+      <ChevronRight className="h-4 w-4" />
+    </CHEKIOButton>
+  </div>
+</div>;
+```
+
+### 14. Search and Filter Standards:
+
+- **IMPLEMENT** real-time search with debouncing for better performance
+- **PROVIDE** clear search placeholders and labels
+- **SHOW** search results count and clear search functionality
+- **RESET** pagination when search criteria changes
+- **SUPPORT** multiple search criteria when applicable
+
+### 15. Modal and Dialog Standards:
+
+- **USE** CHEKIOModal for all modal dialogs
+- **INCLUDE** proper modal titles and descriptions
+- **IMPLEMENT** cancel and confirm actions consistently
+- **VALIDATE** form inputs before allowing submission
+- **HANDLE** loading states during modal operations
+- **CLEAR** modal state when closing
+
+### 16. State Management Standards:
+
+- **USE** useState for component-level state
+- **IMPLEMENT** proper state reset when components unmount
+- **HANDLE** loading, error, and success states consistently
+- **AVOID** unnecessary re-renders with proper dependency arrays
+- **USE** meaningful state variable names
+
+### 17. Error Handling Standards:
+
+- **DISPLAY** user-friendly error messages
+- **PROVIDE** retry mechanisms for failed operations
+- **LOG** errors for debugging purposes
+- **HANDLE** network errors gracefully
+- **SHOW** loading states during async operations
+
+### 17.1. Bulk Upload Retry Standards:
+
+- **ALWAYS** implement retry functionality for bulk upload operations
+- **PRESERVE** successfully processed data when errors occur
+- **ALLOW** editing of failed records after processing
+- **PROVIDE** a "Retry" button that only processes failed records
+- **MAINTAIN** data integrity by not losing correct entries
+
+**Implementation Pattern for Bulk Upload with Retry:**
+
+```typescript
+interface FormData {
+  id?: string;
+  // ... other fields
+  status?: "pending" | "processing" | "success" | "error";
+  error?: string;
+  success?: boolean;
+}
+
+// State management
+const [processing, setProcessing] = useState(false);
+const [isComplete, setIsComplete] = useState(false);
+
+// onSubmit - Initial processing
+const onSubmit = async (data: FormValues) => {
+  // ... validation logic
+  
+  setProcessing(true);
+  const newData = [...data.items];
+  let hasErrors = false;
+
+  for (let i = 0; i < data.items.length; i++) {
+    const item = data.items[i];
+    
+    newData[i] = { ...newData[i], status: "processing" };
+    replace(newData);
+
+    try {
+      await createItem(item);
+      newData[i] = {
+        ...newData[i],
+        success: true,
+        status: "success",
+      };
+    } catch (error: any) {
+      hasErrors = true;
+      newData[i] = {
+        ...newData[i],
+        success: false,
+        status: "error",
+        error: error.response?.data?.message || "Error creating item",
+      };
+    }
+    replace(newData);
+  }
+
+  setProcessing(false);
+  
+  // Only set isComplete to true if all items are successful
+  const allSuccess = newData.every((item) => item.status === "success");
+  setIsComplete(true);
+
+  if (hasErrors) {
+    toast({
+      title: t("toast.processCompletedWithErrors.title"),
+      description: t("toast.processCompletedWithErrors.description"),
+      variant: "destructive",
+    });
+  } else {
+    toast({
+      title: t("toast.processCompletedSuccess.title"),
+      description: t("toast.processCompletedSuccess.description"),
+    });
+    onSuccess();
+  }
+};
+
+// handleRetryFailed - Retry only failed records
+const handleRetryFailed = async () => {
+  const allItems = watch("items");
+  const failedIndices = allItems
+    .map((item, index) => (item.status === "error" ? index : -1))
+    .filter((index) => index !== -1);
+
+  if (failedIndices.length === 0) {
+    toast({
+      title: t("toast.noFailedItems.title"),
+      description: t("toast.noFailedItems.description"),
+    });
+    return;
+  }
+
+  // Validate failed items before retrying
+  const validationErrors: string[] = [];
+  failedIndices.forEach((index) => {
+    const item = allItems[index];
+    const error = validateItem(item);
+    if (error) {
+      validationErrors.push(
+        `${t("toast.validationErrors.rowPrefix")} ${index + 1}: ${error}`
+      );
+    }
+  });
+
+  if (validationErrors.length > 0) {
+    toast({
+      title: t("toast.validationErrors.title"),
+      description: validationErrors.join(", "),
+      variant: "destructive",
+    });
+    return;
+  }
+
+  setProcessing(true);
+  setUploadProgress(0);
+  setIsComplete(false);
+
+  const newData = [...allItems];
+  let processed = 0;
+  let hasErrors = false;
+  const total = failedIndices.length;
+
+  for (const index of failedIndices) {
+    const item = allItems[index];
+
+    // Reset status to processing
+    newData[index] = {
+      ...newData[index],
+      status: "processing",
+      error: undefined,
+    };
+    replace(newData);
+
+    try {
+      await createItem(item);
+      processed++;
+      setUploadProgress((processed / total) * 100);
+      newData[index] = {
+        ...newData[index],
+        success: true,
+        status: "success",
+      };
+    } catch (error: any) {
+      hasErrors = true;
+      newData[index] = {
+        ...newData[index],
+        success: false,
+        status: "error",
+        error: error.response?.data?.message || t("toast.createError"),
+      };
+    }
+    replace(newData);
+  }
+
+  setProcessing(false);
+  const allSuccess = newData.every((item) => item.status === "success");
+  setIsComplete(true);
+
+  if (hasErrors) {
+    toast({
+      title: t("toast.retryCompletedWithErrors.title"),
+      description: t("toast.retryCompletedWithErrors.description"),
+      variant: "destructive",
+    });
+  } else {
+    if (allSuccess) {
+      toast({
+        title: t("toast.processCompletedSuccess.title"),
+        description: t("toast.processCompletedSuccess.description"),
+      });
+      onSuccess();
+    } else {
+      toast({
+        title: t("toast.retryCompletedSuccess.title"),
+        description: t("toast.retryCompletedSuccess.description"),
+      });
+    }
+  }
+};
+
+// Render buttons conditionally
+<div className="flex justify-end gap-4">
+  <CHEKIOButton
+    type="button"
+    variant="secondary"
+    onClick={onClose}
+    disabled={processing}
+  >
+    {isComplete ? t("buttons.close") : t("buttons.cancel")}
+  </CHEKIOButton>
+  
+  {/* Show Retry button when complete and there are errors */}
+  {isComplete &&
+    watch("items").some((item) => item?.status === "error") && (
+      <CHEKIOButton
+        type="button"
+        variant="primary"
+        onClick={handleRetryFailed}
+        disabled={processing}
+      >
+        {processing ? (
+          <>
+            <Loader2 className="h-4 w-4 animate-spin" />
+            {t("buttons.processing")}
+          </>
+        ) : (
+          <>
+            <CheckCircle2 className="h-4 w-4" />
+            {t("buttons.retry")}
+          </>
+        )}
+      </CHEKIOButton>
+    )}
+  
+  {/* Show Process button when not complete */}
+  {!isComplete && (
+    <CHEKIOButton type="submit" variant="primary" disabled={processing}>
+      {processing ? (
+        <>
+          <Loader2 className="h-4 w-4 animate-spin" />
+          {t("buttons.processing")}
+        </>
+      ) : (
+        <>
+          <CheckCircle2 className="h-4 w-4" />
+          {t("buttons.process")}
+        </>
+      )}
+    </CHEKIOButton>
+  )}
+</div>
+
+// Make fields editable based on status
+const isEditable = status === "error" || status === "pending";
+const isDisabled = status === "success" || (processing && status !== "error");
+
+<SystemInput
+  control={control}
+  attribute={`items.${index}.field`}
+  disabled={isDisabled}
+  // ... other props
+/>
+```
+
+**Key Requirements:**
+
+1. **Status Management**: Each item must have a `status` field: `"pending" | "processing" | "success" | "error"`
+2. **Data Preservation**: Never lose successfully processed data when errors occur
+3. **Editable Failed Records**: Fields with `status === "error"` must remain editable after processing
+4. **Disabled Success Records**: Fields with `status === "success"` must be disabled
+5. **Retry Button Visibility**: Show "Retry" button only when `isComplete === true` AND there are items with `status === "error"`
+6. **Validation Before Retry**: Always validate failed items before retrying
+7. **Progress Tracking**: Show progress bar during retry operation
+8. **Toast Notifications**: Provide appropriate feedback for retry operations
+
+**Translation Keys Required:**
+
+```json
+{
+  "buttons": {
+    "retry": "Reintentar"
+  },
+  "toast": {
+    "retryFailed": {
+      "title": "Reintentar carga fallida",
+      "description": "Reintentando solo los registros con errores"
+    },
+    "retryCompletedWithErrors": {
+      "title": "Reintento completado con errores",
+      "description": "Algunos registros aún tienen errores. Revise la lista."
+    },
+    "retryCompletedSuccess": {
+      "title": "Reintento exitoso",
+      "description": "Todos los registros fallidos han sido procesados correctamente"
+    },
+    "noFailedItems": {
+      "title": "No hay registros fallidos",
+      "description": "Todos los registros han sido procesados exitosamente"
+    }
+  }
+}
+```
+
+### 18. Accessibility Standards:
+
+- **INCLUDE** proper ARIA labels for interactive elements
+- **PROVIDE** keyboard navigation support
+- **USE** semantic HTML elements
+- **ENSURE** sufficient color contrast
+- **ADD** alt text for images and icons
+
+### 19. Performance Standards:
+
+- **IMPLEMENT** pagination for large datasets
+- **USE** React.memo for expensive components when appropriate
+- **OPTIMIZE** bundle size by importing only needed components
+- **LAZY LOAD** components when beneficial
+- **MINIMIZE** unnecessary API calls
+
+### 20. Code Formatting Standards:
+
+- **USE** consistent indentation (2 spaces)
+- **FOLLOW** Prettier formatting rules
+- **GROUP** imports logically (React, third-party, local)
+- **USE** meaningful variable and function names
+- **ADD** JSDoc comments for complex functions
+
+### 21. Layout and Spacing Standards:
+
+- **USE** consistent spacing with Tailwind classes (gap-4, mb-6, p-6)
+- **MAINTAIN** responsive design with mobile-first approach
+- **APPLY** consistent padding and margins across components
+- **USE** grid system (md:grid-cols-12) for complex layouts
+- **ENSURE** proper visual hierarchy with typography scales
+
+### 22. Form and Input Standards:
+
+- **USE** CHEKIOInput for all text inputs
+- **IMPLEMENT** proper form validation with clear error messages
+- **PROVIDE** helpful placeholder text and labels
+- **HANDLE** form submission with loading states
+- **RESET** forms after successful submission
+- **VALIDATE** required fields before submission
+
+### 23. Table and Data Display Standards:
+
+- **USE** CHEKIOTable components for all data tables
+- **IMPLEMENT** responsive table design with horizontal scroll
+- **INCLUDE** proper table headers with sorting when applicable
+- **SHOW** empty states with helpful messages
+- **PROVIDE** action buttons with consistent styling
+- **HANDLE** loading states with skeleton or spinner
+
+### 24. Navigation and Routing Standards:
+
+- **USE** consistent breadcrumb navigation
+- **IMPLEMENT** proper tab navigation with active states
+- **PROVIDE** clear navigation hierarchy
+- **HANDLE** deep linking and URL state management
+- **INCLUDE** back navigation where appropriate
+
+### 25. Loading and Feedback Standards:
+
+- **SHOW** loading states for async operations
+- **USE** CHEKIOInlineLoading for inline loading states
+- **PROVIDE** success feedback for completed actions
+- **IMPLEMENT** error boundaries for graceful error handling
+- **DISPLAY** progress indicators for long-running operations
+
+### 26. Icon and Visual Standards:
+
+- **USE** Lucide React icons consistently
+- **MAINTAIN** consistent icon sizes (h-4 w-4 for standard, h-3 w-3 for small)
+- **CHOOSE** semantically appropriate icons
+- **ENSURE** icons are accessible with proper alt text
+- **USE** consistent icon placement and spacing
+
+### 27. Color and Theme Standards:
+
+- **FOLLOW** established color palette strictly
+- **USE** semantic color names (primary, secondary, success, error)
+- **MAINTAIN** consistent color usage across components
+- **ENSURE** proper contrast ratios for accessibility
+- **APPLY** color consistently for similar actions
+
+### 28. Component Architecture Standards:
+
+- **KEEP** components focused on single responsibility
+- **EXTRACT** reusable logic into custom hooks
+- **USE** proper prop interfaces with TypeScript
+- **IMPLEMENT** proper component composition
+- **AVOID** prop drilling with context when appropriate
+
+### 29. Data Fetching Standards:
+
+- **USE** React Query or similar for server state management
+- **IMPLEMENT** proper error handling for API calls
+- **PROVIDE** loading states during data fetching
+- **HANDLE** caching and refetching appropriately
+- **IMPLEMENT** optimistic updates where beneficial
+
+### 30. Security and Validation Standards:
+
+- **VALIDATE** all user inputs on both client and server
+- **SANITIZE** data before displaying
+- **IMPLEMENT** proper authentication checks
+- **USE** secure coding practices
+- **HANDLE** sensitive data appropriately
+
+### 31. Modern Design Patterns (Page Headers, Tables, Actions):
+
+#### Page Header (Custom)
+- **OPTIONAL**: Create page-specific headers in `_components/` when CHEKIOHeader does not fit.
+- **Layout**: Icono de sección (40x40) en contenedor `rounded-xl bg-blue-50`, título, breadcrumbs.
+- **Botón regresar**: Compacto 36x36, solo icono `ArrowLeft`, `hover:bg-gray-100`, `text-gray-500`.
+- **Contenedor**: `rounded-xl border border-gray-200 bg-white shadow-sm px-6 py-5`.
+
+#### Table Header (Dynamic Client Colors)
+- **COMPORTAMIENTO POR DEFECTO**: CHEKIOTableHeader aplica automáticamente el color primario del cliente con 15% de opacidad como fondo
+- **COLOR DE TEXTO**: CHEKIOTableHead usa el color primario del cliente para el texto del header
+- **ICONOS**: Los iconos en las columnas deben usar el color primario con 60% de opacidad (`${templateUser.primary}99`)
+- **PERSONALIZACIÓN**: Si necesitas un estilo diferente, puedes sobrescribir con `className` y `style` props
+- **ICONOS EN COLUMNAS**: `Hash`, `Layers`, `Smartphone`, `Building2`, `CalendarPlus`, `Clock`, `Activity` antes del texto
+- **ESTILO BASE**: `text-xs font-semibold uppercase tracking-wider`, `px-5 py-3.5` en celdas
+- **ACCESO AL TEMPLATE**: Usa `const { getTemplateUser } = useCookieSession()` y `const templateUser = getTemplateUser()` para obtener los colores del cliente
+
+**Ejemplo de implementación con colores dinámicos:**
+
+```typescript
+import { useCookieSession } from "@/context/useCookieSession";
+
+function MyTableComponent() {
+  const { getTemplateUser } = useCookieSession();
+  const templateUser = getTemplateUser();
+
+  return (
+    <CHEKIOTable>
+      <CHEKIOTableHeader>
+        {/* El header ya aplica automáticamente el color primario con 15% opacidad */}
+        <tr>
+          <CHEKIOTableHead>
+            {/* El texto ya usa el color primario automáticamente */}
+            <span className="flex items-center gap-2">
+              <CalendarDays 
+                className="h-4 w-4" 
+                style={{ color: `${templateUser.primary}99` }} 
+              />
+              Nombre
+            </span>
+          </CHEKIOTableHead>
+        </tr>
+      </CHEKIOTableHeader>
+      <CHEKIOTableBody>
+        {/* ... */}
+      </CHEKIOTableBody>
+    </CHEKIOTable>
+  );
+}
+```
+
+**IMPORTANTE**: 
+- Los componentes CHEKIOTableHeader y CHEKIOTableHead ya manejan automáticamente los colores del cliente
+- Solo necesitas aplicar el color a los iconos con `style={{ color: '${templateUser.primary}99' }}`
+- El fondo del header será automáticamente `${templateUser.primary}15` (15% opacidad)
+- El texto del header será automáticamente el color primario del cliente
+
+#### Badges de Tipo
+- **MACHINE**: `Monitor` icon + `bg-indigo-50 text-indigo-700 border border-indigo-100`.
+- **KIOSKO**: `Tablet` icon + `bg-violet-50 text-violet-700 border border-violet-100`.
+
+#### Badges de Estado
+- **Operativo**: `CheckCircle` + `bg-emerald-50 text-emerald-700`.
+- **No operativo**: `XCircle` + `bg-red-50 text-red-700`.
+
+#### Botones de Acción (Ghost Style)
+- **ALTERNATIVA** a CHEKIOActionButton: botones ghost `h-8 w-8` con iconos.
+- **Editar**: `Pencil`, `text-amber-600`, `hover:bg-amber-50`.
+- **Ver/QR**: `QrCode`, `text-blue-600`, `hover:bg-blue-50`.
+- **Eliminar**: `Trash2`, `text-red-600`, `hover:bg-red-50`.
+- **Siempre** incluir `title` y `aria-label` para accesibilidad.
+
+#### Toolbar sobre Tabla
+- **Layout**: Fila con "Agregar" a la derecha.
+- **Fondo**: `bg-gray-50/50`, `border-b border-gray-200`, `px-5 py-3`.
+
+#### Card Contenedor
+- **Estilo**: `rounded-xl`, `border border-gray-200`, `bg-white`, `shadow-sm`.
+- **Sin gradientes** para aspecto limpio y profesional.
+
+#### Paginación
+- **Contenedor**: `bg-gray-50`, `border-t border-gray-200`, `px-5 py-4`.
+- **Indicador de página**: `rounded-lg border border-gray-200 bg-white px-4 py-2`.
+
+#### Estado Vacío
+- **Icono**: Contenedor `w-20 h-20 rounded-2xl bg-gray-100`, icono `h-10 w-10 text-gray-400`.
+- **Título**: `text-lg font-semibold text-gray-900`.
+- **Descripción**: `text-sm text-gray-500`.
+
+#### Iconos Lucide por Contexto
+- Page Header: `Smartphone`, `ArrowLeft`, `ChevronRight` (breadcrumbs).
+- Table: `Hash`, `Layers`, `Smartphone`, `Building2`, `CalendarPlus`, `Clock`, `Activity`
+- Acciones: `Pencil`, `QrCode`, `Trash2` (o `Edit` si se usa CHEKIOActionButton).
+- Paginación: `ChevronLeft`, `ChevronRight`.
+- Empty: `Smartphone`, `Plus`.
+
+#### Enum Examples:
+
+```typescript
+// ✅ CORRECT - Use enums for status values
+enum DocumentStatus {
+  PENDING = "pending",
+  PROCESSING = "processing",
+  COMPLETED = "completed",
+  ERROR = "error",
+}
+
+// ✅ CORRECT - Use enums for action types
+enum ActionType {
+  UNION = "UNION",
+  AGRUPACION = "AGRUPACIÓN",
+}
+
+// ✅ CORRECT - Use enums for button variants
+enum ButtonVariant {
+  PRIMARY = "primary",
+  SECONDARY = "secondary",
+  SEARCH = "search",
+  REFRESH = "refresh",
+}
+
+// ✅ CORRECT - Use enums for validation status
+enum ValidationStatus {
+  VALID = "valid",
+  WARNING = "warning",
+  ERROR = "error",
+  NEUTRAL = "neutral",
+}
+```
+
+#### Implementation Rules:
+
+1. **Define enums at the top of files** or in separate `types.ts` files
+2. **Use descriptive enum names** that clearly indicate their purpose
+3. **Export enums** from centralized locations when used across multiple files
+4. **Use enum values** in all conditional logic, form validation, and state management
+5. **Replace all string literals** with enum references
+
+#### Before/After Examples:
+
+```typescript
+// ❌ INCORRECT - Using string literals
+if (status === "pending") {
+  // logic
+}
+if (tipoAccion === "UNION") {
+  // logic
+}
+
+// ✅ CORRECT - Using enums
+if (status === DocumentStatus.PENDING) {
+  // logic
+}
+if (tipoAccion === ActionType.UNION) {
+  // logic
+}
+```
+
+## Enforcement Rules
+
+1. **NEVER** use regular shadcn/ui components in Checkio applications
+2. **ALWAYS** use CHEKIO prefixed components
+3. **ALWAYS** import from `@/components` index file
+4. **MAINTAIN** consistent styling across all components
+5. **FOLLOW** the established color palette and spacing standards
+6. **USE** proper TypeScript types and interfaces
+7. **KEEP** components modular and reusable
+8. **ALWAYS** use enums instead of string literals for predefined values
+9. **NEVER** use hardcoded strings in conditional logic or state management
+10. **CREATE** centralized enums for values used across multiple components
+11. **IMPLEMENT** pagination for all data tables with 10+ items
+12. **INCLUDE** proper loading states for all async operations
+13. **VALIDATE** all form inputs with clear error messages
+14. **USE** consistent modal patterns with CHEKIOModal
+15. **MAINTAIN** responsive design across all screen sizes
+16. **IMPLEMENT** proper error handling with user-friendly messages
+17. **FOLLOW** accessibility standards with ARIA labels
+18. **USE** semantic HTML elements for better structure
+19. **APPLY** consistent spacing and typography scales
+20. **ENSURE** proper state management with cleanup
+21. **IMPLEMENT** retry functionality for bulk upload operations
+22. **PRESERVE** successfully processed data when errors occur in bulk operations
+23. **ALLOW** editing of failed records after bulk processing
+24. **PROVIDE** retry button that only processes failed records
+25. **PREFER** modern design patterns (section 31): custom page headers with icon + breadcrumbs, neutral table headers with column icons, ghost action buttons, type/status badges, toolbar above tables
+
+## Best Practices for Checkio Applications
+
+### Component Development Workflow:
+
+1. **Plan** the component structure and props interface first
+2. **Define** all enums and types before implementation
+3. **Implement** the component following CHEKIO standards
+4. **Add** proper error handling and loading states
+5. **Test** responsiveness across different screen sizes
+6. **Validate** accessibility requirements
+7. **Document** complex logic with comments
+
+### Code Review Checklist:
+
+- [ ] Uses CHEKIO components exclusively
+- [ ] Implements proper pagination if needed
+- [ ] Includes loading and error states
+- [ ] Follows enum usage standards
+- [ ] Has proper TypeScript types
+- [ ] Is responsive across devices
+- [ ] Includes proper accessibility features
+- [ ] Has consistent spacing and styling
+- [ ] Implements proper form validation
+- [ ] Uses semantic HTML elements
+- [ ] Implements retry functionality for bulk uploads (if applicable)
+- [ ] Preserves successfully processed data when errors occur
+- [ ] Allows editing of failed records after processing
+- [ ] Applies modern design patterns for list pages (header with icon, neutral table, ghost actions, badges)
+
+### Performance Optimization Guidelines:
+
+- **IMPLEMENT** React.memo for expensive components
+- **USE** useMemo and useCallback for expensive calculations
+- **LAZY LOAD** components that are not immediately visible
+- **OPTIMIZE** bundle size by importing only needed modules
+- **IMPLEMENT** proper caching strategies for API calls
+- **MINIMIZE** unnecessary re-renders
+
+### Testing Standards:
+
+- **WRITE** unit tests for complex business logic
+- **TEST** component behavior across different states
+- **VERIFY** accessibility with screen readers
+- **TEST** responsive behavior on different devices
+- **VALIDATE** form submissions and error handling
+
+## Certification Documents Specific Rules
+
+### Authentication and Security:
+
+- **ALWAYS** check JWT authentication before rendering sensitive content
+- **INCLUDE** proper error handling for authentication failures
+- **IMPLEMENT** session timeout handling
+- **VALIDATE** user permissions for different actions
+- **PROTECT** sensitive certification data
+
+### Data Management:
+
+- **USE** proper DTOs for API communication
+- **IMPLEMENT** optimistic updates for better UX
+- **HANDLE** large datasets with proper pagination
+- **CACHE** frequently accessed data appropriately
+- **VALIDATE** data integrity before operations
+
+### Certification Workflow:
+
+- **MAINTAIN** consistent state across document operations
+- **IMPLEMENT** proper undo/redo functionality where applicable
+- **PROVIDE** clear feedback for document processing states
+- **HANDLE** batch operations efficiently
+- **TRACK** document history and changes
+
+### Email Configuration:
+
+- **VALIDATE** email addresses before saving
+- **PROVIDE** bulk email management capabilities
+- **IMPLEMENT** email template management
+- **HANDLE** email sending errors gracefully
+- **MAINTAIN** email configuration history
+
+### Export and Reporting:
+
+- **IMPLEMENT** efficient data export functionality
+- **PROVIDE** multiple export formats when needed
+- **HANDLE** large export operations with progress indicators
+- **VALIDATE** export data integrity
+- **IMPLEMENT** export scheduling for large datasets
+
+## Example Usage Pattern
+
+```typescript
+// ✅ CORRECT PATTERN with Enums
+import { Search } from "lucide-react";
+import {
+  CHEKIOButton,
+  CHEKIOInput,
+  CHEKIOTable,
+  CHEKIOTableBody,
+  CHEKIOTableCell,
+  CHEKIOTableHead,
+  CHEKIOTableHeader,
+  CHEKIOTableRow,
+  CHEKIOProgressBar,
+} from "@/components";
+
+// Define enums for better maintainability
+enum ButtonVariant {
+  SEARCH = "search",
+  PRIMARY = "primary",
+  SECONDARY = "secondary",
+}
+
+enum DocumentStatus {
+  PROCESSING = "Processing",
+  COMPLETED = "Completed",
+  PENDING = "Pending",
+}
+
+export default function MyComponent() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  return (
+    <div className="bg-gray-50 p-6">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+        <div className="md:col-span-6">
+          <CHEKIOInput
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Search..."
+          />
+        </div>
+        <div className="md:col-span-6">
+          <CHEKIOButton variant={ButtonVariant.SEARCH}>
+            <Search className="h-4 w-4" />
+            Search
+          </CHEKIOButton>
+        </div>
+      </div>
+
+      <CHEKIOTable>
+        <CHEKIOTableHeader>
+          <tr>
+            <CHEKIOTableHead>Name</CHEKIOTableHead>
+            <CHEKIOTableHead>Progress</CHEKIOTableHead>
+          </tr>
+        </CHEKIOTableHeader>
+        <CHEKIOTableBody>
+          <CHEKIOTableRow index={0}>
+            <CHEKIOTableCell>Item 1</CHEKIOTableCell>
+            <CHEKIOTableCell>
+              <CHEKIOProgressBar
+                current={2}
+                total={5}
+                text={DocumentStatus.PROCESSING}
+              />
+            </CHEKIOTableCell>
+          </CHEKIOTableRow>
+        </CHEKIOTableBody>
+      </CHEKIOTable>
+    </div>
+  );
+}
+```

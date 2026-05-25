@@ -1,0 +1,203 @@
+{
+  "title": "Gestion des Postes",
+  "subtitle": "Gérez les postes et positions de l'entreprise",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "maintainers": "Mainteneurs",
+    "jobs": "Postes"
+  },
+  "buttons": {
+    "add": "Ajouter un Poste",
+    "addMassive": "Ajouter des Postes en Masse",
+    "downloadExcel": "Télécharger Excel",
+    "search": "Rechercher",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "save": "ENREGISTRER",
+    "update": "METTRE À JOUR",
+    "creating": "Création...",
+    "updating": "Mise à jour...",
+    "processing": "Traitement...",
+    "process": "Traiter",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "downloadTemplate": "Télécharger le Modèle",
+    "uploadExcel": "Télécharger Excel",
+    "addRow": "Ajouter une Ligne"
+  },
+  "search": {
+    "placeholder": "Rechercher Code ou Nom..."
+  },
+  "table": {
+    "headers": {
+      "code": "Code",
+      "name": "Nom",
+      "description": "Description",
+      "companies": "Entreprises",
+      "createdAt": "Date de Création",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "loading": "Chargement des postes...",
+    "noData": "Aucun poste trouvé",
+    "noDataDescription": "Ajoutez un nouveau poste pour commencer.",
+    "noDataMassive": "Aucun poste ajouté",
+    "noDataMassiveDescription": "Ajoutez des postes manuellement ou téléchargez un fichier Excel"
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} postes",
+    "recordsPerPage": "Enregistrements par page:",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page {current} sur {total}"
+  },
+  "delete": {
+    "title": "Confirmer la suppression",
+    "message": "Êtes-vous sûr de vouloir supprimer ce poste?",
+    "success": "Poste supprimé avec succès"
+  },
+  "excel": {
+    "success": "Excel généré avec succès",
+    "error": "Erreur lors de la génération d'Excel",
+    "filename": "postes",
+    "sheetName": "Postes",
+    "headers": {
+      "code": "Code",
+      "name": "Nom",
+      "description": "Description",
+      "companies": "Entreprises",
+      "createdAt": "Date de Création"
+    }
+  },
+  "ariaLabels": {
+    "editJob": "Modifier le poste",
+    "deleteJob": "Supprimer le poste"
+  },
+  "toast": {
+    "createSuccess": {
+      "title": "Poste créé avec succès",
+      "description": "Le poste a été créé correctement"
+    },
+    "updateSuccess": {
+      "title": "Poste mis à jour avec succès",
+      "description": "Le poste a été mis à jour correctement"
+    },
+    "deleteSuccess": {
+      "title": "Poste supprimé avec succès",
+      "description": "Le poste a été supprimé correctement"
+    },
+    "processCompletedSuccess": {
+      "title": "Processus terminé avec succès",
+      "description": "Le processus de chargement en masse s'est terminé avec succès"
+    },
+    "processCompletedWithErrors": {
+      "title": "Processus terminé avec des erreurs",
+      "description": "Consultez le tableau pour plus de détails"
+    },
+    "error": {
+      "title": "Erreur",
+      "description": "Erreur lors de la création du poste"
+    }
+  },
+  "upsert": {
+    "title": {
+      "edit": "Modifier le Poste",
+      "add": "Ajouter un Poste"
+    },
+    "fields": {
+      "code": "Code",
+      "name": "Nom",
+      "description": "Description",
+      "companies": "Entreprises"
+    },
+    "placeholders": {
+      "code": "Code",
+      "name": "Nom",
+      "description": "Description",
+      "companies": "Sélectionnez les entreprises"
+    },
+    "validation": {
+      "codeRequired": "Veuillez entrer le code du poste",
+      "nameRequired": "Veuillez entrer le nom du poste",
+      "descriptionRequired": "Veuillez entrer la description du poste",
+      "companiesRequired": "Veuillez sélectionner au moins une entreprise"
+    }
+  },
+  "massive": {
+    "title": "Chargement en Masse des Postes",
+    "tabs": {
+      "excel": "Chargement par Excel",
+      "manual": "Saisie Manuelle"
+    },
+    "instructions": {
+      "excel": {
+        "title": "Instructions:",
+        "step1": "Téléchargez le modèle Excel pour voir le format requis",
+        "step2": "Remplissez les informations des postes dans le modèle",
+        "step3": "Téléchargez le fichier Excel complété",
+        "step4": "Vérifiez les informations et appuyez sur Traiter"
+      },
+      "manual": {
+        "title": "Instructions pour la saisie manuelle:",
+        "step1": "Cliquez sur Ajouter une Ligne pour ajouter un nouveau poste",
+        "step2": "Remplissez les champs requis dans chaque ligne",
+        "step3": "Vous pouvez ajouter autant de lignes que nécessaire",
+        "step4": "Vérifiez les informations et appuyez sur Traiter"
+      }
+    },
+    "table": {
+      "headers": {
+        "code": "Code",
+        "name": "Nom",
+        "description": "Description",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "status": {
+        "completed": "Terminé",
+        "error": "Erreur"
+      }
+    },
+    "validation": {
+      "codeRequired": "Veuillez entrer le code du poste",
+      "nameRequired": "Veuillez entrer le nom du poste",
+      "descriptionRequired": "Veuillez entrer la description du poste",
+      "companiesRequired": "Veuillez sélectionner au moins une entreprise"
+    },
+    "progress": "Traitement: {percent}%",
+    "ariaLabels": {
+      "deleteJob": "Supprimer le poste"
+    }
+  },
+  "card": {
+    "title": "Postes"
+  },
+  "tour": {
+    "startButton": "Voir le guide",
+    "buttons": {
+      "next": "Suivant",
+      "previous": "Précédent",
+      "done": "Terminer"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Bienvenue dans le module Postes",
+        "description": "Dans ce module vous pouvez gérer les postes. Ce guide montrera les principales fonctionnalités."
+      },
+      "toolbar": {
+        "title": "Actions principales",
+        "description": "Ici vous pouvez rechercher par code ou nom, ajouter des postes individuellement, importation groupée depuis Excel ou télécharger la liste."
+      },
+      "table": {
+        "title": "Tableau des postes",
+        "description": "Liste des postes avec code, nom, description, entreprises assignées et date de création. Utilisez les boutons modifier ou supprimer."
+      },
+      "pagination": {
+        "title": "Pagination",
+        "description": "Naviguez entre les pages et ajustez le nombre d'enregistrements affichés."
+      }
+    }
+  }
+}

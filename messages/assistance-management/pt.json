@@ -1,0 +1,196 @@
+{
+  "title": "Gestão de Presença",
+  "subtitle": "Gestão de Presença",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "assistance": "Gestão de Presença"
+  },
+  "assistanceAbsent": "Presenças Ausentes",
+  "assistanceIncomplete": "Presenças Incompletas",
+  "assistanceWithoutSchedule": "Presenças Sem Horário",
+  "assistanceCompleted": "Presenças Completas",
+  "assistancePending": "Presenças Pendentes",
+  "assistanceRejected": "Presenças Rejeitadas",
+  "filterEmployee": "Funcionário",
+  "filterEmployeePlaceholder": "Pesquisar por nome ou número de documento...",
+  "auditMap": {
+    "noLocationData": "Não há dados de geolocalização disponíveis para esta marcação",
+    "withinAuthorizedZone": "Dentro da zona autorizada",
+    "withinMarginZone": "Dentro da margem de erro (30m)",
+    "outsideAuthorizedZone": "Fora da zona autorizada",
+    "branchZone": "Zona da filial",
+    "homeOfficeZone": "Zona de home office",
+    "errorMarginZone": "Margem de erro (30m)",
+    "authorizedMarkingArea": "Área de marcação autorizada",
+    "locationInfo": "Informações de Localização",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "authorizedZonesCount": "Zonas autorizadas"
+  },
+  "detailTour": {
+    "startButton": "Ver guia",
+    "buttons": {
+      "next": "Próximo",
+      "previous": "Anterior",
+      "done": "Concluir"
+    },
+    "tabs": {
+      "common": {
+        "steps": {
+          "welcome": {
+            "title": "Gestão de Assistência",
+            "description": "Visualização de presenças e ações disponíveis conforme o tab selecionado."
+          },
+          "tabs": {
+            "title": "Visualizações de presença",
+            "description": "Cada aba mostra um tipo diferente de presença. O número indica registros que requerem atenção. Clique em uma aba para trocar de visualização. Abas com alerta (piscando) têm registros pendentes."
+          },
+          "filters": {
+            "title": "Filtros de busca",
+            "description": "Filtre por data (dia, mês, ano ou intervalo), nome, documento, cargo ou filial. Use Limpar para redefinir. Os filtros se aplicam a todas as abas."
+          },
+          "toolbar": {
+            "title": "Ações da aba",
+            "description": "Botões variam por aba: criar presenças, autocompletar, atribuir horários, aprovar ou rejeitar. Ações que requerem seleção só são ativadas ao escolher linhas."
+          },
+          "table": {
+            "title": "Tabela de registros",
+            "description": "Listagem com data, documento, nome, marcações e ações. Use o ícone de olho para ver detalhes das marcações. Em Incompletas e Ausentes, marque linhas para ações em massa."
+          },
+          "pagination": {
+            "title": "Paginação",
+            "description": "Navegue entre páginas e ajuste os registros por página (10, 20, 50, 100, 200)."
+          }
+        }
+      },
+      "1": {
+        "steps": {
+          "welcome": {
+            "title": "Presenças Incompletas",
+            "description": "Funcionários com marcações faltantes (entrada, saída ou colações). Aqui você pode: Criar Presenças (para quem deve comparecer mas não tem registro), Autocompletar Automático (preenche marcações segundo o horário), Autocompletar Manual (completar marca por marca) ou Atribuir Horários (dar turno a quem não tem). Selecione linhas com o checkbox para habilitar ações em massa."
+          },
+          "toolbar": {
+            "title": "Ações disponíveis - Incompletas",
+            "description": "Criar Presenças: gera registro para funcionários sem presença do dia. Autocompletar Automático: preenche entrada/saída segundo horário atribuído. Autocompletar Manual: abre modal para completar cada marca manualmente. Atribuir Horários: atribui turno aos funcionários selecionados. Os três últimos só se ativam ao selecionar uma ou mais linhas."
+          },
+          "table": {
+            "title": "Colunas da tabela",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Checkbox</strong>: Selecione linhas para ações em massa</li><li><strong>Data</strong>: Dia da presença</li><li><strong>Nº Documento</strong>: Documento do funcionário</li><li><strong>Horário</strong>: Turno e horário programado</li><li><strong>Nome</strong>: Nome do funcionário</li><li><strong>Entrada</strong>: Hora de entrada (vazio se não marcou)</li><li><strong>Colações</strong>: Pausas registradas</li><li><strong>Saída</strong>: Hora de saída (vazio se não marcou)</li><li><strong>Adicionais</strong>: Marcas fora do horário</li><li><strong>Atrasos</strong>: Atrasos ou saídas antecipadas</li><li><strong>Verificação Fotos</strong>: Fotos biométricas válidas/inválidas</li><li><strong>Ações</strong>: Clique para ver detalhe das marcações</li></ul>"
+          }
+        }
+      },
+      "2": {
+        "steps": {
+          "welcome": {
+            "title": "Presenças Sem Horário",
+            "description": "Funcionários sem turno atribuído para o dia. Sem horário não conseguem marcar corretamente. Aqui você pode Criar Presenças ou Atribuir Horários em massa. Selecione linhas com o checkbox para habilitar as ações na barra superior."
+          },
+          "toolbar": {
+            "title": "Ações disponíveis - Sem Horário",
+            "description": "Criar Presenças: gera registro de presença. Atribuir Horários: atribui turno aos funcionários selecionados. Autocompletar e Atribuir Horários só se ativam ao selecionar uma ou mais linhas."
+          },
+          "table": {
+            "title": "Colunas da tabela",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Checkbox</strong>: Selecione linhas para ações em massa</li><li><strong>Data</strong>: Dia da presença</li><li><strong>Nº Documento</strong>: Documento do funcionário</li><li><strong>Nome</strong>: Nome do funcionário</li><li><strong>Entrada</strong>: Hora de entrada (vazio se não marcou)</li><li><strong>Colações</strong>: Pausas registradas</li><li><strong>Saída</strong>: Hora de saída (vazio se não marcou)</li><li><strong>Estado</strong>: Estado do registro</li><li><strong>Hrs</strong>: Horas trabalhadas se aplicável</li><li><strong>Ações</strong>: Clique para ver detalhe</li></ul>"
+          }
+        }
+      },
+      "3": {
+        "steps": {
+          "welcome": {
+            "title": "Presenças Ausentes",
+            "description": "Funcionários que não registraram nenhuma marcação no dia. Você pode Criar Presenças, Autocompletar (se tiverem horário) ou Atribuir Horários. Use o checkbox para seleção múltipla e executar ações em massa em vários funcionários."
+          },
+          "toolbar": {
+            "title": "Ações disponíveis - Ausentes",
+            "description": "Criar Presenças, Autocompletar Automático, Autocompletar Manual e Atribuir Horários. Ativam ao selecionar uma ou mais linhas."
+          },
+          "table": {
+            "title": "Colunas da tabela",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Checkbox</strong>: Selecione linhas para ações em massa</li><li><strong>Data</strong>: Dia da presença</li><li><strong>Nº Documento</strong>: Documento do funcionário</li><li><strong>Nome</strong>: Nome do funcionário</li><li><strong>Horário</strong>: Turno atribuído</li><li><strong>Entrada</strong>: Hora de entrada (vazio em ausentes)</li><li><strong>Colações</strong>: Pausas registradas</li><li><strong>Saída</strong>: Hora de saída (vazio em ausentes)</li><li><strong>Adicionais</strong>: Marcas fora do horário</li><li><strong>Atrasos</strong>: Atrasos ou saídas antecipadas</li><li><strong>Verificação Fotos</strong>: Fotos biométricas</li><li><strong>Ações</strong>: Clique para ver detalhe</li></ul>"
+          }
+        }
+      },
+      "4": {
+        "steps": {
+          "welcome": {
+            "title": "Presenças Completas",
+            "description": "Registros com todas as marcações realizadas (entrada, colações e saída). Esta vista é só consulta: use o ícone de olho para ver detalhe das marcações, localização e fotos de verificação de cada funcionário."
+          },
+          "toolbar": {
+            "title": "Ações - Completas",
+            "description": "Neste tab não há barra de ações; a tabela é só leitura para consultar presenças já completadas."
+          },
+          "table": {
+            "title": "Colunas da tabela",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Data</strong>: Dia da presença</li><li><strong>Nº Documento</strong>: Documento do funcionário</li><li><strong>Horário</strong>: Turno e horário programado</li><li><strong>Nome</strong>: Nome do funcionário</li><li><strong>Entrada</strong>: Hora de entrada</li><li><strong>Colações</strong>: Pausas registradas</li><li><strong>Saída</strong>: Hora de saída</li><li><strong>Adicionais</strong>: Marcas fora do horário</li><li><strong>Atrasos</strong>: Atrasos ou saídas antecipadas</li><li><strong>Verificação Fotos</strong>: Fotos biométricas válidas/inválidas</li><li><strong>Ações</strong>: Clique para ver detalhe</li></ul>"
+          }
+        }
+      },
+      "5": {
+        "steps": {
+          "welcome": {
+            "title": "Marcações Aguardando Aprovação",
+            "description": "Marcações manuais ou corrigidas que requerem aprovação do supervisor. Revise cada registro e use o ícone de olho para ver o detalhe antes de aprovar ou rejeitar. As marcas pendentes aparecem em amarelo."
+          },
+          "toolbar": {
+            "title": "Ações - Marcas Pendentes",
+            "description": "Neste tab não há barra de ações superior; as ações são feitas no modal de detalhe ao clicar no ícone de olho."
+          },
+          "table": {
+            "title": "Colunas da tabela",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Data</strong>: Dia da presença</li><li><strong>Nº Documento</strong>: Documento do funcionário</li><li><strong>Nome</strong>: Nome do funcionário</li><li><strong>Entrada</strong>: Hora de entrada registrada</li><li><strong>Saída</strong>: Hora de saída registrada</li><li><strong>Marcas Pendentes</strong>: Marcas aguardando aprovação (em amarelo)</li><li><strong>Ações</strong>: Clique para ver e aprovar ou rejeitar</li></ul>"
+          }
+        }
+      },
+      "6": {
+        "steps": {
+          "welcome": {
+            "title": "Marcações Rejeitadas",
+            "description": "Vista de marcas rejeitadas pelo supervisor. Esta funcionalidade está em desenvolvimento."
+          },
+          "toolbar": {
+            "title": "Ações - Marcas Rejeitadas",
+            "description": "Neste tab não há barra de ações; a funcionalidade está em desenvolvimento."
+          },
+          "table": {
+            "title": "Colunas da tabela",
+            "description": "<p style='margin:0.5em 0'>Vista de marcas rejeitadas pelo supervisor. Funcionalidade em desenvolvimento.</p>"
+          }
+        }
+      },
+      "7": {
+        "steps": {
+          "welcome": {
+            "title": "Horas extras pendentes de aprovação",
+            "description": "Registros com horas extras que requerem aprovação do supervisor. Aprovar soma ao banco de horas do funcionário. Rejeitar descarta a solicitação. Se o funcionário não tiver banco configurado, use o link Configurar banco antes de aprovar."
+          },
+          "toolbar": {
+            "title": "Ações - Horas Extras",
+            "description": "Em cada linha: Aprovar (soma ao banco de horas) e Rejeitar (descarta). Se aparecer Sem banco de horas, use Configurar banco para criar o banco do funcionário antes de aprovar."
+          },
+          "table": {
+            "title": "Colunas da tabela",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Funcionário</strong>: Nome do funcionário</li><li><strong>Data</strong>: Dia da presença</li><li><strong>Horas extras</strong>: Minutos ou horas que requerem aprovação</li><li><strong>Ações</strong>: Aprovar ou Rejeitar; Configurar banco se não existir</li></ul>"
+          }
+        }
+      },
+      "8": {
+        "steps": {
+          "welcome": {
+            "title": "Atrasos pendentes de aprovação",
+            "description": "Registros com atrasos de entrada ou saída antecipada que requerem aprovação. Similar às horas extras: Aprovar ou Rejeitar. Se o funcionário não tiver banco configurado, use Configurar banco antes de aprovar."
+          },
+          "toolbar": {
+            "title": "Ações - Atrasos",
+            "description": "Aprovar e Rejeitar por linha. Configurar banco se o funcionário não tiver banco de horas."
+          },
+          "table": {
+            "title": "Colunas da tabela",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Funcionário</strong>: Nome do funcionário</li><li><strong>Data</strong>: Dia da presença</li><li><strong>Atraso chegada</strong>: Minutos de atraso ao entrar</li><li><strong>Saída antecipada</strong>: Minutos de saída antes do horário</li><li><strong>Ações</strong>: Aprovar ou Rejeitar</li></ul>"
+          }
+        }
+      }
+    }
+  }
+}

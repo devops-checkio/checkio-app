@@ -1,0 +1,562 @@
+{
+  "title": "Employee Management",
+  "subtitle": "Manage company employees",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Maintainers",
+    "employees": "Employees",
+    "bulkUpload": "Bulk Upload"
+  },
+  "buttons": {
+    "add": "Add Employee",
+    "bulkUpload": "Bulk Upload",
+    "downloadExcel": "Download Excel",
+    "generating": "Generating...",
+    "previous": "Previous",
+    "next": "Next",
+    "search": "Search",
+    "clear": "Clear",
+    "edit": "Edit",
+    "cancel": "Cancel",
+    "changeCompany": "Change company",
+    "retry": "Retry",
+    "confirmChange": "Confirm Change",
+    "processing": "Processing...",
+    "save": "Save",
+    "addRow": "Add Row",
+    "process": "Process",
+    "processingLabel": "Processing...",
+    "downloadTemplate": "Download Template",
+    "uploadExcel": "Upload Excel",
+    "close": "Close"
+  },
+  "tabs": {
+    "active": "Active",
+    "expiring": "Expiring",
+    "recentDismissals": "Recent Dismissals",
+    "inactive": "Inactive",
+    "excel": "Excel Upload",
+    "manual": "Manual Entry"
+  },
+  "filters": {
+    "search": "Search",
+    "searchPlaceholder": "Search by First or Last Name",
+    "documentNumber": "Document Number",
+    "documentNumberPlaceholder": "Search by Document Number",
+    "branch": "Branch",
+    "branchPlaceholder": "Select Branch",
+    "recordsPerPage": "Records per page:"
+  },
+  "table": {
+    "headers": {
+      "photo": "Photo",
+      "code": "Code",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "documentNumber": "Document Number",
+      "fingerprints": "Fingerprints",
+      "email": "Email",
+      "branch": "Branch",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "contractType": "Contract Type",
+      "actions": "Actions",
+      "date": "Date",
+      "name": "Name",
+      "type": "Type",
+      "status": "Status"
+    },
+    "loading": "Loading employees...",
+    "noData": "No employees found",
+    "noDataDescription": "Add a new employee to get started.",
+    "contractType": {
+      "indefinite": "Indefinite",
+      "fixedTerm": "Fixed Term"
+    },
+    "status": {
+      "pending": "Pending",
+      "processing": "Processing",
+      "completed": "Completed",
+      "error": "Error"
+    }
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} results",
+    "recordsPerPage": "Records per page:",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  },
+  "toast": {
+    "createSuccess": {
+      "title": "Employee created successfully",
+      "description": "The employee has been created correctly"
+    },
+    "updateSuccess": {
+      "title": "Employee updated successfully",
+      "description": "The employee has been updated correctly"
+    },
+    "bulkSuccess": {
+      "title": "Bulk upload completed",
+      "description": "Employees have been processed successfully"
+    },
+    "excelSuccess": {
+      "title": "Excel generated successfully"
+    },
+    "excelError": {
+      "title": "Error generating Excel"
+    },
+    "loadError": "Error loading employees",
+    "photoError": {
+      "title": "Error processing photo",
+      "description": "There was a problem uploading the photo. Please try again."
+    },
+    "photoInvalidFile": {
+      "title": "Error",
+      "description": "Please select a valid image file"
+    },
+    "photoTooLarge": {
+      "title": "Error",
+      "description": "Image must be less than 2MB"
+    },
+    "photoReadError": {
+      "title": "Error",
+      "description": "Error reading file"
+    },
+    "createError": {
+      "title": "Error creating employee"
+    },
+    "updateError": {
+      "title": "Error updating employee"
+    }
+  },
+  "gender": {
+    "male": "Male",
+    "female": "Female",
+    "other": "Other"
+  },
+  "ariaLabels": {
+    "editEmployee": "Edit employee",
+    "changeCompany": "Change company",
+    "photoOf": "Photo of {name}"
+  },
+  "upsert": {
+    "title": {
+      "add": "Add Employee",
+      "edit": "Edit Employee"
+    },
+    "fields": {
+      "photo": "Profile photo",
+      "changePhoto": "Change photo",
+      "uploadPhoto": "Upload photo",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "motherLastName": "Mother's Last Name",
+      "documentType": "Document Type",
+      "documentNumber": "Document Number",
+      "address": "Address",
+      "personalEmail": "Personal Email",
+      "personalPhone": "Personal Phone",
+      "gender": "Gender",
+      "birthDate": "Birth Date",
+      "code": "Code",
+      "workEmail": "Work Email",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "contractedHours": "Contracted Hours",
+      "branchId": "Branch",
+      "jobId": "Job"
+    },
+    "placeholders": {
+      "documentType": "Select document type",
+      "documentNumber": "Enter document number",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "motherLastName": "Mother's last name",
+      "address": "Address",
+      "personalEmail": "Personal email",
+      "personalPhone": "Personal phone",
+      "gender": "Select gender",
+      "birthDate": "Birth date",
+      "code": "Code",
+      "workEmail": "Work email (optional)",
+      "startDate": "Start date",
+      "endDate": "End date",
+      "contractedHours": "Contracted hours",
+      "branchId": "Select branch",
+      "jobId": "Select job"
+    },
+    "validation": {
+      "firstNameRequired": "Please enter first name",
+      "lastNameRequired": "Please enter last name",
+      "addressRequired": "Please enter address",
+      "personalEmailRequired": "Please enter personal email",
+      "personalEmailInvalid": "Invalid email",
+      "personalPhoneRequired": "Please enter personal phone",
+      "genderRequired": "Please select gender",
+      "birthDateRequired": "Please enter birth date",
+      "codeRequired": "Please enter code",
+      "startDateRequired": "Please enter start date",
+      "contractedHoursRequired": "Please enter contracted hours",
+      "branchRequired": "Please select branch",
+      "jobRequired": "Please select job",
+      "documentTypeRequired": "Please select document type",
+      "documentNumberRequired": "Please enter document number",
+      "documentInvalid": "Invalid document format",
+      "endDateRequired": "Please enter contract end date",
+      "fieldRequired": "This field is required"
+    }
+  },
+  "changeCompany": {
+    "title": "Change Employee Company",
+    "employeeInfo": "Employee Information",
+    "code": "Code:",
+    "name": "Name:",
+    "currentCompany": "Current Company:",
+    "importantInfo": "Important Information",
+    "historyNote": "History: Employee history will be retained for reporting and audit purposes.",
+    "shiftsNote": "Shifts: Assigned shifts will be retained until today. Future assignments will be removed.",
+    "schedulesNote": "Schedules: Future schedule assignments will be automatically removed.",
+    "destinationCompany": "Destination Company *",
+    "destinationCompanyPlaceholder": "Select destination company",
+    "destinationCompanyRequired": "Please select the destination company",
+    "toastSuccess": {
+      "title": "Company changed successfully",
+      "description": "Employee {name} has been transferred to the new company"
+    },
+    "toastError": {
+      "title": "Error changing company",
+      "description": "An error occurred while processing the request"
+    }
+  },
+  "manager": {
+    "title": "Assign Manager",
+    "managerIdRequired": "Please select a manager/supervisor",
+    "typeRequired": "Please select a type",
+    "startDateRequired": "Please enter start date",
+    "startDateNotPast": "Start date cannot be in the past",
+    "endDateNotPast": "End date cannot be in the past",
+    "type": {
+      "manager": "Manager",
+      "supervisor": "Supervisor"
+    }
+  },
+  "subordinates": {
+    "title": "Manage Subordinates",
+    "selectSubordinates": "Select Subordinates",
+    "addSubordinate": "Add Subordinate",
+    "noSubordinates": "No subordinates",
+    "table": {
+      "name": "Name",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "actions": "Actions"
+    }
+  },
+  "bulkUpload": {
+    "title": "Bulk Employee Upload",
+    "subtitle": "Create or update multiple employees through bulk upload",
+    "intro": "Bulk employee upload. You can create new employees or update existing ones via Excel upload or manual entry.",
+    "tabs": {
+      "create": "Create",
+      "update": "Update"
+    },
+    "processingLabel": "Processing: {percent}%",
+    "selectFieldsTitle": "Select fields to update",
+    "selectFieldsDescriptionCreate": "Download the Excel template or add employees manually",
+    "selectFieldsDescriptionUpdate": "Select fields and download the Excel template or add records manually",
+    "instructions": {
+      "excel": {
+        "title": "Instructions:",
+        "step1": "Download the Excel template to see the required format",
+        "step2": "Fill in the employee information in the template",
+        "step3": "Upload the completed Excel file",
+        "step4": "Verify the information and press Process",
+        "listTitle": "Instructions for Excel upload",
+        "list1": "Download the Excel template by clicking the \"Download Template\" button",
+        "list2": "Complete the template with employee data",
+        "list3": "Save the Excel file",
+        "list4": "Click \"Upload Excel\" and select the completed file",
+        "list5": "Review the data loaded in the table",
+        "list6": "Click \"Process\" to create or update employees"
+      },
+      "manual": {
+        "title": "Instructions for manual entry:",
+        "step1": "Click Add Row to add a new employee",
+        "step2": "Fill in the required fields in each row",
+        "step3": "You can add as many rows as needed",
+        "step4": "Verify the information and press Process",
+        "listTitle": "Instructions for manual entry",
+        "list1": "Click \"Add Row\" to add a new employee",
+        "list2": "Complete all required fields in the table",
+        "list3": "You can add multiple employees by clicking \"Add Row\" several times",
+        "list4": "Click \"Process\" to create or update employees"
+      }
+    },
+    "noData": "No employees added",
+    "noDataDescription": "Add employees manually or upload an Excel file",
+    "table": {
+      "noEmployeesLoaded": "No employees loaded",
+      "descriptionCreate": "Download the Excel template or add employees manually",
+      "descriptionUpdate": "Select fields and download the Excel template or add records manually",
+      "columnFirstName": "First Name",
+      "columnLastName": "Last Name",
+      "columnSecondLastName": "Mother's Last Name",
+      "columnDocumentType": "Doc Type",
+      "columnDocumentNumber": "Doc Number",
+      "columnAddress": "Address",
+      "columnPersonalEmail": "Personal Email",
+      "columnPersonalPhone": "Personal Phone",
+      "columnGender": "Gender",
+      "columnBirthDate": "Birth Date",
+      "columnCode": "Code",
+      "columnWorkEmail": "Work Email",
+      "columnWorkPhone": "Work Phone",
+      "columnStartDate": "Start Date",
+      "columnEndDate": "End Date",
+      "columnContractedHours": "Hours",
+      "columnBranch": "Branch",
+      "columnJob": "Job",
+      "columnIntegrationCode": "Integration Code",
+      "columnIndefinite": "Indefinite",
+      "columnStatus": "Status",
+      "columnActions": "Actions",
+      "columnError": "Error",
+      "statusSuccessMessage": "Employee loaded successfully",
+      "deleteEmployee": "Delete employee",
+      "delete": "Delete",
+      "downloadSuccessful": "Download Successful",
+      "downloadErrors": "Download Errors"
+    },
+    "loadHolidays": "Load Holidays",
+    "validation": {
+      "fieldRequired": "Required field",
+      "fieldRequiredWithName": "{field} is required",
+      "invalidData": "Invalid data",
+      "documentNumberRequiredForUpdate": "Document number is required for update",
+      "invalidPersonalEmail": "Invalid personal email",
+      "invalidWorkEmail": "Invalid work email",
+      "rowPrefix": "Row",
+      "validationError": "Validation error",
+      "noEmployeesWarning": "Warning",
+      "noEmployeesWarningDescription": "No employees to process. Add at least one employee.",
+      "duplicateDocumentNumber": "Document number {value} is duplicated in the file (it was already used on row {firstRow})",
+      "duplicatePersonalEmail": "Personal email {value} is duplicated in the file (it was already used on row {firstRow})"
+    },
+    "toast": {
+      "error": "Error",
+      "templateError": "Error generating Excel template",
+      "selectAtLeastOneField": "You must select at least one field to update",
+      "excelLoaded": "Excel loaded",
+      "employeesLoaded": "{count} employees loaded from Excel",
+      "recordsLoaded": "{count} records loaded from Excel",
+      "excelProcessError": "Error processing Excel file",
+      "noEmployeesToProcess": "No employees to process",
+      "validationErrors": "Validation errors",
+      "andMoreErrors": "... and {count} more error(s)",
+      "processCompletedSuccess": {
+        "title": "Success",
+        "description": "Bulk upload process completed successfully"
+      },
+      "someNotCreated": "Some employees could not be created",
+      "allCreated": "All employees have been created",
+      "createError": "Error creating employee",
+      "someNotUpdated": "Some employees could not be updated",
+      "allUpdated": "All employees have been updated",
+      "updateError": "Error updating employee",
+      "processCompletedWithErrors": {
+        "title": "Process completed with errors",
+        "description": "Review the table for more details."
+      },
+      "noFailedRecords": "No failed records",
+      "noFailedRecordsDescription": "All records have been processed successfully",
+      "retryWithErrors": {
+        "title": "Retry completed with errors",
+        "description": "Some records still have errors"
+      },
+      "retrySuccess": {
+        "title": "Retry successful",
+        "description": "All failed records have been processed"
+      },
+      "noRecords": "No records",
+      "noSuccessRecords": "No successfully loaded employees",
+      "noErrorRecords": "No employees with errors",
+      "successExcelError": "Error generating successful employees Excel file",
+      "errorExcelError": "Error generating employees with errors Excel file"
+    },
+    "excel": {
+      "sheetName": "Employees",
+      "updateSheetName": "Employee Update",
+      "successSheetName": "Successful Employees",
+      "errorsSheetName": "Employees with Errors",
+      "referencesSheetName": "References",
+      "booleanValues": "Boolean Values",
+      "trueLabel": "True",
+      "falseLabel": "False",
+      "pleaseSelectYesOrNo": "Please select {yes} or {no}",
+      "selectYesOrNo": "Select {yes} or {no}",
+      "invalidValue": "Invalid value",
+      "selectGender": "Please select a gender from the list",
+      "selectGenderTitle": "Select Gender",
+      "selectGenderPrompt": "Select a gender from the dropdown",
+      "selectBranch": "Please select a branch from the list",
+      "selectBranchTitle": "Select Branch",
+      "selectBranchPrompt": "Select a branch from the dropdown",
+      "selectJob": "Please select a job from the list",
+      "selectJobTitle": "Select Job",
+      "selectJobPrompt": "Select a job from the dropdown",
+      "selectValue": "Select value",
+      "selectValuePrompt": "Select {yes} or {no}",
+      "refSheet": {
+        "field": "Field",
+        "value": "Value",
+        "description": "Description",
+        "gender": "Gender",
+        "documentType": "Document Type",
+        "branch": "Branch",
+        "job": "Job",
+        "booleanValues": "Boolean Values",
+        "trueDesc": "True",
+        "falseDesc": "False"
+      },
+      "templateCreateFileName": "employee_creation_template.xlsx",
+      "templateUpdateFileName": "employee_update_template.xlsx",
+      "successFileName": "successful_employees_{date}.xlsx",
+      "errorsFileName": "employees_with_errors_{date}.xlsx",
+      "errorColumnNote": "IMPORTANT: Before re-uploading this file, remove the 'Error' column (last column)"
+    },
+    "fields": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "secondLastName": "Mother's Last Name",
+      "address": "Address",
+      "personalEmail": "Personal Email",
+      "personalPhone": "Personal Phone",
+      "gender": "Gender",
+      "birthDate": "Birth Date",
+      "documentType": "Document Type",
+      "documentNumber": "Document Number",
+      "code": "Code",
+      "workEmail": "Work Email",
+      "workPhone": "Work Phone",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "contractedHours": "Contracted Hours",
+      "branchId": "Branch",
+      "jobId": "Job",
+      "integrationCode": "Integration Code",
+      "isIndefiniteTerm": "Indefinite Contract",
+      "canCheckInOtherBranch": "Can check in at another branch",
+      "requiresPassword": "Requires password",
+      "canCheckWithoutShift": "Can check without shift",
+      "canCheckAnywhere": "Can check anywhere",
+      "canCheckFromAnyBranch": "Can check from any branch",
+      "canCheckFromWeb": "Can check from web",
+      "isActive": "Active",
+      "legalMetadata": {
+        "article22": "Article 22",
+        "article27": "Article 27",
+        "flexibilityHours": "Flexibility Hours"
+      }
+    }
+  },
+  "detail": {
+    "cardTitle": "Record: {name}",
+    "personalData": "Personal Data",
+    "contract": "Contract",
+    "workData": "Work Data",
+    "companyHistory": "Company History",
+    "summary": "Summary",
+    "attendanceConfig": "Attendance Configuration",
+    "managersAndSubstitutes": "Manager and Substitutes",
+    "subordinatesTab": "Subordinates",
+    "validation": {
+      "firstNameRequired": "Please enter first name",
+      "lastNameRequired": "Please enter last name",
+      "addressRequired": "Please enter address",
+      "personalEmailRequired": "Please enter personal email",
+      "personalEmailInvalid": "Invalid email",
+      "personalPhoneRequired": "Please enter personal phone",
+      "genderRequired": "Please select gender",
+      "birthDateRequired": "Please enter birth date",
+      "codeRequired": "Please enter code",
+      "startDateRequired": "Please enter start date",
+      "contractedHoursRequired": "Please enter contracted hours",
+      "branchRequired": "Please select branch",
+      "jobRequired": "Please select job",
+      "documentTypeRequired": "Please select document type",
+      "documentNumberRequired": "Please enter document number",
+      "documentInvalid": "Invalid document format",
+      "endDateRequired": "Please enter contract end date",
+      "fieldRequired": "This field is required"
+    },
+    "companyHistoryLoading": "Loading history...",
+    "companyHistoryEmpty": "No company history",
+    "companyHistoryEmptyDescription": "This employee has no company change records.",
+    "personalEmailInfo": {
+      "title": "Important information about personal email",
+      "description": "A valid personal email is required to receive important application information. This email can be updated at any time.",
+      "recommendedServices": "Recommended email services:"
+    },
+    "contractLegalInfo": "Contract Legal Information",
+    "indefiniteTerm": "Indefinite Contract",
+    "article22": "Article 22",
+    "article27": "Article 27",
+    "flexibilityHours": "Flexible Hours",
+    "workPhone": "Work Phone",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "contractedHours": "Contracted Hours",
+    "branch": "Branch",
+    "job": "Job",
+    "integrationCode": "Integration Code",
+    "selectBranch": "Select branch",
+    "selectJob": "Select job",
+    "selectDocumentType": "Select document type",
+    "selectGender": "Select gender",
+    "documentNumberPlaceholder": "Enter document number",
+    "phonePlaceholder": "e.g. +56 9 1234 5678",
+    "datePlaceholder": "dd/mm/yyyy",
+    "documentValid": "Valid document",
+    "documentInvalidLabel": "Invalid document",
+    "companyHistoryTable": {
+      "title": "Company History",
+      "description": "Complete record of all companies this employee has belonged to.",
+      "company": "Company",
+      "document": "Document",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "duration": "Duration",
+      "status": "Status",
+      "current": "Current",
+      "inProgress": "In progress",
+      "active": "Active",
+      "inactive": "Inactive",
+      "years": "year(s)",
+      "months": "month(s)",
+      "days": "day(s)",
+      "lessThanOneDay": "Less than 1 day",
+      "recordsPerPage": "Records per page:",
+      "showingResults": "Showing {current} of {total} results",
+      "pageOf": "Page {current} of {total}",
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "homeOffice": {
+      "label": "Home Office",
+      "searchLocation": "Search location",
+      "searchPlaceholder": "Enter an address to add a point on the map",
+      "add": "Add",
+      "searchHint": "Search for an address and press Add to create a new point on the map"
+    },
+    "summary": {
+      "code": "Code:",
+      "requiresAttention": "Requires attention",
+      "statusOnTime": "On Time",
+      "statusLate": "Late",
+      "statusEarlyDeparture": "Early Departure",
+      "statusAbsent": "Absent",
+      "statusNa": "N/A"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "title": "Administración de Ausencias",
+  "subtitle": "Gestiona las ausencias de los empleados",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Operaciones",
+    "absences": "Ausencias"
+  },
+  "buttons": {
+    "batchAssignment": "Crear Ausencia",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "deleting": "Eliminando...",
+    "search": "Buscar",
+    "clear": "Limpiar",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "cancel": "Cancelar"
+  },
+  "tabs": {
+    "pending": "Pendientes",
+    "approved": "Aprobadas",
+    "rejected": "Rechazadas"
+  },
+  "filters": {
+    "organization": "Estructura organizacional",
+    "search": "Buscar",
+    "searchPlaceholder": "Buscar por Nombres o Apellidos",
+    "documentNumber": "Número de Documento",
+    "documentNumberPlaceholder": "Buscar por Número de Documento",
+    "job": "Cargo",
+    "jobPlaceholder": "Seleccionar Cargo",
+    "branch": "Sucursal",
+    "branchPlaceholder": "Seleccionar Sucursal",
+    "absenceType": "Tipo de ausencia",
+    "absenceTypePlaceholder": "Todos los tipos",
+    "period": "Periodo",
+    "periodType": "Tipo de periodo",
+    "periodTypes": {
+      "range": "Por rango (fechas)",
+      "year": "Por año calendario",
+      "lastMonth": "Último mes"
+    },
+    "year": "Año",
+    "yearPlaceholder": "Seleccionar año",
+    "datePlaceholder": "DD/MM/AAAA",
+    "yearSummary": "Se consultará del 01/01/{year} al 31/12/{year}.",
+    "lastMonthSummary": "Periodo: {from} – {to}",
+    "lastMonthHint": "Pulse «Buscar» para listar ausencias de ese mes calendario completo.",
+    "dateRange": {
+      "from": "Fecha inicio",
+      "to": "Fecha fin"
+    },
+    "validation": {
+      "title": "Revise el periodo",
+      "requiredRange": "Indique fecha de inicio y fecha de fin.",
+      "invalidFrom": "La fecha de inicio no es válida. Use el formato DD/MM/AAAA.",
+      "invalidTo": "La fecha de fin no es válida. Use el formato DD/MM/AAAA.",
+      "fromAfterTo": "La fecha de inicio no puede ser posterior a la fecha de fin.",
+      "requiredYear": "Seleccione un año válido."
+    }
+  },
+  "table": {
+    "headers": {
+      "employee": "Empleado",
+      "lastName": "Apellido",
+      "documentNumber": "Documento",
+      "job": "Cargo",
+      "branch": "Sucursal",
+      "absenceType": "Tipo de Ausencia",
+      "startDate": "Fecha Inicio",
+      "endDate": "Fecha Fin",
+      "status": "Estado",
+      "createdAt": "Fecha de Registro",
+      "actions": "Acciones"
+    },
+    "loading": "Cargando ausencias...",
+    "noData": "No se encontraron ausencias",
+    "noDataDescription": "No hay ausencias registradas para este filtro."
+  },
+  "status": {
+    "pending": "Pendiente",
+    "approved": "Aprobado",
+    "rejected": "Rechazado",
+    "unknown": "Desconocido"
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} resultados",
+    "page": "Página {current} de {total}",
+    "recordsPerPage": "Registros por página"
+  },
+  "delete": {
+    "title": "Eliminar Ausencia",
+    "message": "¿Está seguro de que desea eliminar esta ausencia?",
+    "success": "Ausencia eliminada exitosamente",
+    "error": "Error al eliminar la ausencia"
+  },
+  "tooltips": {
+    "actionLocked": "No se puede editar ni eliminar: esta ausencia proviene de una aprobación de día libre o de una integración."
+  },
+  "ariaLabels": {
+    "editAbsence": "Editar ausencia",
+    "deleteAbsence": "Eliminar ausencia",
+    "editAbsenceLocked": "Edición no disponible: ausencia por día libre o integración",
+    "deleteAbsenceLocked": "Eliminación no disponible: ausencia por día libre o integración"
+  },
+  "edit": {
+    "title": "Editar Ausencia",
+    "employeeInfo": "Información del Empleado",
+    "document": "Documento",
+    "absenceType": "Tipo de Ausencia",
+    "startDate": "Fecha Inicio",
+    "endDate": "Fecha Fin",
+    "startDateRequired": "La fecha de inicio es obligatoria",
+    "endDateRequired": "La fecha de fin es obligatoria",
+    "reason": "Motivo",
+    "reasonPlaceholder": "Motivo (opcional)",
+    "withoutPay": "Sin pago",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "saving": "Guardando...",
+    "successTitle": "Ausencia actualizada correctamente"
+  }
+}

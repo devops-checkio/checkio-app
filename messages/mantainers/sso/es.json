@@ -1,0 +1,62 @@
+{
+  "title": "Gestión de Aplicaciones SSO",
+  "subtitle": "Administre las aplicaciones SSO del sistema",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "sso": "Aplicaciones SSO"
+  },
+  "buttons": {
+    "add": "Agregar Aplicación SSO",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "downloadExcel": "Descargar Excel",
+    "generating": "Generando...",
+    "manageTokens": "Gestionar Tokens",
+    "viewUsers": "Ver Usuarios"
+  },
+  "table": {
+    "headers": {
+      "name": "Nombre",
+      "appId": "App ID",
+      "createdAt": "Fecha de Creación",
+      "updatedAt": "Última Actualización",
+      "actions": "Acciones"
+    },
+    "loading": "Cargando aplicaciones SSO...",
+    "noData": "No se encontraron aplicaciones SSO",
+    "noDataDescription": "Agregue una nueva aplicación SSO para comenzar."
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} aplicaciones SSO",
+    "page": "Página {current} de {total}"
+  },
+  "delete": {
+    "success": "Aplicación SSO eliminada exitosamente",
+    "error": "Error al eliminar la aplicación SSO",
+    "confirmMessage": "¿Está seguro de que desea eliminar esta aplicación SSO?"
+  },
+  "excel": {
+    "success": "Excel generado exitosamente",
+    "error": "Error al generar el Excel",
+    "filename": "aplicaciones-sso",
+    "sheetName": "Aplicaciones SSO",
+    "headers": {
+      "name": "Nombre",
+      "appId": "App ID",
+      "createdAt": "Fecha de Creación",
+      "updatedAt": "Última Actualización"
+    }
+  },
+  "errors": {
+    "title": "Error"
+  },
+  "ariaLabels": {
+    "editApp": "Editar aplicación SSO",
+    "deleteApp": "Eliminar aplicación SSO",
+    "manageTokens": "Gestionar tokens de aplicación SSO",
+    "viewUsers": "Ver usuarios integrados"
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "title": "Demandes de jour libre",
+  "subtitle": "Gérez les demandes de jour libre des employés",
+  "selectCompanyHint": "Sélectionnez une entreprise dans le menu supérieur pour voir les demandes de jour libre.",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Opérations",
+    "requests": "Demandes",
+    "freeday": "Jours off"
+  },
+  "buttons": {
+    "add": "Nouvelle Demande"
+  },
+  "tabs": {
+    "pending": "En Attente",
+    "approved": "Approuvées",
+    "rejected": "Rejetées"
+  },
+  "pending": {
+    "yes": "Oui",
+    "no": "Non",
+    "buttons": {
+      "view": "Voir",
+      "approve": "Approuver",
+      "reject": "Rejeter"
+    },
+    "status": {
+      "pending": "En Attente",
+      "approved": "Approuvée",
+      "rejected": "Rejetée"
+    },
+    "table": {
+      "loading": "Chargement des demandes en attente...",
+      "noData": "Aucune demande en attente",
+      "headers": {
+        "employee": "Employé",
+        "absenceType": "Type d'Absence",
+        "reason": "Raison",
+        "startDate": "Date de Début",
+        "endDate": "Date de Fin",
+        "withSalary": "Avec Salaire",
+        "requestedBy": "Demandé par",
+        "createdAt": "Date de Demande",
+        "status": "Statut",
+        "actions": "Actions"
+      }
+    },
+    "pagination": {
+      "showing": "Affichage de {current} sur {total} demandes",
+      "recordsPerPage": "Enregistrements par page",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "page": "Page {current} sur {total}"
+    },
+    "ariaLabels": {
+      "viewRequest": "Voir la demande",
+      "approveRequest": "Approuver la demande",
+      "rejectRequest": "Rejeter la demande",
+      "cancelRequest": "Annuler la demande"
+    },
+    "cancelModal": {
+      "title": "Annuler la demande",
+      "description": "Confirmez-vous l'annulation de cette demande en attente ? Cette action est irréversible.",
+      "confirm": "Annuler",
+      "back": "Retour",
+      "processing": "Annulation…"
+    },
+    "toast": {
+      "cancelSuccess": {
+        "title": "Demande annulée",
+        "description": "La demande en attente a été supprimée."
+      },
+      "cancelError": {
+        "title": "Annulation impossible",
+        "description": "Réessayez ou contactez le support."
+      }
+    }
+  },
+  "approved": {
+    "yes": "Oui",
+    "no": "Non",
+    "status": {
+      "pending": "En Attente",
+      "approved": "Approuvée",
+      "rejected": "Rejetée"
+    },
+    "table": {
+      "loading": "Chargement des demandes approuvées...",
+      "noData": "Aucune demande approuvée",
+      "headers": {
+        "employee": "Employé",
+        "absenceType": "Type d'Absence",
+        "reason": "Raison",
+        "startDate": "Date de Début",
+        "endDate": "Date de Fin",
+        "withSalary": "Avec Salaire",
+        "requestedBy": "Demandé par",
+        "approvedBy": "Approuvé par",
+        "approvedAt": "Date d'Approbation",
+        "status": "Statut",
+        "actions": "Actions"
+      }
+    },
+    "pagination": {
+      "showing": "Affichage de {current} sur {total} demandes",
+      "recordsPerPage": "Enregistrements par page",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "page": "Page {current} sur {total}"
+    },
+    "ariaLabels": {
+      "viewRequest": "Voir la demande"
+    }
+  },
+  "rejected": {
+    "yes": "Oui",
+    "no": "Non",
+    "status": {
+      "pending": "En Attente",
+      "approved": "Approuvée",
+      "rejected": "Rejetée"
+    },
+    "table": {
+      "loading": "Chargement des demandes rejetées...",
+      "noData": "Aucune demande rejetée",
+      "headers": {
+        "employee": "Employé",
+        "absenceType": "Type d'Absence",
+        "reason": "Raison",
+        "startDate": "Date de Début",
+        "endDate": "Date de Fin",
+        "withSalary": "Avec Salaire",
+        "requestedBy": "Demandé par",
+        "rejectedAt": "Date de Rejet",
+        "rejectionReason": "Raison du Rejet",
+        "status": "Statut",
+        "actions": "Actions"
+      }
+    },
+    "pagination": {
+      "showing": "Affichage de {current} sur {total} demandes",
+      "recordsPerPage": "Enregistrements par page",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "page": "Page {current} sur {total}"
+    },
+    "ariaLabels": {
+      "viewRequest": "Voir la demande"
+    }
+  },
+  "modal": {
+    "title": {
+      "create": "Demander un Jour de Congé",
+      "view": "Voir la Demande",
+      "edit": "Modifier la Demande"
+    },
+    "fields": {
+      "employee": "Employé",
+      "absenceType": "Type d'Absence",
+      "absenceTypePlaceholder": "Sélectionnez un type d'absence",
+      "startDate": "Date de Début",
+      "endDate": "Date de Fin",
+      "observation": "Observation",
+      "observationPlaceholder": "Observations supplémentaires (facultatif)",
+      "withSalary": "Avec salaire",
+      "reason": "Motif supplémentaire",
+      "reasonPlaceholder": "Motif supplémentaire (facultatif)"
+    },
+    "validation": {
+      "absenceTypeRequired": "Sélectionnez un type d'absence",
+      "startDateRequired": "Sélectionnez la date de début",
+      "startDateFuture": "La date de début doit être postérieure à aujourd'hui",
+      "endDateRequired": "Sélectionnez la date de fin",
+      "endDateAfterStart": "La date de fin doit être égale ou postérieure à la date de début",
+      "endDateFuture": "La date de fin doit être postérieure à aujourd'hui",
+      "invalidDates": "Veuillez entrer des dates de début et de fin valides",
+      "noEmployeeId": "Impossible d'identifier l'employé. Veuillez vous reconnecter."
+    },
+    "timeBank": {
+      "title": "Déduire de la Banque d'Heures",
+      "description": "Les jours demandés seront déduits de la banque de jours de repos",
+      "availableBalance": "Solde disponible",
+      "hours": "hrs",
+      "days": "jours",
+      "noActiveBank": "Vous n'avez pas de banque de jours de repos active",
+      "viewInfo": "Cette demande est imputée à la banque d'heures"
+    },
+    "requestInfo": {
+      "title": "Informations sur la Demande",
+      "requestedBy": "Demandé par",
+      "requestDate": "Date de la demande",
+      "approvedBy": "Approuvé par",
+      "approvalDate": "Date d'approbation",
+      "rejectedBy": "Rejeté par",
+      "rejectionDate": "Date de rejet",
+      "rejectionReason": "Motif du rejet"
+    },
+    "buttons": {
+      "cancel": "Annuler",
+      "close": "Fermer",
+      "submit": "Soumettre la Demande",
+      "update": "Mettre à Jour la Demande",
+      "processing": "Traitement..."
+    },
+    "toast": {
+      "success": {
+        "title": "Demande soumise",
+        "description": "Votre demande de jour de congé a été soumise avec succès"
+      },
+      "error": {
+        "title": "Erreur",
+        "description": "Impossible de soumettre la demande. Veuillez réessayer."
+      }
+    },
+    "overlap": {
+      "title": "Conflits de dates possibles",
+      "checking": "Vérification des chevauchements…",
+      "typeFREEDAY": "Demande de jour off",
+      "typeABSENCE": "Absence",
+      "typeHOURLY_PERMISSION": "Permission horaire",
+      "dateRange": "{start} – {end}"
+    },
+    "loadingAbsenceTypes": "Chargement des types d'absence..."
+  },
+  "approveModal": {
+    "title": "Approuver la demande de jour off",
+    "summaryTitle": "Résumé de la demande",
+    "employee": "Employé",
+    "reason": "Motif",
+    "startDate": "Date de début",
+    "endDate": "Date de fin",
+    "withSalary": "Avec salaire",
+    "requestedBy": "Demandé par",
+    "observation": "Observation",
+    "confirmTitle": "Confirmer l'approbation",
+    "confirmDescription": "Voulez-vous vraiment approuver cette demande de jour off ? L'employé sera informé.",
+    "yes": "Oui",
+    "no": "Non",
+    "cancel": "Annuler",
+    "approve": "Approuver la demande",
+    "approving": "Approbation…",
+    "toastSuccessTitle": "Demande approuvée",
+    "toastSuccessDescription": "La demande de jour off a été approuvée.",
+    "toastErrorTitle": "Erreur",
+    "toastErrorDescription": "Impossible d'approuver la demande."
+  },
+  "tour": {
+    "startButton": "Voir le guide",
+    "buttons": {
+      "next": "Suivant",
+      "previous": "Précédent",
+      "done": "Terminer"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Bienvenue dans les demandes de jour off",
+        "description": "Créez des demandes et consultez les en attente ; les approbateurs peuvent approuver ou rejeter ; tous peuvent voir approuvées ou rejetées."
+      },
+      "toolbar": {
+        "title": "Nouvelle demande",
+        "description": "Créez une demande de jour libre (en tant qu'employé, pour vous-même)."
+      },
+      "tabs": {
+        "title": "Onglets En attente, Approuvées, Rejetées",
+        "description": "Naviguez entre les demandes en attente, approuvées ou rejetées. Chaque onglet affiche la liste correspondante."
+      },
+      "table": {
+        "title": "Tableau des demandes",
+        "description": "Liste avec employé, motif, dates, avec salaire et statut. Dans les en attente vous pouvez approuver ou rejeter."
+      },
+      "pagination": {
+        "title": "Pagination",
+        "description": "Naviguez entre les pages et ajustez le nombre d'enregistrements affichés."
+      }
+    }
+  }
+}

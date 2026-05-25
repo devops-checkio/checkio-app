@@ -1,0 +1,464 @@
+{
+  "title": "Demandes d'Heures Supplémentaires",
+  "subtitle": "Gérez les demandes d'heures supplémentaires des employés",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Opérations",
+    "requests": "Demandes",
+    "overtime": "Heures Supplémentaires"
+  },
+  "buttons": {
+    "bulkUpload": "Chargement en Masse",
+    "newRequest": "Nouvelle Demande"
+  },
+  "tabs": {
+    "pending": {
+      "label": "En Attente",
+      "table": {
+        "loading": "Chargement des demandes en attente...",
+        "noData": "Aucune demande en attente",
+        "noDataDescription": "Lorsqu'il y aura des demandes à examiner, elles apparaîtront ici. Vous pouvez aussi en créer une avec le bouton ci-dessus.",
+        "headers": {
+          "employee": "Employé",
+          "type": "Type",
+          "startDate": "Date de Début",
+          "endDate": "Date de Fin",
+          "beforeMinutes": "Minutes Avant",
+          "afterMinutes": "Minutes Après",
+          "createdAt": "Date de Demande",
+          "status": "Statut",
+          "actions": "Actions"
+        }
+      },
+      "status": {
+        "pending": "En Attente"
+      },
+      "types": {
+        "perSchedule": "Par Horaire",
+        "perHours": "Par Heures"
+      },
+      "pagination": {
+        "showing": "Affichage de {current} sur {total} résultats",
+        "recordsPerPage": "Enregistrements par page",
+        "previous": "Précédent",
+        "next": "Suivant",
+        "page": "Page {current} sur {total}"
+      },
+      "ariaLabels": {
+        "view": "Voir la demande",
+        "approve": "Approuver la demande",
+        "reject": "Rejeter la demande"
+      },
+      "buttons": {
+        "view": "Voir",
+        "approve": "Approuver",
+        "reject": "Rejeter"
+      }
+    },
+    "approved": {
+      "label": "Approuvées",
+      "table": {
+        "loading": "Chargement des demandes approuvées...",
+        "noData": "Aucune demande approuvée",
+        "noDataDescription": "Les demandes approuvées seront listées ici lorsqu'il existe des enregistrements pour l'entreprise sélectionnée.",
+        "headers": {
+          "employee": "Employé",
+          "type": "Type",
+          "startDate": "Date de Début",
+          "endDate": "Date de Fin",
+          "beforeMinutes": "Minutes Avant",
+          "afterMinutes": "Minutes Après",
+          "authorizedBy": "Autorisé par",
+          "approvedBy": "Approuvé par",
+          "approvedAt": "Date d'Approbation",
+          "createdAt": "Date de la demande",
+          "status": "Statut",
+          "actions": "Actions"
+        }
+      },
+      "status": {
+        "approved": "Approuvée"
+      },
+      "types": {
+        "perSchedule": "Par Horaire",
+        "perHours": "Par Heures"
+      },
+      "pagination": {
+        "showing": "Affichage de {current} sur {total} résultats",
+        "recordsPerPage": "Enregistrements par page",
+        "previous": "Précédent",
+        "next": "Suivant",
+        "page": "Page {current} sur {total}"
+      },
+      "ariaLabels": {
+        "view": "Voir la demande"
+      },
+      "buttons": {
+        "view": "Voir"
+      }
+    },
+    "rejected": {
+      "label": "Rejetées",
+      "table": {
+        "loading": "Chargement des demandes rejetées...",
+        "noData": "Aucune demande rejetée",
+        "noDataDescription": "Les demandes rejetées s'afficheront dans cet onglet le cas échéant.",
+        "headers": {
+          "employee": "Employé",
+          "type": "Type",
+          "startDate": "Date de Début",
+          "endDate": "Date de Fin",
+          "beforeMinutes": "Minutes Avant",
+          "afterMinutes": "Minutes Après",
+          "rejectedBy": "Rejeté par",
+          "rejectedAt": "Date de Rejet",
+          "rejectionReason": "Raison du Rejet",
+          "createdAt": "Date de la demande",
+          "status": "Statut",
+          "actions": "Actions"
+        }
+      },
+      "status": {
+        "rejected": "Rejetée"
+      },
+      "types": {
+        "perSchedule": "Par Horaire",
+        "perHours": "Par Heures"
+      },
+      "pagination": {
+        "showing": "Affichage de {current} sur {total} résultats",
+        "recordsPerPage": "Enregistrements par page",
+        "previous": "Précédent",
+        "next": "Suivant",
+        "page": "Page {current} sur {total}"
+      },
+      "ariaLabels": {
+        "view": "Voir la demande"
+      },
+      "buttons": {
+        "view": "Voir"
+      }
+    }
+  },
+  "modal": {
+    "title": {
+      "create": "Demander des Heures Supplémentaires",
+      "view": "Voir la Demande d'Heures Supplémentaires",
+      "edit": "Modifier la Demande d'Heures Supplémentaires",
+      "default": "Demande d'Heures Supplémentaires"
+    },
+    "companyRequired": {
+      "hint": "Sélectionnez une entreprise dans le menu supérieur pour charger la liste des employés."
+    },
+    "employeeSelection": {
+      "title": "Sélection des employés",
+      "description": "Filtrez le tableau et cochez un ou plusieurs employés. Poursuivez pour compléter la demande.",
+      "selectAllAria": "Sélectionner toutes les lignes de cette page",
+      "selectRowAria": "Sélectionner l'employé"
+    },
+    "progress": {
+      "label": "Progression de l'envoi"
+    },
+    "fields": {
+      "employee": "Employé",
+      "type": "Type",
+      "startDate": "Date de Début",
+      "endDate": "Date de Fin",
+      "startTime": "Heure de début",
+      "endTime": "Heure de fin",
+      "applicationDate": "Jour d'application",
+      "aditionHoursBeforeMinutes": "Minutes Supplémentaires Avant",
+      "aditionHoursAfterMinutes": "Minutes Supplémentaires Après",
+      "observation": "Observation",
+      "document": "Pièce jointe"
+    },
+    "placeholders": {
+      "employee": "Sélectionner un employé",
+      "type": "Sélectionner le type",
+      "startDate": "jj/mm/aaaa",
+      "endDate": "jj/mm/aaaa",
+      "applicationDate": "jj/mm/aaaa",
+      "aditionHoursBeforeMinutes": "Entrez les minutes supplémentaires avant",
+      "aditionHoursAfterMinutes": "Entrez les minutes supplémentaires après",
+      "observation": "Entrez une observation (optionnel)"
+    },
+    "types": {
+      "perSchedule": "Par Horaire",
+      "perHours": "Par Heures"
+    },
+    "validation": {
+      "employeeRequired": "Veuillez sélectionner un employé",
+      "typeRequired": "Veuillez sélectionner le type",
+      "startDateRequired": "Veuillez sélectionner la date de début",
+      "endDateRequired": "Veuillez sélectionner la date de fin",
+      "startTimeRequired": "Sélectionnez l'heure de début",
+      "endTimeRequired": "Sélectionnez l'heure de fin",
+      "applicationDateRequired": "Sélectionnez le jour d'application",
+      "errors": {
+        "dateRequired": {
+          "title": "Erreur",
+          "description": "Veuillez remplir les dates requises"
+        },
+        "timeRequired": {
+          "title": "Erreur",
+          "description": "Indiquez l'heure de début et l'heure de fin"
+        },
+        "invalidRange": {
+          "title": "Erreur",
+          "description": "La date et l'heure de fin doivent être postérieures au début"
+        },
+        "applicationDateRequired": {
+          "title": "Erreur",
+          "description": "Sélectionnez le jour auquel s'appliquent les minutes supplémentaires"
+        },
+        "hoursRequired": {
+          "title": "Erreur",
+          "description": "Veuillez entrer les minutes supplémentaires requises"
+        },
+        "invalidFileType": {
+          "title": "Erreur",
+          "description": "Seuls les fichiers PDF sont autorisés"
+        }
+      }
+    },
+    "buttons": {
+      "create": "Créer Demande",
+      "update": "Mettre à Jour Demande",
+      "cancel": "Annuler",
+      "creating": "Création...",
+      "updating": "Mise à jour...",
+      "selectDocument": "Sélectionner Document"
+    },
+    "preview": {
+      "title": "Aperçu du document",
+      "noDocument": "Aucun document à prévisualiser",
+      "uploadHint": "Téléchargez un document PDF pour le prévisualiser ici",
+      "fullscreen": "Plein écran",
+      "exitFullscreen": "Quitter le plein écran",
+      "close": "Fermer l'aperçu",
+      "existingDocument": "Document existant",
+      "embedTitle": "Aperçu PDF"
+    },
+    "toast": {
+      "createSuccess": {
+        "title": "Demande créée",
+        "description": "La demande d'heures supplémentaires a été créée avec succès"
+      },
+      "createError": {
+        "title": "Processus terminé avec des erreurs",
+        "description": "{successCount} demandes créées avec succès. {errorCount} n’ont pas été enregistrées (non créées dans le système).",
+        "titleNoneCreated": "La demande n’a pas été créée",
+        "descriptionWithDetail": "{summary} Motif : {detail}",
+        "unknown": "Erreur inconnue"
+      },
+      "uploadError": {
+        "title": "Erreur",
+        "description": "Erreur lors du téléchargement du document"
+      }
+    },
+    "approve": {
+      "title": "Approuver Demande d'Heures Supplémentaires",
+      "types": {
+        "perSchedule": "Par Horaire",
+        "perHours": "Par Heures"
+      },
+      "details": {
+        "title": "Détails de la Demande",
+        "fields": {
+          "employee": "Employé",
+          "type": "Type",
+          "startDate": "Date de Début",
+          "endDate": "Date de Fin",
+          "beforeMinutes": "Minutes Avant",
+          "afterMinutes": "Minutes Après",
+          "observation": "Observation",
+          "createdAt": "Date de demande"
+        }
+      },
+      "confirmation": {
+        "title": "Êtes-vous sûr de vouloir approuver cette demande?",
+        "description": "En approuvant cette demande, les heures supplémentaires seront enregistrées pour l'employé."
+      },
+      "buttons": {
+        "cancel": "Annuler",
+        "approve": "Approuver Demande",
+        "processing": "Traitement en cours..."
+      },
+      "toast": {
+        "success": {
+          "title": "Demande approuvée",
+          "description": "La demande d'heures supplémentaires a été approuvée avec succès"
+        },
+        "error": {
+          "title": "Erreur",
+          "description": "Erreur lors de l'approbation de la demande"
+        }
+      }
+    },
+    "reject": {
+      "title": "Rejeter Demande d'Heures Supplémentaires",
+      "fields": {
+        "rejectionReason": "Raison du Rejet"
+      },
+      "types": {
+        "perSchedule": "Par Horaire",
+        "perHours": "Par Heures"
+      },
+      "placeholders": {
+        "rejectionReason": "Expliquez pourquoi cette demande d'heures supplémentaires est rejetée..."
+      },
+      "validation": {
+        "rejectionReasonRequired": "Veuillez entrer la raison du rejet"
+      },
+      "details": {
+        "title": "Détails de la Demande",
+        "fields": {
+          "employee": "Employé",
+          "type": "Type",
+          "startDate": "Date de Début",
+          "endDate": "Date de Fin",
+          "beforeMinutes": "Minutes Avant",
+          "afterMinutes": "Minutes Après",
+          "observation": "Observation",
+          "createdAt": "Date de demande"
+        }
+      },
+      "confirmation": {
+        "title": "Êtes-vous sûr de vouloir rejeter cette demande?",
+        "description": "En rejetant cette demande, les heures supplémentaires ne seront pas enregistrées pour l'employé."
+      },
+      "buttons": {
+        "cancel": "Annuler",
+        "reject": "Rejeter Demande",
+        "processing": "Traitement en cours..."
+      },
+      "toast": {
+        "success": {
+          "title": "Demande rejetée",
+          "description": "La demande d'heures supplémentaires a été rejetée avec succès"
+        },
+        "error": {
+          "title": "Erreur",
+          "description": "Erreur lors du rejet de la demande"
+        }
+      }
+    }
+  },
+  "massive": {
+    "title": "Chargement en Masse des Demandes d'Heures Supplémentaires",
+    "companyRequired": {
+      "hint": "Sélectionnez une entreprise dans le menu supérieur pour charger les employés et activer la sélection par ligne."
+    },
+    "employee": {
+      "placeholder": "Sélectionner un employé"
+    },
+    "progress": {
+      "label": "Traitement : {percent} %"
+    },
+    "exports": {
+      "downloadSuccess": "Télécharger les succès",
+      "downloadErrors": "Télécharger les erreurs"
+    },
+    "instructions": {
+      "title": "Comment utiliser le chargement en masse",
+      "step1": "Sélectionnez le type de demande qui s'appliquera à toutes les lignes",
+      "step2": "Téléchargez le modèle Excel ou ajoutez des lignes manuellement",
+      "step3": "Remplissez les données requises selon le type sélectionné",
+      "step4": "Optionnellement, joignez un document PDF pour chaque demande",
+      "step5": "Cliquez sur 'Créer Demandes' pour traiter toutes les demandes"
+    },
+    "globalType": {
+      "label": "Type de Demande (S'applique à toutes les lignes)",
+      "info": "Si vous changez le type, toutes les lignes du tableau seront supprimées."
+    },
+    "typeChanged": {
+      "title": "Type modifié",
+      "description": "Le tableau a été réinitialisé. Veuillez recharger les données."
+    },
+    "document": {
+      "upload": "Télécharger PDF"
+    },
+    "buttons": {
+      "downloadTemplate": "Télécharger Modèle",
+      "uploadExcel": "Télécharger Excel",
+      "addRow": "Ajouter Ligne",
+      "close": "Fermer",
+      "cancel": "Annuler",
+      "retryFailed": "Réessayer les échecs",
+      "create": "Créer Demandes",
+      "processing": "Traitement en cours..."
+    },
+    "types": {
+      "perSchedule": "Par Horaire",
+      "perHours": "Par Heures"
+    },
+    "table": {
+      "headers": {
+        "employee": "Employé",
+        "documentNumber": "Numéro de Document",
+        "type": "Type",
+        "startDate": "Date de Début",
+        "endDate": "Date de Fin",
+        "startTime": "Heure début",
+        "endTime": "Heure fin",
+        "applicationDate": "Jour d'application",
+        "beforeMinutes": "Minutes Avant",
+        "afterMinutes": "Minutes Après",
+        "observation": "Observation",
+        "document": "Pièce jointe",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "status": {
+        "pending": "En attente",
+        "processing": "Traitement",
+        "success": "Succès",
+        "successHint": "Demande créée avec succès",
+        "error": "Erreur"
+      },
+      "actions": {
+        "delete": "Supprimer la ligne"
+      }
+    },
+    "validation": {
+      "errors": {
+        "invalidFileType": {
+          "title": "Type de fichier invalide",
+          "description": "Seuls les fichiers PDF sont autorisés."
+        }
+      },
+      "noRequests": {
+        "title": "Erreur",
+        "description": "Veuillez ajouter au moins une demande"
+      }
+    },
+    "processing": {
+      "title": "Traitement des demandes..."
+    },
+    "excel": {
+      "uploadSuccess": {
+        "title": "Excel téléchargé",
+        "description": "Chargement de {count} demandes depuis le fichier Excel"
+      }
+    },
+    "toast": {
+      "success": {
+        "title": "Demandes créées",
+        "description": "Création de {count} demandes avec succès"
+      },
+      "partialSuccess": {
+        "title": "Processus terminé",
+        "description": "Certaines demandes ont été créées avec succès"
+      },
+      "withErrors": {
+        "titleNoneCreated": "La demande n’a pas été créée",
+        "title": "Processus terminé avec erreurs",
+        "descriptionSummary": "{successCount} demandes créées correctement. {errorCount} n’ont pas été enregistrées (non créées dans le système). Consultez le tableau pour le détail.",
+        "descriptionFirstError": "{summary} Motif (première ligne en erreur) : {detail}",
+        "retryTitle": "Nouvel essai terminé avec erreurs",
+        "retryDescription": "Certains enregistrements n’ont toujours pas pu être créés. Consultez le tableau pour le motif de chaque ligne.",
+        "unknownError": "Erreur inconnue"
+      }
+    }
+  }
+}

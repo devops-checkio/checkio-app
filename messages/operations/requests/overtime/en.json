@@ -1,0 +1,464 @@
+{
+  "title": "Overtime Requests",
+  "subtitle": "Manage employee overtime requests",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Operations",
+    "requests": "Requests",
+    "overtime": "Overtime"
+  },
+  "buttons": {
+    "bulkUpload": "Bulk Upload",
+    "newRequest": "New Request"
+  },
+  "tabs": {
+    "pending": {
+      "label": "Pending",
+      "table": {
+        "loading": "Loading pending requests...",
+        "noData": "No pending requests",
+        "noDataDescription": "When there are requests to review, they will appear here. You can also create a new one using the button above.",
+        "headers": {
+          "employee": "Employee",
+          "type": "Type",
+          "startDate": "Start Date",
+          "endDate": "End Date",
+          "beforeMinutes": "Before Minutes",
+          "afterMinutes": "After Minutes",
+          "createdAt": "Request Date",
+          "status": "Status",
+          "actions": "Actions"
+        }
+      },
+      "status": {
+        "pending": "Pending"
+      },
+      "types": {
+        "perSchedule": "Per Schedule",
+        "perHours": "Per Hours"
+      },
+      "pagination": {
+        "showing": "Showing {current} of {total} results",
+        "recordsPerPage": "Records per page",
+        "previous": "Previous",
+        "next": "Next",
+        "page": "Page {current} of {total}"
+      },
+      "ariaLabels": {
+        "view": "View request",
+        "approve": "Approve request",
+        "reject": "Reject request"
+      },
+      "buttons": {
+        "view": "View",
+        "approve": "Approve",
+        "reject": "Reject"
+      }
+    },
+    "approved": {
+      "label": "Approved",
+      "table": {
+        "loading": "Loading approved requests...",
+        "noData": "No approved requests",
+        "noDataDescription": "Approved requests will be listed here when there are records for the selected company.",
+        "headers": {
+          "employee": "Employee",
+          "type": "Type",
+          "startDate": "Start Date",
+          "endDate": "End Date",
+          "beforeMinutes": "Before Minutes",
+          "afterMinutes": "After Minutes",
+          "authorizedBy": "Authorized By",
+          "approvedBy": "Approved By",
+          "approvedAt": "Approval Date",
+          "createdAt": "Request Date",
+          "status": "Status",
+          "actions": "Actions"
+        }
+      },
+      "status": {
+        "approved": "Approved"
+      },
+      "types": {
+        "perSchedule": "Per Schedule",
+        "perHours": "Per Hours"
+      },
+      "pagination": {
+        "showing": "Showing {current} of {total} results",
+        "recordsPerPage": "Records per page",
+        "previous": "Previous",
+        "next": "Next",
+        "page": "Page {current} of {total}"
+      },
+      "ariaLabels": {
+        "view": "View request"
+      },
+      "buttons": {
+        "view": "View"
+      }
+    },
+    "rejected": {
+      "label": "Rejected",
+      "table": {
+        "loading": "Loading rejected requests...",
+        "noData": "No rejected requests",
+        "noDataDescription": "Rejected requests will show in this tab when applicable.",
+        "headers": {
+          "employee": "Employee",
+          "type": "Type",
+          "startDate": "Start Date",
+          "endDate": "End Date",
+          "beforeMinutes": "Before Minutes",
+          "afterMinutes": "After Minutes",
+          "rejectedBy": "Rejected By",
+          "rejectedAt": "Rejection Date",
+          "rejectionReason": "Rejection Reason",
+          "createdAt": "Request Date",
+          "status": "Status",
+          "actions": "Actions"
+        }
+      },
+      "status": {
+        "rejected": "Rejected"
+      },
+      "types": {
+        "perSchedule": "Per Schedule",
+        "perHours": "Per Hours"
+      },
+      "pagination": {
+        "showing": "Showing {current} of {total} results",
+        "recordsPerPage": "Records per page",
+        "previous": "Previous",
+        "next": "Next",
+        "page": "Page {current} of {total}"
+      },
+      "ariaLabels": {
+        "view": "View request"
+      },
+      "buttons": {
+        "view": "View"
+      }
+    }
+  },
+  "modal": {
+    "title": {
+      "create": "Request Overtime",
+      "view": "View Overtime Request",
+      "edit": "Edit Overtime Request",
+      "default": "Overtime Request"
+    },
+    "companyRequired": {
+      "hint": "Select a company in the top menu to load the employee list."
+    },
+    "employeeSelection": {
+      "title": "Employee selection",
+      "description": "Filter the table and select one or more employees. Then continue to complete the request.",
+      "selectAllAria": "Select all rows on this page",
+      "selectRowAria": "Select employee"
+    },
+    "progress": {
+      "label": "Submission progress"
+    },
+    "fields": {
+      "employee": "Employee",
+      "type": "Type",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "startTime": "Start time",
+      "endTime": "End time",
+      "applicationDate": "Application day",
+      "aditionHoursBeforeMinutes": "Additional Minutes Before",
+      "aditionHoursAfterMinutes": "Additional Minutes After",
+      "observation": "Observation",
+      "document": "Attachment"
+    },
+    "placeholders": {
+      "employee": "Select employee",
+      "type": "Select type",
+      "startDate": "mm/dd/yyyy",
+      "endDate": "mm/dd/yyyy",
+      "applicationDate": "mm/dd/yyyy",
+      "aditionHoursBeforeMinutes": "Enter additional minutes before",
+      "aditionHoursAfterMinutes": "Enter additional minutes after",
+      "observation": "Enter an observation (optional)"
+    },
+    "types": {
+      "perSchedule": "Per Schedule",
+      "perHours": "Per Hours"
+    },
+    "validation": {
+      "employeeRequired": "Please select an employee",
+      "typeRequired": "Please select the type",
+      "startDateRequired": "Please select the start date",
+      "endDateRequired": "Please select the end date",
+      "startTimeRequired": "Select the start time",
+      "endTimeRequired": "Select the end time",
+      "applicationDateRequired": "Select the application day",
+      "errors": {
+        "dateRequired": {
+          "title": "Error",
+          "description": "Please complete the required dates"
+        },
+        "timeRequired": {
+          "title": "Error",
+          "description": "Start time and end time are required"
+        },
+        "invalidRange": {
+          "title": "Error",
+          "description": "End date and time must be after start date and time"
+        },
+        "applicationDateRequired": {
+          "title": "Error",
+          "description": "Select the day the additional minutes apply to"
+        },
+        "hoursRequired": {
+          "title": "Error",
+          "description": "Please enter the required additional minutes"
+        },
+        "invalidFileType": {
+          "title": "Error",
+          "description": "Only PDF files are allowed"
+        }
+      }
+    },
+    "buttons": {
+      "create": "Create Request",
+      "update": "Update Request",
+      "cancel": "Cancel",
+      "creating": "Creating...",
+      "updating": "Updating...",
+      "selectDocument": "Select Document"
+    },
+    "preview": {
+      "title": "Document preview",
+      "noDocument": "No document to preview",
+      "uploadHint": "Upload a PDF document to preview it here",
+      "fullscreen": "Fullscreen",
+      "exitFullscreen": "Exit fullscreen",
+      "close": "Close preview",
+      "existingDocument": "Existing document",
+      "embedTitle": "PDF preview"
+    },
+    "toast": {
+      "createSuccess": {
+        "title": "Request created",
+        "description": "The overtime request has been created successfully"
+      },
+      "createError": {
+        "title": "Process completed with errors",
+        "description": "{successCount} requests created successfully. {errorCount} were not saved (not created in the system).",
+        "titleNoneCreated": "Request was not created",
+        "descriptionWithDetail": "{summary} Reason: {detail}",
+        "unknown": "Unknown error"
+      },
+      "uploadError": {
+        "title": "Error",
+        "description": "Error uploading the document"
+      }
+    },
+    "approve": {
+      "title": "Approve Overtime Request",
+      "types": {
+        "perSchedule": "Per Schedule",
+        "perHours": "Per Hours"
+      },
+      "details": {
+        "title": "Request Details",
+        "fields": {
+          "employee": "Employee",
+          "type": "Type",
+          "startDate": "Start Date",
+          "endDate": "End Date",
+          "beforeMinutes": "Before Minutes",
+          "afterMinutes": "After Minutes",
+          "observation": "Observation",
+          "createdAt": "Request Date"
+        }
+      },
+      "confirmation": {
+        "title": "Are you sure you want to approve this request?",
+        "description": "By approving this request, the overtime will be registered for the employee."
+      },
+      "buttons": {
+        "cancel": "Cancel",
+        "approve": "Approve Request",
+        "processing": "Processing..."
+      },
+      "toast": {
+        "success": {
+          "title": "Request approved",
+          "description": "The overtime request has been approved successfully"
+        },
+        "error": {
+          "title": "Error",
+          "description": "Error approving the request"
+        }
+      }
+    },
+    "reject": {
+      "title": "Reject Overtime Request",
+      "fields": {
+        "rejectionReason": "Rejection Reason"
+      },
+      "types": {
+        "perSchedule": "Per Schedule",
+        "perHours": "Per Hours"
+      },
+      "placeholders": {
+        "rejectionReason": "Explain why this overtime request is being rejected..."
+      },
+      "validation": {
+        "rejectionReasonRequired": "Please enter the rejection reason"
+      },
+      "details": {
+        "title": "Request Details",
+        "fields": {
+          "employee": "Employee",
+          "type": "Type",
+          "startDate": "Start Date",
+          "endDate": "End Date",
+          "beforeMinutes": "Before Minutes",
+          "afterMinutes": "After Minutes",
+          "observation": "Observation",
+          "createdAt": "Request Date"
+        }
+      },
+      "confirmation": {
+        "title": "Are you sure you want to reject this request?",
+        "description": "By rejecting this request, the overtime will not be registered for the employee."
+      },
+      "buttons": {
+        "cancel": "Cancel",
+        "reject": "Reject Request",
+        "processing": "Processing..."
+      },
+      "toast": {
+        "success": {
+          "title": "Request rejected",
+          "description": "The overtime request has been rejected successfully"
+        },
+        "error": {
+          "title": "Error",
+          "description": "Error rejecting the request"
+        }
+      }
+    }
+  },
+  "massive": {
+    "title": "Bulk Upload Overtime Requests",
+    "companyRequired": {
+      "hint": "Select a company in the top menu to load employees and enable per-row selection."
+    },
+    "employee": {
+      "placeholder": "Select employee"
+    },
+    "progress": {
+      "label": "Processing: {percent}%"
+    },
+    "exports": {
+      "downloadSuccess": "Download successful",
+      "downloadErrors": "Download errors"
+    },
+    "instructions": {
+      "title": "How to use bulk upload",
+      "step1": "Select the request type that will apply to all rows",
+      "step2": "Download the Excel template or add rows manually",
+      "step3": "Fill in the required data according to the selected type",
+      "step4": "Optionally, attach a PDF document for each request",
+      "step5": "Click 'Create Requests' to process all requests"
+    },
+    "globalType": {
+      "label": "Request Type (Applies to all rows)",
+      "info": "If you change the type, all rows in the table will be deleted."
+    },
+    "typeChanged": {
+      "title": "Type changed",
+      "description": "The table has been reset. Please reload the data."
+    },
+    "document": {
+      "upload": "Upload PDF"
+    },
+    "buttons": {
+      "downloadTemplate": "Download Template",
+      "uploadExcel": "Upload Excel",
+      "addRow": "Add Row",
+      "close": "Close",
+      "cancel": "Cancel",
+      "retryFailed": "Retry failed",
+      "create": "Create Requests",
+      "processing": "Processing..."
+    },
+    "types": {
+      "perSchedule": "Per Schedule",
+      "perHours": "Per Hours"
+    },
+    "table": {
+      "headers": {
+        "employee": "Employee",
+        "documentNumber": "Document Number",
+        "type": "Type",
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "startTime": "Start time",
+        "endTime": "End time",
+        "applicationDate": "Application day",
+        "beforeMinutes": "Before Minutes",
+        "afterMinutes": "After Minutes",
+        "observation": "Observation",
+        "document": "Attachment",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "status": {
+        "pending": "Pending",
+        "processing": "Processing",
+        "success": "Success",
+        "successHint": "Request created successfully",
+        "error": "Error"
+      },
+      "actions": {
+        "delete": "Delete row"
+      }
+    },
+    "validation": {
+      "errors": {
+        "invalidFileType": {
+          "title": "Invalid file type",
+          "description": "Only PDF files are allowed."
+        }
+      },
+      "noRequests": {
+        "title": "Error",
+        "description": "Please add at least one request"
+      }
+    },
+    "processing": {
+      "title": "Processing requests..."
+    },
+    "excel": {
+      "uploadSuccess": {
+        "title": "Excel uploaded",
+        "description": "Loaded {count} requests from Excel file"
+      }
+    },
+    "toast": {
+      "success": {
+        "title": "Requests created",
+        "description": "Created {count} requests successfully"
+      },
+      "partialSuccess": {
+        "title": "Process completed",
+        "description": "Some requests were created successfully"
+      },
+      "withErrors": {
+        "titleNoneCreated": "Request was not created",
+        "title": "Process completed with errors",
+        "descriptionSummary": "{successCount} requests created successfully. {errorCount} were not saved (not created in the system). Check the table for details.",
+        "descriptionFirstError": "{summary} Reason (first row with error): {detail}",
+        "retryTitle": "Retry completed with errors",
+        "retryDescription": "Some records still could not be created. Check the table for each row’s reason.",
+        "unknownError": "Unknown error"
+      }
+    }
+  }
+}

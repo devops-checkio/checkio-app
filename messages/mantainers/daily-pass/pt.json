@@ -1,0 +1,79 @@
+{
+  "title": "Passes Diários",
+  "subtitle": "Gerencie os passes diários do sistema",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "dailyPass": "Passes Diários"
+  },
+  "buttons": {
+    "add": "Gerar Passe",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "cancel": "Cancelar",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "viewQrCode": "Ver QR"
+  },
+  "table": {
+    "headers": {
+      "name": "Nome",
+      "documentNumber": "Documento",
+      "status": "Status",
+      "expiresAt": "Expira",
+      "actions": "Ações"
+    },
+    "loading": "Carregando passes diários...",
+    "noData": "Nenhum passe diário encontrado",
+    "noDataDescription": "Gere um novo passe diário para começar."
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} resultados",
+    "recordsPerPage": "Registros por página:",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "page": "Página {current} de {total}"
+  },
+  "status": {
+    "active": "Ativo",
+    "expired": "Expirado",
+    "deactivated": "Desativado"
+  },
+  "delete": {
+    "title": "Confirmar exclusão",
+    "message": "Tem certeza de que deseja excluir este passe diário?",
+    "deleting": "Excluindo...",
+    "success": "Passe diário excluído com sucesso",
+    "error": "Erro ao excluir o passe. Por favor, tente novamente."
+  },
+  "ariaLabels": {
+    "viewQrCode": "Ver código QR",
+    "deletePass": "Excluir passe diário"
+  },
+  "tour": {
+    "startButton": "Ver guia",
+    "buttons": {
+      "next": "Próximo",
+      "previous": "Anterior",
+      "done": "Concluir"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Bem-vindo ao módulo Passes Diários",
+        "description": "Neste módulo você pode gerar passes temporários de acesso. Este guia mostrará as principais funcionalidades."
+      },
+      "toolbar": {
+        "title": "Ações principais",
+        "description": "A partir daqui você pode gerar um novo passe diário. Selecione a pessoa e a data de expiração."
+      },
+      "table": {
+        "title": "Tabela de passes diários",
+        "description": "Listagem de passes gerados com nome, documento, status e data de expiração. Use o botão QR para ver o código e o botão excluir para desativar um passe."
+      },
+      "pagination": {
+        "title": "Paginação",
+        "description": "Navegue entre as páginas e ajuste a quantidade de registros exibidos."
+      }
+    }
+  }
+}

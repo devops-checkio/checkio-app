@@ -1,0 +1,193 @@
+{
+  "title": "Gestão de Advertências",
+  "subtitle": "Gerencie as advertências dos funcionários",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Operações",
+    "warnings": "Advertências"
+  },
+  "buttons": {
+    "add": "Adicionar Advertência",
+    "edit": "Editar",
+    "view": "Ver",
+    "delete": "Excluir",
+    "deleting": "Excluindo...",
+    "cancel": "Cancelar",
+    "search": "Buscar",
+    "clear": "Limpar",
+    "downloadExcel": "Baixar Excel",
+    "previous": "Anterior",
+    "next": "Próximo"
+  },
+  "filters": {
+    "search": "Busca",
+    "searchPlaceholder": "Buscar por funcionário...",
+    "employee": "Funcionário",
+    "employeePlaceholder": "Selecione um funcionário",
+    "warningType": "Tipo de Advertência",
+    "warningTypePlaceholder": "Selecione um tipo"
+  },
+  "table": {
+    "headers": {
+      "employeeName": "Nome",
+      "documentNumber": "CPF/RG",
+      "warningType": "Tipo de Advertência",
+      "createdAt": "Data de Criação",
+      "actions": "Ações"
+    },
+    "loading": "Carregando advertências...",
+    "noData": "Nenhuma advertência encontrada",
+    "noDataDescription": "Não há advertências registradas para este filtro.",
+    "notAvailable": "N/A"
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} resultados",
+    "page": "Página {current} de {total}",
+    "recordsPerPage": "Registros por página"
+  },
+  "excel": {
+    "filename": "advertencias",
+    "sheetName": "Advertências",
+    "headers": {
+      "employeeName": "Nome",
+      "documentNumber": "CPF/RG",
+      "warningType": "Tipo de Advertência",
+      "createdAt": "Data de Criação"
+    }
+  },
+  "delete": {
+    "title": "Excluir Advertência",
+    "message": "Tem certeza de que deseja excluir esta advertência? Esta ação não pode ser desfeita."
+  },
+  "toast": {
+    "deleteSuccess": {
+      "title": "Advertência excluída com sucesso"
+    },
+    "deleteError": {
+      "description": "Erro ao excluir a advertência"
+    },
+    "excelSuccess": {
+      "title": "Excel gerado com sucesso"
+    },
+    "excelError": {
+      "title": "Erro ao gerar o Excel"
+    }
+  },
+  "ariaLabels": {
+    "viewWarning": "Ver advertência",
+    "editWarning": "Editar advertência",
+    "deleteWarning": "Excluir advertência"
+  },
+  "upsert": {
+    "title": {
+      "add": "Adicionar Advertência",
+      "edit": "Editar Advertência",
+      "view": "Ver Advertência"
+    },
+    "fields": {
+      "company": "Empresa",
+      "employee": "Funcionário",
+      "warningType": "Tipo de Advertência",
+      "startDate": "Data de Início",
+      "endDate": "Data de Fim",
+      "observation": "Observação",
+      "reportedBy": "Reportado por",
+      "document": "Documento"
+    },
+    "placeholders": {
+      "company": "Selecione uma empresa",
+      "warningType": "Selecione um tipo de advertência",
+      "startDate": "Selecione data",
+      "endDate": "Selecione data",
+      "observation": "Digite observações",
+      "reportedBy": "Nome de quem reporta"
+    },
+    "validation": {
+      "companyRequired": "Por favor selecione uma empresa",
+      "employeeRequired": "Por favor selecione um funcionário",
+      "warningTypeRequired": "Por favor selecione um tipo de advertência",
+      "errors": {
+        "invalidFileType": {
+          "title": "Tipo de arquivo inválido",
+          "description": "Apenas arquivos PDF são permitidos"
+        }
+      }
+    },
+    "buttons": {
+      "selectEmployee": "Selecionar trabalhador",
+      "selectDocument": "Selecionar documento",
+      "save": "SALVAR",
+      "update": "ATUALIZAR",
+      "saving": "Salvando...",
+      "updating": "Atualizando...",
+      "cancel": "Cancelar",
+      "close": "Fechar"
+    },
+    "messages": {
+      "selectCompanyFirst": "Primeiro selecione uma empresa"
+    },
+    "toast": {
+      "createSuccess": {
+        "title": "Advertência criada com sucesso",
+        "description": "A advertência foi criada corretamente"
+      },
+      "createError": {
+        "title": "Erro ao criar a advertência",
+        "description": "Ocorreu um erro ao criar a advertência"
+      },
+      "updateSuccess": {
+        "title": "Advertência atualizada com sucesso",
+        "description": "A advertência foi atualizada corretamente"
+      },
+      "updateError": {
+        "title": "Erro ao atualizar a advertência",
+        "description": "Ocorreu um erro ao atualizar a advertência"
+      },
+      "uploadError": {
+        "title": "Erro ao fazer upload do documento",
+        "description": "Erro ao fazer upload do documento"
+      }
+    },
+    "preview": {
+      "title": "Visualização",
+      "fullscreen": "Tela cheia",
+      "exitFullscreen": "Sair da tela cheia",
+      "close": "Fechar",
+      "noDocument": "Nenhum documento selecionado",
+      "uploadHint": "Envie um documento PDF para ver a visualização"
+    },
+    "employeePicker": {
+      "title": "Selecionar trabalhador",
+      "filters": {
+        "name": "Nome",
+        "namePlaceholder": "Buscar por Nomes ou Sobrenomes",
+        "documentNumber": "Documento",
+        "documentNumberPlaceholder": "Buscar por Número de Documento"
+      },
+      "table": {
+        "headers": {
+          "name": "Nome",
+          "documentNumber": "Documento",
+          "job": "Cargo"
+        },
+        "noData": "Nenhum funcionário encontrado",
+        "noDataDescription": "Não há funcionários registrados para este filtro.",
+        "ariaLabels": {
+          "selectEmployee": "Selecionar trabalhador"
+        }
+      },
+      "pagination": {
+        "showing": "Mostrando {current} de {total} resultados",
+        "page": "Página {current} de {total}",
+        "recordsPerPage": "Registros por página",
+        "previous": "Anterior",
+        "next": "Próximo"
+      },
+      "buttons": {
+        "cancel": "Cancelar",
+        "select": "Selecionar"
+      },
+      "loading": "Carregando funcionários..."
+    }
+  }
+}

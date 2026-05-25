@@ -1,0 +1,128 @@
+{
+  "successTitle": "Sucesso",
+  "title": "Gestão de Estruturas",
+  "subtitle": "Gerencie as estruturas do sistema",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenedores",
+    "structures": "Estruturas"
+  },
+  "buttons": {
+    "add": "Adicionar Estrutura",
+    "manageStructure": "Gerenciar Estrutura",
+    "downloadExcel": "Baixar Excel",
+    "search": "Buscar",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "cancel": "Cancelar",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "assignCompanies": "Atribuição de Empresas"
+  },
+  "table": {
+    "status": {
+      "yes": "Sim",
+      "no": "Não"
+    },
+    "headers": {
+      "isActive": "Ativo",
+      "name": "Nome",
+      "companies": "Empresas",
+      "actions": "Ações"
+    },
+    "loading": "Carregando estruturas...",
+    "noData": "Nenhuma estrutura encontrada",
+    "noDataDescription": "Crie uma nova estrutura para começar."
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} resultados",
+    "recordsPerPage": "Registros por página:",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "page": "Página {current} de {total}"
+  },
+  "ariaLabels": {
+    "editStructure": "Editar estrutura",
+    "deleteStructure": "Excluir estrutura",
+    "assignCompanies": "Atribuir empresas",
+    "manageStructure": "Gerenciar estrutura completa"
+  },
+  "filters": {
+    "searchPlaceholder": "Buscar Nome..."
+  },
+  "excel": {
+    "filename": "estruturas",
+    "sheetName": "Estruturas",
+    "headers": {
+      "name": "Nome",
+      "companies": "Empresas"
+    }
+  },
+  "delete": {
+    "message": "Tem certeza de que deseja excluir esta estrutura?",
+    "success": "Estrutura excluída com sucesso"
+  },
+  "structureDetail": {
+    "title": "Estrutura: {name}",
+    "configureLevels": "Configurar nomes de níveis",
+    "downloadStructure": "Baixar Estrutura (CSV)",
+    "noLevelsConfigured": "Nenhum nível configurado",
+    "noLevelsDescription": "Use «Configurar nomes de níveis» para adicionar o primeiro nível",
+    "structureLabel": "Estrutura",
+    "level": "Nível",
+    "backAria": "Voltar à lista de estruturas"
+  },
+  "levelDetail": {
+    "backAria": "Voltar à visão geral da estrutura",
+    "new": "Novo",
+    "bulkUpload": "Carga em massa",
+    "filterByParent": "Filtrar por pai",
+    "all": "Todos",
+    "noSubunits": "Nenhuma subunidade",
+    "noSubunitsDescription": "Use «Novo» ou «Carga em massa» para adicionar.",
+    "viewChildren": "Ver filhos",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "deleteSubunit": "Excluir subunidade",
+    "newSubunit": "Nova subunidade",
+    "editSubunit": "Editar subunidade",
+    "name": "Nome",
+    "code": "Código",
+    "parent": "Pai",
+    "noParent": "Sem pai",
+    "parents": "Pais",
+    "parentsSearchPlaceholder": "Pesquisar por nome ou código…",
+    "parentsSearchAria": "Filtrar lista de pais",
+    "parentsSelectFiltered": "Adicionar filtrados",
+    "parentsSelectAll": "Selecionar todos os pais",
+    "parentsClear": "Limpar seleção",
+    "parentsEmpty": "Nenhum pai disponível",
+    "parentsNoMatches": "Nenhum pai corresponde à pesquisa",
+    "parentsSelectedCount": "{count, plural, one {# pai selecionado} other {# pais selecionados}}",
+    "parentsPickerHint": "Clique numa linha para marcar ou desmarcar.",
+    "validationParentsRequired": "Selecione pelo menos um pai",
+    "validationNameRequired": "O nome é obrigatório",
+    "validationCodeRequired": "O código é obrigatório",
+    "namePlaceholder": "Ex.: Subunidade",
+    "codePlaceholder": "Ex.: COD-01",
+    "save": "Salvar",
+    "create": "Criar",
+    "saving": "Salvando",
+    "creating": "Criando",
+    "searchLabel": "Busca",
+    "searchPlaceholder": "Nome, código ou pai…",
+    "searchButton": "Buscar",
+    "searchResults": "Encontrados {count} resultado(s) para \"{term}\"",
+    "searchNoResults": "Nenhum resultado para \"{term}\"",
+    "loadError": "Erro ao carregar",
+    "retry": "Tentar novamente",
+    "employees": "Funcionários",
+    "bulkParentColumnLabel": "Pai(s): código, nome ou UUID; vários separados por vírgula. Se o código estiver duplicado, use o UUID.",
+    "bulkUploadModalTitle": "Carga em massa: {levelName}",
+    "loadingData": "Carregando…",
+    "uploadNoParentsWarning": "Crie pelo menos uma subunidade no nível anterior antes de usar a carga em massa neste nível.",
+    "toastSubunitCreated": "Subunidade criada com sucesso",
+    "toastSubunitUpdated": "Subunidade atualizada com sucesso",
+    "toastSubunitDeleted": "Subunidade excluída com sucesso"
+  }
+}

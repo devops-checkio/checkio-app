@@ -1,0 +1,196 @@
+{
+  "title": "Gestion de Présence",
+  "subtitle": "Gestion de Présence",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "assistance": "Gestion de Présence"
+  },
+  "assistanceAbsent": "Présences Absentes",
+  "assistanceIncomplete": "Présences Incomplètes",
+  "assistanceWithoutSchedule": "Présences Sans Horaire",
+  "assistanceCompleted": "Présences Complètes",
+  "assistancePending": "Présences en Attente",
+  "assistanceRejected": "Présences Rejetées",
+  "filterEmployee": "Employé",
+  "filterEmployeePlaceholder": "Rechercher par nom ou numéro de document...",
+  "auditMap": {
+    "noLocationData": "Aucune donnée de géolocalisation disponible pour cette marque",
+    "withinAuthorizedZone": "Dans la zone autorisée",
+    "withinMarginZone": "Dans la marge d'erreur (30m)",
+    "outsideAuthorizedZone": "En dehors de la zone autorisée",
+    "branchZone": "Zone de succursale",
+    "homeOfficeZone": "Zone de bureau à domicile",
+    "errorMarginZone": "Marge d'erreur (30m)",
+    "authorizedMarkingArea": "Zone de marquage autorisée",
+    "locationInfo": "Informations de Localisation",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "authorizedZonesCount": "Zones autorisées"
+  },
+  "detailTour": {
+    "startButton": "Voir le guide",
+    "buttons": {
+      "next": "Suivant",
+      "previous": "Précédent",
+      "done": "Terminer"
+    },
+    "tabs": {
+      "common": {
+        "steps": {
+          "welcome": {
+            "title": "Gestion d'assistance",
+            "description": "Vue des présences et actions disponibles selon l'onglet sélectionné."
+          },
+          "tabs": {
+            "title": "Vues de présence",
+            "description": "Chaque onglet affiche un type différent de présence. Le nombre indique les enregistrements nécessitant une attention. Cliquez sur un onglet pour changer de vue. Les onglets avec alerte (clignotant) ont des enregistrements en attente."
+          },
+          "filters": {
+            "title": "Filtres de recherche",
+            "description": "Filtrez par date (jour, mois, année ou plage), nom, document, poste ou succursale. Utilisez Effacer pour réinitialiser. Les filtres s'appliquent à tous les onglets."
+          },
+          "toolbar": {
+            "title": "Actions de l'onglet",
+            "description": "Les boutons varient selon l'onglet: créer des présences, compléter automatiquement, attribuer des horaires, approuver ou rejeter. Les actions nécessitant une sélection ne s'activent qu'en sélectionnant des lignes."
+          },
+          "table": {
+            "title": "Tableau des enregistrements",
+            "description": "Liste avec date, document, nom, marques et actions. Utilisez l'icône œil pour voir les détails des marques. Dans Incomplètes et Absentes, cochez les lignes pour les actions en masse."
+          },
+          "pagination": {
+            "title": "Pagination",
+            "description": "Naviguez entre les pages et ajustez les enregistrements par page (10, 20, 50, 100, 200)."
+          }
+        }
+      },
+      "1": {
+        "steps": {
+          "welcome": {
+            "title": "Présences Incomplètes",
+            "description": "Employés avec marques manquantes (entrée, sortie ou pauses). Ici vous pouvez: Créer des présences (pour ceux qui doivent assister mais n'ont pas de dossier), Compléter automatiquement (remplit les marques selon l'horaire), Compléter manuellement (marque par marque) ou Attribuer des horaires (donner un poste à ceux qui n'en ont pas). Cochez les lignes pour activer les actions en masse."
+          },
+          "toolbar": {
+            "title": "Actions disponibles - Incomplètes",
+            "description": "Créer des présences: génère un enregistrement pour les employés sans présence du jour. Compléter automatiquement: remplit entrée/sortie selon l'horaire assigné. Compléter manuellement: ouvre le modal pour compléter chaque marque. Attribuer des horaires: assigne un poste aux employés sélectionnés. Les trois derniers ne s'activent qu'en sélectionnant une ou plusieurs lignes."
+          },
+          "table": {
+            "title": "Colonnes du tableau",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Case à cocher</strong>: Sélectionnez les lignes pour actions en masse</li><li><strong>Date</strong>: Jour de présence</li><li><strong>N° Document</strong>: Document de l'employé</li><li><strong>Horaire</strong>: Poste et horaire prévu</li><li><strong>Nom</strong>: Nom de l'employé</li><li><strong>Entrée</strong>: Heure d'entrée (vide si non marqué)</li><li><strong>Pauses</strong>: Pauses enregistrées</li><li><strong>Sortie</strong>: Heure de sortie (vide si non marqué)</li><li><strong>Supplémentaires</strong>: Marques hors horaire</li><li><strong>Retards</strong>: Retards ou sorties anticipées</li><li><strong>Vérification Photos</strong>: Photos biométriques valides/invalides</li><li><strong>Actions</strong>: Clic pour voir le détail des marques</li></ul>"
+          }
+        }
+      },
+      "2": {
+        "steps": {
+          "welcome": {
+            "title": "Présences Sans Horaire",
+            "description": "Employés sans poste attribué pour le jour. Sans horaire ils ne peuvent pas marquer correctement. Ici vous pouvez Créer des présences ou Attribuer des horaires en masse. Cochez les lignes pour activer les actions dans la barre supérieure."
+          },
+          "toolbar": {
+            "title": "Actions disponibles - Sans Horaire",
+            "description": "Créer des présences: génère un enregistrement. Attribuer des horaires: assigne un poste aux employés sélectionnés. Ces actions s'activent en sélectionnant une ou plusieurs lignes."
+          },
+          "table": {
+            "title": "Colonnes du tableau",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Case à cocher</strong>: Sélectionnez les lignes pour actions en masse</li><li><strong>Date</strong>: Jour de présence</li><li><strong>N° Document</strong>: Document de l'employé</li><li><strong>Nom</strong>: Nom de l'employé</li><li><strong>Entrée</strong>: Heure d'entrée (vide si non marqué)</li><li><strong>Pauses</strong>: Pauses enregistrées</li><li><strong>Sortie</strong>: Heure de sortie (vide si non marqué)</li><li><strong>État</strong>: État de l'enregistrement</li><li><strong>Hrs</strong>: Heures travaillées si applicable</li><li><strong>Actions</strong>: Clic pour voir les détails</li></ul>"
+          }
+        }
+      },
+      "3": {
+        "steps": {
+          "welcome": {
+            "title": "Présences Absentes",
+            "description": "Employés qui n'ont enregistré aucune marque le jour. Vous pouvez Créer des présences, Compléter automatiquement (s'ils ont un horaire) ou Attribuer des horaires. Utilisez la case à cocher pour la sélection multiple et les actions en masse."
+          },
+          "toolbar": {
+            "title": "Actions disponibles - Absentes",
+            "description": "Créer des présences, Compléter automatiquement, Compléter manuellement et Attribuer des horaires. S'activent en sélectionnant une ou plusieurs lignes."
+          },
+          "table": {
+            "title": "Colonnes du tableau",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Case à cocher</strong>: Sélectionnez les lignes pour actions en masse</li><li><strong>Date</strong>: Jour de présence</li><li><strong>N° Document</strong>: Document de l'employé</li><li><strong>Nom</strong>: Nom de l'employé</li><li><strong>Horaire</strong>: Poste attribué</li><li><strong>Entrée</strong>: Heure d'entrée (vide pour absents)</li><li><strong>Pauses</strong>: Pauses enregistrées</li><li><strong>Sortie</strong>: Heure de sortie (vide pour absents)</li><li><strong>Supplémentaires</strong>: Marques hors horaire</li><li><strong>Retards</strong>: Retards ou sorties anticipées</li><li><strong>Vérification Photos</strong>: Photos biométriques</li><li><strong>Actions</strong>: Clic pour voir les détails</li></ul>"
+          }
+        }
+      },
+      "4": {
+        "steps": {
+          "welcome": {
+            "title": "Présences Complètes",
+            "description": "Enregistrements avec toutes les marques effectuées (entrée, pauses et sortie). Vue en lecture seule: utilisez l'icône œil pour voir le détail des marques, localisation et photos de vérification de chaque employé."
+          },
+          "toolbar": {
+            "title": "Actions - Complètes",
+            "description": "Aucune barre d'actions dans cet onglet; le tableau est en lecture seule pour consulter les présences déjà complétées."
+          },
+          "table": {
+            "title": "Colonnes du tableau",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Date</strong>: Jour de présence</li><li><strong>N° Document</strong>: Document de l'employé</li><li><strong>Horaire</strong>: Poste et horaire prévu</li><li><strong>Nom</strong>: Nom de l'employé</li><li><strong>Entrée</strong>: Heure d'entrée</li><li><strong>Pauses</strong>: Pauses enregistrées</li><li><strong>Sortie</strong>: Heure de sortie</li><li><strong>Supplémentaires</strong>: Marques hors horaire</li><li><strong>Retards</strong>: Retards ou sorties anticipées</li><li><strong>Vérification Photos</strong>: Photos biométriques valides/invalides</li><li><strong>Actions</strong>: Clic pour voir les détails</li></ul>"
+          }
+        }
+      },
+      "5": {
+        "steps": {
+          "welcome": {
+            "title": "Marques en Attente d'Approbation",
+            "description": "Marques manuelles ou corrigées nécessitant l'approbation du superviseur. Revoyez chaque enregistrement et utilisez l'icône œil pour voir le détail avant d'approuver ou rejeter. Les marques en attente sont en jaune."
+          },
+          "toolbar": {
+            "title": "Actions - Marques en Attente",
+            "description": "Aucune barre d'actions; les actions se font depuis le modal de détail en cliquant sur l'icône œil."
+          },
+          "table": {
+            "title": "Colonnes du tableau",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Date</strong>: Jour de présence</li><li><strong>N° Document</strong>: Document de l'employé</li><li><strong>Nom</strong>: Nom de l'employé</li><li><strong>Entrée</strong>: Heure d'entrée enregistrée</li><li><strong>Sortie</strong>: Heure de sortie enregistrée</li><li><strong>Marques en Attente</strong>: Marques en attente d'approbation (en jaune)</li><li><strong>Actions</strong>: Clic pour voir et approuver ou rejeter</li></ul>"
+          }
+        }
+      },
+      "6": {
+        "steps": {
+          "welcome": {
+            "title": "Marques Rejetées",
+            "description": "Vue des marques rejetées par le superviseur. Cette fonctionnalité est en cours de développement."
+          },
+          "toolbar": {
+            "title": "Actions - Marques Rejetées",
+            "description": "Cet onglet n'a pas de barre d'actions; la fonctionnalité est en cours de développement."
+          },
+          "table": {
+            "title": "Colonnes du tableau",
+            "description": "<p style='margin:0.5em 0'>Vue des marques rejetées par le superviseur. Fonctionnalité en cours de développement.</p>"
+          }
+        }
+      },
+      "7": {
+        "steps": {
+          "welcome": {
+            "title": "Heures supplémentaires en attente d'approbation",
+            "description": "Enregistrements avec heures supplémentaires nécessitant l'approbation du superviseur. Approuver ajoute au banque d'heures de l'employé. Rejeter annule la demande. Si l'employé n'a pas de banque, utilisez Configurer le banque avant d'approuver."
+          },
+          "toolbar": {
+            "title": "Actions - Heures Supplémentaires",
+            "description": "Par ligne: Approuver (ajoute au banque) et Rejeter (annule). Si Pas de banque apparaît, utilisez Configurer le banque pour créer le banque de l'employé avant d'approuver."
+          },
+          "table": {
+            "title": "Colonnes du tableau",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Employé</strong>: Nom de l'employé</li><li><strong>Date</strong>: Jour de présence</li><li><strong>Heures supplémentaires</strong>: Minutes ou heures nécessitant approbation</li><li><strong>Actions</strong>: Approuver ou Rejeter; Configurer le banque si manquant</li></ul>"
+          }
+        }
+      },
+      "8": {
+        "steps": {
+          "welcome": {
+            "title": "Retards en attente d'approbation",
+            "description": "Enregistrements avec retards d'arrivée ou sortie anticipée nécessitant approbation. Similaire aux heures supplémentaires: Approuver ou Rejeter. Configurez le banque si manquant."
+          },
+          "toolbar": {
+            "title": "Actions - Retards",
+            "description": "Approuver et Rejeter par ligne. Configurer le banque si l'employé n'a pas de banque."
+          },
+          "table": {
+            "title": "Colonnes du tableau",
+            "description": "<ul style='list-style:disc;padding-left:1.2em;margin:0.5em 0;line-height:1.5'><li><strong>Employé</strong>: Nom de l'employé</li><li><strong>Date</strong>: Jour de présence</li><li><strong>Retard arrivée</strong>: Minutes de retard à l'entrée</li><li><strong>Sortie anticipée</strong>: Minutes de sortie avant l'heure</li><li><strong>Actions</strong>: Approuver ou Rejeter</li></ul>"
+          }
+        }
+      }
+    }
+  }
+}

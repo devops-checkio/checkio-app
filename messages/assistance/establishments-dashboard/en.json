@@ -1,0 +1,87 @@
+{
+  "header": {
+    "title": "Establishment staffing",
+    "breadcrumbs": {
+      "assistance": "Assistance",
+      "dashboard": "Establishment staffing"
+    },
+    "lastRefresh": "Last updated",
+    "rangeDay": "Day",
+    "rangePeriod": "Period"
+  },
+  "filters": {
+    "searchPlaceholder": "Search establishment…",
+    "status": "Student operational status",
+    "risk": "Establishment risk",
+    "riskAll": "All levels",
+    "sortBy": "Sort ranking",
+    "sortDesc": "High to low",
+    "sortAsc": "Low to high",
+    "rowsPerPage": "Rows per page",
+    "refresh": "Refresh",
+    "export": "Export ranking",
+    "today": "Today"
+  },
+  "sort": {
+    "risk": "Risk",
+    "absenteeism": "Absenteeism",
+    "presence": "Attendance",
+    "name": "Name",
+    "code": "Code"
+  },
+  "kpis": {
+    "expected": "Expected headcount",
+    "present": "Present",
+    "absent": "Absent",
+    "inside": "On site",
+    "exited": "Exited",
+    "presenceRate": "% Present",
+    "criticalEstablishments": "Critical establishments",
+    "attentionEstablishments": "Establishments needing attention",
+    "avgMinutes": "Avg. minutes",
+    "establishmentsWithActivity": "Establishments with activity"
+  },
+  "cards": {
+    "title": "Summary by establishment",
+    "viewDetail": "View detail",
+    "lastEvent": "Last mark",
+    "empty": "No establishments match the filters."
+  },
+  "ranking": {
+    "title": "Comparative ranking",
+    "establishment": "Establishment",
+    "expected": "Expected",
+    "present": "Present",
+    "absent": "Absent",
+    "presencePct": "% Present",
+    "inside": "Inside",
+    "exited": "Exited",
+    "late": "Late",
+    "earlyExit": "Early leave",
+    "noCheckout": "No checkout",
+    "risk": "Risk",
+    "actions": "Actions"
+  },
+  "charts": {
+    "presenceByCenter": "% Present by establishment",
+    "absenteeismByCenter": "Absenteeism by establishment",
+    "histogram": "Marks by hour (global)",
+    "heatmap": "Day/hour intensity",
+    "trend": "Absenteeism trend",
+    "empty": "No data to chart"
+  },
+  "risk": {
+    "OK": "OK",
+    "ATTENTION": "Attention",
+    "CRITICAL": "Critical"
+  },
+  "pagination": {
+    "page": "Page {current} of {total}"
+  },
+  "states": {
+    "loading": "Loading…",
+    "error": "Could not load dashboard.",
+    "noCompany": "Select a company to continue."
+  },
+  "exportFilename": "establishment-staffing"
+}

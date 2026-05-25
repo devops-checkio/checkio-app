@@ -1,0 +1,243 @@
+{
+  "title": "Absence Types Management",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Maintainers",
+    "absenceTypes": "Absence Types"
+  },
+  "buttons": {
+    "add": "Add Absence Type",
+    "massive": "Bulk Upload",
+    "downloadExcel": "Download Excel",
+    "previous": "Previous",
+    "next": "Next",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "table": {
+    "headers": {
+      "code": "Code",
+      "name": "Name",
+      "classification": "Classification",
+      "integrationCode": "Integration Code",
+      "actions": "Actions"
+    },
+    "loading": "Loading absence types...",
+    "noData": "No absence types found",
+    "noDataDescription": "Create a new absence type to get started."
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} absence types",
+    "recordsPerPage": "Records per page:",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  },
+  "delete": {
+    "title": "Absence type deleted successfully",
+    "description": "The absence type has been deleted correctly",
+    "error": "Error deleting absence type",
+    "confirmMessage": "Are you sure you want to delete this absence type?"
+  },
+  "excel": {
+    "success": "Excel generated successfully",
+    "error": "Error generating Excel",
+    "filename": "absence-types",
+    "sheetName": "Absence Types",
+    "headers": {
+      "code": "Code",
+      "name": "Name",
+      "classification": "Classification",
+      "integrationCode": "Integration Code",
+      "createdAt": "Creation Date",
+      "companies": "Companies"
+    }
+  },
+  "ariaLabels": {
+    "editAbsenceType": "Edit absence type",
+    "deleteAbsenceType": "Delete absence type"
+  },
+  "errors": {
+    "title": "Error"
+  },
+  "classifications": {
+    "UNJUSTIFIED_ABSENCE": "Unjustified Absence",
+    "JUSTIFIED_ABSENCE": "Justified Absence",
+    "TARDINESS": "Tardiness",
+    "SHIFT_CHANGE": "Shift Change",
+    "EXCEPTIONAL_SCHEDULE_DISTRIBUTION": "Exceptional Schedule Distribution",
+    "OVERTIME_HOURS": "Overtime Hours",
+    "ORDINARY_WORKDAY": "Ordinary Workday",
+    "MEDICAL_LEAVE": "Medical Leave",
+    "PAID_LEAVE": "Paid Leave",
+    "PRENATAL_LEAVE": "Prenatal Leave",
+    "UNPAID_LEAVE": "Unpaid Leave",
+    "POSTNATAL_LEAVE": "Postnatal Leave",
+    "EARLY_DEPARTURE": "Early Departure",
+    "VACATIONS": "Vacations",
+    "RETAIL_WORKERS_ADDITIONAL_SUNDAY_REST": "Retail Workers Additional Sunday Rest"
+  },
+  "upsert": {
+    "loadingDetail": "Loading latest data…",
+    "title": {
+      "edit": "Edit Absence Type",
+      "add": "Add Absence Type"
+    },
+    "fields": {
+      "code": "Code",
+      "name": "Name",
+      "classification": "Classification",
+      "integrationCode": "Integration Code",
+      "configTitle": "Request Configuration",
+      "isEmployeeRequestable": "Employee requestable",
+      "isEmployeeRequestableDescription": "Allows employees to select this absence type when requesting days off",
+      "isTimeBankCompensable": "Time bank compensable",
+      "isTimeBankCompensableDescription": "Allows deducting days of this type from the employee's time bank"
+    },
+    "placeholders": {
+      "classification": "Select a classification"
+    },
+    "validation": {
+      "codeRequired": "Please enter the absence type code",
+      "nameRequired": "Please enter the absence type name",
+      "classificationRequired": "Please select a classification"
+    },
+    "info": {
+      "title": "Information",
+      "description": "Fill in all required fields to create or update an absence type. The integration code is optional and can be used to link with external systems."
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "save": "Save",
+      "update": "Update",
+      "saving": "Creating...",
+      "updating": "Updating..."
+    },
+    "toast": {
+      "updateSuccess": "Absence type updated successfully",
+      "updateSuccessDescription": "The absence type has been updated correctly",
+      "createSuccess": "Absence type created successfully",
+      "createSuccessDescription": "The absence type has been created correctly",
+      "createError": "Error creating absence type"
+    }
+  },
+  "massive": {
+    "title": "Bulk Absence Types Upload",
+    "tabs": {
+      "excel": "Excel Upload",
+      "manual": "Manual Entry"
+    },
+    "instructions": {
+      "excel": {
+        "title": "Instructions:",
+        "step1": "Download the Excel template to see the required format",
+        "step2": "Fill in the absence types information in the template",
+        "step3": "Make sure all required fields (Code and Name) are filled in",
+        "step4": "Upload the completed Excel file",
+        "step5": "Verify the information and press Process"
+      },
+      "manual": {
+        "title": "Instructions for manual entry:",
+        "step1": "Click Add Row to add a new absence type",
+        "step2": "Fill in the required fields in each row",
+        "step3": "You can add as many rows as needed",
+        "step4": "Verify the information and press Process"
+      }
+    },
+    "buttons": {
+      "downloadTemplate": "Download Template",
+      "uploadExcel": "Upload Excel",
+      "addRow": "Add Row",
+      "process": "Process",
+      "processing": "Processing...",
+      "cancel": "Cancel",
+      "close": "Close",
+      "incompleteFields": "Incomplete Fields",
+      "noData": "No Data"
+    },
+    "table": {
+      "headers": {
+        "code": "Code",
+        "name": "Name",
+        "classification": "Classification",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "noData": "No absence types added",
+      "noDataDescription": "Add absence types manually or upload an Excel file",
+      "placeholders": {
+        "code": "Code",
+        "name": "Name",
+        "classification": "Select classification"
+      },
+      "status": {
+        "completed": "Completed",
+        "error": "Error"
+      }
+    },
+    "validation": {
+      "codeRequired": "Please enter the code",
+      "nameRequired": "Please enter the name",
+      "classificationRequired": "Please select a classification"
+    },
+    "excel": {
+      "template": {
+        "sheetName": "Absence Types Template",
+        "referenceSheet": "Classifications",
+        "filename": "absence_types_template.xlsx",
+        "headers": {
+          "code": "Code",
+          "name": "Name",
+          "classification": "Classification"
+        },
+        "referenceHeaders": {
+          "value": "Value",
+          "description": "Description"
+        },
+        "example": {
+          "code": "ABS-001",
+          "name": "Example Absence Type",
+          "classification": "JUSTIFIED_ABSENCE"
+        },
+        "validation": {
+          "promptTitle": "Classification",
+          "prompt": "Select an absence classification",
+          "errorTitle": "Invalid value",
+          "error": "Please select a valid classification from the list"
+        }
+      },
+      "warnings": {
+        "invalidClassifications": "{count} classification(s) from Excel are not valid and have been replaced with \"JUSTIFIED_ABSENCE\". Please select valid classifications.",
+        "title": "Warning"
+      }
+    },
+    "toast": {
+      "incompleteFields": {
+        "title": "Error",
+        "description": "Cannot process: There are absence types with incomplete fields. Please complete all fields before continuing."
+      },
+      "noData": {
+        "title": "Warning",
+        "description": "No absence types to process. Add at least one absence type."
+      },
+      "processCompletedWithErrors": {
+        "title": "Process completed with errors",
+        "description": "Review the table for more details."
+      },
+      "processCompletedSuccess": {
+        "title": "Process completed",
+        "description": "Absence types have been processed correctly"
+      },
+      "createError": "Error creating absence type"
+    },
+    "progress": "Processing: {percent}%",
+    "ariaLabels": {
+      "deleteAbsenceType": "Delete absence type"
+    },
+    "tooltips": {
+      "incompleteFields": "There are absence types with incomplete fields. Complete all fields before processing.",
+      "noData": "Add at least one absence type to process.",
+      "process": "Process bulk upload"
+    }
+  }
+}

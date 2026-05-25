@@ -1,0 +1,19 @@
+{
+  "validating": "Validation de l'accès SSO...",
+  "success": "Accès réussi !",
+  "error": "Erreur d'authentification",
+  "validatingDescription": "Vérification des identifiants depuis App1",
+  "successDescription": "Redirection vers le tableau de bord...",
+  "errorDescription": "Impossible de terminer l'authentification",
+  "validatingMessage": "Nous validons votre session depuis l'application principale...",
+  "verifyingToken": "Vérification du jeton de sécurité",
+  "welcomeMessage": "Bienvenue ! Votre session a été validée avec succès.",
+  "redirecting": "Redirection automatique...",
+  "retry": "Réessayer",
+  "goToLogin": "Aller à la connexion normale",
+  "missingParams": "Paramètres SSO manquants. Jeton ou App ID introuvable.",
+  "invalidToken": "Jeton SSO invalide ou expiré.",
+  "validationError": "Erreur lors de la validation du jeton SSO.",
+  "ssoReady": "SSO Prêt",
+  "ssoAccess": "Accès SSO"
+}

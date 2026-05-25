@@ -1,0 +1,123 @@
+{
+  "title": "Absence Management",
+  "subtitle": "Manage employee absences",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Operations",
+    "absences": "Absences"
+  },
+  "buttons": {
+    "batchAssignment": "Create Absence",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "clear": "Clear",
+    "previous": "Previous",
+    "next": "Next",
+    "cancel": "Cancel"
+  },
+  "tabs": {
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected"
+  },
+  "filters": {
+    "organization": "Organizational structure",
+    "search": "Search",
+    "searchPlaceholder": "Search by First or Last Name",
+    "documentNumber": "Document Number",
+    "documentNumberPlaceholder": "Search by Document Number",
+    "job": "Job",
+    "jobPlaceholder": "Select Job",
+    "branch": "Branch",
+    "branchPlaceholder": "Select Branch",
+    "absenceType": "Absence type",
+    "absenceTypePlaceholder": "All types",
+    "period": "Period",
+    "periodType": "Period type",
+    "periodTypes": {
+      "range": "By date range",
+      "year": "By calendar year",
+      "lastMonth": "Last month"
+    },
+    "year": "Year",
+    "yearPlaceholder": "Select year",
+    "datePlaceholder": "DD/MM/YYYY",
+    "yearSummary": "The query will use 01/01/{year} through 31/12/{year}.",
+    "lastMonthSummary": "Period: {from} – {to}",
+    "lastMonthHint": "Click «Search» to load absences for that full calendar month.",
+    "dateRange": {
+      "from": "Start date",
+      "to": "End date"
+    },
+    "validation": {
+      "title": "Check the period",
+      "requiredRange": "Enter both start and end dates.",
+      "invalidFrom": "Start date is not valid. Use DD/MM/YYYY.",
+      "invalidTo": "End date is not valid. Use DD/MM/YYYY.",
+      "fromAfterTo": "Start date cannot be after end date.",
+      "requiredYear": "Select a valid year."
+    }
+  },
+  "table": {
+    "headers": {
+      "employee": "Employee",
+      "lastName": "Last Name",
+      "documentNumber": "Document",
+      "job": "Job",
+      "branch": "Branch",
+      "absenceType": "Absence Type",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "status": "Status",
+      "createdAt": "Registration Date",
+      "actions": "Actions"
+    },
+    "loading": "Loading absences...",
+    "noData": "No absences found",
+    "noDataDescription": "There are no absences registered for this filter."
+  },
+  "status": {
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "unknown": "Unknown"
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} results",
+    "page": "Page {current} of {total}",
+    "recordsPerPage": "Records per page"
+  },
+  "delete": {
+    "title": "Delete Absence",
+    "message": "Are you sure you want to delete this absence?",
+    "success": "Absence deleted successfully",
+    "error": "Error deleting absence"
+  },
+  "tooltips": {
+    "actionLocked": "Cannot edit or delete: this absence comes from an approved day-off request or an integration."
+  },
+  "ariaLabels": {
+    "editAbsence": "Edit absence",
+    "deleteAbsence": "Delete absence",
+    "editAbsenceLocked": "Edit unavailable: absence from day-off approval or integration",
+    "deleteAbsenceLocked": "Delete unavailable: absence from day-off approval or integration"
+  },
+  "edit": {
+    "title": "Edit Absence",
+    "employeeInfo": "Employee Information",
+    "document": "Document",
+    "absenceType": "Absence Type",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "startDateRequired": "Start date is required",
+    "endDateRequired": "End date is required",
+    "reason": "Reason",
+    "reasonPlaceholder": "Optional reason",
+    "withoutPay": "Without pay",
+    "cancel": "Cancel",
+    "save": "Save",
+    "saving": "Saving...",
+    "successTitle": "Absence updated successfully"
+  }
+}

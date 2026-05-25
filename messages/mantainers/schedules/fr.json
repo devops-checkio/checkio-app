@@ -1,0 +1,347 @@
+{
+  "title": "Gestion des Horaires",
+  "subtitle": "Gérez les horaires du système",
+  "tabs": {
+    "active": "Actifs",
+    "inactive": "Inactifs",
+    "activeWithCount": "Actifs ({count})",
+    "inactiveWithCount": "Inactifs ({count})"
+  },
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "maintainers": "Mainteneurs",
+    "schedules": "Horaires"
+  },
+  "buttons": {
+    "add": "Ajouter un Horaire",
+    "downloadExcel": "Télécharger Excel",
+    "search": "Rechercher",
+    "clear": "Effacer",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "edit": "Modifier",
+    "view": "Voir",
+    "delete": "Supprimer",
+    "cancel": "Annuler",
+    "deleting": "Suppression...",
+    "activate": "Activer",
+    "deactivate": "Désactiver",
+    "activateSuccess": "Horaire activé avec succès",
+    "deactivateSuccess": "Horaire désactivé avec succès"
+  },
+  "filters": {
+    "code": "Code",
+    "name": "Nom",
+    "mealBreak": "Pause Repas",
+    "createdAt": "Date de création",
+    "codePlaceholder": "Rechercher par code",
+    "namePlaceholder": "Rechercher par nom",
+    "mealBreakOptions": {
+      "all": "Tous",
+      "with": "Avec pause repas",
+      "without": "Sans pause repas"
+    }
+  },
+  "table": {
+    "headers": {
+      "code": "Code",
+      "name": "Nom",
+      "startTime": "Heure de Début",
+      "endTime": "Heure de Fin",
+      "days": "Jours Contenus",
+      "workHours": "Heures de Travail",
+      "mealBreak": "Temps de Pause Repas",
+      "actions": "Actions"
+    },
+    "loading": "Chargement des horaires...",
+    "noData": "Aucun horaire trouvé",
+    "noDataDescription": "Créez un nouvel horaire pour commencer.",
+    "selectCompany": "Sélectionnez une entreprise dans le menu supérieur pour voir les horaires.",
+    "mealBreak": {
+      "with": "Avec pause repas",
+      "without": "Sans pause repas"
+    },
+    "days": {
+      "single": "1 jour",
+      "multiple": "{count} jours"
+    }
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} horaires",
+    "recordsPerPage": "Enregistrements par page:",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page {current} sur {total}"
+  },
+  "delete": {
+    "title": "Confirmer la suppression",
+    "message": "Êtes-vous sûr de vouloir supprimer cet horaire?",
+    "success": {
+      "title": "Horaire supprimé avec succès",
+      "description": "L'horaire a été supprimé correctement"
+    },
+    "error": {
+      "title": "Erreur",
+      "description": "Erreur lors de la suppression de l'horaire. Veuillez réessayer."
+    }
+  },
+  "excel": {
+    "success": "Excel généré avec succès",
+    "error": "Erreur lors de la génération d'Excel",
+    "filename": "horaires",
+    "sheetName": "Horaires",
+    "headers": {
+      "code": "Code",
+      "name": "Nom",
+      "startTime": "Heure de Début",
+      "endTime": "Heure de Fin",
+      "days": "Jours Contenus",
+      "workHours": "Heures et Minutes de Travail",
+      "mealBreak": "Pause Repas",
+      "createdAt": "Date de Création",
+      "updatedAt": "Date de Modification"
+    },
+    "mealBreak": {
+      "with": "Avec pause repas ({time})",
+      "without": "Sans pause repas"
+    },
+    "days": {
+      "single": "1 jour",
+      "multiple": "{count} jours"
+    }
+  },
+  "ariaLabels": {
+    "editSchedule": "Modifier l'horaire",
+    "viewSchedule": "Aperçu",
+    "deleteSchedule": "Supprimer l'horaire",
+    "deleteBreak": "Supprimer la pause",
+    "activateSchedule": "Activer l'horaire",
+    "deactivateSchedule": "Désactiver l'horaire"
+  },
+  "tour": {
+    "startButton": "Voir le guide",
+    "buttons": {
+      "next": "Suivant",
+      "previous": "Précédent",
+      "done": "Terminer"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Bienvenue dans le module Horaires",
+        "description": "Dans ce module, vous pouvez gérer les horaires du système. Ce guide vous montrera les principales fonctionnalités disponibles."
+      },
+      "tabs": {
+        "title": "Actifs et inactifs",
+        "description": "Basculez entre les horaires actifs et inactifs pour afficher et gérer chaque groupe séparément."
+      },
+      "filters": {
+        "title": "Filtres de recherche",
+        "description": "Filtrez par code, nom, pause repas et date de création. Utilisez Rechercher pour appliquer les filtres."
+      },
+      "toolbar": {
+        "title": "Actions principales",
+        "description": "Ajouter un nouvel horaire ou télécharger la liste au format Excel."
+      },
+      "table": {
+        "title": "Tableau des horaires",
+        "description": "Aperçu, modifier, activer/désactiver et supprimer chaque horaire. Les colonnes affichent le code, le nom, les heures et la pause repas."
+      },
+      "pagination": {
+        "title": "Pagination",
+        "description": "Utilisez ces contrôles pour naviguer entre les pages et ajuster le nombre d'enregistrements affichés."
+      }
+    }
+  },
+  "detailTour": {
+    "startButton": "Voir le guide",
+    "steps": {
+      "welcome": {
+        "title": "Formulaire d'horaire",
+        "description": "Dans ce formulaire, vous pouvez créer ou modifier un horaire. Configurez les informations de base, la durée et les pauses ou repas."
+      },
+      "basicInfo": {
+        "title": "Informations de base",
+        "description": "Le nom est généré automatiquement selon la configuration. Entrez le code et activez ou désactivez l'horaire (édition uniquement)."
+      },
+      "scheduleConfig": {
+        "title": "Configuration de l'horaire",
+        "description": "Heure de début, durée en heures et minutes, minutes de décompte et heure de fin calculée automatiquement."
+      },
+      "timeline": {
+        "title": "Ligne de temps",
+        "description": "Vue visuelle de l'horaire et des pauses par jour. Se met à jour automatiquement selon la configuration."
+      },
+      "breaks": {
+        "title": "Pauses et repas",
+        "description": "Ajoutez des repas ou des pauses. Configurez le jour, l'heure de début et de fin, et si le temps est déductible du travail."
+      }
+    }
+  },
+  "preview": {
+    "title": "Aperçu de l'Horaire",
+    "loading": "Chargement...",
+    "notFound": "Horaire non trouvé",
+    "tabs": {
+      "distribution": "Distribution de l'Horaire",
+      "configuration": "Configuration"
+    },
+    "basicInfo": {
+      "name": "Nom",
+      "code": "Code"
+    },
+    "scheduleConfig": {
+      "title": "Configuration de l'Horaire",
+      "startTime": "Heure de Début",
+      "workHours": "Nombre d'Heures",
+      "workMinutes": "Nombre de Minutes",
+      "discountMinutes": "Minutes de Pause Repas à Déduire",
+      "calculatedEndTime": "Heure de Fin (Calculée)"
+    },
+    "breaks": {
+      "title": "Pauses et Pauses Repas",
+      "noBreaks": "Aucune pause ou pause repas configurée",
+      "table": {
+        "headers": {
+          "description": "Description",
+          "type": "Type",
+          "day": "Jour",
+          "startTime": "Heure de Début",
+          "endTime": "Heure de Fin",
+          "status": "Statut",
+          "deductible": "Déduction"
+        },
+        "type": {
+          "lunch": "Pause Repas",
+          "break": "Pause"
+        },
+        "day": "Jour {day}",
+        "status": {
+          "valid": "Valide",
+          "error": "Erreur"
+        }
+      },
+      "distribution": {
+        "cannotShow": "Impossible d'afficher la distribution de l'horaire"
+      }
+    },
+    "close": "Fermer"
+  },
+  "form": {
+    "title": {
+      "create": "Créer un Horaire",
+      "edit": "Modifier l'Horaire"
+    },
+    "subtitle": {
+      "create": "Créez un nouvel horaire",
+      "edit": "Modifiez l'horaire"
+    },
+    "loading": "Chargement de l'horaire...",
+    "basicInfo": {
+      "title": "Informations de Base",
+      "name": "Nom (Généré automatiquement)",
+      "nameDescription": "Le nom est généré automatiquement selon la configuration",
+      "code": "Code",
+      "codePlaceholder": "Entrez le code de l'horaire",
+      "codeRequired": "Veuillez entrer le code de l'horaire",
+      "companies": "Entreprises",
+      "companiesRequired": "Vous devez sélectionner au moins une entreprise",
+      "companiesPlaceholder": "Sélectionner des entreprises",
+      "isActive": "Horaire actif"
+    },
+    "scheduleConfig": {
+      "title": "Configuration de l'Horaire",
+      "startTime": "Heure de Début",
+      "startTimeRequired": "Veuillez entrer l'heure de début",
+      "startTimeDescription": "Heure de début du quart de travail",
+      "workHours": "Nombre d'Heures",
+      "workHoursRequired": "Veuillez entrer le nombre d'heures",
+      "workHoursDescription": "Heures de travail dans le quart",
+      "workMinutes": "Nombre de Minutes",
+      "workMinutesRequired": "Veuillez entrer le nombre de minutes",
+      "workMinutesDescription": "Minutes supplémentaires aux heures de travail",
+      "discountMinutes": "Minutes de Pause Repas à Déduire",
+      "discountMinutesRequired": "Veuillez entrer les minutes de pause repas à déduire",
+      "discountMinutesDescription": "Temps de pause repas non comptabilisé comme travail",
+      "calculatedEndTime": "Heure de Fin (Calculée)",
+      "calculatedEndTimeDescription": "Calculée automatiquement selon les valeurs saisies"
+    },
+    "breaks": {
+      "title": "Pauses et Pauses Repas",
+      "addLunch": "Ajouter une Pause Repas",
+      "addBreak": "Ajouter une Pause",
+      "noBreaks": "Aucune pause configurée",
+      "noBreaksDescription": "Ajoutez des pauses ou des pauses repas pour commencer",
+      "table": {
+        "headers": {
+          "description": "Description",
+          "type": "Type",
+          "day": "Jour",
+          "startTime": "Heure de Début",
+          "endTime": "Heure de Fin",
+          "deductible": "Déduction",
+          "status": "Statut",
+          "actions": "Actions"
+        },
+        "type": {
+          "break": "Pause",
+          "lunch": "Pause Repas"
+        },
+        "day": "Jour {day}",
+        "dayPlaceholder": "Sélectionnez le jour",
+        "typePlaceholder": "Sélectionnez le type",
+        "status": {
+          "valid": "Valide",
+          "error": "Erreur"
+        },
+        "delete": "Supprimer"
+      },
+      "validation": {
+        "dayRange": "Le jour doit être entre 1 et {totalDays}",
+        "cannotEndNextDay": "La pause ne peut pas se terminer le jour suivant le dernier jour",
+        "startsBeforeSchedule": "La pause commence avant l'horaire du jour",
+        "endsAfterSchedule": "La pause se termine après l'horaire du jour",
+        "overlaps": "La pause se chevauche avec une autre",
+        "hasErrors": "Erreurs dans les pauses",
+        "hasErrorsDescription": "Il y a des pauses avec des erreurs. Veuillez les corriger avant de continuer."
+      },
+      "defaultLunchDescription": "Pause Repas"
+    },
+    "buttons": {
+      "cancel": "Annuler",
+      "create": "CRÉER",
+      "update": "METTRE À JOUR",
+      "creating": "Création...",
+      "updating": "Mise à jour..."
+    },
+    "toast": {
+      "createSuccess": {
+        "title": "Horaire créé avec succès",
+        "description": "L'horaire a été créé correctement"
+      },
+      "updateSuccess": {
+        "title": "Horaire mis à jour avec succès",
+        "description": "L'horaire a été mis à jour correctement"
+      },
+      "createError": {
+        "title": "Erreur lors de la création de l'horaire",
+        "description": "Une erreur s'est produite lors de la création de l'horaire"
+      },
+      "updateError": {
+        "title": "Erreur lors de la mise à jour de l'horaire",
+        "description": "Une erreur s'est produite lors de la mise à jour de l'horaire"
+      }
+    }
+  },
+  "timeline": {
+    "title": "Distribution de l'Horaire",
+    "titleWithDays": "Distribution de l'Horaire ({days} jours)",
+    "day": "Jour {day}",
+    "entry": "Entrée",
+    "exit": "Sortie",
+    "lunch": "Pause Repas",
+    "break": "Pause",
+    "endLunch": "Fin de la Pause Repas",
+    "endBreak": "Fin de la Pause",
+    "workPeriod": "Période de Travail"
+  }
+}

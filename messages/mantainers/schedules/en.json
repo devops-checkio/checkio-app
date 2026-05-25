@@ -1,0 +1,347 @@
+{
+  "title": "Schedule Management",
+  "subtitle": "Manage system schedules",
+  "tabs": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "activeWithCount": "Active ({count})",
+    "inactiveWithCount": "Inactive ({count})"
+  },
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Maintainers",
+    "schedules": "Schedules"
+  },
+  "buttons": {
+    "add": "Add Schedule",
+    "downloadExcel": "Download Excel",
+    "search": "Search",
+    "clear": "Clear",
+    "previous": "Previous",
+    "next": "Next",
+    "edit": "Edit",
+    "view": "View",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "deleting": "Deleting...",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "activateSuccess": "Schedule activated successfully",
+    "deactivateSuccess": "Schedule deactivated successfully"
+  },
+  "filters": {
+    "code": "Code",
+    "name": "Name",
+    "mealBreak": "Meal Break",
+    "createdAt": "Creation date",
+    "codePlaceholder": "Search by code",
+    "namePlaceholder": "Search by name",
+    "mealBreakOptions": {
+      "all": "All",
+      "with": "With meal break",
+      "without": "Without meal break"
+    }
+  },
+  "table": {
+    "headers": {
+      "code": "Code",
+      "name": "Name",
+      "startTime": "Start Time",
+      "endTime": "End Time",
+      "days": "Days Contained",
+      "workHours": "Work Hours",
+      "mealBreak": "Meal Break Time",
+      "actions": "Actions"
+    },
+    "loading": "Loading schedules...",
+    "noData": "No schedules found",
+    "noDataDescription": "Create a new schedule to get started.",
+    "selectCompany": "Select a company in the top menu to view schedules.",
+    "mealBreak": {
+      "with": "With meal break",
+      "without": "Without meal break"
+    },
+    "days": {
+      "single": "1 day",
+      "multiple": "{count} days"
+    }
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} schedules",
+    "recordsPerPage": "Records per page:",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  },
+  "delete": {
+    "title": "Confirm deletion",
+    "message": "Are you sure you want to delete this schedule?",
+    "success": {
+      "title": "Schedule deleted successfully",
+      "description": "The schedule has been deleted correctly"
+    },
+    "error": {
+      "title": "Error",
+      "description": "Error deleting the schedule. Please try again."
+    }
+  },
+  "excel": {
+    "success": "Excel generated successfully",
+    "error": "Error generating Excel",
+    "filename": "schedules",
+    "sheetName": "Schedules",
+    "headers": {
+      "code": "Code",
+      "name": "Name",
+      "startTime": "Start Time",
+      "endTime": "End Time",
+      "days": "Days Contained",
+      "workHours": "Work Hours and Minutes",
+      "mealBreak": "Meal Break",
+      "createdAt": "Creation Date",
+      "updatedAt": "Modification Date"
+    },
+    "mealBreak": {
+      "with": "With meal break ({time})",
+      "without": "Without meal break"
+    },
+    "days": {
+      "single": "1 day",
+      "multiple": "{count} days"
+    }
+  },
+  "ariaLabels": {
+    "editSchedule": "Edit schedule",
+    "viewSchedule": "Preview",
+    "deleteSchedule": "Delete schedule",
+    "deleteBreak": "Delete break",
+    "activateSchedule": "Activate schedule",
+    "deactivateSchedule": "Deactivate schedule"
+  },
+  "tour": {
+    "startButton": "View guide",
+    "buttons": {
+      "next": "Next",
+      "previous": "Previous",
+      "done": "Finish"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Welcome to the Schedules module",
+        "description": "In this module you can manage system schedules. This guide will show you the main features available."
+      },
+      "tabs": {
+        "title": "Active and inactive",
+        "description": "Switch between active and inactive schedules to view and manage each group separately."
+      },
+      "filters": {
+        "title": "Search filters",
+        "description": "Filter by code, name, meal break and creation date. Use Search to apply filters."
+      },
+      "toolbar": {
+        "title": "Main actions",
+        "description": "Add new schedule or download the list in Excel format."
+      },
+      "table": {
+        "title": "Schedules table",
+        "description": "Preview, edit, activate/deactivate and delete each schedule. Columns show code, name, hours and meal break."
+      },
+      "pagination": {
+        "title": "Pagination",
+        "description": "Use these controls to navigate between pages and adjust the number of records displayed."
+      }
+    }
+  },
+  "detailTour": {
+    "startButton": "View guide",
+    "steps": {
+      "welcome": {
+        "title": "Schedule form",
+        "description": "In this form you can create or edit a schedule. Configure basic information, duration and breaks or meal breaks."
+      },
+      "basicInfo": {
+        "title": "Basic information",
+        "description": "The name is generated automatically based on configuration. Enter the code and activate or deactivate the schedule (edit only)."
+      },
+      "scheduleConfig": {
+        "title": "Schedule configuration",
+        "description": "Start time, duration in hours and minutes, discount minutes and automatically calculated end time."
+      },
+      "timeline": {
+        "title": "Timeline",
+        "description": "Visual view of the schedule and breaks per day. Updates automatically according to configuration."
+      },
+      "breaks": {
+        "title": "Breaks and meal breaks",
+        "description": "Add meal breaks or breaks. Configure day, start and end time, and whether the time is deductible from work."
+      }
+    }
+  },
+  "preview": {
+    "title": "Schedule Preview",
+    "loading": "Loading...",
+    "notFound": "Schedule not found",
+    "tabs": {
+      "distribution": "Schedule Distribution",
+      "configuration": "Configuration"
+    },
+    "basicInfo": {
+      "name": "Name",
+      "code": "Code"
+    },
+    "scheduleConfig": {
+      "title": "Schedule Configuration",
+      "startTime": "Start Time",
+      "workHours": "Work Hours",
+      "workMinutes": "Work Minutes",
+      "discountMinutes": "Meal Break Minutes to Discount",
+      "calculatedEndTime": "End Time (Calculated)"
+    },
+    "breaks": {
+      "title": "Breaks and Meal Breaks",
+      "noBreaks": "No breaks or meal breaks configured",
+      "table": {
+        "headers": {
+          "description": "Description",
+          "type": "Type",
+          "day": "Day",
+          "startTime": "Start Time",
+          "endTime": "End Time",
+          "status": "Status",
+          "deductible": "Discount"
+        },
+        "type": {
+          "lunch": "Meal Break",
+          "break": "Break"
+        },
+        "day": "Day {day}",
+        "status": {
+          "valid": "Valid",
+          "error": "Error"
+        }
+      },
+      "distribution": {
+        "cannotShow": "Cannot display schedule distribution"
+      }
+    },
+    "close": "Close"
+  },
+  "form": {
+    "title": {
+      "create": "Create Schedule",
+      "edit": "Edit Schedule"
+    },
+    "subtitle": {
+      "create": "Create a new schedule",
+      "edit": "Edit the schedule"
+    },
+    "loading": "Loading schedule...",
+    "basicInfo": {
+      "title": "Basic Information",
+      "name": "Name (Auto-generated)",
+      "nameDescription": "The name is automatically generated according to the configuration",
+      "code": "Code",
+      "codePlaceholder": "Enter the schedule code",
+      "codeRequired": "Please enter the schedule code",
+      "companies": "Companies",
+      "companiesRequired": "You must select at least one company",
+      "companiesPlaceholder": "Select companies",
+      "isActive": "Schedule active"
+    },
+    "scheduleConfig": {
+      "title": "Schedule Configuration",
+      "startTime": "Start Time",
+      "startTimeRequired": "Please enter the start time",
+      "startTimeDescription": "Shift start time",
+      "workHours": "Work Hours",
+      "workHoursRequired": "Please enter the work hours",
+      "workHoursDescription": "Work hours in the shift",
+      "workMinutes": "Work Minutes",
+      "workMinutesRequired": "Please enter the work minutes",
+      "workMinutesDescription": "Additional minutes to work hours",
+      "discountMinutes": "Meal Break Minutes to Discount",
+      "discountMinutesRequired": "Please enter the meal break minutes to discount",
+      "discountMinutesDescription": "Meal break time not counted as work",
+      "calculatedEndTime": "End Time (Calculated)",
+      "calculatedEndTimeDescription": "Automatically calculated according to entered values"
+    },
+    "breaks": {
+      "title": "Breaks and Meal Breaks",
+      "addLunch": "Add Meal Break",
+      "addBreak": "Add Break",
+      "noBreaks": "No breaks configured",
+      "noBreaksDescription": "Add breaks or meal breaks to get started",
+      "table": {
+        "headers": {
+          "description": "Description",
+          "type": "Type",
+          "day": "Day",
+          "startTime": "Start Time",
+          "endTime": "End Time",
+          "deductible": "Discount",
+          "status": "Status",
+          "actions": "Actions"
+        },
+        "type": {
+          "break": "Break",
+          "lunch": "Meal Break"
+        },
+        "day": "Day {day}",
+        "dayPlaceholder": "Select day",
+        "typePlaceholder": "Select type",
+        "status": {
+          "valid": "Valid",
+          "error": "Error"
+        },
+        "delete": "Delete"
+      },
+      "validation": {
+        "dayRange": "Day must be between 1 and {totalDays}",
+        "cannotEndNextDay": "Break cannot end the next day on the last day",
+        "startsBeforeSchedule": "Break starts before the day's schedule",
+        "endsAfterSchedule": "Break ends after the day's schedule",
+        "overlaps": "Break overlaps with another",
+        "hasErrors": "Break errors",
+        "hasErrorsDescription": "There are breaks with errors. Please fix them before continuing."
+      },
+      "defaultLunchDescription": "Meal Break"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "create": "CREATE",
+      "update": "UPDATE",
+      "creating": "Creating...",
+      "updating": "Updating..."
+    },
+    "toast": {
+      "createSuccess": {
+        "title": "Schedule created successfully",
+        "description": "The schedule has been created correctly"
+      },
+      "updateSuccess": {
+        "title": "Schedule updated successfully",
+        "description": "The schedule has been updated correctly"
+      },
+      "createError": {
+        "title": "Error creating schedule",
+        "description": "An error occurred while creating the schedule"
+      },
+      "updateError": {
+        "title": "Error updating schedule",
+        "description": "An error occurred while updating the schedule"
+      }
+    }
+  },
+  "timeline": {
+    "title": "Schedule Distribution",
+    "titleWithDays": "Schedule Distribution ({days} days)",
+    "day": "Day {day}",
+    "entry": "Entry",
+    "exit": "Exit",
+    "lunch": "Meal Break",
+    "break": "Break",
+    "endLunch": "End Meal Break",
+    "endBreak": "End Break",
+    "workPeriod": "Work Period"
+  }
+}

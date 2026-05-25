@@ -1,0 +1,84 @@
+{
+  "title": "Histórico de Relatórios",
+  "subtitle": "Visualize e baixe os relatórios gerados",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "reports": "Relatórios",
+    "history": "Histórico"
+  },
+  "buttons": {
+    "download": "Baixar",
+    "clear": "Limpar",
+    "previous": "Anterior",
+    "next": "Próximo"
+  },
+  "filters": {
+    "search": "Busca",
+    "searchPlaceholder": "Buscar por nome ou solicitado por...",
+    "status": "Status",
+    "statusPlaceholder": "Todos os status",
+    "startDate": "Data inicial",
+    "endDate": "Data final",
+    "allStatuses": "Todos"
+  },
+  "table": {
+    "headers": {
+      "name": "Nome",
+      "status": "Status",
+      "step": "Etapa",
+      "requestedBy": "Solicitado por",
+      "createdAt": "Data de Criação",
+      "duration": "Duração",
+      "actions": "Ações"
+    },
+    "loading": "Carregando relatórios...",
+    "noData": "Nenhum relatório encontrado",
+    "noDataDescription": "Os relatórios gerados aparecerão aqui",
+    "notAvailable": "-"
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} resultados",
+    "page": "Página {current} de {total}",
+    "recordsPerPage": "Registros por página"
+  },
+  "status": {
+    "SCHEDULED": "Agendado",
+    "PROCESSING": "Processando",
+    "PENDING": "Pendente",
+    "COMPLETED": "Concluído",
+    "FAILED": "Falhou"
+  },
+  "steps": {
+    "STEP_STARTING": "Iniciando geração de relatório",
+    "STEP_VALIDATING": "Validando dados",
+    "STEP_GENERATING": "Gerando relatório",
+    "STEP_SAVING": "Salvando relatório",
+    "STEP_COMPLETED": "Relatório gerado com sucesso"
+  },
+  "refresh": {
+    "updating": "Atualizando...",
+    "updatingIn": "Atualizando em {countdown}",
+    "clickToRefresh": "Clique para atualizar agora"
+  },
+  "toast": {
+    "downloadSuccess": {
+      "title": "Download iniciado",
+      "description": "O relatório está sendo baixado"
+    },
+    "downloadError": {
+      "title": "Erro",
+      "description": "Nenhum arquivo disponível para download"
+    },
+    "downloadErrorGeneric": {
+      "title": "Erro",
+      "description": "Não foi possível baixar o arquivo"
+    }
+  },
+  "fileTypes": {
+    "excel": "Excel",
+    "pdf": "PDF",
+    "csv": "CSV",
+    "json": "JSON",
+    "file": "Arquivo"
+  }
+}

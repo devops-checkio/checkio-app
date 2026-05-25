@@ -1,0 +1,193 @@
+{
+  "title": "Gestión de Amonestaciones",
+  "subtitle": "Administre las amonestaciones de los empleados",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Operaciones",
+    "warnings": "Amonestaciones"
+  },
+  "buttons": {
+    "add": "Agregar Amonestación",
+    "edit": "Editar",
+    "view": "Ver",
+    "delete": "Eliminar",
+    "deleting": "Eliminando...",
+    "cancel": "Cancelar",
+    "search": "Buscar",
+    "clear": "Limpiar",
+    "downloadExcel": "Descargar Excel",
+    "previous": "Anterior",
+    "next": "Siguiente"
+  },
+  "filters": {
+    "search": "Búsqueda",
+    "searchPlaceholder": "Buscar por empleado...",
+    "employee": "Empleado",
+    "employeePlaceholder": "Seleccione un empleado",
+    "warningType": "Tipo de Amonestación",
+    "warningTypePlaceholder": "Seleccione un tipo"
+  },
+  "table": {
+    "headers": {
+      "employeeName": "Nombre",
+      "documentNumber": "RUT",
+      "warningType": "Tipo de Amonestación",
+      "createdAt": "Fecha de Creación",
+      "actions": "Acciones"
+    },
+    "loading": "Cargando amonestaciones...",
+    "noData": "No se encontraron amonestaciones",
+    "noDataDescription": "No hay amonestaciones registradas para este filtro.",
+    "notAvailable": "N/A"
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} resultados",
+    "page": "Página {current} de {total}",
+    "recordsPerPage": "Registros por página"
+  },
+  "excel": {
+    "filename": "amonestaciones",
+    "sheetName": "Amonestaciones",
+    "headers": {
+      "employeeName": "Nombre",
+      "documentNumber": "RUT",
+      "warningType": "Tipo de Amonestación",
+      "createdAt": "Fecha de Creación"
+    }
+  },
+  "delete": {
+    "title": "Eliminar Amonestación",
+    "message": "¿Está seguro de que desea eliminar esta amonestación? Esta acción no se puede deshacer."
+  },
+  "toast": {
+    "deleteSuccess": {
+      "title": "Amonestación eliminada exitosamente"
+    },
+    "deleteError": {
+      "description": "Error al eliminar la amonestación"
+    },
+    "excelSuccess": {
+      "title": "Excel generado exitosamente"
+    },
+    "excelError": {
+      "title": "Error al generar el Excel"
+    }
+  },
+  "ariaLabels": {
+    "viewWarning": "Ver amonestación",
+    "editWarning": "Editar amonestación",
+    "deleteWarning": "Eliminar amonestación"
+  },
+  "upsert": {
+    "title": {
+      "add": "Agregar Amonestación",
+      "edit": "Editar Amonestación",
+      "view": "Ver Amonestación"
+    },
+    "fields": {
+      "company": "Empresa",
+      "employee": "Empleado",
+      "warningType": "Tipo de Amonestación",
+      "startDate": "Fecha de Inicio",
+      "endDate": "Fecha de Fin",
+      "observation": "Observación",
+      "reportedBy": "Reportado por",
+      "document": "Documento"
+    },
+    "placeholders": {
+      "company": "Seleccione una empresa",
+      "warningType": "Seleccione un tipo de amonestación",
+      "startDate": "Seleccione fecha",
+      "endDate": "Seleccione fecha",
+      "observation": "Ingrese observaciones",
+      "reportedBy": "Nombre de quien reporta"
+    },
+    "validation": {
+      "companyRequired": "Por favor seleccione una empresa",
+      "employeeRequired": "Por favor seleccione un empleado",
+      "warningTypeRequired": "Por favor seleccione un tipo de amonestación",
+      "errors": {
+        "invalidFileType": {
+          "title": "Tipo de archivo inválido",
+          "description": "Solo se permiten archivos PDF"
+        }
+      }
+    },
+    "buttons": {
+      "selectEmployee": "Seleccionar trabajador",
+      "selectDocument": "Seleccionar documento",
+      "save": "GUARDAR",
+      "update": "ACTUALIZAR",
+      "saving": "Guardando...",
+      "updating": "Actualizando...",
+      "cancel": "Cancelar",
+      "close": "Cerrar"
+    },
+    "messages": {
+      "selectCompanyFirst": "Primero seleccione una empresa"
+    },
+    "toast": {
+      "createSuccess": {
+        "title": "Amonestación creada exitosamente",
+        "description": "La amonestación ha sido creada correctamente"
+      },
+      "createError": {
+        "title": "Error al crear la amonestación",
+        "description": "Ocurrió un error al crear la amonestación"
+      },
+      "updateSuccess": {
+        "title": "Amonestación actualizada exitosamente",
+        "description": "La amonestación ha sido actualizada correctamente"
+      },
+      "updateError": {
+        "title": "Error al actualizar la amonestación",
+        "description": "Ocurrió un error al actualizar la amonestación"
+      },
+      "uploadError": {
+        "title": "Error al subir el documento",
+        "description": "Error al subir el documento"
+      }
+    },
+    "preview": {
+      "title": "Vista previa",
+      "fullscreen": "Pantalla completa",
+      "exitFullscreen": "Salir de pantalla completa",
+      "close": "Cerrar",
+      "noDocument": "No hay documento seleccionado",
+      "uploadHint": "Suba un documento PDF para ver la vista previa"
+    },
+    "employeePicker": {
+      "title": "Seleccionar trabajador",
+      "filters": {
+        "name": "Nombre",
+        "namePlaceholder": "Buscar por Nombres o Apellidos",
+        "documentNumber": "Documento",
+        "documentNumberPlaceholder": "Buscar por Número de Documento"
+      },
+      "table": {
+        "headers": {
+          "name": "Nombre",
+          "documentNumber": "Documento",
+          "job": "Cargo"
+        },
+        "noData": "No se encontraron empleados",
+        "noDataDescription": "No hay empleados registrados para este filtro.",
+        "ariaLabels": {
+          "selectEmployee": "Seleccionar trabajador"
+        }
+      },
+      "pagination": {
+        "showing": "Mostrando {current} de {total} resultados",
+        "page": "Página {current} de {total}",
+        "recordsPerPage": "Registros por página",
+        "previous": "Anterior",
+        "next": "Siguiente"
+      },
+      "buttons": {
+        "cancel": "Cancelar",
+        "select": "Seleccionar"
+      },
+      "loading": "Cargando empleados..."
+    }
+  }
+}

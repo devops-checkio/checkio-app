@@ -1,0 +1,49 @@
+{
+  "title": "Student Schedule Assignment",
+  "subtitle": "Assign schedules to students",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "operations": "Operations",
+    "schedule": "Student Schedules"
+  },
+  "tabs": {
+    "active": "Active",
+    "expiring": "Expiring",
+    "recentDismissals": "Recent Dismissals",
+    "inactive": "Inactive"
+  },
+  "tabTitles": {
+    "active": "Active Students",
+    "expiring": "Expiring Students",
+    "recentDismissals": "Recently Unlinked Students",
+    "inactive": "Inactive Students"
+  },
+  "table": {
+    "headers": {
+      "code": "Enrollment",
+      "name": "Name",
+      "document": "Document number",
+      "email": "Email",
+      "branch": "Branch",
+      "todaySchedule": "Schedule assigned today"
+    },
+    "actions": "Actions",
+    "editSchedule": "Edit schedule",
+    "noData": "No students",
+    "loading": "Loading…"
+  },
+  "filters": {
+    "searchPlaceholder": "Search by first or last name",
+    "documentPlaceholder": "Document number",
+    "branchAll": "All branches",
+    "search": "Search",
+    "clear": "Clear"
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total}",
+    "recordsPerPage": "Records per page",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  }
+}

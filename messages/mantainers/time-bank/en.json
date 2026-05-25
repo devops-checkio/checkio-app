@@ -1,0 +1,176 @@
+{
+  "title": "Time Bank Management",
+  "subtitle": "Manage employee time banks",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Maintainers",
+    "timeBank": "Time Bank"
+  },
+  "buttons": {
+    "batchCreate": "Batch Creation",
+    "configure": "Configure",
+    "manageTransactions": "Manage transactions",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleting": "Deleting...",
+    "cancel": "Cancel",
+    "search": "Search",
+    "clear": "Clear",
+    "downloadExcel": "Download Excel",
+    "previous": "Previous",
+    "next": "Next",
+    "viewDetail": "View detail"
+  },
+  "kpi": {
+    "total": "Total Time Banks",
+    "active": "Active Banks",
+    "pending": "Pending",
+    "expired": "Expired"
+  },
+  "tabs": {
+    "active": "Active Banks",
+    "expired": "Expired Banks",
+    "withBank": "Employees with Bank",
+    "withoutBank": "Employees without Bank",
+    "config": "Configuration"
+  },
+  "filters": {
+    "search": "Search",
+    "searchPlaceholder": "Search by employee...",
+    "type": "Type",
+    "typePlaceholder": "Select a type",
+    "typeOptions": {
+      "economicHours": "Economic Hours",
+      "restDays": "Rest Days"
+    },
+    "employeeId": "Employee ID",
+    "employeeIdPlaceholder": "Employee ID"
+  },
+  "table": {
+    "headers": {
+      "employee": "Employee",
+      "type": "Bank Type",
+      "hoursPerDay": "Hours per Day",
+      "availableHours": "Available Hours",
+      "usedHours": "Used Hours",
+      "period": "Validity Period",
+      "createdAt": "Creation Date",
+      "actions": "Actions"
+    },
+    "type": {
+      "economicHours": "Economic Hours",
+      "restDays": "Rest Days"
+    },
+    "period": {
+      "start": "Start",
+      "end": "End"
+    },
+    "loading": "Loading time banks...",
+    "noData": "No time banks found",
+    "noDataDescription": "There are no time banks registered for this filter."
+  },
+  "pagination": {
+    "showing": "Showing {current} of {total} results",
+    "page": "Page {current} of {total}",
+    "recordsPerPage": "Records per page"
+  },
+  "excel": {
+    "filename": "time-banks-{status}",
+    "sheetName": "Time Banks",
+    "headers": {
+      "employeeName": "Employee",
+      "employeeEmail": "Employee Email",
+      "type": "Bank Type",
+      "hoursPerDay": "Hours per Day",
+      "availableHours": "Available Hours",
+      "usedHours": "Used Hours",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "createdAt": "Creation Date"
+    },
+    "type": {
+      "economicHours": "Economic Hours",
+      "restDays": "Rest Days"
+    },
+    "hoursPerDay": "hours/day",
+    "hours": "hours"
+  },
+  "delete": {
+    "title": "Delete Time Bank",
+    "message": "Are you sure you want to delete this time bank? This action cannot be undone."
+  },
+  "toast": {
+    "deleteSuccess": {
+      "title": "Time bank deleted successfully"
+    },
+    "deleteError": {
+      "description": "Error deleting time bank"
+    },
+    "excelSuccess": {
+      "title": "Excel generated successfully"
+    },
+    "excelError": {
+      "title": "Error generating Excel"
+    }
+  },
+  "ariaLabels": {
+    "editTimeBank": "Edit time bank",
+    "deleteTimeBank": "Delete time bank",
+    "viewDetail": "View employee detail"
+  },
+  "history": {
+    "title": "Transaction History",
+    "subtitle": "Complete record of all time bank movements",
+    "summary": {
+      "totalCredits": "Total Credits",
+      "totalDebits": "Total Debits",
+      "adjustments": "Adjustments",
+      "expirations": "Expirations",
+      "hoursAdded": "hours added",
+      "hoursConsumed": "hours consumed",
+      "hoursAdjusted": "hours adjusted",
+      "hoursExpired": "hours expired"
+    },
+    "filter": {
+      "placeholder": "Filter by type",
+      "all": "All types",
+      "creditsOnly": "Credits only",
+      "debitsOnly": "Debits only",
+      "adjustmentsOnly": "Adjustments only",
+      "expirationsOnly": "Expirations only"
+    },
+    "table": {
+      "headers": {
+        "date": "Date",
+        "type": "Type",
+        "hours": "Hours",
+        "balance": "Balance",
+        "reference": "Reference",
+        "user": "User"
+      },
+      "loading": "Loading transactions...",
+      "noData": "No transactions found",
+      "noDataDescription": "There are no transactions for this filter.",
+      "hoursUnit": "hrs",
+      "reference": "Ref",
+      "systemUser": "System"
+    },
+    "types": {
+      "credit": "Credit",
+      "debit": "Debit",
+      "adjustment": "Adjustment",
+      "expiration": "Expiration"
+    },
+    "help": {
+      "title": "Transaction Types",
+      "manualOps": "Manual Operations",
+      "autoOps": "Automatic Operations",
+      "creditDescription": "Add hours to the bank manually",
+      "debitDescription": "Consume hours from the bank",
+      "adjustmentDescription": "Balance or error corrections",
+      "expirationDescription": "Hours that expire automatically",
+      "system": "System",
+      "systemDescription": "Automatic system operations"
+    }
+  }
+}

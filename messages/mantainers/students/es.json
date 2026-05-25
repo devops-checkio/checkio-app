@@ -1,0 +1,243 @@
+{
+  "title": "Gestión de Estudiantes",
+  "subtitle": "Administra los estudiantes de la organización",
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "maintainers": "Mantenimientos",
+    "students": "Estudiantes",
+    "bulkUpload": "Carga Masiva",
+    "detail": "Detalle"
+  },
+  "buttons": {
+    "add": "Agregar Estudiante",
+    "bulkUpload": "Carga Masiva",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "search": "Buscar",
+    "clear": "Limpiar",
+    "edit": "Editar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "addRow": "Agregar Fila",
+    "process": "Procesar",
+    "processingLabel": "Procesando...",
+    "downloadTemplate": "Descargar Plantilla",
+    "uploadExcel": "Subir Excel",
+    "back": "Volver",
+    "delete": "Eliminar",
+    "activate": "Activar",
+    "deactivate": "Desactivar"
+  },
+  "table": {
+    "headers": {
+      "code": "Matrícula",
+      "name": "Nombre",
+      "document": "Documento",
+      "email": "Email",
+      "phone": "Teléfono",
+      "branch": "Sede",
+      "status": "Estado",
+      "actions": "Acciones"
+    },
+    "noData": "No se encontraron estudiantes",
+    "statusActive": "Activo",
+    "statusInactive": "Inactivo"
+  },
+  "tabs": {
+    "active": "Activos",
+    "inactive": "Inactivos"
+  },
+  "modal": {
+    "createTitle": "Agregar Estudiante",
+    "editTitle": "Editar Estudiante",
+    "fields": {
+      "code": "Matrícula",
+      "firstName": "Nombres",
+      "lastName": "Apellido Paterno",
+      "secondLastName": "Apellido Materno",
+      "documentType": "Tipo de Documento",
+      "documentNumber": "Número de Documento",
+      "personalEmail": "Email Personal",
+      "personalPhone": "Teléfono Personal",
+      "birthDate": "Fecha de Nacimiento",
+      "gender": "Género",
+      "branch": "Sede",
+      "company": "Empresa",
+      "isActive": "Estudiante activo",
+      "isActiveHint": "Si está desactivado, el estudiante aparece en la pestaña Inactivos (equivale al estado inactivo en el sistema)."
+    },
+    "placeholders": {
+      "code": "Ingrese la matrícula",
+      "firstName": "Ingrese los nombres",
+      "lastName": "Ingrese el apellido paterno",
+      "secondLastName": "Ingrese el apellido materno (opcional)",
+      "documentNumber": "Ingrese el número de documento",
+      "personalEmail": "Ingrese el email personal",
+      "personalPhone": "Ingrese el teléfono personal",
+      "selectDocumentType": "Seleccione el tipo",
+      "selectGender": "Seleccione el género",
+      "selectBranch": "Seleccione la sede"
+    },
+    "errors": {
+      "codeRequired": "Por favor ingrese la matrícula",
+      "firstNameRequired": "Por favor ingrese los nombres",
+      "lastNameRequired": "Por favor ingrese el apellido paterno",
+      "documentTypeRequired": "Por favor seleccione el tipo de documento",
+      "documentNumberRequired": "Por favor ingrese el número de documento",
+      "personalEmailRequired": "Por favor ingrese el email personal",
+      "personalEmailInvalid": "Por favor ingrese un email válido",
+      "personalPhoneRequired": "Por favor ingrese el teléfono personal",
+      "birthDateRequired": "Por favor ingrese la fecha de nacimiento",
+      "genderRequired": "Por favor seleccione el género",
+      "branchRequired": "Por favor seleccione la sede"
+    }
+  },
+  "detail": {
+    "tabs": {
+      "personalData": "Datos Personales",
+      "attendance": "Asistencia",
+      "consents": "Consentimientos"
+    },
+    "personalData": {
+      "title": "Datos Personales",
+      "fields": {
+        "code": "Matrícula",
+        "firstName": "Nombres",
+        "lastName": "Apellido Paterno",
+        "secondLastName": "Apellido Materno",
+        "documentType": "Tipo de Documento",
+        "documentNumber": "Número de Documento",
+        "personalEmail": "Email Personal",
+        "personalPhone": "Teléfono Personal",
+        "birthDate": "Fecha de Nacimiento",
+        "gender": "Género",
+        "branch": "Sede",
+        "isActive": "Activo"
+      }
+    }
+  },
+  "bulkUpload": {
+    "title": "Carga Masiva de Estudiantes",
+    "subtitle": "Sube un archivo Excel con los datos de los estudiantes",
+    "back": "Volver a estudiantes",
+    "downloadTemplate": "Descargar Plantilla",
+    "uploadFile": "Subir Archivo",
+    "dropzone": {
+      "primary": "Arrastra el archivo Excel aquí o haz clic para seleccionar",
+      "hint": "Formatos: .xlsx, .xls"
+    },
+    "tabs": {
+      "validated": "Datos Validados",
+      "errors": "Datos con Errores",
+      "loaded": "Datos Cargados",
+      "empty": {
+        "validated": "No hay filas validadas. Sube un archivo para empezar.",
+        "errors": "No hay filas con errores.",
+        "loaded": "Aún no se ha cargado ningún registro."
+      }
+    },
+    "actions": {
+      "removeRow": "Quitar fila"
+    },
+    "badge": {
+      "loaded": "Cargado",
+      "pending": "Pendiente",
+      "processing": "Procesando..."
+    },
+    "templateFileName": "plantilla_estudiantes.xlsx",
+    "templateSheetName": "Estudiantes",
+    "fileInfo": "Archivo: {fileName} — {count} filas",
+    "progressLabel": "Procesando...",
+    "rowNumber": "#",
+    "preview": {
+      "fullName": "Nombre",
+      "document": "Documento",
+      "email": "Email",
+      "branch": "Sede",
+      "status": "Estado",
+      "errorColumn": "Errores"
+    },
+    "status": {
+      "pending": "Pendiente",
+      "processing": "Procesando...",
+      "success": "Exitoso"
+    },
+    "branchNotFoundSuffix": "(no encontrada)",
+    "columns": {
+      "code": "Matrícula",
+      "firstName": "Nombres",
+      "lastName": "Apellido Paterno",
+      "secondLastName": "Apellido Materno",
+      "documentType": "Tipo de Documento",
+      "documentNumber": "Número de Documento",
+      "personalEmail": "Email Personal",
+      "personalPhone": "Teléfono Personal",
+      "birthDate": "Fecha de Nacimiento",
+      "gender": "Género",
+      "branchCode": "Código de Sede"
+    },
+    "results": {
+      "success": "Exitoso",
+      "error": "Error",
+      "total": "Total"
+    },
+    "errors": {
+      "branchNotFound": "Sede no encontrada: {code}",
+      "createFailed": "Error al crear estudiante",
+      "invalidDocumentType": "Tipo de documento no válido: {value}",
+      "invalidGender": "Género no válido: {value}",
+      "invalidBirthDate": "Fecha de nacimiento no válida: {value}",
+      "requiredField": "Campo obligatorio: {field}",
+      "invalidEmail": "Email inválido: {value}",
+      "invalidDocumentNumber": "N° de documento {type} inválido: {value}",
+      "apiError": "Error API: {msg}"
+    },
+    "toast": {
+      "partialTitle": "Procesados: {success} exitosos, {errors} errores",
+      "partialDescription": "Revise las filas marcadas en rojo."
+    }
+  },
+  "toast": {
+    "createSuccess": {
+      "title": "Estudiante creado",
+      "description": "El estudiante ha sido creado exitosamente"
+    },
+    "updateSuccess": {
+      "title": "Estudiante actualizado",
+      "description": "El estudiante ha sido actualizado exitosamente"
+    },
+    "deleteSuccess": {
+      "title": "Estudiante eliminado",
+      "description": "El estudiante ha sido eliminado exitosamente"
+    },
+    "bulkSuccess": {
+      "title": "Carga masiva completada",
+      "description": "Los estudiantes han sido procesados exitosamente"
+    },
+    "error": {
+      "title": "Error",
+      "description": "Ocurrió un error al procesar la solicitud"
+    }
+  },
+  "search": {
+    "placeholder": "Buscar por nombre o documento..."
+  },
+  "pagination": {
+    "showing": "Mostrando {current} de {total} estudiantes",
+    "recordsPerPage": "Registros por página:",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "page": "Página {current} de {total}"
+  },
+  "loadError": {
+    "message": "Error al cargar estudiantes",
+    "retry": "Reintentar"
+  },
+  "confirmDelete": {
+    "title": "¿Eliminar estudiante?",
+    "description": "Esta acción desactivará al estudiante. Puede reactivarlo posteriormente.",
+    "confirm": "Eliminar",
+    "cancel": "Cancelar",
+    "deleting": "Eliminando..."
+  }
+}

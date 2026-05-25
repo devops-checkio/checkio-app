@@ -1,0 +1,297 @@
+{
+  "title": "Gestion des Quart de Travail",
+  "subtitle": "Gérez les quarts de travail du système",
+  "breadcrumbs": {
+    "dashboard": "Tableau de bord",
+    "maintainers": "Mainteneurs",
+    "shifts": "Quarts de Travail"
+  },
+  "buttons": {
+    "add": "Ajouter un Quart",
+    "downloadExcel": "Télécharger Excel",
+    "generating": "Génération...",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "clear": "Effacer",
+    "search": "Rechercher",
+    "cancel": "Annuler",
+    "deleting": "Suppression...",
+    "save": "Enregistrer",
+    "update": "Mettre à jour",
+    "saving": "Enregistrement...",
+    "updating": "Mise à jour...",
+    "select": "Sélectionner",
+    "view": "Voir",
+    "viewCycle": "Voir le cycle",
+    "assign": "Attribuer",
+    "change": "Changer",
+    "massAssign": "Attribution en Masse",
+    "selectDays": "Sélectionner les Jours"
+  },
+  "table": {
+    "headers": {
+      "name": "Nom",
+      "type": "Type",
+      "days": "Jours",
+      "weeks": "Semaines",
+      "createdAt": "Date de Création",
+      "updatedAt": "Date de Modification",
+      "actions": "Actions"
+    },
+    "noData": "Aucun quart trouvé",
+    "noDataDescription": "Créez un nouveau quart pour commencer.",
+    "loading": "Chargement des quarts...",
+    "type": {
+      "weekly": "Rotation Hebdomadaire",
+      "daily": "Rotation Quotidienne"
+    }
+  },
+  "pagination": {
+    "showing": "Affichage de {current} sur {total} quarts",
+    "recordsPerPage": "Enregistrements par page:",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page {current} sur {total}"
+  },
+  "delete": {
+    "title": "Confirmer la suppression",
+    "message": "Êtes-vous sûr de vouloir supprimer ce quart?",
+    "deleting": "Suppression...",
+    "success": "Quart supprimé avec succès",
+    "error": "Erreur lors de la suppression du quart. Veuillez réessayer."
+  },
+  "excel": {
+    "filename": "quarts",
+    "sheetName": "Quarts",
+    "headers": {
+      "name": "Nom",
+      "type": "Type",
+      "days": "Jours",
+      "weeks": "Semaines",
+      "createdAt": "Date de Création",
+      "updatedAt": "Date de Modification"
+    }
+  },
+  "ariaLabels": {
+    "viewShiftCycle": "Voir le détail du cycle du quart",
+    "editShift": "Modifier le quart",
+    "deleteShift": "Supprimer le quart",
+    "addShift": "Ajouter un quart",
+    "viewConflicts": "Voir les conflits"
+  },
+  "search": {
+    "fields": {
+      "name": "Nom",
+      "type": "Type de Quart",
+      "days": "Jours",
+      "weeks": "Semaines"
+    },
+    "placeholders": {
+      "name": "Rechercher par nom",
+      "type": "Type de quart",
+      "days": "Nombre de jours",
+      "weeks": "Nombre de semaines"
+    },
+    "options": {
+      "weekly": "Rotation Hebdomadaire",
+      "daily": "Rotation Quotidienne"
+    }
+  },
+  "toast": {
+    "deleteSuccess": {
+      "title": "Quart supprimé avec succès"
+    },
+    "deleteError": {
+      "title": "Erreur",
+      "description": "Erreur lors de la suppression du quart. Veuillez réessayer."
+    },
+    "createSuccess": {
+      "title": "Quart créé avec succès",
+      "description": "Le quart a été créé correctement"
+    },
+    "updateSuccess": {
+      "title": "Quart mis à jour avec succès",
+      "description": "Le quart a été mis à jour correctement"
+    },
+    "createError": {
+      "title": "Erreur",
+      "description": "Erreur lors de la création du quart"
+    },
+    "updateError": {
+      "title": "Erreur",
+      "description": "Erreur lors de la mise à jour du quart"
+    },
+    "excelSuccess": {
+      "title": "Excel généré avec succès"
+    },
+    "excelError": {
+      "title": "Erreur lors de la génération d'Excel"
+    },
+    "massAssignmentSuccess": {
+      "title": "Attribution en masse terminée",
+      "description": "L'horaire \"{scheduleName}\" a été attribué à {count} jour(s)"
+    },
+    "selectionRequired": {
+      "title": "Sélection requise",
+      "description": "Veuillez sélectionner au moins un jour pour attribuer l'horaire en masse"
+    }
+  },
+  "form": {
+    "title": {
+      "create": "Créer un nouveau quart",
+      "edit": "Modifier le quart"
+    },
+    "loading": "Chargement du quart...",
+    "fields": {
+      "name": "Nom du Quart",
+      "companies": "Entreprises",
+      "type": "Type de Rotation",
+      "days": "Jours",
+      "weeks": "Semaines",
+      "nomenclature": "Nomenclature"
+    },
+    "placeholders": {
+      "name": "Entrez le nom du quart",
+      "type": "Sélectionnez le type",
+      "days": "Nombre de jours",
+      "weeks": "Nombre de semaines"
+    },
+    "validation": {
+      "nameRequired": "Veuillez entrer le nom du quart",
+      "companiesRequired": "Veuillez sélectionner au moins une entreprise"
+    },
+    "invalidSchedules": {
+      "title": "Certains horaires ne s'appliquent pas",
+      "description": "{count, plural, one {Un horaire assigné n'est pas disponible pour les entreprises de ce quart et a été retiré de la grille. Veuillez réassigner ce jour.} other {# horaires assignés ne sont pas disponibles pour les entreprises de ce quart et ont été retirés de la grille. Veuillez réassigner ces jours.}}"
+    },
+    "options": {
+      "weekly": "Rotation Hebdomadaire",
+      "daily": "Rotation Quotidienne"
+    },
+    "summary": {
+      "workHours": "Total des Heures de Travail Hebdomadaires:",
+      "healthHours": "Total des Heures de Pause Repas Hebdomadaires:",
+      "warning": "Avertissement!",
+      "warningMessage": "Le total de {hours} heures hebdomadaires dépasse la limite légale de {limit} heures. Il est recommandé d'ajuster l'horaire pour se conformer à la réglementation du travail."
+    }
+  },
+  "editor": {
+    "selectSchedule": {
+      "title": "Sélectionner l'Horaire",
+      "searchPlaceholder": "Rechercher par nom ou code",
+      "loading": "Chargement des horaires...",
+      "noData": "Aucun horaire trouvé",
+      "schedule": "Horaire:",
+      "total": "Total: {hours}h {minutes}m",
+      "pagination": {
+        "showing": "Affichage de {current} sur {total} horaires"
+      }
+    },
+    "week": {
+      "days": "jours",
+      "assign": "Attribuer",
+      "change": "Changer",
+      "schedule": "Horaire:",
+      "total": "Total: {hours}h {minutes}m",
+      "available": "Disponible pour attribution",
+      "noSchedule": "Aucun horaire attribué",
+      "until": "jusqu'à",
+      "clickToAssign": "Cliquez pour attribuer un horaire",
+      "conflicts": {
+        "title": "Quarts en Conflit",
+        "currentShift": "Quart Actuel",
+        "assignedDay": "Jour attribué:",
+        "duration": "Durée:",
+        "start": "Début:",
+        "end": "Fin:",
+        "includesDays": "Cet horaire inclut {days} {daysText} depuis {day}",
+        "day": "Jour {day}",
+        "overlappingShifts": "Quarts qui se Chevauchent:",
+        "overlapDetected": "Chevauchement détecté:",
+        "overlapStart": "Début du chevauchement:",
+        "overlapEnd": "Fin du chevauchement:",
+        "conflictSchedule": "Horaire conflictuel:",
+        "conflictStart": "Début:",
+        "conflictEnd": "Fin:"
+      }
+    },
+    "nomenclature": {
+      "label": "Nomenclature",
+      "free": "Libre",
+      "to": "à",
+      "day": "Jour {day}",
+      "week": "S{week}",
+      "dailyPrefix": "J "
+    }
+  },
+  "tour": {
+    "startButton": "Voir le guide",
+    "buttons": {
+      "next": "Suivant",
+      "previous": "Précédent",
+      "done": "Terminer"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Bienvenue dans le module Quarts",
+        "description": "Dans ce module vous pouvez administrer les quarts rotatifs (hebdomadaire ou par jours). Ce guide vous montrera les principales fonctionnalités."
+      },
+      "filters": {
+        "title": "Filtres de recherche",
+        "description": "Filtrez par nom, type de rotation, nombre de jours ou semaines. Utilisez Rechercher pour appliquer et Effacer pour réinitialiser."
+      },
+      "toolbar": {
+        "title": "Actions principales",
+        "description": "Créez de nouveaux quarts ou téléchargez la liste en Excel. Les boutons dépendent de vos autorisations."
+      },
+      "table": {
+        "title": "Tableau des quarts",
+        "description": "Liste avec nom, type (hebdomadaire/jours), jours, semaines et dates. Utilisez le bouton modifier pour modifier ou supprimer pour désactiver."
+      },
+      "pagination": {
+        "title": "Pagination",
+        "description": "Naviguez entre les pages et ajustez le nombre d'enregistrements affichés."
+      }
+    }
+  },
+  "editorTour": {
+    "startButton": "Voir le guide",
+    "buttons": {
+      "next": "Suivant",
+      "previous": "Précédent",
+      "done": "Terminer"
+    },
+    "steps": {
+      "welcome": {
+        "title": "Éditeur de Quarts",
+        "description": "Configurez le quart: nom, entreprises, type de rotation et attribuez les horaires à chaque jour. Suivez le guide pour connaître chaque section."
+      },
+      "basicInfo": {
+        "title": "Données de base",
+        "description": "Indiquez le nom du quart, sélectionnez les entreprises et consultez le résumé des heures de travail et de repas."
+      },
+      "nomenclature": {
+        "title": "Nomenclature",
+        "description": "Définissez comment les jours sont identifiés dans les rapports (ex: Libre, J 1, S1, etc.)."
+      },
+      "rotationConfig": {
+        "title": "Type de rotation",
+        "description": "Choisissez Rotation Hebdomadaire (jours par semaine) ou Rotation Quotidienne. Configurez les jours/semaines selon le type."
+      },
+      "massAssignment": {
+        "title": "Attribution en masse",
+        "description": "Sélectionnez plusieurs jours et attribuez le même horaire en une fois. Utile pour les quarts répétitifs."
+      },
+      "scheduleGrid": {
+        "title": "Attribution des horaires",
+        "description": "Cliquez sur chaque cellule pour attribuer un horaire au jour. Le système détecte automatiquement les conflits."
+      },
+      "submit": {
+        "title": "Enregistrer",
+        "description": "Enregistrez le quart. Impossible d'enregistrer s'il y a des conflits d'horaires non résolus."
+      }
+    }
+  }
+}
