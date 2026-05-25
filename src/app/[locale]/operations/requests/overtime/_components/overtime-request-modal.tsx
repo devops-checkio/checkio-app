@@ -34,6 +34,7 @@ import {
   useCreateOvertimeRequest,
   useGetPresignedUploadUrl,
 } from "@/service/overtime-request.service";
+import { getApiErrorMessage } from "@/utils/api-error-message";
 import {
   Building2,
   CalendarPlus,
@@ -57,17 +58,16 @@ import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useState } from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import {
-  OvertimeRequestCreateDto,
-  OvertimeRequestResponseDto,
-  OvertimeRequestType,
-} from "./overtime-request.dto";
-import { getApiErrorMessage } from "@/utils/api-error-message";
-import {
   combineLocalDateAndTimeToUtcIso,
   isScheduleEndAfterStart,
   perHoursApplicationStartUtcIso,
   splitIsoToLocalDateAndTime,
 } from "./overtime-request-datetime";
+import {
+  OvertimeRequestCreateDto,
+  OvertimeRequestResponseDto,
+  OvertimeRequestType,
+} from "./overtime-request.dto";
 
 enum ProcessingItemStatus {
   PENDING = "pending",
@@ -442,7 +442,9 @@ const OvertimeRequestModal = ({
       if (!data.startDate) {
         toast({
           title: t("validation.errors.applicationDateRequired.title"),
-          description: t("validation.errors.applicationDateRequired.description"),
+          description: t(
+            "validation.errors.applicationDateRequired.description",
+          ),
           variant: "destructive",
         });
         return;
@@ -486,7 +488,13 @@ const OvertimeRequestModal = ({
         selectedEmployees.map((employee) => ({
           id: `employee-${employee.publicId}`,
           employeeId: employee.publicId,
-          employeeName: `${employee.firstName} ${employee.lastName}`,
+          employeeName: [
+            employee.firstName,
+            employee.lastName,
+            employee.secondLastName,
+          ]
+            .filter(Boolean)
+            .join(" "),
           documentNumber: employee.documentNumber,
           status: ProcessingItemStatus.PENDING,
         })),
@@ -547,10 +555,7 @@ const OvertimeRequestModal = ({
           );
           successCount++;
         } catch (error: unknown) {
-          const msg = getApiErrorMessage(
-            error,
-            t("toast.createError.unknown"),
-          );
+          const msg = getApiErrorMessage(error, t("toast.createError.unknown"));
           if (firstErrorDetail === undefined) {
             firstErrorDetail = msg;
           }
@@ -672,10 +677,7 @@ const OvertimeRequestModal = ({
               className="flex gap-3 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950"
               role="status"
             >
-              <Info
-                className="h-5 w-5 shrink-0 text-amber-700"
-                aria-hidden
-              />
+              <Info className="h-5 w-5 shrink-0 text-amber-700" aria-hidden />
               <p>{t("companyRequired.hint")}</p>
             </div>
           )}
@@ -714,8 +716,7 @@ const OvertimeRequestModal = ({
                     value={search || ""}
                     onChange={(e) => setValue("search", e.target.value)}
                     onKeyDown={(e) =>
-                      e.key === "Enter" &&
-                      handleSearchSubmit(onSubmitSearch)()
+                      e.key === "Enter" && handleSearchSubmit(onSubmitSearch)()
                     }
                   />
                 </div>
@@ -727,12 +728,9 @@ const OvertimeRequestModal = ({
                     type="text"
                     placeholder={tBatch("filters.documentNumberPlaceholder")}
                     value={documentNumber || ""}
-                    onChange={(e) =>
-                      setValue("documentNumber", e.target.value)
-                    }
+                    onChange={(e) => setValue("documentNumber", e.target.value)}
                     onKeyDown={(e) =>
-                      e.key === "Enter" &&
-                      handleSearchSubmit(onSubmitSearch)()
+                      e.key === "Enter" && handleSearchSubmit(onSubmitSearch)()
                     }
                   />
                 </div>
@@ -855,7 +853,9 @@ const OvertimeRequestModal = ({
                             <CHEKIOTableHead className="w-12">
                               <input
                                 type="checkbox"
-                                aria-label={t("employeeSelection.selectAllAria")}
+                                aria-label={t(
+                                  "employeeSelection.selectAllAria",
+                                )}
                                 checked={
                                   selectedEmployees.length > 0 &&
                                   selectedEmployees.length ===
@@ -975,7 +975,9 @@ const OvertimeRequestModal = ({
                                     className="rounded"
                                   />
                                 </CHEKIOTableCell>
-                                <CHEKIOTableCell>{employee.code}</CHEKIOTableCell>
+                                <CHEKIOTableCell>
+                                  {employee.code}
+                                </CHEKIOTableCell>
                                 <CHEKIOTableCell>
                                   {employee.firstName}
                                 </CHEKIOTableCell>
@@ -1252,7 +1254,9 @@ const OvertimeRequestModal = ({
                             onChange={(e) => field.onChange(e.target.value)}
                             disabled={isReadOnly}
                             className={
-                              errors.startTime ? "border-red-500 w-full" : "w-full"
+                              errors.startTime
+                                ? "border-red-500 w-full"
+                                : "w-full"
                             }
                             aria-invalid={!!errors.startTime}
                           />
@@ -1303,7 +1307,9 @@ const OvertimeRequestModal = ({
                             onChange={(e) => field.onChange(e.target.value)}
                             disabled={isReadOnly}
                             className={
-                              errors.endTime ? "border-red-500 w-full" : "w-full"
+                              errors.endTime
+                                ? "border-red-500 w-full"
+                                : "w-full"
                             }
                             aria-invalid={!!errors.endTime}
                           />
@@ -1545,7 +1551,8 @@ const OvertimeRequestModal = ({
                                 {tBatch("table.status.pending")}
                               </span>
                             )}
-                            {item.status === ProcessingItemStatus.PROCESSING && (
+                            {item.status ===
+                              ProcessingItemStatus.PROCESSING && (
                               <span className="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800">
                                 <Loader2 className="w-3 h-3 animate-spin" />
                                 {tBatch("table.status.processing")}

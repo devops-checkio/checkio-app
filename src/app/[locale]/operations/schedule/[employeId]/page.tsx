@@ -1,14 +1,15 @@
 "use client";
+import AccessNotGranted from "@/app/[locale]/_components/acces-not-granted";
 import {
   CHEKIOButton,
   CHEKIOHeader,
-  CHEKIOLoading,
   CHEKIOSelect,
   CHEKIOSelectContent,
   CHEKIOSelectItem,
   CHEKIOSelectTrigger,
   CHEKIOSelectValue,
 } from "@/components";
+import { Skeleton } from "@/components/ui/skeleton";
 import { useCookieSession } from "@/context/useCookieSession";
 import { OrganizationPermissionCode } from "@/dto/enum/permission-code.enum";
 import {
@@ -17,24 +18,28 @@ import {
   useGetEmployee,
   useGetHolidays,
 } from "@/service/mantainer.service";
-import { Calendar, ChevronLeft, ChevronRight, PlusCircle, Trash2, User } from "lucide-react";
+import {
+  Calendar,
+  ChevronLeft,
+  ChevronRight,
+  PlusCircle,
+  Trash2,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import React, { useMemo, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 import { AbsenceResponseDto } from "../../absences/_components/absence.dto";
 import { CardAbsence } from "../_components/card-absence";
 import { CardFreeDay } from "../_components/card-free-day";
 import { CardHolidayDay } from "../_components/card-holiday";
 import { CardSchedule } from "../_components/card-schedule";
 import { CardShiftSchedule } from "../_components/card-shift-schedule";
+import type { SelectedDayDto } from "../_components/employee-schedule.types";
 import ModalConfirmDeletion from "../_components/modal-confirm-deletion";
 import ModalConfirmFreeDay from "../_components/modal-confirm-free-day";
 import ModalMassAssignment, {
   MassAssignmentExistingSlot,
 } from "../_components/modal-mass-assignment";
-import { Skeleton } from "@/components/ui/skeleton";
-import AccessNotGranted from "@/app/[locale]/_components/acces-not-granted";
 
 enum EmployeeScheduleType {
   EMPLOYEE_SHIFT = "EMPLOYEE_SHIFT",
@@ -60,7 +65,11 @@ function buildExistingSlotsFromCalendarRecord(
           workMinutes: s.workMinutes,
         };
       })
-      .filter((x: MassAssignmentExistingSlot | null): x is MassAssignmentExistingSlot => !!x);
+      .filter(
+        (
+          x: MassAssignmentExistingSlot | null,
+        ): x is MassAssignmentExistingSlot => !!x,
+      );
     return slots.length ? slots : undefined;
   }
   const s = record.schedule;
@@ -84,11 +93,13 @@ function buildExistingSlotsFromCalendarRecord(
   return undefined;
 }
 
-function scheduleOptionsFromCalendarRecord(record: any): Array<{
-  scheduleId: string;
-  scheduleCode: string;
-  scheduleName?: string;
-}> | undefined {
+function scheduleOptionsFromCalendarRecord(record: any):
+  | Array<{
+      scheduleId: string;
+      scheduleCode: string;
+      scheduleName?: string;
+    }>
+  | undefined {
   if (!record) return undefined;
   if (record.scheduleDetails?.length) {
     const opts = record.scheduleDetails
@@ -102,7 +113,13 @@ function scheduleOptionsFromCalendarRecord(record: any): Array<{
         };
       })
       .filter(
-        (x: { scheduleId: string; scheduleCode: string; scheduleName?: string } | null): x is {
+        (
+          x: {
+            scheduleId: string;
+            scheduleCode: string;
+            scheduleName?: string;
+          } | null,
+        ): x is {
           scheduleId: string;
           scheduleCode: string;
           scheduleName?: string;
@@ -123,23 +140,29 @@ function scheduleOptionsFromCalendarRecord(record: any): Array<{
   return undefined;
 }
 
-export type SelectedDayDto = {
-  date: string;
-  schedule: string;
-  error?: string;
-  existingScheduleSlots?: MassAssignmentExistingSlot[];
-  recordType?: string;
-  scheduleOptions?: Array<{
-    scheduleId: string;
-    scheduleCode: string;
-    scheduleName?: string;
-  }>;
-};
 const MONTH_KEYS = [
-  "january", "february", "march", "april", "may", "june",
-  "july", "august", "september", "october", "november", "december",
+  "january",
+  "february",
+  "march",
+  "april",
+  "may",
+  "june",
+  "july",
+  "august",
+  "september",
+  "october",
+  "november",
+  "december",
 ] as const;
-const WEEK_DAY_KEYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"] as const;
+const WEEK_DAY_KEYS = [
+  "mon",
+  "tue",
+  "wed",
+  "thu",
+  "fri",
+  "sat",
+  "sun",
+] as const;
 
 type CalendarAbsenceDay = {
   publicId: string;
@@ -156,7 +179,7 @@ function toUtcDateKey(date: Date): string {
 function parseUtcDate(value: string | Date): Date {
   if (value instanceof Date) {
     return new Date(
-      Date.UTC(value.getUTCFullYear(), value.getUTCMonth(), value.getUTCDate())
+      Date.UTC(value.getUTCFullYear(), value.getUTCMonth(), value.getUTCDate()),
     );
   }
 
@@ -175,7 +198,7 @@ function EmployeeScheduleContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const fromStudentSchedule = searchParams.get("from") === "student-schedule";
-  const employeId = params.employeId as string;
+  const employeeId = params.employeeId as string;
   const { canUpdate, canDelete, canCreate, companyId } = useCookieSession();
   const canManageScheduleAssignment =
     canCreate(OrganizationPermissionCode.ASIGMENT_SCHEDULE_OPERATIONS) ||
@@ -205,7 +228,7 @@ function EmployeeScheduleContent() {
   });
 
   const { data: employee, isLoading: isLoadingEmployee } =
-    useGetEmployee(employeId);
+    useGetEmployee(employeeId);
 
   const visibleMonthRange = useMemo(() => {
     const year = currentDate.getFullYear();
@@ -225,7 +248,7 @@ function EmployeeScheduleContent() {
     page: 1,
     pageSize: 500,
     sort: "asc",
-    employeeId: employeId,
+    employeeId: employeeId,
     fromDate: visibleMonthRange.startDateKey,
     toDate: visibleMonthRange.endDateKey,
   });
@@ -233,7 +256,7 @@ function EmployeeScheduleContent() {
   const { data: calendar, isLoading: isLoadingCalendar } = useGetCalendar({
     month: currentDate.getMonth() + 1,
     year: currentDate.getFullYear(),
-    employeeId: employeId,
+    employeeId: employeeId,
   });
 
   const absencesByDay = useMemo<Record<string, CalendarAbsenceDay>>(() => {
@@ -258,14 +281,16 @@ function EmployeeScheduleContent() {
           Date.UTC(
             current.getUTCFullYear(),
             current.getUTCMonth(),
-            current.getUTCDate() + 1
-          )
+            current.getUTCDate() + 1,
+          ),
         )
       ) {
         absenceMap[toUtcDateKey(current)] = {
           publicId: absence.publicId,
           absenceTypeName:
-            absence.absenceType?.name || absence.absenceTypeName || t("cards.absence"),
+            absence.absenceType?.name ||
+            absence.absenceTypeName ||
+            t("cards.absence"),
           startDate: absence.startDate,
           endDate: absence.endDate,
           withoutPay: absence.withoutPay,
@@ -274,15 +299,17 @@ function EmployeeScheduleContent() {
     });
 
     return absenceMap;
-  }, [absences?.data, t, visibleMonthRange.endDate, visibleMonthRange.startDate]);
+  }, [
+    absences?.data,
+    t,
+    visibleMonthRange.endDate,
+    visibleMonthRange.startDate,
+  ]);
 
-  const meses = useMemo(
-    () => MONTH_KEYS.map((key) => t(`months.${key}`)),
-    [t]
-  );
+  const meses = useMemo(() => MONTH_KEYS.map((key) => t(`months.${key}`)), [t]);
   const weekDays = useMemo(
     () => WEEK_DAY_KEYS.map((key) => t(`weekDays.${key}`)),
-    [t]
+    [t],
   );
 
   // Generar opciones de años (desde 2020 hasta 2030)
@@ -433,7 +460,10 @@ function EmployeeScheduleContent() {
             }}
           />,
         );
-      } else if (record && record.type === EmployeeScheduleType.EMPLOYEE_SHIFT) {
+      } else if (
+        record &&
+        record.type === EmployeeScheduleType.EMPLOYEE_SHIFT
+      ) {
         days.push(
           <CardShiftSchedule
             key={`day-${day}`}
@@ -541,7 +571,8 @@ function EmployeeScheduleContent() {
                       date: dateString,
                       schedule: record.schedule?.code ?? "-",
                       recordType: record.type,
-                      scheduleOptions: scheduleOptionsFromCalendarRecord(record),
+                      scheduleOptions:
+                        scheduleOptionsFromCalendarRecord(record),
                       existingScheduleSlots:
                         buildExistingSlotsFromCalendarRecord(record),
                     };
@@ -576,7 +607,6 @@ function EmployeeScheduleContent() {
           );
         }
       }
-
     }
 
     // Obtener el día de la semana del último día del mes
@@ -604,13 +634,15 @@ function EmployeeScheduleContent() {
           </div>,
         );
       }
-
     }
     return days;
   };
 
   const employeeName = employee
-    ? `${employee.firstName || ""} ${employee.lastName || ""}`.trim()
+    ? [employee.firstName, employee.lastName, employee.secondLastName]
+        .filter(Boolean)
+        .join(" ")
+        .trim() || t("loadingName")
     : t("loadingName");
   const isStudentEmployee = employee?.personType === "STUDENT";
   const isStudentContext = fromStudentSchedule || isStudentEmployee;
@@ -916,7 +948,10 @@ function EmployeeScheduleContent() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
             <div className="flex items-center gap-2">
               <span className="text-sm font-medium text-blue-900">
-                {selectedDaysCount} {selectedDaysCount === 1 ? "día seleccionado" : "días seleccionados"}
+                {selectedDaysCount}{" "}
+                {selectedDaysCount === 1
+                  ? "día seleccionado"
+                  : "días seleccionados"}
               </span>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -970,18 +1005,18 @@ function EmployeeScheduleContent() {
           </div>
         )}
         <div className="relative grid grid-cols-7 gap-3">
-        {/* Cabecera de los días de la semana */}
-        {weekDays.map((day) => (
-          <div
-            key={day}
-            className="text-center text-xs font-semibold uppercase tracking-wider text-gray-500 py-3 bg-gray-50/80 rounded-t-lg"
-          >
-            {day}
-          </div>
-        ))}
-        {/* Días del mes */}
-        {renderCalendar()}
-      </div>
+          {/* Cabecera de los días de la semana */}
+          {weekDays.map((day) => (
+            <div
+              key={day}
+              className="text-center text-xs font-semibold uppercase tracking-wider text-gray-500 py-3 bg-gray-50/80 rounded-t-lg"
+            >
+              {day}
+            </div>
+          ))}
+          {/* Días del mes */}
+          {renderCalendar()}
+        </div>
       </div>
 
       <ModalConfirmFreeDay
@@ -989,14 +1024,14 @@ function EmployeeScheduleContent() {
         onClose={() => setIsModalConfirmFreeDayOpen(false)}
         selectedDays={selectedDays}
         cleanSelectedDays={() => setSelectedDays({})}
-        employeeId={employeId}
+        employeeId={employeeId}
       />
       <ModalConfirmDeletion
         isOpen={isModalConfirmDeletionOpen}
         onClose={() => setIsModalConfirmDeletionOpen(false)}
         entries={scheduleDeletionEntries}
         cleanSelectedDays={() => setSelectedDays({})}
-        employeeId={employeId}
+        employeeId={employeeId}
       />
       {isModalMassAssignmentOpen && (
         <ModalMassAssignment
@@ -1008,7 +1043,7 @@ function EmployeeScheduleContent() {
             existingScheduleSlots: selectedDays[date]?.existingScheduleSlots,
           }))}
           cleanSelectedDays={() => setSelectedDays({})}
-          employeeId={employeId}
+          employeeId={employeeId}
           companyIds={
             employee?.organizationId
               ? [employee.organizationId]

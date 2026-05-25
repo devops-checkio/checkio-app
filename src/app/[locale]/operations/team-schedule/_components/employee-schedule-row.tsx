@@ -1,11 +1,11 @@
 "use client";
 
+import { Skeleton } from "@/components/ui/skeleton";
 import { useCookieSession } from "@/context/useCookieSession";
 import { useGetCalendar } from "@/service/mantainer.service";
-import { Skeleton } from "@/components/ui/skeleton";
+import { User } from "lucide-react";
 import { DayCell, DayCellRecord, TeamScheduleType } from "./day-cell";
 import { TeamAbsenceDayInfo } from "./team-absence.types";
-import { User } from "lucide-react";
 
 function toUtcDateKey(year: number, month: number, day: number): string {
   const d = new Date(Date.UTC(year, month - 1, day));
@@ -41,14 +41,14 @@ interface EmployeeScheduleRowProps {
   year: number;
   daysInMonth: number;
   selectedDays: Record<string, { date: string; schedule: string }>;
-  /** Por día (clave yyyy-mm-dd UTC), misma lógica que schedule/[employeId]. */
+  /** Por día (clave yyyy-mm-dd UTC), misma lógica que schedule/[employeeId]. */
   absencesByDate: Record<string, TeamAbsenceDayInfo>;
   holidays: Array<{ date: string | Date }>;
   canSelect: boolean;
   onDayToggle: (
     employeeId: string,
     dateStr: string,
-    record: DayCellRecord | undefined
+    record: DayCellRecord | undefined,
   ) => void;
 }
 
@@ -167,8 +167,11 @@ export function EmployeeScheduleRow({
               today.getFullYear() === year &&
               today.getMonth() + 1 === month &&
               today.getDate() === day;
-            const isNonSelectableDay =
-              isTodayOrPastLocalCalendarDay(year, month, day);
+            const isNonSelectableDay = isTodayOrPastLocalCalendarDay(
+              year,
+              month,
+              day,
+            );
             const isSelected = !!selectedDays[dateStr];
             const isHoliday = isHolidayDate(dateStr);
             const record = getRecordForDay(day);
@@ -193,7 +196,9 @@ export function EmployeeScheduleRow({
                   isToday={isToday}
                   isPastDate={isNonSelectableDay}
                   canSelect={canSelect && !isNonSelectableDay}
-                  onClick={() => onDayToggle(employee.publicId, dateStr, record)}
+                  onClick={() =>
+                    onDayToggle(employee.publicId, dateStr, record)
+                  }
                 />
               </td>
             );

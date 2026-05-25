@@ -10,16 +10,16 @@ import {
   CHEKIOTableHeader,
   CHEKIOTableRow,
 } from "@/components";
+import { useCookieSession } from "@/context/useCookieSession";
+import { OrganizationPermissionCode } from "@/dto/enum/permission-code.enum";
 import { useToast } from "@/hooks/use-toast";
 import { useSetFreeScheduleDay } from "@/service/schedule.service";
 import { useQueryClient } from "@tanstack/react-query";
-import { useCookieSession } from "@/context/useCookieSession";
-import { OrganizationPermissionCode } from "@/dto/enum/permission-code.enum";
 import { AlertCircle, CheckCircle2, Loader2, X } from "lucide-react";
 import { DateTime } from "luxon";
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
-import { SelectedDayDto } from "../[employeId]/page";
+import { SelectedDayDto } from "./employee-schedule.types";
 
 interface FreeDayItem {
   id: string;
@@ -28,15 +28,6 @@ interface FreeDayItem {
   status: "pending" | "processing" | "success" | "error";
   error?: string;
 }
-
-// Mock data for testing
-const MOCK_SCHEDULES = ["Mañana", "Tarde", "Noche"];
-const MOCK_ERRORS = [
-  "Error de conexión con el servidor",
-  "El día ya está marcado como libre",
-  "No hay permisos suficientes",
-  "Error al actualizar la base de datos",
-];
 
 interface ModalConfirmFreeDayProps {
   isOpen: boolean;
@@ -51,7 +42,13 @@ interface ModalConfirmFreeDayProps {
 }
 
 const localeToLuxon = (locale: string) =>
-  locale === "es" ? "es" : locale === "en" ? "en" : locale === "pt" ? "pt" : "fr";
+  locale === "es"
+    ? "es"
+    : locale === "en"
+      ? "en"
+      : locale === "pt"
+        ? "pt"
+        : "fr";
 
 const ModalConfirmFreeDay = ({
   isOpen,
@@ -94,7 +91,7 @@ const ModalConfirmFreeDay = ({
             }),
           schedule: selectedDays[day].schedule,
           status: "pending",
-        }))
+        })),
       );
     } else {
       setFreeDays([]);
@@ -174,8 +171,8 @@ const ModalConfirmFreeDay = ({
       // Actualizar el estado a "procesando" para el día actual
       setFreeDays((prev) =>
         prev.map((d, index) =>
-          index === i ? { ...d, status: "processing" } : d
-        )
+          index === i ? { ...d, status: "processing" } : d,
+        ),
       );
 
       try {
@@ -187,8 +184,8 @@ const ModalConfirmFreeDay = ({
         // Actualizar el estado a éxito
         setFreeDays((prev) =>
           prev.map((d, index) =>
-            index === i ? { ...d, status: "success" } : d
-          )
+            index === i ? { ...d, status: "success" } : d,
+          ),
         );
       } catch (error: any) {
         // Actualizar el estado a error
@@ -198,19 +195,17 @@ const ModalConfirmFreeDay = ({
               ? {
                   ...d,
                   status: "error",
-                    error:
-                    error?.response?.data?.message ||
-                    t("errorProcessDay"),
+                  error: error?.response?.data?.message || t("errorProcessDay"),
                 }
-              : d
-          )
+              : d,
+          ),
         );
       }
     }
 
     // Verificar si todos fueron exitosos
     const successCount = freeDays.filter(
-      (day) => day.status === "success"
+      (day) => day.status === "success",
     ).length;
     const errorCount = freeDays.filter((day) => day.status === "error").length;
 
@@ -284,7 +279,7 @@ const ModalConfirmFreeDay = ({
           </CHEKIOTable>
         </div>
 
-          <div className="flex justify-end gap-4">
+        <div className="flex justify-end gap-4">
           <CHEKIOButton
             variant="secondary"
             onClick={onClose}
@@ -295,16 +290,16 @@ const ModalConfirmFreeDay = ({
           </CHEKIOButton>
           <CHEKIOButton
             variant="primary"
-              onClick={processFreeDays}
-              disabled={
-                isPending ||
-                (!canCreate(
-                  OrganizationPermissionCode.ASIGMENT_SCHEDULE_OPERATIONS,
-                ) &&
-                  !canCreate(
-                    OrganizationPermissionCode.STUDENT_SCHEDULE_ASSIGNMENT_OPERATIONS,
-                  ))
-              }
+            onClick={processFreeDays}
+            disabled={
+              isPending ||
+              (!canCreate(
+                OrganizationPermissionCode.ASIGMENT_SCHEDULE_OPERATIONS,
+              ) &&
+                !canCreate(
+                  OrganizationPermissionCode.STUDENT_SCHEDULE_ASSIGNMENT_OPERATIONS,
+                ))
+            }
             className="bg-green-600 hover:bg-green-700 !text-white"
           >
             {isPending ? (
