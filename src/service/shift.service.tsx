@@ -17,7 +17,7 @@ export function useCreateShift() {
     mutationFn: async (data) => {
       const response = await axiosInstance.post<ShiftResponseDto>(
         `/client/mantainer/shifts`,
-        data
+        data,
       );
       return response.data;
     },
@@ -45,7 +45,7 @@ export function useGetShifts(filter: ShiftFindAllDto) {
         `/client/mantainer/shifts`,
         {
           params: filter,
-        }
+        },
       );
       return response.data;
     },
@@ -57,7 +57,7 @@ export function useGetShift(publicId: string | string[] | undefined) {
     queryKey: ["GetShift", publicId],
     queryFn: async () => {
       const response = await axiosInstance.get<ShiftResponseDto>(
-        `/client/mantainer/shifts/${publicId}`
+        `/client/mantainer/shifts/${publicId}`,
       );
       return response.data;
     },
@@ -73,7 +73,7 @@ export function useUpdateShift() {
     mutationFn: async (data: ShiftUpdateDto) => {
       const response = await axiosInstance.put<ShiftResponseDto>(
         `/client/mantainer/shifts/${data.publicId}`,
-        data
+        data,
       );
       return response.data;
     },
@@ -85,7 +85,7 @@ export function useDeleteShift() {
     mutationKey: ["DeleteShift"],
     mutationFn: async (publicId: string) => {
       const response = await axiosInstance.delete<ShiftResponseDto>(
-        `/client/mantainer/shifts/${publicId}`
+        `/client/mantainer/shifts/${publicId}`,
       );
       return response.data;
     },
@@ -97,7 +97,7 @@ export function useGetSchedulesByShiftId(publicId: string | undefined) {
     queryKey: ["GetSchedulesByShiftId", publicId],
     queryFn: async () => {
       const response = await axiosInstance.get<ScheduleResponseDto[]>(
-        `/client/mantainer/shifts/${publicId}/schedules`
+        `/client/mantainer/shifts/${publicId}/schedules`,
       );
       return response.data;
     },
@@ -111,7 +111,7 @@ export function useCreateShiftForAssistances() {
     mutationFn: async (data: ShiftEmployeeAssigmentDto) => {
       const response = await axiosInstance.post<ShiftResponseDto>(
         `/client/mantainer/shifts/assigment-shifts`,
-        data
+        data,
       );
       return response.data;
     },
@@ -124,7 +124,7 @@ export function useDeleteShiftAssigment() {
     mutationFn: async (publicId: string) => {
       const response =
         await axiosInstance.delete<EmployeeShiftDeleteResponseDto>(
-          `/client/mantainer/shifts/assigment-shifts/${publicId}`
+          `/client/mantainer/shifts/assigment-shifts/${publicId}`,
         );
       return response.data;
     },

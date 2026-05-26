@@ -253,21 +253,18 @@ const ModalMassAssignment = ({
 
   const getScheduleSelectBlockReason = useCallback(
     (schedule: ScheduleResponseDto): string | null => {
-      const slot = findOverlappingExistingSlotEmployee(
-        schedule,
-        assignmentEntries,
-      );
-      if (slot) {
-        return t("toast.overlapExisting", {
-          candidate: schedule.code,
-          existing: slot.code ?? slot.publicId,
-        });
-      }
       if (isStudent) {
-        const other = findOverlappingAmongSelected(
+        const slot = findOverlappingExistingSlotEmployee(
           schedule,
-          selectedSchedules,
+          assignmentEntries,
         );
+        if (slot) {
+          return t("toast.overlapExisting", {
+            candidate: schedule.code,
+            existing: slot.code ?? slot.publicId,
+          });
+        }
+        const other = findOverlappingAmongSelected(schedule, selectedSchedules);
         if (other) {
           return t("toast.overlapAmongPicked", {
             candidate: schedule.code,
@@ -334,23 +331,25 @@ const ModalMassAssignment = ({
       ? selectedSchedules
       : selectedSchedules.slice(0, 1);
 
-    for (const schedule of schedulesToAssign) {
-      const conflictingExisting = findOverlappingExistingSlotEmployee(
-        schedule,
-        assignmentEntries,
-      );
-      if (conflictingExisting) {
-        toast({
-          title: t("toast.overlapTitle"),
-          description: t("toast.overlapExisting", {
-            candidate: schedule.code,
-            existing:
-              conflictingExisting.code ?? conflictingExisting.publicId,
-          }),
-          variant: "destructive",
-        });
-        setIsPending(false);
-        return;
+    if (isStudent) {
+      for (const schedule of schedulesToAssign) {
+        const conflictingExisting = findOverlappingExistingSlotEmployee(
+          schedule,
+          assignmentEntries,
+        );
+        if (conflictingExisting) {
+          toast({
+            title: t("toast.overlapTitle"),
+            description: t("toast.overlapExisting", {
+              candidate: schedule.code,
+              existing:
+                conflictingExisting.code ?? conflictingExisting.publicId,
+            }),
+            variant: "destructive",
+          });
+          setIsPending(false);
+          return;
+        }
       }
     }
 
@@ -520,7 +519,9 @@ const ModalMassAssignment = ({
     return `${label} (${start.toFormat("HH:mm")} - ${end.toFormat("HH:mm")})`;
   })();
 
-  const effectivePersonType = isStudent ? PersonType.STUDENT : PersonType.EMPLOYEE;
+  const effectivePersonType = isStudent
+    ? PersonType.STUDENT
+    : PersonType.EMPLOYEE;
 
   return (
     <>

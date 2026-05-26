@@ -1,4 +1,4 @@
-/** Ausencia por día y empleado (misma fuente que schedule/[employeId]: useGetAbsences). */
+/** Ausencia por día y empleado (misma fuente que schedule/[employeeId]: useGetAbsences). */
 export type TeamAbsenceDayInfo = {
   absenceTypeName: string;
   typeCode: string;

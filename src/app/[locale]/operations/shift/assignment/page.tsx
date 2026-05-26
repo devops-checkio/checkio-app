@@ -15,10 +15,8 @@ import {
 } from "@/components";
 import { useCookieSession } from "@/context/useCookieSession";
 import { OrganizationPermissionCode } from "@/dto/enum/permission-code.enum";
-import {
-  useOperationsShiftAssignmentTour,
-} from "@/hooks/useOperationsShiftAssignmentTour";
 import { useToast } from "@/hooks/use-toast";
+import { useOperationsShiftAssignmentTour } from "@/hooks/useOperationsShiftAssignmentTour";
 import { useGetHolidays } from "@/service/mantainer.service";
 import {
   useCreateShiftForAssistances,
@@ -28,7 +26,6 @@ import {
 } from "@/service/shift.service";
 import { useQueryClient } from "@tanstack/react-query";
 import {
-  AlertCircle,
   ArrowLeftRight,
   CalendarClock,
   Check,
@@ -86,7 +83,7 @@ function AssignmentContent() {
     companyId: undefined as string | undefined,
   });
   const [employeeShifts, setEmployeeShifts] = useState<{ [key: string]: any }>(
-    {}
+    {},
   );
   const [loadingEmployeeShifts, setLoadingEmployeeShifts] = useState<{
     [key: string]: boolean;
@@ -180,9 +177,7 @@ function AssignmentContent() {
     const rows = getValues("employees");
     if (rows?.length) {
       const next = rows.map((row: any) =>
-        row.shiftId
-          ? row
-          : { ...row, shiftId: selectedShift.publicId }
+        row.shiftId ? row : { ...row, shiftId: selectedShift.publicId },
       );
       if (next.some((row: any, i: number) => row.shiftId !== rows[i].shiftId)) {
         setValue("employees", next);
@@ -222,7 +217,7 @@ function AssignmentContent() {
     if (selectedEmployeeIndexes.includes(index)) {
       // Remove from selection if already selected
       setSelectedEmployeeIndexes(
-        selectedEmployeeIndexes.filter((i) => i !== index)
+        selectedEmployeeIndexes.filter((i) => i !== index),
       );
     } else {
       // Replace selection (only 1 employee at a time)
@@ -278,39 +273,27 @@ function AssignmentContent() {
   };
 
   const handleShiftAssignment = async (data: any) => {
-    const rootShiftId = (
-      getValues("shiftId") ||
-      selectedShift?.publicId ||
-      ""
-    )
+    const rootShiftId = (getValues("shiftId") || selectedShift?.publicId || "")
       .toString()
       .trim();
 
     const employeesPayload: ShiftAssigmentDto[] = data.employees.map(
       (row: any) => {
-      const employeeId = (
-        row.employeeId ||
-        row.employee?.publicId ||
-        ""
-      )
-        .toString()
-        .trim();
-      const shiftId = (
-        row.shiftId ||
-        row.shift?.publicId ||
-        rootShiftId
-      )
-        .toString()
-        .trim();
+        const employeeId = (row.employeeId || row.employee?.publicId || "")
+          .toString()
+          .trim();
+        const shiftId = (row.shiftId || row.shift?.publicId || rootShiftId)
+          .toString()
+          .trim();
 
-      return {
-        employeeId,
-        shiftId,
-        dayIndex: row.dayIndex ?? 0,
-        weekIndex: row.weekIndex ?? 0,
-        ruleHoliday: row.ruleHoliday || RuleHolidayType.NONE,
-      };
-    },
+        return {
+          employeeId,
+          shiftId,
+          dayIndex: row.dayIndex ?? 0,
+          weekIndex: row.weekIndex ?? 0,
+          ruleHoliday: row.ruleHoliday || RuleHolidayType.NONE,
+        };
+      },
     );
 
     const invalid = employeesPayload.find((e) => !e.employeeId || !e.shiftId);
@@ -359,11 +342,19 @@ function AssignmentContent() {
         reset();
         router.push("/operations/shift");
       },
-      onError: (error) => {
+      onError: (error: any) => {
+        const apiMessage =
+          error?.response?.data?.message ??
+          (Array.isArray(error?.response?.data?.message)
+            ? error.response.data.message.join(", ")
+            : undefined);
         toast({
           title: "Error al crear el turno",
           variant: "destructive",
-          description: error.message,
+          description:
+            apiMessage ||
+            error?.message ||
+            "No se pudo completar la asignación. Verifique que el servicio de colas esté activo (npm run start:dev-queues).",
         });
       },
     });
@@ -464,7 +455,7 @@ function AssignmentContent() {
   // Function to handle individual employee shift change
   const handleEmployeeShiftChange = async (
     employeeIndex: number,
-    shift: any
+    shift: any,
   ) => {
     const employee = selectedEmployees[employeeIndex];
     const employeeId = employee.publicId;
@@ -504,7 +495,7 @@ function AssignmentContent() {
   // Function to handle holiday rule change
   const handleHolidayRuleChange = (
     employeeIndex: number,
-    value: RuleHolidayType
+    value: RuleHolidayType,
   ) => {
     const updatedEmployees = [...getValues("employees")];
     updatedEmployees[employeeIndex] = {
@@ -528,7 +519,7 @@ function AssignmentContent() {
       }
       // Fallback to finding in the shifts list
       const shiftFromList = shifts?.data.find(
-        (s) => s.publicId === employeeShiftId
+        (s) => s.publicId === employeeShiftId,
       );
       if (shiftFromList) {
         return shiftFromList;
@@ -626,12 +617,12 @@ function AssignmentContent() {
             <div className="flex-1 overflow-y-auto p-4 space-y-3">
               {filteredEmployees.map((employee, index) => {
                 const originalIndex = selectedEmployees.findIndex(
-                  (emp) => emp.publicId === employee.publicId
+                  (emp) => emp.publicId === employee.publicId,
                 );
                 const isSelected =
                   selectedEmployeeIndexes.includes(originalIndex);
                 const isConfigured = getValues(
-                  `employees.${originalIndex}.isConfigured`
+                  `employees.${originalIndex}.isConfigured`,
                 );
                 const hasCustom = hasCustomShift(originalIndex);
                 const isLoadingShift = loadingEmployeeShifts[employee.publicId];
@@ -768,8 +759,8 @@ function AssignmentContent() {
                                       dayIndex: luxonDate?.weekday
                                         ? luxonDate?.weekday - 1
                                         : 0,
-                                    })
-                                  )
+                                    }),
+                                  ),
                                 );
                               }
                             }}
@@ -884,9 +875,11 @@ function AssignmentContent() {
                                 </div>
                               </div>
                               <div className="flex items-center gap-4">
-                                {canUpdate(OrganizationPermissionCode.SHIFT_MAINTENANCE) &&
+                                {canUpdate(
+                                  OrganizationPermissionCode.SHIFT_MAINTENANCE,
+                                ) &&
                                   !getValues(
-                                    `employees.${employeeIndex}.isConfigured`
+                                    `employees.${employeeIndex}.isConfigured`,
                                   ) && (
                                     <CHEKIOButton
                                       variant="secondaryBlue"
@@ -971,7 +964,7 @@ function AssignmentContent() {
                                         field.onChange(value);
                                         handleHolidayRuleChange(
                                           employeeIndex,
-                                          value as RuleHolidayType
+                                          value as RuleHolidayType,
                                         );
                                       }}
                                     >
@@ -1053,7 +1046,7 @@ function AssignmentContent() {
                           </div>
                         </div>
                       );
-                    }
+                    },
                   )}
                 </div>
               )}
@@ -1096,7 +1089,9 @@ function AssignmentContent() {
                     selectedEmployeeIndexes.length === 0 ||
                     employees.filter((emp: any) => emp.isConfigured).length !==
                       employees.length ||
-                    !canCreate(OrganizationPermissionCode.ASIGMENT_SHIFT_OPERATIONS)
+                    !canCreate(
+                      OrganizationPermissionCode.ASIGMENT_SHIFT_OPERATIONS,
+                    )
                   }
                   className="min-w-[150px]"
                 >
@@ -1126,7 +1121,7 @@ function AssignmentContent() {
             selectedEmployees[selectedEmployeeForShiftChange]?.firstName || ""
           }
           currentShiftId={getValues(
-            `employees.${selectedEmployeeForShiftChange}.shiftId`
+            `employees.${selectedEmployeeForShiftChange}.shiftId`,
           )}
         />
       )}
