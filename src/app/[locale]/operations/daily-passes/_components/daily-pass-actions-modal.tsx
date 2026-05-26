@@ -1,5 +1,6 @@
 "use client";
 
+import { CHEKIOButton } from "@/components";
 import { CheckIOButton } from "@/components/template/checkIO-button";
 import { useToast } from "@/hooks/use-toast";
 import {
@@ -9,9 +10,12 @@ import {
   ReloadOutlined,
 } from "@ant-design/icons";
 import { Drawer, Select } from "antd";
+import { QrCode } from "lucide-react";
 import { DateTime } from "luxon";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
+import DailyPassQrModal from "./daily-pass-qr-modal";
 import { DailyPassResponseDto, DailyPassStatus } from "./daily-pass.dto";
 
 interface DailyPassActionsModalProps {
@@ -34,8 +38,10 @@ const DailyPassActionsModal = ({
   onRenew,
 }: DailyPassActionsModalProps) => {
   const { toast } = useToast();
+  const t = useTranslations("dailyPasses");
   const [isDeactivating, setIsDeactivating] = useState(false);
   const [isRenewing, setIsRenewing] = useState(false);
+  const [isQrModalOpen, setIsQrModalOpen] = useState(false);
 
   const {
     control,
@@ -206,6 +212,19 @@ const DailyPassActionsModal = ({
           </p>
         </div>
 
+        {pass.status !== DailyPassStatus.DEACTIVATED && (
+          <div className="rounded-lg border border-blue-200 bg-blue-50 p-4">
+            <h4 className="mb-2 font-medium text-blue-900">
+              {t("qrModal.title")}
+            </h4>
+            <p className="mb-3 text-sm text-blue-800">{t("qrModal.scanHint")}</p>
+            <CHEKIOButton variant="primary" onClick={() => setIsQrModalOpen(true)}>
+              <QrCode className="h-4 w-4" />
+              {t("qrCode")}
+            </CHEKIOButton>
+          </div>
+        )}
+
         {/* Actions Section */}
         <div className="space-y-4">
           <h4 className="font-medium text-gray-900 border-b pb-2">
@@ -231,11 +250,14 @@ const DailyPassActionsModal = ({
 
           {/* Renew Action */}
           {(pass.status === DailyPassStatus.ACTIVE ||
-            pass.status === DailyPassStatus.EXPIRED) && (
+            pass.status === DailyPassStatus.EXPIRED ||
+            pass.status === DailyPassStatus.DEACTIVATED) && (
             <div className="bg-green-50 p-4 rounded-lg border border-green-200">
               <h5 className="font-medium text-green-900 mb-2">Renovar Pase</h5>
               <p className="text-sm text-green-700 mb-3">
-                Extienda la validez del pase por días adicionales.
+                {pass.status === DailyPassStatus.DEACTIVATED
+                  ? "Este pase está desactivado. Al renovarlo volverá a estar activo y se enviará un nuevo código QR al empleado."
+                  : "Extienda la validez del pase por días adicionales."}
               </p>
 
               <form onSubmit={handleSubmit(handleRenew)} className="space-y-3">
@@ -289,18 +311,6 @@ const DailyPassActionsModal = ({
             </div>
           )}
 
-          {/* Deactivated Status */}
-          {pass.status === DailyPassStatus.DEACTIVATED && (
-            <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
-              <h5 className="font-medium text-gray-900 mb-2">
-                Pase Desactivado
-              </h5>
-              <p className="text-sm text-gray-700">
-                Este pase ha sido desactivado manualmente. No se pueden realizar
-                más acciones.
-              </p>
-            </div>
-          )}
         </div>
 
         {/* System Info */}
@@ -320,6 +330,16 @@ const DailyPassActionsModal = ({
           <p>• ID: {pass.publicId}</p>
         </div>
       </div>
+
+      <DailyPassQrModal
+        isOpen={isQrModalOpen}
+        onClose={() => setIsQrModalOpen(false)}
+        passPublicId={pass.publicId}
+        employeeName={pass.employeeName}
+        initialQrCode={pass.qrCode}
+        initialQrExpiresAt={pass.qrExpiresAt}
+        status={pass.status}
+      />
     </Drawer>
   );
 };

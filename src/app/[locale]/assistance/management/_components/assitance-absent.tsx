@@ -138,7 +138,14 @@ const AssistanceAbsent = ({ filters, companyId }: AssistanceAbsentProps) => {
     });
   };
 
-  const assistanceData = data?.data || [];
+  const assistanceData = (data?.data || []).filter((assistance) => {
+    const marks = assistance.Marks ?? [];
+    const hasOfficialMarks = marks.some(
+      (mark: { isOfficial?: boolean; isAditional?: boolean }) =>
+        mark.isOfficial === true && mark.isAditional === false,
+    );
+    return !hasOfficialMarks;
+  });
   const selectedAssistances = assistanceData.filter((a) =>
     selectedRowKeys.includes(a.publicId),
   );

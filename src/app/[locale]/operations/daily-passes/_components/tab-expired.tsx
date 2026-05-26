@@ -22,11 +22,12 @@ import {
   useGetExpiredDailyPasses,
   useRenewDailyPass,
 } from "@/service/daily-pass.service";
-import { ChevronLeft, ChevronRight, Eye, RotateCw } from "lucide-react";
+import { ChevronLeft, ChevronRight, Eye, QrCode, RotateCw } from "lucide-react";
 import { DateTime } from "luxon";
 import { useTranslations } from "next-intl";
 import { useCallback, useState } from "react";
 import DailyPassActionsModal from "./daily-pass-actions-modal";
+import DailyPassQrModal from "./daily-pass-qr-modal";
 import { DailyPassResponseDto, DailyPassStatus } from "./daily-pass.dto";
 
 export default function TabExpired() {
@@ -37,6 +38,7 @@ export default function TabExpired() {
     null
   );
   const [isActionsModalOpen, setIsActionsModalOpen] = useState(false);
+  const [isQrModalOpen, setIsQrModalOpen] = useState(false);
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
 
@@ -45,6 +47,7 @@ export default function TabExpired() {
     page,
     pageSize,
     sort: "desc",
+    companyId: companyId ?? undefined,
   });
 
   // Mutations
@@ -55,8 +58,18 @@ export default function TabExpired() {
     setIsActionsModalOpen(true);
   };
 
+  const handleViewQr = (pass: DailyPassResponseDto) => {
+    setSelectedPass(pass);
+    setIsQrModalOpen(true);
+  };
+
   const handleCloseActionsModal = () => {
     setIsActionsModalOpen(false);
+    setSelectedPass(null);
+  };
+
+  const handleCloseQrModal = () => {
+    setIsQrModalOpen(false);
     setSelectedPass(null);
   };
 
@@ -223,7 +236,19 @@ export default function TabExpired() {
                         <Eye className="h-4 w-4" />
                         <span>{t("view")}</span>
                       </CHEKIOActionButton>
-                      {pass.status === DailyPassStatus.EXPIRED && (
+                      {pass.status !== DailyPassStatus.DEACTIVATED && (
+                        <CHEKIOActionButton
+                          variant="edit"
+                          onClick={() => handleViewQr(pass)}
+                          aria-label={t("qrCode")}
+                          className="h-auto w-auto px-3 py-1.5 gap-1.5"
+                        >
+                          <QrCode className="h-4 w-4" />
+                          <span>{t("qrCode")}</span>
+                        </CHEKIOActionButton>
+                      )}
+                      {(pass.status === DailyPassStatus.EXPIRED ||
+                        pass.status === DailyPassStatus.DEACTIVATED) && (
                         <CHEKIOActionButton
                           variant="edit"
                           onClick={() => handleViewPass(pass)}
@@ -312,6 +337,18 @@ export default function TabExpired() {
             return Promise.resolve();
           }}
           onRenew={handleRenewPass}
+        />
+      )}
+
+      {isQrModalOpen && selectedPass && (
+        <DailyPassQrModal
+          isOpen={isQrModalOpen}
+          onClose={handleCloseQrModal}
+          passPublicId={selectedPass.publicId}
+          employeeName={selectedPass.employeeName}
+          initialQrCode={selectedPass.qrCode}
+          initialQrExpiresAt={selectedPass.qrExpiresAt}
+          status={selectedPass.status}
         />
       )}
     </>

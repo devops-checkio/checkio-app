@@ -22,7 +22,7 @@ import TabExpired from "./_components/tab-expired";
 function DailyPassesContent() {
   const [activeTab, setActiveTab] = useState("active");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { canCreate } = useCookieSession();
+  const { canCreate, companyId } = useCookieSession();
   const t = useTranslations("dailyPasses");
 
   // Get counts for tabs
@@ -30,12 +30,14 @@ function DailyPassesContent() {
     page: 1,
     pageSize: 1, // Just get count
     sort: "desc",
+    companyId: companyId ?? undefined,
   });
 
   const { data: expiredPassesData } = useGetExpiredDailyPasses({
     page: 1,
     pageSize: 1, // Just get count
     sort: "desc",
+    companyId: companyId ?? undefined,
   });
 
   const handleOpenModal = () => {
@@ -77,7 +79,7 @@ function DailyPassesContent() {
         <DailyPassModal
           isOpen={isModalOpen}
           onClose={handleCloseModal}
-          onSuccess={() => {}}
+          onSuccess={handleCloseModal}
         />
       )}
     </>

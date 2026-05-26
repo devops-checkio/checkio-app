@@ -89,15 +89,6 @@ function filterNavDropdownItem(
       canRead(OrganizationPermissionCode.ASIGMENT_SCHEDULE_OPERATIONS)
     );
   }
-  if (item.permission === OrganizationPermissionCode.SCHEDULE_MAINTENANCE) {
-    return (
-      canRead(OrganizationPermissionCode.SCHEDULE_MAINTENANCE) ||
-      canRead(OrganizationPermissionCode.ASIGMENT_SCHEDULE_OPERATIONS) ||
-      canRead(
-        OrganizationPermissionCode.STUDENT_SCHEDULE_ASSIGNMENT_OPERATIONS,
-      )
-    );
-  }
   return canRead(item.permission);
 }
 
@@ -229,7 +220,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       label: t("operationsItems.scheduleAssignment"),
       onClick: () => router.push("/operations/schedule"),
       icon: Calendar,
-      permission: OrganizationPermissionCode.SCHEDULE_MAINTENANCE,
+      permission: OrganizationPermissionCode.ASIGMENT_SCHEDULE_OPERATIONS,
     },
     {
       label: t("operationsItems.studentScheduleAssignment"),

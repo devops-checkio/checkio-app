@@ -120,7 +120,8 @@
       },
       "createSuccess": {
         "title": "Pases creados",
-        "description": "Los pases diarios han sido creados correctamente para todos los empleados"
+        "description": "Los pases diarios han sido creados correctamente. El código QR se envió por correo a los empleados con email registrado.",
+        "descriptionWithEmailWarning": "Los pases se crearon correctamente. {count} empleado(s) no tienen email: no recibirán el correo; usa el botón «Código QR» en el listado para ver el código."
       },
       "createError": {
         "title": "Proceso completado con errores",
@@ -135,6 +136,34 @@
     "systemInfo": {
       "title": "Información del Sistema",
       "description": "El sistema generará automáticamente códigos QR diarios para cada empleado según su horario asignado. Los códigos serán enviados por correo electrónico."
+    }
+  },
+  "qrModal": {
+    "title": "Código QR de acceso",
+    "employee": "Empleado",
+    "loading": "Cargando código QR...",
+    "notAvailable": "No hay código QR disponible para este pase.",
+    "timeRemaining": "Tiempo restante del código:",
+    "qrAlt": "Código QR de acceso",
+    "scanHint": "Muestra este código en el lector de acceso. El código expira en unos minutos por seguridad.",
+    "copyCode": "Copiar código",
+    "regenerate": "Regenerar QR",
+    "emailNote": "Este código también se envía por correo al empleado si tiene un email registrado.",
+    "copySuccess": {
+      "title": "Copiado",
+      "description": "Código copiado al portapapeles"
+    },
+    "copyError": {
+      "title": "Error",
+      "description": "No se pudo copiar el código"
+    },
+    "regenerateSuccess": {
+      "title": "QR regenerado",
+      "description": "Se generó un nuevo código y se envió por correo al empleado"
+    },
+    "regenerateError": {
+      "title": "Error",
+      "description": "No se pudo regenerar el código QR"
     }
   },
   "actionsModal": {

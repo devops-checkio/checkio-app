@@ -62,6 +62,18 @@ interface DailyPassFormData {
   reason: string;
 }
 
+function pickEmployeeEmail(employee: EmployeeResponseDto): string | undefined {
+  for (const candidate of [
+    employee.personalEmail,
+    employee.workEmail,
+    (employee as { email?: string }).email,
+  ]) {
+    const trimmed = candidate?.trim();
+    if (trimmed) return trimmed;
+  }
+  return undefined;
+}
+
 const DailyPassModal = ({
   isOpen,
   onClose,
@@ -315,6 +327,9 @@ const DailyPassModal = ({
       }))
     );
 
+    let successCount = 0;
+    let errorCount = 0;
+
     // Procesar cada empleado secuencialmente
     for (let i = 0; i < selectedEmployees.length; i++) {
       const employee = selectedEmployees[i];
@@ -335,6 +350,7 @@ const DailyPassModal = ({
         };
 
         await createDailyPass.mutateAsync(passData);
+        successCount += 1;
 
         // Actualizar el estado a éxito
         setProcessingItems((prev) =>
@@ -343,6 +359,7 @@ const DailyPassModal = ({
           )
         );
       } catch (error: any) {
+        errorCount += 1;
         // Actualizar el estado a error
         setProcessingItems((prev) =>
           prev.map((item, index) =>
@@ -362,48 +379,44 @@ const DailyPassModal = ({
     // Esperar un momento para que el estado se actualice completamente
     await new Promise((resolve) => setTimeout(resolve, 200));
 
-    // Calcular counts después de procesar todos usando el estado actualizado
-    setProcessingItems((prev) => {
-      const successCount = prev.filter(
-        (item) => item.status === "success"
-      ).length;
-      const errorCount = prev.filter((item) => item.status === "error").length;
-
-      // Mostrar toast después de actualizar el estado
-      setTimeout(() => {
-        if (errorCount === 0) {
-          toast({
-            title: t("toast.createSuccess.title"),
-            description: t("toast.createSuccess.description"),
-          });
-        } else {
-          toast({
-            title: t("toast.createError.title"),
-            description: t("toast.createError.description", {
-              successCount,
-              errorCount,
-            }),
-            variant: "destructive",
-          });
-        }
-      }, 0);
-
-      return prev;
-    });
-
     // Invalidar consultas para actualizar los datos
-    queryClient.invalidateQueries({
+    await queryClient.invalidateQueries({
       queryKey: ["GetDailyPasses"],
     });
-    queryClient.invalidateQueries({
+    await queryClient.invalidateQueries({
       queryKey: ["GetActiveDailyPasses"],
     });
-    queryClient.invalidateQueries({
+    await queryClient.invalidateQueries({
       queryKey: ["GetExpiredDailyPasses"],
     });
 
     setIsPending(false);
-    onSuccess();
+    if (errorCount === 0) {
+      const withoutEmail = selectedEmployees.filter(
+        (employee) => !pickEmployeeEmail(employee),
+      );
+      toast({
+        title: t("toast.createSuccess.title"),
+        description:
+          withoutEmail.length > 0
+            ? t("toast.createSuccess.descriptionWithEmailWarning", {
+                count: withoutEmail.length,
+              })
+            : t("toast.createSuccess.description"),
+      });
+      onSuccess();
+      handleClose();
+      return;
+    }
+
+    toast({
+      title: t("toast.createError.title"),
+      description: t("toast.createError.description", {
+        successCount,
+        errorCount,
+      }),
+      variant: "destructive",
+    });
   };
 
   const renderSummary = () => {

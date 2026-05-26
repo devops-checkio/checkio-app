@@ -2,6 +2,7 @@
 
 import { CHEKIOModal } from "@/components";
 import { useEffect, useState } from "react";
+import { QRCodeSVG } from "qrcode.react";
 
 interface ModalDailyPassQrProps {
   isOpen: boolean;
@@ -65,14 +66,17 @@ export default function ModalDailyPassQr({
           </p>
         </div>
 
-        <div className="mb-6">
-          {qrCode && (
-            <img
-              src={qrCode}
-              alt="QR Code"
-              className="w-64 h-64 p-4 bg-white rounded-lg shadow-md"
-            />
-          )}
+        <div className="mb-6 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+          {qrCode &&
+            (qrCode.startsWith("data:image") || qrCode.startsWith("http") ? (
+              <img
+                src={qrCode}
+                alt="QR Code"
+                className="h-64 w-64"
+              />
+            ) : (
+              <QRCodeSVG value={qrCode} size={256} level="M" title="QR Code" />
+            ))}
         </div>
 
         <div className="w-full p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">

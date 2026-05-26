@@ -70,10 +70,18 @@ const getPersonTypeLabel = (personType?: "EMPLOYEE" | "STUDENT") => {
   return "Empleado";
 };
 
-const shouldIncludeInDefaultList = (employee: EmployeeResponseDto) => {
-  if (employee.personType === "STUDENT") return true;
-  return employee.isActive;
+const isEmployeeActiveForAssistance = (employee: EmployeeResponseDto) => {
+  if (!employee.isActive) return false;
+  if (!employee.endDate) return true;
+  const end = new Date(employee.endDate);
+  const today = new Date();
+  end.setHours(0, 0, 0, 0);
+  today.setHours(0, 0, 0, 0);
+  return end >= today;
 };
+
+const shouldIncludeInDefaultList = (employee: EmployeeResponseDto) =>
+  isEmployeeActiveForAssistance(employee);
 
 const AssistanceCreatorModal = ({
   isOpen,

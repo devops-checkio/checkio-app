@@ -24,11 +24,19 @@ import {
   useGetActiveDailyPasses,
   useRenewDailyPass,
 } from "@/service/daily-pass.service";
-import { ChevronLeft, ChevronRight, Eye, RotateCw, Trash2 } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Eye,
+  QrCode,
+  RotateCw,
+  Trash2,
+} from "lucide-react";
 import { DateTime } from "luxon";
 import { useTranslations } from "next-intl";
 import { useCallback, useState } from "react";
 import DailyPassActionsModal from "./daily-pass-actions-modal";
+import DailyPassQrModal from "./daily-pass-qr-modal";
 import { DailyPassResponseDto, DailyPassStatus } from "./daily-pass.dto";
 
 export default function TabActive() {
@@ -39,6 +47,7 @@ export default function TabActive() {
     null
   );
   const [isActionsModalOpen, setIsActionsModalOpen] = useState(false);
+  const [isQrModalOpen, setIsQrModalOpen] = useState(false);
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
 
@@ -47,6 +56,7 @@ export default function TabActive() {
     page,
     pageSize,
     sort: "desc",
+    companyId: companyId ?? undefined,
   });
 
   // Mutations
@@ -58,8 +68,18 @@ export default function TabActive() {
     setIsActionsModalOpen(true);
   };
 
+  const handleViewQr = (pass: DailyPassResponseDto) => {
+    setSelectedPass(pass);
+    setIsQrModalOpen(true);
+  };
+
   const handleCloseActionsModal = () => {
     setIsActionsModalOpen(false);
+    setSelectedPass(null);
+  };
+
+  const handleCloseQrModal = () => {
+    setIsQrModalOpen(false);
     setSelectedPass(null);
   };
 
@@ -240,15 +260,28 @@ export default function TabActive() {
                         {canUpdate(
                           OrganizationPermissionCode.DAILY_PASS_OPERATIONS
                         ) && (
-                          <CHEKIOActionButton
-                            variant="view"
-                            onClick={() => handleViewPass(pass)}
-                            aria-label={t("view")}
-                            className="h-auto w-auto px-3 py-1.5 gap-1.5"
-                          >
-                            <Eye className="h-4 w-4" />
-                            <span>{t("view")}</span>
-                          </CHEKIOActionButton>
+                          <>
+                            <CHEKIOActionButton
+                              variant="view"
+                              onClick={() => handleViewPass(pass)}
+                              aria-label={t("view")}
+                              className="h-auto w-auto px-3 py-1.5 gap-1.5"
+                            >
+                              <Eye className="h-4 w-4" />
+                              <span>{t("view")}</span>
+                            </CHEKIOActionButton>
+                            {pass.status === DailyPassStatus.ACTIVE && (
+                              <CHEKIOActionButton
+                                variant="edit"
+                                onClick={() => handleViewQr(pass)}
+                                aria-label={t("qrCode")}
+                                className="h-auto w-auto px-3 py-1.5 gap-1.5"
+                              >
+                                <QrCode className="h-4 w-4" />
+                                <span>{t("qrCode")}</span>
+                              </CHEKIOActionButton>
+                            )}
+                          </>
                         )}
                         {canDelete(
                           OrganizationPermissionCode.DAILY_PASS_OPERATIONS
@@ -353,6 +386,18 @@ export default function TabActive() {
           pass={selectedPass}
           onDeactivate={handleDeactivatePass}
           onRenew={handleRenewPass}
+        />
+      )}
+
+      {isQrModalOpen && selectedPass && (
+        <DailyPassQrModal
+          isOpen={isQrModalOpen}
+          onClose={handleCloseQrModal}
+          passPublicId={selectedPass.publicId}
+          employeeName={selectedPass.employeeName}
+          initialQrCode={selectedPass.qrCode}
+          initialQrExpiresAt={selectedPass.qrExpiresAt}
+          status={selectedPass.status}
         />
       )}
     </>
