@@ -77,6 +77,9 @@ const ModalAutocompleteAssistance = ({
       queryKey: ["GetAllAssistancesAbsent"],
     });
     queryClient.invalidateQueries({
+      queryKey: ["GetAllAssistancesPendingMarks"],
+    });
+    queryClient.invalidateQueries({
       queryKey: ["GetAssistanceCount"],
     });
     for (const id of assistanceIds) {

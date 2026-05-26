@@ -23,8 +23,9 @@ import {
 import { RefreshCw, Search } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
+import { buildAssistanceSummaryParams } from "../_components/assistance.dto";
 import StudentAbsent from "./_components/student-absent";
 import StudentCompleted from "./_components/student-completed";
 import StudentIncomplete from "./_components/student-incomplete";
@@ -103,48 +104,15 @@ export default function ManagementStudentPage() {
     sort: "asc",
   });
 
-  const branchId = watch("branchId");
-  const establishmentId = watch("establishmentId");
-
-  const summaryParams = companyId
-    ? (() => {
-        const base = { companyId, personType: "STUDENT" as const };
-        const withEstablishment =
-          filter.establishmentId
-            ? { establishmentId: filter.establishmentId }
-            : {};
-        if (filter.month) {
-          return { ...base, ...withEstablishment, month: filter.month };
-        }
-        if (filter.date) {
-          return {
-            ...base,
-            ...withEstablishment,
-            startDate: filter.date,
-            endDate: filter.date,
-          };
-        }
-        if (filter.year) {
-          return {
-            ...base,
-            ...withEstablishment,
-            startDate: `${filter.year}-01-01`,
-            endDate: `${filter.year}-12-31`,
-          };
-        }
-        const startDate =
-          filter.startDate ??
-          filter.dateRangeStart ??
-          new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toLocaleDateString(
-            "en-CA",
-          );
-        const endDate =
-          filter.endDate ??
-          filter.dateRangeEnd ??
-          new Date().toLocaleDateString("en-CA");
-        return { ...base, ...withEstablishment, startDate, endDate };
-      })()
-    : undefined;
+  const summaryParams = useMemo(
+    () =>
+      companyId
+        ? buildAssistanceSummaryParams(companyId, filter, {
+            personType: "STUDENT",
+          })
+        : undefined,
+    [companyId, filter],
+  );
 
   const { data: assistanceCount } = useGetAssistanceCount(summaryParams, {
     enabled: !!companyId,

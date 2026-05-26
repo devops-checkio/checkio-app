@@ -56,6 +56,9 @@ export type AssistanceCountFindAllDto = {
   startDate?: string;
   /** Fecha fin en formato ISO YYYY-MM-DD */
   endDate?: string;
+  /** Día único en formato ISO YYYY-MM-DD */
+  date?: string;
+  year?: number;
   /** Filtrar por sucursal (publicId) */
   branchId?: string;
   /** Filtrar por cargo (publicId) */
@@ -64,7 +67,58 @@ export type AssistanceCountFindAllDto = {
   personType?: "EMPLOYEE" | "STUDENT";
   /** Filtrar por establecimiento (publicId) */
   establishmentId?: string;
+  documentNumber?: string;
+  search?: string;
 };
+
+export function buildAssistanceSummaryParams(
+  companyId: string,
+  filter: Record<string, unknown>,
+  extras?: Partial<AssistanceCountFindAllDto>,
+): AssistanceCountFindAllDto {
+  const base: AssistanceCountFindAllDto = {
+    companyId,
+    personType: filter.personType as AssistanceCountFindAllDto["personType"],
+    branchId: filter.branchId as string | undefined,
+    jobId: filter.jobId as string | undefined,
+    search: filter.search as string | undefined,
+    documentNumber: filter.documentNumber as string | undefined,
+    establishmentId: filter.establishmentId as string | undefined,
+    ...extras,
+  };
+
+  if (filter.month) {
+    return { ...base, month: filter.month as string };
+  }
+  if (filter.date) {
+    return { ...base, date: filter.date as string };
+  }
+  if (filter.year) {
+    return {
+      ...base,
+      year: filter.year as number,
+      startDate: `${filter.year}-01-01`,
+      endDate: `${filter.year}-12-31`,
+    };
+  }
+
+  const defaultStart = new Date(
+    Date.now() - 30 * 24 * 60 * 60 * 1000,
+  ).toLocaleDateString("en-CA");
+  const defaultEnd = new Date().toLocaleDateString("en-CA");
+
+  return {
+    ...base,
+    startDate:
+      (filter.startDate as string | undefined) ??
+      (filter.dateRangeStart as string | undefined) ??
+      defaultStart,
+    endDate:
+      (filter.endDate as string | undefined) ??
+      (filter.dateRangeEnd as string | undefined) ??
+      defaultEnd,
+  };
+}
 
 export type AssistanceFindAllDto = {
   employeeId?: number;

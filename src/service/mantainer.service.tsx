@@ -1652,8 +1652,17 @@ export function useGetAllAssistancesPendingMarks(
         }
       });
 
+      const seenPublicIds = new Set<string>();
+      const uniqueAssistances = allAssistances.filter((assistance) => {
+        if (!assistance.publicId || seenPublicIds.has(assistance.publicId)) {
+          return false;
+        }
+        seenPublicIds.add(assistance.publicId);
+        return true;
+      });
+
       // Filtrar solo las asistencias que tienen marcas pendientes
-      const filteredAssistances = allAssistances.filter((assistance) => {
+      const filteredAssistances = uniqueAssistances.filter((assistance) => {
         return assistance.Marks?.some(
           (mark: any) => mark.status === "WAITING_APPROVAL",
         );

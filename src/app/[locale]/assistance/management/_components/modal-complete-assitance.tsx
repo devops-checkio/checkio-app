@@ -89,11 +89,100 @@ interface ModalCompleteAssistanceProps {
   defaultValues?: FormValues;
 }
 
+type AssistanceDayAnchor = { year: number; month: number; day: number };
+
+/** Alinea un instante de horario/plantilla al día de la asistencia (misma lógica que schedule.bll). */
+function parseScheduleInstantOnAssistanceDay(
+  timeSource: string | Date | undefined,
+  assistanceDay: AssistanceDayAnchor,
+): DateTime {
+  if (timeSource == null || timeSource === "") {
+    return DateTime.invalid("missing schedule time");
+  }
+
+  const applyAnchor = (dt: DateTime) =>
+    dt.isValid ? dt.toUTC().set(assistanceDay) : DateTime.invalid("invalid");
+
+  if (timeSource instanceof Date) {
+    return applyAnchor(DateTime.fromJSDate(timeSource));
+  }
+
+  const str = String(timeSource).trim();
+  let dt = DateTime.fromISO(str, { zone: "utc" });
+  if (dt.isValid) return applyAnchor(dt);
+
+  dt = DateTime.fromJSDate(new Date(str)).toUTC();
+  if (dt.isValid) return applyAnchor(dt);
+
+  const timeOnly = /^(\d{1,2}):(\d{2})(?::(\d{2}))?$/.exec(str);
+  if (timeOnly) {
+    return DateTime.fromObject(
+      {
+        ...assistanceDay,
+        hour: parseInt(timeOnly[1], 10),
+        minute: parseInt(timeOnly[2], 10),
+        second: parseInt(timeOnly[3] ?? "0", 10),
+      },
+      { zone: "utc" },
+    );
+  }
+
+  return DateTime.invalid("unparseable schedule time");
+}
+
+/** Hora de una marca existente sobre el día de la asistencia (solo componente horario UTC). */
+function parseMarkInstantOnAssistanceDay(
+  timestamp: string,
+  assistanceDay: AssistanceDayAnchor,
+): DateTime {
+  const mark = DateTime.fromISO(timestamp).toUTC();
+  if (!mark.isValid) return mark;
+  return DateTime.fromObject(
+    {
+      year: assistanceDay.year,
+      month: assistanceDay.month,
+      day: assistanceDay.day,
+      hour: mark.hour,
+      minute: mark.minute,
+      second: mark.second,
+      millisecond: 0,
+    },
+    { zone: "utc" },
+  );
+}
+
 function formatUtcTimeForInput(dateTime: DateTime): string {
   if (!dateTime?.isValid) {
-    return "00:00:00";
+    return "";
   }
-  return dateTime.setZone("UTC").toFormat("HH:mm:ss");
+  return dateTime.toUTC().toFormat("HH:mm");
+}
+
+function parseTimeInputParts(
+  raw: string,
+): { hours: number; minutes: number; seconds: number } | null {
+  const trimmed = raw.trim();
+  if (!trimmed) return null;
+
+  const match = trimmed.match(/^(\d{1,2}):(\d{2})(?::(\d{2}))?$/);
+  if (!match) return null;
+
+  const hours = parseInt(match[1], 10);
+  const minutes = parseInt(match[2], 10);
+  const seconds = match[3] !== undefined ? parseInt(match[3], 10) : 0;
+
+  if (
+    Number.isNaN(hours) ||
+    Number.isNaN(minutes) ||
+    Number.isNaN(seconds) ||
+    hours > 23 ||
+    minutes > 59 ||
+    seconds > 59
+  ) {
+    return null;
+  }
+
+  return { hours, minutes, seconds };
 }
 
 /**
@@ -121,29 +210,32 @@ function UtcTimeInput({
     }
   }, [formatted, focused]);
 
-  const commit = (raw: string) => {
-    const trimmed = raw.trim();
-    if (!trimmed || !value?.isValid) {
-      return;
+  const commit = (raw: string): boolean => {
+    if (!value?.isValid) {
+      return false;
     }
-    const parts = trimmed.split(":");
-    const hours = parseInt(parts[0], 10);
-    const minutes = parseInt(parts[1] ?? "", 10);
-    const secPart = parts[2];
-    const seconds =
-      secPart !== undefined && secPart !== "" ? parseInt(secPart, 10) : 0;
-    if (Number.isNaN(hours) || Number.isNaN(minutes) || Number.isNaN(seconds)) {
-      return;
+
+    const parts = parseTimeInputParts(raw);
+    if (!parts) {
+      setLocal(formatted);
+      return false;
     }
+
     const next = value.toUTC().set({
-      hour: hours,
-      minute: minutes,
-      second: seconds,
+      hour: parts.hours,
+      minute: parts.minutes,
+      second: parts.seconds,
       millisecond: 0,
     });
-    if (next.isValid) {
-      onChange(next);
+
+    if (!next.isValid) {
+      setLocal(formatted);
+      return false;
     }
+
+    onChange(next);
+    setLocal(formatUtcTimeForInput(next));
+    return true;
   };
 
   return (
@@ -151,7 +243,6 @@ function UtcTimeInput({
       {icon}
       <input
         type="time"
-        step="1"
         className={className}
         value={focused ? local : formatted}
         onFocus={() => {
@@ -161,13 +252,13 @@ function UtcTimeInput({
         onChange={(e) => {
           const v = e.target.value;
           setLocal(v);
-          if (v && e.currentTarget.validity.valid) {
+          if (v) {
             commit(v);
           }
         }}
         onBlur={() => {
-          setFocused(false);
           commit(local);
+          setFocused(false);
         }}
       />
     </div>
@@ -194,10 +285,17 @@ const ModalCompleteAssistanceComponent = ({
   const {
     control,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormValues>({
     defaultValues: defaultValues,
   });
+
+  useEffect(() => {
+    if (defaultValues) {
+      reset(defaultValues);
+    }
+  }, [defaultValues, reset]);
 
   const { fields, remove } = useFieldArray({
     control,
@@ -260,6 +358,9 @@ const ModalCompleteAssistanceComponent = ({
       });
       queryClient.invalidateQueries({
         queryKey: ["GetAllAssistancesAbsent"],
+      });
+      queryClient.invalidateQueries({
+        queryKey: ["GetAllAssistancesPendingMarks"],
       });
       queryClient.invalidateQueries({
         queryKey: ["GetAssistanceCount"],
@@ -535,18 +636,21 @@ export default function ModalCompleteAssistance({
 
   if (isLoading) return <div>Cargando...</div>;
 
-  const setAssistanceDate = {
+  const setAssistanceDate: AssistanceDayAnchor = {
     year: assistance.year,
     month: assistance.month,
     day: assistance.day,
   };
-  const startScheduleTime = DateTime.fromISO(schedule?.startTime!)
-    .toUTC()
-    .set(setAssistanceDate);
-  const endScheduleTime = startScheduleTime.plus({
-    hours: schedule?.workHours,
-    minutes: schedule?.workMinutes,
-  });
+  const startScheduleTime = parseScheduleInstantOnAssistanceDay(
+    schedule?.startTime,
+    setAssistanceDate,
+  );
+  const endScheduleTime = startScheduleTime.isValid
+    ? startScheduleTime.plus({
+        hours: schedule?.workHours ?? 0,
+        minutes: schedule?.workMinutes ?? 0,
+      })
+    : startScheduleTime;
 
   const startScheduleMark = assistance.Marks.find(
     (x) =>
@@ -564,25 +668,24 @@ export default function ModalCompleteAssistance({
       x.scheduleBreakPublicId == null,
   );
 
-  /** Same instant as form entrada/salida: marca oficial si existe, si no horario teórico. */
+  /** Marca oficial si existe; si no, hora de inicio/fin teórica del turno ese día. */
   const resolvedStartTime = startScheduleMark
-    ? DateTime.fromISO(startScheduleMark.timestamp).toUTC().setZone("UTC", {
-        keepLocalTime: true,
-      })
-    : startScheduleTime.setZone("UTC");
+    ? parseMarkInstantOnAssistanceDay(
+        startScheduleMark.timestamp,
+        setAssistanceDate,
+      )
+    : startScheduleTime;
 
   const resolvedEndTime = endScheduleMark
-    ? DateTime.fromISO(endScheduleMark.timestamp).toUTC().setZone("UTC", {
-        keepLocalTime: true,
-      })
-    : endScheduleTime.setZone("UTC");
+    ? parseMarkInstantOnAssistanceDay(endScheduleMark.timestamp, setAssistanceDate)
+    : endScheduleTime;
 
   const defaultValues: FormValues = {
-    startTime: resolvedStartTime,
-    scheduleStartTime: startScheduleTime.setZone("UTC"),
+    startTime: resolvedStartTime.isValid ? resolvedStartTime : startScheduleTime,
+    scheduleStartTime: startScheduleTime,
     isRegisteredStartTime: startScheduleMark != null,
-    endTime: resolvedEndTime,
-    scheduleEndTime: endScheduleTime.setZone("UTC"),
+    endTime: resolvedEndTime.isValid ? resolvedEndTime : endScheduleTime,
+    scheduleEndTime: endScheduleTime,
     isRegisteredEndTime: endScheduleMark != null,
     breaks:
       schedule?.ScheduleBreaks?.map((x) => {
@@ -603,38 +706,40 @@ export default function ModalCompleteAssistance({
             y.isOfficial == true,
         );
 
+        const shiftAnchor = resolvedStartTime.isValid
+          ? resolvedStartTime
+          : startScheduleTime;
         const computed = computeBreakInstantsForModal(
           schedule!.startTime!,
           x.startTime,
           x.endTime,
-          resolvedStartTime,
+          shiftAnchor.isValid ? shiftAnchor : startScheduleTime,
         );
 
         return {
           publicId: x.publicId!,
           startTime: breakStart
-            ? DateTime.fromISO(breakStart.timestamp)
-                .toUTC()
-                .set(setAssistanceDate)
-                .setZone("UTC", {
-                  keepLocalTime: true,
-                })
-            : computed.start.setZone("UTC"),
+            ? parseMarkInstantOnAssistanceDay(
+                breakStart.timestamp,
+                setAssistanceDate,
+              )
+            : computed.start,
           isRegisteredStartTime: breakStart != null,
           isRegisteredEndTime: breakEnd != null,
           endTime: breakEnd
-            ? DateTime.fromISO(breakEnd.timestamp).toUTC().setZone("UTC", {
-                keepLocalTime: true,
-              })
-            : computed.end.setZone("UTC"),
-          scheduleStartTime: DateTime.fromISO(x.startTime)
-            .toUTC()
-            .setZone("UTC", {
-              keepLocalTime: true,
-            }),
-          scheduleEndTime: DateTime.fromISO(x.endTime).toUTC().setZone("UTC", {
-            keepLocalTime: true,
-          }),
+            ? parseMarkInstantOnAssistanceDay(
+                breakEnd.timestamp,
+                setAssistanceDate,
+              )
+            : computed.end,
+          scheduleStartTime: parseScheduleInstantOnAssistanceDay(
+            x.startTime,
+            setAssistanceDate,
+          ),
+          scheduleEndTime: parseScheduleInstantOnAssistanceDay(
+            x.endTime,
+            setAssistanceDate,
+          ),
         };
       }) ?? [],
   };

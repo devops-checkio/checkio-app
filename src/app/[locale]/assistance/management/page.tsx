@@ -26,9 +26,12 @@ import {
 import { HelpCircle, RefreshCw, Search } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { MarkDto } from "../_components/assistance.dto";
+import {
+  buildAssistanceSummaryParams,
+  MarkDto,
+} from "../_components/assistance.dto";
 import AssistanceAbsent from "./_components/assitance-absent";
 import AssistanceCompleted from "./_components/assitance-completed";
 import AssistanceIncomplete from "./_components/assitance-incomplete";
@@ -118,46 +121,10 @@ export default function ManagementPage() {
 
   const [isMarkModalOpen, setIsMarkModalOpen] = useState(false);
   const [selectedMark, setSelectedMark] = useState<MarkDto | null>(null);
-  const selectedPersonType = watch("personType");
-
-  const summaryParams = companyId
-    ? (() => {
-        const base = { companyId };
-        const withPersonType = selectedPersonType
-          ? { personType: selectedPersonType }
-          : {};
-        if (filter.month) {
-          return { ...base, ...withPersonType, month: filter.month };
-        }
-        if (filter.date) {
-          return {
-            ...base,
-            ...withPersonType,
-            startDate: filter.date,
-            endDate: filter.date,
-          };
-        }
-        if (filter.year) {
-          return {
-            ...base,
-            ...withPersonType,
-            startDate: `${filter.year}-01-01`,
-            endDate: `${filter.year}-12-31`,
-          };
-        }
-        const startDate =
-          filter.startDate ??
-          filter.dateRangeStart ??
-          new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toLocaleDateString(
-            "en-CA",
-          );
-        const endDate =
-          filter.endDate ??
-          filter.dateRangeEnd ??
-          new Date().toLocaleDateString("en-CA");
-        return { ...base, ...withPersonType, startDate, endDate };
-      })()
-    : undefined;
+  const summaryParams = useMemo(
+    () => (companyId ? buildAssistanceSummaryParams(companyId, filter) : undefined),
+    [companyId, filter],
+  );
 
   const { data: assistanceCount } = useGetAssistanceCount(summaryParams, {
     enabled: !!companyId,

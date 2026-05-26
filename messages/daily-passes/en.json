@@ -120,7 +120,8 @@
       },
       "createSuccess": {
         "title": "Passes created",
-        "description": "Daily passes have been created successfully for all employees"
+        "description": "Daily passes were created. The QR code was emailed to employees with a registered email.",
+        "descriptionWithEmailWarning": "Passes were created. {count} employee(s) have no email and will not receive it; use the «QR Code» button in the list to view the code."
       },
       "createError": {
         "title": "Process completed with errors",
@@ -135,6 +136,34 @@
     "systemInfo": {
       "title": "System Information",
       "description": "The system will automatically generate daily QR codes for each employee according to their assigned schedule. Codes will be sent by email."
+    }
+  },
+  "qrModal": {
+    "title": "Access QR code",
+    "employee": "Employee",
+    "loading": "Loading QR code...",
+    "notAvailable": "No QR code is available for this pass.",
+    "timeRemaining": "Code time remaining:",
+    "qrAlt": "Access QR code",
+    "scanHint": "Show this code at the access reader. It expires in a few minutes for security.",
+    "copyCode": "Copy code",
+    "regenerate": "Regenerate QR",
+    "emailNote": "This code is also sent by email to the employee if they have a registered email address.",
+    "copySuccess": {
+      "title": "Copied",
+      "description": "Code copied to clipboard"
+    },
+    "copyError": {
+      "title": "Error",
+      "description": "Could not copy the code"
+    },
+    "regenerateSuccess": {
+      "title": "QR regenerated",
+      "description": "A new code was generated and emailed to the employee"
+    },
+    "regenerateError": {
+      "title": "Error",
+      "description": "Could not regenerate the QR code"
     }
   },
   "actionsModal": {
