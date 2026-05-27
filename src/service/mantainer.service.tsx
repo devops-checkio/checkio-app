@@ -1613,86 +1613,26 @@ export function useGetAllAssistancesAbsent(params?: AssistanceFindAllDto) {
 }
 
 export function useGetAllAssistancesPendingMarks(
-  params?: Omit<AssistanceFindAllDto, "status">,
+  params?: Omit<AssistanceFindAllDto, "status" | "markApproval">,
 ) {
   return useQuery<PaginationAssistanceDto>({
     queryKey: ["GetAllAssistancesPendingMarks", params],
     queryFn: async () => {
-      // Obtener asistencias de todos los estados posibles que puedan tener marcas pendientes
-      // y filtrar en el frontend
-      const baseParams = { ...params };
-
-      // Obtener asistencias COMPLETED, INCOMPLETE y ABSENT (las que más probablemente tengan marcas)
-      const statuses = ["COMPLETED", "INCOMPLETE", "ABSENT"];
-      const allPromises = statuses.map((status) => {
-        const statusParams = {
-          ...baseParams,
-          status: status as any,
-          includeMarks: true,
-        };
-        const queryParams = new URLSearchParams();
-        Object.entries(statusParams).forEach(([key, value]) => {
+      const queryParams = new URLSearchParams();
+      queryParams.append("markApproval", "PENDING");
+      queryParams.append("includeMarks", "true");
+      if (params) {
+        Object.entries(params).forEach(([key, value]) => {
           if (value !== undefined) {
             queryParams.append(key, value.toString());
           }
         });
-        return axiosInstance.get(
-          `/client/assistances?${queryParams.toString()}`,
-        );
-      });
+      }
 
-      const responses = await Promise.all(allPromises);
-
-      // Combinar todos los datos
-      const allAssistances: any[] = [];
-
-      responses.forEach((response) => {
-        if (response.data?.data) {
-          allAssistances.push(...response.data.data);
-        }
-      });
-
-      const seenPublicIds = new Set<string>();
-      const uniqueAssistances = allAssistances.filter((assistance) => {
-        if (!assistance.publicId || seenPublicIds.has(assistance.publicId)) {
-          return false;
-        }
-        seenPublicIds.add(assistance.publicId);
-        return true;
-      });
-
-      // Filtrar solo las asistencias que tienen marcas pendientes
-      const filteredAssistances = uniqueAssistances.filter((assistance) => {
-        return assistance.Marks?.some(
-          (mark: any) => mark.status === "WAITING_APPROVAL",
-        );
-      });
-
-      // Aplicar paginación manual
-      const page = params?.page || 1;
-      const pageSize = params?.pageSize || 10;
-      const startIndex = (page - 1) * pageSize;
-      const endIndex = startIndex + pageSize;
-      const paginatedAssistances = filteredAssistances.slice(
-        startIndex,
-        endIndex,
+      const response = await axiosInstance.get<PaginationAssistanceDto>(
+        `/client/assistances?${queryParams.toString()}`,
       );
-
-      // Crear objeto de paginación
-      const pagination = {
-        current: page,
-        pageSize: pageSize,
-        totalCount: filteredAssistances.length,
-        totalPages: Math.ceil(filteredAssistances.length / pageSize),
-        next: endIndex < filteredAssistances.length ? page + 1 : null,
-        previous: page > 1 ? page - 1 : null,
-        sort: (params?.sort || "desc") as "asc" | "desc",
-      };
-
-      return {
-        data: paginatedAssistances,
-        pagination,
-      };
+      return response.data;
     },
     enabled: !!params?.companyId,
   });
@@ -1710,6 +1650,77 @@ export function useGetAssistanceCount(
         { params },
       );
       return response.data;
+    },
+    refetchInterval: 60000,
+    enabled: options?.enabled !== false,
+  });
+}
+
+/**
+ * Conteos alineados 1:1 con las pestañas (mismo endpoint /client/assistances).
+ * Evita desfases entre badge y tabla por diferencias de lógica con /summary.
+ */
+export function useGetAssistanceTabCounts(
+  params?: AssistanceCountFindAllDto,
+  options?: { enabled?: boolean },
+) {
+  return useQuery<AssistanceCountDto>({
+    queryKey: ["GetAssistanceTabCounts", params],
+    queryFn: async () => {
+      const fetchTotalCount = async (
+        extras: Record<string, string>,
+      ): Promise<number> => {
+        const queryParams = new URLSearchParams();
+        queryParams.append("page", "1");
+        queryParams.append("pageSize", "1");
+        queryParams.append("sort", "asc");
+
+        if (params) {
+          Object.entries(params).forEach(([key, value]) => {
+            if (value !== undefined && value !== null && value !== "") {
+              queryParams.append(key, value.toString());
+            }
+          });
+        }
+
+        Object.entries(extras).forEach(([key, value]) => {
+          queryParams.append(key, value);
+        });
+
+        const response = await axiosInstance.get<PaginationAssistanceDto>(
+          `/client/assistances?${queryParams.toString()}`,
+        );
+        return response.data?.pagination?.totalCount ?? 0;
+      };
+
+      const [
+        absentCount,
+        completedCount,
+        incompleteCount,
+        withoutScheduleCount,
+        markPendingCount,
+        extraPendingApprovalCount,
+        delayPendingApprovalCount,
+      ] = await Promise.all([
+        fetchTotalCount({ status: "ABSENT" }),
+        fetchTotalCount({ status: "COMPLETED" }),
+        fetchTotalCount({ status: "INCOMPLETE" }),
+        fetchTotalCount({ status: "WITHOUT_SCHEDULE" }),
+        fetchTotalCount({ markApproval: "PENDING", includeMarks: "true" }),
+        fetchTotalCount({ status: "COMPLETED", extraApproval: "PENDING" }),
+        fetchTotalCount({ status: "COMPLETED", delayApproval: "PENDING" }),
+      ]);
+
+      return {
+        absentCount,
+        completedCount,
+        incompleteCount,
+        withoutScheduleCount,
+        markPendingCount,
+        markRejectedCount: 0,
+        extraPendingApprovalCount,
+        delayPendingApprovalCount,
+      };
     },
     refetchInterval: 60000,
     enabled: options?.enabled !== false,

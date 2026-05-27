@@ -339,6 +339,7 @@ const DailyPassActionsModal = ({
         initialQrCode={pass.qrCode}
         initialQrExpiresAt={pass.qrExpiresAt}
         status={pass.status}
+        initialPassData={pass}
       />
     </Drawer>
   );

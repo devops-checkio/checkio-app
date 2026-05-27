@@ -104,6 +104,9 @@ export default function ManagementStudentPage() {
     sort: "asc",
   });
 
+  const branchId = watch("branchId");
+  const establishmentId = watch("establishmentId");
+
   const summaryParams = useMemo(
     () =>
       companyId

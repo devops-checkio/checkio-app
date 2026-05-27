@@ -164,7 +164,43 @@
     "regenerateError": {
       "title": "Error",
       "description": "Could not regenerate the QR code"
+    },
+    "downloadPdf": "Download PDF",
+    "downloadSuccess": {
+      "title": "PDF downloaded",
+      "description": "The daily pass was downloaded successfully"
+    },
+    "downloadError": {
+      "title": "Error",
+      "description": "Could not generate the pass PDF"
+    },
+    "pdf": {
+      "title": "Daily access pass",
+      "employeeName": "Employee",
+      "employeeDocument": "Document",
+      "employeeEmail": "Email",
+      "employeeJob": "Job",
+      "employeeBranch": "Branch",
+      "passStartDate": "Pass start date",
+      "passEndDate": "Pass end date",
+      "passId": "Pass ID",
+      "generatedAt": "Issued at",
+      "qrLabel": "QR code",
+      "footer": "This document certifies the temporary daily pass and its QR code."
     }
+  },
+  "bulkPdf": {
+    "downloadSelected": "Download selected PDFs",
+    "downloadOnCreate": "Download consolidated PDF after creation",
+    "successTitle": "Consolidated PDF generated",
+    "successDescription": "A document with {count} passes was downloaded",
+    "successWithErrorsDescription": "A document with {count} passes was downloaded. {failed} pass(es) could not be included.",
+    "errorTitle": "PDF generation error",
+    "errorDescription": "Could not generate the consolidated PDF",
+    "noQrTitle": "No QR codes",
+    "noQrDescription": "Selected passes do not have QR codes available",
+    "backendUnavailableTitle": "Service unavailable",
+    "backendUnavailableDescription": "Could not fetch pass information. Please try again in a few minutes."
   },
   "actionsModal": {
     "title": "Pass Details",

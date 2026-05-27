@@ -137,6 +137,70 @@
       "description": "Le système générera automatiquement des codes QR quotidiens pour chaque employé selon son horaire attribué. Les codes seront envoyés par e-mail."
     }
   },
+  "qrModal": {
+    "title": "Code QR d'accès",
+    "employee": "Employé",
+    "loading": "Chargement du code QR...",
+    "notAvailable": "Aucun code QR disponible pour ce passe.",
+    "timeRemaining": "Temps restant du code :",
+    "qrAlt": "Code QR d'accès",
+    "scanHint": "Présentez ce code au lecteur d'accès. Le code expire dans quelques minutes pour des raisons de sécurité.",
+    "copyCode": "Copier le code",
+    "regenerate": "Régénérer le QR",
+    "emailNote": "Ce code est aussi envoyé par e-mail à l'employé s'il a une adresse enregistrée.",
+    "copySuccess": {
+      "title": "Copié",
+      "description": "Code copié dans le presse-papiers"
+    },
+    "copyError": {
+      "title": "Erreur",
+      "description": "Impossible de copier le code"
+    },
+    "regenerateSuccess": {
+      "title": "QR régénéré",
+      "description": "Un nouveau code a été généré et envoyé par e-mail à l'employé"
+    },
+    "regenerateError": {
+      "title": "Erreur",
+      "description": "Impossible de régénérer le code QR"
+    },
+    "downloadPdf": "Télécharger le PDF",
+    "downloadSuccess": {
+      "title": "PDF téléchargé",
+      "description": "Le passe quotidien a été téléchargé avec succès"
+    },
+    "downloadError": {
+      "title": "Erreur",
+      "description": "Impossible de générer le PDF du passe"
+    },
+    "pdf": {
+      "title": "Passe quotidien d'accès",
+      "employeeName": "Employé",
+      "employeeDocument": "Document",
+      "employeeEmail": "E-mail",
+      "employeeJob": "Poste",
+      "employeeBranch": "Succursale",
+      "passStartDate": "Date de début du passe",
+      "passEndDate": "Date de fin du passe",
+      "passId": "ID du passe",
+      "generatedAt": "Date d'émission",
+      "qrLabel": "Code QR",
+      "footer": "Ce document certifie le passe quotidien temporaire et son code QR."
+    }
+  },
+  "bulkPdf": {
+    "downloadSelected": "Télécharger les PDFs sélectionnés",
+    "downloadOnCreate": "Télécharger le PDF consolidé à la fin de la création",
+    "successTitle": "PDF consolidé généré",
+    "successDescription": "Un document avec {count} passes a été téléchargé",
+    "successWithErrorsDescription": "Un document avec {count} passes a été téléchargé. {failed} passe(s) n'ont pas pu être inclus.",
+    "errorTitle": "Erreur de génération PDF",
+    "errorDescription": "Impossible de générer le PDF consolidé",
+    "noQrTitle": "Aucun code QR",
+    "noQrDescription": "Les passes sélectionnés n'ont pas de code QR disponible",
+    "backendUnavailableTitle": "Service indisponible",
+    "backendUnavailableDescription": "Impossible de récupérer les informations des passes. Veuillez réessayer dans quelques minutes."
+  },
   "actionsModal": {
     "title": "Détails du Passe",
     "details": "Détails",

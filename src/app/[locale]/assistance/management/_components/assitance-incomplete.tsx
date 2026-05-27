@@ -203,7 +203,12 @@ const AssistanceIncomplete = ({ filters }: AssistanceIncompleteProps) => {
                 <CHEKIOButton
                   variant="primary"
                   onClick={() => setIsModalCompleteOpen(true)}
-                  disabled={editableSelectedRowKeys.length === 0}
+                  disabled={editableSelectedRowKeys.length !== 1}
+                  title={
+                    editableSelectedRowKeys.length !== 1
+                      ? "Selecciona exactamente 1 asistencia para autocompletar manual"
+                      : undefined
+                  }
                 >
                   <Clock className="h-4 w-4" />
                   Autocompletar Manual

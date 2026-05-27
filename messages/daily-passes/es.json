@@ -164,7 +164,43 @@
     "regenerateError": {
       "title": "Error",
       "description": "No se pudo regenerar el código QR"
+    },
+    "downloadPdf": "Descargar PDF",
+    "downloadSuccess": {
+      "title": "PDF descargado",
+      "description": "El pase diario se descargó correctamente"
+    },
+    "downloadError": {
+      "title": "Error",
+      "description": "No se pudo generar el PDF del pase"
+    },
+    "pdf": {
+      "title": "Pase diario de acceso",
+      "employeeName": "Trabajador",
+      "employeeDocument": "Documento",
+      "employeeEmail": "Correo",
+      "employeeJob": "Cargo",
+      "employeeBranch": "Sucursal",
+      "passStartDate": "Fecha inicio del pase",
+      "passEndDate": "Fecha fin del pase",
+      "passId": "ID del pase",
+      "generatedAt": "Fecha de emisión",
+      "qrLabel": "Código QR",
+      "footer": "Este documento acredita el pase diario temporal y su código QR."
     }
+  },
+  "bulkPdf": {
+    "downloadSelected": "Descargar PDF seleccionados",
+    "downloadOnCreate": "Descargar PDF consolidado al finalizar la creación",
+    "successTitle": "PDF consolidado generado",
+    "successDescription": "Se descargó un documento con {count} pases",
+    "successWithErrorsDescription": "Se descargó un documento con {count} pases. {failed} pase(s) no se pudieron incluir.",
+    "errorTitle": "Error al generar PDF",
+    "errorDescription": "No se pudo generar el PDF consolidado",
+    "noQrTitle": "Sin códigos QR",
+    "noQrDescription": "Los pases seleccionados no tienen código QR disponible",
+    "backendUnavailableTitle": "Servicio no disponible",
+    "backendUnavailableDescription": "No se pudo obtener la información de los pases. Intenta nuevamente en unos minutos."
   },
   "actionsModal": {
     "title": "Detalles del Pase",

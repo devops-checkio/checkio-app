@@ -520,6 +520,13 @@ const ModalCompleteAssistanceComponent = ({
                 <h3 className="text-lg font-medium">Pausas y Colaciones</h3>
               </div>
 
+              {fields.length === 0 && (
+                <div className="rounded-md border border-amber-300 bg-amber-50 p-3 text-sm text-amber-800">
+                  Este horario no tiene colaciones configuradas. Por eso solo puedes
+                  completar entrada y salida.
+                </div>
+              )}
+
               {fields.map((field, index) => (
                 <div
                   key={field.id}

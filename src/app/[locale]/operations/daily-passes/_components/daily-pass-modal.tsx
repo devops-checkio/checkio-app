@@ -44,7 +44,16 @@ import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useState } from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { EmployeeResponseDto } from "../../../mantainers/employees/_components/employee.dto";
-import { DailyPassCreateDto, DailyPassProcessingItem } from "./daily-pass.dto";
+import {
+  buildDailyPassPdfItem,
+  downloadDailyPassesPdf,
+  resolveCompanyLogoUrl,
+} from "./daily-pass-pdf";
+import {
+  DailyPassCreateDto,
+  DailyPassProcessingItem,
+  DailyPassResponseDto,
+} from "./daily-pass.dto";
 
 interface DailyPassModalProps {
   isOpen: boolean;
@@ -84,6 +93,7 @@ const DailyPassModal = ({
   buttonLoadingText,
 }: DailyPassModalProps) => {
   const t = useTranslations("dailyPasses.modal");
+  const tRoot = useTranslations("dailyPasses");
   const { companyId } = useCookieSession();
   const { toast } = useToast();
   const queryClient = useQueryClient();
@@ -95,6 +105,7 @@ const DailyPassModal = ({
   const [processingItems, setProcessingItems] = useState<
     DailyPassProcessingItem[]
   >([]);
+  const [downloadConsolidatedPdf, setDownloadConsolidatedPdf] = useState(false);
 
   // Pagination state
   const [pagination, setPagination] = useState<PaginationFilterDto>({
@@ -217,6 +228,7 @@ const DailyPassModal = ({
     setProcessingItems([]);
     setIsEmployeeSelectVisible(true);
     setIsPending(false);
+    setDownloadConsolidatedPdf(false);
     setPagination({
       current: 1,
       pageSize: 10,
@@ -329,6 +341,7 @@ const DailyPassModal = ({
 
     let successCount = 0;
     let errorCount = 0;
+    const createdPasses: DailyPassResponseDto[] = [];
 
     // Procesar cada empleado secuencialmente
     for (let i = 0; i < selectedEmployees.length; i++) {
@@ -349,7 +362,8 @@ const DailyPassModal = ({
           reason: formattedData.reason,
         };
 
-        await createDailyPass.mutateAsync(passData);
+        const createdPass = await createDailyPass.mutateAsync(passData);
+        createdPasses.push(createdPass);
         successCount += 1;
 
         // Actualizar el estado a éxito
@@ -392,6 +406,43 @@ const DailyPassModal = ({
 
     setIsPending(false);
     if (errorCount === 0) {
+      if (downloadConsolidatedPdf && createdPasses.length > 0) {
+        const validPasses = createdPasses.filter((pass) => Boolean(pass.qrCode));
+        if (validPasses.length > 0) {
+          try {
+            const companyLogo = await resolveCompanyLogoUrl();
+            const pdfItems = await Promise.all(
+              validPasses.map((pass) =>
+                buildDailyPassPdfItem(pass, pass.qrCode!, companyLogo),
+              ),
+            );
+
+            await downloadDailyPassesPdf(
+              pdfItems,
+              {
+                title: tRoot("qrModal.pdf.title"),
+                employeeName: tRoot("qrModal.pdf.employeeName"),
+                employeeDocument: tRoot("qrModal.pdf.employeeDocument"),
+                employeeEmail: tRoot("qrModal.pdf.employeeEmail"),
+                employeeJob: tRoot("qrModal.pdf.employeeJob"),
+                employeeBranch: tRoot("qrModal.pdf.employeeBranch"),
+                passStartDate: tRoot("qrModal.pdf.passStartDate"),
+                passEndDate: tRoot("qrModal.pdf.passEndDate"),
+                generatedAt: tRoot("qrModal.pdf.generatedAt"),
+                qrLabel: tRoot("qrModal.pdf.qrLabel"),
+              },
+              `pases_diarios_consolidado_${DateTime.now().toFormat("yyyyMMdd_HHmm")}.pdf`
+            );
+          } catch {
+            toast({
+              title: tRoot("bulkPdf.errorTitle"),
+              description: tRoot("bulkPdf.errorDescription"),
+              variant: "destructive",
+            });
+          }
+        }
+      }
+
       const withoutEmail = selectedEmployees.filter(
         (employee) => !pickEmployeeEmail(employee),
       );
@@ -984,6 +1035,18 @@ const DailyPassModal = ({
                       </div>
                     </div>
                   </div>
+
+                  <label className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 py-2">
+                    <input
+                      type="checkbox"
+                      checked={downloadConsolidatedPdf}
+                      onChange={(e) => setDownloadConsolidatedPdf(e.target.checked)}
+                      className="rounded"
+                    />
+                    <span className="text-sm text-gray-700">
+                      {tRoot("bulkPdf.downloadOnCreate")}
+                    </span>
+                  </label>
                 </div>
 
                 <div className="flex justify-end gap-4 mt-6">

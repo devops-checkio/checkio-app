@@ -6,11 +6,17 @@ import {
   useGetDailyPassById,
   useRegenerateQrCode,
 } from "@/service/daily-pass.service";
-import { Copy, Loader2, QrCode, RefreshCw } from "lucide-react";
+import { Copy, Download, Loader2, QrCode, RefreshCw } from "lucide-react";
+import { DateTime } from "luxon";
 import { useTranslations } from "next-intl";
 import { QRCodeSVG } from "qrcode.react";
 import { useEffect, useMemo, useState } from "react";
-import { DailyPassStatus } from "./daily-pass.dto";
+import {
+  buildDailyPassPdfItem,
+  downloadDailyPassesPdf,
+  mergeDailyPassData,
+} from "./daily-pass-pdf";
+import { DailyPassResponseDto, DailyPassStatus } from "./daily-pass.dto";
 
 interface DailyPassQrModalProps {
   isOpen: boolean;
@@ -20,6 +26,7 @@ interface DailyPassQrModalProps {
   initialQrCode?: string;
   initialQrExpiresAt?: string | Date;
   status?: DailyPassStatus;
+  initialPassData?: Partial<DailyPassResponseDto>;
 }
 
 export default function DailyPassQrModal({
@@ -30,6 +37,7 @@ export default function DailyPassQrModal({
   initialQrCode,
   initialQrExpiresAt,
   status,
+  initialPassData,
 }: DailyPassQrModalProps) {
   const t = useTranslations("dailyPasses.qrModal");
   const { toast } = useToast();
@@ -44,6 +52,8 @@ export default function DailyPassQrModal({
   const qrExpiresAt = passData?.qrExpiresAt ?? initialQrExpiresAt;
   const passStatus = passData?.status ?? status;
   const displayName = passData?.employeeName ?? employeeName;
+  const passInfo = mergeDailyPassData(initialPassData, passData);
+  const [isDownloadingPdf, setIsDownloadingPdf] = useState(false);
 
   const expiresAtDate = useMemo(() => {
     if (!qrExpiresAt) return null;
@@ -112,6 +122,47 @@ export default function DailyPassQrModal({
 
   const canShowQr =
     passStatus !== DailyPassStatus.DEACTIVATED && Boolean(qrCode);
+  const shouldShowLoading = isLoading && !qrCode;
+
+  const handleDownloadPdf = async () => {
+    if (!qrCode || !canShowQr) return;
+
+    setIsDownloadingPdf(true);
+
+    try {
+      const pdfItem = await buildDailyPassPdfItem(passInfo || {}, qrCode);
+
+      await downloadDailyPassesPdf(
+        [pdfItem],
+        {
+          title: t("pdf.title"),
+          employeeName: t("pdf.employeeName"),
+          employeeDocument: t("pdf.employeeDocument"),
+          employeeEmail: t("pdf.employeeEmail"),
+          employeeJob: t("pdf.employeeJob"),
+          employeeBranch: t("pdf.employeeBranch"),
+          passStartDate: t("pdf.passStartDate"),
+          passEndDate: t("pdf.passEndDate"),
+          generatedAt: t("pdf.generatedAt"),
+          qrLabel: t("pdf.qrLabel"),
+        },
+        `pase_diario_${DateTime.now().toFormat("yyyyMMdd_HHmm")}.pdf`,
+      );
+
+      toast({
+        title: t("downloadSuccess.title"),
+        description: t("downloadSuccess.description"),
+      });
+    } catch {
+      toast({
+        title: t("downloadError.title"),
+        description: t("downloadError.description"),
+        variant: "destructive",
+      });
+    } finally {
+      setIsDownloadingPdf(false);
+    }
+  };
 
   return (
     <CHEKIOModal
@@ -127,7 +178,7 @@ export default function DailyPassQrModal({
           </p>
         )}
 
-        {isLoading ? (
+        {shouldShowLoading ? (
           <div className="flex items-center gap-2 py-12 text-gray-500">
             <Loader2 className="h-5 w-5 animate-spin" />
             <span>{t("loading")}</span>
@@ -161,6 +212,18 @@ export default function DailyPassQrModal({
               <CHEKIOButton variant="secondary" onClick={handleCopyToken}>
                 <Copy className="h-4 w-4" />
                 {t("copyCode")}
+              </CHEKIOButton>
+              <CHEKIOButton
+                variant="secondaryBlue"
+                onClick={handleDownloadPdf}
+                disabled={isDownloadingPdf}
+              >
+                {isDownloadingPdf ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : (
+                  <Download className="h-4 w-4" />
+                )}
+                {t("downloadPdf")}
               </CHEKIOButton>
               {passStatus === DailyPassStatus.ACTIVE && (
                 <CHEKIOButton

@@ -19,14 +19,29 @@ import {
 import { useCookieSession } from "@/context/useCookieSession";
 import { useToast } from "@/hooks/use-toast";
 import {
+  getDailyPassById,
+  regenerateDailyPassQr,
   useGetExpiredDailyPasses,
   useRenewDailyPass,
 } from "@/service/daily-pass.service";
-import { ChevronLeft, ChevronRight, Eye, QrCode, RotateCw } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Download,
+  Eye,
+  Loader2,
+  QrCode,
+  RotateCw,
+} from "lucide-react";
 import { DateTime } from "luxon";
 import { useTranslations } from "next-intl";
 import { useCallback, useState } from "react";
 import DailyPassActionsModal from "./daily-pass-actions-modal";
+import {
+  buildDailyPassPdfItem,
+  downloadDailyPassesPdf,
+  resolveCompanyLogoUrl,
+} from "./daily-pass-pdf";
 import DailyPassQrModal from "./daily-pass-qr-modal";
 import { DailyPassResponseDto, DailyPassStatus } from "./daily-pass.dto";
 
@@ -39,6 +54,8 @@ export default function TabExpired() {
   );
   const [isActionsModalOpen, setIsActionsModalOpen] = useState(false);
   const [isQrModalOpen, setIsQrModalOpen] = useState(false);
+  const [selectedPassIds, setSelectedPassIds] = useState<string[]>([]);
+  const [isBulkDownloading, setIsBulkDownloading] = useState(false);
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
 
@@ -94,11 +111,13 @@ export default function TabExpired() {
 
   const handlePageChange = useCallback((newPage: number) => {
     setPage(newPage);
+    setSelectedPassIds([]);
   }, []);
 
   const handlePageSizeChange = useCallback((newPageSize: number) => {
     setPageSize(newPageSize);
     setPage(1); // Reset to first page when changing page size
+    setSelectedPassIds([]);
   }, []);
 
   const passes = expiredPassesData?.data || [];
@@ -134,8 +153,145 @@ export default function TabExpired() {
     }
   };
 
+  const handleSelectPass = (passId: string, checked: boolean) => {
+    setSelectedPassIds((prev) =>
+      checked ? [...new Set([...prev, passId])] : prev.filter((id) => id !== passId)
+    );
+  };
+
+  const handleSelectAllPasses = (checked: boolean) => {
+    if (checked) {
+      setSelectedPassIds(passes.map((pass) => pass.publicId));
+      return;
+    }
+    setSelectedPassIds([]);
+  };
+
+  const handleBulkDownload = async () => {
+    if (!selectedPassIds.length) return;
+
+    setIsBulkDownloading(true);
+    try {
+      const selectedPassesResults = await Promise.allSettled(
+        selectedPassIds.map(async (id) => {
+          const listedPass = passes.find((pass) => pass.publicId === id);
+          if (listedPass?.qrCode) {
+            return listedPass;
+          }
+
+          let pass = null;
+
+          try {
+            pass = await getDailyPassById(id);
+          } catch {
+            // If detail endpoint fails, try regenerating QR directly
+            pass = await regenerateDailyPassQr(id);
+          }
+
+          if (!pass?.qrCode) {
+            try {
+              pass = await regenerateDailyPassQr(id);
+            } catch {
+              // Last fallback: try reading the pass again
+              pass = await getDailyPassById(id);
+            }
+          }
+
+          return pass;
+        })
+      );
+      const selectedPasses = selectedPassesResults
+        .filter((result): result is PromiseFulfilledResult<any> => {
+          return result.status === "fulfilled";
+        })
+        .map((result) => result.value);
+      const failedCount =
+        selectedPassesResults.length - selectedPasses.length;
+
+      if (failedCount === selectedPassesResults.length) {
+        toast({
+          title: t("bulkPdf.backendUnavailableTitle"),
+          description: t("bulkPdf.backendUnavailableDescription"),
+          variant: "destructive",
+        });
+        return;
+      }
+
+      const validPasses = selectedPasses.filter((pass) => Boolean(pass?.qrCode));
+
+      if (!validPasses.length) {
+        toast({
+          title: t("bulkPdf.noQrTitle"),
+          description: t("bulkPdf.noQrDescription"),
+          variant: "destructive",
+        });
+        return;
+      }
+
+      const companyLogo = await resolveCompanyLogoUrl();
+      const pdfItems = await Promise.all(
+        validPasses.map((pass) =>
+          buildDailyPassPdfItem(pass, pass.qrCode!, companyLogo),
+        ),
+      );
+
+      await downloadDailyPassesPdf(
+        pdfItems,
+        {
+          title: t("qrModal.pdf.title"),
+          employeeName: t("qrModal.pdf.employeeName"),
+          employeeDocument: t("qrModal.pdf.employeeDocument"),
+          employeeEmail: t("qrModal.pdf.employeeEmail"),
+          employeeJob: t("qrModal.pdf.employeeJob"),
+          employeeBranch: t("qrModal.pdf.employeeBranch"),
+          passStartDate: t("qrModal.pdf.passStartDate"),
+          passEndDate: t("qrModal.pdf.passEndDate"),
+          generatedAt: t("qrModal.pdf.generatedAt"),
+          qrLabel: t("qrModal.pdf.qrLabel"),
+        },
+        `pases_diarios_consolidado_${DateTime.now().toFormat("yyyyMMdd_HHmm")}.pdf`
+      );
+
+      toast({
+        title: t("bulkPdf.successTitle"),
+        description:
+          failedCount > 0
+            ? t("bulkPdf.successWithErrorsDescription", {
+                count: validPasses.length,
+                failed: failedCount,
+              })
+            : t("bulkPdf.successDescription", { count: validPasses.length }),
+      });
+      setSelectedPassIds([]);
+    } catch {
+      toast({
+        title: t("bulkPdf.errorTitle"),
+        description: t("bulkPdf.errorDescription"),
+        variant: "destructive",
+      });
+    } finally {
+      setIsBulkDownloading(false);
+    }
+  };
+
   return (
     <>
+      {passes.length > 0 && (
+        <div className="mb-3 flex justify-end">
+          <CHEKIOButton
+            variant="secondaryBlue"
+            onClick={handleBulkDownload}
+            disabled={!selectedPassIds.length || isBulkDownloading}
+          >
+            {isBulkDownloading ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              <Download className="h-4 w-4" />
+            )}
+            {t("bulkPdf.downloadSelected")} ({selectedPassIds.length})
+          </CHEKIOButton>
+        </div>
+      )}
       {isLoading ? (
         <div className="flex justify-center py-8">
           <CHEKIOLoading
@@ -155,6 +311,14 @@ export default function TabExpired() {
           <CHEKIOTable>
             <CHEKIOTableHeader>
               <tr>
+                <CHEKIOTableHead className="w-12">
+                  <input
+                    type="checkbox"
+                    checked={passes.length > 0 && selectedPassIds.length === passes.length}
+                    onChange={(e) => handleSelectAllPasses(e.target.checked)}
+                    className="rounded"
+                  />
+                </CHEKIOTableHead>
                 <CHEKIOTableHead>{t("employee")}</CHEKIOTableHead>
                 <CHEKIOTableHead>{t("startDate")}</CHEKIOTableHead>
                 <CHEKIOTableHead>{t("endDate")}</CHEKIOTableHead>
@@ -169,6 +333,16 @@ export default function TabExpired() {
             <CHEKIOTableBody>
               {passes.map((pass, index) => (
                 <CHEKIOTableRow key={pass.publicId} index={index}>
+                  <CHEKIOTableCell>
+                    <input
+                      type="checkbox"
+                      checked={selectedPassIds.includes(pass.publicId)}
+                      onChange={(e) =>
+                        handleSelectPass(pass.publicId, e.target.checked)
+                      }
+                      className="rounded"
+                    />
+                  </CHEKIOTableCell>
                   <CHEKIOTableCell>
                     <div>
                       <div className="font-medium">{pass.employeeName || "-"}</div>
@@ -349,6 +523,7 @@ export default function TabExpired() {
           initialQrCode={selectedPass.qrCode}
           initialQrExpiresAt={selectedPass.qrExpiresAt}
           status={selectedPass.status}
+          initialPassData={selectedPass}
         />
       )}
     </>

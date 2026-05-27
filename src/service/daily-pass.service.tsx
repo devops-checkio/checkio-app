@@ -11,6 +11,20 @@ import {
 import axiosInstance from "@/utils/axios";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
+export const getDailyPassById = async (id: string) => {
+  const response = await axiosInstance.get<DailyPassResponseDto>(
+    `/client/daily-passes/${id}`
+  );
+  return response.data;
+};
+
+export const regenerateDailyPassQr = async (publicId: string) => {
+  const response = await axiosInstance.post<DailyPassResponseDto>(
+    `/client/daily-passes/${publicId}/regenerate-qr`
+  );
+  return response.data;
+};
+
 // Query hooks
 export const useGetDailyPasses = (filters?: DailyPassFindFilterDto) => {
   return useQuery<PaginationDailyPassDto>({
@@ -54,13 +68,11 @@ export const useGetExpiredDailyPasses = (filters?: DailyPassFindFilterDto) => {
 export const useGetDailyPassById = (id: string) => {
   return useQuery<DailyPassResponseDto>({
     queryKey: ["GetDailyPassById", id],
-    queryFn: async () => {
-      const response = await axiosInstance.get<DailyPassResponseDto>(
-        `/client/daily-passes/${id}`
-      );
-      return response.data;
-    },
+    queryFn: async () => getDailyPassById(id),
     enabled: !!id,
+    staleTime: 30 * 1000,
+    gcTime: 5 * 60 * 1000,
+    refetchOnWindowFocus: false,
   });
 };
 

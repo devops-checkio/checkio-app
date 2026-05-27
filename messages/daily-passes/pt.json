@@ -137,6 +137,70 @@
       "description": "O sistema gerará automaticamente códigos QR diários para cada funcionário de acordo com seu horário atribuído. Os códigos serão enviados por e-mail."
     }
   },
+  "qrModal": {
+    "title": "Código QR de acesso",
+    "employee": "Funcionário",
+    "loading": "Carregando código QR...",
+    "notAvailable": "Não há código QR disponível para este passe.",
+    "timeRemaining": "Tempo restante do código:",
+    "qrAlt": "Código QR de acesso",
+    "scanHint": "Mostre este código no leitor de acesso. O código expira em alguns minutos por segurança.",
+    "copyCode": "Copiar código",
+    "regenerate": "Regenerar QR",
+    "emailNote": "Este código também é enviado por e-mail ao funcionário se ele tiver e-mail cadastrado.",
+    "copySuccess": {
+      "title": "Copiado",
+      "description": "Código copiado para a área de transferência"
+    },
+    "copyError": {
+      "title": "Erro",
+      "description": "Não foi possível copiar o código"
+    },
+    "regenerateSuccess": {
+      "title": "QR regenerado",
+      "description": "Um novo código foi gerado e enviado por e-mail ao funcionário"
+    },
+    "regenerateError": {
+      "title": "Erro",
+      "description": "Não foi possível regenerar o código QR"
+    },
+    "downloadPdf": "Baixar PDF",
+    "downloadSuccess": {
+      "title": "PDF baixado",
+      "description": "O passe diário foi baixado com sucesso"
+    },
+    "downloadError": {
+      "title": "Erro",
+      "description": "Não foi possível gerar o PDF do passe"
+    },
+    "pdf": {
+      "title": "Passe diário de acesso",
+      "employeeName": "Funcionário",
+      "employeeDocument": "Documento",
+      "employeeEmail": "E-mail",
+      "employeeJob": "Cargo",
+      "employeeBranch": "Filial",
+      "passStartDate": "Data de início do passe",
+      "passEndDate": "Data de fim do passe",
+      "passId": "ID do passe",
+      "generatedAt": "Data de emissão",
+      "qrLabel": "Código QR",
+      "footer": "Este documento certifica o passe diário temporário e seu código QR."
+    }
+  },
+  "bulkPdf": {
+    "downloadSelected": "Baixar PDFs selecionados",
+    "downloadOnCreate": "Baixar PDF consolidado ao finalizar a criação",
+    "successTitle": "PDF consolidado gerado",
+    "successDescription": "Um documento com {count} passes foi baixado",
+    "successWithErrorsDescription": "Um documento com {count} passes foi baixado. {failed} passe(s) não puderam ser incluídos.",
+    "errorTitle": "Erro ao gerar PDF",
+    "errorDescription": "Não foi possível gerar o PDF consolidado",
+    "noQrTitle": "Sem códigos QR",
+    "noQrDescription": "Os passes selecionados não possuem código QR disponível",
+    "backendUnavailableTitle": "Serviço indisponível",
+    "backendUnavailableDescription": "Não foi possível obter as informações dos passes. Tente novamente em alguns minutos."
+  },
   "actionsModal": {
     "title": "Detalhes do Pase",
     "details": "Detalhes",
