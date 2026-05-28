@@ -143,6 +143,7 @@ export type AssistanceFindAllDto = {
   endDate?: string;
   extraApproval?: "PENDING";
   delayApproval?: "PENDING";
+  markApproval?: "PENDING";
   /** Filtrar por establecimiento (publicId) */
   establishmentId?: string;
 };

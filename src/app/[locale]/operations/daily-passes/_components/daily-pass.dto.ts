@@ -6,6 +6,7 @@ export interface DailyPassEmployeeResponseDto {
   lastName: string;
   documentNumber: string;
   personalEmail: string;
+  photo?: string;
   startDate: string;
   endDate: string;
   contractedHours: number;
@@ -29,6 +30,7 @@ export interface DailyPassResponseDto {
   createdBy?: string;
   reason?: string;
   employee?: DailyPassEmployeeResponseDto;
+  organizationLogo?: string;
 }
 
 export enum DailyPassStatus {
